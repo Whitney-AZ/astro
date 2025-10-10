@@ -1,4 +1,4 @@
-import { sponsor, site } from '@/config.json'
+import { site } from '@/config.json'
 import { motion } from 'framer-motion'
 import * as QR from 'qrcode.react'
 import { useAtomValue } from 'jotai'
@@ -41,7 +41,6 @@ export function ActionAside() {
       }}
     >
       <ShareButton />
-      <DonateButton />
     </div>
   )
 }
@@ -106,46 +105,4 @@ function ShareModal({ url, text }: { url: string; text: string }) {
   )
 }
 
-function DonateButton() {
-  const { present } = useModal()
 
-  const openDonate = () => {
-    present({
-      content: <DonateContent />,
-    })
-  }
-
-  return (
-    <button
-      type="button"
-      aria-label="Donate to author"
-      className="size-6 text-xl leading-none hover:text-accent"
-      onClick={() => openDonate()}
-    >
-      <i className="iconfont icon-user-heart"></i>
-    </button>
-  )
-}
-
-function DonateContent() {
-  return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: 20, opacity: 0 }}
-    >
-      <h2 className="text-center mb-5">感谢您的支持，这将成为我前进的最大动力。</h2>
-      <div className="flex flex-wrap gap-4 justify-center">
-        <img
-          className="object-cover"
-          width={300}
-          height={300}
-          src={sponsor.wechat}
-          alt="微信赞赏码"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    </motion.div>
-  )
-}
