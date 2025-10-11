@@ -4,27 +4,27 @@ import { SocialList } from './SocialList'
 import Highlight from '@/components/Highlight.astro'
 ---
 
-<div class="lg:-mt-16 lg:h-dvh lg:min-h-[720px]">
+<div class="hero-background relative lg:-mt-16 lg:h-dvh lg:min-h-[720px] text-white">
   <div
-    class="relative max-w-[1300px] mx-auto h-full px-4 grid lg:grid-cols-2 items-center justify-items-center"
+    class="relative max-w-[1300px] mx-auto h-full px-4 grid lg:grid-cols-2 items-center justify-items-center z-10"
   >
     <div class="mt-[120px] lg:mt-0 max-w-[590px]">
       <h1 class="text-3xl text-center lg:text-left text-balance">
         This is <Highlight class="font-bold">{hero.name}</Highlight><br />{hero.bio}
       </h1>
-      <div class="text-sm text-secondary mt-3 text-center lg:text-left">{hero.description}</div>
+      <div class="text-sm text-gray-300 mt-3 text-center lg:text-left">{hero.description}</div>
       <SocialList className="mt-[60px]" client:load />
     </div>
-    <div class="mt-20 lg:mt-0">
+    <div class="mt-20 lg:mt-0 hidden dark:block">
       <div
-        class="size-[200px] lg:size-[300px] rounded-full overflow-hidden border border-primary bg-zinc-100 dark:bg-zinc-800"
+        class="size-[200px] lg:size-[300px] rounded-full overflow-hidden border-2 border-white/50 bg-zinc-100 dark:bg-zinc-800"
       >
         <img class="size-full" src={author.avatar} alt="Site owner avatar" loading="lazy" />
       </div>
     </div>
 
     <div class="mt-10 lg:mt-0 lg:absolute inset-x-0 bottom-0 flex flex-col items-center">
-      <p class="text-xs text-center text-balance text-secondary">
+      <p class="text-xs text-center text-balance text-gray-300">
         {hero.yiyan}
       </p>
       <div class="mt-7 text-xl animate-bounce">
@@ -33,3 +33,27 @@ import Highlight from '@/components/Highlight.astro'
     </div>
   </div>
 </div>
+
+{/* The key change is adding 'is:global' to the style tag */}
+<style is:global>
+  .hero-background {
+    /* Light mode background by default */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  }
+  
+  /* This rule will now work correctly because of 'is:global' */
+  [data-theme='dark'] .hero-background {
+    /* Dark mode background override */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/background-dark.jpg');
+  }
+
+  .hero-background > div {
+    position: relative;
+    z-index: 10;
+  }
+</style>
