@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  seriesPosts: CollectionEntry<'posts'>[]
+  currentSlug: string
+  seriesName: string
+}
+
+const { seriesPosts, currentSlug, seriesName } = Astro.props
+
+// 按日期升序排列系列文章
+const sortedPosts = seriesPosts.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+---
+
+<div class="mb-8 p-4 rounded-lg bg-accent/10 border border-accent/20">
+  <p class="font-bold text-accent mb-2">系列文章：{seriesName}</p>
+  <ul class="space-y-2">
+    {sortedPosts.map((post, index) => (
+      <li class="flex items-center gap-2 text-sm">
+        <span class="text-secondary">{index + 1}.</span>
+        {post.slug === currentSlug ? (
+          <span class="font-semibold text-primary">{post.data.title} (当前文章)</span>
+        ) : (
+          <a href={`/posts/${post.slug}`} class="hover:text-accent hover:underline underline-offset-2">
+            {post.data.title}
+          </a>
+        )}
+      </li>
+    ))}
+  </ul>
+</div>
