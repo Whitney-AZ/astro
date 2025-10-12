@@ -38,7 +38,7 @@ import Highlight from '@/components/Highlight.astro'
 <style is:global>
   .hero-background {
     /* Light mode background by default */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@ import Highlight from '@/components/Highlight.astro'
   /* This rule will now work correctly because of 'is:global' */
   [data-theme='dark'] .hero-background {
     /* Dark mode background override */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/background-dark.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/background-dark.webp');
   }
 
   .hero-background > div {
