@@ -4,6 +4,7 @@ date: 2024-10-14
 summary: 恋爱作为一种投射
 category: 杂谈
 tags: [漫评, 精神分析]
+rating: 8.0
 ---
 
 ### 前言

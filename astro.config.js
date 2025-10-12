@@ -16,6 +16,7 @@ import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import { site } from './src/config.json'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import { rehypeEquationNumbering } from './src/plugins/rehypeEquationNumbering.js'
 import swup from '@swup/astro'
 
 // https://astro.build/config
@@ -38,12 +39,12 @@ export default defineConfig({
     remarkPlugins: [remarkMath, remarkDirective, remarkEmbed, remarkSpoiler, remarkReadingTime],
     rehypePlugins: [
       rehypeHeadingIds,
+      rehypeEquationNumbering,
       rehypeKatex,
       rehypeLink,
       rehypeImage,
       rehypeHeading,
       rehypeCodeBlock,
-      rehypeCodeHighlight,
       rehypeTableBlock,
     ],
     remarkRehype: { footnoteLabel: '参考', footnoteBackLabel: '返回正文' },

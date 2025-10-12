@@ -16,6 +16,7 @@ import { ActionAside } from '@/components/post/ActionAside'
 import { PostCopyright } from '@/components/post/PostCopyright'
 // --- 新增引入 ---
 import PostSeries from '@/components/post/PostSeries.astro'
+import PostRating from '@/components/post/PostRating.astro'
 // -----------------
 
 export const getStaticPaths = (async () => {
@@ -82,6 +83,14 @@ if (current.data.series) {
         <h1 class="text-4xl font-bold text-center">
           {current.data.title}
         </h1>
+
+        {current.data.rating !== undefined && (
+        <div class="flex justify-center">
+          {/* 像这样传入 maxRating */}
+        <PostRating rating={current.data.rating} maxRating={10} /> 
+        </div>
+        )}
+
         <PostMetaInfo
           class="justify-center"
           date={current.data.date}
