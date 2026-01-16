@@ -102,3 +102,11 @@ L^2(SU(2)) \simeq \bigoplus_{j\in\mathbb{N}/2}\left(\mathcal{Q}_j \otimes \mathc
 $$
 
 To my knowledge, this is exactly why we can do quantum things on spin networks.
+
+#### Homogeneous Realization
+Now we want to derive the explicit formula for a wigner matrix. Recall that a group element of $SL(2,\mathbb{C})$ is a two by two complex matrix, therefore it has a natural action on $\mathbb{C}^2$. We can construct a vector space of polynomials of these two complex variables $(z_0,z_1)\in \mathbb{C}^2$ homogeneous of degree $2j\in \mathbb{N}$, with a typical element written as 
+
+$$
+P(z_0,z_1) = \sum_{k=0}^{2j}a_k z_0^k z_1^{2j-k}.
+$$
+
