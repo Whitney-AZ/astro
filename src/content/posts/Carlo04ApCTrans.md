@@ -1,7 +1,7 @@
 ---
 title: 关于方法与真理
 date: 2026-03-14
-summary: *Quantum Gravity* Appendix C 的一份中文翻译
+summary: Quantum Gravity Appendix C 的一份中文翻译
 category: 翻译
 tags: [物理，翻译]
 ---
