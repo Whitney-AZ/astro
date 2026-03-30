@@ -4,6 +4,7 @@ date: 2026-03-14
 summary: Quantum Gravity Appendix C 的一份中文翻译
 category: 翻译
 tags: [物理，翻译]
+pdf: true
 ---
 
 > 这是 Carlo Rovelli 的 _Quantum Gravity_ 中附录C的一份中文翻译。在这个附录中，Carlo 讨论了物理研究中的一些关于方法论和真理的思考，使我受益匪浅，遂尝试将其译为中文。当然，作为圈量子引力的开创者，Carlo 不免要在字里行间影射弦论，对于这些部分的论述见仁见智。

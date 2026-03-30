@@ -15,6 +15,7 @@ const postsCollection = defineCollection({
     sticky: z.number().default(0),
     series: z.string().optional(),
     rating: z.number().min(0).max(10).optional(),
+    pdf: z.boolean().default(false),
   }),
 })
 
