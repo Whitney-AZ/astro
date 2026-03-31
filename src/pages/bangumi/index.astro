@@ -5,8 +5,8 @@ import config from '@/config.json'
 
 const username = config.bangumi?.username || 'whitney'
 
-let airingList = []
-let backlogList = []
+let airingList: any[] = []
+let backlogList: any[] = []
 let totalWatching = 0
 
 try {
@@ -18,8 +18,8 @@ try {
   let airingSubjectIds = new Set()
   if (calendarRes.ok) {
     const calendarData = await calendarRes.json()
-    calendarData.forEach((day) => {
-      day.items?.forEach((item) => airingSubjectIds.add(item.id))
+    calendarData.forEach((day: any) => {
+      day.items?.forEach((item: any) => airingSubjectIds.add(item.id))
     })
   }
 
@@ -33,7 +33,7 @@ try {
     totalWatching = allCollections.length
     
     // Separate into Airing (in calendar) and Backlog
-    allCollections.forEach((item) => {
+    allCollections.forEach((item: any) => {
       if (airingSubjectIds.has(item.subject_id)) {
         airingList.push(item)
       } else {
@@ -47,14 +47,14 @@ try {
   console.error("Failed to fetch bangumi data", e)
 }
 
-function AnimeGrid({ list, title }) {
+function AnimeGrid({ list, title }: { list: any[], title: string }) {
   if (!list || list.length === 0) return null;
   return `
     <h2 class="text-2xl font-bold mt-12 mb-6 border-b border-dashed border-primary pb-2 text-primary">
       ${title} <span class="text-sm font-normal text-secondary ml-2">(${list.length})</span>
     </h2>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      ${list.map((item) => {
+      ${list.map((item: any) => {
         const subject = item.subject
         const name = subject.name_cn || subject.name
         const cover = subject.images?.large || subject.images?.common
