@@ -1,0 +1,16 @@
+name: Daily Bangumi Update
+
+on:
+  schedule:
+    # 每天 UTC 时间凌晨 0 点（北京时间早上 8 点）自动执行
+    - cron: '0 0 * * *'
+  # 允许在 GitHub Actions 面板手动点击运行
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Deploy Hook
+        # 我们使用存储在 GitHub Secrets 中的 Deploy Hook URL 触发发布
+        run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
