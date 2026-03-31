@@ -1,0 +1,110 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro'
+import Highlight from '@/components/Highlight.astro'
+import config from '@/config.json'
+
+const username = config.bangumi?.username || 'whitney'
+
+let airingList = []
+let backlogList = []
+let totalWatching = 0
+
+try {
+  // 1. Fetch Calendar to get currently airing subject IDs
+  const calendarRes = await fetch('https://api.bgm.tv/calendar', {
+    headers: { 'User-Agent': 'PhyMAnime-Blog/1.0 (https://github.com/Whitney-AZ)' }
+  })
+  
+  let airingSubjectIds = new Set()
+  if (calendarRes.ok) {
+    const calendarData = await calendarRes.json()
+    calendarData.forEach((day) => {
+      day.items?.forEach((item) => airingSubjectIds.add(item.id))
+    })
+  }
+
+  // 2. Fetch User's watching collections using classic API to bypass v0 limits
+  const res = await fetch(`https://api.bgm.tv/user/${username}/collection?cat=watching`, {
+    headers: { 'User-Agent': 'PhyMAnime-Blog/1.0 (https://github.com/Whitney-AZ)' }
+  })
+  if (res.ok) {
+    const data = await res.json()
+    const allCollections = Array.isArray(data) ? data : []
+    totalWatching = allCollections.length
+    
+    // Separate into Airing (in calendar) and Backlog
+    allCollections.forEach((item) => {
+      if (airingSubjectIds.has(item.subject_id)) {
+        airingList.push(item)
+      } else {
+        backlogList.push(item)
+      }
+    })
+  } else {
+    console.error("Failed to fetch bangumi data. Status:", res.status)
+  }
+} catch (e) {
+  console.error("Failed to fetch bangumi data", e)
+}
+
+function AnimeGrid({ list, title }) {
+  if (!list || list.length === 0) return null;
+  return `
+    <h2 class="text-2xl font-bold mt-12 mb-6 border-b border-dashed border-primary pb-2 text-primary">
+      ${title} <span class="text-sm font-normal text-secondary ml-2">(${list.length})</span>
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      ${list.map((item) => {
+        const subject = item.subject
+        const name = subject.name_cn || subject.name
+        const cover = subject.images?.large || subject.images?.common
+        const totalEps = subject.eps || '?'
+        const watchedEps = item.ep_status
+        const progress = totalEps !== '?' && totalEps > 0 ? Math.round((watchedEps / totalEps) * 100) : 0
+        
+        return `
+          <a href="https://bgm.tv/subject/${subject.id}" target="_blank" rel="noopener noreferrer" class="group block bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative">
+            <div class="aspect-[3/4] overflow-hidden relative">
+              <img src="${cover}" alt="${name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 bg-primary" loading="lazy" referrerpolicy="no-referrer" />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
+                <div class="text-white text-sm font-medium line-clamp-2 leading-tight drop-shadow-md">${name}</div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center text-xs text-secondary mb-2">
+                <span>进度: ${watchedEps} / ${totalEps}</span>
+                ${subject.score ? `<span class="text-accent flex items-center font-medium">★ ${subject.score}</span>` : ''}
+              </div>
+              <div class="w-full bg-primary rounded-full h-1.5 overflow-hidden">
+                <div class="bg-accent h-1.5 rounded-full transition-all duration-500 ease-out" style="width: ${progress}%"></div>
+              </div>
+            </div>
+          </a>
+        `
+      }).join('')}
+    </div>
+  `
+}
+---
+
+<PageLayout title="追番 - Bangumi">
+  <div class="max-w-[1000px] mx-auto px-4 py-16">
+    <header class="space-y-4 mb-4">
+      <h1 class="text-4xl font-bold">
+        <Highlight>Bangumi</Highlight>
+      </h1>
+      <p>「动画与现实的交缠，观测世界线变动的进程」</p>
+      <p>当前正在追 {totalWatching} 部番剧。</p>
+      <hr class="w-[100px] border-primary" />
+    </header>
+
+    {totalWatching === 0 ? (
+      <div class="text-secondary text-center py-20">暂未获取到追番数据或追番列表为空。</div>
+    ) : (
+      <>
+        <div set:html={AnimeGrid({ list: airingList, title: "当季连载 (Airing)" })} />
+        <div set:html={AnimeGrid({ list: backlogList, title: "日常补番 (Backlog)" })} />
+      </>
+    )}
+  </div>
+</PageLayout>

@@ -47,27 +47,72 @@
   },
   "color": {
     "accent": [
-      { "light": "#F55555", "dark": "#FCCF31" },
-      { "light": "#0396FF", "dark": "#ABDCFF" },
-      { "light": "#fb7287", "dark": "#99D8CF" },
-      { "light": "#F072B6", "dark": "#FFF886" },
-      { "light": "#9F44D3", "dark": "#E2B0FF" },
-      { "light": "#FF6666", "dark": "#A1CCD1" },
-      { "light": "#F6416C", "dark": "#838BC6" },
-      { "light": "#32CCBC", "dark": "#90F7EC" },
-      { "light": "#33A6B8", "dark": "#79F1A4" },
-      { "light": "#F55555", "dark": "#FCCF31" }
+      {
+        "light": "#F55555",
+        "dark": "#FCCF31"
+      },
+      {
+        "light": "#0396FF",
+        "dark": "#ABDCFF"
+      },
+      {
+        "light": "#fb7287",
+        "dark": "#99D8CF"
+      },
+      {
+        "light": "#F072B6",
+        "dark": "#FFF886"
+      },
+      {
+        "light": "#9F44D3",
+        "dark": "#E2B0FF"
+      },
+      {
+        "light": "#FF6666",
+        "dark": "#A1CCD1"
+      },
+      {
+        "light": "#F6416C",
+        "dark": "#838BC6"
+      },
+      {
+        "light": "#32CCBC",
+        "dark": "#90F7EC"
+      },
+      {
+        "light": "#33A6B8",
+        "dark": "#79F1A4"
+      },
+      {
+        "light": "#F55555",
+        "dark": "#FCCF31"
+      }
     ],
     "bg": {
-      "primary": { "light": "#ffffff", "dark": "#1c1c1e" },
-      "secondary": { "light": "#f4f4f5", "dark": "#27272a" }
+      "primary": {
+        "light": "#ffffff",
+        "dark": "#1c1c1e"
+      },
+      "secondary": {
+        "light": "#f4f4f5",
+        "dark": "#27272a"
+      }
     },
     "text": {
-      "primary": { "light": "#373a3c", "dark": "#ffffff" },
-      "secondary": { "light": "#71717a", "dark": "#d1d5db" }
+      "primary": {
+        "light": "#373a3c",
+        "dark": "#ffffff"
+      },
+      "secondary": {
+        "light": "#71717a",
+        "dark": "#d1d5db"
+      }
     },
     "border": {
-      "primary": { "light": "#e4e4e7", "dark": "#3f3f46" }
+      "primary": {
+        "light": "#e4e4e7",
+        "dark": "#3f3f46"
+      }
     }
   },
   "menus": [
@@ -75,6 +120,11 @@
       "name": "首页",
       "link": "/",
       "icon": "icon-pantone"
+    },
+    {
+      "name": "追番",
+      "link": "/bangumi",
+      "icon": "icon-video"
     },
     {
       "name": "归档",
@@ -94,6 +144,9 @@
   ],
   "posts": {
     "perPage": 10
+  },
+  "bangumi": {
+    "username": "857721"
   },
   "footer": {
     "startTime": "2025-10-11T00:00:00Z"

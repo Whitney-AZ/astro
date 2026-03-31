@@ -11,7 +11,8 @@
     "lint": "prettier --write .",
     "new-friend": "node scripts/new-friend.js",
     "new-post": "node scripts/new-post.js",
-    "new-project": "node scripts/new-project.js"
+    "new-project": "node scripts/new-project.js",
+    "archive-bangumi": "node scripts/archive-bangumi.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
