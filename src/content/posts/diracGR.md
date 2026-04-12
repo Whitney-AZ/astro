@@ -1,11 +1,14 @@
 ---
 title: The Connection Formulation of General Relativity
-date: 2026-04-04
+date: 2026-04-12
 summary: From a constrained BF theory, we derive the connection formulation of general relativity using dirac's constraint analysis method.
 category: 笔记
 tags: [数学, 物理, 广义相对论]
-pdf: true
+pdf: false
+series: 'LQG Notes'
 ---
+
+> It should be noted that this is typesetted by Gemini based on my written notes. They have not been manually checked and may (do) contain errors.
 
 It has long been known that general relativity can be formulated by applying a constraint on the BF theory. Plebanski successfully obtained the Riemannian action:
 
