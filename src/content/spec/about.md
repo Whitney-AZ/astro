@@ -9,6 +9,7 @@ SDU undergraduate, currently majoring in physics, interested in LQG as of this m
 This is my book list for 2026, including some papers or notes I'm intrigued to.
 
 - [x] Zakopane lectures on loop gravity, C. Rovelli (arXiv:1102.3660v5)
+- [x] Loop quantum black hole, Xiangdong Zhang (arXiv:2308.10184v1)
 - [ ] The Spin Foam Approach to Quantum Gravity, Alejandro Perez (arXiv:1205.2019v1)
 - [ ] Thomas Thiemann, Modern Canonical Quantum General Gravity
 - [ ] Carlo Rovelli, Quantum Gravity
