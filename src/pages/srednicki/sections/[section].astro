@@ -1,0 +1,106 @@
+---
+import type { GetStaticPaths } from 'astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import {
+  srednickiChildren,
+  srednickiPartNames,
+  srednickiSectionById,
+  srednickiSections,
+} from '@/data/srednicki'
+import { getSrednickiNotes } from '@/utils/srednicki'
+import '@/styles/srednicki.css'
+
+export const getStaticPaths = (() =>
+  srednickiSections.map((section) => ({
+    params: { section: String(section.id) },
+    props: { sectionId: section.id },
+  }))) satisfies GetStaticPaths
+
+interface Props {
+  sectionId: number
+}
+
+const { sectionId } = Astro.props
+const section = srednickiSectionById.get(sectionId)!
+const notesBySection = await getSrednickiNotes()
+const notes = notesBySection[String(sectionId)] ?? []
+
+const hrefFor = (id: number) => notesBySection[String(id)]?.[0]?.href ?? `/srednicki/sections/${id}`
+---
+
+<PageLayout
+  title={`§${section.id} ${section.title}`}
+  description={`Srednicki QFT 第 ${section.id} 节笔记状态与前后依赖。`}
+>
+  <div class="srednicki-app srednicki-pending-page" data-pagefind-body>
+    <article class="srednicki-pending-card">
+      <p class="srednicki-eyebrow">{srednickiPartNames[section.part]}</p>
+      <span class="srednicki-status-badge">
+        {notes.length ? '已有笔记' : '尚未做笔记'}
+      </span>
+      <h1>§{section.id} {section.title}</h1>
+      {
+        notes.length ? (
+          <p class="srednicki-pending-description">
+            本节已有笔记：{' '}
+            {notes.map((note, index) => (
+              <>
+                {index > 0 && '、'}
+                <a class="text-accent hover:underline" href={note.href}>
+                  {note.title}
+                </a>
+              </>
+            ))}
+          </p>
+        ) : (
+          <p class="srednicki-pending-description">
+            这一节的笔记还没有完成。页面地址已经固定；文章发布并声明本节编号后，依赖地图会自动把它标记为“已有笔记”。
+          </p>
+        )
+      }
+
+      <div class="srednicki-pending-relations">
+        <div>
+          <h2>直接前置</h2>
+          {
+            section.prereqs.length ? (
+              <ul>
+                {section.prereqs.map((id) => (
+                  <li>
+                    <a href={hrefFor(id)}>
+                      §{id} {srednickiSectionById.get(id)?.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>无</p>
+            )
+          }
+        </div>
+        <div>
+          <h2>直接后续</h2>
+          {
+            srednickiChildren.get(section.id)?.length ? (
+              <ul>
+                {srednickiChildren.get(section.id)?.map((id) => (
+                  <li>
+                    <a href={hrefFor(id)}>
+                      §{id} {srednickiSectionById.get(id)?.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>无</p>
+            )
+          }
+        </div>
+      </div>
+
+      <a class="srednicki-pending-back" href={`/srednicki#section-${section.id}`}>
+        ← 返回章节依赖与笔记地图
+      </a>
+    </article>
+  </div>
+</PageLayout>

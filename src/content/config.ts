@@ -16,6 +16,7 @@ const postsCollection = defineCollection({
     series: z.string().optional(),
     rating: z.number().min(0).max(10).optional(),
     pdf: z.boolean().default(false),
+    srednickiSections: z.array(z.number().int().min(1).max(97)).default([]),
   }),
 })
 

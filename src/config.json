@@ -132,6 +132,11 @@
       "icon": "icon-archive"
     },
     {
+      "name": "QFT地图",
+      "link": "/srednicki",
+      "icon": "icon-map"
+    },
+    {
       "name": "关于",
       "link": "/about",
       "icon": "icon-ghost"

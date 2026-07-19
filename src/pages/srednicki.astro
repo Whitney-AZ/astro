@@ -1,0 +1,15 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro'
+import { SrednickiMap } from '@/components/srednicki/SrednickiMap'
+import { getSrednickiNotes } from '@/utils/srednicki'
+import '@/styles/srednicki.css'
+
+const notesBySection = await getSrednickiNotes()
+---
+
+<PageLayout
+  title="Srednicki QFT 章节依赖与笔记地图"
+  description="Srednicki《Quantum Field Theory》97 节的前置依赖、学习路径与本站笔记入口。"
+>
+  <SrednickiMap notesBySection={notesBySection} client:load />
+</PageLayout>
