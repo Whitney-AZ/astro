@@ -1,0 +1,14 @@
+% Original TikZ embedding of S09-G01-02; incidences from sources/units/S09.json.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.65pt,line cap=round,line join=round]
+\path[use as bounding box] (-3.52,-1.8) rectangle (3.52,1.8);
+% Edge T0--T1; multiplicity=3.
+\draw (-1.0500,0.0000) .. controls (-0.3500,-0.7400) and (0.3500,-0.7400) .. (1.0500,0.0000);
+\draw (-1.0500,0.0000) -- (1.0500,0.0000);
+\draw (-1.0500,0.0000) .. controls (-0.3500,0.7400) and (0.3500,0.7400) .. (1.0500,0.0000);
+% Node T0: cubic_vertex; only marked nodes are vertices.
+\fill (-1.0500,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-1.3500,0.0000) {$T_{0}$};
+% Node T1: cubic_vertex; only marked nodes are vertices.
+\fill (1.0500,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (1.3500,0.0000) {$T_{1}$};
+\end{tikzpicture}

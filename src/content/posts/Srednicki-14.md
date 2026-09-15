@@ -1,0 +1,973 @@
+---
+title: 'Srednicki §14 传播子的圈修正'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [14]
+hideFromHome: true
+draft: false
+---
+
+<span id="c14"></span>
+
+第13节已经说明，适当归一化的精确传播子在物理质量处应有一个留数为1的极点。现在回到微扰计算，考察圈图怎样改变传播子，以及反项怎样使这个极点的位置和留数满足上述要求。计算先保留一般时空维数 $d$，最后集中讨论六维实 $\varphi^3$ 理论。场、顶点和传播子的号均沿第9节，立方顶点为 $ig$。
+
+<span id="c14-self-energy"></span>
+
+## 从连通二点图到自能
+
+传播子的修正可以从连通生成泛函中逐阶取出。对第10节定义的连通生成泛函作两次源微分，得到
+
+<span id="eq:c14-source-derivatives"></span>
+
+$$
+\frac1i\boldsymbol\Delta(x_1-x_2)
+=\langle0|\mathrm T\varphi(x_1)\varphi(x_2)|0\rangle
+=\left.\delta_1\delta_2\,iW[J]\right|_{J=0},
+\qquad
+\delta_j\equiv\frac1i\frac{\delta}{\delta J(x_j)}.
+\tag{14.1}
+$$
+
+由于 $Z[J]=e^{iW[J]}$，$iW$ 汇集了全部连通图。一次源导数固定一条源线的外端点，两次导数便将两个端点固定在 $x_1,x_2$。完整二点函数中还可能有两个一点函数之积，但场已取零真空平均值，这一项随之消失，留下的就是连通二点函数。
+
+计算这些图时，直接使用动量空间规则最为方便。记自由传播子为 $\widetilde\Delta_0(z)=(z+m^2-i0)^{-1}$，其中 $z=k^2$；图中一条线所代表的二点矩阵元则为 $F_0=\widetilde\Delta_0/i=-i\widetilde\Delta_0$。图14a给出了 $O(g^2)$ 的两种修正：由两条内部线构成的圈，以及二价反项。给外部动量 $k$ 指定向右的方向，取上弧动量 $k+\ell$ 向右、下弧动量 $\ell$ 向左。在左顶点，流入的 $k$ 与 $\ell$ 相加，正好等于流出的 $k+\ell$；右顶点也满足动量守恒，因而全图只剩一个独立圈动量 $\ell$。
+
+<span id="c14-fig-one-loop"></span>
+
+![传播子的一圈双线泡与二价反项，标明圈动量](/images/srednicki/s14-fig14-1.svg)
+
+图14a：一圈传播子修正与二价反项。
+
+两种图都含有相同的外部传播子。将这两个因子提出，把中间剩下的部分定义为 $i\Pi(z)$，可写成
+
+<span id="eq:c14-one-loop-insertion"></span>
+
+$$
+\begin{aligned}
+F(z)&=F_0(z)+F_0(z)[i\Pi(z)]F_0(z)+O(g^4),\\
+i\Pi(z)
+&=\frac12(ig)^2\left(\frac1i\right)^2
+\int\frac{d^d\ell}{(2\pi)^d}\,
+\widetilde\Delta_0((\ell+k)^2)\widetilde\Delta_0(\ell^2)\\
+&\quad-i(Az+Bm^2)+O(g^4).
+\end{aligned}
+\tag{14.2}
+$$
+
+截去外部传播子后定义的 $\Pi$ 称为自能（self-energy）。圈图的两个外点已经固定，上下两条内部线却可以互换，故对称因子为2，图的权重含有 $1/2$。顶点与内部线的相位相乘为 $(ig)^2(1/i)^2=(-g^2)(-1)=g^2$，而圈积分稍后还会产生一个 $i$。另一项 $-i(Az+Bm^2)$ 是第9节从二次作用量得到的二价反项，其中 $A=Z_\varphi-1,\ B=Z_m-1$。$Z_\varphi$ 专指场的重整化系数。
+
+在这一阶中，顶点的 $Z_g$ 可以先取为1。这是因为 $Z_g-1=O(g^2)$，展开 $g^2Z_g^2=g^2+2g^2(Z_g-1)+O(g^6)$ 后，第一个省略项已属于 $O(g^4)$。同样，$A,B$ 从 $g^2$ 阶开始，恰好与它们要修正的一圈贡献在同一阶出现。
+
+<span id="c14-dyson"></span>
+
+## 单粒子不可约块与极点条件
+
+自能也可以定义到更高阶。若切断任意一条内部线后图仍然连通，就称它为单粒子不可约图（one-particle-irreducible graph，1PI图）；计算 $i\Pi$ 时，两条外部传播子已经截去，因此这里的切线判据只涉及内部线。图14c所列的两个两圈拓扑、圈内二价反项和更高阶二价反项，都是这类二点1PI贡献。
+
+这种分类的作用，是把一般连通二点图分解成可以依次串接的部分。只要有一条内部桥边将两个外点分置两侧，就沿它分开，继续如此处理，便得到由自由传播子连接的一列1PI块。把每个块收缩为一点后，桥边构成一棵树；零一点函数已消去没有外点的悬支，所以剩下的是连接两个外点的一条链。链上的顺序一经固定，每幅图就恰好对应一个块序列。因此，将 $i\Pi$ 定义为全部二点1PI块之和，完整二点函数便组成几何级数：
+
+<span id="eq:c14-dyson-series"></span>
+
+$$
+\begin{aligned}
+F&=F_0+F_0(i\Pi)F_0+F_0(i\Pi)F_0(i\Pi)F_0+\cdots\\
+&=-i\widetilde\Delta_0
+\sum_{r=0}^{\infty}(\Pi\widetilde\Delta_0)^r .
+\end{aligned}
+\tag{14.3}
+$$
+
+<span id="c14-fig-chain"></span>
+
+![自由传播线与一个、两个自能块依次串接](/images/srednicki/s14-fig14-2.svg)
+
+图14b：自由线与依次增加的自能块。圆斑标为$\Pi$，图因子为$i\Pi$。
+
+每增加一个自能块，都要将 $i\Pi$ 与相邻的 $-i\widetilde\Delta_0$ 相乘，所得是正的 $\Pi\widetilde\Delta_0$。因而这个按形式微扰级数使用的展开，可以通过提出首个块写成逆核关系：
+
+<span id="eq:c14-dyson-denominator"></span>
+
+$$
+\widetilde{\boldsymbol\Delta}
+=\widetilde\Delta_0+\widetilde\Delta_0\Pi
+\widetilde{\boldsymbol\Delta}
+=\frac1{z+m^2-i0-\Pi(z)}.
+\tag{14.4}
+$$
+
+由此可见，分母中自能前的负号来自自能块与图线的相位。高阶贡献也按同一规则组织：图14c先在圈的一条线中再插入一个圈，接着在这一位置插入 $O(g^2)$ 二价反项；第三幅图由四个三价点围成外圈，并以中间一条线相连；最后是 $O(g^4)$ 二价反项。两个圈拓扑各有两个独立圈动量，而圈内反项图仍只有一个圈，其系数通过 $g^2A$ 或 $g^2B$ 达到 $g^4$ 阶。若要算出完整的 $g^4$ 系数，还须同时展开低阶圈图中的 $Z_g^2$。这些图说明了自能在所有阶中的组织方式，以下具体求值保留到一圈。
+
+<span id="c14-fig-higher"></span>
+
+![两圈单粒子不可约拓扑与反项插入](/images/srednicki/s14-fig14-3.svg)
+
+图14c：自能的高阶图。灰色虚线短腿只标明外部接入位置，求值时不乘外传播子；叉号为二价反项。
+
+在求积分以前，先用第13节的物理归一化确定自能必须满足什么条件。在稳定单粒子壳 $z_0=-m^2$ 附近，谱隙保证除了单粒子极点以外的部分解析，因而式[（14.4）](#eq:c14-dyson-denominator)的分母可展开为
+
+<span id="eq:c14-inverse-near-shell"></span>
+
+$$
+z+m^2-\Pi(z)
+=-\Pi(z_0)+[1-\Pi'(z_0)](z-z_0)
+-\frac12\Pi''(z_0)(z-z_0)^2+\cdots .
+\tag{14.5}
+$$
+
+若极点仍位于 $z_0$，展开的常数项就必须消失。此时简单极点的留数为 $[1-\Pi'(z_0)]^{-1}$，再要求它等于1，就同时得到两个条件：
+
+<span id="eq:c14-onshell-conditions"></span>
+
+$$
+\Pi(-m^2)=0,\qquad \Pi'(-m^2)=0.
+\tag{14.6}
+$$
+
+撇号表示对 $z=k^2$ 求导。这两个在壳重整化条件（on-shell renormalization conditions）分别固定物理单粒子的质量和场的单粒子归一化。接下来的积分与它们合起来，将确定 $A,B$ 的发散部分及有限部分。
+
+<span id="c14-parameters"></span>
+
+## 合并分母与移动圈动量
+
+直接计算原圈积分，首先遇到大动量处的收敛问题：它的行为为 $\int d^d\ell/\ell^4$，转到欧氏区域后，径向无穷端形如 $\int^\infty d\ell\,\ell^{d-5}$，所以先在 $d<4$ 的收敛域内计算。与此同时，$m>0$ 保证这里所用欧氏积分的小动量端没有红外奇性。
+
+两个传播分母含有不同的圈动量组合，分别积分并不方便。可以用Feynman参数把它们合成一个分母：
+
+<span id="eq:c14-feynman-parameters"></span>
+
+$$
+\begin{aligned}
+\frac1{A_1\cdots A_n}
+&=\int dF_n\,
+\left(\sum_{j=1}^n x_j A_j\right)^{-n},\\
+dF_n&=(n-1)!\prod_{j=1}^n dx_j\,
+\delta\!\left(1-\sum_{j=1}^n x_j\right),
+\qquad x_j\ge0.
+\end{aligned}
+\tag{14.7}
+$$
+
+这个公式可由欧拉积分直接推出。先取 $A_j>0$、$\alpha_j>0$，用
+
+<span id="eq:c14-schwinger-parameter"></span>
+
+$$
+\frac{1}{A_j^{\alpha_j}}
+=\frac{1}{\Gamma(\alpha_j)}\int_0^\infty dt_j\,
+ t_j^{\alpha_j-1}e^{-A_jt_j},\qquad
+\Gamma(\alpha)=\int_0^\infty dt\,t^{\alpha-1}e^{-t}.
+$$
+
+将 $n$ 个积分相乘，引入总尺度 $T=\sum_jt_j$ 和比例 $x_j=t_j/T$。取 $x_n=1-\sum_{j<n}x_j$，换元行列式的绝对值为 $T^{n-1}$：前 $n-1$ 个比例方向各贡献一份 $T$，余下的尺度方向沿 $\sum_jt_j=T$。因此测度与幂合为 $T^{\alpha-1}\prod_jx_j^{\alpha_j-1}dT\,dx_1\cdots dx_{n-1}$，其中 $\alpha=\sum_j\alpha_j$。总尺度积分再用一次欧拉公式，得到
+
+<span id="eq:c14-general-feynman-proof"></span>
+
+$$
+\frac1{\prod_jA_j^{\alpha_j}}
+=\frac{\Gamma(\alpha)}{\prod_j\Gamma(\alpha_j)}
+\int_{x_j\ge0}\prod_jdx_j\,
+\delta\!\left(1-\sum_jx_j\right)
+\frac{\prod_jx_j^{\alpha_j-1}}
+{\left(\sum_jx_jA_j\right)^\alpha}.
+$$
+
+取各幂 $\alpha_j=1$，分子中的 $\Gamma(n)=(n-1)!$ 就给出式[（14.7）](#eq:c14-feynman-parameters)的参数测度。
+
+这个阶乘恰好将参数测度归一。设不含阶乘的单纯形体积为 $V_n$，固定第一个变量 $x$ 后，其余变量的总和为 $1-x$。它们独立的 $n-2$ 个方向都按同一因子缩放，于是可递归求得
+
+<span id="eq:c14-simplex-normalization"></span>
+
+$$
+V_2=1,\qquad
+V_n=\int_0^1dx\,\frac{(1-x)^{n-2}}{(n-2)!}
+=\frac1{(n-1)!},\qquad
+\int dF_n=1.
+\tag{14.8}
+$$
+
+当 $n=1$ 时，直接由delta函数取值也得到1。眼下只有两个分母，消去第二个参数后，积分便化为 $x\in[0,1]$ 上的一维积分；这一情形还可以直接评价为
+
+<span id="eq:c14-two-denominator-check"></span>
+
+$$
+\int_0^1\frac{dx}{[A_2+x(A_1-A_2)]^2}
+=\frac1{A_1-A_2}\left(\frac1{A_2}-\frac1{A_1}\right)
+=\frac1{A_1A_2}.
+\tag{14.9}
+$$
+
+若 $A_1=A_2$，被积函数为常数，也可由上式取连续极限。对具有正实部的分母，欧拉积分绝对收敛，公式依全纯延拓继续成立。随后把各分母沿同一 $-i0$ 处方延拓至物理边界，加权分母也保持负虚部；等式的两侧因而取同一个边界值。
+
+回到圈图，将两个分母分别取为 $A_1=(\ell+k)^2+m^2-i0$ 和 $A_2=\ell^2+m^2-i0$。展开加权平均，再把圈动量配成完全平方：
+
+<span id="eq:c14-completed-denominator"></span>
+
+$$
+\begin{aligned}
+xA_1+(1-x)A_2
+&=\ell^2+2x\ell\cdot k+xk^2+m^2-i0\\
+&=(\ell+xk)^2+x(1-x)k^2+m^2-i0,\\
+\frac1{A_1A_2}
+&=\int_0^1dx\,\frac1{[q^2+D-i0]^2},\\
+q&\equiv\ell+xk,\qquad
+D\equiv m^2+a_xz,\qquad a_x\equiv x(1-x).
+\end{aligned}
+\tag{14.10}
+$$
+
+这里 $q$ 是平移后的圈动量，$D$ 汇集了质量和外动量的依赖。由于 $q$ 对 $\ell$ 的导数矩阵为单位阵，测度满足 $d^dq=d^d\ell$，可以直接用平移后的圈动量积分。这个平移在当前收敛域内合法，随后采用的维数正规化也保持圈动量平移，因此在延拓维数时仍可沿用这一配方结果。
+
+<span id="c14-wick"></span>
+
+## Wick旋转产生的因子
+
+合并分母后，可以把能量积分围道转向虚轴，使整个积分成为欧氏形式。先取实 $z>-4m^2$；由 $0\le a_x\le1/4$，所有参数 $x$ 对应的 $D$ 都为正。暂将极点调节记为 $\eta>0$，在固定空间动量下，平方分母的两个极点位于
+
+<span id="eq:c14-energy-poles"></span>
+
+$$
+q^0=\pm\sqrt{\omega^2-i\eta},\qquad
+\omega^2=\mathbf q^2+D.
+\tag{14.11}
+$$
+
+正根为 $+\omega-i\eta/(2\omega)+O(\eta^2)$，负根为 $-\omega+i\eta/(2\omega)+O(\eta^2)$，所以第一、第三象限没有极点。将正实半轴转向正虚半轴，同时将负实半轴转向负虚半轴，就使整条路径从 $-\infty\to+\infty$ 变为 $-i\infty\to+i\infty$，而不越过极点。这两段变形都是逆时针旋转。
+
+<span id="c14-fig-wick"></span>
+
+![Wick 旋转围道以及位于第二、第四象限的能量极点](/images/srednicki/s14-fig14-4.svg)
+
+图14d：能量围道从实轴转向虚轴。弧箭头表示变形方向；极点虚部为便于辨认而放大。
+
+围道变形还要求无穷远处增加的大弧不贡献积分。在固定空间动量下，被积函数按 $(q^0)^{-4}$ 衰减，而半径为 $R$ 的弧长只随 $R$ 增长，故大弧积分按 $R^{-3}$ 消失。结合扇形内的解析性及不越过极点的路径，便可用Cauchy定理完成这一变形。沿新的积分路径作代换
+
+<span id="eq:c14-wick-jacobian"></span>
+
+$$
+q^0=i\bar q_d,\qquad
+q^j=\bar q_j,\qquad
+q^2=\bar q_1^2+\cdots+\bar q_d^2,\qquad
+d^dq=i\,d^d\bar q.
+\tag{14.12}
+$$
+
+新的实变量 $\bar q_d$ 从负无穷增加到正无穷，所以测度因子为 $+i$，其号也由积分路径的方向固定。对满足相同解析性与衰减条件的函数，这一关系写为
+
+<span id="eq:c14-wick-general"></span>
+
+$$
+\int d^dq\,f(q^2-i0)
+=i\int d^d\bar q\,f(\bar q^2).
+\tag{14.13}
+$$
+
+除了旋转扇形内不能有妨碍变形的奇点，总径向积分还要求 $f(\bar q^2)$ 衰减快于 $\bar q^{-d}$。本节先在 $D>0,\ 0<d<4$ 的区域使用这个公式，阈值以后的动量依赖则由所得函数作解析延拓。
+
+现在把测度中的 $i$ 代入式[（14.2）](#eq:c14-one-loop-insertion)，与等号另一边的 $i$ 相消，就得到自能的欧氏表达式：
+
+<span id="eq:c14-euclidean-self-energy"></span>
+
+$$
+\begin{aligned}
+\Pi(z)&=\frac{g^2}{2}I(z)-Az-Bm^2+O(g^4),\\
+I(z)&\equiv
+\int_0^1dx\int\frac{d^d\bar q}{(2\pi)^d}
+\frac1{(\bar q^2+D)^2}.
+\end{aligned}
+\tag{14.14}
+$$
+
+其中 $[I]=d-4$，而 $[g^2]=6-d$，所以圈项与两个反项都具有自能所需的质量维数2。原来的振荡积分已化为只含欧氏动量平方的积分，可以进一步用球坐标评价。
+
+<span id="c14-subtractions"></span>
+
+## 两次求导为什么能除去发散
+
+在实际评价 $I$ 以前，可以先用求导说明反项的作用。两个反项分别是常数项和外动量平方的一次项，因此对 $z$ 求两次导数就会消去它们；圈积分的分母却会在求导后增加幂次，改善大动量处的收敛性。由于动量依赖只在 $D=m^2+a_xz$ 中，连续求导给出
+
+<span id="eq:c14-repeated-derivative"></span>
+
+$$
+\frac{d^n}{dz^n}\frac1{(\bar q^2+D)^2}
+=(-1)^n(n+1)!\,
+\frac{a_x^n}{(\bar q^2+D)^{n+2}}.
+\tag{14.15}
+$$
+
+每求一次导数，分母就多一个幂次，分子多一个 $a_x$，并乘上原来的负指数。取 $n=2$，系数即为 $(-2)(-3)=6$；线性反项的二阶导数同时为零，因而有
+
+<span id="eq:c14-two-derivatives"></span>
+
+$$
+\begin{aligned}
+\Pi''(z)&=\frac{g^2}{2}I''(z)+O(g^4),\\
+I''(z)&=
+6\int_0^1dx\,a_x^2
+\int\frac{d^d\bar q}{(2\pi)^d}
+\frac1{(\bar q^2+D)^4}.
+\end{aligned}
+\tag{14.16}
+$$
+
+第 $n$ 阶导数在径向无穷端的行为是 $\int^\infty dq\,q^{d-5-2n}$，故收敛条件放宽到 $d<4+2n$。于是 $I$ 从 $d=4$ 开始发散，$I'$ 从 $d=6$ 开始发散，而 $I''$ 到 $d=8$ 才发散。在质量壳上又有 $D_0=m^2(1-a_x)\ge3m^2/4$，因此小动量和参数端点不会带来额外奇性。
+
+这说明在所关心的六维，二阶导数本身是有限的。为了看出被它消去的两项与反项如何对应，在 $z_0=-m^2$ 处展开式[（14.14）](#eq:c14-euclidean-self-energy)：
+
+<span id="eq:c14-taylor-corrected"></span>
+
+$$
+\begin{aligned}
+\Pi(z)
+={}&\left[\frac{g^2}{2}I(z_0)+(A-B)m^2\right]\\
+&+\left[\frac{g^2}{2}I'(z_0)-A\right](z-z_0)\\
+&+\frac{g^2}{4}I''(z_0)(z-z_0)^2+\cdots+O(g^4).
+\end{aligned}
+\tag{14.17}
+$$
+
+一次项中的 $-A$ 来自 $-Az$ 的导数；常数项则在 $z_0=-m^2$ 处取值，给出 $(A-B)m^2$。将函数值和一阶导数分别置零，两项在壳条件依次确定
+
+<span id="eq:c14-counterterms-before-integration"></span>
+
+$$
+A=\frac{g^2}{2}I'(z_0)+O(g^4),\qquad
+B=A+\frac{g^2}{2m^2}I(z_0)+O(g^4).
+\tag{14.18}
+$$
+
+再代回自能，原圈积分的常数项和一次项就从质量壳处减去，得到
+
+<span id="eq:c14-double-subtraction"></span>
+
+$$
+\begin{aligned}
+\Pi(z)
+&=\frac{g^2}{2}
+\left[I(z)-I(z_0)-(z-z_0)I'(z_0)\right]+O(g^4)\\
+&=\frac{g^2}{2}\int_{z_0}^{z}dt\,(z-t)I''(t)+O(g^4).
+\end{aligned}
+\tag{14.19}
+$$
+
+第二行把这一减除写成两次积分的结果，两个积分常数由质量壳处的零函数值和零导数固定。因此只要 $I''$ 有限，就可以从它重建满足归一化条件的自能。
+
+第一行则说明，如何在被积函数中直接完成同样的减除。记 $v=\bar q^2+D_0$、$\delta=a_x(z-z_0)$，于是 $v+\delta=\bar q^2+D$。把三个被积函数通分，逐项相消后有
+
+<span id="eq:c14-subtracted-integrand"></span>
+
+$$
+\begin{aligned}
+K(v,\delta)
+&=\frac1{(v+\delta)^2}-\frac1{v^2}
++\frac{2\delta}{v^3}\\
+&=\frac{v^3-v(v+\delta)^2+2\delta(v+\delta)^2}
+{v^3(v+\delta)^2}\\
+&=\frac{\delta^2(3v+2\delta)}{v^3(v+\delta)^2}.
+\end{aligned}
+\tag{14.20}
+$$
+
+分子中的 $v^3$ 和 $v^2\delta$ 完全相消，大 $\bar q$ 处只剩 $3\delta^2/\bar q^8$ 的行为，所以两次减除后的积分在 $d<8$ 有限。在 $D,D_0>0$ 的区间，$3v+2\delta=v+2(v+\delta)>0$，还可直接看出这一圈自能非负，并在 $z_0$ 至少二阶为零。
+
+对 $4\le d<8$，先带调节计算 $A,B$，它们的系数在去掉调节时可以发散；圈图与反项合并后的两点核则由上面的有限积分给出。$A,B$ 仍按 $g^2,g^4,\ldots$ 逐阶展开，每一阶的反项与该阶圈图一起计算。若 $d\ge8$，二阶项也开始发散，现有的两个线性系数就不足以消去它。这个界限只来自一圈二点函数。[第18节](/posts/srednicki-18/#c18)将把幂次计数用于一般图，说明当 $d>6$ 时，高阶图还需要现有拉氏量中没有的反项。
+
+上面的减除还可以配合另一种调节来进行。Pauli–Villars正规化将每条自由线替换为
+
+<span id="eq:c14-pv-kernel"></span>
+
+$$
+\widetilde\Delta_{0,\Lambda}(p^2)
+=\frac1{p^2+m^2-i0}\frac{\Lambda^2}{p^2+\Lambda^2-i0}
+=\frac{\Lambda^2}{\Lambda^2-m^2}
+\left[\frac1{p^2+m^2-i0}-\frac1{p^2+\Lambda^2-i0}\right].
+\tag{14.21}
+$$
+
+取 $\Lambda>m$ 后，每条线的大欧氏动量行为改善为 $p^{-4}$，两条线共同使圈积分在 $d<8$ 收敛。先在有限 $\Lambda$ 下施加相同的在壳条件，再令 $\Lambda\to\infty$，就能得到同一双减除自能。要把这一极限说明清楚，先求出径向积分的一般形式。
+
+<span id="c14-master-integral"></span>
+
+## 径向积分与维数正规化
+
+先求 $d$ 维单位球面的面积 $\Omega_d$。笛卡尔坐标中的高斯积分分解为 $d$ 个 $\sqrt\pi$；球坐标中令 $t=q^2$，径向积分则是 $\Gamma(d/2)/2$。比较两种写法，得到
+
+<span id="eq:c14-gaussian-sphere"></span>
+
+$$
+\pi^{d/2}=\int d^dq\,e^{-q^2}
+=\Omega_d\int_0^\infty dq\,q^{d-1}e^{-q^2}
+=\frac{\Omega_d}{2}\Gamma(d/2).
+$$
+
+对一般径向积分取 $D>0$，再令 $u=q^2/D$，便有
+
+<span id="eq:c14-radial-beta-proof"></span>
+
+$$
+\begin{aligned}
+\int\frac{d^dq}{(2\pi)^d}\frac{(q^2)^a}{(q^2+D)^b}
+&=\frac{\Omega_d D^{a+d/2-b}}{2(2\pi)^d}
+\int_0^\infty du\,\frac{u^{a+d/2-1}}{(1+u)^b},\\
+\int_0^\infty du\,\frac{u^{p-1}}{(1+u)^{p+q}}
+&=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}.
+\end{aligned}
+$$
+
+第二行的 Beta 积分可从两份欧拉积分的乘积得到：令 $t_1=T v$、$t_2=T(1-v)$，先积掉总尺度 $T$，再令 $u=v/(1-v)$。取 $p=a+d/2$、$q=b-a-d/2$，就得到
+
+<span id="eq:c14-master-recalled"></span>
+
+$$
+\begin{aligned}
+\int\frac{d^d\bar q}{(2\pi)^d}
+\frac{(\bar q^2)^a}{(\bar q^2+D)^b}
+&=\frac{\Gamma(b-a-d/2)\Gamma(a+d/2)}
+{(4\pi)^{d/2}\Gamma(b)\Gamma(d/2)}
+D^{a+d/2-b},\\
+\Omega_d&=\frac{2\pi^{d/2}}{\Gamma(d/2)}.
+\end{aligned}
+\tag{14.22}
+$$
+
+普通积分在原点和无穷端的收敛条件分别为 $\operatorname{Re}(a+d/2)>0$、$\operatorname{Re}(b-a-d/2)>0$。径向代换 $u=\bar q^2/D$ 将它化为Beta积分，因而Gamma函数的参数和 $D$ 的幂都由这个换元确定。
+
+对眼下的原积分取 $a=0,b=2$，分子与分母的两个 $\Gamma(d/2)$ 相消，再用 $\Gamma(2)=1$，便得
+
+<span id="eq:c14-unregulated-gamma-integral"></span>
+
+$$
+I(z)=\frac{\Gamma(2-d/2)}{(4\pi)^{d/2}}
+\int_0^1dx\,D^{d/2-2}.
+\tag{14.23}
+$$
+
+这个表达式最初等于 $0<d<4$ 内的收敛径向积分，但右边已把对 $d$ 的依赖写成Gamma函数与幂函数，可以亚纯延拓到其他 $d$。用延拓后的表达式定义调节积分，就是维数正规化（dimensional regularization）。接近六维时先保留偏离极点的小参数，待重整化条件施加以后再取极限。
+
+同一径向公式也能直接给出已经收敛的二阶导数。在式[（14.16）](#eq:c14-two-derivatives)中取 $a=0,b=4$，$\Gamma(4)=6$ 与求导产生的6相消，特别在六维得到
+
+<span id="eq:c14-finite-second-derivative"></span>
+
+$$
+I''(z)=\frac1{(4\pi)^3}\int_0^1dx\,\frac{a_x^2}{D},
+\qquad
+\Pi''(z)=\frac{\alpha}{2}\int_0^1dx\,\frac{a_x^2}{D}
++O(\alpha^2),\qquad
+\alpha\equiv\frac{g^2}{(4\pi)^3}.
+\tag{14.24}
+$$
+
+这是一条不含发散项的公式，稍后可从它积分回去，与维数正规化的结果比较。
+
+现在先完成前述Pauli–Villars极限的说明。令 $M_1=m,M_2=\Lambda$，并记 $D_{ij}=(1-x)M_i^2+xM_j^2+a_xz$、$C_\Lambda=\Lambda^2/(\Lambda^2-m^2)$。将式[（14.21）](#eq:c14-pv-kernel)中两条线的差式相乘，再对外动量平方求两次导数，径向积分便给出
+
+<span id="eq:c14-pv-second-derivative"></span>
+
+$$
+\begin{aligned}
+\Pi_\Lambda''(z)
+&=\frac{g^2\Gamma(4-d/2)C_\Lambda^2}{2(4\pi)^{d/2}}
+\int_0^1dx\,a_x^2
+\left[D_{11}^{p}-D_{12}^{p}-D_{21}^{p}+D_{22}^{p}\right]
++O(g^4),\\
+p&=\frac d2-4<0.
+\end{aligned}
+\tag{14.25}
+$$
+
+对 $0<x<1$，含有 $\Lambda$ 的三个 $D_{ij}$ 都趋于无穷，因此其负次幂趋于零。同时，当 $\Lambda>m$ 时有 $D_{ij}\ge D_{11}>0$，各项的绝对值受 $D_{11}^p$ 控制。在任意紧的 $z>-4m^2$ 区间，这个上界关于 $x$ 可积，故参数端点不妨碍取极限；再用 $C_\Lambda\to1$，便得到 $\Pi_\Lambda''$ 趋于不含PV核的有限二阶导数。两种方案在质量壳上具有相同的零函数值和零导数，按式[（14.19）](#eq:c14-double-subtraction)积分回来，就给出相同自能。
+
+<span id="c14-dimreg"></span>
+
+## 六维附近的极点和尺度
+
+以下回到维数正规化，显式计算六维附近的圈积分和反项。采用 $\varepsilon=6-d$，所有极点系数都以这个偏离参数表示。第12节给出的立方耦合维数为 $(6-d)/2$，因此离开六维后，耦合也要相应带有质量量纲。暂将原来的有量纲耦合记为 $g_d$，引入辅助尺度：
+
+<span id="eq:c14-dimensional-coupling"></span>
+
+$$
+d=6-\varepsilon,\qquad
+g_d=g\widetilde\mu^{\varepsilon/2},\qquad
+[g]=0,\quad [\widetilde\mu]=1,\qquad
+\alpha=\frac{g^2}{(4\pi)^3}.
+\tag{14.26}
+$$
+
+这样 $g$ 保持无量纲，偏离六维所需的量纲由 $\widetilde\mu$ 承担；同时用 $\alpha$ 作为圈展开的参数，后面的系数会更简洁。先将 $d=6-\varepsilon$ 代入式[（14.23）](#eq:c14-unregulated-gamma-integral)，得到
+
+<span id="eq:c14-i-near-six"></span>
+
+$$
+I(z)=\frac{\Gamma(-1+\varepsilon/2)}{(4\pi)^3}
+\int_0^1dx\,D\left(\frac{4\pi}{D}\right)^{\varepsilon/2}.
+\tag{14.27}
+$$
+
+这个积分的质量维数仍为 $2-\varepsilon$。乘上 $g_d^2/2$ 后，耦合中的 $\widetilde\mu^\varepsilon$ 与积分的幂合成无量纲比值，于是自能写成
+
+<span id="eq:c14-regulated-self-energy"></span>
+
+$$
+\Pi(z)=\frac{\alpha}{2}\Gamma(-1+\varepsilon/2)
+\int_0^1dx\,D
+\left(\frac{4\pi\widetilde\mu^2}{D}\right)^{\varepsilon/2}
+-Az-Bm^2+O(\alpha^2).
+\tag{14.28}
+$$
+
+两个反项也在同一调节下计算。Gamma 函数的极点可从递推关系求出：对欧拉积分分部积分得 $\Gamma(1+z)=z\Gamma(z)$，所以
+
+<span id="eq:c14-gamma-pole-proof"></span>
+
+$$
+\begin{aligned}
+\Gamma(1+z)&=1-\gamma z+O(z^2),\qquad \gamma=-\Gamma'(1),\\
+\Gamma(-n+z)
+&=\frac{\Gamma(1+z)}{z(z-1)\cdots(z-n)}\\
+&=\frac{(-1)^n}{n!}
+\left[\frac1z-\gamma+\sum_{j=1}^n\frac1j+O(z)\right].
+\end{aligned}
+$$
+
+这里 $\gamma=0.57721\ldots$ 是欧拉–马歇罗尼常数。取 $n=1$、$z=\varepsilon/2$，再记 $X=4\pi\widetilde\mu^2/D$，将极点展开与指数函数的 Taylor 展开相乘：
+
+<span id="eq:c14-pole-times-small-power"></span>
+
+$$
+\begin{aligned}
+\Gamma(-1+\varepsilon/2)
+&=-\frac2\varepsilon+\gamma-1+O(\varepsilon),\\
+X^{\varepsilon/2}
+&=1+\frac{\varepsilon}{2}\ln X+O(\varepsilon^2),\\
+\Gamma(-1+\varepsilon/2)X^{\varepsilon/2}
+&=-\frac2\varepsilon+\gamma-1-\ln X+O(\varepsilon).
+\end{aligned}
+\tag{14.29}
+$$
+
+最后一行的有限对数 $-\ln X$ 来自交叉项 $(-2/\varepsilon)(\varepsilon\ln X/2)$。因此，幂函数中单独趋于零的那一项仍须保留，它与极点相乘以后恰好给出有限贡献。收集至 $\varepsilon^0$ 阶，式[（14.28）](#eq:c14-regulated-self-energy)成为
+
+<span id="eq:c14-expanded-regulated-self-energy"></span>
+
+$$
+\Pi(z)
+=-\frac\alpha2\int_0^1dx\,D
+\left[\frac2\varepsilon+1-\gamma+
+\ln\frac{4\pi\widetilde\mu^2}{D}\right]
+-Az-Bm^2+O(\alpha\varepsilon,\alpha^2).
+\tag{14.30}
+$$
+
+参数平均值可以直接求出：$\int_0^1a_xdx=[x^2/2-x^3/3]_0^1=1/6$，于是 $\int_0^1Ddx=m^2+z/6$。这说明发散极点只乘一个关于 $z$ 的一次多项式，正好可以由原有的动能和质量反项消去。将常数 $4\pi$ 和 $\gamma$ 吸收入辅助尺度，记
+
+<span id="eq:c14-scale-conversion"></span>
+
+$$
+\mu=\sqrt{4\pi}\,e^{-\gamma/2}\widetilde\mu,\qquad
+L_\varepsilon\equiv
+\frac1\varepsilon+\ln\frac\mu m+\frac12 .
+\tag{14.31}
+$$
+
+于是 $-\gamma+\ln(4\pi\widetilde\mu^2/D)=\ln(\mu^2/D)$。再把这个对数拆成 $2\ln(\mu/m)-\ln(D/m^2)$，就能把自能中的动量依赖与局部项分开：
+
+<span id="eq:c14-local-and-nonlocal"></span>
+
+$$
+\begin{aligned}
+\Pi(z)
+&=\frac\alpha2\int_0^1dx\,D\ln\frac D{m^2}\\
+&\quad-\left(\frac\alpha6L_\varepsilon+A\right)z
+-\left(\alpha L_\varepsilon+B\right)m^2
++O(\alpha\varepsilon,\alpha^2).
+\end{aligned}
+\tag{14.32}
+$$
+
+第一项保留了积分产生的非多项式动量依赖，后两项则分别改变局部动能和质量系数。因此，可以选择反项为
+
+<span id="eq:c14-counterterm-form"></span>
+
+$$
+\begin{aligned}
+A&=-\frac\alpha6(L_\varepsilon+\kappa_A)+O(\alpha^2),\\
+B&=-\alpha(L_\varepsilon+\kappa_B)+O(\alpha^2).
+\end{aligned}
+\tag{14.33}
+$$
+
+其中 $\kappa_A,\kappa_B$ 是尚待物理归一化条件确定的有限纯数。将式[（14.33）](#eq:c14-counterterm-form)代回并取 $\varepsilon\to0$，所有 $L_\varepsilon$ 项相消，留下
+
+<span id="eq:c14-finite-with-constants"></span>
+
+$$
+\Pi(z)
+=\frac\alpha2\int_0^1dx\,D\ln\frac D{m^2}
++\alpha\left(\frac{\kappa_A}{6}z+\kappa_Bm^2\right)
++O(\alpha^2).
+\tag{14.34}
+$$
+
+接下来只须用两个在壳条件固定这个有限表达式中剩下的常数。反项的尺度依赖抵消了圈积分中的 $\widetilde\mu$，有限部分再由质量与留数固定。若改用随尺度定义的耦合，同一物理量的尺度不变性便联系着耦合的变化；这将导出[第28节的重整化群方程](/posts/srednicki-28/#c28)。
+
+<span id="c14-onshell-integral"></span>
+
+## 在壳条件与有限参数积分
+
+施加在壳条件时，还可以把有限自能整理成更便于直接使用的形式。非局部部分含有 $\int D\ln(D/M^2)$，其中对数的自变量须为无量纲比值。改变任意固定的参考质量 $M$，只会增加 $\int D$ 所给的一次多项式，仍可纳入待确定的两个局部系数。为了让质量壳条件在积分中直接显现，记
+
+<span id="eq:c14-d-on-shell"></span>
+
+$$
+D_0\equiv D|_{z=-m^2}=m^2(1-a_x).
+\tag{14.35}
+$$
+
+把对数中的 $m^2$ 改为 $D_0$ 时，两种写法相差的 $\int D\ln(D_0/m^2)$ 仍只对 $z$ 线性，可以并入局部项。因此先将自能写为
+
+<span id="eq:c14-one-condition-imposed"></span>
+
+$$
+\Pi(z)
+=\frac\alpha2\int_0^1dx\,D\ln\frac D{D_0}
++C(z+m^2)+O(\alpha^2).
+\tag{14.36}
+$$
+
+当 $z=-m^2$ 时，对数与剩余线性项同时为零，质量壳处的函数值条件已经满足。接着对 $z$ 求导；此时 $D_0$ 固定，积分项在质量壳上的导数为
+
+<span id="eq:c14-last-linear-coefficient"></span>
+
+$$
+\left.\frac{d}{dz}
+\left[\frac\alpha2\int_0^1dx\,D\ln\frac D{D_0}\right]
+\right|_{z=-m^2}
+=\frac\alpha2\int_0^1dx\,a_x=\frac\alpha{12}.
+\tag{14.37}
+$$
+
+因此，要使总导数也为零，余下的系数必须取 $C=-\alpha/12$。这样就得到满足两个在壳条件的完整有限表达式：
+
+<span id="eq:c14-renormalized-parameter-integral"></span>
+
+$$
+\begin{aligned}
+\Pi(z)
+&=\frac\alpha2\int_0^1dx
+\left[D\ln\frac D{D_0}-a_x(z+m^2)\right]+O(\alpha^2)\\
+&=\frac\alpha2\int_0^1dx\,D\ln\frac D{D_0}
+-\frac\alpha{12}(z+m^2)+O(\alpha^2).
+\end{aligned}
+\tag{14.38}
+$$
+
+这个结果也能从前面已经有限的二阶导数得到。将式[（14.24）](#eq:c14-finite-second-derivative)积分两次，在其中的 $t$ 积分作代换 $y=m^2+a_xt$，由 $dy=a_xdt$ 和 $a_x(z-t)=D-y$，可将内层积分写成
+
+<span id="eq:c14-integrating-back"></span>
+
+$$
+\begin{aligned}
+\int_{-m^2}^{z}dt\,(z-t)\frac{a_x^2}{m^2+a_xt}
+&=\int_{D_0}^{D}dy\,\frac{D-y}{y}\\
+&=D\ln\frac D{D_0}-(D-D_0).
+\end{aligned}
+\tag{14.39}
+$$
+
+再用 $D-D_0=a_x(z+m^2)$，代回两次积分的边界式，就恢复式[（14.38）](#eq:c14-renormalized-parameter-integral)。参数端点 $x=0,1$ 处，两边都按连续极限取零。于是，先在六维评价有限二阶导数、再积分回去，与先作维数正规化、再确定反项，确实给出同一自能。
+
+<span id="c14-finite-constants"></span>
+
+## 两个有限反项常数
+
+有限自能既已确定，还可以回头求出式[（14.33）](#eq:c14-counterterm-form)中反项的具体系数 $\kappa_A,\kappa_B$。为此定义两个无量纲积分
+
+<span id="eq:c14-j0-j1"></span>
+
+$$
+J_0=\int_0^1dx\,\ln(1-a_x),\qquad
+J_1=\int_0^1dx\,a_x\ln(1-a_x).
+\tag{14.40}
+$$
+
+对式[（14.34）](#eq:c14-finite-with-constants)求导并取 $z=-m^2$，导数中的对数项给出第二个积分，余下的参数平均值也已知，因此导数条件为
+
+<span id="eq:c14-kappa-a-condition"></span>
+
+$$
+0=\frac\alpha2\left(J_1+\frac16\right)
++\frac\alpha6\kappa_A,\qquad
+\kappa_A=-3\left(J_1+\frac16\right).
+\tag{14.41}
+$$
+
+再要求质量壳处的函数值为零，就用两个积分的差确定另一个常数：
+
+<span id="eq:c14-kappa-b-condition"></span>
+
+$$
+0=\frac{\alpha m^2}{2}(J_0-J_1)
++\alpha m^2\left(-\frac{\kappa_A}{6}+\kappa_B\right),
+\qquad
+\kappa_B=\frac{\kappa_A}{6}-\frac12(J_0-J_1).
+\tag{14.42}
+$$
+
+这里逐项比较的都是一圈系数，更高阶贡献会相应修正反项。现在评价这两个有限积分：令 $t=2x-1$，便有 $a_x=(1-t^2)/4$、$1-a_x=(3+t^2)/4$，且 $dx=dt/2$。代换后，被积函数对 $t$ 为偶函数，可以将积分区间改为 $0\le t\le1$。第一个积分对对数作分部积分，得到
+
+<span id="eq:c14-j0-evaluated"></span>
+
+$$
+\begin{aligned}
+J_0
+&=\int_0^1dt\,\ln\frac{3+t^2}{4}\\
+&=\left[t\ln\frac{3+t^2}{4}\right]_0^1
+-2\int_0^1dt\,\frac{t^2}{t^2+3}\\
+&=-2\int_0^1dt\left(1-\frac3{t^2+3}\right)
+=-2+\frac{\pi}{\sqrt3}.
+\end{aligned}
+\tag{14.43}
+$$
+
+分部积分的边界项为零，剩下的有理函数先分出常数，再用 $\int dt/(t^2+3)=\arctan(t/\sqrt3)/\sqrt3$ 积分；代入上限时有 $\arctan(1/\sqrt3)=\pi/6$。
+
+计算 $J_1$ 时，需要再求一个带平方权重的积分。记 $K=\int_0^1dt\,t^2\ln[(3+t^2)/4]$，同样先对对数分部积分，再对所得有理函数作多项式除法：
+
+<span id="eq:c14-j1-evaluated"></span>
+
+$$
+\begin{aligned}
+K
+&=-\frac23\int_0^1dt\,\frac{t^4}{t^2+3}\\
+&=-\frac23\int_0^1dt
+\left(t^2-3+\frac9{t^2+3}\right)
+=\frac{16}{9}-\frac{\pi}{\sqrt3},\\
+J_1&=\frac14(J_0-K)
+=-\frac{17}{18}+\frac{\pi}{2\sqrt3}.
+\end{aligned}
+\tag{14.44}
+$$
+
+将两个积分的值代回导数和函数值条件，反项的有限常数便成为
+
+<span id="eq:c14-kappas-evaluated"></span>
+
+$$
+\kappa_A=\frac73-\frac{\pi\sqrt3}{2},\qquad
+\kappa_B=\frac{11}{12}-\frac{\pi\sqrt3}{6}.
+\tag{14.45}
+$$
+
+至此，一圈反项的发散部分与有限部分都已确定；后者由质量和场的物理归一化选定。还可以继续评价剩余的参数积分，使自能在任意外动量处的行为更直接地呈现出来。
+
+<span id="c14-closed-form"></span>
+
+## 参数积分的闭式
+
+现在直接评价式[（14.38）](#eq:c14-renormalized-parameter-integral)中剩余的积分。先引入无量纲动量 $u=z/m^2$，将唯一还含外动量的积分记为
+
+<span id="eq:c14-f-function"></span>
+
+$$
+F(u)\equiv\int_0^1dx\,[1+u a_x]\ln[1+u a_x].
+\tag{14.46}
+$$
+
+其余对数项已由刚才的两个常数积分求出，所以式[（14.38）](#eq:c14-renormalized-parameter-integral)可整理为
+
+<span id="eq:c14-pi-in-f"></span>
+
+$$
+\frac{\Pi(z)}{\alpha m^2}
+=\frac12\left[F(u)-J_0-uJ_1\right]
+-\frac{u+1}{12}+O(\alpha).
+\tag{14.47}
+$$
+
+先在 $u>0$ 的区域计算，此时参数积分中的对数为实数；其余区域的复支随后由原积分的处方确定。再次令 $t=2x-1$，并记 $b=u/4,\ a=1+u/4,\ r^2=a/b=1+4/u$，就将待求积分化为 $F(u)=\int_0^1dt\,(a-bt^2)\ln(a-bt^2)$。对其中的 $(a-bt^2)dt$ 积分，原函数为 $at-bt^3/3$，而对数的导数为 $-2bt/(a-bt^2)$。在 $t=0$ 处原函数为零，在 $t=1$ 处又因 $a-b=1$ 使对数为零，故分部积分的两个边界项都消失，留下
+
+<span id="eq:c14-f-integration-by-parts"></span>
+
+$$
+\begin{aligned}
+F(u)
+&=2b\int_0^1dt\,\frac{at^2-bt^4/3}{a-bt^2}\\
+&=2b\int_0^1dt
+\left[\frac{t^2}{3}-\frac{2r^2}{3}
++\frac{2r^4}{3(r^2-t^2)}\right].
+\end{aligned}
+\tag{14.48}
+$$
+
+第二行是对有理函数作多项式除法。将各项乘回 $r^2-t^2$，便有 $t^2(r^2-t^2)/3-2r^2(r^2-t^2)/3+2r^4/3
+=r^2t^2-t^4/3$，恢复原来的分子。因此积分只剩多项式项和一个简单分式。对当前的 $u>0$，有 $r>1$，非多项式部分给出
+
+<span id="eq:c14-rational-r-integral"></span>
+
+$$
+\int_0^1\frac{dt}{r^2-t^2}
+=\frac1{2r}\left[\ln\frac{r+t}{r-t}\right]_0^1
+=\frac1r\operatorname{atanh}\frac1r .
+\tag{14.49}
+$$
+
+再将多项式项积分，用 $\int_0^1t^2dt=1/3$，所有部分合起来得到
+
+<span id="eq:c14-f-closed"></span>
+
+$$
+F(u)
+=\frac u3r^3\operatorname{atanh}\frac1r
+-\frac{5u}{18}-\frac43 .
+\tag{14.50}
+$$
+
+这里已经用 $ur^2=u+4$ 合并了多项式项。将所得结果与 $J_0,J_1$ 代入式[（14.47）](#eq:c14-pi-in-f)，其中 $u$ 的系数合为 $-5/36-J_1/2-1/12=(3-\pi\sqrt3)/12$，常数项合为 $-2/3-J_0/2-1/12=(3-2\pi\sqrt3)/12$。因此，自能的闭式为
+
+<span id="eq:c14-pi-closed"></span>
+
+$$
+\begin{aligned}
+\Pi(z)
+&=\frac{\alpha}{12}
+\left[c_1z+c_2m^2+2z f(r)\right]+O(\alpha^2),\\
+f(r)&=r^3\operatorname{atanh}\frac1r,\qquad
+r^2=1+\frac{4m^2}{z},\\
+c_1&=3-\pi\sqrt3,\qquad c_2=3-2\pi\sqrt3 .
+\end{aligned}
+\tag{14.51}
+$$
+
+恢复质量量纲后，每一项都含质量平方。在 $z=0$ 处，闭式中的 $r$ 趋于无穷，但这只是当前写法所产生的表观奇性。零动量值应先由原参数积分直接求出：
+
+<span id="eq:c14-zero-momentum-limit"></span>
+
+$$
+\frac{\Pi(0)}{\alpha m^2}
+=-\frac{J_0}{2}-\frac1{12}
+=\kappa_B+O(\alpha).
+\tag{14.52}
+$$
+
+也可以在闭式中使用 $r^3\operatorname{atanh}(1/r)=r^2+1/3+O(r^{-2})$，合并各项以后再取极限，得到相同的有限结果。
+
+<span id="c14-branches"></span>
+
+## 阈值以后的复支与虚部
+
+要把闭式用于类时动量，须保留原动量积分的处方。负的 $D$ 从下半平面到达实轴，对数因而取 $\ln(D-i0)=\ln|D|-i\pi$。这个延拓过程同时固定了平方根和反双曲正切的支；两者须作为同一积分结果一起延拓。
+
+对 $u>0$，有 $r>1$，前面的式子均为实数。进入 $-4<u<0$ 的区间，令 $h=\sqrt{-1-4/u}>0$，沿规定边界取 $r=ih$。由 $\operatorname{atanh}(-i/h)=-i\arctan(1/h)$ 和 $r^3=-ih^3$，两者相乘得到负的 $h^3\arctan(1/h)$。继续到 $u<-4$ 时，$0<r<1$，$\operatorname{atanh}(1/r)$ 内的对数越过负实轴，产生 $-i\pi/2$。三段表达式于是为
+
+<span id="eq:c14-three-branches"></span>
+
+$$
+f=
+\begin{cases}
+\displaystyle\frac{r^3}{2}\ln\frac{r+1}{r-1},
+&r=\sqrt{1+4/u}>1,\quad u>0,\\[7pt]
+\displaystyle-h^3\arctan\frac1h,
+&h=\sqrt{-1-4/u},\quad -4<u<0,\\[7pt]
+\displaystyle r^3\left[\frac12\ln\frac{1+r}{1-r}-\frac{i\pi}{2}\right],
+&r=\sqrt{1+4/u},\quad u<-4.
+\end{cases}
+\tag{14.53}
+$$
+
+在 $u=-4$ 处，$r$ 或 $h$ 趋于零，因而 $f$ 也趋于零。函数在此连续，却在越过这一点后出现虚部；阈值附近的非解析部分正比于 $|u+4|^{3/2}$，所以这里是一个支点。
+
+虚部的起点和符号还可直接从参数积分看出。令 $w=-u>4$、$\beta=\sqrt{1-4/w}$，则仅有 $x_-<x<x_+$ 区间内的 $D$ 为负，其中 $x_\pm=(1\pm\beta)/2$。在这个区间，对数的虚部为 $-\pi$，而反项仍为实数，于是
+
+<span id="eq:c14-imaginary-parameter-region"></span>
+
+$$
+\operatorname{Im}\Pi(z)
+=-\frac{\pi\alpha m^2}{2}
+\int_{x_-}^{x_+}dx\,[1-wx(1-x)]+O(\alpha^2).
+\tag{14.54}
+$$
+
+仍作代换 $t=2x-1$，用 $1-wx(1-x)=w(t^2-\beta^2)/4$，这个有限区间的积分便可直接评价：
+
+<span id="eq:c14-imaginary-part-evaluated"></span>
+
+$$
+\begin{aligned}
+\int_{x_-}^{x_+}dx\,[1-wx(1-x)]
+&=\frac w8\int_{-\beta}^{\beta}dt\,(t^2-\beta^2)
+=-\frac{w\beta^3}{6},\\
+\operatorname{Im}\Pi(z)
+&=\frac{\pi\alpha}{12}(-z)
+\left(1+\frac{4m^2}{z}\right)^{3/2}
++O(\alpha^2),\qquad z<-4m^2 .
+\end{aligned}
+\tag{14.55}
+$$
+
+所得自能虚部为正，与式[（14.53）](#eq:c14-three-branches)中 $2z(-i\pi r^3/2)$ 的贡献相同。从圈图看，阈值对应两条内部线能够同时带正能在壳动量的区域，也就是第13节中的两粒子谱阈值。下一节将把这个虚部直接写入精确传播子的谱表示。
+
+<span id="c14-relative-correction"></span>
+
+## 相对修正与大动量行为
+
+有了自能，就能考察它相对于自由传播子造成多大改变。将精确传播子写成自由传播子乘一个修正因子，并暂保留有限的 $\eta$，有代数恒等式
+
+<span id="eq:c14-factorized-propagator"></span>
+
+$$
+\widetilde{\boldsymbol\Delta}(z)
+=\left[1-\frac{\Pi(z)}{z+m^2-i\eta}\right]^{-1}
+\frac1{z+m^2-i\eta}.
+\tag{14.56}
+$$
+
+取边界值时，修正比值通常记为 $\Pi(z)/(z+m^2)$，自由极点则仍带 $-i0$。因为两个在壳条件使 $\Pi(z)=O((z+m^2)^2)$，这个比值在 $z=-m^2$ 的分母零点处也趋于零，延拓后没有额外极点。为了画出这一相对修正，定义无量纲函数
+
+<span id="eq:c14-relative-function"></span>
+
+$$
+R(u)\equiv\frac{H(u)}{u+1},\qquad
+H(u)\equiv\frac{\Pi(m^2u)}{\alpha m^2}.
+\tag{14.57}
+$$
+
+实部和虚部都由式[（14.51）](#eq:c14-pi-closed)及其三段支给出。在 $u=-1$ 处取极限 $R=0$，在 $u=0$ 处有 $R=\kappa_B+O(\alpha)$。当 $u<-4$ 时，自能的虚部虽然为正，分母 $u+1$ 却为负，因此相对修正的虚部曲线位于横轴以下。
+
+<span id="c14-fig-relative"></span>
+
+![自能相对修正的实部与虚部，含质量壳附近放大图](/images/srednicki/s14-self-energy.svg)
+
+图14e：一圈相对修正$R(u)$。实部为黑实线，虚部为灰虚线；放大图显示在壳点与零动量点。
+
+图中展示了有限动量区间内的行为；在很大的 $|u|$ 处，需要进一步展开对数。先用 $r=\sqrt{1+4/u}=1+2/u+O(u^{-2})$，再用精确关系 $(r+1)/(r-1)=u(r+1)^2/4$ 整理对数，并保持已经确定的边界支，便得
+
+<span id="eq:c14-f-large-momentum"></span>
+
+$$
+f(r)
+=\frac12\ln(u-i0)
++O\!\left(\frac{\ln|u|}{|u|}\right).
+\tag{14.58}
+$$
+
+因 $r^3=1+O(u^{-1})$，乘上这一因子只改变上式所列的次领先项。将展开代入闭式，并用 $z/(z+m^2)=1+O(m^2/z)$，相对修正就成为
+
+<span id="eq:c14-large-logarithm"></span>
+
+$$
+\frac{\Pi(z)}{z+m^2}
+=\frac\alpha{12}
+\left[\ln\frac{z-i0}{m^2}+c_1
++O\!\left(\frac{m^2}{|z|}\ln\frac{|z|}{m^2}\right)\right]
++O(\alpha^2).
+\tag{14.59}
+$$
+
+在正类空方向，对数为实数；沿负类时方向则有 $\ln(z-i0)=\ln|z|-i\pi$，所以相对修正的虚部趋于 $-\pi\alpha/12$，实部仍随 $|z|$ 对数增长。由此可见，即使六维耦合无量纲，量子修正仍会引入能量依赖。
+
+用一圈结果估计传播子的修正时，除了要求 $\alpha$ 小，还须使大对数满足 $|\alpha\ln(|z|/m^2)|/12\ll1$。式[（14.59）](#eq:c14-large-logarithm)同时略去了质量幂修正和更高圈贡献；当对数增长抵消小耦合的抑制时，就需要用[重整化群方法](/posts/srednicki-28/#c28)重求和这些大对数。
+
+---
+
+[← 第 13 节](/posts/srednicki-13/) · [章节地图](/srednicki/) · [第 15 节 →](/posts/srednicki-15/)

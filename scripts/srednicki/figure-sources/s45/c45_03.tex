@@ -1,0 +1,25 @@
+% Original vector reconstruction: source Fig.45.3, PDF195 / printed183.
+% Coordinate diagram. Fixed left order y1,y2; right order x1,x2 or x2,x1.
+% The displayed minus is relative, not an independently assigned global phase.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \foreach \shift/\xa/\xb in {0/1/2,78/2/1}{
+    \begin{scope}[shift={(\shift,0)}]
+      \foreach \y in {0,-24}{
+        \draw (0,\y)--(54,\y);
+        \draw[->] (8,\y)--(18,\y);
+        \draw[->] (35,\y)--(45,\y);
+        \fill (27,\y) circle[radius=.55mm];
+      }
+      \draw[scalar] (27,0)--(27,-24);
+      \node[above] at (0,2) {$y_1$};
+      \node[above] at (27,2) {$w_1$};
+      \node[above] at (54,2) {$x_{\xa}$};
+      \node[below] at (0,-26) {$y_2$};
+      \node[below] at (27,-26) {$w_2$};
+      \node[below] at (54,-26) {$x_{\xb}$};
+    \end{scope}
+  }
+  \node at (66,-12) {$-$};
+\end{tikzpicture}

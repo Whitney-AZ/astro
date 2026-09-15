@@ -1,0 +1,496 @@
+{
+  "execution": {
+    "utc_time": "2026-09-14T14:15:17.384273+00:00",
+    "command": "python3 scripts/srednicki/check_triangle75.py",
+    "actual_argv": ["scripts/srednicki/check_triangle75.py"],
+    "cwd": "/Users/Admin/Documents/astro",
+    "python_version": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "python_executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "numpy_version": "2.3.3",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "script_sha256": "7d14de4ec02f1619465409d45438f11be6c61e5aec01cc81df2851824f507f94"
+  },
+  "conventions": {
+    "ledger": "src/content/posts/Srednicki-75.md, equations 75.8 and 75.15-75.30",
+    "metric_diagonal": [-1, 1, 1, 1],
+    "clifford": "{gamma^mu,gamma^nu}=-2*g^{mu nu}*I4",
+    "gamma_basis": "gamma0=[[0,I],[I,0]]; gammai=[[0,sigma_i],[-sigma_i,0]]",
+    "gamma5": "i*gamma0*gamma1*gamma2*gamma3 = diag(-1,-1,1,1)",
+    "epsilon": "epsilon^{0123}=+1; vectors contracted with upper epsilon are lowered",
+    "momenta": "p,q,r all outgoing; r=-p-q; slash(v)=v_mu*gamma^mu",
+    "N": "(1/2)tr[slash(ell-p) gamma^mu slash(ell) gamma^nu slash(ell+q) gamma^rho gamma5]",
+    "reflected_second_orientation": "N^{nu mu rho}(q,p,-ell) = N^{mu nu rho}(p,q,ell)",
+    "p_rhs": "-2i eps^{a nu b rho}[(ell-p)^2 ell_a q_b-ell^2(ell-p)_a(p+q)_b]",
+    "q_rhs": "+2i eps^{a mu b rho}[(ell+q)^2 ell_a p_b-ell^2(ell-p)_a(p+q)_b]",
+    "r_rhs": "+2i eps^{a nu b mu}[(ell+q)^2 ell_a p_b+(ell-p)^2 ell_a q_b]",
+    "six_trace_weights": ["a_alpha*g_beta_gamma", "a_beta*g_gamma_alpha", "a_gamma*g_alpha_beta"],
+    "six_trace_target_each": "8i*epsilon^{mu nu rho delta}*a_delta",
+    "single_diagram_shift_target": "delta V*pi^2/g^3 = -i*epsilon^{mu nu rho delta}*a_delta/16",
+    "complex_witness_encoding": "[real part, imaginary part]",
+    "dtype": "numpy.complex128",
+    "absolute_tolerance": 1e-10
+  },
+  "input_matrix_calibration": {
+    "clifford_max_abs_residual": 0.0,
+    "gamma5_trace_0123_real_imag": [0.0, -4.0],
+    "gamma5_diagonal": [
+      [-1.0, 0.0],
+      [-1.0, 0.0],
+      [1.0, 0.0],
+      [1.0, 0.0]
+    ],
+    "pass": true
+  },
+  "points": [
+    {
+      "point_number": 1,
+      "contravariant_vectors_t_x_y_z": {
+        "p": [2, 1, -1, 3],
+        "q": [1, -2, 2, 1],
+        "ell": [5, 2, 1, -1],
+        "r": [-3, 1, -1, -4],
+        "a": [1, 3, -3, 2]
+      },
+      "covariant_vectors": {
+        "p": [-2, 1, -1, 3],
+        "q": [-1, -2, 2, 1],
+        "ell": [-5, 2, 1, -1],
+        "r": [3, 1, -1, -4],
+        "a": [-1, 3, -3, 2]
+      },
+      "virtualities": {
+        "p_squared": 7,
+        "q_squared": 8,
+        "r_squared": 9,
+        "ell_squared": -19,
+        "ell_minus_p_squared": 12,
+        "ell_plus_q_squared": -27
+      },
+      "nonzero_3_by_3_minor_of_p_q_ell_first_three_columns": -15,
+      "first_denominator": 6156,
+      "reflected_second_denominator": 6156,
+      "odd_trace_reflection": {
+        "components_checked": 64,
+        "max_abs_residual": 0.0,
+        "pass": true,
+        "nonzero_actual_components": 64,
+        "largest_actual_component_witness": {
+          "indices": [0, 2, 1],
+          "actual_real_imag": [0.0, -288.0],
+          "expected_real_imag": [0.0, -288.0]
+        }
+      },
+      "contracted_numerator_checks": {
+        "p": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 10,
+          "largest_actual_component_witness": {
+            "indices": [1, 2],
+            "actual_real_imag": [0.0, -1056.0],
+            "expected_real_imag": [0.0, -1056.0]
+          }
+        },
+        "q": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [0, 2],
+            "actual_real_imag": [0.0, -378.0],
+            "expected_real_imag": [0.0, -378.0]
+          }
+        },
+        "r": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [1, 2],
+            "actual_real_imag": [0.0, 774.0],
+            "expected_real_imag": [0.0, 774.0]
+          }
+        }
+      },
+      "six_gamma_contractions_in_source_75_49_order": [
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 3],
+            "actual_real_imag": [0.0, 24.0],
+            "expected_real_imag": [0.0, 24.0]
+          }
+        },
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 3],
+            "actual_real_imag": [0.0, 24.0],
+            "expected_real_imag": [0.0, 24.0]
+          }
+        },
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 3],
+            "actual_real_imag": [0.0, 24.0],
+            "expected_real_imag": [0.0, 24.0]
+          }
+        }
+      ],
+      "single_diagram_shift_pi_squared_over_g_cubed": {
+        "components_checked": 64,
+        "max_abs_residual": 0.0,
+        "pass": true,
+        "nonzero_actual_components": 24,
+        "largest_actual_component_witness": {
+          "indices": [0, 1, 3],
+          "actual_real_imag": [-0.0, -0.1875],
+          "expected_real_imag": [-0.0, -0.1875]
+        }
+      },
+      "source_75_45_sign": {
+        "common_factor_removed": "i*g^3/(8*pi^2)",
+        "corrected_minus_printed_epsilon": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 10,
+          "largest_actual_component_witness": {
+            "indices": [0, 1],
+            "actual_real_imag": [-7.0, 0.0],
+            "expected_real_imag": [-7.0, -0.0]
+          }
+        },
+        "literal_plus_printed_epsilon": {
+          "components_checked": 16,
+          "max_abs_residual": 14.0,
+          "pass": false,
+          "nonzero_actual_components": 10,
+          "largest_actual_component_witness": {
+            "indices": [0, 1],
+            "actual_real_imag": [-7.0, 0.0],
+            "expected_real_imag": [7.0, 0.0]
+          }
+        },
+        "interpretation": "The printed PLUS sign fails for all chosen nondegenerate momenta; with its epsilon order the coefficient must be negative. The analytic surface input (75.44) is not recomputed by this finite check."
+      },
+      "all_checks_pass": true
+    },
+    {
+      "point_number": 2,
+      "contravariant_vectors_t_x_y_z": {
+        "p": [1, 3, 1, -2],
+        "q": [2, -1, 2, 2],
+        "ell": [4, 1, -3, 2],
+        "r": [-3, -2, -3, 0],
+        "a": [-1, 4, -1, -4]
+      },
+      "covariant_vectors": {
+        "p": [-1, 3, 1, -2],
+        "q": [-2, -1, 2, 2],
+        "ell": [-4, 1, -3, 2],
+        "r": [3, -2, -3, 0],
+        "a": [1, 4, -1, -4]
+      },
+      "virtualities": {
+        "p_squared": 13,
+        "q_squared": 5,
+        "r_squared": 4,
+        "ell_squared": -2,
+        "ell_minus_p_squared": 27,
+        "ell_plus_q_squared": -19
+      },
+      "nonzero_3_by_3_minor_of_p_q_ell_first_three_columns": 49,
+      "first_denominator": 1026,
+      "reflected_second_denominator": 1026,
+      "odd_trace_reflection": {
+        "components_checked": 64,
+        "max_abs_residual": 0.0,
+        "pass": true,
+        "nonzero_actual_components": 63,
+        "largest_actual_component_witness": {
+          "indices": [0, 1, 3],
+          "actual_real_imag": [0.0, -272.0],
+          "expected_real_imag": [0.0, -272.0]
+        }
+      },
+      "contracted_numerator_checks": {
+        "p": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [1, 3],
+            "actual_real_imag": [0.0, 840.0],
+            "expected_real_imag": [0.0, 840.0]
+          }
+        },
+        "q": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [0, 3],
+            "actual_real_imag": [0.0, 372.0],
+            "expected_real_imag": [0.0, 372.0]
+          }
+        },
+        "r": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [2, 3],
+            "actual_real_imag": [0.0, 742.0],
+            "expected_real_imag": [0.0, 742.0]
+          }
+        }
+      },
+      "six_gamma_contractions_in_source_75_49_order": [
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 2],
+            "actual_real_imag": [0.0, -32.0],
+            "expected_real_imag": [-0.0, -32.0]
+          }
+        },
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 2],
+            "actual_real_imag": [0.0, -32.0],
+            "expected_real_imag": [-0.0, -32.0]
+          }
+        },
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 2],
+            "actual_real_imag": [0.0, -32.0],
+            "expected_real_imag": [-0.0, -32.0]
+          }
+        }
+      ],
+      "single_diagram_shift_pi_squared_over_g_cubed": {
+        "components_checked": 64,
+        "max_abs_residual": 0.0,
+        "pass": true,
+        "nonzero_actual_components": 24,
+        "largest_actual_component_witness": {
+          "indices": [0, 1, 2],
+          "actual_real_imag": [0.0, 0.25],
+          "expected_real_imag": [0.0, 0.25]
+        }
+      },
+      "source_75_45_sign": {
+        "common_factor_removed": "i*g^3/(8*pi^2)",
+        "corrected_minus_printed_epsilon": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 10,
+          "largest_actual_component_witness": {
+            "indices": [0, 3],
+            "actual_real_imag": [7.0, 0.0],
+            "expected_real_imag": [7.0, -0.0]
+          }
+        },
+        "literal_plus_printed_epsilon": {
+          "components_checked": 16,
+          "max_abs_residual": 14.0,
+          "pass": false,
+          "nonzero_actual_components": 10,
+          "largest_actual_component_witness": {
+            "indices": [0, 3],
+            "actual_real_imag": [7.0, 0.0],
+            "expected_real_imag": [-7.0, 0.0]
+          }
+        },
+        "interpretation": "The printed PLUS sign fails for all chosen nondegenerate momenta; with its epsilon order the coefficient must be negative. The analytic surface input (75.44) is not recomputed by this finite check."
+      },
+      "all_checks_pass": true
+    },
+    {
+      "point_number": 3,
+      "contravariant_vectors_t_x_y_z": {
+        "p": [3, -2, 1, 1],
+        "q": [1, 2, -3, 2],
+        "ell": [6, -1, 2, 4],
+        "r": [-4, 0, 2, -3],
+        "a": [2, -4, 4, -1]
+      },
+      "covariant_vectors": {
+        "p": [-3, -2, 1, 1],
+        "q": [-1, 2, -3, 2],
+        "ell": [-6, -1, 2, 4],
+        "r": [4, 0, 2, -3],
+        "a": [-2, -4, 4, -1]
+      },
+      "virtualities": {
+        "p_squared": -3,
+        "q_squared": 16,
+        "r_squared": -3,
+        "ell_squared": -15,
+        "ell_minus_p_squared": 2,
+        "ell_plus_q_squared": -11
+      },
+      "nonzero_3_by_3_minor_of_p_q_ell_first_three_columns": 30,
+      "first_denominator": 330,
+      "reflected_second_denominator": 330,
+      "odd_trace_reflection": {
+        "components_checked": 64,
+        "max_abs_residual": 0.0,
+        "pass": true,
+        "nonzero_actual_components": 64,
+        "largest_actual_component_witness": {
+          "indices": [0, 1, 3],
+          "actual_real_imag": [0.0, 248.0],
+          "expected_real_imag": [0.0, 248.0]
+        }
+      },
+      "contracted_numerator_checks": {
+        "p": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [1, 3],
+            "actual_real_imag": [0.0, -380.0],
+            "expected_real_imag": [0.0, -380.0]
+          }
+        },
+        "q": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [0, 1],
+            "actual_real_imag": [0.0, -314.0],
+            "expected_real_imag": [0.0, -314.0]
+          }
+        },
+        "r": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [2, 3],
+            "actual_real_imag": [0.0, -250.0],
+            "expected_real_imag": [0.0, -250.0]
+          }
+        }
+      },
+      "six_gamma_contractions_in_source_75_49_order": [
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 3],
+            "actual_real_imag": [0.0, -32.0],
+            "expected_real_imag": [-0.0, -32.0]
+          }
+        },
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 3],
+            "actual_real_imag": [0.0, -32.0],
+            "expected_real_imag": [-0.0, -32.0]
+          }
+        },
+        {
+          "components_checked": 64,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 24,
+          "largest_actual_component_witness": {
+            "indices": [0, 1, 3],
+            "actual_real_imag": [0.0, -32.0],
+            "expected_real_imag": [-0.0, -32.0]
+          }
+        }
+      ],
+      "single_diagram_shift_pi_squared_over_g_cubed": {
+        "components_checked": 64,
+        "max_abs_residual": 0.0,
+        "pass": true,
+        "nonzero_actual_components": 24,
+        "largest_actual_component_witness": {
+          "indices": [0, 1, 3],
+          "actual_real_imag": [0.0, 0.25],
+          "expected_real_imag": [0.0, 0.25]
+        }
+      },
+      "source_75_45_sign": {
+        "common_factor_removed": "i*g^3/(8*pi^2)",
+        "corrected_minus_printed_epsilon": {
+          "components_checked": 16,
+          "max_abs_residual": 0.0,
+          "pass": true,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [1, 3],
+            "actual_real_imag": [-10.0, 0.0],
+            "expected_real_imag": [-10.0, -0.0]
+          }
+        },
+        "literal_plus_printed_epsilon": {
+          "components_checked": 16,
+          "max_abs_residual": 20.0,
+          "pass": false,
+          "nonzero_actual_components": 12,
+          "largest_actual_component_witness": {
+            "indices": [1, 3],
+            "actual_real_imag": [-10.0, 0.0],
+            "expected_real_imag": [10.0, 0.0]
+          }
+        },
+        "interpretation": "The printed PLUS sign fails for all chosen nondegenerate momenta; with its epsilon order the coefficient must be negative. The analytic surface input (75.44) is not recomputed by this finite check."
+      },
+      "all_checks_pass": true
+    }
+  ],
+  "scope": {
+    "primary_source": "Chinese PDF303-310; current review details are in checks/srednicki/reviews/75.md",
+    "checks": "Three fixed nondegenerate integer points; every free Lorentz component of stated tensors; explicit matrix traces versus independently formed epsilon sums",
+    "analytic_inputs_not_computationally_verified": "Regulated surface integrals (75.42)-(75.44) and (75.49); common UV/IR prescription; no dimension continuation of gamma5",
+    "interpretation": "Finite matrix evidence for these triangle identities and the source (75.45) sign correction, not a proof for all momenta or an anomaly nonrenormalization theorem",
+    "adapted_source_program": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/s75_triangle_check.py",
+    "adapted_source_sha256": "05b671e6071cd835efc90c6a6c27badd193c13b62df120614291243f9b1d0735"
+  },
+  "all_checks_pass": true
+}

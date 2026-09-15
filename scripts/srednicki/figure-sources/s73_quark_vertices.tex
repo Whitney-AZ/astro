@@ -1,0 +1,39 @@
+% Original vector graphs for source Fig.73.2, PDF294.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+\def\gline#1#2#3{\begin{scope}[shift={(#1)},rotate=#2]
+ \draw[domain=0:1,samples=121,smooth,variable=\u]
+ plot ({#3*\u},{.65*sin(1080*\u)});
+ \end{scope}}
+\draw (0,0)--(54,0);
+\foreach \x in {2,18,32,46}{\draw[->] (\x,0)--(\x+6,0);}
+\draw[domain=0:1,samples=181,smooth,variable=\u]
+ plot ({27+(17+.65*sin(1440*\u))*cos(180*\u)},
+       {(17+.65*sin(1440*\u))*sin(180*\u)});
+\gline{27,0}{-90}{20}
+\foreach \x in {10,27,44}{\fill (\x,0) circle[radius=.5mm];}
+\node[above] at (27,19) {$b,\ell$};
+\node[below] at (20,-1) {$\ell$};
+\node[below] at (35,-1) {$\ell$};
+\node[left] at (0,0) {$j$};
+\node[right] at (54,0) {$i$};
+\node[below] at (27,-21) {$(a,\mu)$};
+\node at (65,0) {$+$};
+\begin{scope}[shift={(80,0)}]
+\draw (0,0)--(54,0);
+\foreach \x in {2,24,46}{\draw[->] (\x,0)--(\x+6,0);}
+\gline{10,0}{-51.009}{27.019}
+\gline{44,0}{-128.991}{27.019}
+\gline{27,-21}{-90}{13}
+\foreach \x in {10,44}{\fill (\x,0) circle[radius=.5mm];}
+\fill (27,-21) circle[radius=.5mm];
+\node[left] at (0,0) {$j$};
+\node[right] at (54,0) {$i$};
+\node[above] at (27,1) {$\ell$};
+\node[above] at (10,1) {$\rho$};
+\node[above] at (44,1) {$\nu$};
+\node[left] at (17,-12) {$b,\ell$};
+\node[right] at (37,-12) {$c,-\ell$};
+\node[below] at (27,-35) {$(a,\mu)$};
+\end{scope}
+\end{tikzpicture}

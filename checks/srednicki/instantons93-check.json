@@ -1,0 +1,563 @@
+{
+  "checks": 111,
+  "all_passed": true,
+  "max_scaled_residual": 3.042011087472929e-14,
+  "script_sha256": "ba24b47cc350a1ba401d2fd0d9541e916a70b1bc03add4fedb159794e70c68ea",
+  "records": [
+    {
+      "name": "full nonabelian Cartesian strength 0",
+      "scaled_residual": 3.885780586188048e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 0",
+      "scaled_residual": 3.885780586188048e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 0",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 0",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 0",
+      "scaled_residual": 3.885780586188048e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 0",
+      "scaled_residual": 1.2587241091190084e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 0",
+      "scaled_residual": 1.211068354402175e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 0",
+      "scaled_residual": 4.558269156236981e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 1",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 1",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 1",
+      "scaled_residual": 1.0061396160665481e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 1",
+      "scaled_residual": 4.119968255444917e-18,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 1",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 1",
+      "scaled_residual": 5.594315114139762e-17,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 1",
+      "scaled_residual": 3.6956271958280173e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 2",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 2",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 2",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 2",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 2",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 2",
+      "scaled_residual": 5.621582340150866e-17,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 2",
+      "scaled_residual": 2.9038858691886193e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 3",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 3",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 3",
+      "scaled_residual": 3.252606517456513e-17,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 3",
+      "scaled_residual": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 3",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 3",
+      "scaled_residual": 5.132384046685432e-17,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 3",
+      "scaled_residual": 1.1492113146310606e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 3",
+      "scaled_residual": 5.265060505350835e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 4",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 4",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 4",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 4",
+      "scaled_residual": 6.749589069432173e-16,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 4",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 4",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 4",
+      "scaled_residual": 6.113032768023514e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 5",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 5",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 5",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 5",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 5",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 5",
+      "scaled_residual": 1.1188630228279524e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 5",
+      "scaled_residual": 1.2764090492343803e-15,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 5",
+      "scaled_residual": 1.445822222883415e-15,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 6",
+      "scaled_residual": 3.608224830031759e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 6",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 6",
+      "scaled_residual": 8.049116928532385e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 6",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 6",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 6",
+      "scaled_residual": 1.7554167342883506e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 6",
+      "scaled_residual": 1.8622357054229128e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 6",
+      "scaled_residual": 3.8567100692558583e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 7",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 7",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 7",
+      "scaled_residual": 4.787836793695988e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 7",
+      "scaled_residual": 3.122502256758253e-17,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 7",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 7",
+      "scaled_residual": 1.7554167342883506e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 7",
+      "scaled_residual": 2.162290398536894e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 7",
+      "scaled_residual": 5.797856506449807e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 8",
+      "scaled_residual": 1.249000902703301e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 8",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 8",
+      "scaled_residual": 1.3183898417423734e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 8",
+      "scaled_residual": 1.3010426069826053e-17,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 8",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 8",
+      "scaled_residual": 6.206335383118183e-17,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 8",
+      "scaled_residual": 3.113859494837896e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 8",
+      "scaled_residual": 1.5501837649220946e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian Cartesian strength 9",
+      "scaled_residual": 1.873575641379831e-16,
+      "passed": true
+    },
+    {
+      "name": "self-duality all components 9",
+      "scaled_residual": 1.8735756413798304e-16,
+      "passed": true
+    },
+    {
+      "name": "Yang-Mills equation all components 9",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "original kinetic and topological densities 9",
+      "scaled_residual": 1.6467626352395402e-18,
+      "passed": true
+    },
+    {
+      "name": "reflected anti-self-duality 9",
+      "scaled_residual": 1.8735756413798304e-16,
+      "passed": true
+    },
+    {
+      "name": "pure-gauge Maurer components 9",
+      "scaled_residual": 2.237726045655905e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick topological trace sign 9",
+      "scaled_residual": 4.0346710447061646e-16,
+      "passed": true
+    },
+    {
+      "name": "Wick kinetic trace sign 9",
+      "scaled_residual": 3.3539611346511383e-16,
+      "passed": true
+    },
+    {
+      "name": "power-map direct triple trace N=-4",
+      "scaled_residual": 5.666726363722702e-16,
+      "passed": true
+    },
+    {
+      "name": "power-map direct triple trace N=-1",
+      "scaled_residual": 6.153803181505188e-16,
+      "passed": true
+    },
+    {
+      "name": "power-map direct triple trace N=0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "power-map direct triple trace N=1",
+      "scaled_residual": 3.29444456240172e-16,
+      "passed": true
+    },
+    {
+      "name": "power-map direct triple trace N=3",
+      "scaled_residual": 2.879368564996279e-16,
+      "passed": true
+    },
+    {
+      "name": "integrated matrix winding N=-4",
+      "scaled_residual": 1.33226768257339e-15,
+      "passed": true
+    },
+    {
+      "name": "integrated matrix winding N=-1",
+      "scaled_residual": 1.998404144919854e-15,
+      "passed": true
+    },
+    {
+      "name": "integrated matrix winding N=0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "integrated matrix winding N=1",
+      "scaled_residual": 1.9984045798265735e-15,
+      "passed": true
+    },
+    {
+      "name": "integrated matrix winding N=3",
+      "scaled_residual": 1.4802974432578826e-15,
+      "passed": true
+    },
+    {
+      "name": "full-line original action a,g=(0.1, 0.7)",
+      "scaled_residual": 1.587446333895704e-15,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(0.1, 1.0)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(0.1, 4.0)",
+      "scaled_residual": 1.5543122344752192e-15,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(0.1, 40.0)",
+      "scaled_residual": 3.019806626980426e-14,
+      "passed": true
+    },
+    {
+      "name": "full-line original action a,g=(1.0, 1.2)",
+      "scaled_residual": 1.8142243815950907e-15,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(1.0, 1.0)",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(1.0, 4.0)",
+      "scaled_residual": 1.887379141862766e-15,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(1.0, 40.0)",
+      "scaled_residual": 3.042011087472929e-14,
+      "passed": true
+    },
+    {
+      "name": "full-line original action a,g=(3.0, 0.4)",
+      "scaled_residual": 1.8430215940013623e-15,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(3.0, 1.0)",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(3.0, 4.0)",
+      "scaled_residual": 1.887379141862766e-15,
+      "passed": true
+    },
+    {
+      "name": "finite-ball original charge a,t=(3.0, 40.0)",
+      "scaled_residual": 3.042011087472929e-14,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(9, 0)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(9, 1)",
+      "scaled_residual": 2.2887833992611187e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(9, 8)",
+      "scaled_residual": 4.742874840267547e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(13, 0)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(13, 1)",
+      "scaled_residual": 1.3432699022036628e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(13, 12)",
+      "scaled_residual": 7.550332863779066e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(21, 0)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(21, 1)",
+      "scaled_residual": 2.482534153247273e-16,
+      "passed": true
+    },
+    {
+      "name": "circulant Hamiltonian Fourier m,k=(21, 20)",
+      "scaled_residual": 1.5895974606912446e-15,
+      "passed": true
+    }
+  ]
+}

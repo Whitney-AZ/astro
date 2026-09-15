@@ -1,0 +1,41 @@
+% Original vector reconstruction of source Fig.78.1, PDF319.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{9}{11}\selectfont]
+\begin{scope}
+\draw[dashed] (24,0) circle[radius=10mm];
+\draw[domain=0:1,samples=71,smooth,variable=\u]
+ plot ({2+12*\u},{.65*sin(1440*\u)});
+\draw[domain=0:1,samples=71,smooth,variable=\u]
+ plot ({34+12*\u},{.65*sin(1440*\u)});
+\fill (14,0) circle[radius=.6mm];
+\fill (34,0) circle[radius=.6mm];
+\node[above] at (24,10) {$\ell+k$};
+\node[below] at (24,-10) {$\ell$};
+\node[above] at (5,2) {$\bar A$};
+\node[above] at (43,2) {$\bar A$};
+\node at (24,-20) {最小耦合泡};
+\end{scope}
+\node at (51,0) {$+$};
+\begin{scope}[shift={(52,0)}]
+\draw[dashed] (23,9) circle[radius=9mm];
+\draw[domain=0:1,samples=131,smooth,variable=\u]
+ plot ({5+36*\u},{.65*sin(4320*\u)});
+\fill (23,0) circle[radius=.65mm];
+\node[above] at (7,2) {$\bar A$};
+\node[above] at (39,2) {$\bar A$};
+\node at (23,-20) {海鸥蝌蚪};
+\end{scope}
+\node at (99,0) {$+$};
+\begin{scope}[shift={(124,0)}]
+\draw[domain=0:360,samples=361,smooth,variable=\t]
+ plot ({(10+.55*sin(18*\t))*cos(\t)},
+       {(10+.55*sin(18*\t))*sin(\t)});
+\fill (-10,0) circle[radius=1mm];
+\fill (10,0) circle[radius=1mm];
+\node[left] at (-11,0) {$\bar F$};
+\node[right] at (11,0) {$\bar F$};
+\node[above] at (0,12) {$q$};
+\node at (0,-20) {两个自旋插入};
+\end{scope}
+\end{tikzpicture}
+

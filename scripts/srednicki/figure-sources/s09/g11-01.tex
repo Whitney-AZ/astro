@@ -1,0 +1,43 @@
+% Original TikZ embedding of S09-G11-01; incidences from sources/units/S09.json.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.65pt,line cap=round,line join=round]
+\path[use as bounding box] (-3.52,-1.8) rectangle (3.52,1.8);
+% Edge T0--T3; multiplicity=1.
+\draw (-1.6500,0.0000) -- (-0.5500,0.0000);
+% Edge T1--T2; multiplicity=1.
+\draw (1.6500,0.0000) -- (0.5500,0.0000);
+% Edge T2--T3; multiplicity=2.
+\draw (0.5500,0.0000) .. controls (0.1833,0.4400) and (-0.1833,0.4400) .. (-0.5500,0.0000);
+\draw (0.5500,0.0000) .. controls (0.1833,-0.4400) and (-0.1833,-0.4400) .. (-0.5500,0.0000);
+% Edge T0--J0; multiplicity=1.
+\draw (-1.6500,0.0000) -- (-2.7000,0.8000);
+% Edge T0--J1; multiplicity=1.
+\draw (-1.6500,0.0000) -- (-2.7000,-0.8000);
+% Edge T1--J2; multiplicity=1.
+\draw (1.6500,0.0000) -- (2.7000,0.8000);
+% Edge T1--J3; multiplicity=1.
+\draw (1.6500,0.0000) -- (2.7000,-0.8000);
+% Node T0: cubic_vertex; only marked nodes are vertices.
+\fill (-1.6500,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-1.5541,-0.2842) {$T_{0}$};
+% Node T1: cubic_vertex; only marked nodes are vertices.
+\fill (1.6500,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (1.5541,-0.2842) {$T_{1}$};
+% Node T2: cubic_vertex; only marked nodes are vertices.
+\fill (0.5500,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (0.6772,-0.2717) {$T_{2}$};
+% Node T3: cubic_vertex; only marked nodes are vertices.
+\fill (-0.5500,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-0.6772,-0.2717) {$T_{3}$};
+% Node J0: source; only marked nodes are vertices.
+\draw[fill=white] (-2.7000,0.8000) circle[radius=2.5pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-2.9864,1.0182) {$J_{0}$};
+% Node J1: source; only marked nodes are vertices.
+\draw[fill=white] (-2.7000,-0.8000) circle[radius=2.5pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-2.9864,-1.0182) {$J_{1}$};
+% Node J2: source; only marked nodes are vertices.
+\draw[fill=white] (2.7000,0.8000) circle[radius=2.5pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (2.9864,1.0182) {$J_{2}$};
+% Node J3: source; only marked nodes are vertices.
+\draw[fill=white] (2.7000,-0.8000) circle[radius=2.5pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (2.9864,-1.0182) {$J_{3}$};
+\end{tikzpicture}

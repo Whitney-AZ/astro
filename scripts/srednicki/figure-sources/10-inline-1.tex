@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=1.1, every node/.style={font=\scriptsize}]
+\coordinate (Y) at (-.55,0); \coordinate (Z) at (.55,0);
+\draw[->] (-1.05,.85) node[above] {$1:k_1$} -- (Y);
+\draw[->] (-1.05,-.85) node[below] {$2:k_2$} -- (Y);
+\draw[->] (Z) -- (1.05,.85) node[above] {$1':k_1'$};
+\draw[->] (Z) -- (1.05,-.85) node[below] {$2':k_2'$};
+\draw[->] (Y) -- node[above] {$q_s$} (Z);
+\fill (Y) circle (1.4pt) node[below] {$y$};
+\fill (Z) circle (1.4pt) node[below] {$z$};
+\end{tikzpicture}

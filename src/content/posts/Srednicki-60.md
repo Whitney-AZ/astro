@@ -1,0 +1,1053 @@
+---
+title: 'Srednicki §60 旋量电动力学的旋量螺旋度方法'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [60]
+hideFromHome: true
+draft: false
+---
+
+<span id="c60"></span>
+
+上一节先求振幅的模方，再对自旋和偏振求和，因而要计算
+较长的伽马矩阵迹。现在考虑$s,|t|,|u|\gg m^2$的高能区域，把电子质量
+置零到最低阶。这样，费米子的外旋量可以使用第50节的二分量表示。
+如果再把光子偏振写成同样的旋量收缩，许多螺旋度组合会在取模方以前就消失，
+剩下的振幅也能直接用洛伦兹不变的括号表示。下面先建立光子所需的写法，
+再依次计算四费米子和两费米子两光子的散射。
+
+这里的质量近似要求三个硬不变量都大于$m^2$。例如在固定质心角下提高能量
+可以满足它；若散射角同时趋于零，$|t|$仍可能与$m^2$相当，此时应保留
+上一节的质量项。本节保留$m/\sqrt{\min(s,|t|,|u|)}$的零阶及$e^2$阶树振幅；
+消失的螺旋度幅在有质量时可以由高阶质量项产生。
+
+<span id="c60-brackets"></span>
+
+## 从外旋量到不变括号
+
+先复习需要的代数。[第50节](/posts/srednicki-50/#c50-ex-1)已固定四种外旋量的相位。
+对正能非零类光动量，将它们记作
+<span id="eq:c60-endpoints"></span>
+
+$$
+\begin{aligned}
+|p]&=u_-(p)=v_+(p),&
+|p\rangle&=u_+(p)=v_-(p),\\
+[p|&=\bar u_+(p)=\bar v_-(p),&
+\langle p|&=\bar u_-(p)=\bar v_+(p).
+\end{aligned}
+\tag{60.1}
+$$
+
+方、角括号的配对是按洛伦兹标量选择的：$|p]$的狄拉克伴随为
+$\langle p|$，而不是$[p|$。在外尔基中，方括号列旋量只有上面两个分量，
+角括号列旋量只有下面两个分量；方括号行旋量和角括号行旋量分别占上、下两块。因此
+<span id="eq:c60-bracket-algebra"></span>
+
+$$
+\begin{aligned}
+\relax[p|k]&=[pk],&\langle p|k\rangle&=\langle pk\rangle,&
+[p|k\rangle&=\langle p|k]=0,\\
+[pk]&=-[kp],&\langle pk\rangle&=-\langle kp\rangle,&
+\langle pk\rangle^*&=[kp].
+\end{aligned}
+\tag{60.2}
+$$
+
+前一行来自两块的支集，后一行来自二维反对称张量的反对称性以及既定的
+复共轭约定。这些外旋量是普通复数列与行；相同费米子的统计负号在图的
+组合中处理。
+
+两种螺旋度的完备性给出
+<span id="eq:c60-slash-resolution"></span>
+
+$$
+-\slashed p=|p]\langle p|+|p\rangle[p|,
+\qquad
+P_L(-\slashed p)=|p]\langle p|,
+\qquad P_L=\frac{1-\gamma_5}{2}.
+\tag{60.3}
+$$
+
+这个秩一分解把矩阵乘法化为括号乘法。例如把第二式再乘$-\slashed k$，
+两项中只有角括号行旋量与角括号列旋量的收缩留下来；最后取迹，就得到
+<span id="eq:c60-two-brackets"></span>
+
+$$
+\begin{aligned}
+\operatorname{tr}(P_L\slashed p\slashed k)
+ &=\operatorname{tr}\bigl(|p]\langle pk\rangle[k|\bigr)
+ =\langle pk\rangle[kp]\\
+ &=\frac12\operatorname{tr}(\slashed p\slashed k)
+ =-2p\cdot k=-(p+k)^2 .
+\end{aligned}
+\tag{60.4}
+$$
+
+这里$\gamma_5$与两个伽马的迹为零，普通二阶迹为$-4p\cdot k$，
+最后一步用了$p^2=k^2=0$。两个括号的乘积因此直接给出相应的不变量。
+
+同样的方法用于四个外积，便得到[第50节推导的有序闭链](/posts/srednicki-50/#c50-ex-4)。
+保持$p,q,r,s$的顺序，结果为
+<span id="eq:c60-four-brackets"></span>
+
+$$
+\begin{aligned}
+\langle pq\rangle[qr]\langle rs\rangle[sp]
+ &=\operatorname{tr}(P_L\slashed p\slashed q\slashed r\slashed s)\\
+ &=2\bigl[(p\cdot q)(r\cdot s)-(p\cdot r)(q\cdot s)
+                  +(p\cdot s)(q\cdot r)\bigr]\\
+ &\quad+2i\epsilon_{\mu\nu\rho\sigma}p^\mu q^\nu r^\rho s^\sigma .
+\end{aligned}
+\tag{60.5}
+$$
+
+四阶普通迹给三个配对；$P_L$中的$-\gamma_5/2$乘
+$\operatorname{tr}(\gamma_5\slashed p\slashed q\slashed r\slashed s)
+=-4i\epsilon_{\mu\nu\rho\sigma}p^\mu q^\nu r^\rho s^\sigma$，给出正的虚部。
+本书$\epsilon^{0123}=+1$、$\epsilon_{0123}=-1$，所以这里四个上指标动量
+须与下指标反对称配合。括号及其乘积的质量维数也很直观：
+每个外旋量为$1/2$，一个括号为1，两括号的乘积与$p\cdot k$同为2。
+
+<span id="c60-polarizations"></span>
+
+## 把光子偏振写成旋量
+
+光子的偏振矢量既要垂直于动量，又有加上该动量的规范自由度。
+这使我们可以借助一个参考类光动量$q$来选择偏振代表。对给定的非零光子
+动量$k$，取$q$不与$k$共线，定义
+<span id="eq:c60-polarization-definition"></span>
+
+$$
+\varepsilon_+^\mu(k;q)
+ =-\frac{\langle q|\gamma^\mu|k]}{\sqrt2\langle qk\rangle},
+\qquad
+\varepsilon_-^\mu(k;q)
+ =-\frac{[q|\gamma^\mu|k\rangle}{\sqrt2[qk]} .
+\tag{60.6}
+$$
+
+分子是矢量，分母是不变量，且二者维数相同。
+不共线的要求保证分母不为零；换一个允许的$q$可以覆盖原参考失效的方向。
+
+先直接辨认这两个矢量的偏振。令$k^\mu=\omega(1,0,0,1)$、$\omega>0$。
+采用第50节的显式旋量，并写出外尔基的伽马矩阵：
+<span id="eq:c60-z-endpoints"></span>
+
+$$
+\begin{gathered}
+|k]=\sqrt{2\omega}(0,1,0,0)^T,\qquad
+|k\rangle=\sqrt{2\omega}(0,0,1,0)^T,\qquad
+\langle q|=(0,0,\alpha,\beta),\\
+\gamma^\mu=\begin{pmatrix}0&\sigma^\mu\\\bar\sigma^\mu&0\end{pmatrix},
+\qquad \sigma^\mu=(I,\boldsymbol\sigma),\quad
+\bar\sigma^\mu=(I,-\boldsymbol\sigma).
+\end{gathered}
+\tag{60.7}
+$$
+
+这里$\alpha,\beta$是参考旋量的分量，不是精细结构常数。
+先用下方的$\bar\sigma^\mu$作用于$(0,1)^T$，
+再用$(\alpha,\beta)$作行收缩，四个分量依次为
+<span id="eq:c60-z-polarization"></span>
+
+$$
+\begin{aligned}
+\langle q|\gamma^\mu|k]
+ &=\sqrt{2\omega}(\beta,-\alpha,i\alpha,\beta),&
+\langle qk\rangle&=\alpha\sqrt{2\omega},\\
+\varepsilon_+^\mu(k;q)
+ &=\frac{(0,1,-i,0)}{\sqrt2}
+   -\frac{\beta}{\sqrt2\,\alpha\omega}k^\mu .
+\end{aligned}
+\tag{60.8}
+$$
+
+第一项正是正螺旋度的圆偏振，第二项沿光子动量，是可以通过规范变换改变的部分。
+当前旋量相位使圆偏振前的系数为1，规范项的系数则是
+$-\beta/(\sqrt2\,\alpha\omega)$。
+同时变换$k,q$及旋量，式[（60.6）](#eq:c60-polarization-definition)仍为矢量，
+因此这个辨认可以从$+z$方向推广到任意正能类光方向。
+
+负螺旋度的相位也须由定义读出。双线性的狄拉克共轭给
+$\langle q|\gamma^\mu|k]^*=\langle k|\gamma^\mu|q]
+=[q|\gamma^\mu|k\rangle$，而$\langle qk\rangle^*=-[qk]$。
+所以本书选择
+<span id="eq:c60-polarization-normalization"></span>
+
+$$
+\begin{gathered}
+\varepsilon_-=-\varepsilon_+^*,\qquad
+\varepsilon_\pm\cdot\varepsilon_\pm=0,\qquad
+\varepsilon_+\cdot\varepsilon_-=-1,\qquad
+\varepsilon_\pm^*\cdot\varepsilon_\pm=1 .
+\end{gathered}
+\tag{60.9}
+$$
+
+这些内积也可从式[（60.8）](#eq:c60-z-polarization)直接算出：
+横向两分量的平方和为$1+(-i)^2=0$，与其复共轭的内积为1；
+规范项因$k^2=0$和横向正交而不贡献。
+
+在费曼图中，偏振通常与顶角伽马缩并。为缩短这一步，
+令$a=\phi_q,b=\phi_k$，$U=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$。
+对应的流为$j^\mu=(a^\dagger b,-a^\dagger\sigma^i b)$。
+泡利矩阵展开$2ba^\dagger=(a^\dagger b)I+(a^\dagger\sigma^i b)\sigma^i$，
+于是把时间指标降下带来的负号一并写入，有
+<span id="eq:c60-matrix-fierz"></span>
+
+$$
+\begin{aligned}
+-\frac12\gamma_\mu j^\mu
+ &=\begin{pmatrix}
+ 0&ba^\dagger\\
+ (a^\dagger b)I-ba^\dagger&0
+ \end{pmatrix}\\
+ &=\begin{pmatrix}0&ba^\dagger\\
+ (Ua^*)(Ub)^T&0\end{pmatrix}
+ =|k]\langle q|+|q\rangle[k|,\\
+-\frac12\gamma_\mu[q|\gamma^\mu|k\rangle
+ &=|k\rangle[q|+|q]\langle k| .
+\end{aligned}
+\tag{60.10}
+$$
+
+下方块的恒等式由两分量直接相乘得到：
+其对角元为$a_2^*b_2,a_1^*b_1$，非对角元为
+$-a_2^*b_1,-a_1^*b_2$。最后一行交换左右外尔块，便是另一种手征的同一
+费尔兹关系；其完整矩阵推导见[第50节](/posts/srednicki-50/#c50-ex-5)。
+把这个外积分解代入偏振定义，$-1/2$与定义中的负号相消，得到
+<span id="eq:c60-polarization-slash"></span>
+
+$$
+\begin{aligned}
+\slashed\varepsilon_+(k;q)
+ &=\frac{\sqrt2}{\langle qk\rangle}
+       \bigl(|k]\langle q|+|q\rangle[k|\bigr),\\
+\slashed\varepsilon_-(k;q)
+ &=\frac{\sqrt2}{[qk]}
+       \bigl(|k\rangle[q|+|q]\langle k|\bigr).
+\end{aligned}
+\tag{60.11}
+$$
+
+原来的三个矩阵因子现在成为两个秩一外积，后面与外旋量相接时往往只有一项
+留下来。这正是引入参考动量的计算益处。
+
+横向性也可以在一般方向证明。对任意类光$p$，在
+$p_\mu\varepsilon_+^\mu=-\langle q|\slashed p|k]/
+(\sqrt2\langle qk\rangle)$中代入式[（60.3）](#eq:c60-slash-resolution)，
+第一个外积因$\langle q|p]=0$而消失；第二个给$\langle qp\rangle[pk]$。
+另一种手征同理，因而
+<span id="eq:c60-polarization-transversality"></span>
+
+$$
+\begin{gathered}
+p\cdot\varepsilon_+(k;q)
+ =\frac{\langle qp\rangle[pk]}{\sqrt2\langle qk\rangle},
+\qquad
+p\cdot\varepsilon_-(k;q)
+ =\frac{[qp]\langle pk\rangle}{\sqrt2[qk]},\\
+k\cdot\varepsilon_\pm=q\cdot\varepsilon_\pm=0 .
+\end{gathered}
+\tag{60.12}
+$$
+
+最后两式分别取$p=k,q$，用同动量括号为零即得。
+两个偏振的互相收缩见[下文的内积推导](#c60-polarization-products)。
+
+<span id="c60-reference"></span>
+
+## 参考动量为何可以自由选择
+
+式[（60.8）](#eq:c60-z-polarization)已经在一个方向显示$q$只改变规范项。
+一般情形可以由舒滕恒等式精确求出变化量。
+固定光子旋量而将$q$换成另一个有效参考$r$，两个分式通分后，
+分子中的行旋量为
+<span id="eq:c60-reference-schouten"></span>
+
+$$
+\langle r|\langle qk\rangle-\langle q|\langle rk\rangle
+ =\langle k|\langle qr\rangle,\qquad
+[r|[qk]-[q|[rk]=[k|[qr].
+\tag{60.13}
+$$
+
+这是二维反对称乘积的向量形式，证明不需要除以括号。
+再用$\langle k|\gamma^\mu|k]=[k|\gamma^\mu|k\rangle=2k^\mu$，
+两种变化分别为
+<span id="eq:c60-reference-gauge-change"></span>
+
+$$
+\begin{aligned}
+\varepsilon_+^\mu(k;r)-\varepsilon_+^\mu(k;q)
+ &=-\frac{\sqrt2\langle qr\rangle}
+          {\langle rk\rangle\langle qk\rangle}\,k^\mu,\\
+\varepsilon_-^\mu(k;r)-\varepsilon_-^\mu(k;q)
+ &=-\frac{\sqrt2[qr]}{[rk][qk]}\,k^\mu .
+\end{aligned}
+\tag{60.14}
+$$
+
+双线性等于$2k^\mu$可由式[（60.7）](#eq:c60-z-endpoints)直接求出，再作协变推广；
+它也等于无质量向量流的归一结果。由上一节已经证明的
+[两图沃德抵消](/posts/srednicki-59/#c59-polarizations)，沿$k^\mu$增加的偏振对总振幅不贡献。
+因此我们能够为每一条光子线分别选择最方便的参考。选到一幅图消失时，
+其余图的值会随之改变，而图之和保持相同。
+
+选择参考与选择外旋量相位还有区别。沿第50节，若
+$\phi_k\mapsto e^{i\alpha_k}\phi_k$，方端点乘$e^{i\alpha_k}$，
+角端点乘$e^{-i\alpha_k}$。参考$q$的相位在分子分母中相消，
+而光子自身的相位留下
+<span id="eq:c60-polarization-phase"></span>
+
+$$
+\varepsilon_+(k;q)\mapsto e^{2i\alpha_k}\varepsilon_+(k;q),
+\qquad
+\varepsilon_-(k;q)\mapsto e^{-2i\alpha_k}\varepsilon_-(k;q).
+\tag{60.15}
+$$
+
+它改变固定外态振幅的相位，取模方后相消。实际比较两个括号幅时，
+应固定相同的外态相位，再作参考变换。
+
+<span id="c60-crossing"></span>
+
+## 用一套外动量表示各个交叉过程
+
+现在把动量记号改写成适合交叉的形式，将所有指定外动量都指向
+出射；入射粒子于是带负能指定动量。用$p$表示指定动量、$P$表示实际
+正能动量，有
+<span id="eq:c60-assigned-momenta"></span>
+
+$$
+P=\epsilon_p p,\qquad
+\epsilon_p=\operatorname{sign}p^0,\qquad
+\sum_{\rm external}p=0 .
+\tag{60.16}
+$$
+
+按指定空间动量定义螺旋度时，入射腿的号与
+实际螺旋度相反。结合式[（60.1）](#eq:c60-endpoints)便可统一记住：
+指定正螺旋度用方端点，指定负螺旋度用角端点。例如入电子实际为负螺旋度时
+用$u_-$，它的指定号为正，正好用方括号列旋量；出电子实际为正螺旋度时用
+$\bar u_+$，它的指定号仍为正，正好用方括号行旋量。入正电子和出正电子则分别
+由$\bar v,v$作相同判断。
+
+为继续使用完整性和括号恒等式，负能端点采用如下平方根处方：
+每一个$\sqrt{p^0}$取为$i\sqrt{|p^0|}$。明确写出四种端点，
+<span id="eq:c60-negative-energy-endpoints"></span>
+
+$$
+\begin{gathered}
+c_p=\begin{cases}1,&p^0>0,\\ i,&p^0<0,\end{cases}
+\\
+|p]=c_p|P],\quad |p\rangle=c_p|P\rangle,\quad
+[p|=c_p[P|,\quad\langle p|=c_p\langle P|,\\
+\langle p|=\epsilon_p(|p])^\dagger\gamma^0,\qquad
+[p|=\epsilon_p(|p\rangle)^\dagger\gamma^0,\\
+|p]\langle p|+|p\rangle[p|
+ =c_p^2(-\slashed P)=-\slashed p .
+\end{gathered}
+\tag{60.17}
+$$
+
+两个行旋量也乘$i$，这是保持解析外积的关键。
+因为$c_p^*=\epsilon_pc_p$，负能行旋量与通常狄拉克伴随之间多一个负号。
+这样便将负斜线矩阵的完备分解延拓到负能动量，同时也改变了复共轭规则：
+<span id="eq:c60-negative-energy-conjugation"></span>
+
+$$
+\begin{aligned}
+\langle pk\rangle^*
+ &=c_p^*c_k^*\langle PK\rangle^*
+ =\epsilon_p\epsilon_kc_pc_k[KP]
+ =\epsilon_p\epsilon_k[kp].
+\end{aligned}
+\tag{60.18}
+$$
+
+不含星号的多项式恒等式则逐腿含相同的$c_p$因子，
+可以沿用。特别是令$s_{ij}=-(p_i+p_j)^2$，由
+式[（60.4）](#eq:c60-two-brackets)及新共轭关系，
+<span id="eq:c60-invariant-modulus"></span>
+
+$$
+\begin{aligned}
+s_{ij}&=\langle ij\rangle[ji]=-2p_i\cdot p_j,\\
+|\langle ij\rangle|^2=|[ij]|^2
+ &=\epsilon_i\epsilon_j s_{ij}=|s_{ij}|.
+\end{aligned}
+\tag{60.19}
+$$
+
+最后的绝对值可以直接看出来：写$p_i=\epsilon_iE_i(1,\boldsymbol n_i)$，
+$E_i>0$、$\boldsymbol n_i^2=1$，则
+$s_{ij}=2\epsilon_i\epsilon_jE_iE_j(1-\boldsymbol n_i\cdot\boldsymbol n_j)$。
+括号模方自然非负，能量号决定不变量的正负。下面跨到不同散射道时，
+这一点会决定整个模方的符号。
+
+还可以把指定振幅与前面正能外波函数的振幅接起来。每一条入费米子腿，
+指定端点比物理端点多$i$。光子的旋量比值在$k\mapsto-k$时不变，
+而入光子实际使用$\varepsilon_h^*=-\varepsilon_{-h}$。
+所以保持同一费米端点次序，有
+<span id="eq:c60-crossing-phase"></span>
+
+$$
+\mathcal T_{\rm physical}
+ =(-i)^{n_{F,\rm in}}(-1)^{n_{\gamma,\rm in}}\,
+   \mathcal T_{\rm assigned}.
+\tag{60.20}
+$$
+
+其中两个指数分别是入费米子和入光子数。电子正电子湮灭得到共同相位$-1$，
+康普顿散射得到$+i$；模方均不改变。相同费米子的交换负号仍由两个图的
+相对次序确定，不能并入这个共同相位。
+
+<span id="c60-four-fermion"></span>
+
+## 四费米子散射
+
+四条外费米子线只有两种连接，见图60a。指定动量满足
+$p_1+p_2+p_3+p_4=0$；由互补两对动量互为负值，以及每条腿在质量壳上，
+<span id="eq:c60-four-point-invariants"></span>
+
+$$
+\begin{gathered}
+s_{12}=s_{34},\qquad s_{13}=s_{24},\qquad s_{14}=s_{23},\\
+s_{12}+s_{13}+s_{14}
+ =-2p_1\cdot(p_2+p_3+p_4)=2p_1^2=0 .
+\end{gathered}
+\tag{60.21}
+$$
+
+这三个不变量的记法暂不指定哪两条腿入射，因而能同时用于同电荷散射及
+电子正电子散射。
+
+<span id="c60-figure-fermions"></span>
+
+![四费米子散射中相减的两种光子交换图](/images/srednicki/s60-c60_01.svg)
+
+图60a：四费米子散射的两种连接。两条水平费米线都沿箭头从左向右，
+左端沿线动量为$-p_1,-p_2$；右图交换右端的3、4。内部光子向上，左图带
+$p_1+p_3$，右图带$p_1+p_4$。例如左图上顶点有
+$-p_1+(p_1+p_3)=p_3$，下顶点的守恒由总动量零保证。
+图间负号来自相同费米端点的交换。画在左边只是标注箭头的方便，
+实际哪两条腿入射还须由指定能量的正负决定。
+
+一个光子顶角含单个伽马，它在外尔基中交换上下两块。因此
+$[i|\gamma^\mu|j]=\langle i|\gamma^\mu|j\rangle=0$，
+每个非零流都需要一方一角端点。四腿的16种指定螺旋度只剩
+$+--+$、$+-+-$、$++--$及其全部反号的三种可能非零。
+先算这三个代表，其余三个随后取模方时补入。
+
+对左图，内部光子因子为
+$-ig_{\mu\nu}/(p_1+p_3)^2=ig_{\mu\nu}/s_{13}$。
+两个顶角的$(ie)^2=-e^2$，而图的值为$i\mathcal T$，
+所以除去公共$i$后给$-e^2/s_{13}$。若暂以$B_i,K_j$表示与指定螺旋度
+相应的行旋量、列旋量，两幅图可统一写作
+<span id="eq:c60-four-fermion-chain"></span>
+
+$$
+\begin{aligned}
+\mathcal T
+ &=-\frac{e^2}{s_{13}}(B_3\gamma^\mu K_1)(B_4\gamma_\mu K_2)\\
+ &\quad+\frac{e^2}{s_{14}}(B_4\gamma^\mu K_1)(B_3\gamma_\mu K_2).
+\end{aligned}
+\tag{60.22}
+$$
+
+四点取一般非共线运动学，内部不变量非零，此时可以用这些实分母。
+沿费米箭头反向读矩阵，就得到上式两个流各自的次序。
+
+要去掉两流间的洛伦兹缩并，在式[（60.10）](#eq:c60-matrix-fierz)的两侧夹端点。
+不同手征的第一种收缩先得$-2\langle ad\rangle[cb]$；
+两次交换括号顺序后，所需的两式为
+<span id="eq:c60-current-fierz"></span>
+
+$$
+\begin{aligned}
+\langle a|\gamma^\mu|b]\,[c|\gamma_\mu|d\rangle
+ &=-2[bc]\langle da\rangle,\\
+\langle a|\gamma^\mu|b]\,\langle c|\gamma_\mu|d]
+ &=2[bd]\langle ac\rangle .
+\end{aligned}
+\tag{60.23}
+$$
+
+第二行来自$-2[db]\langle ac\rangle$，只交换一次方括号。
+这是矩阵费尔兹在本节的实际代入，因子2及两种收缩的相对号均已固定。
+
+对于$+--+$，右图含$[4|\gamma^\mu|1]=0$，
+所以只有左图。第一行费尔兹取$(a,b,c,d)=(3,1,4,2)$，得到
+<span id="eq:c60-four-fermion-first"></span>
+
+$$
+\mathcal T_{+--+}
+ =-\frac{e^2}{s_{13}}\langle3|\gamma^\mu|1]\,
+                         [4|\gamma_\mu|2\rangle
+ =\frac{2e^2[14]\langle23\rangle}{s_{13}} .
+\tag{60.24}
+$$
+
+若改为$+-+-$，左图含$[3|\gamma^\mu|1]=0$，
+留下右图。此时将上一式的3、4交换，并保留图间的负号，便有
+<span id="eq:c60-four-fermion-second"></span>
+
+$$
+\mathcal T_{+-+-}
+ =\frac{e^2}{s_{14}}\langle4|\gamma^\mu|1]\,
+                         [3|\gamma_\mu|2\rangle
+ =-\frac{2e^2[13]\langle24\rangle}{s_{14}} .
+\tag{60.25}
+$$
+
+两种螺旋度分别选中两幅图，所保留的正负号来自图的交换关系。
+
+对于$++--$，两幅图都允许。用第二行费尔兹，每幅都含$[12]$，
+但角括号在右图为$\langle43\rangle=-\langle34\rangle$。
+这个反对称号与图间负号共同给出倒分母的和：
+<span id="eq:c60-four-fermion-third"></span>
+
+$$
+\begin{aligned}
+\mathcal T_{++--}
+ &=-e^2\left[
+ \frac{\langle3|\gamma^\mu|1]\langle4|\gamma_\mu|2]}{s_{13}}
+ -\frac{\langle4|\gamma^\mu|1]\langle3|\gamma_\mu|2]}{s_{14}}
+ \right]\\
+ &=-2e^2[12]\langle34\rangle
+       \left(\frac1{s_{13}}+\frac1{s_{14}}\right)
+ =\frac{2e^2[12]\langle34\rangle s_{12}}{s_{13}s_{14}} .
+\end{aligned}
+\tag{60.26}
+$$
+
+最后一步用了$s_{13}+s_{14}=-s_{12}$，将两个道的贡献合并到同一分母。
+每个分子、分母的总维数相同，三个振幅都无量纲。
+
+现在求未极化结果。角、方括号互换产生全反螺旋度的幅，
+其模方由式[（60.19）](#eq:c60-invariant-modulus)可见相同。
+又因互补不变量相等，三个代表的平方和平均为
+<span id="eq:c60-four-fermion-average"></span>
+
+$$
+\begin{aligned}
+|\mathcal T_{+--+}|^2&=4e^4\frac{s_{14}^2}{s_{13}^2},&
+|\mathcal T_{+-+-}|^2&=4e^4\frac{s_{13}^2}{s_{14}^2},\\
+|\mathcal T_{++--}|^2
+ &=4e^4\frac{s_{12}^4}{s_{13}^2s_{14}^2},\\
+\langle|\mathcal T|^2\rangle
+ &=\frac{2}{4}\left(
+ |\mathcal T_{+--+}|^2+|\mathcal T_{+-+-}|^2+|\mathcal T_{++--}|^2
+ \right)\\
+ &=2e^4\frac{s_{12}^4+s_{13}^4+s_{14}^4}{s_{13}^2s_{14}^2}.
+\end{aligned}
+\tag{60.27}
+$$
+
+例如第一项先有$|[14]|^2|\langle23\rangle|^2
+=|s_{14}||s_{23}|=s_{14}^2$，所以能量号在这里成对相消。
+平均中的2计入另外三种螺旋度，4来自两个初态各两种自旋。
+
+对同电荷的莫勒散射，取1、2入射，故
+$(s_{12},s_{13},s_{14})=(s,t,u)$；两个正电子的结果相同。
+巴巴散射取1、3入射，末态电子为4、正电子为2，因而
+$(s_{13},s_{14},s_{12})=(s,t,u)$。具体代入后，
+<span id="eq:c60-moller-bhabha"></span>
+
+$$
+\begin{aligned}
+M&=2e^4\frac{s^4+t^4+u^4}{t^2u^2}\\
+ &=2e^4\left[
+ \frac{s^2+u^2}{t^2}+\frac{s^2+t^2}{u^2}+\frac{2s^2}{tu}\right],\\
+B&=2e^4\frac{s^4+t^4+u^4}{s^2t^2}\\
+ &=2e^4\left[
+ \frac{s^2+u^2}{t^2}+\frac{t^2+u^2}{s^2}+\frac{2u^2}{st}\right].
+\end{aligned}
+\tag{60.28}
+$$
+
+莫勒式通分时，含$s^2$的部分为$s^2(t^2+u^2+2tu)=s^4$；
+巴巴式则用$u^2(s+t)^2=u^4$。这样还能辨认出两个道的平方与干涉项。
+在物理区$s>0,t,u<0$，巴巴式的干涉项为负，但总和由第一种写法显出非负。
+若将莫勒结果代入带标签的完整末态相空间，还要按第11节加入相同电子的
+$1/2!$；这个因子没有放进振幅平方。
+
+<span id="c60-two-photon"></span>
+
+## 两费米子与两光子的散射
+
+再看图60b。第1、2腿是费米子，第3、4腿的动量分别记$k_3,k_4$；
+下标不变量仍写$s_{13},s_{14}$。每条开费米链含两个顶角伽马和一个
+无质量传播子分子的伽马，合为奇数。因此两端同为方括号或同为角括号时
+幅为零；只需先求费米子指定螺旋度为$+-$的情况。
+
+<span id="c60-figure-photons"></span>
+
+![两费米子两光子散射中相加的两种顶角次序](/images/srednicki/s60-c60_02.svg)
+
+图60b：两费米子与两光子的两种连接。两图交换光子3、4，图间为加号。
+左图费米箭头从$-p_1$经过内部$-p_1-k_3$流向$p_2$，
+右图内部动量改为$-p_1-k_4$。
+光子箭头标指定动量流出；若某光子的指定能量为负，它就是实际的入光子。
+两个光子顶角在费米线上的不同次序必须一起保留。
+
+参考动量选成一个外费米动量时，偏振外积会进一步消失。
+例如把式[（60.11）](#eq:c60-polarization-slash)中的$q$取为$p$，有
+<span id="eq:c60-polarization-endpoint-zeros"></span>
+
+$$
+\begin{aligned}
+\slashed\varepsilon_-(k;p)|p]
+ &=\frac{\sqrt2}{[pk]}
+       \bigl(|k\rangle[pp]+|p]\langle k|p]\bigr)=0,\\
+[p|\slashed\varepsilon_-(k;p)
+ &=\frac{\sqrt2}{[pk]}
+       \bigl([p|k\rangle[p|+[pp]\langle k|\bigr)=0,\\
+\slashed\varepsilon_+(k;p)|p\rangle
+ &=\frac{\sqrt2}{\langle pk\rangle}
+       \bigl(|k]\langle pp\rangle+|p\rangle[k|p\rangle\bigr)=0,\\
+\langle p|\slashed\varepsilon_+(k;p)
+ &=\frac{\sqrt2}{\langle pk\rangle}
+       \bigl(\langle p|k]\langle p|+\langle pp\rangle[k|\bigr)=0.
+\end{aligned}
+\tag{60.29}
+$$
+
+每行一项由同动量括号的反对称性消失，另一项由不同外尔块的标量收缩消失。
+因此，与外费米动量相同的参考能够使相应的端点收缩为零；所选参考分母须保持非零。
+
+按图的顺序写完整幅。左图内部动量$q=-p_1-k_3$，
+传播子分子$-\slashed q=\slashed p_1+\slashed k_3$，
+分母$q^2=-s_{13}$。两个顶角和传播子的因子再除以$i$，给
+$-e^2/s_{13}$。再加上交换两个光子的图，得到
+<span id="eq:c60-two-photon-chain"></span>
+
+$$
+\begin{aligned}
+\mathcal T_{+-\lambda_3\lambda_4}
+={}&-\frac{e^2}{s_{13}}
+ \langle2|\slashed\varepsilon_{\lambda_4}(k_4;q_4)
+ (\slashed p_1+\slashed k_3)
+ \slashed\varepsilon_{\lambda_3}(k_3;q_3)|1]\\
+&-\frac{e^2}{s_{14}}
+ \langle2|\slashed\varepsilon_{\lambda_3}(k_3;q_3)
+ (\slashed p_1+\slashed k_4)
+ \slashed\varepsilon_{\lambda_4}(k_4;q_4)|1].
+\end{aligned}
+\tag{60.30}
+$$
+
+若两光子都是负螺旋度，令$q_3=q_4=p_1$，
+两图右端分别含式[（60.29）](#eq:c60-polarization-endpoint-zeros)的第一种零式。
+若两光子都是正螺旋度，令$q_3=q_4=p_2$，两图左端分别含第四种零式。
+所以
+<span id="eq:c60-same-photon-helicity-zero"></span>
+
+$$
+\mathcal T_{+---}=\mathcal T_{+-++}=0 .
+\tag{60.31}
+$$
+
+参考变换不改变总幅，因而用这些方便的参考得到的零就是该螺旋度的总结果。
+两光子螺旋度相反时不能这样同时消去两图，还需要实际计算。
+
+先求$\mathcal T_{+-+-}$，取$q_3=p_2$。
+第二图的左端$\langle2|\slashed\varepsilon_+(k_3;p_2)=0$，
+只剩第一图。暂记$q_4=r$，把两端偏振外积相乘，分别得到
+<span id="eq:c60-one-photon-graph"></span>
+
+$$
+\begin{aligned}
+\langle2|\slashed\varepsilon_-(k_4;r)
+ &=\frac{\sqrt2\langle24\rangle}{[r4]}\,[r|,\\
+\slashed\varepsilon_+(k_3;p_2)|1]
+ &=\frac{\sqrt2[31]}{\langle23\rangle}\,|2\rangle,\\
+\mathcal T_{+-+-}
+ &=-\frac{2e^2\langle24\rangle[31]}
+ {[r4]\langle23\rangle s_{13}}\,
+ [r|(\slashed p_1+\slashed k_3)|2\rangle .
+\end{aligned}
+\tag{60.32}
+$$
+
+第一行的另一项含$\langle2|r]=0$，
+第二行的另一项含$\langle2|1]=0$；两个$\sqrt2$相乘给2。
+
+剩余矩阵元包含两个动量。若取$r=p_1$，第一项在壳消失；
+取$r=k_3$时，第二项由$[3|\slashed k_3=0$消失。
+后一个选择给
+<span id="eq:c60-surviving-momentum"></span>
+
+$$
+\begin{aligned}
+\relax[3|(\slashed p_1+\slashed k_3)|2\rangle
+ &=[3|\slashed p_1|2\rangle=-[31]\langle12\rangle,\\
+\mathcal T_{+-+-}
+ &=\frac{2e^2\langle24\rangle[31]\langle12\rangle[31]}
+ {[34]\langle23\rangle s_{13}} .
+\end{aligned}
+\tag{60.33}
+$$
+
+第一行使用$-\slashed p_1$的两外积分解，只有方括号行旋量接方括号列旋量的一项存活。
+
+<span id="c60-momentum-identities"></span>
+
+### 动量守恒怎样消去剩下的括号
+
+要把式[（60.33）](#eq:c60-surviving-momentum)约成最短形式，
+还需把总动量守恒用于旋量链。
+对任意$n$个全出射类光动量，$\sum_j\slashed p_j=0$；
+在左右夹$\langle i|,|k]$，并逐项用完整性，有
+<span id="eq:c60-momentum-sandwich"></span>
+
+$$
+\begin{aligned}
+0
+ &=-\left\langle i\left|\sum_{j=1}^n\slashed p_j\right|k\right]
+  =\sum_{j=1}^n\langle ij\rangle[jk],\\
+0
+ &=-\left[i\left|\sum_{j=1}^n\slashed p_j\right|k\right\rangle
+  =\sum_{j=1}^n[ij]\langle jk\rangle .
+\end{aligned}
+\tag{60.34}
+$$
+
+两式各有一种手征外积留下，另一个由零重叠消失。
+负能端点已经按式[（60.17）](#eq:c60-negative-energy-endpoints)延拓，
+所以此处不另加能量号。取$n=4,i=3,k=2$，第二式的四项为
+<span id="eq:c60-four-point-bracket-reduction"></span>
+
+$$
+\begin{gathered}
+\relax[31]\langle12\rangle+[32]\langle22\rangle
+ +[33]\langle32\rangle+[34]\langle42\rangle=0,\\
+[31]\langle12\rangle=-[34]\langle42\rangle
+ =[34]\langle24\rangle .
+\end{gathered}
+\tag{60.35}
+$$
+
+中间两项因同动量括号为零而消失。把剩余关系代回分子，
+先约去$[34]$，再由$s_{13}=\langle13\rangle[31]$约去另一个方括号，得到
+<span id="eq:c60-two-photon-first"></span>
+
+$$
+\mathcal T_{+-+-}
+ =\frac{2e^2\langle24\rangle^2[31]}
+       {\langle23\rangle s_{13}}
+ =\frac{2e^2\langle24\rangle^2}
+       {\langle13\rangle\langle23\rangle}.
+\tag{60.36}
+$$
+
+分子和分母各有两个括号，整个振幅仍无量纲。
+计算中用到的每一个被约因子在当前一般非共线区域都非零。
+
+还可以在选择$r$以前完成同一化简：
+$[r|(\slashed p_1+\slashed k_3)|2\rangle
+=-[r1]\langle12\rangle-[r3]\langle32\rangle$，
+而式[（60.34）](#eq:c60-momentum-sandwich)允许把左端点取成参考$r$，
+给出
+<span id="eq:c60-general-reference-reduction"></span>
+
+$$
+[r1]\langle12\rangle+[r3]\langle32\rangle
+ =-[r4]\langle42\rangle=[r4]\langle24\rangle .
+\tag{60.37}
+$$
+
+于是式[（60.32）](#eq:c60-one-photon-graph)的$[r4]$直接相消，
+仍得式[（60.36）](#eq:c60-two-photon-first)。这是这一具体振幅的参考无关性；
+[下文](#c60-reference-examples)再写出$r=p_1,p_2$的具体代入。
+交换两个光子3、4不交换费米端点，故没有统计负号，另一种振幅为
+<span id="eq:c60-two-photon-second"></span>
+
+$$
+\mathcal T_{+--+}
+ =\frac{2e^2\langle23\rangle^2}
+       {\langle14\rangle\langle24\rangle}.
+\tag{60.38}
+$$
+
+<span id="c60-two-photon-average"></span>
+
+### 未极化结果和不同物理道
+
+最后补上相反的费米子螺旋度。左右手征互换时，角、方括号互换，
+两个光子的螺旋度也同时反号。将同一外积计算的角括号换成方括号，
+两幅分别为
+<span id="eq:c60-all-helicity-conjugation"></span>
+
+$$
+\begin{aligned}
+\mathcal T_{-+-+}
+ &=\frac{2e^2[24]^2}{[13][23]}
+   =\epsilon_1\epsilon_2\,\mathcal T_{+-+-}^*,\\
+\mathcal T_{-++-}
+ &=\frac{2e^2[23]^2}{[14][24]}
+   =\epsilon_1\epsilon_2\,\mathcal T_{+--+}^* .
+\end{aligned}
+\tag{60.39}
+$$
+
+例如第一式分子的共轭能量号平方为1，分母给
+$(\epsilon_1\epsilon_3)(\epsilon_2\epsilon_3)=\epsilon_1\epsilon_2$；
+两个反向方括号再各贡献一个负号，乘积为正。
+因此，同时反转四条腿的螺旋度，所得振幅的模方相等。
+
+16种组合如今只剩这四种。由括号模方及互补不变量关系，
+<span id="eq:c60-two-photon-average"></span>
+
+$$
+\begin{aligned}
+|\mathcal T_{+-+-}|^2
+ &=4e^4\frac{|s_{24}|^2}{|s_{13}|\,|s_{23}|}
+  =4e^4\left|\frac{s_{13}}{s_{14}}\right|,\\
+|\mathcal T_{+--+}|^2
+ &=4e^4\left|\frac{s_{14}}{s_{13}}\right|,\\
+\langle|\mathcal T|^2\rangle
+ &=\frac24\left(|\mathcal T_{+-+-}|^2+|\mathcal T_{+--+}|^2\right)\\
+ &=2e^4\left(
+ \left|\frac{s_{13}}{s_{14}}\right|
+ +\left|\frac{s_{14}}{s_{13}}\right|\right).
+\end{aligned}
+\tag{60.40}
+$$
+
+初态可能是两个费米子、一个费米子和一个光子，或者两个光子；
+每个粒子都有两种自旋或物理偏振，故这三种过程的初态平均都为$1/4$。
+上面的2则来自同时反转全部螺旋度的另一对振幅。
+
+绝对值的取法随物理道而变。湮灭过程中$s_{13},s_{14}$对应$t,u$，二者同号；
+康普顿过程中它们对应$s,u$，二者异号。因此两种物理过程分别给出
+<span id="eq:c60-physical-channels"></span>
+
+$$
+\begin{aligned}
+e^-e^+\leftrightarrow\gamma\gamma:\quad&
+(s_{12},s_{13},s_{14})=(s,t,u),\\
+&\langle|\mathcal T|^2\rangle
+ =2e^4\left(\frac tu+\frac ut\right),\\
+e^-\gamma\to e^-\gamma:\quad&
+(s_{13},s_{12},s_{14})=(s,t,u),\\
+&\langle|\mathcal T|^2\rangle
+ =-2e^4\left(\frac su+\frac us\right).
+\end{aligned}
+\tag{60.41}
+$$
+
+这里均在$s>0,t,u<0$的一般物理区。比如在同一质量平方单位下取$s=2,t=u=-1$，
+康普顿结果为$-2e^4(-2-1/2)=5e^4$。负的两个比值与前面的负号共同给出正的模方。
+
+湮灭结果与式[（59.40）](/posts/srednicki-59/#eq:c59-high-energy)相同。
+康普顿结果也可从[第59节的完整质量式](/posts/srednicki-59/#c59-compton)直接核对：
+先用$\mathcal C=-\mathcal A(t,s,u)$，再于固定非共线角下取$m\to0$，
+便出现第二行的负号。前一节从交叉后的自旋密度得到它，
+这里则从负能括号的复共轭得到它。两种计算说明了同一件事：
+交叉可以保留振幅的解析结构，但模方必须在所讨论过程的实际能量区域求取。
+借助旋量螺旋度，我们在保留每个固定自旋振幅的同时完成了原先需要长迹的
+计算。
+
+<span id="c60-polarization-products"></span>
+
+## 两个光子偏振的内积
+
+接下来计算两个偏振的内积。每个偏振各含一条矢量旋量链，将两条链缩并，只需把
+[矩阵费尔兹式](#eq:c60-matrix-fierz)夹在相应的外旋量之间。
+例如两个正偏振时，右边的外积只有
+$|q'\rangle[k'|$存活，给出$-2\langle qq'\rangle[k'k]$。
+两个负偏振时存活的是$|q']\langle k'|$，一正一负时存活的是
+$|k'\rangle[q'|$。把这三种外积分别夹在外旋量之间，分子为
+
+<span id="eq:c60-ex-three-fierz-numerators"></span>
+
+$$
+\begin{aligned}
+\mathcal N_{++}
+ &=\langle q|\gamma^\mu|k]\langle q'|\gamma_\mu|k']\\
+ &=-2\langle qq'\rangle[k'k]
+  =2\langle qq'\rangle[kk'],\\
+\mathcal N_{--}
+ &=[q|\gamma^\mu|k\rangle[q'|\gamma_\mu|k'\rangle\\
+ &=-2[qq']\langle k'k\rangle
+  =2[qq']\langle kk'\rangle,\\
+\mathcal N_{+-}
+ &=\langle q|\gamma^\mu|k][q'|\gamma_\mu|k'\rangle\\
+ &=-2\langle qk'\rangle[q'k]
+  =2\langle qk'\rangle[kq'] .
+\end{aligned}
+\tag{60.42}
+$$
+
+每个偏振定义中的负号相乘为正；两份$\sqrt2$给出分母的2，正好约去上面
+费尔兹收缩的2。因此三个内积依次为
+
+<span id="eq:c60-ex-polarization-products"></span>
+
+$$
+\begin{aligned}
+\varepsilon_+(k;q)\cdot\varepsilon_+(k';q')
+ &=\frac{\langle qq'\rangle[kk']}
+         {\langle qk\rangle\langle q'k'\rangle},\\
+\varepsilon_-(k;q)\cdot\varepsilon_-(k';q')
+ &=\frac{[qq']\langle kk'\rangle}{[qk][q'k']},\\
+\varepsilon_+(k;q)\cdot\varepsilon_-(k';q')
+ &=\frac{\langle qk'\rangle[kq']}
+         {\langle qk\rangle[q'k']} .
+\end{aligned}
+\tag{60.43}
+$$
+
+令$q'=q$，前两式的分子都为零，所以相同螺旋度的两个光子可选同一参考动量，
+使偏振内积消失。对第三式，选$q=k'$使$\langle qk'\rangle=0$，
+或选$q'=k$使$[kq']=0$，也能达到同样的目的。这些选择各须保留非零分母；
+例如$q=k'$要求两个光子动量不共线。
+
+还可以令$k'=k,q'=q$检查规范化：第三式化为
+$[kq]/[qk]=-1$。结合本书的相位$\varepsilon_-=-\varepsilon_+^*$，
+便得到正的$\varepsilon_+^*\cdot\varepsilon_+=1$。
+
+<span id="c60-square-form"></span>
+
+## 同一振幅的角括号与方括号写法
+
+[两光子计算](#c60-two-photon)给出了
+$\mathcal T_{+-+-}=2e^2\langle24\rangle^2/
+(\langle13\rangle\langle23\rangle)$。
+现在要把它改写成全方括号形式。保持幅的相位，最直接的办法是
+分别变换分子中的两份$\langle24\rangle$。
+
+先在式[（60.34）](#eq:c60-momentum-sandwich)的第二行取$i=1,k=2$。
+第1、2项消失，余下
+$[13]\langle32\rangle+[14]\langle42\rangle=0$。
+将角括号的次序反转，再用四点守恒给出的$s_{24}=s_{13}$，得到两个比值：
+
+<span id="eq:c60-ex-angle-square-ratios"></span>
+
+$$
+\begin{aligned}
+\relax [13]\langle23\rangle+[14]\langle24\rangle=0
+ &\quad\Longrightarrow\quad
+ \frac{\langle24\rangle}{\langle23\rangle}
+ =-\frac{[13]}{[14]},\\
+\langle24\rangle[42]=\langle13\rangle[31]
+ &\quad\Longrightarrow\quad
+ \frac{\langle24\rangle}{\langle13\rangle}
+ =\frac{[13]}{[24]} .
+\end{aligned}
+\tag{60.44}
+$$
+
+第二行中$[42]=-[24]$、$[31]=-[13]$，两个负号相消；第一行则仍保留
+一个负号。将两个比值相乘，幅变为
+
+<span id="eq:c60-ex-square-amplitude"></span>
+
+$$
+\begin{aligned}
+\mathcal T_{+-+-}
+ &=2e^2\frac{\langle24\rangle}{\langle23\rangle}
+           \frac{\langle24\rangle}{\langle13\rangle}\\
+ &=-\frac{2e^2[13]^2}{[14][24]} .
+\end{aligned}
+\tag{60.45}
+$$
+
+它与原角括号式在同一外态相位下相等。式中的负号来自
+动量守恒和括号反对称性的具体组合。
+
+<span id="c60-reference-examples"></span>
+
+## 两个参考动量的具体代入
+
+上面先取$q_3=p_2$，使$\mathcal T_{+-+-}$中的第二幅图消失，再选择另一个
+光子的参考动量$q_4$。下面分别取$q_4=p_1$和$q_4=p_2$，计算同一振幅。
+保留[一般参考动量表达式](#eq:c60-one-photon-graph)，令$r=q_4$，便有
+
+<span id="eq:c60-ex-arbitrary-second-reference"></span>
+
+$$
+\mathcal T_{+-+-}
+ =\frac{2e^2\langle24\rangle[31]}
+        {[r4]\langle23\rangle s_{13}}
+   \big([r1]\langle12\rangle+[r3]\langle32\rangle\big)
+\tag{60.46}
+$$
+
+式中已经用过
+$[r|\slashed p_j|2\rangle=-[rj]\langle j2\rangle$，
+因而式[（60.32）](#eq:c60-one-photon-graph)前的负号已被这一分子分解抵消。
+
+先令$r=p_1$，第一项含$[11]$而为零。余项用前面得到的
+$[13]\langle32\rangle+[14]\langle42\rangle=0$改写为
+
+<span id="eq:c60-ex-reference-one-numerator"></span>
+
+$$
+[11]\langle12\rangle+[13]\langle32\rangle
+ =[13]\langle32\rangle
+ =[14]\langle24\rangle .
+\tag{60.47}
+$$
+
+这使分子中的$[14]$正好约去参考分母。再用
+$s_{13}=\langle13\rangle[31]$，得到
+
+<span id="eq:c60-ex-reference-one-amplitude"></span>
+
+$$
+\begin{aligned}
+\mathcal T_{+-+-}\big|_{q_4=p_1}
+ &=\frac{2e^2\langle24\rangle[31]}
+        {[14]\langle23\rangle s_{13}}\,
+       [14]\langle24\rangle\\
+ &=\frac{2e^2\langle24\rangle^2}
+        {\langle13\rangle\langle23\rangle}.
+\end{aligned}
+\tag{60.48}
+$$
+
+再令$r=p_2$。这次两个分子项都保留，但各自已经是一个不变量：
+$[21]\langle12\rangle=s_{12}$，
+$[23]\langle32\rangle=s_{23}$。
+四点守恒给$s_{12}+s_{23}+s_{24}=0$，于是
+
+<span id="eq:c60-ex-reference-two-numerator"></span>
+
+$$
+\begin{aligned}
+\relax [21]\langle12\rangle+[23]\langle32\rangle
+ &=s_{12}+s_{23}\\
+ &=-s_{24}=[24]\langle24\rangle .
+\end{aligned}
+\tag{60.49}
+$$
+
+最后一个号用了$s_{24}=\langle24\rangle[42]$和$[24]=-[42]$。
+代回式[（60.46）](#eq:c60-ex-arbitrary-second-reference)，得到
+
+<span id="eq:c60-ex-reference-two-amplitude"></span>
+
+$$
+\begin{aligned}
+\mathcal T_{+-+-}\big|_{q_4=p_2}
+ &=\frac{2e^2\langle24\rangle[31]}
+        {[24]\langle23\rangle s_{13}}\,
+       [24]\langle24\rangle\\
+ &=\frac{2e^2\langle24\rangle^2}
+        {\langle13\rangle\langle23\rangle}.
+\end{aligned}
+\tag{60.50}
+$$
+
+两种取法都得到式[（60.36）](#eq:c60-two-photon-first)，参考旋量的括号在分子和分母间约去。
+这正是[参考动量所代表的规范自由](#c60-reference)在这条具体旋量链上的表现。
+
+---
+
+[← 第 59 节](/posts/srednicki-59/) · [章节地图](/srednicki/) · [第 61 节 →](/posts/srednicki-61/)

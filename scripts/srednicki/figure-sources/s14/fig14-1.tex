@@ -1,0 +1,58 @@
+% Original TikZ artwork; source correspondence is in index.json.
+% Requires tikz only; no additional library or shared style file.
+\begingroup%
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.7pt,line cap=round,line join=round]
+\path[use as bounding box] (-7.6,-2.220) rectangle (7.6,1.800);
+% Source occurrence S14-G01-01; original coordinate embedding.
+\begin{scope}[shift={(-3.4000,0.0000)}]
+\coordinate (g1a-in) at (-2.4000,0.0000);
+\coordinate (g1a-out) at (2.4000,0.0000);
+\coordinate (g1a-v1) at (-1.1000,0.0000);
+\coordinate (g1a-v2) at (1.1000,0.0000);
+% Edge e1: in--v1; path orientation in to v1.
+\draw (g1a-in) -- (g1a-v1);
+\fill (-1.7110,0.0000) -- (-1.8610,0.0700) -- (-1.8610,-0.0700) -- cycle;
+% Edge e2: v1--v2; path orientation v1 to v2.
+\draw (g1a-v1) .. controls (-1.1000,1.6000) and (1.1000,1.6000) .. (g1a-v2);
+\fill (0.0989,1.1957) -- (-0.0444,1.2785) -- (-0.0567,1.1390) -- cycle;
+% Edge e3: v1--v2; path orientation v2 to v1.
+\draw (g1a-v2) .. controls (1.1000,-1.6000) and (-1.1000,-1.6000) .. (g1a-v1);
+\fill (-0.0989,-1.1957) -- (0.0444,-1.2785) -- (0.0567,-1.1390) -- cycle;
+% Edge e4: v2--out; path orientation v2 to out.
+\draw (g1a-v2) -- (g1a-out);
+\fill (1.7890,0.0000) -- (1.6390,0.0700) -- (1.6390,-0.0700) -- cycle;
+% Node in: fixed_external_endpoint.
+% Node out: fixed_external_endpoint.
+% Node v1: cubic_vertex.
+\fill (g1a-v1) circle[radius=1.45pt];
+% Node v2: cubic_vertex.
+\fill (g1a-v2) circle[radius=1.45pt];
+\node[font=\small,inner sep=1pt] at (-1.7800,-0.3500) {$k$};
+\node[font=\small,inner sep=1pt] at (1.7800,-0.3500) {$k$};
+\node[font=\small,inner sep=1pt] at (0.0000,1.5200) {$k+\ell$};
+\node[font=\small,inner sep=1pt] at (0.0000,-1.5200) {$\ell$};
+\end{scope}
+\node[font=\large] at (0.1500,0.0000) {$+$};
+% Source occurrence S14-G01-02; original coordinate embedding.
+\begin{scope}[shift={(3.4500,0.0000)}]
+\coordinate (g1b-in) at (-1.6000,0.0000);
+\coordinate (g1b-out) at (1.6000,0.0000);
+\coordinate (g1b-c) at (0.0000,0.0000);
+% Edge e1: in--c; path orientation in to c.
+\draw (g1b-in) -- (g1b-c);
+\fill (-0.7520,0.0000) -- (-0.9020,0.0700) -- (-0.9020,-0.0700) -- cycle;
+% Edge e2: c--out; path orientation c to out.
+\draw (g1b-c) -- (g1b-out);
+\fill (0.8480,0.0000) -- (0.6980,0.0700) -- (0.6980,-0.0700) -- cycle;
+% Node in: fixed_external_endpoint.
+% Node out: fixed_external_endpoint.
+% Node c: quadratic_counterterm.
+\draw[line width=0.85pt] (-0.1200,-0.1200) -- (0.1200,0.1200);
+\draw[line width=0.85pt] (-0.1200,0.1200) -- (0.1200,-0.1200);
+\node[font=\small,inner sep=1pt] at (-0.8000,-0.3500) {$k$};
+\node[font=\small,inner sep=1pt] at (0.8000,-0.3500) {$k$};
+\end{scope}
+\node[font=\small] at (-3.4000,-1.9800) {(a)};
+\node[font=\small] at (3.4500,-1.9800) {(b)};
+\end{tikzpicture}%
+\endgroup%

@@ -1,0 +1,21 @@
+% Original vector diagram corresponding to source Fig.25.1, PDF110 / printed98.
+% Dashed phi enters with physical momentum k; solid chi legs leave with k1', k2'.
+% This is a bare ig vertex. The arrows are momentum annotations, not extra edges.
+% Requires basic TikZ only; the surrounding manuscript supplies the caption.
+\begin{tikzpicture}[x=14mm,y=12mm,line width=.65pt,>=latex,
+  font=\fontsize{10.5}{12}\selectfont]
+  \draw[dashed] (-2.5,0) -- (0,0);
+  \draw (0,0) -- (2.2,1.15);
+  \draw (0,0) -- (2.2,-1.15);
+  \draw[->] (-1.75,.20) -- (-.95,.20);
+  \node[above] at (-1.35,.20) {$k$};
+  \node[below] at (-1.65,-.05) {$\varphi$};
+  \draw[->] (.85,.4443) -- (1.45,.7580);
+  \draw[->] (.85,-.4443) -- (1.45,-.7580);
+  \node[above left] at (1.50,.89) {$k_1'$};
+  \node[below left] at (1.50,-.89) {$k_2'$};
+  \node[right] at (2.2,1.15) {$\chi$};
+  \node[right] at (2.2,-1.15) {$\chi$};
+  \fill (0,0) circle[radius=.65mm];
+  \node[below left=2pt] at (0,0) {$ig$};
+\end{tikzpicture}

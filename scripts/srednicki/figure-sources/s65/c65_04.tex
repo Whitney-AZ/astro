@@ -1,0 +1,77 @@
+% Original vector reconstruction of source Fig.65.4, PDF271.
+% Dashed arrows denote complex-scalar charge flow; arrows beside photon waves denote momentum.
+% All dimensions are native millimetres; definitions are local to this picture.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont,
+ scalar/.style={dash pattern=on 2pt off 1.7pt}]
+% S65-D012: two seagulls with scalar vL->vR and photon vR->vL. Two distinct external-photon assignments.
+\draw[scalar] (0,0)--(10,0);
+\draw[->] (3.9,0)--(6.2,0);
+\draw[scalar] (10,0)--(34,0);
+\draw[->] (19.36,0)--(24.88,0);
+\node[below] at (22,-2) {$\ell$};
+\draw[scalar] (34,0)--(44,0);
+\draw[->] (37.9,0)--(40.2,0);
+\draw[domain=0:1,samples=161,smooth,variable=\u]
+ plot ({22+(12+0.7*sin(2160*\u))*cos(0+(180)*\u)},
+       {0+(12+0.7*sin(2160*\u))*sin(0+(180)*\u)});
+\draw[->] (26,15)--(18,15);
+\node[above] at (22,16) {$\ell$};
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({10+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-17+(17)*\u+(0)*sin(1440*\u)});
+\node[below] at (10,-18) {$\mu$};
+\fill (10,0) circle[radius=.55mm];
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({34+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-17+(17)*\u+(0)*sin(1440*\u)});
+\node[below] at (34,-18) {$\nu$};
+\fill (34,0) circle[radius=.55mm];
+\node at (22,-28) {$\times2$};
+\node at (49,0) {$+$};
+% S65-D013: oriented scalar loop vT->vL->vR->vT; four-scalar vertex vT. Also includes the mu<->nu partner.
+\draw[scalar] (55,9)--(75,9);
+\draw[->] (62.8,9)--(67.4,9);
+\draw[scalar] (75,9)--(95,9);
+\draw[->] (82.8,9)--(87.4,9);
+\draw[scalar] (75,9) arc[start angle=90,end angle=210,radius=11mm];
+\draw[->] (67.47,6.0187) arc[start angle=133.2,end angle=160.8,radius=11mm];
+\draw[scalar] (65.4737,-7.5) arc[start angle=210,end angle=330,radius=11mm];
+\draw[->] (71.8207,-12.5305) arc[start angle=253.2,end angle=280.8,radius=11mm];
+\draw[scalar] (84.5263,-7.5) arc[start angle=330,end angle=450,radius=11mm];
+\draw[->] (85.7094,0.5119) arc[start angle=373.2,end angle=400.8,radius=11mm];
+\fill (75,9) circle[radius=.55mm];
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({65.4737+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-21+(13.5)*\u+(0)*sin(1440*\u)});
+\node[below] at (65.4737,-22) {$\mu$};
+\fill (65.4737,-7.5) circle[radius=.55mm];
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({84.5263+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-21+(13.5)*\u+(0)*sin(1440*\u)});
+\node[below] at (84.5263,-22) {$\nu$};
+\fill (84.5263,-7.5) circle[radius=.55mm];
+\node[left] at (61,-1) {$\ell$};
+\node at (75,-31) {$\times2$};
+\node at (103,0) {$+$};
+% S65-D014: scalar vT->vB->vT; both external photons attach to vB. Multiplicity=1.
+\draw[scalar] (110,9)--(127,9);
+\draw[->] (116.63,9)--(120.54,9);
+\draw[scalar] (127,9)--(143,9);
+\draw[->] (133.24,9)--(136.92,9);
+\draw[scalar] (127,9) arc[start angle=90,end angle=270,radius=11mm];
+\draw[->] (117.0469,2.6836) arc[start angle=154.8,end angle=196.2,radius=11mm];
+\draw[scalar] (127,-13) arc[start angle=270,end angle=450,radius=11mm];
+\draw[->] (136.9531,-6.6836) arc[start angle=334.8,end angle=376.2,radius=11mm];
+\fill (127,9) circle[radius=.55mm];
+\fill (127,-13) circle[radius=.55mm];
+\node[left] at (112,-2) {$\ell$};
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({118+(9)*\u+(-0.5755)*sin(1440*\u)},
+       {-26+(13)*\u+(0.3984)*sin(1440*\u)});
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({136+(-9)*\u+(-0.5755)*sin(1440*\u)},
+       {-26+(13)*\u+(-0.3984)*sin(1440*\u)});
+\node[below] at (118,-27) {$\mu$};
+\node[below] at (136,-27) {$\nu$};
+\end{tikzpicture}

@@ -1,0 +1,848 @@
+{
+  "checks": 168,
+  "all_passed": true,
+  "max_scaled_residual": 1.0107273145153099e-13,
+  "script_sha256": "8a4bf6331682f5e1c5c2950c2c9715be8be96ca584e1d3d8bbb2e4da556eaa34",
+  "records": [
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 5.376209119762555e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 2.867311530540175e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 5.376209119762555e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 2.867311530540175e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 2.1453001676874128e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 5.346750439654267e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 1.933364441013684e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 1.2320808823573658e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 5.346750439654267e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 1.933364441013684e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 2.8629070165619865e-17,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 1.2652493682748143e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 3.451647439675041e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 2.8629070165619865e-17,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 1.2652493682748143e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 3.451647439675041e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(-0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(-0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(-0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 5.376209119762555e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(-0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 2.867311530540175e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(-0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(-0.9186811198669537), 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(-0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(-0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(-0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 5.376209119762555e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(-0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 2.867311530540175e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(-0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(-0.9186811198669537), 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(-0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(-0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 2.1453001676874128e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(-0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 5.346750439654267e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(-0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 1.933364441013684e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(-0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(-0.9186811198669537), 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(-0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(-0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 1.2320808823573658e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(-0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 5.346750439654267e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(-0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 1.933364441013684e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(-0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(-0.9186811198669537), 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(-0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(-0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 2.8629070165619865e-17,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(-0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 1.2652493682748143e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(-0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 3.451647439675041e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(-0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(-0.9186811198669537), 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (0.55, np.float64(-0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 2.870298382861013e-16,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (0.55, np.float64(-0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 2.8629070165619865e-17,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (0.55, np.float64(-0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 1.2652493682748143e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (0.55, np.float64(-0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 3.451647439675041e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (0.55, np.float64(-0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (0.55, np.float64(-0.9186811198669537), 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.0, 0.0, 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.0, 0.0, 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.0, 0.0, 0.0, 0.0)",
+      "scaled_residual": 1.0107273145153099e-13,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.0, 0.0, 0.0, 0.0)",
+      "scaled_residual": 1.4336557652700879e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.0, 0.0, 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.0, 0.0, 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.0, 0.0, 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.0, 0.0, 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.0, 0.0, 0.0, 1.2)",
+      "scaled_residual": 1.0107273145153099e-13,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.0, 0.0, 0.0, 1.2)",
+      "scaled_residual": 1.4336557652700879e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.0, 0.0, 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.0, 0.0, 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.0, 0.0, 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.0, 0.0, 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.0, 0.0, 0.5, 0.0)",
+      "scaled_residual": 7.631001044151048e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.0, 0.0, 0.5, 0.0)",
+      "scaled_residual": 2.154356943596438e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.0, 0.0, 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.0, 0.0, 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.0, 0.0, 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.0, 0.0, 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.0, 0.0, 0.5, 1.2)",
+      "scaled_residual": 7.631001044151048e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.0, 0.0, 0.5, 1.2)",
+      "scaled_residual": 2.154356943596438e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.0, 0.0, 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.0, 0.0, 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.0, 0.0, 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.0, 0.0, 2.0, 0.0)",
+      "scaled_residual": 1.22439224017588e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.0, 0.0, 2.0, 0.0)",
+      "scaled_residual": 2.3040856917004546e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.0, 0.0, 2.0, 0.0)",
+      "scaled_residual": 1.2202913863948943e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.0, 0.0, 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.0, 0.0, 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.0, 0.0, 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.0, 0.0, 2.0, 1.2)",
+      "scaled_residual": 1.22439224017588e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.0, 0.0, 2.0, 1.2)",
+      "scaled_residual": 2.290767277297562e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.0, 0.0, 2.0, 1.2)",
+      "scaled_residual": 3.660874159184683e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.0, 0.0, 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.0, 0.0, 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.6, 0.0, 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.6, 0.0, 0.0, 0.0)",
+      "scaled_residual": 1.1151224848606354e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.6, 0.0, 0.0, 0.0)",
+      "scaled_residual": 8.730802525576627e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.6, 0.0, 0.0, 0.0)",
+      "scaled_residual": 8.054245872303864e-17,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.6, 0.0, 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.6, 0.0, 0.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.6, 0.0, 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.6, 0.0, 0.0, 1.2)",
+      "scaled_residual": 1.1151224848606354e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.6, 0.0, 0.0, 1.2)",
+      "scaled_residual": 8.730802525576627e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.6, 0.0, 0.0, 1.2)",
+      "scaled_residual": 8.054245872303864e-17,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.6, 0.0, 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.6, 0.0, 0.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.6, 0.0, 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.6, 0.0, 0.5, 0.0)",
+      "scaled_residual": 2.7401729367218716e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.6, 0.0, 0.5, 0.0)",
+      "scaled_residual": 5.513473398977481e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.6, 0.0, 0.5, 0.0)",
+      "scaled_residual": 6.3513799090372e-17,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.6, 0.0, 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.6, 0.0, 0.5, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.6, 0.0, 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.6, 0.0, 0.5, 1.2)",
+      "scaled_residual": 1.8267819578145813e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.6, 0.0, 0.5, 1.2)",
+      "scaled_residual": 5.513473398977481e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.6, 0.0, 0.5, 1.2)",
+      "scaled_residual": 1.27027598180744e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.6, 0.0, 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.6, 0.0, 0.5, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.6, 0.0, 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.6, 0.0, 2.0, 0.0)",
+      "scaled_residual": 4.275850818658679e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.6, 0.0, 2.0, 0.0)",
+      "scaled_residual": 2.0183659020432393e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.6, 0.0, 2.0, 0.0)",
+      "scaled_residual": 3.8325952601914955e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.6, 0.0, 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.6, 0.0, 2.0, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "stationarity and goldstino (1.6, 0.0, 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full complex fermion singular values (1.6, 0.0, 2.0, 1.2)",
+      "scaled_residual": 4.275850818658679e-16,
+      "passed": true
+    },
+    {
+      "name": "Hessian of original polynomial potential (1.6, 0.0, 2.0, 1.2)",
+      "scaled_residual": 2.0183659020432393e-14,
+      "passed": true
+    },
+    {
+      "name": "all six scalar eigenvalues (1.6, 0.0, 2.0, 1.2)",
+      "scaled_residual": 1.9162976300957477e-16,
+      "passed": true
+    },
+    {
+      "name": "goldstino equals flat complex direction (1.6, 0.0, 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum energy (1.6, 0.0, 2.0, 1.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI energy from all auxiliary fields xi=-3.3061224489795924",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI scalar stationarity xi=-3.3061224489795924",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI full quadrant comparison xi=-3.3061224489795924",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI energy from all auxiliary fields xi=-1.6530612244897962",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "FI scalar stationarity xi=-1.6530612244897962",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI full quadrant comparison xi=-1.6530612244897962",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI energy from all auxiliary fields xi=-0.6612244897959185",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI scalar stationarity xi=-0.6612244897959185",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI full quadrant comparison xi=-0.6612244897959185",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI energy from all auxiliary fields xi=0.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI scalar stationarity xi=0.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI full quadrant comparison xi=0.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI energy from all auxiliary fields xi=0.6612244897959185",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI scalar stationarity xi=0.6612244897959185",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI full quadrant comparison xi=0.6612244897959185",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI energy from all auxiliary fields xi=1.6530612244897962",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "FI scalar stationarity xi=1.6530612244897962",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI full quadrant comparison xi=1.6530612244897962",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI energy from all auxiliary fields xi=3.3061224489795924",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI scalar stationarity xi=3.3061224489795924",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FI full quadrant comparison xi=3.3061224489795924",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless SQED FI exact zero xi=-2.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless SQED FI exact zero xi=0.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless SQED FI exact zero xi=1.3",
+      "scaled_residual": 1.554312234475219e-16,
+      "passed": true
+    }
+  ]
+}

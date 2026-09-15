@@ -1,0 +1,413 @@
+{
+  "checks": 81,
+  "passed": true,
+  "records": [
+    {
+      "name": "SU(2) algebra",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 mass decomposition",
+      "scaled_residual": 7.771561172376096e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 scalar/vector ranks",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 Hessian kernel",
+      "scaled_residual": 5.205316183415732e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 commuting masses",
+      "scaled_residual": 4.189941914240423e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 rotated algebra",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 rotated derivative",
+      "scaled_residual": 2.2086790635305453e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 complex and real kinetic",
+      "scaled_residual": 1.9978695395148606e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 rotated ghost scalar",
+      "scaled_residual": 4.163336342344337e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 finite FP xi=0.4",
+      "scaled_residual": 8.669800988236886e-13,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 finite FP xi=2.7",
+      "scaled_residual": 1.3294676266435332e-11,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 direct kinetic Ass",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 direct kinetic AAs",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 0 direct kinetic AAss",
+      "scaled_residual": 4.85722573273506e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 mass decomposition",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 scalar/vector ranks",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 Hessian kernel",
+      "scaled_residual": 2.7609920196248184e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 commuting masses",
+      "scaled_residual": 1.6300364422055584e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 rotated algebra",
+      "scaled_residual": 2.498001805406602e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 rotated derivative",
+      "scaled_residual": 2.9389435467560943e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 complex and real kinetic",
+      "scaled_residual": 2.456444512061745e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 rotated ghost scalar",
+      "scaled_residual": 9.020562075079397e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 finite FP xi=0.4",
+      "scaled_residual": 8.672090823225176e-13,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 finite FP xi=2.7",
+      "scaled_residual": 6.95310475862243e-12,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 direct kinetic Ass",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 direct kinetic AAs",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(2) x U(1), sample 1 direct kinetic AAss",
+      "scaled_residual": 4.996003610813204e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) algebra",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 mass decomposition",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 scalar/vector ranks",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 Hessian kernel",
+      "scaled_residual": 2.451773974576388e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 commuting masses",
+      "scaled_residual": 4.474580413762122e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 rotated algebra",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 rotated derivative",
+      "scaled_residual": 1.449829533861363e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 complex and real kinetic",
+      "scaled_residual": 2.811433611888207e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 rotated ghost scalar",
+      "scaled_residual": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 finite FP xi=0.4",
+      "scaled_residual": 1.1797562926574301e-11,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 finite FP xi=2.7",
+      "scaled_residual": 4.1692979443362463e-11,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 direct kinetic Ass",
+      "scaled_residual": 2.3564673691345277e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 direct kinetic AAs",
+      "scaled_residual": 2.0563501921095096e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 0 direct kinetic AAss",
+      "scaled_residual": 1.237105440651617e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 mass decomposition",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 scalar/vector ranks",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 Hessian kernel",
+      "scaled_residual": 1.0143447815571336e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 commuting masses",
+      "scaled_residual": 1.0036201552441205e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 rotated algebra",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 rotated derivative",
+      "scaled_residual": 6.606683655836862e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 complex and real kinetic",
+      "scaled_residual": 2.3106890189550447e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 rotated ghost scalar",
+      "scaled_residual": 4.5102810375396984e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 finite FP xi=0.4",
+      "scaled_residual": 7.504830090709902e-12,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 finite FP xi=2.7",
+      "scaled_residual": 1.8462023923115587e-11,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 direct kinetic Ass",
+      "scaled_residual": 3.963487595548567e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 direct kinetic AAs",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(3) x U(1), sample 1 direct kinetic AAss",
+      "scaled_residual": 7.216449660063518e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) algebra",
+      "scaled_residual": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 mass decomposition",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 scalar/vector ranks",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 Hessian kernel",
+      "scaled_residual": 2.226084499062409e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 commuting masses",
+      "scaled_residual": 8.408414095010212e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 rotated algebra",
+      "scaled_residual": 1.942890293094024e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 rotated derivative",
+      "scaled_residual": 1.8157669482416405e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 complex and real kinetic",
+      "scaled_residual": 3.583453625964658e-19,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 rotated ghost scalar",
+      "scaled_residual": 7.707511794367607e-17,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 finite FP xi=0.4",
+      "scaled_residual": 7.292999537611422e-12,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 finite FP xi=2.7",
+      "scaled_residual": 3.5948731537915604e-11,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 direct kinetic Ass",
+      "scaled_residual": 1.8978389353803267e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 direct kinetic AAs",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 0 direct kinetic AAss",
+      "scaled_residual": 3.0878077872387166e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 mass decomposition",
+      "scaled_residual": 4.933591781411391e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 scalar/vector ranks",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 Hessian kernel",
+      "scaled_residual": 1.7187178659927215e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 commuting masses",
+      "scaled_residual": 3.367470220182803e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 rotated algebra",
+      "scaled_residual": 2.498001805406602e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 rotated derivative",
+      "scaled_residual": 3.6975336585493696e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 complex and real kinetic",
+      "scaled_residual": 2.0536873630837428e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 rotated ghost scalar",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 finite FP xi=0.4",
+      "scaled_residual": 7.789602296526255e-12,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 finite FP xi=2.7",
+      "scaled_residual": 2.4006779172520393e-11,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 direct kinetic Ass",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 direct kinetic AAs",
+      "scaled_residual": 3.7981910107429626e-16,
+      "passed": true
+    },
+    {
+      "name": "SU(4) x U(1), sample 1 direct kinetic AAss",
+      "scaled_residual": 1.0807576356746304e-15,
+      "passed": true
+    }
+  ],
+  "script_sha256": "54bc1feb5314298215b8356b4368aff1096e02cc6a6c17195ea43fd9a2381cd6",
+  "helper_sha256": "0420afee5ab702b31b9b2e8735c4635c0fa24947563431a6f42d672bb6a642c5"
+}

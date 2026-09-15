@@ -9,12 +9,21 @@ interface Props {
 
 const { seriesPosts, currentSlug, seriesName } = Astro.props
 
-// 按日期升序排列系列文章
-const sortedPosts = seriesPosts.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+const isSrednicki = seriesName === 'Srednicki QFT'
+const sortedPosts = [...seriesPosts].sort((a, b) => {
+  if (isSrednicki) {
+    return (a.data.srednickiSections[0] ?? 98) - (b.data.srednickiSections[0] ?? 98)
+  }
+  return a.data.date.valueOf() - b.data.date.valueOf()
+})
 ---
 
 <div class="mb-8 p-4 rounded-lg bg-accent/10 border border-accent/20">
-  <p class="font-bold text-accent mb-2">系列文章：{seriesName}</p>
+  <details open={!isSrednicki || sortedPosts.length <= 12}>
+  <summary class="font-bold text-accent cursor-pointer">
+    系列文章：{seriesName}
+    {isSrednicki && <span class="ml-2 text-sm font-normal">共 {sortedPosts.length} 篇</span>}
+  </summary>
   <ul class="space-y-2">
     {sortedPosts.map((post, index) => (
       <li class="flex items-center gap-2 text-sm">
@@ -29,4 +38,5 @@ const sortedPosts = seriesPosts.sort((a, b) => a.data.date.valueOf() - b.data.da
       </li>
     ))}
   </ul>
+  </details>
 </div>

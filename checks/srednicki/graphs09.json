@@ -1,0 +1,1163 @@
+{
+  "source_pdf_sha256": "91eead3d237b8e750dc8e0b3b778d39809a087a9336c4eac3b930a98d434425b",
+  "graphs": [
+    {
+      "id": "S09-G01-01",
+      "description": "两端自环以单桥相连",
+      "source_locator": {
+        "pdf_page": 49,
+        "printed_page": "37",
+        "section": 9,
+        "figure": "图9.1",
+        "subdiagram_position": "左"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "T0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T1",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 8
+    },
+    {
+      "id": "S09-G01-02",
+      "description": "两顶点之间三条平行线的theta真空图",
+      "source_locator": {
+        "pdf_page": 49,
+        "printed_page": "37",
+        "section": 9,
+        "figure": "图9.1",
+        "subdiagram_position": "右"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T1",
+            "multiplicity": 3
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 12
+    },
+    {
+      "id": "S09-G03-01",
+      "description": "一个源通过传播子接三点顶点的自收缩环",
+      "source_locator": {
+        "pdf_page": 50,
+        "printed_page": "38",
+        "section": 9,
+        "figure": "图9.3",
+        "subdiagram_position": "唯一"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 2
+    },
+    {
+      "id": "S09-G05-01",
+      "description": "两源之间的自由传播子",
+      "source_locator": {
+        "pdf_page": 50,
+        "printed_page": "38",
+        "section": 9,
+        "figure": "图9.5",
+        "subdiagram_position": "唯一"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "J0",
+            "to": "J1",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 2
+    },
+    {
+      "id": "S09-G06-01",
+      "description": "两源之间的双线泡",
+      "source_locator": {
+        "pdf_page": 51,
+        "printed_page": "39",
+        "section": 9,
+        "figure": "图9.6",
+        "subdiagram_position": "左"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T1",
+            "multiplicity": 2
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J1",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 4
+    },
+    {
+      "id": "S09-G07-02",
+      "description": "两源位于含竖弦闭环的左右两侧",
+      "source_locator": {
+        "pdf_page": 51,
+        "printed_page": "39",
+        "section": 9,
+        "figure": "图9.7",
+        "subdiagram_position": "右列最上"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T3",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T2",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J1",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 4
+    },
+    {
+      "id": "S09-G07-03",
+      "description": "两源之间串联两个双线泡",
+      "source_locator": {
+        "pdf_page": 51,
+        "printed_page": "39",
+        "section": 9,
+        "figure": "图9.7",
+        "subdiagram_position": "右列第二"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T3",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T3",
+            "multiplicity": 2
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 2
+          },
+          {
+            "from": "T2",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J1",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 8
+    },
+    {
+      "id": "S09-G07-08",
+      "description": "源间双线泡的一条边上再插入一个双线泡，画成重叠圆",
+      "source_locator": {
+        "pdf_page": 51,
+        "printed_page": "39",
+        "section": 9,
+        "figure": "图9.7",
+        "subdiagram_position": "左列最下"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T3",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T3",
+            "multiplicity": 2
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T2",
+            "to": "J1",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 4
+    },
+    {
+      "id": "S09-G08-01",
+      "description": "三源接一个三价树顶点",
+      "source_locator": {
+        "pdf_page": 52,
+        "printed_page": "40",
+        "section": 9,
+        "figure": "图9.8",
+        "subdiagram_position": "唯一"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J2",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 6
+    },
+    {
+      "id": "S09-G09-01",
+      "description": "三角闭环的三个点各接一源",
+      "source_locator": {
+        "pdf_page": 52,
+        "printed_page": "40",
+        "section": 9,
+        "figure": "图9.9",
+        "subdiagram_position": "左"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T2",
+            "to": "J2",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 6
+    },
+    {
+      "id": "S09-G09-02",
+      "description": "三源树的一条外腿上插入双线泡",
+      "source_locator": {
+        "pdf_page": 52,
+        "printed_page": "40",
+        "section": 9,
+        "figure": "图9.9",
+        "subdiagram_position": "中"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 2
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J2",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 4
+    },
+    {
+      "id": "S09-G10-01",
+      "description": "两个三价顶点以单线相连，各接两源",
+      "source_locator": {
+        "pdf_page": 52,
+        "printed_page": "40",
+        "section": 9,
+        "figure": "图9.10",
+        "subdiagram_position": "唯一"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          },
+          {
+            "id": "J3",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J3",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 8
+    },
+    {
+      "id": "S09-G11-01",
+      "description": "四源树的中间传播子上插入双线泡",
+      "source_locator": {
+        "pdf_page": 53,
+        "printed_page": "41",
+        "section": 9,
+        "figure": "图9.11",
+        "subdiagram_position": "上左"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T3",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          },
+          {
+            "id": "J3",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T2",
+            "to": "T3",
+            "multiplicity": 2
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J3",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 16
+    },
+    {
+      "id": "S09-G11-02",
+      "description": "四角各接一源的盒图",
+      "source_locator": {
+        "pdf_page": 53,
+        "printed_page": "41",
+        "section": 9,
+        "figure": "图9.11",
+        "subdiagram_position": "上右"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T3",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          },
+          {
+            "id": "J3",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T2",
+            "to": "J2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T3",
+            "to": "J3",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 8
+    },
+    {
+      "id": "S09-G11-04",
+      "description": "三角闭环两个角各接一源，第三角接两源树叉",
+      "source_locator": {
+        "pdf_page": 53,
+        "printed_page": "41",
+        "section": 9,
+        "figure": "图9.11",
+        "subdiagram_position": "中右"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T3",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          },
+          {
+            "id": "J3",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T2",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T2",
+            "to": "J3",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 4
+    },
+    {
+      "id": "S09-G11-05",
+      "description": "四源树的一条外腿上插入双线泡",
+      "source_locator": {
+        "pdf_page": 53,
+        "printed_page": "41",
+        "section": 9,
+        "figure": "图9.11",
+        "subdiagram_position": "下左"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "T0",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T1",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T2",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "T3",
+            "type": "cubic_vertex"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          },
+          {
+            "id": "J1",
+            "type": "source"
+          },
+          {
+            "id": "J2",
+            "type": "source"
+          },
+          {
+            "id": "J3",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "T0",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "T2",
+            "multiplicity": 2
+          },
+          {
+            "from": "T2",
+            "to": "T3",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J0",
+            "multiplicity": 1
+          },
+          {
+            "from": "T0",
+            "to": "J1",
+            "multiplicity": 1
+          },
+          {
+            "from": "T1",
+            "to": "J2",
+            "multiplicity": 1
+          },
+          {
+            "from": "T3",
+            "to": "J3",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 4
+    },
+    {
+      "id": "S09-G12-01",
+      "description": "源直接接线性反项叉号，V=0,X=1",
+      "source_locator": {
+        "pdf_page": 54,
+        "printed_page": "42",
+        "section": 9,
+        "figure": "图9.12",
+        "subdiagram_position": "左起第一"
+      },
+      "topology": {
+        "nodes": [
+          {
+            "id": "Y0",
+            "type": "linear_counterterm"
+          },
+          {
+            "id": "J0",
+            "type": "source"
+          }
+        ],
+        "edges": [
+          {
+            "from": "Y0",
+            "to": "J0",
+            "multiplicity": 1
+          }
+        ],
+        "edge_convention": "Undirected multigraph; a self-loop edge contributes2 to valence; multiplicity counts distinct parallel propagators. J labels are interchangeable integrated sources, not fixed physical external labels.",
+        "node_label_convention": "T=cubic vertex, J=source leaf, Y=linear-counterterm cross; editorial node IDs, absent from source.",
+        "source_verification": "Each incidence, self-loop and parallel-edge multiplicity traced from the actual full-page source image; drawing crossings are not added as vertices unless required by three-valence."
+      },
+      "expected_symmetry_factor": 1
+    }
+  ],
+  "gallery": [
+    {
+      "id": "S09-G13-01",
+      "graph": "S09-G05-01",
+      "description": "E2,V0自由线；对应图9.5"
+    },
+    {
+      "id": "S09-G13-02",
+      "graph": "S09-G06-01",
+      "description": "E2,V2双线泡；对应图9.6左"
+    },
+    {
+      "id": "S09-G13-03",
+      "graph": "S09-G07-02",
+      "description": "E2,V4含弦闭环；对应图9.7右列最上"
+    },
+    {
+      "id": "S09-G13-04",
+      "graph": "S09-G07-03",
+      "description": "E2,V4串联双线泡；对应图9.7右列第二"
+    },
+    {
+      "id": "S09-G13-05",
+      "graph": "S09-G07-08",
+      "description": "E2,V4重叠圆即双线泡插入；对应图9.7左列最下"
+    },
+    {
+      "id": "S09-G13-06",
+      "graph": "S09-G08-01",
+      "description": "E3,V1三源树；对应图9.8"
+    },
+    {
+      "id": "S09-G13-07",
+      "graph": "S09-G09-01",
+      "description": "E3,V3三角图；对应图9.9左"
+    },
+    {
+      "id": "S09-G13-08",
+      "graph": "S09-G09-02",
+      "description": "E3,V3外腿双线泡；对应图9.9中"
+    },
+    {
+      "id": "S09-G13-09",
+      "graph": "S09-G10-01",
+      "description": "E4,V2四源树；对应图9.10"
+    },
+    {
+      "id": "S09-G13-10",
+      "graph": "S09-G11-02",
+      "description": "E4,V4盒图；对应图9.11上右"
+    },
+    {
+      "id": "S09-G13-11",
+      "graph": "S09-G11-04",
+      "description": "E4,V4三角接树叉；对应图9.11中右"
+    },
+    {
+      "id": "S09-G13-12",
+      "graph": "S09-G11-05",
+      "description": "E4,V4外腿双线泡；对应图9.11下左"
+    },
+    {
+      "id": "S09-G13-13",
+      "graph": "S09-G11-01",
+      "description": "E4,V4中间传播子双线泡；对应图9.11上左"
+    }
+  ]
+}

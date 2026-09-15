@@ -107,7 +107,7 @@ export function TocItem({
           'inline-block pl-8 opacity-0 transition-opacity duration-300',
           isActive ? 'opacity-100' : 'group-hover:opacity-100 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100',
         )}
-        href={`#${slug}`}
+        href={`#${encodeURIComponent(slug)}`}
       >
         <span>{text}</span>
       </a>

@@ -1,0 +1,1622 @@
+{
+  "pdf_sha256": "91eead3d237b8e750dc8e0b3b778d39809a087a9336c4eac3b930a98d434425b",
+  "sections": [
+    {
+      "section": 2,
+      "title": "洛伦兹不变性",
+      "source": "chapters/02.md",
+      "source_sha256": "c37a3c769b7767c6309d5fbe39de5180ab868a184c1900a8f077b8194cb1296d",
+      "pdf_pages": [20, 23],
+      "post": "src/content/posts/Srednicki-02.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/02.md",
+      "review_post_sha256": "708de07d198f754b54ed254b455ae61a78434bad40b2fce6d6e4acc9f07f1959"
+    },
+    {
+      "section": 3,
+      "title": "标量场的正则量子化",
+      "source": "chapters/03.md",
+      "source_sha256": "19d406ff68750e33e96e2f6bdef9daec372072a8466a8635a45f0df98b28053c",
+      "pdf_pages": [24, 29],
+      "post": "src/content/posts/Srednicki-03.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/03.md",
+      "review_post_sha256": "4bcc1c013f0256f1c6b375f87a2e654b14a26113045dbaa15eb345518bf93611"
+    },
+    {
+      "section": 4,
+      "title": "自旋–统计定理",
+      "source": "chapters/04.md",
+      "source_sha256": "d258eb07ad7cd4cbe8015c80ad06b2b6dcc6f6c11df7410d4a2aef5e511e9789",
+      "pdf_pages": [30, 32],
+      "post": "src/content/posts/Srednicki-04.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/04.md",
+      "review_post_sha256": "579920720626a5c9e14542c95934d22c42b23f295cc18c50333f2705dc85077f"
+    },
+    {
+      "section": 5,
+      "title": "LSZ 约化公式",
+      "source": "chapters/05.md",
+      "source_sha256": "867395e52a31f8b964a30b3a4c5ea8dd60efafc279e184e458ed298701a6264a",
+      "pdf_pages": [33, 37],
+      "post": "src/content/posts/Srednicki-05.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/05.md",
+      "review_post_sha256": "7c60dae47e0ded543a41a1a0b50e1e5218cc29086042eba8690d8975ca98d875"
+    },
+    {
+      "section": 6,
+      "title": "量子力学中的路径积分",
+      "source": "chapters/06.md",
+      "source_sha256": "a593888d0d4600f9e911381affbee13458c1c9a480359e6ba7e3b4e25d10084d",
+      "pdf_pages": [38, 41],
+      "post": "src/content/posts/Srednicki-06.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/06.md",
+      "review_post_sha256": "56cef0f743171385a7616b8bf0f446a313602bc592e47c2b9b7d1a22c33bc890"
+    },
+    {
+      "section": 7,
+      "title": "谐振子的路径积分",
+      "source": "chapters/07.md",
+      "source_sha256": "93944dc7fd861ebe4fa8c22cd15c78b54ec267e2902f25a24ceaf65e5dca68c3",
+      "pdf_pages": [42, 44],
+      "post": "src/content/posts/Srednicki-07.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/07.md",
+      "review_post_sha256": "edad64e298b86b1705b4e34b3ec82cda0b22477061823974a83dc1e3aef2fc78"
+    },
+    {
+      "section": 8,
+      "title": "自由场论的路径积分",
+      "source": "chapters/08.md",
+      "source_sha256": "0eb39f078c38515c8d8a83962a7dc3ac9100a1543e9bd2894084b0dbdb0f3052",
+      "pdf_pages": [45, 47],
+      "post": "src/content/posts/Srednicki-08.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/08.md",
+      "review_post_sha256": "5b913623c5823e649489bcbf3e0556dd6603d911564c4eed9c9f7d269a9d2594"
+    },
+    {
+      "section": 9,
+      "title": "相互作用场论的路径积分",
+      "source": "chapters/09.md",
+      "source_sha256": "5355f4477516a46aed1f7fffc487c267ea763a413876dd887190a84e11ed5f58",
+      "pdf_pages": [48, 59],
+      "post": "src/content/posts/Srednicki-09.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/09.md",
+      "review_post_sha256": "85ac76a7d0fad17810985131bf4c539f3c7770012728ea4f6275a606fd667182"
+    },
+    {
+      "section": 10,
+      "title": "散射振幅与费曼规则",
+      "source": "chapters/10.md",
+      "source_sha256": "a6a227312b055bb38bd785c58a2d366b10575628b3bcead957a97d6bf28dca82",
+      "pdf_pages": [60, 63],
+      "post": "src/content/posts/Srednicki-10.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/10.md",
+      "review_post_sha256": "969980f4cfee26e33f5627de9b320813cff0aff247fb706fabc742923631fd2b"
+    },
+    {
+      "section": 11,
+      "title": "截面与衰变率",
+      "source": "chapters/11.md",
+      "source_sha256": "ac4c8d0ea7e3eb4a9b4dd893dcb55eadd9dc46321e524c0605c887019179c5c5",
+      "pdf_pages": [64, 70],
+      "post": "src/content/posts/Srednicki-11.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/11.md",
+      "review_post_sha256": "63a84de97770d0dc0168ff920cd16a5eae42992df8db3e58ab2db1737ca3cc75"
+    },
+    {
+      "section": 12,
+      "title": "在 ħ = c = 1 下的量纲分析",
+      "source": "chapters/12.md",
+      "source_sha256": "e23bd61e916d5f815738bfd71dee659d6258dd0a275d3859248af54527ca0e3f",
+      "pdf_pages": [71, 72],
+      "post": "src/content/posts/Srednicki-12.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/12.md",
+      "review_post_sha256": "f1d2e420f248a976605283d1d10b52b79575fdd8a1562b7b6423663e70befb00"
+    },
+    {
+      "section": 13,
+      "title": "精确传播子的 Lehmann–Källén 表示",
+      "source": "chapters/13.md",
+      "source_sha256": "d5dceeecc04caed0a263259ba3813f9f5f73e56072525f5c1a02e67132c0570d",
+      "pdf_pages": [73, 74],
+      "post": "src/content/posts/Srednicki-13.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/13.md",
+      "review_post_sha256": "4ea2b94abcf51b7b8ccb55bc48ce4bd6db6a664d16b62bf2999e4fb50ee91971"
+    },
+    {
+      "section": 14,
+      "title": "传播子的圈修正",
+      "source": "chapters/14.md",
+      "source_sha256": "610c59791ca9d87f91fc56910b51d660d7dc051540b0155d402f60218b85e371",
+      "pdf_pages": [75, 81],
+      "post": "src/content/posts/Srednicki-14.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/14.md",
+      "review_post_sha256": "0a47007f228d8d2a6bca13a0573baee32f5eb2b86618010d59b7ea658508e82e"
+    },
+    {
+      "section": 15,
+      "title": "Lehmann–Källén 形式下的单圈修正",
+      "source": "chapters/15.md",
+      "source_sha256": "ed7490819e037eb9b439ff7fdd95ba2b53e4e29b23509a581c737331465338aa",
+      "pdf_pages": [82, 83],
+      "post": "src/content/posts/Srednicki-15.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/15.md",
+      "review_post_sha256": "e67e4ae4d6389c9e00a7ec833ed4d5a5d0c42b1e98d782cf14da4a5b9a41fc1f"
+    },
+    {
+      "section": 16,
+      "title": "顶点的圈修正",
+      "source": "chapters/16.md",
+      "source_sha256": "3da8fa7756c9694c7c352d4bf7ffd878406a22858ad777605f912dfd79098f39",
+      "pdf_pages": [84, 86],
+      "post": "src/content/posts/Srednicki-16.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/16.md",
+      "review_post_sha256": "29c229be7b178bbaa16d3535e156d0d6bd3201dac13f700f33c05b39c58253fa"
+    },
+    {
+      "section": 17,
+      "title": "其他 1PI 顶点",
+      "source": "chapters/17.md",
+      "source_sha256": "2f1bf8dab0dd71a763715f53d51d7f33983b012617a806b9b0ac6a648d7139b0",
+      "pdf_pages": [87, 88],
+      "post": "src/content/posts/Srednicki-17.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/17.md",
+      "review_post_sha256": "661b755aec039bec2f2dc32bca4698517d88e7136867b2b3797f08a4c030309a"
+    },
+    {
+      "section": 18,
+      "title": "高阶修正与可重整化性",
+      "source": "chapters/18.md",
+      "source_sha256": "4f8fc71632f86f5b8dd56b92594facd65dc656499c1a3063146fe3329038b5a2",
+      "pdf_pages": [89, 91],
+      "post": "src/content/posts/Srednicki-18.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/18.md",
+      "review_post_sha256": "3768d9e36c8ee26d9779fb4d0dfe33a36ae40f3f7d0d895611048680114e7185"
+    },
+    {
+      "section": 19,
+      "title": "全阶微扰论",
+      "source": "chapters/19.md",
+      "source_sha256": "0f5d1ca44ed2d43dd8c796f896f0f83dae0b24155394b375ff8410190298b877",
+      "pdf_pages": [92, 92],
+      "post": "src/content/posts/Srednicki-19.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/19.md",
+      "review_post_sha256": "b30b2dacfc1b39daced1006d55dbebbb966701cefff64685abc0db4a1507d7d7"
+    },
+    {
+      "section": 20,
+      "title": "单圈二粒子弹性散射",
+      "source": "chapters/20.md",
+      "source_sha256": "7499496e1121b4b992269651afd7895615ed6df6c6547a2b641b710519591781",
+      "pdf_pages": [93, 95],
+      "post": "src/content/posts/Srednicki-20.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/20.md",
+      "review_post_sha256": "780046be8d78499e3fcceb64b57bf2092d37f9813c0cc7b10912eb04df61302a"
+    },
+    {
+      "section": 21,
+      "title": "量子作用量",
+      "source": "chapters/21.md",
+      "source_sha256": "c0fe74551ae842fb18dab514a186bb8d24f2393d90183c88cd2083c4345b9ab9",
+      "pdf_pages": [96, 98],
+      "post": "src/content/posts/Srednicki-21.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/21.md",
+      "review_post_sha256": "6eab748ae6e3a7ce4a9bdb5e347d2f124c74e1dd47e557f4fabb9272839a63fc"
+    },
+    {
+      "section": 22,
+      "title": "连续对称性与守恒流",
+      "source": "chapters/22.md",
+      "source_sha256": "af8a1d6f2fa06603c6f4a0a3c3482449c4da204aa4ca727f579b580190c74e4a",
+      "pdf_pages": [99, 103],
+      "post": "src/content/posts/Srednicki-22.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/22.md",
+      "review_post_sha256": "d67717dbee5a061e2b645f4ca304e50949ce2b40ccb3b33e3261a98b06550ebb"
+    },
+    {
+      "section": 23,
+      "title": "离散对称性:P、T、C 与 Z",
+      "source": "chapters/23.md",
+      "source_sha256": "713b1a718de27754b99dd0763925732ddd69f5f45f2795632e5b2e82fdd6a2c2",
+      "pdf_pages": [104, 107],
+      "post": "src/content/posts/Srednicki-23.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/23.md",
+      "review_post_sha256": "7b2387c6a590da9dcf716094f2fc90cdeb3d366e7e9b072d99649e965373373a"
+    },
+    {
+      "section": 24,
+      "title": "非阿贝尔对称性",
+      "source": "chapters/24.md",
+      "source_sha256": "05a77517fca1598acdc1bf1809beb976eeb1d5383915fbc408b3390a349da27f",
+      "pdf_pages": [108, 109],
+      "post": "src/content/posts/Srednicki-24.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/24.md",
+      "review_post_sha256": "761654fa2d2c9d9c7d96f5d9c8f7b433b3dfd4995f7de18430165a3f5eb8f584"
+    },
+    {
+      "section": 25,
+      "title": "不稳定粒子与共振",
+      "source": "chapters/25.md",
+      "source_sha256": "4b9705f8b558c3650b55d67b468d268e91fe11abce66a0887be463b7569893af",
+      "pdf_pages": [110, 113],
+      "post": "src/content/posts/Srednicki-25.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/25.md",
+      "review_post_sha256": "4a2877f727b85ea034c78b50755cd9523ce8a26707e3fe893688213a312f1cc5"
+    },
+    {
+      "section": 26,
+      "title": "红外发散",
+      "source": "chapters/26.md",
+      "source_sha256": "fc6e352dec30b8454f28ffe6e7de8a85f64d935fe7db3d54e48dd44edc947271",
+      "pdf_pages": [114, 116],
+      "post": "src/content/posts/Srednicki-26.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/26.md",
+      "review_post_sha256": "8c9cb1a5ac93ad3e5c3d6c484b8b550033c39600c96cdbdfdbea49bb25d212b9"
+    },
+    {
+      "section": 27,
+      "title": "其他重整化方案",
+      "source": "chapters/27.md",
+      "source_sha256": "8da348a24cee334329336fa49aa75a7e36f0d38ba87334736d94f5612363fd6d",
+      "pdf_pages": [117, 120],
+      "post": "src/content/posts/Srednicki-27.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/27.md",
+      "review_post_sha256": "31a82b5b84db11d3b7a199292a72f450f2e123dc5264d60e31e29d8532720bd4"
+    },
+    {
+      "section": 28,
+      "title": "重整化群",
+      "source": "chapters/28.md",
+      "source_sha256": "a50330d3aed518641f4cbcde498ae49fef9bca99bbc45d5a2ef7091ab0aab9c6",
+      "pdf_pages": [121, 125],
+      "post": "src/content/posts/Srednicki-28.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/28.md",
+      "review_post_sha256": "837d52e9a5dad75efaa4bf9b4929f63441e78b3cdf53602fda4bada5be1f7957"
+    },
+    {
+      "section": 29,
+      "title": "有效场论",
+      "source": "chapters/29.md",
+      "source_sha256": "c810c2a60b53d04288672a6d116ae5510409d3483a6991912b505c192ab33108",
+      "pdf_pages": [126, 132],
+      "post": "src/content/posts/Srednicki-29.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/29.md",
+      "review_post_sha256": "b357cd2b2d381ac32ccc67b3a95b0a89c18f482d789c881c554465a02869044b"
+    },
+    {
+      "section": 30,
+      "title": "自发对称性破缺",
+      "source": "chapters/30.md",
+      "source_sha256": "3a5444e460e1eb354b9c8d912c75abf22c953d0fb00dcc6e90a3c0531b0dea11",
+      "pdf_pages": [133, 134],
+      "post": "src/content/posts/Srednicki-30.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/30.md",
+      "review_post_sha256": "f9568aa7aa6a8cbc907b1017247dde6fd0a9ee7d670287ce8453590bab06a800"
+    },
+    {
+      "section": 31,
+      "title": "破缺对称性与圈修正",
+      "source": "chapters/31.md",
+      "source_sha256": "22b94e5b6b4e976f6c0ebc5bbb8e36b5cf64616dd4db0a9b330644922a42b392",
+      "pdf_pages": [135, 138],
+      "post": "src/content/posts/Srednicki-31.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/31.md",
+      "review_post_sha256": "53cd658e23ac2d85f245344475bba2a32e096d552991395036a510c17f55889c"
+    },
+    {
+      "section": 32,
+      "title": "连续对称性的自发破缺",
+      "source": "chapters/32.md",
+      "source_sha256": "02823ae55c047873ec474fbaae54899bf48202c0749253cccb11247254d6f385",
+      "pdf_pages": [139, 142],
+      "post": "src/content/posts/Srednicki-32.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/32.md",
+      "review_post_sha256": "2022fd197b0b9f6383bf51ac3daa8496da176b3e18166d1266ae1f182ec482d9"
+    },
+    {
+      "section": 33,
+      "title": "洛伦兹群的表示",
+      "source": "chapters/33.md",
+      "source_sha256": "fbf2275e68f6fc5f1c86f48b16c8ddb7beb2b18a7a61e4b5b585d2c31654ff4e",
+      "pdf_pages": [143, 145],
+      "post": "src/content/posts/Srednicki-33.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/33.md",
+      "review_post_sha256": "933db99c6e5aa0f2262839fcdd8e815206acf9b4a7341adbd35c250a9408deb7"
+    },
+    {
+      "section": 34,
+      "title": "左手和右手旋量场",
+      "source": "chapters/34.md",
+      "source_sha256": "a84f521b217707c01228831cfe6b45896c442fb9e004c2cf7cc7a47c800028e7",
+      "pdf_pages": [146, 149],
+      "post": "src/content/posts/Srednicki-34.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/34.md",
+      "review_post_sha256": "4c5d8902cf41b56ca8b6cb3943107b13e9e221933418fa251efa60366778e1f3"
+    },
+    {
+      "section": 35,
+      "title": "旋量指标的运算",
+      "source": "chapters/35.md",
+      "source_sha256": "0d0e0990787fd9d690d6a5eee606b18eecea6b8daa7fa4d3baa4a8ab1ce19107",
+      "pdf_pages": [150, 152],
+      "post": "src/content/posts/Srednicki-35.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/35.md",
+      "review_post_sha256": "9d08ce8119c294d75c59bccfa89c7588961062a617f5106530b518efebf7824b"
+    },
+    {
+      "section": 36,
+      "title": "旋量场的拉格朗日量",
+      "source": "chapters/36.md",
+      "source_sha256": "50486fe1707c60007330038a7cfff6d0c4c04e6cce22e03cc182cfcee5185b0d",
+      "pdf_pages": [153, 159],
+      "post": "src/content/posts/Srednicki-36.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/36.md",
+      "review_post_sha256": "3630efa5ed85435b6cdc7811648ccdf7081c7fdbba3be18e8ea1477b12a307b4"
+    },
+    {
+      "section": 37,
+      "title": "旋量场的正则量子化 I",
+      "source": "chapters/37.md",
+      "source_sha256": "5cce8e162af00e47c8688b8cd7f5d1a858e9d5a3b97d99edc5bff7591b6f8e83",
+      "pdf_pages": [160, 162],
+      "post": "src/content/posts/Srednicki-37.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/37.md",
+      "review_post_sha256": "22fde9150abe0105ff613014503be0864cd05c8a7685ff003b3140fd71439e23"
+    },
+    {
+      "section": 38,
+      "title": "旋量技术",
+      "source": "chapters/38.md",
+      "source_sha256": "8f3f0670ad0ba9924b0352db48ccce50141ea13e8d89554359a271615f7b876e",
+      "pdf_pages": [163, 167],
+      "post": "src/content/posts/Srednicki-38.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/38.md",
+      "review_post_sha256": "48ed8d231a1b3f4fdaed459fea9155a97a1248c1e3f1f0f3edc41edae962088e"
+    },
+    {
+      "section": 39,
+      "title": "旋量场的正则量子化 II",
+      "source": "chapters/39.md",
+      "source_sha256": "0a88f8c8da0152071e41a7779daf55efd11da2ce8e09c752147ade6f0a497998",
+      "pdf_pages": [168, 172],
+      "post": "src/content/posts/Srednicki-39.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/39.md",
+      "review_post_sha256": "a0530dd65d8a528795f5ad3e26973132d1d2e798186ab8e5cfd47ed36523b160"
+    },
+    {
+      "section": 40,
+      "title": "宇称、时间反演与电荷共轭",
+      "source": "chapters/40.md",
+      "source_sha256": "55282f5920b11589a77fcbdda8f01f550a0a82ddcc664d0827a26e6af35e598c",
+      "pdf_pages": [173, 178],
+      "post": "src/content/posts/Srednicki-40.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/40.md",
+      "review_post_sha256": "0ff997d298040224f77063bf58216f9935690c9aa3959334dbbbe4408cfde775"
+    },
+    {
+      "section": 41,
+      "title": "自旋二分之一粒子的 LSZ 约化",
+      "source": "chapters/41.md",
+      "source_sha256": "000ed49d689ec5d26dfa6596b75e6acafdb0893fc71cb75ba1635ec13f7a46c9",
+      "pdf_pages": [179, 182],
+      "post": "src/content/posts/Srednicki-41.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/41.md",
+      "review_post_sha256": "20ea17b16ce67c5931104cff0b2f3eebf73adb0c5d61ff5c7a6d3934681f91d9"
+    },
+    {
+      "section": 42,
+      "title": "自由费米子传播子",
+      "source": "chapters/42.md",
+      "source_sha256": "d93b92124f6ee42de3e474a6763762ffc1901ebb4a9359a4f9e91601027b6114",
+      "pdf_pages": [183, 185],
+      "post": "src/content/posts/Srednicki-42.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/42.md",
+      "review_post_sha256": "25ab9077401c3da08bbbbe6fecdf122e12bbb6bc1b63ba107d6dc301023ddfbb"
+    },
+    {
+      "section": 43,
+      "title": "费米子场的路径积分",
+      "source": "chapters/43.md",
+      "source_sha256": "eabafe7d1f2b6148704d0f490053db9971ddb9618f7634f9807fc73ebd697e54",
+      "pdf_pages": [186, 188],
+      "post": "src/content/posts/Srednicki-43.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/43.md",
+      "review_post_sha256": "1b980d0819165c3956befebcd50d3385b2aa7a6068e3a7649400e2e7a555a29d"
+    },
+    {
+      "section": 44,
+      "title": "费米子路径积分的形式化推导",
+      "source": "chapters/44.md",
+      "source_sha256": "d8b78e724cd185af868a599f684cf3b91764114d8ab6ec5e86df88ab2d3dc789",
+      "pdf_pages": [189, 192],
+      "post": "src/content/posts/Srednicki-44.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/44.md",
+      "review_post_sha256": "2d7d8444f47dac40c254fbfe031bd0f6f45f879d6b08c956b41369b86d7b1ddc"
+    },
+    {
+      "section": 45,
+      "title": "Dirac 场的 Feynman 规则",
+      "source": "chapters/45.md",
+      "source_sha256": "ba6809db69200fbd6039a7e0ff6715adcd74ce22c583da123d887ac0876ca52c",
+      "pdf_pages": [193, 199],
+      "post": "src/content/posts/Srednicki-45.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/45.md",
+      "review_post_sha256": "d5e2849712c7008c7bfae98f9758bb0de2e2201bc187d1626047b3bd01d42198"
+    },
+    {
+      "section": 46,
+      "title": "自旋求和",
+      "source": "chapters/46.md",
+      "source_sha256": "0c81434b5bf700a130508347bab10189db1d61c03a483367fd5822186d2b34d5",
+      "pdf_pages": [200, 201],
+      "post": "src/content/posts/Srednicki-46.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/46.md",
+      "review_post_sha256": "14c7842fa67061e3bf50cd61b05cd0cc8d11cd912197a040cd54bdfd45e1fc72"
+    },
+    {
+      "section": 47,
+      "title": "Gamma 矩阵技术",
+      "source": "chapters/47.md",
+      "source_sha256": "3933a67a7529663deeab76e96c6e56dcfabf9746b5501437b3223adbe942b9d8",
+      "pdf_pages": [202, 204],
+      "post": "src/content/posts/Srednicki-47.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/47.md",
+      "review_post_sha256": "70a11605b9e86797f13479dd4e747f342065e79e152e9a0d5fa4cb080f11234c"
+    },
+    {
+      "section": 48,
+      "title": "自旋平均截面",
+      "source": "chapters/48.md",
+      "source_sha256": "167b7f779b25bd225b3cd5a565c8405bc5d823742da08a230bd9099e46cb2767",
+      "pdf_pages": [205, 208],
+      "post": "src/content/posts/Srednicki-48.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/48.md",
+      "review_post_sha256": "4d2f464c5a617e8bbc643c592a0c50cd7c6f38858ffceea36ac6fa90fcc20413"
+    },
+    {
+      "section": 49,
+      "title": "Majorana 场的 Feynman 规则",
+      "source": "chapters/49.md",
+      "source_sha256": "a6f93a139f2d10835b7fc7208ffa5db30ffbf477567b1c9cfcb3ef5b748d65c5",
+      "pdf_pages": [209, 212],
+      "post": "src/content/posts/Srednicki-49.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/49.md",
+      "review_post_sha256": "623d110546a5c2aa91ce29f8cf85830e5fa7da569cf890072d735185051f8b79"
+    },
+    {
+      "section": 50,
+      "title": "无质量粒子与旋量螺旋度",
+      "source": "chapters/50.md",
+      "source_sha256": "08d85d5ce75148077c76c0057836cb7257ebb09647f49c024f812722ac40da4a",
+      "pdf_pages": [213, 217],
+      "post": "src/content/posts/Srednicki-50.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/50.md",
+      "review_post_sha256": "871777054aefe12c52cd452290a95aaa05ad1c8a13e366f4626e264e48dce8af"
+    },
+    {
+      "section": 51,
+      "title": "Yukawa 理论中的圈修正",
+      "source": "chapters/51.md",
+      "source_sha256": "d610f5fa878309f0ad4df08dce7a0d19e719e356d4bdf7ef9d5f5ae18ed5ff97",
+      "pdf_pages": [218, 224],
+      "post": "src/content/posts/Srednicki-51.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/51.md",
+      "review_post_sha256": "a0f55255acfd81596ff4445cc7e1da61b39cda8dfba0c35ba5dcd9ba057de57d"
+    },
+    {
+      "section": 52,
+      "title": "Yukawa 理论中的 beta 函数",
+      "source": "chapters/52.md",
+      "source_sha256": "f8fa1b254326b31298d67b8e1d96c798dc5e0428b4aeb59b1ea4c59b0231c562",
+      "pdf_pages": [225, 226],
+      "post": "src/content/posts/Srednicki-52.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/52.md",
+      "review_post_sha256": "1c783c8cd47e6e4e5e3138ae90dbd567f8ebdd20e765806da6395e84ac521210"
+    },
+    {
+      "section": 53,
+      "title": "泛函行列式",
+      "source": "chapters/53.md",
+      "source_sha256": "1a95a5c1cd1edc0ddc1dac9f04dfdaabbfba328bbf162d93166641f92ca2952a",
+      "pdf_pages": [227, 230],
+      "post": "src/content/posts/Srednicki-53.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/53.md",
+      "review_post_sha256": "c4c765800cf0edf3c1476c7c9afaba3cc0a4db941941d39bf53b512c489dd8d9"
+    },
+    {
+      "section": 54,
+      "title": "麦克斯韦方程",
+      "source": "chapters/54.md",
+      "source_sha256": "4f6ce2c0e5313b5b4e1588454a3127e8131abc7c201986ae9b4000c9a1cbab0b",
+      "pdf_pages": [231, 232],
+      "post": "src/content/posts/Srednicki-54.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/54.md",
+      "review_post_sha256": "7daf97db98def551013d3ee37d35d0671165913204f105cd96402633f8efda3e"
+    },
+    {
+      "section": 55,
+      "title": "库仑规范下的电动力学",
+      "source": "chapters/55.md",
+      "source_sha256": "68e3c07463b5fdab4056f4089d04d65cc37c4985f2f53f23096f377c66a6a7dd",
+      "pdf_pages": [233, 235],
+      "post": "src/content/posts/Srednicki-55.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/55.md",
+      "review_post_sha256": "8904bec6eb4be108d6c2c3cd284f51bebb06f5fa4d7e653e9594addf3acefa20"
+    },
+    {
+      "section": 56,
+      "title": "光子的 LSZ 约化",
+      "source": "chapters/56.md",
+      "source_sha256": "69f89d1986ab9151f2cef9da7b22b71c16ee3178e98e8369c21151902d736389",
+      "pdf_pages": [236, 238],
+      "post": "src/content/posts/Srednicki-56.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/56.md",
+      "review_post_sha256": "794e5ae156128f3755dc9012559c57ccf06989145b02b082ae521c0fd18f72ea"
+    },
+    {
+      "section": 57,
+      "title": "光子的路径积分",
+      "source": "chapters/57.md",
+      "source_sha256": "33f6950c7b060b8c1020b1465d534345b1fe7bd7bcf3d0084a29892b9bb3819a",
+      "pdf_pages": [239, 240],
+      "post": "src/content/posts/Srednicki-57.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/57.md",
+      "review_post_sha256": "d44e978842ad045a2838bae86760f82b77e357f44b668e3f76f0d061717f741c"
+    },
+    {
+      "section": 58,
+      "title": "旋量电动力学",
+      "source": "chapters/58.md",
+      "source_sha256": "72bc944896ebdc4fd64f395a760c0b0df428df786bc2f27783fabdad99a0755d",
+      "pdf_pages": [241, 244],
+      "post": "src/content/posts/Srednicki-58.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/58.md",
+      "review_post_sha256": "d8e2b796c1cf17a878926f252e95ffce6faed86e179ddc985719eef4b72d971d"
+    },
+    {
+      "section": 59,
+      "title": "旋量电动力学中的散射",
+      "source": "chapters/59.md",
+      "source_sha256": "83212e1aa757d70cc01a6813e889d66fc8d5330caee5675515c6ed0826bab624",
+      "pdf_pages": [245, 247],
+      "post": "src/content/posts/Srednicki-59.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/59.md",
+      "review_post_sha256": "1043c2e7525e39595f41739d47a19b9e58c91acf28e0a2834c0646d5d50c756b"
+    },
+    {
+      "section": 60,
+      "title": "旋量电动力学的旋量螺旋度方法",
+      "source": "chapters/60.md",
+      "source_sha256": "1cd93f19a5eadf58f0c9b8d5126734ecfd0dcb133b95c4824f35ba5939f3bbc0",
+      "pdf_pages": [248, 252],
+      "post": "src/content/posts/Srednicki-60.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/60.md",
+      "review_post_sha256": "3bcdfeab11070bc61e11c27c1968f4a2bb5fd179c600e543f244f2e185696c62"
+    },
+    {
+      "section": 61,
+      "title": "标量电动力学",
+      "source": "chapters/61.md",
+      "source_sha256": "eaccd3971f9762577ceef3ed5bcdb14f21866e35c15861a8944958c5e0b2220f",
+      "pdf_pages": [253, 255],
+      "post": "src/content/posts/Srednicki-61.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/61.md",
+      "review_post_sha256": "c96d8d5caa92e75f90f958804a4110d6900a980ba5727490e77f96a9f158d1c9"
+    },
+    {
+      "section": 62,
+      "title": "旋量电动力学中的圈修正",
+      "source": "chapters/62.md",
+      "source_sha256": "8cebafac9f82aad8f403a43c6dca28d68d8c62f6cb9a21ecb21240e76934327d",
+      "pdf_pages": [256, 261],
+      "post": "src/content/posts/Srednicki-62.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/62.md",
+      "review_post_sha256": "cabc0f4dd66d4887fb7e64d11ffdbb2c6edcb9815d1599371c50af0ec9cb2b9c"
+    },
+    {
+      "section": 63,
+      "title": "旋量电动力学中的顶角函数",
+      "source": "chapters/63.md",
+      "source_sha256": "9b7a61863592d69c48785c3cd73f00a6873505530304cd71ac9e81eb18b885b9",
+      "pdf_pages": [262, 264],
+      "post": "src/content/posts/Srednicki-63.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/63.md",
+      "review_post_sha256": "77199a5076636ed4ed82783eecde371c1a010dffbf8439c030f60c18381e1f5f"
+    },
+    {
+      "section": 64,
+      "title": "电子的磁矩",
+      "source": "chapters/64.md",
+      "source_sha256": "a8196a56dfdd4d551e17549ce2d789d21265c955bee11adc86f0ba1128f279d2",
+      "pdf_pages": [265, 266],
+      "post": "src/content/posts/Srednicki-64.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/64.md",
+      "review_post_sha256": "9982f1437a35e7bbdbb760cd085fab71813b5a13ea860071cc0cbddb69fd54f5"
+    },
+    {
+      "section": 65,
+      "title": "标量电动力学中的圈修正",
+      "source": "chapters/65.md",
+      "source_sha256": "637c094006f70ebec20d1964609f758bf448938b5def37f17f65817c8950f56c",
+      "pdf_pages": [267, 272],
+      "post": "src/content/posts/Srednicki-65.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/65.md",
+      "review_post_sha256": "ff7e00e22614aa42d94cd6b78d2b010ffba6e027222e6df9c9d8b415d2c56ec5"
+    },
+    {
+      "section": 66,
+      "title": "量子电动力学中的贝塔函数",
+      "source": "chapters/66.md",
+      "source_sha256": "227cf82dc84ceab1d7662b56ad20035174b4078ac63f81da053d9b58ec6c197c",
+      "pdf_pages": [273, 275],
+      "post": "src/content/posts/Srednicki-66.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/66.md",
+      "review_post_sha256": "42f4a35231fd43684ccd37c08150e315498aad72a16f1525e62b8eb81359f637"
+    },
+    {
+      "section": 67,
+      "title": "量子电动力学中的沃德恒等式 I",
+      "source": "chapters/67.md",
+      "source_sha256": "77217323cbd0883d00538dc9fc8d38f91d60c9cc0b9e04c8d3c3a3d49766dd29",
+      "pdf_pages": [276, 277],
+      "post": "src/content/posts/Srednicki-67.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/67.md",
+      "review_post_sha256": "52a9b6ec660fdbf5b384fa2133945eca6b92476f3e742ca7ccf334b6d22580e3"
+    },
+    {
+      "section": 68,
+      "title": "量子电动力学中的沃德恒等式 II",
+      "source": "chapters/68.md",
+      "source_sha256": "2a82458196898957b2a09084ab68ffd8428aedf3f725f31ab440102f95bb68d6",
+      "pdf_pages": [278, 279],
+      "post": "src/content/posts/Srednicki-68.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/68.md",
+      "review_post_sha256": "eab338c689a8c51391e187fd089db4dc905003a3d8cdb573d7d126ae9c1a7f6f"
+    },
+    {
+      "section": 69,
+      "title": "非阿贝尔规范理论",
+      "source": "chapters/69.md",
+      "source_sha256": "aaea8298855a7268102f2ec0cd3af68ecfee8be0fe87860bbdfaa308d801a619",
+      "pdf_pages": [280, 282],
+      "post": "src/content/posts/Srednicki-69.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/69.md",
+      "review_post_sha256": "d2a9666153dfca4a9e636c163f3c4127b509b40a1972563c2ba431bc1323833f"
+    },
+    {
+      "section": 70,
+      "title": "群表示",
+      "source": "chapters/70.md",
+      "source_sha256": "a85ba76a3bbbb280f602f345b70d4bc378c31da27fcd2ab9f527cf68395a8521",
+      "pdf_pages": [283, 287],
+      "post": "src/content/posts/Srednicki-70.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/70.md",
+      "review_post_sha256": "96346d5ce995116dd93f920d48596be1add5cd9b6d51bf130bb5deca03b9b04d"
+    },
+    {
+      "section": 71,
+      "title": "非阿贝尔规范理论的路径积分",
+      "source": "chapters/71.md",
+      "source_sha256": "45d04772fd7c6a16d4c567be060934dc412d66d6a6571bacafe1bccbb49fcb39",
+      "pdf_pages": [288, 290],
+      "post": "src/content/posts/Srednicki-71.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/71.md",
+      "review_post_sha256": "33244a4fde5b0422df08b658f6b058fce0352747638c672bf2ad630a0e2083ba"
+    },
+    {
+      "section": 72,
+      "title": "非阿贝尔规范理论的费曼规则",
+      "source": "chapters/72.md",
+      "source_sha256": "f980a3215dd4bfe81c567ada950ab9dd0daa9d9912cf221e3710d5d37523bb64",
+      "pdf_pages": [291, 292],
+      "post": "src/content/posts/Srednicki-72.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/72.md",
+      "review_post_sha256": "c0c35c3a1f6626feaae7fe8721cba3c97a23729959dc041e2b6aea40c4f6af02"
+    },
+    {
+      "section": 73,
+      "title": "非阿贝尔规范理论中的贝塔函数",
+      "source": "chapters/73.md",
+      "source_sha256": "789e0d6692a2c6914e11ed7412af85af150b3e7c12fad7f1ea5488e56713b3c0",
+      "pdf_pages": [293, 297],
+      "post": "src/content/posts/Srednicki-73.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/73.md",
+      "review_post_sha256": "705f564a0d1afa0180f36735ca8042f0b1dcc59b3137ed80464bf36b2962c88d"
+    },
+    {
+      "section": 74,
+      "title": "BRST 对称性",
+      "source": "chapters/74.md",
+      "source_sha256": "e66adb9d09bdf427adda1358a4538832edce32cb5660b59c49c51c723e470064",
+      "pdf_pages": [298, 302],
+      "post": "src/content/posts/Srednicki-74.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/74.md",
+      "review_post_sha256": "2b4bb215551299bd0dad733d157caa3f1b78eb143c20ce9bd7194d429983cc4c"
+    },
+    {
+      "section": 75,
+      "title": "手征规范理论与反常",
+      "source": "chapters/75.md",
+      "source_sha256": "bb5a4471fa6b730538739747c1ca181a936885b8b82b9772d98cf7af50ef7396",
+      "pdf_pages": [303, 310],
+      "post": "src/content/posts/Srednicki-75.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/75.md",
+      "review_post_sha256": "f5ed164c91070dc2e8a19f1de09ce88657fcd08baa62a276976bdc2c75f192b9"
+    },
+    {
+      "section": 76,
+      "title": "整体对称性中的反常",
+      "source": "chapters/76.md",
+      "source_sha256": "2d7a9282e9d91d7610d55001de567b76094e1bf10943f7e028ac24c2ffc73ca5",
+      "pdf_pages": [311, 312],
+      "post": "src/content/posts/Srednicki-76.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/76.md",
+      "review_post_sha256": "f870cf8f33ac18819bd94b4dd93816499a5f1c73a245882c88400b31268588f2"
+    },
+    {
+      "section": 77,
+      "title": "反常与费米子路径积分",
+      "source": "chapters/77.md",
+      "source_sha256": "12e3046ea177ebdcde85b891e500e4f7571a7817abd5697d506b513a1c04e1ed",
+      "pdf_pages": [313, 316],
+      "post": "src/content/posts/Srednicki-77.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/77.md",
+      "review_post_sha256": "e2c389dc3ec85405dcc9859b2bb0a91976968763907f38cfc7daa166b2adebb2"
+    },
+    {
+      "section": 78,
+      "title": "背景场规范",
+      "source": "chapters/78.md",
+      "source_sha256": "87c547fb91c60b80c19d70d4546ee804f5103fc213a2bf31f256eddef6e87933",
+      "pdf_pages": [317, 321],
+      "post": "src/content/posts/Srednicki-78.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/78.md",
+      "review_post_sha256": "6fd5e4f33c732f7599144e153d8e4f296b2be0de4b6298512937ae1f455a2913"
+    },
+    {
+      "section": 79,
+      "title": "Gervais–Neveu 规范",
+      "source": "chapters/79.md",
+      "source_sha256": "b0e0330b58846557f73117fdfdac89579539d172d0031b30d583e3252ba9d07d",
+      "pdf_pages": [322, 323],
+      "post": "src/content/posts/Srednicki-79.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/79.md",
+      "review_post_sha256": "0571f3a01ead05ea6f5282962c8917d6eef55f93a1f11a488c5002b5e79bb322"
+    },
+    {
+      "section": 80,
+      "title": "N × N 矩阵场的费曼规则",
+      "source": "chapters/80.md",
+      "source_sha256": "6a01bad7043f41abad7624d5a0b0ceb7b83ef940eff310501c57b1fa7b711d95",
+      "pdf_pages": [324, 327],
+      "post": "src/content/posts/Srednicki-80.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/80.md",
+      "review_post_sha256": "161ff1e4c71a41259b250c97daeddd913cf37c546626119161dbcbcb177d441e"
+    },
+    {
+      "section": 81,
+      "title": "量子色动力学中的散射",
+      "source": "chapters/81.md",
+      "source_sha256": "bc23d0ab6c813b5a67b62b7bbf4989a01b32d4022ecd97a31c23752bcf004056",
+      "pdf_pages": [328, 334],
+      "post": "src/content/posts/Srednicki-81.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/81.md",
+      "review_post_sha256": "69830c41e11bfca28e360d2e799227535e88e7f065a1801d75915c0b1f0b69e4"
+    },
+    {
+      "section": 82,
+      "title": "Wilson 圈、格点理论与禁闭",
+      "source": "chapters/82.md",
+      "source_sha256": "48c30d703a72b038a82af481c7042c6de45ef12cbe114b8c9c9946775846340b",
+      "pdf_pages": [335, 339],
+      "post": "src/content/posts/Srednicki-82.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/82.md",
+      "review_post_sha256": "fe61e6acd51a9d27e76ede0eaed3c9a917f97cbaae8f4a7598c9f8ef4306f617"
+    },
+    {
+      "section": 83,
+      "title": "手征对称性破缺",
+      "source": "chapters/83.md",
+      "source_sha256": "178a5ad255847f412bb3b81b95e70cb47d35d748a22b54bd2d42c1749fc97ae8",
+      "pdf_pages": [340, 345],
+      "post": "src/content/posts/Srednicki-83.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/83.md",
+      "review_post_sha256": "389c595087774abe78643431963ca19fa9ce0f14f2885f15f7bc91a6c36b4df6"
+    },
+    {
+      "section": 84,
+      "title": "规范对称性的自发破缺",
+      "source": "chapters/84.md",
+      "source_sha256": "4dbb96d14c2375b5d4685b9ce7060b27adaba94985228e3a3c880052759d3d29",
+      "pdf_pages": [346, 348],
+      "post": "src/content/posts/Srednicki-84.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/84.md",
+      "review_post_sha256": "6e798b05ce9749331b220d15245952099dee2006357496d43b4993aedac36861"
+    },
+    {
+      "section": 85,
+      "title": "自发破缺的阿贝尔规范理论",
+      "source": "chapters/85.md",
+      "source_sha256": "c132ed54c3dbafdbf3bdc3ebae6c33f114018a03401c76b6312ca8cf971d2c4c",
+      "pdf_pages": [349, 352],
+      "post": "src/content/posts/Srednicki-85.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/85.md",
+      "review_post_sha256": "ac6e6581b8d45dca904ab9957ef73e3cc9b7ed6d3f17c7fc670e3025449031a9"
+    },
+    {
+      "section": 86,
+      "title": "自发破缺的非阿贝尔规范理论",
+      "source": "chapters/86.md",
+      "source_sha256": "6f3e560c3c99948281ed7a57a1a41733fe90cc06e149614592b0ba8a6653dfe5",
+      "pdf_pages": [353, 355],
+      "post": "src/content/posts/Srednicki-86.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/86.md",
+      "review_post_sha256": "e349febc67cc2318fd974c8a9263abf2f85d6d2202206789dc29ea5454b55ac6"
+    },
+    {
+      "section": 87,
+      "title": "标准模型:规范与 Higgs 扇区",
+      "source": "chapters/87.md",
+      "source_sha256": "9da969735e710ab779da44490f3cc16befece93462641ed4a07c84919f8e8311",
+      "pdf_pages": [356, 359],
+      "post": "src/content/posts/Srednicki-87.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/87.md",
+      "review_post_sha256": "78498870c4b9234708c330ae5171145eacb8aedd80085718d853b27f1d302844"
+    },
+    {
+      "section": 88,
+      "title": "标准模型:轻子部分",
+      "source": "chapters/88.md",
+      "source_sha256": "d480cf12c674991a85838de2d51285d3268e5739d7c22e1c588309251ebbbcc7",
+      "pdf_pages": [360, 364],
+      "post": "src/content/posts/Srednicki-88.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/88.md",
+      "review_post_sha256": "b40c061eaff406045afb2377809d68845dced360f9d2ada640f09c9030160785"
+    },
+    {
+      "section": 89,
+      "title": "标准模型:夸克部分",
+      "source": "chapters/89.md",
+      "source_sha256": "4447967acc6ebc9a096f251a2efb86f49e9c50e65f2959723d5c8bb71b6e37c1",
+      "pdf_pages": [365, 368],
+      "post": "src/content/posts/Srednicki-89.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/89.md",
+      "review_post_sha256": "5dc2c0639289a679a3eff116d3a71dd3b2236eb238f828f19082930819d601d3"
+    },
+    {
+      "section": 90,
+      "title": "强子的电弱相互作用",
+      "source": "chapters/90.md",
+      "source_sha256": "d05187eb014953e16654994603b5bf5eff10ff9514875af9a21d2c7631aac52a",
+      "pdf_pages": [369, 374],
+      "post": "src/content/posts/Srednicki-90.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/90.md",
+      "review_post_sha256": "d1d982fd2f2455bbd2509fd061dab16b91aaa44a507c2790ea4e7f9b7445aa48"
+    },
+    {
+      "section": 91,
+      "title": "中微子质量",
+      "source": "chapters/91.md",
+      "source_sha256": "22717b9ae3916a57ff455ddaf261ebbac0f5cf46752abaaace522d61545394aa",
+      "pdf_pages": [375, 376],
+      "post": "src/content/posts/Srednicki-91.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/91.md",
+      "review_post_sha256": "5062887198139dfc73a53c8ba8572e4f90ba43540fb5ff135d7bbf44d44ef0b2"
+    },
+    {
+      "section": 92,
+      "title": "孤子与磁单极子",
+      "source": "chapters/92.md",
+      "source_sha256": "c3dbc3137d70908d9b0a11f11be45fe055c8bcde838d96dc6169a535980ba744",
+      "pdf_pages": [377, 384],
+      "post": "src/content/posts/Srednicki-92.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/92.md",
+      "review_post_sha256": "33cddb4dc91fcadd0e8ace5b84bab3f1254c41acc2afc3feb1719d18e13f521c"
+    },
+    {
+      "section": 93,
+      "title": "瞬子与 θ 真空",
+      "source": "chapters/93.md",
+      "source_sha256": "6c04797ac3944a0871a899faba8da18afe466ad8a51a1ee83e597469867c4267",
+      "pdf_pages": [385, 390],
+      "post": "src/content/posts/Srednicki-93.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/93.md",
+      "review_post_sha256": "b323459ec05f10b3b7e2e2c9458d79f25294192536a4d05d1b86e930269b6856"
+    },
+    {
+      "section": 94,
+      "title": "夸克与 θ 真空",
+      "source": "chapters/94.md",
+      "source_sha256": "88dcb828195b5695c405aca27540c839e08a8d5fbc1bdb5701f50f14a5080927",
+      "pdf_pages": [391, 396],
+      "post": "src/content/posts/Srednicki-94.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/94.md",
+      "review_post_sha256": "e8b770f3f3bb01d6774ad9fc7ca8fee40f85171c9758a63c963959f0e5181eb6"
+    },
+    {
+      "section": 95,
+      "title": "超对称",
+      "source": "chapters/95.md",
+      "source_sha256": "dbeec153f483ef23934c36358276310e871c6d2ecf5fc2681be6ed3f02a38075",
+      "pdf_pages": [397, 404],
+      "post": "src/content/posts/Srednicki-95.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/95.md",
+      "review_post_sha256": "e3e1e5c2eb74ce15a57581ba77dab4a11655b5793bf11ed3e2d51ee45b479729"
+    },
+    {
+      "section": 96,
+      "title": "最小超对称标准模型",
+      "source": "chapters/96.md",
+      "source_sha256": "7aeb175b774c2beb9fe6700059a951885e76e23e62d6c00a02868d46ad8ad31b",
+      "pdf_pages": [405, 406],
+      "post": "src/content/posts/Srednicki-96.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/96.md",
+      "review_post_sha256": "a61264898f2c697f58db0e23c095fc538cb5f03f5c8b5c928b38787f5851bf9d"
+    },
+    {
+      "section": 97,
+      "title": "大统一",
+      "source": "chapters/97.md",
+      "source_sha256": "0dead970b940a03c2c0b4a7b47ec6776fde8856e0a2dc454226d3fc1804fa5d5",
+      "pdf_pages": [407, 412],
+      "post": "src/content/posts/Srednicki-97.md",
+      "editorial_review": "complete",
+      "review_record": "checks/srednicki/reviews/97.md",
+      "review_post_sha256": "7bb9bbd15018a53938fb1a3979360b2a47ece81c5b44b71d4693544751f3177a"
+    }
+  ],
+  "supplemental_derivations": [
+    {
+      "post_sections": [21, 49, 76, 94],
+      "source_root": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises",
+      "sources": [
+        {
+          "file": "21.md",
+          "sha256": "2652bda7108f6eeef536829c8a3f441bd9a9601e448a81f213bb5707811054cf"
+        },
+        {
+          "file": "48.md",
+          "sha256": "781beae506cd56cec18ecf2403bb2c9c9e1476564187da98ff6f9b5a2b45490e"
+        },
+        {
+          "file": "76.md",
+          "sha256": "095b1f10f565fd0df84ec70ea9027c6846ea31daf7e0fe8e927dbaa7f3aea4cc"
+        },
+        {
+          "file": "83.md",
+          "sha256": "72ba9a10937ccbc6d8ef254b8b4ec498b3e89b6b864488dc61d31fecce78c7c2"
+        }
+      ],
+      "use": "Used the explicitly missing equations to write self-contained intermediate derivations in the website articles."
+    }
+  ],
+  "supplemental_sources": [
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/appendices/zzz_graph_decomposition.md",
+      "sha256": "22511efeb58fa23d3dfdb82afbe16f62d5b1ff2e12cf2840e807c811435bc2b1",
+      "used_in_section": 19,
+      "purpose": "Resolve the explicitly referenced appendix F with full graph decomposition and weight proof."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/20.md",
+      "sha256": "b05b51f66d0d06a11c7f0a34fee58218ff4aadfffbcc23a948bbf085f9f5d1b2",
+      "used_in_section": 20,
+      "purpose": "Resolve explicitly referenced exercise derivations within the website article."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/21.md",
+      "sha256": "2652bda7108f6eeef536829c8a3f441bd9a9601e448a81f213bb5707811054cf",
+      "used_in_section": 21,
+      "purpose": "Resolve explicitly referenced exercise derivations within the website article."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/22.md",
+      "sha256": "d25f21d8e7825f4e6398461bc45544b95098d659337b60fa17f0f7c68c82aeca",
+      "used_in_section": 22,
+      "purpose": "Resolve explicitly referenced exercise derivations within the website article."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/24.md",
+      "sha256": "37bd4b57bb2d039dc989b06338a83a2901291beb4ca2e92558d2df9bfd78e52e",
+      "used_in_section": 24,
+      "purpose": "Resolve exercise 24.3 charge algebra and 24.4 real symplectic dimension within the article."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s26_collinear.py",
+      "sha256": "848e3669043a6ae7cde3ce12360bf85db144378ef1ac7b4aa62fedd14baef8d2",
+      "used_in_section": 26,
+      "purpose": "Reproduce the numerical local collinear integral explicitly quoted in the chapter."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/28.md",
+      "sha256": "0abf30525a3963db70598f617035e44fb4ebe58d6d6dc283722bd04f64427cd2",
+      "used_in_section": 29,
+      "purpose": "Exercise 28.1 only: dimensional pole and quartic beta used in section 29."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/29.md",
+      "sha256": "dd9ae8feb6c6e18d36a0d45c2acb6e6af30751c146ed7ba76b69ce7e330ff814",
+      "used_in_section": 29,
+      "purpose": "Read both exercises: full coupling conversion, cubic shell and sharp-boundary derivations used in section 29."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/32.md",
+      "sha256": "ee4a360151936ef91f55805e46d5c95c03676f60844b450aa92704981346b03a",
+      "used_in_section": 32,
+      "purpose": "Resolve all referenced charge, phase variance and Goldstone decay-constant exercises within the article."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/33.md",
+      "sha256": "f77799dc62b95d6bb13557d5ddf7ad642841ffa78d93113612c7fa7d46213af3",
+      "used_in_section": 33,
+      "purpose": "Resolve the two referenced tensor projection and inverse Lie algebra exercises in the article."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/34.md",
+      "sha256": "86d4b94097f2653ff69e002286dc51f55e4fdaf88fa0693100e762dd8b199dea",
+      "used_in_section": 34,
+      "purpose": "Read all four exercises; incorporated generator expansion, indexed Lorentz algebra, epsilon contractions and symmetric spinor ladder into the article."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/35.md",
+      "sha256": "4bb923afb98bdf70bc6a2e81bc600657141bc86e37d9915480d10103523e9a15",
+      "used_in_section": 35,
+      "purpose": "Read all four exercises; resolved barsigma and generator component references with the actual calculations."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/36.md",
+      "sha256": "b9aecd6ded0fa70629a4f856aa8a838d3cd35f190a00a3c20714dd181f0069dc",
+      "used_in_section": 36,
+      "purpose": "Read exercises 36.1 through 36.3; used the finite transformation and gamma-five calculations of 36.1/36.2."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/appendices/second_order_fermion.md",
+      "sha256": "349281c3eb9b7ec8d3522db4cd95f2f6ceb30fc883da9cfef7bc8c7f8bd0228c",
+      "used_in_section": 36,
+      "purpose": "Read full appendix; incorporated the nondegenerate second-order model, canonical mode algebra, norm obstruction and energy spectrum."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/37.md",
+      "sha256": "627979baa69097d0b36c6dc44f605cc08268b3fac8e34aea8d5d2e9e8344b7a6",
+      "used_in_section": 37,
+      "purpose": "Read full exercise 37.1; resolved its reference using explicit components and existing block CAR derivation."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/38.md",
+      "sha256": "0c48d5cc153b998c12f2ffddebc99c05fb94b55f5f9ac95ad17fa835967415af",
+      "used_in_section": 38,
+      "purpose": "Read full section exercise file; incorporated explicit spinors and energy-eigenvalue orthogonality, removed already-proved adjoint references."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/39.md",
+      "sha256": "08acea3b500d427b28ece1c9859be721e72632214671ef56a9749a820fef1066",
+      "used_in_section": 38,
+      "purpose": "Read section 39.2 completely; used its orbital integration at momentum parallel to the third axis to resolve the reference in section 38."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/39.md",
+      "sha256": "08acea3b500d427b28ece1c9859be721e72632214671ef56a9749a820fef1066",
+      "used_in_section": 39,
+      "purpose": "Read complete exercises 39.1-39.4; incorporated fixed-basis Wigner spin mixing and complete linear-field spacelike statistics proof; charge and axial spin references resolved."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/40.md",
+      "sha256": "a27a7aae0bcfc2ad074053bda1de437fb2380bc62d7dcec345a0b7f329dbaf89",
+      "used_in_section": 40,
+      "purpose": "Read complete exercise 40.1 and incorporated tensor/pseudotensor P, T, C transformations, CPT evenness and Majorana vanishing with matrix derivations."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/41.md",
+      "sha256": "bacb81fd46b6b2240644ceede13e3ea65e66ec2bd6aa9e77461d9b6ddc7e9825",
+      "used_in_section": 41,
+      "purpose": "Read complete exercise 41.1; incorporated spin intertwiners, independent chiral overlap coefficients, parity and charge-conjugation conditions and normalization phases."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/42.md",
+      "sha256": "50e5106c385db372064e227036ee13ba5bee2e09354f99681f4a884785efe86d",
+      "used_in_section": 42,
+      "purpose": "Read complete exercise 42.1; incorporated Fourier proof of F and H kernel exchange antisymmetry with unchanged Feynman prescription."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/45.md",
+      "sha256": "c74e5df2e2c7017bd33a3f4a91b4e6e589497cfde6717d960d06a3f442af2909",
+      "used_in_section": 45,
+      "purpose": "Read complete exercises 45.1 and 45.2; included scalar/pseudoscalar discrete transformations, positron-positron scattering and inverse scalar pair production with ordered LSZ signs."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s46_spin_sums.py",
+      "sha256": "ced736645203d174216393616991c80cffe4eee2aab5da0ca21e8746d6bf5ad9",
+      "purpose": "Read complete calculation; adapted Fock overall phase and reran 230 comparisons at seven fixed kinematic points in the website workspace.",
+      "used_in_section": 46
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/47.md",
+      "sha256": "525c3e8069a26f3aa9fb82aa951a947cc6b250e73cfc54b0de203af5735ec4d9",
+      "purpose": "Read all three exercises; incorporated full matrix basis proof, norms and projection coefficients, with zero-trace and contraction proofs already in the article.",
+      "used_in_section": 47
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/48.md",
+      "sha256": "781beae506cd56cec18ecf2403bb2c9c9e1476564187da98ff6f9b5a2b45490e",
+      "used_in_section": 48,
+      "purpose": "Read all three available exercise solutions; incorporated exact crossing average ratio and two-electron scattering derivation."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s48_polynomials.py",
+      "sha256": "f9144dcfaf9b7a27cfaca77ac1421b77ed76f9aa6ac8d82d5f97677160a97f83",
+      "used_in_section": 48,
+      "purpose": "Read complete exact polynomial calculation; adapted output path and reran eight zero residuals and four wrong-factor controls."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s49_majorana.py",
+      "sha256": "018954c09daf0a68f72b65b27d308c4c71299f4831abf2bff5de10e8ff2e3300",
+      "used_in_section": 49,
+      "purpose": "Read complete three-channel calculation; reran six kernels, full spin sum and exchange antisymmetry at three fixed inputs with charge-paired complex bases."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/50.md",
+      "sha256": "9019fe0885920d405de010c42abaac261592336e4a50529b5671eebf85977aab",
+      "used_in_section": 50,
+      "purpose": "Read and incorporated all five exercises with complete bracket, boost, Schouten, chiral trace and Fierz derivations."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s50_spinor_helicity.py",
+      "sha256": "4ce81587d948e1588bae7a2dc2331882f2b22bf6e91ac3d93317235f834bb731",
+      "used_in_section": 50,
+      "purpose": "Read complete calculation and reran 52 finite matrix/bracket comparisons, epsilon sign control and external phase checks in the website workspace."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/51.md",
+      "sha256": "755be7a64a4adeb7d904961fc4dce0058afbc9d73389d22fea70fef5bcf7181f",
+      "used_in_section": 51,
+      "purpose": "Read both available exercises; incorporated ordered odd-source derivative proof of the loop sign and finite zero-momentum vertex parameter equivalence."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s51_zero_vertex.py",
+      "sha256": "1d440de1974dce2e6feead84c725e597f520aaff24652a129da3a9c3fe27ba11",
+      "used_in_section": 51,
+      "purpose": "Read complete program and reran three positive-mass cases comparing parameter integrals, convergent radial subtraction and the analytic result."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/52.md",
+      "sha256": "3900b6df19225a512f9a7879348ff7e307d6a9d067fee01c6f8911efc3e1dc70",
+      "used_in_section": 52,
+      "purpose": "Read full available exercise 52.1; incorporated both field anomalous dimensions, mass mixing and finite mass/field scheme conversion with explicit scale derivatives."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/55.md",
+      "sha256": "956f913abc517f645bdc221274c7e7ca917909491a2cc75b68c7ee18b27518f7",
+      "used_in_section": 55,
+      "purpose": "Read all available exercise text; verified that its complete referenced calculation is already incorporated in the article and removed the dangling exercise-only pointer."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/56.md",
+      "sha256": "77d2444a573864d893e06f852fdb5d9a3be63f655f6d0a1158535158f57a0f41",
+      "used_in_section": 56,
+      "purpose": "Read all available exercise text; verified that its complete referenced calculation is already incorporated in the article and removed the dangling exercise-only pointer."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/58.md",
+      "sha256": "4545ac72b575173d2d538defe5e36290d14a74f20409ffc80888493e8e2f72d3",
+      "used_in_section": 58,
+      "purpose": "Read and incorporated both full exercise solutions: discrete transformations of the electromagnetic potential and field strengths, and Furry selection for correlators and the complete photon S matrix."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/59.md",
+      "sha256": "8402d433650da879e803d83376200e757cb7d45e4c6fff064c1df283ada209e5",
+      "used_in_section": 59,
+      "purpose": "Read and incorporated complete available Compton exercise, crossing spin-average sign, recoil, two-body phase-space Jacobian and Klein-Nishina/Thomson formulas."
+    },
+    {
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s59.py",
+      "sha256": "c7e078ec687d22f48c253e0a8702a6da6dd664450e77a2e2dc51bc81bc03759f",
+      "used_in_section": 59,
+      "purpose": "Read complete finite-matrix program, adapted output path and reran all four fixed annihilation inputs, physical polarization comparison, Ward and Bose checks."
+    },
+    {
+      "used_in_section": 60,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/60.md",
+      "sha256": "104d063b171be8d8a50442d61e49d934bd7f6cd4c8aa43f545cef900048e35d0",
+      "purpose": "偏振内积与角方括号及参考动量补充推导"
+    },
+    {
+      "used_in_section": 60,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s60.py",
+      "sha256": "46172fff764d40dded50c319b2ba05076ed494342b415fa0714b09bb3ced248d",
+      "purpose": "负能端点与两光子螺旋度数值检查"
+    },
+    {
+      "used_in_section": 61,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/61.md",
+      "sha256": "85591d0d4bbbff612729bde737e10d34fae320ae315486133c3a7d37fcbf04c2",
+      "purpose": "完整张量偏振和与标量康普顿推导"
+    },
+    {
+      "used_in_section": 61,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s61.py",
+      "sha256": "bda677ad419579b2fa403d788eb8cd86cda4dcb60d9628e91152303c1452a3b2",
+      "purpose": "完整与简化张量的实际偏振及度规缩并检查"
+    },
+    {
+      "used_in_section": 62,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/62.md",
+      "sha256": "1ca5f07dd7c2238837bfa8b5790b222d965de358522ffe8e4a4eb8db98c9cc05",
+      "purpose": "一般规范紫外系数与六四光子盒图抵消完整推导"
+    },
+    {
+      "used_in_section": 62,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s62.py",
+      "sha256": "679a0f010f1aea9f72dfc25d09f010a88bcc0bc9b11f0b30fc3d3931773b270d",
+      "purpose": "真空极化及红外余项和顶角分子实际检查"
+    },
+    {
+      "used_in_section": 63,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/63.md",
+      "sha256": "dbeeb192ad6447b2c654bad6d700fd255c7dc59e3d3a59c85cf0cfcc91c9bbd4",
+      "purpose": "一般在壳结构与局域变元沃德恒等式及形状因子映射"
+    },
+    {
+      "used_in_section": 63,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s63.py",
+      "sha256": "2227cda91fa57f31e6beaaafd98adfbb3e0eac77b321346cfe0b18a3a713e7b9",
+      "purpose": "旋量夹式与有限反项及形状因子数值检查"
+    },
+    {
+      "used_in_section": 64,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/64.md",
+      "sha256": "78c65fef6f2d6987bbf0a42ab352f3f4885f08f91a4f34106a3557260821956e",
+      "purpose": "球谐波包轨道磁矩完整推导"
+    },
+    {
+      "used_in_section": 64,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s64.py",
+      "sha256": "218544ce8297624fd264b2d3d551836c095cf74ce221447d95f03b8b2bece8ea",
+      "purpose": "有限旋量与高斯波包宽度检查"
+    },
+    {
+      "used_in_section": 65,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/65.md",
+      "sha256": "67f2cd8944c00ced5fbb1751d5a6f105fed60d0f54e38f43b9985414e6efc600",
+      "purpose": "在壳电荷与有限规范变换完整推导"
+    },
+    {
+      "used_in_section": 65,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s65_wick.py",
+      "sha256": "5101fde9c17c1625d9b13a32496202cdb5d424bb3f627f79f44c0b861809b1c6",
+      "purpose": "标量电动力学带标签威克收缩精确枚举"
+    },
+    {
+      "used_in_section": 66,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/66.md",
+      "sha256": "48ebdb747280eac2c1c1bc1f18bc933e4a37aecb1d634357c57c7dd856c3453c",
+      "purpose": "质量与场反常维数及逐段退耦完整推导"
+    },
+    {
+      "used_in_section": 66,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/check_s66_thresholds.py",
+      "sha256": "7322007fdc15bb7af271371e84c3a7c436e863529ba008d1720ed5bef302d979",
+      "purpose": "教学质量参数下两种阈值求和复算"
+    },
+    {
+      "used_in_section": 67,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/67.md",
+      "sha256": "e85281b2062d3809f53922612fb24708a977fcdbad5e8376abf2e377839d47bf",
+      "purpose": "标量与旋量树级纵向光子相消完整推导"
+    },
+    {
+      "used_in_section": 68,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/68.md",
+      "sha256": "c27e687d118ad0a3fbba83da9768d55c0e68bb84905ab57b8db8aea43aa0b8b3",
+      "purpose": "流二点链、一圈有限反项与标量三四点恒等式完整推导"
+    },
+    {
+      "used_in_section": 69,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/69.md",
+      "sha256": "2be458bb86fd17762488325aed129c2077ba0f334ab41b5e8df185efeab74eba",
+      "purpose": "有限分量规范变换与二次卡西米尔完整推导"
+    },
+    {
+      "used_in_section": 69,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/bibliography.bib",
+      "sha256": "95f6ae33763731c4fed1f4589d0bb551a2b34b4e0832150fb4944b6d76a27065",
+      "purpose": "定位本节两条Etingof讲义原始链接"
+    },
+    {
+      "used_in_section": 70,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/70.md",
+      "sha256": "c0b06f291b9638c973f3c201a846a1fdd7810909d0f048455c80d10292021c0e",
+      "purpose": "表示指标、协变乘积与比安基恒等式完整推导；第4题另据PDF推导"
+    },
+    {
+      "used_in_section": 72,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/72.md",
+      "sha256": "800ec00d5c34b4247aaf4a4a6069c58d8e9772b9648a9a93686e28098ca14108",
+      "purpose": "复标量规范顶角、荷号及有序色矩阵完整推导"
+    },
+    {
+      "used_in_section": 73,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/73.md",
+      "sha256": "ccfa7d5dcf953a6a0647661f14f221563d83f4a60c3cc5460faa906fab5a5b4d",
+      "purpose": "复标量、多种表示及质量和场反常维数完整推导"
+    },
+    {
+      "used_in_section": 74,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/74.md",
+      "sha256": "8bd9ab26d4bd6de2f875e964e7b19f335e9ba099bdabd59492c6ac556b2f0ed6",
+      "purpose": "偏振改变的BRST恰当原像及一般规范参数完整推导"
+    },
+    {
+      "used_in_section": 74,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/bibliography.bib",
+      "sha256": "95f6ae33763731c4fed1f4589d0bb551a2b34b4e0832150fb4944b6d76a27065",
+      "purpose": "定位BRST局域重整化分类的原始论文"
+    },
+    {
+      "used_in_section": 75,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/75.md",
+      "sha256": "60f9ca1ed4f8f24184aaff3b32d7b678327c6419c797b070d9e65bcb147b7877",
+      "purpose": "直积群四种三角反常及引力与整体重数完整推导"
+    },
+    {
+      "used_in_section": 75,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/bibliography.bib",
+      "sha256": "95f6ae33763731c4fed1f4589d0bb551a2b34b4e0832150fb4944b6d76a27065",
+      "purpose": "定位普通SU2整体反常的原始论文"
+    },
+    {
+      "used_in_section": 75,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/s75_triangle_check.py",
+      "sha256": "05b671e6071cd835efc90c6a6c27badd193c13b62df120614291243f9b1d0735",
+      "purpose": "三角分子与六伽马迹的三组独立矩阵复算"
+    },
+    {
+      "used_in_section": 76,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/76.md",
+      "sha256": "095b1f10f565fd0df84ec70ea9027c6846ea31daf7e0fe8e927dbaa7f3aea4cc",
+      "purpose": "外态归一、两光子配对与反常局域算符匹配完整推导"
+    },
+    {
+      "used_in_section": 77,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/77.md",
+      "sha256": "551da8ea833d2a5373eda84d0cb1f90410eefae8e6da21a122e48ad882c3281c",
+      "purpose": "反常群因子充要条件与场强全导数逐项推导"
+    },
+    {
+      "used_in_section": 77,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/bibliography.bib",
+      "sha256": "95f6ae33763731c4fed1f4589d0bb551a2b34b4e0832150fb4944b6d76a27065",
+      "purpose": "一致性及Adler-Bardeen定理原始文献定位"
+    },
+    {
+      "used_in_section": 77,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/s77_consistency_check.py",
+      "sha256": "412197408e5a59870517d4057a8b04885d44209347225778f603a21c4f298a53",
+      "purpose": "通用分级非交换迹的一致性系数与全微分证书精确核算"
+    },
+    {
+      "used_in_section": 78,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/78.md",
+      "sha256": "4570efbbc16f02c3f296a6e08e84a6e896616b3821f1df5717b0ca4464497d94",
+      "purpose": "六类混合背景顶角与四种一圈行列式完整推导"
+    },
+    {
+      "used_in_section": 79,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/review_S79_trace_check.md",
+      "sha256": "70e4bd1e8a6c1c7dce8592149bf6444bfd8b7a027fa39f892f70c3f748f27f4c",
+      "purpose": "无迹投影、中央交换及完整U2鬼核的解析推导参考"
+    },
+    {
+      "used_in_section": 79,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/bibliography.bib",
+      "sha256": "95f6ae33763731c4fed1f4589d0bb551a2b34b4e0832150fb4944b6d76a27065",
+      "purpose": "背景场散射等价及Fields复规范原始文献书目信息，正文链接已经实际核实"
+    },
+    {
+      "used_in_section": 80,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/80.md",
+      "sha256": "c4300db798a77430620d323a59c95c697322b9255af75f416def32322d37c22d",
+      "purpose": "完整/无迹颜色迹的逐次收缩和N1顶角核对，缺失的大N题另按原PDF推导"
+    },
+    {
+      "used_in_section": 81,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/81.md",
+      "sha256": "72bc86580271acf1bc09a3206f66c9a80fe3b77ad6bb5cc00b3e536222b3dddb",
+      "purpose": "另一参考两夸克幅、一般表示颜色迹和共轭端点螺旋度链"
+    },
+    {
+      "used_in_section": 81,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/bibliography.bib",
+      "sha256": "95f6ae33763731c4fed1f4589d0bb551a2b34b4e0832150fb4944b6d76a27065",
+      "purpose": "硬过程因子化原始文献书目信息，原文引言及1.1–1.4已实际核实"
+    },
+    {
+      "used_in_section": 82,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/82.md",
+      "sha256": "131a0eaba10251e6ff1f9bd01fa0e9244c2640fc17ff3ed5ae288a9ab3957bc0",
+      "purpose": "圆形Wilson圈硬弦长截断的完整积分和有限项"
+    },
+    {
+      "used_in_section": 82,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/bibliography.bib",
+      "sha256": "95f6ae33763731c4fed1f4589d0bb551a2b34b4e0832150fb4944b6d76a27065",
+      "purpose": "面积律界与紧致阿贝尔去禁闭转变原始书目信息，实际核实范围见82节记录"
+    },
+    {
+      "used_in_section": 83,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/83.md",
+      "sha256": "72ba9a10937ccbc6d8ef254b8b4ec498b3e89b6b864488dc61d31fecce78c7c2",
+      "purpose": "四π散射、一般核子质量伪场和非对易真空重定义，供94节后续使用"
+    },
+    {
+      "used_in_section": 84,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/84.md",
+      "sha256": "5da2299967decad01e1ca4501b5c25ae57e7e484a2ecb61de48bd57613301064",
+      "purpose": "伴随四次势全局极小与N3和lambda1零的退化情形，供97节真空使用"
+    },
+    {
+      "used_in_section": 86,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/86.md",
+      "sha256": "589334d6ca443dd8c683ffbced14d672d4a7262e2727534fff0bdf3be18eeb92",
+      "purpose": "复表示实化与同一李代数的两问推导核对"
+    },
+    {
+      "used_in_section": 87,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/87.md",
+      "sha256": "789d81dcb728f006a064b73efd6393b58908b0aeca70639ff5955087dfb1bd5a",
+      "purpose": "电弱参数、实生成元和两体Higgs衰变推导"
+    },
+    {
+      "used_in_section": 88,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/88.md",
+      "sha256": "77657b6de9f5ba1db1699672acefe8435a6491325d9bbbe31374fff4a3f255d2",
+      "purpose": "轻子算符穷尽性及缪子衰变矢量双迹的直接计算"
+    },
+    {
+      "used_in_section": 89,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/89.md",
+      "sha256": "9b8b91eb5a73d4a43c73503b7dd0bcc00520ba3fe4beadc9decf6f1c3d182abc",
+      "purpose": "夸克可重整作用量与标准模型逐代反常相消"
+    },
+    {
+      "used_in_section": 90,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/90.md",
+      "sha256": "e718d4eada3319b4899c7656361e3ba79df2e6a3fa6f669096ddaa1d7784b7bc",
+      "purpose": "极化中子与πβ参数提取、近阈值积分及中性π宽度"
+    },
+    {
+      "used_in_section": 91,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/91.md",
+      "sha256": "abf0b9bffb9d8b13634694f3273dcfaa57537e4ad365529e80091da4c4fd3748",
+      "purpose": "跷跷板质量对通常轻子数的显式破缺"
+    },
+    {
+      "used_in_section": 92,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/92.md",
+      "sha256": "edb875dc0dbfd28b74c732f35fc8731ea58d068dad9c7534ec69bbe93273732d",
+      "purpose": "缠绕数相加的分段形变及可完全积分的涡旋试探场"
+    },
+    {
+      "used_in_section": 93,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/93.md",
+      "sha256": "836140d280657e59a8d82709b080aac77fbf034d479c9d720cfd32608726adba",
+      "purpose": "两个不交球中的光滑映射及缠绕数相加的几何证明"
+    },
+    {
+      "used_in_section": 94,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/94.md",
+      "sha256": "a82a26f41c7f00223671198f3704b16632af816cc1f024b3fb4f370c7a12e27d",
+      "purpose": "核子赝标量质量的完整旋转及轴子模型、相位、混合和质量"
+    },
+    {
+      "used_in_section": 95,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/95.md",
+      "sha256": "996413f11906122f65eb2035472a06030ea72fe00bc8b8ed0d7134040de6c9b8",
+      "purpose": "超荷正性、辅助场破缺、O’Raifeartaigh真空、SQED、FI和R对称性；完整O’Raifeartaigh谱另行推导"
+    },
+    {
+      "used_in_section": 96,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/96.md",
+      "sha256": "33878c89609288c97e6799961e1a2367a24ba105bd2dff82bff0e75ba85c7bc8",
+      "purpose": "双Higgs全纯性与反常、完整辅助势、有限真空与平坦边界、全部树级Higgs质量谱"
+    },
+    {
+      "used_in_section": 97,
+      "source": "/Users/Admin/Documents/Srednicki-QFT-Trans/notes/exercises/97.md",
+      "sha256": "4892134042234416906fe4c96d13371c4ed934f06b92c4497823893e757ac770",
+      "purpose": "五题完整推导：SU5反常、重标量交换、一圈Wilson运行、质子衰变与质量运行；含双图源"
+    }
+  ]
+}

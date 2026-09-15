@@ -1,0 +1,69 @@
+{
+  "scope": "Three positive spacelike bubble integrals, three finite IR regulators, four matrix components of the finite vertex numerator",
+  "software": {
+    "Python": "3.14.4",
+    "NumPy": "2.3.3",
+    "SciPy": "1.16.2"
+  },
+  "conventions": "g=(-,+,+,+), Clifford=-2g; Dirac matrix basis for an identity independent of the book's spinor basis; all test vectors real",
+  "bubble": [
+    {
+      "k2_over_m2": 0.05,
+      "quadrature": 0.001657803674284843,
+      "estimated_quadrature_error": 1.8405318094992164e-17,
+      "closed": 0.001657803674284676,
+      "absolute_residual": 1.6696713456276768e-16
+    },
+    {
+      "k2_over_m2": 3.0,
+      "quadrature": 0.07740696485602087,
+      "estimated_quadrature_error": 8.593899464938035e-16,
+      "closed": 0.07740696485602083,
+      "absolute_residual": 4.163336342344337e-17
+    },
+    {
+      "k2_over_m2": 200.0,
+      "quadrature": 0.6101309225440376,
+      "estimated_quadrature_error": 6.853341401157267e-15,
+      "closed": 0.6101309225440371,
+      "absolute_residual": 4.440892098500626e-16
+    }
+  ],
+  "infrared": [
+    {
+      "m_gamma_over_m": 0.1,
+      "kappa_quadrature": -3.787582185171127,
+      "estimated_quadrature_error": 4.205060912867559e-14,
+      "log_plus_constant": -3.605170185988091,
+      "remainder": -0.18241199918303597,
+      "analytic_remainder_absolute_bound": 0.5894348693549141
+    },
+    {
+      "m_gamma_over_m": 0.02,
+      "kappa_quadrature": -6.857629317515059,
+      "estimated_quadrature_error": 5.331317423372942e-12,
+      "log_plus_constant": -6.824046010856292,
+      "remainder": -0.033583306658766965,
+      "analytic_remainder_absolute_bound": 0.11019636506034465
+    },
+    {
+      "m_gamma_over_m": 0.004,
+      "kappa_quadrature": -10.049342018707021,
+      "estimated_quadrature_error": 1.1209587112518848e-13,
+      "log_plus_constant": -10.042921835724492,
+      "remainder": -0.006420182982528999,
+      "analytic_remainder_absolute_bound": 0.021526020210704242
+    }
+  ],
+  "vertex_numerator": {
+    "a_contravariant": [0.7, -0.2, 0.4, 1.1],
+    "b_contravariant": [-0.3, 0.9, 0.2, -0.6],
+    "mass": 1.3,
+    "component_max_residuals": [
+      8.95090418262362e-16, 4.577566798522237e-16, 4.965068306494546e-16, 2.482534153247273e-16
+    ]
+  },
+  "physics_certification": false,
+  "status": "pass",
+  "comparison_groups": 10
+}

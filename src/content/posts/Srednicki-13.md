@@ -1,0 +1,446 @@
+---
+title: 'Srednicki §13 精确传播子的 Lehmann–Källén 表示'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [13]
+hideFromHome: true
+draft: false
+---
+
+<span id="c13"></span>
+
+相互作用场可以从真空中激发单粒子态和多粒子态。把这些中间态按不变质量归类，精确传播子就成为不同质量的自由传播子的加权和；单粒子产生孤立极点，多粒子连续谱产生支割线。
+
+在 $d$ 维时空中，取正定内积、正能谱和唯一的洛伦兹不变真空，场为局域厄米标量。设质量 $m>0$ 的稳定单粒子态与场有非零重叠，且其质量壳与其余谱之间有隙。先确定这一态的归一化，再插入完整的能量—动量本征态。
+
+<span id="c13-normalization"></span>
+
+## 归一化与单粒子子空间
+
+用相互作用理论中的真空和场算符定义精确传播子：
+
+<span id="eq:c13-exact-definition"></span>
+
+$$
+\boldsymbol\Delta(x-y)
+=i\langle0|\mathrm T\varphi(x)\varphi(y)|0\rangle.
+\tag{13.1}
+$$
+
+这里多出的因子 $i$ 沿用第8节的传播子约定。为了从这个二点函数中直接读出单粒子的贡献，先把场归一化为
+
+<span id="eq:c13-field-normalization"></span>
+
+$$
+\langle0|\varphi(x)|0\rangle=0,\qquad
+\langle k|\varphi(x)|0\rangle=e^{-ikx}.
+\tag{13.2}
+$$
+
+这两个条件分别消去真空分量并固定单粒子分量的大小。它们可以从一个插值场 $\Phi$ 实现：平移不变性使 $v=\langle0|\Phi(x)|0\rangle$ 为常数，标量变换律则使它与同一种单粒子态在原点的矩阵元不依赖总动量。选定态的相位，将这个有限非零矩阵元取为实数 $f>0$，于是 $\varphi=(\Phi-v)/f$ 就满足上述条件。减去常数不会改变真空与正质量单粒子态之间的矩阵元，因为这两类态正交；再除以该矩阵元，便把场所产生的单粒子分量归一为1。
+
+场的归一化必须与态的归一化配合使用。采用的单粒子态内积、积分测度和完备关系为
+
+<span id="eq:c13-one-particle-completeness"></span>
+
+$$
+\begin{aligned}
+\langle k|q\rangle
+&=(2\pi)^{d-1}2\omega_{\mathbf k}\,
+\delta^{d-1}(\mathbf k-\mathbf q),\\
+d\widetilde k_m
+&=\frac{d^{d-1}k}{(2\pi)^{d-1}2\omega_{\mathbf k}},
+\qquad \omega_{\mathbf k}=\sqrt{\mathbf k^2+m^2},\\
+I_1&=\int d\widetilde k_m\,|k\rangle\langle k|.
+\end{aligned}
+\tag{13.3}
+$$
+
+测度的下标 $m$ 标明其中能量所对应的质量。要看出最后一行的含义，可以让它作用在任意单粒子态 $|q\rangle$ 上：代入第一行的内积，delta函数消去动量积分，剩余的 $2\omega$ 和 $(2\pi)^{d-1}$ 分别与测度中的因子相消，所得仍为 $|q\rangle$。因此 $I_1$ 在单粒子子空间中就是恒等算符；完整态空间的完备关系还须包括真空与其余态。
+
+这一测度的Lorentz不变性来自[第3节的质量壳积分](/posts/srednicki-03/#c03-measure)。将那里四维的推导用于 $d$ 维，$d^dk\,\delta(k^2+m^2)\theta(k^0)$ 仍在正规正时Lorentz变换下不变。用delta函数积分掉正能根 $k^0=\omega_{\mathbf k}$ 时，根处的导数给出 $2\omega_{\mathbf k}$，于是留下上式中的空间动量测度。传播子的傅里叶变换也保持原来的正相位逆变换约定：
+
+<span id="eq:c13-fourier-and-free"></span>
+
+$$
+\begin{aligned}
+\boldsymbol\Delta(z)
+&=\int\frac{d^dk}{(2\pi)^d}\,
+e^{ikz}\widetilde{\boldsymbol\Delta}(k^2),\qquad z=x-y,\\
+\widetilde\Delta_m(k^2)&=\frac1{k^2+m^2-i0}.
+\end{aligned}
+\tag{13.4}
+$$
+
+第二行是质量为 $m$ 的自由传播子。把它看作动量平方的函数，在 $k^2=-m^2$ 处便有一个留数为1的极点，其中的质量正是单粒子能量—动量关系中的物理质量。接下来的问题是，相互作用加入以后，这个极点怎样保留下来。式[（13.2）](#eq:c13-field-normalization)已经固定了场与单粒子态的重叠；只要把这一态的贡献从完整二点函数中分离出来，就能确定相应的极点项。
+
+<span id="c13-intermediate"></span>
+
+## 在两个场之间插入中间态
+
+先不作时间排序，固定两个场的次序，记 $W(z)=\langle0|\varphi(x)\varphi(y)|0\rangle$，称为Wightman函数。右边的场作用在真空上，会产生所有与它有非零重叠的态；在两个场之间插入完备关系，就可以逐类写出这些贡献。按真空、单粒子和其余谱分解恒等算符，$I=|0\rangle\langle0|+I_1+I_{\rm rest}$，得到
+
+<span id="eq:c13-complete-insertion"></span>
+
+$$
+\begin{aligned}
+W(z)={}&
+\langle0|\varphi(x)|0\rangle\langle0|\varphi(y)|0\rangle\\
+&+\int d\widetilde k_m\,
+\langle0|\varphi(x)|k\rangle\langle k|\varphi(y)|0\rangle\\
+&+\sum_n\int d\widetilde k_{M_n}\,
+\langle0|\varphi(x)|k,n\rangle\langle k,n|\varphi(y)|0\rangle .
+\end{aligned}
+\tag{13.5}
+$$
+
+这里 $k$ 是中间态的总四动量，$n$ 汇集相对动量、通道等内部标签，而 $M_n^2=-k^2$ 给出该态的不变质量。这里的 $\sum_n$ 既包括离散标签的求和，也包括连续标签的积分。相应地，每个 $d\widetilde k_{M_n}$ 都要用该中间态的能量 $\sqrt{\mathbf k^2+M_n^2}$，而单粒子的 $\omega_{\mathbf k}$ 只出现在前一行的单粒子项中。
+
+各个矩阵元对位置的依赖可以统一用平移求出。第2节的变换律为 $\varphi(x)=e^{-iPx}\varphi(0)e^{iPx}$；将它夹在中间态与真空之间，再用 $P|0\rangle=0$ 和 $\langle k,n|P^\mu=k^\mu\langle k,n|$，两个平移算符就分别变成单位因子与动量相位，因而
+
+<span id="eq:c13-translation-phase"></span>
+
+$$
+\langle k,n|\varphi(x)|0\rangle
+=e^{-ikx}\langle k,n|\varphi(0)|0\rangle.
+\tag{13.6}
+$$
+
+场是厄米的，所以另一个矩阵元由厄米共轭得到，其相位为 $e^{ikx}$。两个矩阵元相乘后，位置依赖与原点处的重叠分离为 $e^{ik(x-y)}|\langle k,n|\varphi(0)|0\rangle|^2$。这种形式说明，对每个固定不变质量，动量积分都具有同一个正能质量壳核。为便于把各项合在一起，将质量平方为 $s$ 的这个自由核记为
+
+<span id="eq:c13-wightman-mass"></span>
+
+$$
+\mathcal W_s(z)
+=\int\frac{d^{d-1}k}{(2\pi)^{d-1}2\omega_s}\,
+e^{-i\omega_s\tau+i\mathbf k\cdot\mathbf r},
+\qquad
+\omega_s=\sqrt{\mathbf k^2+s},\quad
+z=(\tau,\mathbf r).
+\tag{13.7}
+$$
+
+现在回到中间态求和。零真空平均值使真空项消失，单位单粒子重叠则使单粒子项只剩下这个自由核；其余态保留各自的重叠模平方。由此有
+
+<span id="eq:c13-positive-state-sum"></span>
+
+$$
+W(z)=\mathcal W_{m^2}(z)+
+\sum_n\int d\widetilde k_{M_n}\,
+e^{ikz}|\langle k,n|\varphi(0)|0\rangle|^2.
+\tag{13.8}
+$$
+
+单粒子项的系数1来自预先选定的场归一化。其余项则记录场能够激发哪些多粒子态，以及对每一类态的重叠有多大。要把这些信息用于传播子，不必逐个保留内部态的标签，只需把具有同一不变质量的权重汇集起来。
+
+<span id="c13-spectral"></span>
+
+## 谱密度及它的测度
+
+这种按不变质量整理后的权重称为谱密度（spectral density）。Lorentz不变真空和标量场变换律保证，二点函数的谱权重只依赖不变质量：在总动量与内部标签组成的基底中，推动可能混合内部标签，但这一变换是幺正的，求完内部标签后的模平方总和不变。因此可以用一个delta函数选出指定质量壳，定义
+
+<span id="eq:c13-rho-definition"></span>
+
+$$
+\rho(s)=\sum_n
+|\langle k,n|\varphi(0)|0\rangle|^2\,
+\delta(s-M_n^2).
+\tag{13.9}
+$$
+
+求和仍包含内部态原有的积分测度；$s$ 在这里是用来整理中间态的谱质量平方，并不另指一次散射的质心能量。更一般地，谱分解给出的是非负测度，只有连续部分具有密度时，才写成 $\rho(s)\,ds$；若还存在额外的孤立态，它们就表现为测度中的delta项。
+
+谱权重的非负性可以直接从内积看出。为使场作用在真空上得到定义良好的态，先取涂抹场 $\varphi(f)=\int d^dx\,f(x)\varphi(x)$，再在其范数中插入完整中间态，得到
+
+<span id="eq:c13-spectral-positivity"></span>
+
+$$
+\|\varphi(f)|0\rangle\|^2
+=\sum_\alpha|\langle\alpha|\varphi(f)|0\rangle|^2\ge0.
+\tag{13.10}
+$$
+
+其中 $\alpha$ 表示完整的谱标签，求和包含相应测度。将这些态限制在某个谱质量区间，右边仍是模平方之和，因而该区间的谱权重非负。这一结论只用了正定内积，不需要先求出矩阵元的微扰展开。
+
+谱的起点则由可用的中间态决定。先考虑一种简单的谱：除质量 $m$ 的单粒子态外，其余态至少含有两个这种粒子。在它们的总静止系，不变质量就是各个粒子正能量之和，因此
+
+<span id="eq:c13-threshold"></span>
+
+$$
+\sqrt s=\sum_{j=1}^n\sqrt{\mathbf p_j^2+m^2}
+\ge nm\ge2m,\qquad n\ge2.
+\tag{13.11}
+$$
+
+这就使上述多粒子谱在 $s<4m^2$ 为零，而在允许区域内有 $\rho(s)\ge0$。运动学给出了权重可能出现的下界；若选择定则禁止最低通道，非零谱还会从更高处开始。若理论中存在更轻的耦合通道或额外束缚态，则须加入相应阈值或离散谱项。以下继续采用上述谱条件，以 $4m^2$ 为积分下限。
+
+在每个内部态的贡献中插入 $\int ds\,\delta(s-M_n^2)=1$，先对具有相同不变质量的内部标签求和，就得到谱密度；余下的总动量积分则成为对应质量的正能核。这样，两个场次序的二点函数可以一并写成
+
+<span id="eq:c13-two-wightman-functions"></span>
+
+$$
+\begin{aligned}
+W(z)&=\mathcal W_{m^2}(z)
++\int_{4m^2}^\infty ds\,\rho(s)\mathcal W_s(z),\\
+W(-z)&=\mathcal W_{m^2}(-z)
++\int_{4m^2}^\infty ds\,\rho(s)\mathcal W_s(-z).
+\end{aligned}
+\tag{13.12}
+$$
+
+第二行由第一行交换 $x,y$ 得到。每个 $\mathcal W_s$ 都对应质量 $\sqrt s$，测度分母和时间相位均含同一个能量 $\omega_s$。
+
+为了把谱密度与前面散射计算中的相空间联系起来，再将内部测度展开一次。假定所考虑的连续谱通道由渐近多粒子散射态张成，定义场与这些态的重叠 $F_n(p_1,\ldots,p_n)=\langle p_1,\ldots,p_n|\varphi(0)|0\rangle$。对 $n$ 个相同粒子使用第11节的完备关系，这个通道对二点函数及其傅里叶变换的贡献分别为
+
+<span id="eq:c13-multiparticle-form-factor"></span>
+
+$$
+\begin{aligned}
+W_n(z)
+&=\frac1{n!}\int\prod_{j=1}^n d\widetilde p_j\,
+|F_n|^2 e^{i(\sum_jp_j)z},\\
+\widetilde W_n(K)
+&=\frac1{n!}\int d{\rm LIPS}_n(K)\,|F_n|^2.
+\end{aligned}
+\tag{13.13}
+$$
+
+由第一行到第二行，是对 $z$ 作负相位傅里叶变换。位置积分给出 $(2\pi)^d\delta^d(K-\sum p_j)$，它与各粒子的质量壳测度正好组成 $d$ 维Lorentz不变相空间LIPS。
+
+要从这个结果读出谱密度，还需知道单个质量核在傅里叶变换后带有什么因子。直接变换式[（13.7）](#eq:c13-wightman-mass)，空间delta函数先消去 $\mathbf k$ 积分，变换给出的 $(2\pi)^d/(2\pi)^{d-1}$ 留下一个 $2\pi$，于是
+
+<span id="eq:c13-shell-fourier-weight"></span>
+
+$$
+\widetilde{\mathcal W}_s(K)
+=\frac{2\pi}{2\omega_s}\delta(K^0-\omega_s)
+=2\pi\,\theta(K^0)\delta(K^2+s).
+\tag{13.14}
+$$
+
+最后一步把正能根处的delta函数改写成质量壳delta函数，所需Jacobian为 $2\omega_s$。将两种傅里叶变换结果比较，在 $K^0>0$、$K^2=-s$ 的连续部分便得到
+
+<span id="eq:c13-explicit-rho-measure"></span>
+
+$$
+\rho_n(s)=\frac1{2\pi\,n!}
+\int d{\rm LIPS}_n(K)\,|F_n|^2.
+\tag{13.15}
+$$
+
+这里 $1/n!$ 消除了相同末态的重复计数，$1/(2\pi)$ 来自刚才的质量壳傅里叶变换；若有不同种类的粒子，便将 $n!$ 换成 $\prod_a n_a!$。这些因子连同相空间积分，给出了式[（13.9）](#eq:c13-rho-definition)中内部测度的具体含义；若已把它们吸收进求和记号，就无须再次相乘。
+
+<span id="c13-time-order"></span>
+
+## 从两个算符次序到Feynman核
+
+有了两个固定次序的二点函数，就可以按时间先后将它们合成精确传播子。令 $\tau=x^0-y^0$，玻色场的时间排序给出
+
+<span id="eq:c13-time-ordering"></span>
+
+$$
+G_{\rm T}(z)\equiv
+\langle0|\mathrm T\varphi(x)\varphi(y)|0\rangle
+=\theta(\tau)W(z)+\theta(-\tau)W(-z).
+\tag{13.16}
+$$
+
+时间排序可以对每一个谱质量分别进行，所以先取质量平方为 $s$ 的一项。在负时间部分，$\mathcal W_s(-z)$ 的相位为 $e^{+i\omega_s\tau-i\mathbf k\cdot\mathbf r}$。为了让它与正时间部分使用相同的空间相位，作变量代换 $\mathbf k\to-\mathbf k$；测度与 $\omega_s$ 都不变，于是两部分合成
+
+<span id="eq:c13-absolute-time-kernel"></span>
+
+$$
+\theta(\tau)\mathcal W_s(z)+\theta(-\tau)\mathcal W_s(-z)
+=\int\frac{d^{d-1}k}{(2\pi)^{d-1}}\,
+\frac{e^{-i\omega_s|\tau|+i\mathbf k\cdot\mathbf r}}{2\omega_s}.
+\tag{13.17}
+$$
+
+这里负时间分支只反向了空间积分变量；它的时间相位在 $\tau<0$ 时满足 $e^{i\omega_s\tau}=e^{-i\omega_s|\tau|}$，所以能够用绝对时间差将两个分支写在一起。
+
+现在把这个正能积分还原成完整的Feynman动量核。[第8节的能量围道](/posts/srednicki-08/#c08-propagator)已经给出了所需步骤，只须将其中的 $m^2$ 换成 $s$：正能极点仍在下半平面，负能极点仍在上半平面，能量积分为
+
+<span id="eq:c13-energy-residues"></span>
+
+$$
+\int\frac{dk^0}{2\pi}\,
+\frac{e^{-ik^0\tau}}{-(k^0)^2+\omega_s^2-i0}
+=
+\begin{cases}
+-i\,\dfrac{e^{-i\omega_s\tau}}{-2\omega_s},
+&\tau>0,\\[6pt]
++i\,\dfrac{e^{+i\omega_s\tau}}{+2\omega_s},
+&\tau<0.
+\end{cases}
+\tag{13.18}
+$$
+
+在第一种情形，围道向下顺时针闭合，留数定理连同积分测度给出 $-i$，而正能极点处分母的导数为 $-2\omega_s$。在第二种情形，围道向上逆时针闭合，方向因子为 $+i$，负能极点处分母的导数为 $+2\omega_s$。两种情形因而都得到 $i e^{-i\omega_s|\tau|}/(2\omega_s)$。把空间积分补上，就将时间排序后的正能核写成
+
+<span id="eq:c13-mass-feynman-identity"></span>
+
+$$
+\begin{aligned}
+\Delta_{\sqrt s}(z)
+&=\int\frac{d^dk}{(2\pi)^d}\frac{e^{ikz}}{k^2+s-i0}\\
+&=i\theta(\tau)\mathcal W_s(z)+i\theta(-\tau)\mathcal W_s(-z).
+\end{aligned}
+\tag{13.19}
+$$
+
+两个分支都带有 $+i$，恰好与精确传播子的定义相配。于是，单粒子项与每一项连续谱都可以用相应质量的自由传播子替换。对满足下述高质量收敛条件的谱，代入并合并傅里叶积分，便得到
+
+<span id="eq:c13-position-spectral-representation"></span>
+
+$$
+\begin{aligned}
+\boldsymbol\Delta(z)
+&=\Delta_m(z)+\int_{4m^2}^{\infty}ds\,\rho(s)\Delta_{\sqrt s}(z)\\
+&=\int\frac{d^dk}{(2\pi)^d}\,e^{ikz}
+\left[\frac1{k^2+m^2-i0}
++\int_{4m^2}^{\infty}ds\,\frac{\rho(s)}{k^2+s-i0}\right].
+\end{aligned}
+\tag{13.20}
+$$
+
+方括号中就是动量空间的精确传播子。与式[（13.4）](#eq:c13-fourier-and-free)的定义比较，得到Lehmann–Källén表示：
+
+<span id="eq:c13-lehmann-kallen"></span>
+
+$$
+\widetilde{\boldsymbol\Delta}(k^2)
+=\frac1{k^2+m^2-i0}
++\int_{4m^2}^{\infty}ds\,\frac{\rho(s)}{k^2+s-i0}.
+\tag{13.21}
+$$
+
+这个表示把精确传播子写成各个自由质量核的加权和，权重则由相互作用理论中的精确中间态决定。由于各项的量纲相同，$ds\,\rho(s)$ 必须无量纲，即 $[\rho]=-2$。推导中没有按耦合常数展开，因此在上述谱条件下，它同样适用于不能作微扰展开的相互作用强度。
+
+这里采用未减除的谱表示，要求在某个类空动量 $Q^2>0$ 处有 $\int_{4m^2}^\infty ds\,\rho(s)/(Q^2+s)<\infty$。增长更快的谱可用减除的色散积分表示，相应的局部多项式由时间序乘积的归一化条件固定。以下使用前一种收敛情形。
+
+<span id="c13-pole"></span>
+
+## 为什么精确极点的留数仍为1
+
+谱表示已显式分出了单粒子项。要证明它确实给出孤立极点，还须说明连续谱部分在该点附近是解析的。暂把 $k^2$ 作为复变量 $\zeta$，记连续谱部分为 $R(\zeta)=\int_{4m^2}^\infty ds\,\rho(s)/(\zeta+s)$。在 $\zeta=-m^2$ 处，连续谱的分母离零至少有 $3m^2$；因此，对任意固定的 $r<3m^2$，可以在 $|\zeta+m^2|\le r$ 内作几何级数展开：
+
+<span id="eq:c13-regular-part-expansion"></span>
+
+$$
+\begin{aligned}
+\frac1{\zeta+s}
+&=\frac1{s-m^2}
+\sum_{j=0}^\infty
+\left[-\frac{\zeta+m^2}{s-m^2}\right]^j,\\
+R(\zeta)
+&=\sum_{j=0}^\infty(-1)^j(\zeta+m^2)^j
+\int_{4m^2}^\infty ds\,\frac{\rho(s)}{(s-m^2)^{j+1}}.
+\end{aligned}
+\tag{13.22}
+$$
+
+这里级数比值的绝对值至多为 $r/(3m^2)<1$。把级数各项的绝对值相加再乘以 $\rho(s)$，可以用常数倍的 $\rho(s)/(s-m^2)$ 控制；这个控制函数在阈值端没有奇性，在无穷端的可积性又由前面的加权收敛条件保证。因而可以交换求和与积分，所得幂级数说明 $R$ 在该圆盘内解析。精确传播子乘以单粒子分母后再趋近极点，连续谱部分随之消失，留下
+
+<span id="eq:c13-unit-residue"></span>
+
+$$
+\lim_{\zeta\to-m^2}
+(\zeta+m^2)\widetilde{\boldsymbol\Delta}(\zeta)=1.
+\tag{13.23}
+$$
+
+这样，精确极点的位置由单粒子的物理质量确定，留数由场与该态的单位重叠确定。相互作用可以改变连续谱的形状，但在既定归一化下，后续圈修正与反项的总和必须保留这两个性质。
+
+这个留数是相对于变量 $k^2$ 而言的。在固定空间动量、以 $k^0$ 为变量的能量平面上，分母的导数为 $\partial(k^2+m^2)/\partial k^0=-2\omega_{\mathbf k}$，所以正能极点的留数为 $-1/(2\omega_{\mathbf k})$。它再乘上能量围道的方向因子，就得到式[（13.18）](#eq:c13-energy-residues)中的结果。区分这两个变量，便能同时理解单位质量壳留数与正能测度中的归一化因子。
+
+除了孤立极点，谱表示还直接确定了类时区域的虚部。取外部类时质量平方 $\sigma>0$，在有限处方下有 $\operatorname{Im}(s-\sigma-i\eta)^{-1}
+=\eta/[(s-\sigma)^2+\eta^2]$。这个Lorentz形函数在 $\eta\downarrow0$ 时集中到 $\pi\delta(s-\sigma)$；它的总权重可作代换 $s-\sigma=\eta u$，由 $\int du/(1+u^2)=\pi$ 得到。因此，把结果理解为关于 $\sigma$ 的分布，便有
+
+<span id="eq:c13-spectral-imaginary-part"></span>
+
+$$
+\operatorname{Im}\widetilde{\boldsymbol\Delta}(-\sigma-i0)
+=\pi\delta(\sigma-m^2)+\pi\rho(\sigma).
+\tag{13.24}
+$$
+
+其中 $\rho$ 在阈值以下为零。孤立的delta峰表示稳定单粒子，阈值以上的权重表示连续多粒子态，因而传播子在质量壳外的虚部可以告诉我们这个场能够激发哪些中间态。
+
+谱的正性在类空区域也有直接表现。当 $Q^2>0$ 时，所有谱分母都为正，故精确核的大小及其动量依赖满足
+
+<span id="eq:c13-spacelike-check"></span>
+
+$$
+\begin{aligned}
+\widetilde{\boldsymbol\Delta}(Q^2)
+&\ge\frac1{Q^2+m^2},\\
+\frac{d}{dQ^2}\widetilde{\boldsymbol\Delta}(Q^2)
+&=-\frac1{(Q^2+m^2)^2}
+-\int_{4m^2}^\infty ds\,\frac{\rho(s)}{(Q^2+s)^2}<0.
+\end{aligned}
+\tag{13.25}
+$$
+
+求导使连续谱分母多出一个幂次，因此在已经给出的收敛条件下，导数积分也收敛。取 $\rho=0$ 就回到自由传播子；只要有连续谱，类空核中便会增加正的贡献。由此可见，单粒子的极点位置与留数虽然固定，却只确定了传播子的一部分，其他动量处的值还取决于多粒子谱。
+
+<span id="c13-kinetic-normalization"></span>
+
+## 与动能归一化的联系
+
+谱的总权重还与拉氏量的动能系数 $Z_\varphi$ 相联系，这个关系可以从等时对易子求出。相互作用不含导数时，正则动量为 $\Pi=Z_\varphi\dot\varphi$，所以正则对易关系给出 $[\varphi(t,\mathbf x),\dot\varphi(t,\mathbf y)]
+=i\delta^{d-1}(\mathbf x-\mathbf y)/Z_\varphi$。另一方面，将式[（13.12）](#eq:c13-two-wightman-functions)中的两种场次序相减。令 $z=(\tau,\mathbf r)=x-y$，反向第二项的空间动量后，固定质量的对易核为
+
+<span id="eq:c13-equal-time-kernel"></span>
+
+$$
+\begin{aligned}
+C_s(\tau,\mathbf r)
+&=\mathcal W_s(z)-\mathcal W_s(-z)\\
+&=-i\int\frac{d^{d-1}k}{(2\pi)^{d-1}}\,
+ e^{i\mathbf k\cdot\mathbf r}\frac{\sin(\omega_s\tau)}{\omega_s},\\
+\partial_{y^0}C_s(\tau,\mathbf r)
+&=i\int\frac{d^{d-1}k}{(2\pi)^{d-1}}\,
+ e^{i\mathbf k\cdot\mathbf r}\cos(\omega_s\tau).
+\end{aligned}
+$$
+
+取 $\tau\to0$，最后一行给出 $i\delta^{d-1}(\mathbf r)$，与质量 $s$ 无关。具体说，先对 $\mathbf r$ 乘施瓦茨函数 $h$ 再积分；其傅里叶变换可积，而 $|\cos(\omega_s\tau)|\le1$。若总谱权重 $\int ds\,\rho(s)$ 有限，就可以依控制收敛交换动量积分、谱积分与等时极限，于是
+
+$$
+\langle0|[\varphi(t,\mathbf x),\dot\varphi(t,\mathbf y)]|0\rangle
+=i\delta^{d-1}(\mathbf x-\mathbf y)
+\left[1+\int_{4m^2}^{\infty}ds\,\rho(s)\right].
+$$
+
+与正则对易子比较，得到
+
+<span id="eq:c13-kinetic-sum-rule"></span>
+
+$$
+\frac1{Z_\varphi}
+=1+\int_{4m^2}^\infty ds\,\rho(s).
+\tag{13.26}
+$$
+
+在谱为正且总谱权重有限的条件下，这个关系给出 $0<Z_\varphi\le1$。若进一步希望把拉氏量中的动能系数化为1，可以改用 $\Phi_{\rm can}=\sqrt{Z_\varphi}\varphi$。二点函数中的两个场同时缩放，于是谱表示与总权重关系一并变成
+
+<span id="eq:c13-canonical-field-conversion"></span>
+
+$$
+\begin{aligned}
+\widetilde{\boldsymbol\Delta}_{\Phi_{\rm can}}(k^2)
+&=\frac{Z_\varphi}{k^2+m^2-i0}
++\int_{4m^2}^\infty ds\,
+\frac{Z_\varphi\rho(s)}{k^2+s-i0},\\
+Z_\varphi+\int_{4m^2}^\infty ds\,Z_\varphi\rho(s)&=1.
+\end{aligned}
+\tag{13.27}
+$$
+
+由此得到常见的另一种约定：对于动能系数归一为1的场，单粒子极点的权重为 $Z$，完整谱的总权重为1；这里的 $\varphi$ 则先将单粒子重叠归一为1，其动能系数由总谱权重确定。二者通过上述场缩放相联系，使用传播子的留数或动能系数时，只须保持同一场的归一化。
+
+---
+
+[← 第 12 节](/posts/srednicki-12/) · [章节地图](/srednicki/) · [第 14 节 →](/posts/srednicki-14/)

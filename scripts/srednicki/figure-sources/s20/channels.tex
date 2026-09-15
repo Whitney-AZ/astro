@@ -1,0 +1,96 @@
+% Original vector reconstruction of source Fig.20.1, PDF95 / printed83.
+% Physical labels: source (k1,k2;k1',k2') -> (p1,p2;p3,p4).
+% These p's are not the all-incoming k labels used in the chapter's vertices.
+% Circle = full iV3; square = full iV4; a double stroke is ONE full propagator.
+% Mid-line arrows indicate physical momentum flow, not additional graph edges.
+% The two outgoing u-channel legs cross without a vertex; a small white gap
+% makes their separate continuations visible. Requires basic TikZ only.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,line width=0.65pt,
+  font=\fontsize{10.5}{12}\selectfont,
+  three/.style={circle,draw,fill=white,minimum size=8.5mm,
+    inner sep=1pt,font=\fontsize{10}{11}\selectfont},
+  four/.style={rectangle,draw,fill=white,minimum width=10mm,
+    minimum height=10mm,inner sep=1pt,font=\fontsize{10}{11}\selectfont},
+  panel/.style={font=\fontsize{10}{12}\selectfont},
+  full/.style={double=white,double distance=1.5pt,line width=0.65pt}
+]
+\path[use as bounding box] (-6,-4.60) rectangle (6,3.75);
+% A straight external line with its arrow placed at the middle.
+\def\sredge#1#2#3#4#5{%
+  \draw[#5] (#1,#2) -- (#3,#4);
+  \draw[->] ({0.58*(#1)+0.42*(#3)},{0.58*(#2)+0.42*(#4)})
+    -- ({0.42*(#1)+0.58*(#3)},{0.42*(#2)+0.58*(#4)});
+}
+
+% Upper left: full four-point kernel, no internal propagator.
+\begin{scope}[shift={(-3.2,2.1)}]
+  \sredge{-2}{1.25}{0}{0}{}
+  \sredge{-2}{-1.25}{0}{0}{}
+  \sredge{0}{0}{2}{1.25}{}
+  \sredge{0}{0}{2}{-1.25}{}
+  \node[above] at (-1.45,0.91) {$p_1$};
+  \node[below] at (-1.45,-0.91) {$p_2$};
+  \node[above] at (1.45,0.91) {$p_3$};
+  \node[below] at (1.45,-0.91) {$p_4$};
+  \node[four] at (0,0) {$iV_4$};
+  \node[panel] at (0,-1.72) {(a) 完整四点核};
+\end{scope}
+
+% Upper right: s-channel full propagator, p1+p2 directed to the right.
+\begin{scope}[shift={(3.2,2.1)}]
+  \sredge{-2.15}{1.25}{-0.85}{0}{}
+  \sredge{-2.15}{-1.25}{-0.85}{0}{}
+  \sredge{0.85}{0}{2.15}{1.25}{}
+  \sredge{0.85}{0}{2.15}{-1.25}{}
+  \draw[full] (-0.85,0) -- (0.85,0);
+  \draw[->] (-0.22,0) -- (0.22,0);
+  \node[above] at (-1.65,0.77) {$p_1$};
+  \node[below] at (-1.65,-0.77) {$p_2$};
+  \node[above] at (1.65,0.77) {$p_3$};
+  \node[below] at (1.65,-0.77) {$p_4$};
+  \node at (0,0.65) {$p_1+p_2$};
+  \node[three] at (-0.85,0) {$iV_3$};
+  \node[three] at (0.85,0) {$iV_3$};
+  \node[panel] at (0,-1.72) {(b) $s$道};
+\end{scope}
+
+% Lower left: t-channel; the upper vertex emits p3.
+\begin{scope}[shift={(-3.2,-2.05)}]
+  \sredge{-2}{1.35}{0}{0.72}{}
+  \sredge{-2}{-1.35}{0}{-0.72}{}
+  \sredge{0}{0.72}{2}{1.35}{}
+  \sredge{0}{-0.72}{2}{-1.35}{}
+  \draw[full] (0,0.72) -- (0,-0.72);
+  \draw[->] (0,0.20) -- (0,-0.20);
+  \node[above] at (-1.45,1.18) {$p_1$};
+  \node[below] at (-1.45,-1.18) {$p_2$};
+  \node[above] at (1.45,1.18) {$p_3$};
+  \node[below] at (1.45,-1.18) {$p_4$};
+  \node[left] at (-0.25,0) {$p_1-p_3$};
+  \node[three] at (0,0.72) {$iV_3$};
+  \node[three] at (0,-0.72) {$iV_3$};
+  \node[panel] at (0,-1.72) {(c) $t$道};
+\end{scope}
+
+% Lower right: u-channel; the upper vertex emits p4 and the lower emits p3.
+\begin{scope}[shift={(3.2,-2.05)}]
+  \sredge{-2.15}{1.35}{-0.45}{0.72}{}
+  \sredge{-2.15}{-1.35}{-0.45}{-0.72}{}
+  \sredge{-0.45}{0.72}{2.15}{-1.35}{}
+  \sredge{-0.45}{-0.72}{2.15}{1.35}{preaction={draw=white,line width=2.8pt}}
+  \draw[full] (-0.45,0.72) -- (-0.45,-0.72);
+  \draw[->] (-0.45,0.20) -- (-0.45,-0.20);
+  \node[above] at (-1.55,1.14) {$p_1$};
+  \node[below] at (-1.55,-1.14) {$p_2$};
+  \node[right] at (2.20,1.35) {$p_3$};
+  \node[right] at (2.20,-1.35) {$p_4$};
+  \node[left] at (-0.70,0) {$p_1-p_4$};
+  \node[three] at (-0.45,0.72) {$iV_3$};
+  \node[three] at (-0.45,-0.72) {$iV_3$};
+  \node[panel] at (0,-1.72) {(d) $u$道};
+\end{scope}
+
+\node[font=\fontsize{9.5}{11}\selectfont] at (0,-4.37)
+  {双线：精确传播子 $\widetilde{\boldsymbol\Delta}/i$；右下交叉处无顶点};
+\end{tikzpicture}%

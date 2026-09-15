@@ -1,0 +1,100 @@
+% Original vector reconstruction of source Fig.65.3, PDF269.
+% Dashed arrows denote complex-scalar charge flow; arrows beside photon waves denote momentum.
+% All dimensions are native millimetres; definitions are local to this picture.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont,
+ scalar/.style={dash pattern=on 2pt off 1.7pt}]
+% S65-D008: scalar charge goes from the left external endpoint to the right; incoming scalar momentum=0, incoming photon=k.
+\draw[scalar] (0,0)--(14,0);
+\draw[->] (5.46,0)--(8.68,0);
+\node[below] at (7,-2) {$0$};
+\draw[scalar] (14,0)--(38,0);
+\draw[->] (23.36,0)--(28.88,0);
+\node[below] at (26,-2) {$\ell+k$};
+\draw[scalar] (38,0)--(52,0);
+\draw[->] (43.46,0)--(46.68,0);
+\node[below] at (45,-2) {$k$};
+\draw[domain=0:1,samples=161,smooth,variable=\u]
+ plot ({26+(12+0.7*sin(2160*\u))*cos(0+(180)*\u)},
+       {0+(12+0.7*sin(2160*\u))*sin(0+(180)*\u)});
+\draw[->] (30,15)--(22,15);
+\node[above] at (26,16) {$\ell$};
+\fill (14,0) circle[radius=.55mm];
+\fill (38,0) circle[radius=.55mm];
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({14+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-14+(14)*\u+(0)*sin(1440*\u)});
+\draw[->] (17,-13)--(17,-7.5);
+\node[right] at (18,-11) {$k$};
+% S65-D009: scalar charge goes from the left external endpoint to the right; incoming scalar momentum=0, incoming photon=k.
+\draw[scalar] (77,0)--(91,0);
+\draw[->] (82.46,0)--(85.68,0);
+\node[below] at (84,-2) {$0$};
+\draw[scalar] (91,0)--(103,0);
+\draw[->] (95.68,0)--(98.44,0);
+\node[below] at (97,-2) {$\ell$};
+\draw[scalar] (103,0)--(115,0);
+\draw[->] (107.68,0)--(110.44,0);
+\node[below] at (109,-2) {$\ell+k$};
+\fill (103,0) circle[radius=.55mm];
+\draw[scalar] (115,0)--(129,0);
+\draw[->] (120.46,0)--(123.68,0);
+\node[below] at (122,-2) {$k$};
+\draw[domain=0:1,samples=161,smooth,variable=\u]
+ plot ({103+(12+0.7*sin(2160*\u))*cos(0+(180)*\u)},
+       {0+(12+0.7*sin(2160*\u))*sin(0+(180)*\u)});
+\draw[->] (107,15)--(99,15);
+\node[above] at (103,16) {$\ell$};
+\fill (91,0) circle[radius=.55mm];
+\fill (115,0) circle[radius=.55mm];
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({103+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-14+(14)*\u+(0)*sin(1440*\u)});
+\draw[->] (106,-13)--(106,-7.5);
+\node[right] at (107,-11) {$k$};
+% S65-D010: scalar charge goes from the left external endpoint to the right; incoming scalar momentum=0, incoming photon=k.
+\draw[scalar] (0,-43)--(14,-43);
+\draw[->] (5.46,-43)--(8.68,-43);
+\node[below] at (7,-45) {$0$};
+\draw[scalar] (14,-43)--(38,-43);
+\draw[->] (23.36,-43)--(28.88,-43);
+\node[below] at (26,-45) {$\ell$};
+\draw[scalar] (38,-43)--(52,-43);
+\draw[->] (43.46,-43)--(46.68,-43);
+\node[below] at (45,-45) {$k$};
+\draw[domain=0:1,samples=161,smooth,variable=\u]
+ plot ({26+(12+0.7*sin(2160*\u))*cos(0+(180)*\u)},
+       {-43+(12+0.7*sin(2160*\u))*sin(0+(180)*\u)});
+\draw[->] (30,-28)--(22,-28);
+\node[above] at (26,-27) {$\ell$};
+\fill (14,-43) circle[radius=.55mm];
+\fill (38,-43) circle[radius=.55mm];
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({38+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-57+(14)*\u+(0)*sin(1440*\u)});
+\draw[->] (41,-56)--(41,-50.5);
+\node[right] at (42,-54) {$k$};
+\node at (64,0) {$+$};
+\node at (-9,-43) {$+$};
+\node at (64,-43) {$+$};
+% S65-D011: external scalar through vT; left scalar vT->vB carries ell, right vB->vT carries ell+k.
+\draw[scalar] (77,-43)--(103,-43);
+\draw[->] (87.14,-43)--(93.12,-43);
+\node[below] at (90,-45) {$0$};
+\draw[scalar] (103,-43)--(129,-43);
+\draw[->] (113.14,-43)--(119.12,-43);
+\node[below] at (116,-45) {$k$};
+\draw[scalar] (103,-43) arc[start angle=90,end angle=270,radius=9mm];
+\draw[->] (94.8566,-48.168) arc[start angle=154.8,end angle=196.2,radius=9mm];
+\draw[scalar] (103,-61) arc[start angle=270,end angle=450,radius=9mm];
+\draw[->] (111.1434,-55.832) arc[start angle=334.8,end angle=376.2,radius=9mm];
+\node[left] at (91,-52) {$\ell$};
+\node[right] at (115,-52) {$\ell+k$};
+\fill (103,-43) circle[radius=.55mm];
+\fill (103,-61) circle[radius=.55mm];
+\draw[domain=0:1,samples=101,smooth,variable=\u]
+ plot ({103+(0)*\u+(-0.7)*sin(1440*\u)},
+       {-75+(14)*\u+(0)*sin(1440*\u)});
+\draw[->] (106,-74)--(106,-68.5);
+\node[right] at (107,-72) {$k$};
+\end{tikzpicture}

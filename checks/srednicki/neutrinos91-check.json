@@ -1,0 +1,622 @@
+{
+  "checks": 123,
+  "passed": true,
+  "records": [
+    {
+      "name": "Takagi unitary (2, 'generic')",
+      "scaled_residual": 2.8842483199391687e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (2, 'generic')",
+      "scaled_residual": 3.3770624668266235e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (2, 'generic')",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (2, 'degenerate')",
+      "scaled_residual": 3.3312242541964623e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (2, 'degenerate')",
+      "scaled_residual": 2.1163967083071243e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (2, 'degenerate')",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (2, 'zero')",
+      "scaled_residual": 4.440938950905445e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (2, 'zero')",
+      "scaled_residual": 4.576799242251626e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (2, 'zero')",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (2, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (2, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (2, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (3, 'generic')",
+      "scaled_residual": 7.7717353489801e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (3, 'generic')",
+      "scaled_residual": 9.60903036854279e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (3, 'generic')",
+      "scaled_residual": 5.921189464667501e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (3, 'degenerate')",
+      "scaled_residual": 6.661695722014296e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (3, 'degenerate')",
+      "scaled_residual": 7.348246433944763e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (3, 'degenerate')",
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (3, 'zero')",
+      "scaled_residual": 3.332604028004876e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (3, 'zero')",
+      "scaled_residual": 2.3351241384614157e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (3, 'zero')",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (3, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (3, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (3, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (6, 'generic')",
+      "scaled_residual": 1.1102988824001794e-15,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (6, 'generic')",
+      "scaled_residual": 7.624757156329387e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (6, 'generic')",
+      "scaled_residual": 5.181040781584064e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (6, 'degenerate')",
+      "scaled_residual": 7.184708833093356e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (6, 'degenerate')",
+      "scaled_residual": 7.465675889560138e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (6, 'degenerate')",
+      "scaled_residual": 1.0362081563168128e-15,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (6, 'zero')",
+      "scaled_residual": 8.052499479325644e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (6, 'zero')",
+      "scaled_residual": 5.942956040387759e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (6, 'zero')",
+      "scaled_residual": 5.921189464667501e-16,
+      "passed": true
+    },
+    {
+      "name": "Takagi unitary (6, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi congruence (6, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Takagi singular values (6, 'all zero')",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact one-generation masses 0.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact mass difference 0.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact mixing direction 0.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact one-generation masses 0.0001",
+      "scaled_residual": 8.540833765142056e-21,
+      "passed": true
+    },
+    {
+      "name": "exact mass difference 0.0001",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact mixing direction 0.0001",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact one-generation masses 0.03",
+      "scaled_residual": 4.5427059894378126e-18,
+      "passed": true
+    },
+    {
+      "name": "exact mass difference 0.03",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "exact mixing direction 0.03",
+      "scaled_residual": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "name": "exact one-generation masses 0.5",
+      "scaled_residual": 2.2993471702930928e-17,
+      "passed": true
+    },
+    {
+      "name": "exact mass difference 0.5",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "exact mixing direction 0.5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact one-generation masses 2.0",
+      "scaled_residual": 1.3574127606653356e-16,
+      "passed": true
+    },
+    {
+      "name": "exact mass difference 2.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact mixing direction 2.0",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "effective symmetric mass 0",
+      "scaled_residual": 1.7047718928722835e-16,
+      "passed": true
+    },
+    {
+      "name": "basis covariance 0",
+      "scaled_residual": 3.0157777697338147e-16,
+      "passed": true
+    },
+    {
+      "name": "exact Schur block elimination 0",
+      "scaled_residual": 5.960833288598377e-19,
+      "passed": true
+    },
+    {
+      "name": "leading kinetic normalization 0",
+      "scaled_residual": 2.220425522437685e-16,
+      "passed": true
+    },
+    {
+      "name": "charged basis mass 0",
+      "scaled_residual": 1.561851582800569e-20,
+      "passed": true
+    },
+    {
+      "name": "effective symmetric mass 1",
+      "scaled_residual": 1.586909203541093e-16,
+      "passed": true
+    },
+    {
+      "name": "basis covariance 1",
+      "scaled_residual": 3.738366301552272e-16,
+      "passed": true
+    },
+    {
+      "name": "exact Schur block elimination 1",
+      "scaled_residual": 4.252798850716546e-19,
+      "passed": true
+    },
+    {
+      "name": "leading kinetic normalization 1",
+      "scaled_residual": 2.220434115219947e-16,
+      "passed": true
+    },
+    {
+      "name": "charged basis mass 1",
+      "scaled_residual": 1.0485775255305754e-20,
+      "passed": true
+    },
+    {
+      "name": "effective symmetric mass 2",
+      "scaled_residual": 1.2723933587929954e-16,
+      "passed": true
+    },
+    {
+      "name": "basis covariance 2",
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "exact Schur block elimination 2",
+      "scaled_residual": 4.801163572268433e-19,
+      "passed": true
+    },
+    {
+      "name": "leading kinetic normalization 2",
+      "scaled_residual": 2.2204387288771978e-16,
+      "passed": true
+    },
+    {
+      "name": "charged basis mass 2",
+      "scaled_residual": 3.741894474131195e-21,
+      "passed": true
+    },
+    {
+      "name": "effective symmetric mass 3",
+      "scaled_residual": 1.9228212544259135e-16,
+      "passed": true
+    },
+    {
+      "name": "basis covariance 3",
+      "scaled_residual": 2.8505158176010934e-16,
+      "passed": true
+    },
+    {
+      "name": "exact Schur block elimination 3",
+      "scaled_residual": 2.562407538658212e-19,
+      "passed": true
+    },
+    {
+      "name": "leading kinetic normalization 3",
+      "scaled_residual": 2.2204363331822772e-16,
+      "passed": true
+    },
+    {
+      "name": "charged basis mass 3",
+      "scaled_residual": 7.187507856399095e-21,
+      "passed": true
+    },
+    {
+      "name": "effective symmetric mass 4",
+      "scaled_residual": 3.4390155013664466e-16,
+      "passed": true
+    },
+    {
+      "name": "basis covariance 4",
+      "scaled_residual": 3.9125732458559935e-16,
+      "passed": true
+    },
+    {
+      "name": "exact Schur block elimination 4",
+      "scaled_residual": 4.858347551199956e-19,
+      "passed": true
+    },
+    {
+      "name": "leading kinetic normalization 4",
+      "scaled_residual": 2.2204405562087227e-16,
+      "passed": true
+    },
+    {
+      "name": "charged basis mass 4",
+      "scaled_residual": 3.0558555211692487e-21,
+      "passed": true
+    },
+    {
+      "name": "effective symmetric mass 5",
+      "scaled_residual": 2.34296833499032e-16,
+      "passed": true
+    },
+    {
+      "name": "basis covariance 5",
+      "scaled_residual": 3.2415011946504145e-16,
+      "passed": true
+    },
+    {
+      "name": "exact Schur block elimination 5",
+      "scaled_residual": 6.9970664382278575e-19,
+      "passed": true
+    },
+    {
+      "name": "leading kinetic normalization 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "charged basis mass 5",
+      "scaled_residual": 1.0322535310051454e-20,
+      "passed": true
+    },
+    {
+      "name": "oscillation interference expansion 0",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "probability conservation 0",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "Majorana and charged phase cancellation 0",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "zero baseline 0",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (0, 0.2)",
+      "scaled_residual": 2.168404344971009e-19,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (0, 0.6)",
+      "scaled_residual": 5.204170427930421e-18,
+      "passed": true
+    },
+    {
+      "name": "oscillation interference expansion 1",
+      "scaled_residual": 6.938893903907228e-16,
+      "passed": true
+    },
+    {
+      "name": "probability conservation 1",
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "Majorana and charged phase cancellation 1",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "zero baseline 1",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (1, 0.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (1, 0.6)",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "oscillation interference expansion 2",
+      "scaled_residual": 9.211381657436846e-16,
+      "passed": true
+    },
+    {
+      "name": "probability conservation 2",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "Majorana and charged phase cancellation 2",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "zero baseline 2",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (2, 0.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (2, 0.6)",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "oscillation interference expansion 3",
+      "scaled_residual": 6.106226635438361e-16,
+      "passed": true
+    },
+    {
+      "name": "probability conservation 3",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "Majorana and charged phase cancellation 3",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "zero baseline 3",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (3, 0.2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (3, 0.6)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "oscillation interference expansion 4",
+      "scaled_residual": 9.43689570931383e-16,
+      "passed": true
+    },
+    {
+      "name": "probability conservation 4",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "Majorana and charged phase cancellation 4",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "zero baseline 4",
+      "scaled_residual": 1.1102230246251565e-15,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (4, 0.2)",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (4, 0.6)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oscillation interference expansion 5",
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "probability conservation 5",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "Majorana and charged phase cancellation 5",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "zero baseline 5",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (5, 0.2)",
+      "scaled_residual": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (5, 0.6)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "oscillation interference expansion 6",
+      "scaled_residual": 1.2212453270876722e-15,
+      "passed": true
+    },
+    {
+      "name": "probability conservation 6",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "Majorana and charged phase cancellation 6",
+      "scaled_residual": 1.3877787807814457e-16,
+      "passed": true
+    },
+    {
+      "name": "zero baseline 6",
+      "scaled_residual": 1.3322676295501878e-15,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (6, 0.2)",
+      "scaled_residual": 4.163336342344337e-17,
+      "passed": true
+    },
+    {
+      "name": "two-flavor transition (6, 0.6)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    }
+  ],
+  "script_sha256": "26f8bd3ea7e3dd7cd425c2d5a4f08db6390f443593df6e10da3e3383da90a8a1"
+}

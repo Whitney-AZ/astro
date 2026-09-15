@@ -1,0 +1,70 @@
+{
+  "python": "3.14.4",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "numpy": "2.3.3",
+  "scipy": "1.16.2",
+  "assumptions": "K=1, g=.6, all masses m; positive daughter energies; exact sine geometry and same spatial cluster K; factor1/2 for unordered daughters; angular cone theta<delta. Only local splitting phase weight checked, not exact full event energy delta or incoming preparation.",
+  "integration": "u=ln(1+theta^2/a(x)), a=(m/K)^2 f(x); x symmetry and cuts 0,rho,.01,.1,.5. quad epsabs=2e-10 epsrel=3e-8 limit=160.",
+  "prefactor": 0.00018141488118674713,
+  "alpha": 0.00018141488118674715,
+  "cases": [
+    {
+      "K": 1.0,
+      "g": 0.6,
+      "delta": 0.1,
+      "rho_m_over_Kdelta": 0.001,
+      "m": 0.0001,
+      "exact_massive_geometric_integral": 0.8090226734080528,
+      "leading_collinear_exact_angular_integral": 0.8089671307238245,
+      "mass_asymptotic_formula": 0.8089538165495794,
+      "geometry_minus_collinear": 5.554268422824915e-5,
+      "finite_mass_c_effective": -4.10790498927838,
+      "c_exact": -4.10806475936932,
+      "probability_exact_geometric": 0.00014676875217370643,
+      "probability_leading_formula": 0.0001467562605149076,
+      "comparison_tolerance": 0.020000500000000004
+    },
+    {
+      "K": 1.0,
+      "g": 0.6,
+      "delta": 0.03,
+      "rho_m_over_Kdelta": 0.001,
+      "m": 3e-5,
+      "exact_massive_geometric_integral": 0.8089721288151287,
+      "leading_collinear_exact_angular_integral": 0.8089671307238245,
+      "mass_asymptotic_formula": 0.8089538165495794,
+      "geometry_minus_collinear": 4.998091304164731e-6,
+      "finite_mass_c_effective": -4.10790498927838,
+      "c_exact": -4.10806475936932,
+      "probability_exact_geometric": 0.00014675958263238648,
+      "probability_leading_formula": 0.0001467562605149076,
+      "comparison_tolerance": 0.0018005
+    },
+    {
+      "K": 1.0,
+      "g": 0.6,
+      "delta": 0.03,
+      "rho_m_over_Kdelta": 0.0001,
+      "m": 3e-6,
+      "exact_massive_geometric_integral": 1.1927231779658676,
+      "leading_collinear_exact_angular_integral": 1.1927181779206542,
+      "mass_asymptotic_formula": 1.1927179987152539,
+      "geometry_minus_collinear": 5.000045213421345e-6,
+      "finite_mass_c_effective": -4.108062608904518,
+      "c_exact": -4.10806475936932,
+      "probability_exact_geometric": 0.0002163777336193573,
+      "probability_leading_formula": 0.00021637679402622262,
+      "comparison_tolerance": 0.0018005
+    }
+  ],
+  "quadrature_neval": {
+    "outer": 588,
+    "inner": 6174
+  },
+  "largest_reported_local_errors": {
+    "outer_max": 4.1811741269503223e-11,
+    "inner_max": 1.738116447919205e-10
+  },
+  "warnings": [],
+  "tests": "all assertions passed; missing identical1/2 and missing angular -1/2 finite term detected at all three points"
+}

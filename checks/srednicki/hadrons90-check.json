@@ -1,0 +1,474 @@
+{
+  "checks": 85,
+  "passed": true,
+  "records": [
+    {
+      "name": "full pseudoscalar numerator 0",
+      "scaled_residual": 4.207341070862108e-16,
+      "passed": true
+    },
+    {
+      "name": "massive axial vertex identity 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "first vector Ward numerator 0",
+      "scaled_residual": 1.5985231109138818e-15,
+      "passed": true
+    },
+    {
+      "name": "second vector Ward numerator 0",
+      "scaled_residual": 7.481143323785669e-16,
+      "passed": true
+    },
+    {
+      "name": "full pseudoscalar numerator 1",
+      "scaled_residual": 3.8021416174536793e-16,
+      "passed": true
+    },
+    {
+      "name": "massive axial vertex identity 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "first vector Ward numerator 1",
+      "scaled_residual": 6.248245399961195e-15,
+      "passed": true
+    },
+    {
+      "name": "second vector Ward numerator 1",
+      "scaled_residual": 8.272726862339134e-15,
+      "passed": true
+    },
+    {
+      "name": "full pseudoscalar numerator 2",
+      "scaled_residual": 1.0208579803389563e-15,
+      "passed": true
+    },
+    {
+      "name": "massive axial vertex identity 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "first vector Ward numerator 2",
+      "scaled_residual": 1.3217218098452525e-15,
+      "passed": true
+    },
+    {
+      "name": "second vector Ward numerator 2",
+      "scaled_residual": 2.4264459586713805e-15,
+      "passed": true
+    },
+    {
+      "name": "full pseudoscalar numerator 3",
+      "scaled_residual": 6.810993286291191e-16,
+      "passed": true
+    },
+    {
+      "name": "massive axial vertex identity 3",
+      "scaled_residual": 8.887072660214097e-17,
+      "passed": true
+    },
+    {
+      "name": "first vector Ward numerator 3",
+      "scaled_residual": 2.7634363147902376e-15,
+      "passed": true
+    },
+    {
+      "name": "second vector Ward numerator 3",
+      "scaled_residual": 8.869817902369661e-15,
+      "passed": true
+    },
+    {
+      "name": "full pseudoscalar numerator 4",
+      "scaled_residual": 2.853694415294715e-16,
+      "passed": true
+    },
+    {
+      "name": "massive axial vertex identity 4",
+      "scaled_residual": 2.0545390813371282e-16,
+      "passed": true
+    },
+    {
+      "name": "first vector Ward numerator 4",
+      "scaled_residual": 1.2317527266720352e-14,
+      "passed": true
+    },
+    {
+      "name": "second vector Ward numerator 4",
+      "scaled_residual": 1.0761569837060708e-14,
+      "passed": true
+    },
+    {
+      "name": "full pseudoscalar numerator 5",
+      "scaled_residual": 5.269504669267699e-16,
+      "passed": true
+    },
+    {
+      "name": "massive axial vertex identity 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "first vector Ward numerator 5",
+      "scaled_residual": 1.3146931912987703e-14,
+      "passed": true
+    },
+    {
+      "name": "second vector Ward numerator 5",
+      "scaled_residual": 1.3890968627579881e-14,
+      "passed": true
+    },
+    {
+      "name": "full pseudoscalar numerator 6",
+      "scaled_residual": 2.4963934651218474e-16,
+      "passed": true
+    },
+    {
+      "name": "massive axial vertex identity 6",
+      "scaled_residual": 3.0412315678453375e-17,
+      "passed": true
+    },
+    {
+      "name": "first vector Ward numerator 6",
+      "scaled_residual": 9.590916918307624e-15,
+      "passed": true
+    },
+    {
+      "name": "second vector Ward numerator 6",
+      "scaled_residual": 7.690034950382176e-15,
+      "passed": true
+    },
+    {
+      "name": "pure polarized density 0",
+      "scaled_residual": 2.2005485909648374e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (0, -1.27)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (0, 0.0)",
+      "scaled_residual": 4.901325939253606e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (0, 1.0)",
+      "scaled_residual": 1.7532583728677109e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (0, 1.27)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pure polarized density 1",
+      "scaled_residual": 9.544321035730458e-17,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (1, -1.27)",
+      "scaled_residual": 2.0856741048559065e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (1, 0.0)",
+      "scaled_residual": 2.514662518318115e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (1, 1.0)",
+      "scaled_residual": 3.034926895656535e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (1, 1.27)",
+      "scaled_residual": 1.891767565849604e-16,
+      "passed": true
+    },
+    {
+      "name": "pure polarized density 2",
+      "scaled_residual": 1.5751980808210192e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (2, -1.27)",
+      "scaled_residual": 1.0339038206267326e-15,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (2, 0.0)",
+      "scaled_residual": 1.8183081835477975e-15,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (2, 1.0)",
+      "scaled_residual": 5.374682460926855e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (2, 1.27)",
+      "scaled_residual": 6.574011671812225e-16,
+      "passed": true
+    },
+    {
+      "name": "pure polarized density 3",
+      "scaled_residual": 1.8132105365352417e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (3, -1.27)",
+      "scaled_residual": 1.7611877587588017e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (3, 0.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (3, 1.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (3, 1.27)",
+      "scaled_residual": 9.186748637838298e-16,
+      "passed": true
+    },
+    {
+      "name": "pure polarized density 4",
+      "scaled_residual": 1.7326410553381964e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (4, -1.27)",
+      "scaled_residual": 3.0639333221387677e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (4, 0.0)",
+      "scaled_residual": 2.6723539614381767e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (4, 1.0)",
+      "scaled_residual": 7.399679848675053e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (4, 1.27)",
+      "scaled_residual": 1.2728202413244539e-16,
+      "passed": true
+    },
+    {
+      "name": "pure polarized density 5",
+      "scaled_residual": 5.800513426895247e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (5, -1.27)",
+      "scaled_residual": 1.6808783910123897e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (5, 0.0)",
+      "scaled_residual": 1.2243708116266566e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (5, 1.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (5, 1.27)",
+      "scaled_residual": 2.150734312039675e-16,
+      "passed": true
+    },
+    {
+      "name": "pure polarized density 6",
+      "scaled_residual": 2.039711944866133e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (6, -1.27)",
+      "scaled_residual": 2.2048449926605632e-15,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (6, 0.0)",
+      "scaled_residual": 6.891277667541138e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (6, 1.0)",
+      "scaled_residual": 8.567074289124567e-16,
+      "passed": true
+    },
+    {
+      "name": "explicit polarized beta spin sum (6, 1.27)",
+      "scaled_residual": 7.160493137902093e-16,
+      "passed": true
+    },
+    {
+      "name": "phase integral relative (1.0, 0.0)",
+      "scaled_residual": 1.7541523789077473e-14,
+      "passed": true
+    },
+    {
+      "name": "phase integral relative (1.0, 0.2)",
+      "scaled_residual": 1.7541523789077473e-14,
+      "passed": true
+    },
+    {
+      "name": "phase integral relative (1.0, 0.9)",
+      "scaled_residual": 1.687538997430238e-14,
+      "passed": true
+    },
+    {
+      "name": "phase integral relative (1.0, 0.999999)",
+      "scaled_residual": 1.709743457922741e-14,
+      "passed": true
+    },
+    {
+      "name": "phase integral relative (0.001293, 0.000511)",
+      "scaled_residual": 1.687538997430238e-14,
+      "passed": true
+    },
+    {
+      "name": "phase integral relative (0.004594, 0.000511)",
+      "scaled_residual": 1.687538997430238e-14,
+      "passed": true
+    },
+    {
+      "name": "massive triangle parameter integral tau=0.0",
+      "scaled_residual": 7.771561172376096e-16,
+      "passed": true
+    },
+    {
+      "name": "massive triangle parameter integral tau=0.0001",
+      "scaled_residual": 1.3322232197409805e-15,
+      "passed": true
+    },
+    {
+      "name": "massive triangle parameter integral tau=0.02",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive triangle parameter integral tau=0.2",
+      "scaled_residual": 1.4460796420709278e-15,
+      "passed": true
+    },
+    {
+      "name": "massive triangle parameter integral tau=0.7",
+      "scaled_residual": 2.0568237347854502e-15,
+      "passed": true
+    },
+    {
+      "name": "massive triangle parameter integral tau=0.99",
+      "scaled_residual": 3.333827064841054e-14,
+      "passed": true
+    },
+    {
+      "name": "printed rounding c1",
+      "scaled_residual": 2.7275628389222817e-7,
+      "passed": true
+    },
+    {
+      "name": "printed rounding gA",
+      "scaled_residual": 1.9476006265659293e-7,
+      "passed": true
+    },
+    {
+      "name": "printed rounding joint gA",
+      "scaled_residual": 1.6939261025289712e-7,
+      "passed": true
+    },
+    {
+      "name": "printed rounding neutral pion eV",
+      "scaled_residual": 5.903366123437843e-7,
+      "passed": true
+    },
+    {
+      "name": "photon polarization sum m=0.135",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "photon Ward m=0.135",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "photon polarization sum m=0.7",
+      "scaled_residual": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "photon Ward m=0.7",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "photon polarization sum m=2.3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "photon Ward m=2.3",
+      "scaled_residual": 0.0,
+      "passed": true
+    }
+  ],
+  "triangle": [
+    {
+      "tau": 0.0,
+      "integral": 0.9999999999999992,
+      "analytic": 1.0
+    },
+    {
+      "tau": 0.0001,
+      "integral": 1.0000333351112243,
+      "analytic": 1.0000333351112256
+    },
+    {
+      "tau": 0.02,
+      "integral": 1.0067387052668537,
+      "analytic": 1.0067387052668537
+    },
+    {
+      "tau": 0.2,
+      "integral": 1.0748455266608234,
+      "analytic": 1.074845526660822
+    },
+    {
+      "tau": 0.7,
+      "integral": 1.4034162554656224,
+      "analytic": 1.4034162554656195
+    },
+    {
+      "tau": 0.99,
+      "integral": 2.184595331398216,
+      "analytic": 2.1845953313982887
+    }
+  ],
+  "inputs": {
+    "hbar": 6.582119569509066e-25,
+    "In": 5.690864289943128e-17,
+    "Ipi": 6.419498353247096e-14,
+    "c1": 0.963504727243716,
+    "gA": 1.3262117417068677,
+    "joint_gA": 1.343378227558306,
+    "neutral_width_eV": 7.733185434814812
+  },
+  "script_sha256": "fdd10b982400ae59bcc1c5fab87756f2b0fc2dc2dcbce66c879f134c2ecb0c2b",
+  "helper_sha256": "75c2ece494dd8cdef46e3043e588053e3f5cc8987403a34e9b75203e6afa7c74"
+}

@@ -1,0 +1,29 @@
+% Original vector reconstruction of Fig.51.2, PDF220 / printed208.
+% The open fermion chain points right; the scalar momentum ell points left.
+% The cross is the fermion kinetic/mass counterterm, not a Yukawa vertex.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \draw (0,0)--(64,0);
+  \draw[->] (3,0)--(11,0);
+  \draw[->] (27,0)--(37,0);
+  \draw[->] (53,0)--(61,0);
+  \draw[scalar] (48,0) arc[start angle=0,end angle=180,radius=16mm];
+  \draw[->] (34.778371,15.756924)
+    arc[start angle=80,end angle=100,radius=16mm];
+  \fill (16,0) circle[radius=.55mm];
+  \fill (48,0) circle[radius=.55mm];
+  \node at (32,11) {$\ell$};
+  \node[below] at (7,-2) {$p$};
+  \node[below] at (32,-2) {$p+\ell$};
+  \node[below] at (57,-2) {$p$};
+  \node at (74,0) {$+$};
+  \begin{scope}[shift={(85,0)}]
+    \draw (0,0)--(30,0);
+    \draw[->] (3,0)--(11,0);
+    \draw[->] (20,0)--(28,0);
+    \draw (13.2,-1.8)--(16.8,1.8) (13.2,1.8)--(16.8,-1.8);
+    \node[below] at (6,-2) {$p$};
+    \node[below] at (24,-2) {$p$};
+  \end{scope}
+\end{tikzpicture}

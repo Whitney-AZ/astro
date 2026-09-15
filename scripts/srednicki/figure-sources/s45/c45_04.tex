@@ -1,0 +1,33 @@
+% Original vector reconstruction: source Fig.45.4, PDF196 / printed184.
+% Momentum diagrams for e- phi -> e- phi. Left s, right u; relative plus.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \foreach \shift in {0,78}{
+    \begin{scope}[shift={(\shift,0)}]
+      \draw (0,0)--(54,0);
+      \draw[->] (5,0)--(12,0);
+      \draw[->] (23,0)--(30,0);
+      \draw[->] (41,0)--(48,0);
+      \foreach \x in {18,36}{
+        \draw[scalar] (\x,0)--(\x,-20);
+        \fill (\x,0) circle[radius=.55mm];
+      }
+      \node[above] at (8.5,2) {$p$};
+      \node[above] at (45,2) {$p'$};
+    \end{scope}
+  }
+  \node[above] at (27,2) {$p+k$};
+  \draw[->] (18,-13)--(18,-8);
+  \draw[->] (36,-8)--(36,-13);
+  \node[left] at (16,-11) {$k$};
+  \node[right] at (38,-11) {$k'$};
+  \node at (27,-28) {$(s)$};
+  \node[above] at (105,2) {$p-k'$};
+  \draw[->] (96,-8)--(96,-13);
+  \draw[->] (114,-13)--(114,-8);
+  \node[left] at (94,-11) {$k'$};
+  \node[right] at (116,-11) {$k$};
+  \node at (105,-28) {$(u)$};
+  \node at (66,-10) {$+$};
+\end{tikzpicture}

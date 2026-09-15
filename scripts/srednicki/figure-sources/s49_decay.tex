@@ -1,0 +1,32 @@
+% Original vector reconstruction: source Fig.49.1, PDF210 / printed198.
+% S49-G01-L and S49-G01-R are two orientations of ONE graph.
+% The equivalence symbol relates graph orientations, not bare spinor products.
+% Majorana arrows orient an open matrix chain; they are not particle-flow arrows.
+% Both final momenta p1prime,p2prime are physically outgoing and positive-energy.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  % Reference orientation: lower outgoing leg enters the oriented chain.
+  \draw[scalar] (0,0)--(24,0);
+  \draw[->] (7,0)--(16,0);
+  \draw (48,-14)--(24,0)--(48,14);
+  \draw[->] (40,-9.333333)--(31,-4.083333);
+  \draw[->] (31,4.083333)--(40,9.333333);
+  \fill (24,0) circle[radius=.55mm];
+  \node[above] at (11,2) {$k$};
+  \node[above left] at (40,12) {$p'_1$};
+  \node[below left] at (40,-12) {$-p'_2$};
+  \node at (61.5,0) {$\equiv$};
+  % Same graph after reversing every Majorana arrow and its line momentum.
+  \begin{scope}[shift={(75,0)}]
+    \draw[scalar] (0,0)--(24,0);
+    \draw[->] (7,0)--(16,0);
+    \draw (48,-14)--(24,0)--(48,14);
+    \draw[->] (40,9.333333)--(31,4.083333);
+    \draw[->] (31,-4.083333)--(40,-9.333333);
+    \fill (24,0) circle[radius=.55mm];
+    \node[above] at (11,2) {$k$};
+    \node[above left] at (40,12) {$-p'_1$};
+    \node[below left] at (40,-12) {$p'_2$};
+  \end{scope}
+\end{tikzpicture}

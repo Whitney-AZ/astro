@@ -1,0 +1,382 @@
+[
+  {
+    "output": "public/images/srednicki/05-inline-1.svg",
+    "sha256": "03f6a718e949edf816a6dfbb489f24922d1d65d662378850af337fe84d465559"
+  },
+  {
+    "output": "public/images/srednicki/10-inline-1.svg",
+    "sha256": "dadb3ef0d46eee46c5031bab45ae00a5d84bd6672b87b6b776e75a8f117d5bf5"
+  },
+  {
+    "output": "public/images/srednicki/10-inline-2.svg",
+    "sha256": "f8722124ce6d0402ab5a1641bbd541a7e010157cef9438907712158f4ae64c32"
+  },
+  {
+    "output": "public/images/srednicki/10-inline-3.svg",
+    "sha256": "b3d4f9ecb3343dd60dece55b3f52b51360c87399a1efef22737dfa76f4ed30ae"
+  },
+  {
+    "output": "public/images/srednicki/s14-fig14-1.svg",
+    "sha256": "11d69b692be19bb4704c3cb4cbefd0c246983a9fec1b385e720c77e2edccf7fd"
+  },
+  {
+    "output": "public/images/srednicki/s14-fig14-2.svg",
+    "sha256": "b3a89cf21346a029dc7a3e26d4cd972a22d84f3259e2db752d65398e5d6e7911"
+  },
+  {
+    "output": "public/images/srednicki/s14-fig14-3.svg",
+    "sha256": "0e2e460463bc4e272d741878af9c68bae6fbf4f8082bf604c38e2063653239e7"
+  },
+  {
+    "output": "public/images/srednicki/s14-fig14-4.svg",
+    "sha256": "8f7f17f03097d6fc7d34d8848d1e8b2633334745d6c79c173dcc4d1e209a3ed8"
+  },
+  {
+    "output": "public/images/srednicki/s14-self-energy.svg",
+    "sha256": "08b6ed2fdd6c5ba87fd0f27ec9cbfccdab37b8ece9bbdcb996b6497297f960d9"
+  },
+  {
+    "output": "public/images/srednicki/s16-triangle.svg",
+    "sha256": "e331ee794da21cd8a8bdaa093d4cdce926086707b55e7b403e44d2a0c0adb952"
+  },
+  {
+    "output": "public/images/srednicki/s17-box.svg",
+    "sha256": "36d98c56ca55ac7b8855973bac28ddc8d03afa31ad000211dbb9c0cdc83ed984"
+  },
+  {
+    "output": "public/images/srednicki/s18-box.svg",
+    "sha256": "6e98a3b4b141fb47d9fb4941b998bda915e920992a7f0a7eb59a5fa6d4c07ba1"
+  },
+  {
+    "output": "public/images/srednicki/s18-subtractions.svg",
+    "sha256": "90ae98aede06d2fe96c8736573f87ad5ac98b437d9a8f5e3b4fe82064b128c8b"
+  },
+  {
+    "output": "public/images/srednicki/s20-channels.svg",
+    "sha256": "408ead04a1e3c363fa6f826c1b611e440b24e2e3de6a374e85076a18ec4b4027"
+  },
+  {
+    "output": "public/images/srednicki/c25_decay.svg",
+    "sha256": "519886fc311fe1ee75ee81b620cb7482cd645534132f77a6b90ce180cb125770"
+  },
+  {
+    "output": "public/images/srednicki/c25_self_energy.svg",
+    "sha256": "770e22d289387a0501fabfd9f2bddf9f58b7b7a75e40ab83ce95cf4e24f8eff6"
+  },
+  {
+    "output": "public/images/srednicki/c26_split.svg",
+    "sha256": "efb73d5ede217465bd29fe78031fa37a83577101efb7abc8131ccea52893276a"
+  },
+  {
+    "output": "public/images/srednicki/c29_high_mode_ring.svg",
+    "sha256": "3080bcd9d0d37cdf839e2d04194fe4f8e84959555de49c293c05d8250ff49052"
+  },
+  {
+    "output": "public/images/srednicki/c29_phi6_mixing.svg",
+    "sha256": "0dab9f28dd7911280f87efd590413df0bd973c52b6a2542b1cf156b9d23fb24d"
+  },
+  {
+    "output": "public/images/srednicki/c31_symmetric_two.svg",
+    "sha256": "65fb2c284cf332f5b8d0654b767fea3c2e757d3d069a917d282b6923e1694ab1"
+  },
+  {
+    "output": "public/images/srednicki/c31_four_point.svg",
+    "sha256": "7be66364b3304f1ded6ddcf47667ef33e1103e35a1205d23570d1afd73b36cc5"
+  },
+  {
+    "output": "public/images/srednicki/c31_one_point.svg",
+    "sha256": "4206e149950740332f9948ca750c7b9627454e1c5ac556a9948ac35a6d175006"
+  },
+  {
+    "output": "public/images/srednicki/c31_broken_two.svg",
+    "sha256": "f2eb816b164f3729f9c7c27a45e68c0a15984b51ae0a63db7612ed5d1bebaabe"
+  },
+  {
+    "output": "public/images/srednicki/c31_three_point.svg",
+    "sha256": "19ccacb6a7db0b0ffc9213a6158a1529d830bc10b724116fd19054d775f8339e"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_01.svg",
+    "sha256": "9a646cf72fd5688e53f00c4f027655ac6649942dcd873c3297dcc53a96721cc1"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_02.svg",
+    "sha256": "29ef7c6801932293e3be3d86ef74f4c0789a63351992c06018b053a71a89e1a4"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_03.svg",
+    "sha256": "100335d30817fe569859aa9836e029c384681fe1e8d291cc71dae5e855face88"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_04.svg",
+    "sha256": "39676bb2991cef38941e86d8279e073a7bff03cebd65dfa7f3710301a6fb3484"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_05.svg",
+    "sha256": "718f6f84b9fe57348941e2595527fa87d864771b3ee16ef6416c8aa935303e8d"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_06.svg",
+    "sha256": "ce68c9784bf2e5e19536666729821521d36fa1353f4555d2a893e8a87d3ed6bd"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_07.svg",
+    "sha256": "79cd8fdec2b94258cf175ba70c6e66c47f521f8265ca7b1df4a16baa03cac203"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_08.svg",
+    "sha256": "d9d56eaa2e6ec6e7e2b71ff371c9026351b26dd21de02c3422fb258723841697"
+  },
+  {
+    "output": "public/images/srednicki/s45-c45_09.svg",
+    "sha256": "1032658d3d35e82e7c644b2906faa9d92bdf446d7d699d490c2ada2dec2f3ba3"
+  },
+  {
+    "output": "public/images/srednicki/s49_decay.svg",
+    "sha256": "2a17ab1690b1aeb782451e47d49dc17f3fe6790a22d67b91b8e25a1852c4d709"
+  },
+  {
+    "output": "public/images/srednicki/s49_scattering.svg",
+    "sha256": "273e7e38b3bd9308048ba8f517bd717ad02aabe7fe2aa4a89e90b159aca01454"
+  },
+  {
+    "output": "public/images/srednicki/s51_scalar_self_energy.svg",
+    "sha256": "650ee5147b50e7ce14a29e50659983295318c050e33f6dbc990ebc78995bcb24"
+  },
+  {
+    "output": "public/images/srednicki/s51_fermion_self_energy.svg",
+    "sha256": "061822d4d6744198a5838f14eafb171670589afe00b8fdf9994c65d154298d40"
+  },
+  {
+    "output": "public/images/srednicki/s51_vertex.svg",
+    "sha256": "4dfa68d5c33039a8c01f4e336e2a8b54e349a3fb7030ee18f95f4edfb2e91501"
+  },
+  {
+    "output": "public/images/srednicki/s51_box.svg",
+    "sha256": "bf25fe6d0651579196472c85795832d28c0bfe0821105513764821d4e8d8b11a"
+  },
+  {
+    "output": "public/images/srednicki/s53_background_ring.svg",
+    "sha256": "b593dad6c595c41229195bff6f5cbf4293eb3cda092219171ccf68ff8d5c0acc"
+  },
+  {
+    "output": "public/images/srednicki/s59-c59_01.svg",
+    "sha256": "cec2d78914f2683ba0098e22cb6fcf95bd0b888551c2b1bd6c3272d6df310d29"
+  },
+  {
+    "output": "public/images/srednicki/s60-c60_01.svg",
+    "sha256": "4a126e62d8078389196b1da9b928e606cb08693b07ca1a70f18c9c88fa77327c"
+  },
+  {
+    "output": "public/images/srednicki/s60-c60_02.svg",
+    "sha256": "a80bbc7e8712985e58effe8b58928e0a625cff14b69da14195da1071c882d2d3"
+  },
+  {
+    "output": "public/images/srednicki/s61-c61_01.svg",
+    "sha256": "819039b960fde24e9068790cdfcebb5a6ff6a3212a28803d8bc892ccbd88f28a"
+  },
+  {
+    "output": "public/images/srednicki/s61-c61_02.svg",
+    "sha256": "86eee3c343f1e5903192e4a090e39d9c7dcc9d8e36bcf34d518eb8708555ae1f"
+  },
+  {
+    "output": "public/images/srednicki/s62-c62_01.svg",
+    "sha256": "3c97d03278fafe35fd42dd748b4a88dbf2ddc5d6c1d754426abe477346adcc9b"
+  },
+  {
+    "output": "public/images/srednicki/s62-c62_02.svg",
+    "sha256": "94fe4cd0ee2cbe862eeaf6b04eb8b5fc58a22761f7edec75d5bbadf60efdda6b"
+  },
+  {
+    "output": "public/images/srednicki/s62-c62_03.svg",
+    "sha256": "7f486335b7ca3493628eaa9a1fda96b5a42d52d217afcf55159142c1eb83ec23"
+  },
+  {
+    "output": "public/images/srednicki/s63-c63_01.svg",
+    "sha256": "1edc0f750e450e4e3469009191297f44c21348475dbbceac77edaaedcc014d76"
+  },
+  {
+    "output": "public/images/srednicki/s65-c65_01.svg",
+    "sha256": "3f88f3e0b038bca3db4485959d1f9d81220b9f58ee66b7c65f9518417be29d57"
+  },
+  {
+    "output": "public/images/srednicki/s65-c65_02.svg",
+    "sha256": "bf0b54ff0c696a9c2769e29d5301e3673c1ff46d4db15cb0103c4435d34c2740"
+  },
+  {
+    "output": "public/images/srednicki/s65-c65_03.svg",
+    "sha256": "6db7a6acc3de61501708dd6eae39e6aaa3a761b02b59a0ce0c195f0dba1908c7"
+  },
+  {
+    "output": "public/images/srednicki/s65-c65_04.svg",
+    "sha256": "ccfbb26ef81b882facfd2028f387a9734797c425d7daf5362cdeff3569761408"
+  },
+  {
+    "output": "public/images/srednicki/s65-c65_05.svg",
+    "sha256": "49397f4d1268d793c39bf45c26b9fabc224bf472ba0862db0ef8ebf310258b5c"
+  },
+  {
+    "output": "public/images/srednicki/s72_gluon_vertices.svg",
+    "sha256": "caea9d4bcbc43872384419cabadfdd39ae50d1355f164c00f27d8f9a5e1ce05f"
+  },
+  {
+    "output": "public/images/srednicki/s72_matter_vertices.svg",
+    "sha256": "9009aa668285f7e9d9028b1980d3e5e3b05e386b1c6b9becb04026a31d775af5"
+  },
+  {
+    "output": "public/images/srednicki/s73_quark_self_energy.svg",
+    "sha256": "8d6adc51eb5293f2de535ba907c7cbaae46b97463569f1ec2f8b0d9667518c70"
+  },
+  {
+    "output": "public/images/srednicki/s73_quark_vertices.svg",
+    "sha256": "6ab106bbb12585de14e3de5d03eea1054d0fe102c281617e3d938f2a9d6f9542"
+  },
+  {
+    "output": "public/images/srednicki/s73_gluon_self_energy.svg",
+    "sha256": "4843f487db88c7b0bbcb001b2db7cdc3e69617d5b9dd561b1f66e085e0980186"
+  },
+  {
+    "output": "public/images/srednicki/s75_polarization.svg",
+    "sha256": "e2734fdc98a8a4bd6f7f4886fcd06a5426775b015060d5fbbf9700021075d543"
+  },
+  {
+    "output": "public/images/srednicki/s75_triangles.svg",
+    "sha256": "354a44b648f8a0cfa9bbe8551f74f6dffc02189e622f85e542a58ab95b1ce0ea"
+  },
+  {
+    "output": "public/images/srednicki/s78_background_loops.svg",
+    "sha256": "a9a0b35682f278c1382f9a20d8c372f03db773712139e1b0e5d7d7ad887a6509"
+  },
+  {
+    "output": "public/images/srednicki/s80_propagator.svg",
+    "sha256": "3fe85cf63a071c4df1c0c05bd6a673c3a18292cd103ef1a0a2343de30df8d384"
+  },
+  {
+    "output": "public/images/srednicki/s80_vertices.svg",
+    "sha256": "7c0b3add9f8e0754915ff3bba01192f50dd13bb4cfbcbda5be15087483bf0f44"
+  },
+  {
+    "output": "public/images/srednicki/s80_trees.svg",
+    "sha256": "ca3c9513ff951103187e96fa9cc0b0939d4de829244256aac453f784f04e6d93"
+  },
+  {
+    "output": "public/images/srednicki/s80_color_contraction.svg",
+    "sha256": "a7a3e32ea479aea66394e5195ff95d2ac6d937f08321a789eb206f9eabf3d945"
+  },
+  {
+    "output": "public/images/srednicki/s80_traceless_propagator.svg",
+    "sha256": "6e1818f5d300faf887795a3135bf9f6949abc6d54bc7264ef59d1ea3033a3e27"
+  },
+  {
+    "output": "public/images/srednicki/s81_gluon_trees.svg",
+    "sha256": "69a7ffbd17f4a7d4fcb767a16d33c0fe3bdab0d93b20513bfcd85f14ac1a5bcc"
+  },
+  {
+    "output": "public/images/srednicki/s81_quark_trees.svg",
+    "sha256": "30aea7ae18f405523ffa46dc4f673d38c5ada24ec6730977c64cdcdc61f48add"
+  },
+  {
+    "output": "public/images/srednicki/s81_quark_colors.svg",
+    "sha256": "f1e5090e60a8b1f84f95ecea91b9c4d0ea81f520dd7a9c9953edc2290f68efa2"
+  },
+  {
+    "output": "public/images/srednicki/s82_plaquette.svg",
+    "sha256": "17668e22a4e7d6d6a56ae8fd2d4b5fea7a277559a5f86f6be0e13c0c1a80d0ca"
+  },
+  {
+    "output": "public/images/srednicki/88-muon.svg",
+    "sha256": "4e2ca89c79ec236ffc7a3611c900962c5ecf799b462f9818dea0afa07ff5742e"
+  },
+  {
+    "output": "public/images/srednicki/90-nucleon-triangles.svg",
+    "sha256": "d01132c6aa078fea1bf73b4452df09ed24704220ebbb9b96c89777fc59d188fb"
+  },
+  {
+    "output": "public/images/srednicki/93-inline-1.svg",
+    "sha256": "e7a2c7e42d2a4330da137d81f8170b47c2cf98898f1c2cdfd995cd85ffa423fa"
+  },
+  {
+    "output": "public/images/srednicki/94-inline-1.svg",
+    "sha256": "cb70348ad77366593827d154a11be67f46513f5b2af542a3b9e5fd0f14b2697a"
+  },
+  {
+    "output": "public/images/srednicki/94-inline-2.svg",
+    "sha256": "b790e479df08ea4cec94c5693978e84d326605db367b9a741ce4284b3a246b79"
+  },
+  {
+    "output": "public/images/srednicki/c25_resonance.svg",
+    "sha256": "7a27c08f8934664dcba32969ed292c97f6a0ca2638c7f0af83db37a14e0b3a53"
+  },
+  {
+    "output": "public/images/srednicki/s09-g01-01.svg",
+    "sha256": "38552536c14deb26ce1d936cf7594c6c2e84e4f9c5f6fb48f3a5b2fb703342fb"
+  },
+  {
+    "output": "public/images/srednicki/s09-g01-02.svg",
+    "sha256": "fb8faf707686ff90a7c3bbe368dd03dc6f87c3c0fa1186781141bff1b81817c0"
+  },
+  {
+    "output": "public/images/srednicki/s09-g03-01.svg",
+    "sha256": "ecc4081cb19ddc785b4fa18ca1d0bb09ac2a14d768f0610a63d4ee0d4ef55244"
+  },
+  {
+    "output": "public/images/srednicki/s09-g05-01.svg",
+    "sha256": "ca047d87964f0afcb08739482a6d0e9bce956d1aaa182a9d3fc40ab93692bad3"
+  },
+  {
+    "output": "public/images/srednicki/s09-g06-01.svg",
+    "sha256": "5c98ff5f078c764d7c5992c0ed146c0d1cdc20a69c5af315f2b37844a7ea4f0f"
+  },
+  {
+    "output": "public/images/srednicki/s09-g07-02.svg",
+    "sha256": "ebf578330d02bf35fd351dd53381c79030546939ef188092fa03508dfaaac55e"
+  },
+  {
+    "output": "public/images/srednicki/s09-g07-03.svg",
+    "sha256": "137148471ceaf81c95530fbcf1090dc2c8889075d73723c3bcd4ad29a1d15614"
+  },
+  {
+    "output": "public/images/srednicki/s09-g07-08.svg",
+    "sha256": "a504995d86778d1d0b8f105eae1a7d24384e1ef085c05b9ad52fff176ff731a6"
+  },
+  {
+    "output": "public/images/srednicki/s09-g08-01.svg",
+    "sha256": "967575937ac0c9697b9697cbe922a9920d50467ec9090e2cec2eaf01260b4f5e"
+  },
+  {
+    "output": "public/images/srednicki/s09-g09-01.svg",
+    "sha256": "bec5d8a17b4499791f2df1229947fea46319587c62aa4f15afaee49406d3f2d0"
+  },
+  {
+    "output": "public/images/srednicki/s09-g09-02.svg",
+    "sha256": "63c02fa751fcb30a1a0e01932f79a4ce6325c198809978730cd34bb24f5141dc"
+  },
+  {
+    "output": "public/images/srednicki/s09-g10-01.svg",
+    "sha256": "a0cedc811076514e695b3c7c1d7b2e34f4b9eef61d673139fb8b04ab7220b82c"
+  },
+  {
+    "output": "public/images/srednicki/s09-g11-01.svg",
+    "sha256": "9e1aabef91c01259195eadab5cca30fb35d1ad7bfdc4f601f40521b4a4d0a592"
+  },
+  {
+    "output": "public/images/srednicki/s09-g11-02.svg",
+    "sha256": "bccebdb01f62f64b44f60cc3cdd5c01adf7ae255eff447ca854ac56ba7ab3f47"
+  },
+  {
+    "output": "public/images/srednicki/s09-g11-04.svg",
+    "sha256": "792f4e0dded86e1a158b1fad77f997c2ba482915dd9ce735d32b309e07636cf8"
+  },
+  {
+    "output": "public/images/srednicki/s09-g11-05.svg",
+    "sha256": "8e66f28cd811213fc6b549d9c6b8dddc56bbe5940345f26acea1250787b5f027"
+  },
+  {
+    "output": "public/images/srednicki/s09-g12-01.svg",
+    "sha256": "f00c70f16fb82788ef7bcb3ceded141998e0c61c938b6a81442b8fa61b51eab8"
+  },
+  {
+    "output": "public/images/srednicki/97-proton-decay.svg",
+    "sha256": "0b7b3c14e1416c44e20133770cdcf220d64da7f161dcef31f504a21c6e56810c"
+  }
+]

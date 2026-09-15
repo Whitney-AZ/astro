@@ -1,0 +1,36 @@
+% Original vector diagram for source Fig.29.1, PDF127 / printed115.
+% The manuscript supplies figure label C29a and its caption.
+% Three vertices are shown; the ellipsis stands for the rest of the n-cycle,
+% including the two low-mode external legs at each omitted quartic vertex.
+% Solid and dashed lines are modes of the SAME real scalar field.
+% Legend samples are annotations, not additional Feynman edges.
+\begin{tikzpicture}[x=12mm,y=12mm,line width=.7pt,
+  font=\fontsize{10.5}{12}\selectfont]
+  \coordinate (v1) at (0,1.1);
+  \coordinate (v2) at (-1.1,0);
+  \coordinate (v3) at (0,-1.1);
+  \draw[dashed] (v1)
+    .. controls (-.6075,1.1) and (-1.1,.6075) .. (v2)
+    .. controls (-1.1,-.6075) and (-.6075,-1.1) .. (v3);
+  \draw[dashed] (v1) .. controls (.52,1.1) and (.91,.75) .. (1.02,.43);
+  \draw[dashed] (v3) .. controls (.52,-1.1) and (.91,-.75) .. (1.02,-.43);
+  \node at (1.11,0) {$\vdots$};
+  \draw (v1) -- (-.55,2.03);
+  \draw (v1) -- (.55,2.03);
+  \draw (v2) -- (-2.10,.55);
+  \draw (v2) -- (-2.10,-.55);
+  \draw (v3) -- (-.55,-2.03);
+  \draw (v3) -- (.55,-2.03);
+  \foreach \v in {v1,v2,v3} \fill (\v) circle[radius=.65mm];
+  \node[above] at (-.55,2.03) {$p_1$};
+  \node[above] at (.55,2.03) {$p_2$};
+  \node[left] at (-2.10,.55) {$p_3$};
+  \node[left] at (-2.10,-.55) {$p_4$};
+  \node[below] at (-.55,-2.03) {$p_5$};
+  \node[below] at (.55,-2.03) {$p_6$};
+  \draw (2.15,.66) -- (2.85,.66);
+  \node[right] at (3.02,.66) {低动量：$|p_i|<\Lambda$};
+  \draw[dashed] (2.15,.07) -- (2.85,.07);
+  \node[right] at (3.02,.07) {高动量：$|k_j|>\Lambda$};
+  \node[anchor=west] at (2.15,-.68) {$n$ 个四价顶点，$2n$ 条外线};
+\end{tikzpicture}

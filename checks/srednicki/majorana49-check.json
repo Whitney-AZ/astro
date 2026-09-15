@@ -1,0 +1,342 @@
+{
+  "execution_utc": "2026-09-14T12:16:49.104990+00:00",
+  "software": {
+    "python": "3.14.4",
+    "numpy": "2.3.3",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O"
+  },
+  "program_sha256": "bb3f3e23ca96c3b6744089cfbd24a273dd06c5fabb597de6db71c5bfc7d05de2",
+  "assumptions": {
+    "metric": "(-,+,+,+)",
+    "natural_units": true,
+    "slash": "-p0 gamma0 + p_i gamma_i; Clifford anticommutator=-2g",
+    "C": "diag(E,-E), E=[[0,-1],[1,0]], C^-1=-C",
+    "paired_spinors": "v=C bar(u)^T for each full complex spin basis",
+    "Fock_order": "ket=b1^dag b2^dag|0>, bra=<0|b4 b3",
+    "amplitude": "g^2(Dt/(M^2-t)-Du/(M^2-u)+Ds/(M^2-s))",
+    "spin_average": "1/4 on two independent initial spins; sum all final spins",
+    "phase_space": "No identical-final-state factor belongs to this amplitude check",
+    "domain": "m,M>0, real g, on-shell CM external momenta, real tree denominators away from scalar pole",
+    "scope": "3 finite cases, not a proof; no old check script imported or executed"
+  },
+  "complete_spin_bases": [
+    [0.43, 0.71, 0.21, -0.32],
+    [1.13, -0.62, -0.57, 0.24],
+    [0.91, 1.41, 0.38, 0.81],
+    [1.67, 0.28, -0.71, 0.49]
+  ],
+  "tolerance": 2e-11,
+  "maximum_scaled_error": 1.5490948494183346e-15,
+  "passed": true,
+  "cases": [
+    {
+      "input": {
+        "name": "below_scalar_pole",
+        "m": 0.8,
+        "M": 3.7,
+        "g": 0.71,
+        "q": 0.5,
+        "theta": 1.1,
+        "phi": 0.4
+      },
+      "momenta": [
+        [0.9433981132056605, 0.0, 0.0, 0.5],
+        [0.9433981132056605, 0.0, 0.0, -0.5],
+        [0.9433981132056605, 0.4104281684604364, 0.17352624640419642, 0.22679806071278866],
+        [0.9433981132056605, -0.4104281684604364, -0.17352624640419642, -0.22679806071278866]
+      ],
+      "mandelstam": {
+        "s": 3.5600000000000005,
+        "t": -0.27320193928721137,
+        "u": -0.7267980607127886
+      },
+      "denominators": {
+        "s": 10.13,
+        "t": 13.963201939287213,
+        "u": 14.41679806071279
+      },
+      "kernels": {
+        "tt": {
+          "direct_spin_sum": {
+            "real": 8.027033228780809,
+            "imag": 5.857321614779631e-17
+          },
+          "ordered_trace": {
+            "real": 8.027033228780821,
+            "imag": 0.0
+          },
+          "invariant": 8.027033228780818
+        },
+        "uu": {
+          "direct_spin_sum": {
+            "real": 10.803041491905342,
+            "imag": 6.979824425777223e-17
+          },
+          "ordered_trace": {
+            "real": 10.803041491905354,
+            "imag": 0.0
+          },
+          "invariant": 10.80304149190535
+        },
+        "ss": {
+          "direct_spin_sum": {
+            "real": 1.0,
+            "imag": -3.5261067786853085e-18
+          },
+          "ordered_trace": {
+            "real": 1.0000000000000009,
+            "imag": 0.0
+          },
+          "invariant": 1.0
+        },
+        "tu": {
+          "direct_spin_sum": {
+            "real": 4.457518680171539,
+            "imag": -1.1102230246251565e-16
+          },
+          "ordered_trace": {
+            "real": 4.4575186801715425,
+            "imag": -5.306432626348255e-19
+          },
+          "invariant": 4.4575186801715425
+        },
+        "ts": {
+          "direct_spin_sum": {
+            "real": 0.4440020657811332,
+            "imag": 1.249000902703301e-16
+          },
+          "ordered_trace": {
+            "real": 0.4440020657811333,
+            "imag": -1.4279368807233228e-19
+          },
+          "invariant": 0.44400206578113327
+        },
+        "us": {
+          "direct_spin_sum": {
+            "real": 0.9440020657811332,
+            "imag": 1.249000902703301e-16
+          },
+          "ordered_trace": {
+            "real": 0.9440020657811338,
+            "imag": 1.4279368807233228e-19
+          },
+          "invariant": 0.9440020657811334
+        }
+      },
+      "spin_average": 0.013202876822920607,
+      "source_49_8": 0.013202876822920612,
+      "wrong_s_sign_spin_average": 0.01658253538027114,
+      "wrong_s_sign_relative_difference": 0.0033796585573505275,
+      "maximum_polarized_ts_imaginary_part": 1.1057522694840736,
+      "maximum_initial_exchange_error": 7.757919228897728e-18,
+      "maximum_final_exchange_error": 1.3877787807814457e-17,
+      "maximum_scaled_error": 1.5490948494183346e-15
+    },
+    {
+      "input": {
+        "name": "above_scalar_pole",
+        "m": 1.2,
+        "M": 2.5,
+        "g": 0.9,
+        "q": 1.3,
+        "theta": 0.73,
+        "phi": 1.2
+      },
+      "momenta": [
+        [1.7691806012954132, 0.0, 0.0, 1.3],
+        [1.7691806012954132, 0.0, 0.0, -1.3],
+        [1.7691806012954132, 0.31413899850920457, 0.8080131345885877, 0.9687267230483316],
+        [1.7691806012954132, -0.31413899850920457, -0.8080131345885877, -0.9687267230483316]
+      ],
+      "mandelstam": {
+        "s": 12.52,
+        "t": -0.8613105200743381,
+        "u": -5.898689479925662
+      },
+      "denominators": {
+        "s": -6.27,
+        "t": 7.111310520074338,
+        "u": 12.148689479925661
+      },
+      "kernels": {
+        "tt": {
+          "direct_spin_sum": {
+            "real": 43.841753003247064,
+            "imag": 3.489900009600925e-16
+          },
+          "ordered_trace": {
+            "real": 43.841753003247085,
+            "imag": 0.0
+          },
+          "invariant": 43.84175300324709
+        },
+        "uu": {
+          "direct_spin_sum": {
+            "real": 135.92504038932927,
+            "imag": -3.608839313275149e-16
+          },
+          "ordered_trace": {
+            "real": 135.92504038932933,
+            "imag": 0.0
+          },
+          "invariant": 135.92504038932933
+        },
+        "ss": {
+          "direct_spin_sum": {
+            "real": 45.69759999999999,
+            "imag": -1.4994021198227097e-17
+          },
+          "ordered_trace": {
+            "real": 45.697599999999994,
+            "imag": 0.0
+          },
+          "invariant": 45.697599999999994
+        },
+        "tu": {
+          "direct_spin_sum": {
+            "real": 33.517298348144074,
+            "imag": 1.7763568394002505e-15
+          },
+          "ordered_trace": {
+            "real": 33.517298348144095,
+            "imag": 1.222357372902631e-16
+          },
+          "invariant": 33.5172983481441
+        },
+        "ts": {
+          "direct_spin_sum": {
+            "real": 11.596421846520546,
+            "imag": 3.941291737419306e-15
+          },
+          "ordered_trace": {
+            "real": 11.596421846520549,
+            "imag": -0.0
+          },
+          "invariant": 11.596421846520553
+        },
+        "us": {
+          "direct_spin_sum": {
+            "real": 34.44522184652054,
+            "imag": 4.440892098500626e-16
+          },
+          "ordered_trace": {
+            "real": 34.44522184652055,
+            "imag": 0.0
+          },
+          "invariant": 34.445221846520546
+        }
+      },
+      "spin_average": 1.6787131723568791,
+      "source_49_8": 1.6787131723568796,
+      "wrong_s_sign_spin_average": 1.1745092547926337,
+      "wrong_s_sign_relative_difference": 0.30035143934467,
+      "maximum_polarized_ts_imaginary_part": 16.73546434355345,
+      "maximum_initial_exchange_error": 9.71445146547012e-17,
+      "maximum_final_exchange_error": 2.0897232743824306e-16,
+      "maximum_scaled_error": 8.496259507957863e-16
+    },
+    {
+      "input": {
+        "name": "asymmetric_angle",
+        "m": 0.47,
+        "M": 2.1,
+        "g": 0.36,
+        "q": 0.83,
+        "theta": 2.13,
+        "phi": 0.91
+      },
+      "momenta": [
+        [0.9538343671728335, 0.0, 0.0, 0.83],
+        [0.9538343671728335, 0.0, 0.0, -0.83],
+        [0.9538343671728335, 0.43181469719380283, 0.5554732046153352, -0.44032441022704416],
+        [0.9538343671728335, -0.43181469719380283, -0.5554732046153352, 0.44032441022704416]
+      ],
+      "mandelstam": {
+        "s": 3.6391999999999993,
+        "t": -2.1087385209768934,
+        "u": -0.6468614790231066
+      },
+      "denominators": {
+        "s": 0.7708000000000008,
+        "t": 6.5187385209768935,
+        "u": 5.056861479023107
+      },
+      "kernels": {
+        "tt": {
+          "direct_spin_sum": {
+            "real": 8.95408982412217,
+            "imag": 4.431654510070877e-17
+          },
+          "ordered_trace": {
+            "real": 8.954089824122178,
+            "imag": 0.0
+          },
+          "invariant": 8.954089824122182
+        },
+        "uu": {
+          "direct_spin_sum": {
+            "real": 2.342312338773592,
+            "imag": 1.5021529891479535e-18
+          },
+          "ordered_trace": {
+            "real": 2.3423123387735942,
+            "imag": 0.0
+          },
+          "invariant": 2.342312338773595
+        },
+        "ss": {
+          "direct_spin_sum": {
+            "real": 7.593331359999989,
+            "imag": 6.014305756693798e-17
+          },
+          "ordered_trace": {
+            "real": 7.5933313600000005,
+            "imag": 0.0
+          },
+          "invariant": 7.593331359999997
+        },
+        "tu": {
+          "direct_spin_sum": {
+            "real": 0.9257677007239431,
+            "imag": 2.220446049250313e-16
+          },
+          "ordered_trace": {
+            "real": 0.925767700723944,
+            "imag": 1.734723475976807e-18
+          },
+          "invariant": 0.9257677007239438
+        },
+        "ts": {
+          "direct_spin_sum": {
+            "real": -3.551277211337141,
+            "imag": -5.551115123125783e-17
+          },
+          "ordered_trace": {
+            "real": -3.5512772113371462,
+            "imag": 0.0
+          },
+          "invariant": -3.551277211337146
+        },
+        "us": {
+          "direct_spin_sum": {
+            "real": 0.24538846866285308,
+            "imag": 6.106226635438361e-16
+          },
+          "ordered_trace": {
+            "real": 0.24538846866285327,
+            "imag": 0.0
+          },
+          "invariant": 0.24538846866285313
+        }
+      },
+      "spin_average": 0.19294121789710625,
+      "source_49_8": 0.19294121789710644,
+      "wrong_s_sign_spin_average": 0.24465505747659466,
+      "wrong_s_sign_relative_difference": 0.05171383957948822,
+      "maximum_polarized_ts_imaginary_part": 3.5556139555468023,
+      "maximum_initial_exchange_error": 6.836219262631321e-17,
+      "maximum_final_exchange_error": 1.0007415106216802e-16,
+      "maximum_scaled_error": 1.5206074311435992e-15
+    }
+  ]
+}

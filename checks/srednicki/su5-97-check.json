@@ -1,0 +1,373 @@
+{
+  "checks": 73,
+  "all_passed": true,
+  "max_scaled_residual": 1.4238583238573986e-14,
+  "script_sha256": "63fda01b6a58a438f3663b28d9d481d0bd5a03de18d7eee4abb60f73876ca394",
+  "records": [
+    {
+      "name": "Noncommuting polarized cubic traces N=3 sample=0",
+      "scaled_residual": 2.317462064045051e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=3 sample=0",
+      "scaled_residual": 1.8561864930287316e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=3 sample=1",
+      "scaled_residual": 6.551567374545483e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=3 sample=1",
+      "scaled_residual": 4.7518830307568197e-17,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=3 sample=2",
+      "scaled_residual": 1.2560739669470201e-15,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=3 sample=2",
+      "scaled_residual": 1.8751647557488865e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=3 sample=3",
+      "scaled_residual": 1.4702858649760086e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=3 sample=3",
+      "scaled_residual": 1.6659760308782678e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=4 sample=0",
+      "scaled_residual": 4.463041323674983e-15,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=4 sample=0",
+      "scaled_residual": 1.4632140468232206e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=4 sample=1",
+      "scaled_residual": 8.484312441289354e-15,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=4 sample=1",
+      "scaled_residual": 3.96281864132645e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=4 sample=2",
+      "scaled_residual": 1.4238583238573986e-14,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=4 sample=2",
+      "scaled_residual": 3.0532857184334097e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=4 sample=3",
+      "scaled_residual": 9.057678187205883e-15,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=4 sample=3",
+      "scaled_residual": 1.9104681897697665e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=5 sample=0",
+      "scaled_residual": 6.356238086944851e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=5 sample=0",
+      "scaled_residual": 3.1503636274178735e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=5 sample=1",
+      "scaled_residual": 6.601682214866652e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=5 sample=1",
+      "scaled_residual": 1.7589129357565829e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=5 sample=2",
+      "scaled_residual": 6.182996984644067e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=5 sample=2",
+      "scaled_residual": 1.6537147125659495e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=5 sample=3",
+      "scaled_residual": 1.794186894147442e-15,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=5 sample=3",
+      "scaled_residual": 1.4567844393156392e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=6 sample=0",
+      "scaled_residual": 9.15299523748658e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=6 sample=0",
+      "scaled_residual": 1.3661221441931301e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=6 sample=1",
+      "scaled_residual": 4.446739204580916e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=6 sample=1",
+      "scaled_residual": 1.3269231446794359e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=6 sample=2",
+      "scaled_residual": 3.294087830362507e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=6 sample=2",
+      "scaled_residual": 4.678499922371659e-16,
+      "passed": true
+    },
+    {
+      "name": "Noncommuting polarized cubic traces N=6 sample=3",
+      "scaled_residual": 7.556235961224533e-16,
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric commutator representation N=6 sample=3",
+      "scaled_residual": 1.998835204016749e-16,
+      "passed": true
+    },
+    {
+      "name": "All 24 generator trace normalizations",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "All 24 real vector masses from original adjoint kinetic term",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "10 hypercharge multiplicities",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Hypercharge normalization",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Z6 kernel representative 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Z6 kernel representative 1",
+      "scaled_residual": 1.832573087291423e-17,
+      "passed": true
+    },
+    {
+      "name": "Z6 kernel representative 2",
+      "scaled_residual": 1.1493874523372618e-16,
+      "passed": true
+    },
+    {
+      "name": "Z6 kernel representative 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Z6 kernel representative 4",
+      "scaled_residual": 7.971042684183559e-18,
+      "passed": true
+    },
+    {
+      "name": "Z6 kernel representative 5",
+      "scaled_residual": 1.832573087291423e-17,
+      "passed": true
+    },
+    {
+      "name": "Full 15-species Xdagger current alpha=0, weak=0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full 15-species Xdagger current alpha=0, weak=1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full 15-species Xdagger current alpha=1, weak=0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full 15-species Xdagger current alpha=1, weak=1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full 15-species Xdagger current alpha=2, weak=0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full 15-species Xdagger current alpha=2, weak=1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Complete first invariant Yukawa expansion 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "All 120 epsilon terms including qq Higgs coupling 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Five scalar quadratic coefficients 0",
+      "scaled_residual": 9.080215408858593e-19,
+      "passed": true
+    },
+    {
+      "name": "Complete first invariant Yukawa expansion 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "All 120 epsilon terms including qq Higgs coupling 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Five scalar quadratic coefficients 1",
+      "scaled_residual": 9.940074027029099e-18,
+      "passed": true
+    },
+    {
+      "name": "Complete first invariant Yukawa expansion 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "All 120 epsilon terms including qq Higgs coupling 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Five scalar quadratic coefficients 2",
+      "scaled_residual": 1.1065734823524734e-18,
+      "passed": true
+    },
+    {
+      "name": "Complete first invariant Yukawa expansion 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "All 120 epsilon terms including qq Higgs coupling 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Five scalar quadratic coefficients 3",
+      "scaled_residual": 1.7948015297506097e-16,
+      "passed": true
+    },
+    {
+      "name": "Complete first invariant Yukawa expansion 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "All 120 epsilon terms including qq Higgs coupling 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Five scalar quadratic coefficients 4",
+      "scaled_residual": 3.3421182585926726e-16,
+      "passed": true
+    },
+    {
+      "name": "All baryon-violating scalar source coefficients 0",
+      "scaled_residual": 1.7135444090523537e-16,
+      "passed": true
+    },
+    {
+      "name": "All baryon-violating scalar source coefficients 1",
+      "scaled_residual": 1.3529222148031218e-17,
+      "passed": true
+    },
+    {
+      "name": "All baryon-violating scalar source coefficients 2",
+      "scaled_residual": 1.914810089230261e-16,
+      "passed": true
+    },
+    {
+      "name": "All baryon-violating scalar source coefficients 3",
+      "scaled_residual": 2.94036547578394e-16,
+      "passed": true
+    },
+    {
+      "name": "All baryon-violating scalar source coefficients 4",
+      "scaled_residual": 1.3624679658327855e-16,
+      "passed": true
+    },
+    {
+      "name": "All baryon-violating scalar source coefficients 5",
+      "scaled_residual": 5.445578658457973e-18,
+      "passed": true
+    },
+    {
+      "name": "All 100 Clifford anticommutators",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Even spinor dimension",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU5 preserves internal chirality",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Even spinor hypercharges 1+10+bar5",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    }
+  ]
+}

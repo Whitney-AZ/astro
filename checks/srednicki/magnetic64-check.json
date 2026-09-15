@@ -1,0 +1,159 @@
+{
+  "executed_at_utc": "2026-09-14T13:11:43.945797+00:00",
+  "executed_script_sha256": "9a8f52aff7b255e6d6272fd5f2302847392ffbe7a608089d503fdfc5d78abb78",
+  "software": {
+    "Python": "3.14.4",
+    "NumPy": "2.3.3",
+    "SciPy": "1.16.2"
+  },
+  "conventions": "g=(-,+,+,+), Clifford=-2g, e<0, m>0, canonical rest spin up; A2=B*x at time0; radial Gaussian normalized with d3p/((2pi)^3 2E).",
+  "scope": "C64.23-28 and EX64.1.14 radial limit; finite differences and quadrature are evidence for tested cases, not proof of general remainder bounds.",
+  "basis_conversion": [
+    {
+      "mu": 0,
+      "matrix_max_residual": 2.220446049250313e-16
+    },
+    {
+      "mu": 1,
+      "matrix_max_residual": 2.220446049250313e-16
+    },
+    {
+      "mu": 2,
+      "matrix_max_residual": 2.220446049250313e-16
+    },
+    {
+      "mu": 3,
+      "matrix_max_residual": 2.220446049250313e-16
+    }
+  ],
+  "bilinears": [
+    {
+      "p": [0.31, -0.27, 0.48],
+      "mass": 1.7,
+      "finite_difference_step": 1.7e-5,
+      "minimal_complex": [0.9849199064819201, -8.602364196305679e-13],
+      "pauli_complex": [1.7480978535268894, 6.23360890816917e-19],
+      "derived_targets": [0.98491990649306, 1.7480978535268894],
+      "absolute_residuals": [1.1173142473371101e-11, 6.23360890816917e-19]
+    },
+    {
+      "p": [-0.6, 0.2, -0.4],
+      "mass": 1.7,
+      "finite_difference_step": 1.7e-5,
+      "minimal_complex": [0.9455173643901444, 7.062649838879467e-13],
+      "pauli_complex": [1.8124411157861935, 6.025923514388085e-20],
+      "derived_targets": [0.945517364392138, 1.8124411157861935],
+      "absolute_residuals": [2.114927449296022e-12, 6.025923514388085e-20]
+    },
+    {
+      "p": [0.9, 0.8, -0.7],
+      "mass": 1.7,
+      "finite_difference_step": 1.7e-5,
+      "minimal_complex": [0.9054415953085156, 1.4999939850384563e-12],
+      "pauli_complex": [2.072011773967117, 2.7714247464135213e-18],
+      "derived_targets": [0.9054415953098766, 2.0720117739671173],
+      "absolute_residuals": [2.025354721801639e-12, 4.440978575723801e-16]
+    }
+  ],
+  "gaussian_width": [
+    {
+      "am": 4.0,
+      "normalization_radial_integral": 0.4244171883025599,
+      "estimated_denominator_error": 1.4737020619232031e-12,
+      "values": {
+        "minimal": {
+          "normalized_quadrature": 0.945981832286984,
+          "rest_plus_first_width_term": 0.9375,
+          "am4_times_absolute_difference": 2.1713490654678935,
+          "acceptance_scaled_tolerance": 4.0,
+          "estimated_numerator_error": 1.4447636092831738e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        },
+        "pauli_coefficient": {
+          "normalized_quadrature": 0.9862760436336646,
+          "rest_plus_first_width_term": 0.984375,
+          "am4_times_absolute_difference": 0.48666717021814065,
+          "acceptance_scaled_tolerance": 1.0,
+          "estimated_numerator_error": 1.469454820341589e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        },
+        "orbital_coefficient": {
+          "normalized_quadrature": 0.9588281309009941,
+          "rest_plus_first_width_term": 0.953125,
+          "am4_times_absolute_difference": 1.4600015106544788,
+          "acceptance_scaled_tolerance": 3.0,
+          "estimated_numerator_error": 1.4623626204722041e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        }
+      }
+    },
+    {
+      "am": 8.0,
+      "normalization_radial_integral": 0.43806632104720267,
+      "estimated_denominator_error": 1.4645260433973936e-12,
+      "values": {
+        "minimal": {
+          "normalized_quadrature": 0.9849929711777187,
+          "rest_plus_first_width_term": 0.984375,
+          "am4_times_absolute_difference": 2.5312099439356643,
+          "acceptance_scaled_tolerance": 4.0,
+          "estimated_numerator_error": 1.48709782984297e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        },
+        "pauli_coefficient": {
+          "normalized_quadrature": 0.9962308634930029,
+          "rest_plus_first_width_term": 0.99609375,
+          "am4_times_absolute_difference": 0.5616168673400352,
+          "acceptance_scaled_tolerance": 1.0,
+          "estimated_numerator_error": 1.470267330307804e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        },
+        "orbital_coefficient": {
+          "normalized_quadrature": 0.9886925904790088,
+          "rest_plus_first_width_term": 0.98828125,
+          "am4_times_absolute_difference": 1.6848506020201057,
+          "acceptance_scaled_tolerance": 3.0,
+          "estimated_numerator_error": 1.4821425959216816e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        }
+      }
+    },
+    {
+      "am": 16.0,
+      "normalization_radial_integral": 0.44182468024273464,
+      "estimated_denominator_error": 1.4504574664628866e-12,
+      "values": {
+        "minimal": {
+          "normalized_quadrature": 0.9961341271137502,
+          "rest_plus_first_width_term": 0.99609375,
+          "am4_times_absolute_difference": 2.6461545267302427,
+          "acceptance_scaled_tolerance": 4.0,
+          "estimated_numerator_error": 1.4580283897676255e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        },
+        "pauli_coefficient": {
+          "normalized_quadrature": 0.9990323680784442,
+          "rest_plus_first_width_term": 0.9990234375,
+          "am4_times_absolute_difference": 0.5852743889190606,
+          "acceptance_scaled_tolerance": 1.0,
+          "estimated_numerator_error": 1.4523185859136518e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        },
+        "orbital_coefficient": {
+          "normalized_quadrature": 0.9970971042353325,
+          "rest_plus_first_width_term": 0.9970703125,
+          "am4_times_absolute_difference": 1.7558231667499058,
+          "acceptance_scaled_tolerance": 3.0,
+          "estimated_numerator_error": 1.456170136634267e-12,
+          "note": "Tolerance checks tested asymptotic scaling only; it is not a universal analytic bound."
+        }
+      }
+    }
+  ],
+  "rest_derivative": {
+    "max_residual": 6.779021788361206e-12,
+    "step": 1.7e-5
+  },
+  "comparison_groups": 20,
+  "status": "pass"
+}

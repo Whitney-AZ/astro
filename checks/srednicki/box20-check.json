@@ -1,0 +1,71 @@
+{
+  "scope": "Euclidean massless box double integral and right-angle one-loop amplitude assembly",
+  "passed": true,
+  "box_cases": [
+    {
+      "A": 1,
+      "B": 1,
+      "quadrature128": 14.804407155836408,
+      "quadrature256": 14.804406636547464,
+      "closed_form": 14.804406601634037,
+      "relative_error": 2.358313100359055e-9
+    },
+    {
+      "A": 0.1,
+      "B": 1,
+      "quadrature128": 41.37682580211583,
+      "quadrature256": 41.376825080076145,
+      "closed_form": 41.37682503154842,
+      "relative_error": 1.1728238380470657e-9
+    },
+    {
+      "A": 1,
+      "B": 10,
+      "quadrature128": 4.1376825802115835,
+      "quadrature256": 4.1376825080076145,
+      "closed_form": 4.137682503154843,
+      "relative_error": 1.1728236160024608e-9
+    },
+    {
+      "A": 0.01,
+      "B": 1,
+      "quadrature128": 92.30851639178661,
+      "quadrature256": 92.30850616190698,
+      "closed_form": 92.30850547426617,
+      "relative_error": 7.44937644903132e-9
+    },
+    {
+      "A": 3,
+      "B": 7,
+      "quadrature128": 3.176255497877488,
+      "quadrature256": 3.1762554245227355,
+      "closed_form": 3.176255419591827,
+      "relative_error": 1.5524281860024303e-9
+    },
+    {
+      "A": 100,
+      "B": 1,
+      "quadrature128": 0.9230851639178645,
+      "quadrature256": 0.9230850616190733,
+      "closed_form": 0.9230850547426621,
+      "relative_error": 7.4493797797003936e-9
+    }
+  ],
+  "right_angle_cases": [
+    {
+      "s_over_m2": 100,
+      "alpha": 0.001,
+      "relative_error": 1.8056514707709822e-18
+    },
+    {
+      "s_over_m2": 1000,
+      "alpha": 0.01,
+      "relative_error": 2.28953970772584e-18
+    },
+    {
+      "s_over_m2": 1000000.0,
+      "alpha": 0.001,
+      "relative_error": 1.4226702287520235e-16
+    }
+  ]
+}

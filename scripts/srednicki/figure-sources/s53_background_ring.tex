@@ -1,0 +1,27 @@
+% Original vector reconstruction of Fig.53.1, PDF228 / printed216.
+% Generic directed loop with n insertions of the fixed real background phi.
+% Clockwise arrows: x2 -> x1 -> xn -> ... -> x3 -> x2.
+% A line from y to x is Delta(x-y)/i (complex scalar chi), or S(x-y)/i (Dirac).
+% Hence reading against the arrows gives the kernel order in Eq.(53.15).
+% Four labelled insertion vertices are shown; the small dots mark omitted ones.
+% No external phi propagators: every insertion is ig phi(xj), with no gamma5.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont]
+  % Leave a gap on the right for the omitted sequence xn -> ... -> x3.
+  \draw (-30:20) arc[start angle=-30,end angle=-330,radius=20mm];
+  \foreach \a/\b in {100/80,190/170,280/260}{
+    \draw[->] (\a:20) arc[start angle=\a,end angle=\b,radius=20mm];
+  }
+  \foreach \a in {135,225,315,45}{\fill (\a:20) circle[radius=.75mm];}
+  \foreach \a in {15,0,-15}{\fill (\a:20) circle[radius=.28mm];}
+  \node[above left] at (-17,17) {$x_1$};
+  \node[below left] at (-17,-17) {$x_2$};
+  \node[below right] at (17,-17) {$x_3$};
+  \node[above right] at (17,17) {$x_n$};
+  % Legend applies to every insertion and every directed internal line.
+  \fill (36,14) circle[radius=.75mm];
+  \node[anchor=west] at (40,14) {$ig\,\varphi(x_j)$};
+  \node[anchor=west] at (34,4) {$\chi$ 内线：$\Delta/i$};
+  \node[anchor=west] at (34,-4) {$\Psi$ 内线：$S/i$};
+  \node[anchor=west] at (34,-14) {循环计数：$1/n$};
+\end{tikzpicture}

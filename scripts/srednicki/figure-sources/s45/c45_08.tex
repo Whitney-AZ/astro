@@ -1,0 +1,45 @@
+% Original vector reconstruction: source Fig.45.8, PDF199 / printed187.
+% Original scattering layout: upper e- line L->R, lower e+ line R->L.
+% The annihilation scalar carries p1+p2: s channel, not the u misprint in45.25.
+% Only the relative minus is shown; no overall amplitude convention is imposed.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  % Left: t-channel scattering layout.
+  \foreach \y in {0,-24}{
+    \draw (0,\y)--(54,\y);
+    \fill (27,\y) circle[radius=.55mm];
+  }
+  \draw[->] (8,0)--(18,0);
+  \draw[->] (35,0)--(45,0);
+  \draw[->] (18,-24)--(8,-24);
+  \draw[->] (45,-24)--(35,-24);
+  \draw[scalar] (27,0)--(27,-24);
+  \draw[->] (27,-8)--(27,-15);
+  \node[above] at (4,2) {$p_1$};
+  \node[above] at (50,2) {$p'_1$};
+  \node[below] at (4,-26) {$-p_2$};
+  \node[below] at (50,-26) {$-p'_2$};
+  \node[right] at (30,-12) {$p_1-p'_1$};
+  \node at (27,-37) {$(t)$};
+  \node at (66,-12) {$-$};
+  % Right: annihilation endpoints remain in the source's physical layout.
+  \begin{scope}[shift={(78,0)}]
+    \draw (0,5)--(16,-12)--(0,-29);
+    \draw (54,-29)--(38,-12)--(54,5);
+    \draw[->] (4,.75)--(10,-5.625);
+    \draw[->] (12,-16.25)--(6,-22.625);
+    \draw[->] (50,-24.75)--(44,-18.375);
+    \draw[->] (42,-7.75)--(48,-1.375);
+    \draw[scalar] (16,-12)--(38,-12);
+    \draw[->] (23,-12)--(30,-12);
+    \fill (16,-12) circle[radius=.55mm];
+    \fill (38,-12) circle[radius=.55mm];
+    \node[above right] at (8,-3.5) {$p_1$};
+    \node[below right] at (8,-20.5) {$-p_2$};
+    \node[above left] at (46,-3.5) {$p'_1$};
+    \node[below left] at (46,-20.5) {$-p'_2$};
+    \node[above] at (27,-10) {$p_1+p_2$};
+    \node at (27,-37) {$(s)$};
+  \end{scope}
+\end{tikzpicture}

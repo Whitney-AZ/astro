@@ -1,0 +1,352 @@
+---
+title: 'Srednicki §17 其他 1PI 顶点'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [17]
+hideFromHome: true
+draft: false
+---
+
+<span id="c17"></span>
+
+上一节已经求得三点顶点的圈修正。同样地，截去外传播子，把具有 $n$ 条外腿的单粒子不可约图相加，就定义了 $iV_n(k_1,\ldots,k_n)$。六维立方理论只含原始三价相互作用，但圈图也会产生更多外腿的1PI顶点。这些顶点的单圈贡献已经紫外有限，因而可以用已有的耦合与质量直接求出。下面先从图的结构解释它们与三点顶点的差别，再以四点函数为例完成计算。
+
+<span id="c17-counting"></span>
+
+## 为什么没有树级项
+
+为了确定领先贡献来自哪一阶，设一个只含原始三价顶点的连通图有 $V$ 个顶点、$I$ 条内部线、$n$ 条外线和 $L$ 个独立圈。每个顶点带三个半边，每条内线连接两个半边，外线则各占一个；再结合第10节的独立圈关系，得到
+
+<span id="eq:c17-line-vertex-count"></span>
+
+$$
+3V=2I+n,\qquad L=I-V+1.
+\tag{17.1}
+$$
+
+由第二式写出 $I=L+V-1$，代入第一式，就能将顶点数和内线数都表示成外腿数与圈数：
+
+<span id="eq:c17-loop-count-solved"></span>
+
+$$
+V=n-2+2L,\qquad I=n-3+3L.
+\tag{17.2}
+$$
+
+树图的 $L=0$，所以在 $n>3$ 时至少有一条内部线。树的每条内部线都是桥边：若去掉它以后，两端仍能沿另一条路径相连，这条路径与原线就构成一个圈，与树的定义矛盾。因此切断任意一条内部线都会使这些树图分裂，它们不属于1PI图。第10节的四粒子交换树图仍对连通散射振幅有贡献；这里的 $V_4$ 收集的是其中单粒子不可约的部分，因而没有树级项。
+
+领先贡献于是来自单圈。此时式[（17.2）](#eq:c17-loop-count-solved)给出 $V=I=n$。只有一个独立圈的连通图，由一条环和可能附着在环上的树构成；1PI条件排除了附着树的内部桥边，只留下环本身。环上的每个三价点已有两条内部半边，恰好再接一条外线。所以 $V_{n>3}$ 的领先图都是带 $n$ 条内线的多边形，耦合阶数为 $g^n$。
+
+这种图形也使紫外行为容易判断。在大欧氏圈动量下，每条传播子给出 $q^{-2}$，径向测度为 $q^{d-1}dq$，于是紫外部分的收敛条件为
+
+<span id="eq:c17-one-loop-ultraviolet"></span>
+
+$$
+\int^\infty dq\,q^{d-1-2n}
+\quad\hbox{收敛}\quad\Longleftrightarrow\quad d<2n.
+\tag{17.3}
+$$
+
+等号处对应对数发散。六维的 $n>3$ 满足收敛条件，而三价顶点恰好位于对数发散的边界；这就解释了上一节为什么需要顶点反项，而更多外腿的一圈积分可以直接计算。下面继续取 $m>0$，先在欧氏外动量域中排除红外和阈值奇点，再用Feynman处方取得物理动量的边界值。
+
+<span id="c17-boxes"></span>
+
+## 四点顶点的三个箱图
+
+现在令 $n=4$。将所有外动量取为流入，动量守恒写为
+
+<span id="eq:c17-all-incoming"></span>
+
+$$
+k_1+k_2+k_3+k_4=0.
+\tag{17.4}
+$$
+
+四个外标签沿环排列，共有 $4!$ 个顺序。由于同一个环可以从任意顶点开始记录，每种图被重复计算4次；实标量图又没有沿环顺、逆方向的区别，两种方向再重复2次。因此不同的箱图共有
+
+<span id="eq:c17-number-of-boxes"></span>
+
+$$
+N_4=\frac{4!}{4\cdot2}=3,
+\tag{17.5}
+$$
+
+选取代表环序 $(1,2,3,4)$、$(1,3,2,4)$、$(1,2,4,3)$，就能列齐这三个贡献。后两个环序分别由第一个作 $k_3\leftrightarrow k_2$、$k_3\leftrightarrow k_4$ 交换得到。图17a给出第一种环序及相应的圈动量方向。
+
+<span id="c17-figure"></span>
+
+![四条外腿按 1、2、3、4 环序排列的箱图，内部动量沿圈传递](/images/srednicki/s17-box.svg)
+
+图17a：环序为$(1,2,3,4)$的箱图及动量方向。
+外部短线均已截肢。沿左、下、右、上四条内部线，
+动量依次为 $\ell$、$\ell+k_2$、$\ell+k_2+k_3$、$\ell-k_1$。
+最后一条线的动量由
+$\ell+k_2+k_3+k_4=\ell-k_1$ 保证右上顶点的动量守恒。
+标签1与3位于相对的顶点；另外两种相对关系给其余两个箱图。
+
+确定了三种不同的图以后，再看每一幅图的权重。外标签固定了全部内部顶点，内线之间又没有可交换的平行重边，所以单幅图的对称因子为1。式[（17.5）](#eq:c17-number-of-boxes)中的8用于消除列举环序时的重复，到给单图赋权时无需再除一次。
+
+每个箱图包含四个 $ig$ 和四条 $\widetilde\Delta/i$，相位相乘为 $(ig)^4(1/i)^4=g^4$。按图中路由，将四条内线的分母记为
+
+<span id="eq:c17-four-line-denominators"></span>
+
+$$
+\begin{aligned}
+A_1&=(\ell-k_1)^2+m^2-i0,&
+A_2&=(\ell+k_2)^2+m^2-i0,\\
+A_3&=(\ell+k_2+k_3)^2+m^2-i0,&
+A_4&=\ell^2+m^2-i0 .
+\end{aligned}
+\tag{17.6}
+$$
+
+将这个箱图与另外两个外标签交换后的图相加，得到
+
+<span id="eq:c17-box-integral"></span>
+
+$$
+\begin{aligned}
+iV_4
+={}&g^4\int\frac{d^6\ell}{(2\pi)^6}\frac1{A_1A_2A_3A_4}\\
+&+(k_3\leftrightarrow k_2)+(k_3\leftrightarrow k_4)+O(g^6).
+\end{aligned}
+\tag{17.7}
+$$
+
+式[（17.2）](#eq:c17-loop-count-solved)给出四点两圈图的 $V=6$，所以下一圈从 $g^6$ 开始。在单圈箱图中插入 $Z_g-1$、两点反项或一圈自能，也会增加两个耦合幂。因此当前阶数使用自由内线与原始顶点即可，已有反项的影响进入余项所示的阶数。
+
+<span id="c17-parameters"></span>
+
+## 四个分母的参数质量
+
+计算方法与三角图相同：先用Feynman参数把四个分母合并，再平移圈动量消去一次项。一般公式在四个一次分母的情形给出
+
+<span id="eq:c17-four-parameter-formula"></span>
+
+$$
+\frac1{A_1A_2A_3A_4}
+=\int dF_4\,[x_1A_1+x_2A_2+x_3A_3+x_4A_4]^{-4},
+\tag{17.8}
+$$
+
+其中，将公式的阶乘系数计入参数测度，定义
+
+<span id="eq:c17-measure-normalization"></span>
+
+$$
+\begin{aligned}
+dF_4&=3!\prod_{a=1}^4dx_a\,
+ \delta\!\left(1-\sum_{a=1}^4x_a\right),\qquad x_a\ge0,\\
+\int dF_4
+&=6\int_0^1dx_1\int_0^{1-x_1}dx_2
+     \int_0^{1-x_1-x_2}dx_3\\
+&=3\int_0^1(1-x_1)^2dx_1=1.
+\end{aligned}
+\tag{17.9}
+$$
+
+四分母公式中的6与参数单纯形的体积 $1/6$ 抵消，因而测度的总积分仍为1。接下来整理合并后的分母。把四条线的平移向量记为 $r_1=-k_1,r_2=k_2,r_3=k_2+k_3,r_4=0$，并设 $R=\sum_a x_ar_a$，即可将圈动量的一次项并入平方：
+
+<span id="eq:c17-weighted-square"></span>
+
+$$
+\begin{aligned}
+\sum_a x_aA_a
+&=\ell^2+2\ell\cdot R+\sum_ax_ar_a^2+m^2-i0\\
+&=(\ell+R)^2+D_{1234}-i0,\\
+q&=\ell+R=\ell-x_1k_1+x_2k_2+x_3(k_2+k_3),\\
+D_{1234}&=m^2+\sum_ax_ar_a^2-R^2.
+\end{aligned}
+\tag{17.10}
+$$
+
+四条线共同的 $-i0$ 因 $\sum x_a=1$ 而保持不变。平移的Jacobian为1；本节六维有质量的欧氏箱积分绝对收敛，因此可以在这个区域完成换元，再作后续的解析延拓。
+
+剩下的任务是把参数质量整理成外动量不变量。用参数约束 $\sum_ax_a=1$，将每个 $r_a^2$ 的系数写成 $x_a\sum_bx_b$，再把两个指标对称化，得到
+
+<span id="eq:c17-weighted-variance-proof"></span>
+
+$$
+\begin{aligned}
+\sum_ax_ar_a^2-R^2
+&=\frac12\sum_{a,b}x_ax_b
+(r_a^2+r_b^2-2r_a\cdot r_b)\\
+&=\frac12\sum_{a,b}x_ax_b(r_a-r_b)^2.
+\end{aligned}
+$$
+
+对角项为零，其余各对出现两次，因而
+
+<span id="eq:c17-pair-difference-identity"></span>
+
+$$
+\sum_ax_ar_a^2-\left(\sum_ax_ar_a\right)^2
+=\sum_{a<b}x_ax_b(r_a-r_b)^2,\qquad \sum_ax_a=1 .
+\tag{17.11}
+$$
+
+这个等式只用到内积的双线性，因而对洛伦兹度规同样成立。代入本图四个 $r_a$，六个向量差分别是
+
+<span id="eq:c17-six-differences"></span>
+
+$$
+\begin{aligned}
+r_1-r_2&=-(k_1+k_2),& r_1-r_3&=k_4,\\
+r_1-r_4&=-k_1,& r_2-r_3&=-k_3,\\
+r_2-r_4&=k_2,& r_3-r_4&=k_2+k_3.
+\end{aligned}
+$$
+
+第二项使用了四动量守恒 $k_1+k_2+k_3=-k_4$。将各向量差平方、乘相应的 $x_ax_b$ 后相加，便得到
+
+<span id="eq:c17-source-denominator"></span>
+
+$$
+\begin{aligned}
+D_{1234}
+={}&m^2+x_1x_4k_1^2+x_2x_4k_2^2
++x_2x_3k_3^2+x_1x_3k_4^2\\
+&+x_1x_2(k_1+k_2)^2+x_3x_4(k_2+k_3)^2.
+\end{aligned}
+\tag{17.12}
+$$
+
+这里用的是参数约束和动量守恒，外腿仍可离壳。最后一项也可写成 $x_3x_4(k_1+k_4)^2$，因为两个动量和互为负值。这里用 $D_{1234}$ 仅表示质量多项式，将分母的处方另行写出。
+
+另外两个图按相同方式处理，只须交换整幅图的外标签。保持当前参数命名，将两个交换分别代入，得到
+
+<span id="eq:c17-other-denominators"></span>
+
+$$
+\begin{aligned}
+D_{1324}
+={}&m^2+x_1x_4k_1^2+x_2x_4k_3^2
++x_2x_3k_2^2+x_1x_3k_4^2\\
+&+x_1x_2(k_1+k_3)^2+x_3x_4(k_3+k_2)^2,\\
+D_{1243}
+={}&m^2+x_1x_4k_1^2+x_2x_4k_2^2
++x_2x_3k_4^2+x_1x_3k_3^2\\
+&+x_1x_2(k_1+k_2)^2+x_3x_4(k_2+k_4)^2.
+\end{aligned}
+\tag{17.13}
+$$
+
+参数始终标记所选环序中的四条内部线；因此作上述外标签交换时，参数仍按原路由使用，无须再交换一次。
+
+<span id="c17-evaluation"></span>
+
+## 完成圈积分
+
+完成平方后，三个箱图所需的圈动量积分形式完全相同。在第14节的主积分中取分母幂 $b=4$，得到
+
+<span id="eq:c17-master-substitution"></span>
+
+$$
+\int\frac{d^dq_E}{(2\pi)^d}\frac1{(q_E^2+D)^4}
+=\frac{\Gamma(4-d/2)}{(4\pi)^{d/2}\Gamma(4)}
+ D^{\,d/2-4},\qquad 0<d<8,\ D>0 .
+\tag{17.14}
+$$
+
+上限条件 $d<8$ 也可由径向幂 $q^{d-9}$ 直接读出。在本节的 $d=6$ 情形，$\Gamma(4-d/2)=\Gamma(1)=1$、$\Gamma(4)=6$，而 $D^{d/2-4}=D^{-1}$。再乘上Wick旋转产生的 $i$，就得到Minkowski积分
+
+<span id="eq:c17-six-dimensional-box"></span>
+
+$$
+\int\frac{d^6q}{(2\pi)^6}\frac1{(q^2+D-i0)^4}
+=\frac{i}{6(4\pi)^3(D-i0)}.
+\tag{17.15}
+$$
+
+分母中的6来自径向积分的Gamma函数，单幅图的对称因子仍为1。将这个结果代入三个环序，并从 $iV_4$ 中除去公共的 $i$，便得到完整的一圈四点顶点：
+
+<span id="eq:c17-finite-four-point"></span>
+
+$$
+V_4=\frac{g^4}{6(4\pi)^3}\int dF_4
+\left[
+\frac1{D_{1234}-i0}
++\frac1{D_{1324}-i0}
++\frac1{D_{1243}-i0}
+\right]+O(g^6).
+\tag{17.16}
+$$
+
+若改用不带 $3!$ 的参数测度，前面的 $1/6$ 就与 $dF_4$ 中的6抵消，得到同一积分的另一种写法。
+
+现在可以直接看出参数积分的有限性。在欧氏外动量域中，式[（17.11）](#eq:c17-pair-difference-identity)的每个平方均非负，因此 $D_{abcd}\ge m^2>0$。参数域又是紧的，所以式[（17.16）](#eq:c17-finite-four-point)中的积分有限。继续到物理动量时仍按Feynman处方取边界值，相应的粒子产生阈值也由这一解析延拓保留。
+
+由于一圈四点顶点已经有限，本阶不需引入新的四价反项，其数值由已经定义的 $g$ 和 $m$ 决定。最简单的例子是全部外动量为零：三个 $D$ 都等于 $m^2$，归一化的参数积分随即给出
+
+<span id="eq:c17-zero-momentum-four-point"></span>
+
+$$
+V_4(0,0,0,0)
+=\frac{g^4}{6(4\pi)^3}\frac3{m^2}+O(g^6)
+=\frac{g^4}{2(4\pi)^3m^2}+O(g^6).
+\tag{17.17}
+$$
+
+四点1PI顶点的质量维数为 $6-4\times2=-2$，与这里的结果相符。即使原拉氏量只有立方相互作用，圈图也产生了四腿的有效相互作用；上式是它的零动量值，一般外动量处的变化则由前面的参数积分给出。
+
+<span id="c17-general-n"></span>
+
+## 同一计算怎样推广到更多外腿
+
+四点计算中的步骤都可以推广。对于 $n>3$，每个环有 $n$ 个顶点和 $n$ 条传播子，因此相位仍相乘为 $(ig)^n(1/i)^n=g^n$。同一环序的 $n$ 个起点和两个方向给出相同图，消除这些重复以后，不等价的外标签环序数为
+
+<span id="eq:c17-number-of-polygons"></span>
+
+$$
+N_n=\frac{n!}{2n}=\frac{(n-1)!}{2}.
+\tag{17.18}
+$$
+
+选定一个环序，将内部动量写为 $\ell+r_a$，就可沿用式[（17.10）](#eq:c17-weighted-square)的加权配方。相应的参数质量和测度为
+
+<span id="eq:c17-general-parameter-mass"></span>
+
+$$
+\begin{aligned}
+D&=m^2+\sum_{a<b}x_ax_b(r_a-r_b)^2,\\
+dF_n&=(n-1)!\prod_a dx_a\,\delta(1-\sum_a x_a).
+\end{aligned}
+\tag{17.19}
+$$
+
+测度中的阶乘与单纯形体积相消，总积分仍为1。主积分只需把 $b$ 换成 $n$，于是单个环序的领先贡献成为
+
+<span id="eq:c17-general-one-loop"></span>
+
+$$
+V_n^{(1,\text{环序})}
+=\frac{g^n\Gamma(n-3)}{(4\pi)^3\Gamma(n)}
+ \int dF_n\,(D-i0)^{3-n},\qquad n>3.
+\tag{17.20}
+$$
+
+其中 $\Gamma(n-3)$ 在这些正整数处有限，与前面的紫外计数一致。这个参数表示适用于全部 $n>3$ 的领先1PI顶点。将所有 $N_n$ 个环序相加，得到领先的 $V_n$；由顶点数与圈数的关系，更高圈项从 $g^{n+2}$ 开始。
+
+在零外动量处，各环序的积分相同，而且 $D=m^2$。利用 $\Gamma(n)=(n-1)!$，环序计数与Gamma函数中的阶乘相消，总和便能完全求出：
+
+<span id="eq:c17-zero-momentum-general"></span>
+
+$$
+\begin{aligned}
+V_n(0,\ldots,0)
+&=\frac{(n-1)!}{2}
+  \frac{g^n\Gamma(n-3)}{(4\pi)^3\Gamma(n)}m^{6-2n}
+  +O(g^{n+2})\\
+&=\frac{g^n(n-4)!}{2(4\pi)^3}\,m^{6-2n}
+  +O(g^{n+2}),\qquad n>3 .
+\end{aligned}
+\tag{17.21}
+$$
+
+取 $n=4$ 即回到式[（17.17）](#eq:c17-zero-momentum-four-point)，因而四点例子是这一一般结果的第一个情形。上述零动量结果都以固定的非零质量为条件；质量趋零时，零动量点会出现红外问题。下一节将继续考虑更高圈数：整体幂计数收敛的图仍可能含有发散子图，那时须将已经确定的反项一并纳入计算。
+
+---
+
+[← 第 16 节](/posts/srednicki-16/) · [章节地图](/srednicki/) · [第 18 节 →](/posts/srednicki-18/)

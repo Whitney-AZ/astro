@@ -1,0 +1,800 @@
+---
+title: 'Srednicki §91 中微子质量'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [91]
+hideFromHome: true
+draft: false
+---
+
+<span id="c91"></span>
+
+第88、89节用同一个Higgs真空给带电轻子和夸克赋予质量，却始终留下无质量的中微子。本节要改变这一点。只增加一种不带规范荷的Weyl 场，就能同时引入狄拉克耦合与马约拉纳质量；两种结构合在一起，会使一个质量增大、另一个质量减小。这就是跷跷板机制（seesaw mechanism）。
+
+独立左手场$\bar\nu$的横线是场名的一部分；它与$\nu^\dagger$分别属于不同的洛伦兹表示。
+
+<span id="c91-fields"></span>
+
+## 从零质量预言到两种质量项
+
+回顾[一代轻子](/posts/srednicki-88/#c88-fields)和[夸克表示](/posts/srednicki-89/#c89-fields)：全左Weyl 场依次为
+$q_{\alpha i}\sim(\mathbf3,\mathbf2,1/6)$、
+$\bar u^\alpha\sim(\overline{\mathbf3},\mathbf1,-2/3)$、
+$\bar d^\alpha\sim(\overline{\mathbf3},\mathbf1,1/3)$、
+$\ell_i\sim(\mathbf1,\mathbf2,-1/2)$和
+$\bar e\sim(\mathbf1,\mathbf1,1)$。
+Higgs场$\varphi_i$属于$(\mathbf1,\mathbf2,-1/2)$。
+此前按量纲、规范单态和洛伦兹缩并，已逐一得到三种可重整汤川项：
+<span id="eq:c91-minimal-yukawa"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm Yuk}={}&
+-y\epsilon^{ij}\varphi_i\ell_j\bar e
+-y'\epsilon^{ij}\varphi_iq_{\alpha j}\bar d^\alpha\\
+&-y''\varphi^{\dagger i}q_{\alpha i}\bar u^\alpha
++\text{h.c.}
+\end{aligned}
+\tag{91.1}
+$$
+
+取$\varphi=(v+H,0)^T/\sqrt2$，前两项选出双重态的下分量，第三项选出上夸克，分别给$e,d,u$质量。中微子$\nu=\ell_1$没有相配的中性单态，而$\ell\ell$本身的超荷又不为零。因此，在这组场和可重整算符的范围内，中微子质量为零。
+
+我们要解释的是中微子与带电费米子之间可能相差很大的质量层级；本节末尾将说明，中微子振荡直接测量的是质量平方差。现在先回到单代，加入左Weyl 场
+$\bar\nu\sim(\mathbf1,\mathbf1,0)$。它的规范连接为零，动能就是
+$i\bar\nu^\dagger\bar\sigma^\mu\partial_\mu\bar\nu$。另一方面，
+$\varphi^{\dagger i}\ell_i$的超荷为$1/2-1/2=0$，弱指标也已缩并，所以可以加入
+<span id="eq:c91-sterile-yukawa"></span>
+
+$$
+\mathcal L_{\nu{\rm Yuk}}
+=-\widetilde y\,\varphi^{\dagger i}\ell_i\bar\nu
++\text{h.c.}
+\tag{91.2}
+$$
+
+两个左场的旋量指标按第35节缩并。$\varphi^\dagger\ell\bar\nu$的量纲为
+$1+3/2+3/2=4$，因此$\widetilde y$仍是无量纲耦合。幺正规范给
+<span id="eq:c91-dirac-mass"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\nu{\rm Yuk}}
+&=-\frac{v+H}{\sqrt2}
+ \left(\widetilde y\,\nu\bar\nu
+ +\widetilde y^*\,\bar\nu^\dagger\nu^\dagger\right),\\
+\widetilde m&=\frac{\widetilde yv}{\sqrt2}.
+\end{aligned}
+\tag{91.3}
+$$
+
+$\nu$与$\bar\nu^\dagger$可以组成狄拉克场的左右两块。若只有这一项，质量的大小完全由$\widetilde y$决定，因而可以选很小的耦合得到很轻的中微子。跷跷板机制则通过另一个质量尺度产生这种层级。令$\widetilde y$为零还会使单态场获得额外的独立相位对称性。
+
+规范单态还有一个特殊之处：两个$\bar\nu$相乘也构成规范单态。因此质量项
+<span id="eq:c91-majorana-mass"></span>
+
+$$
+\mathcal L_M
+=-\frac12M\bar\nu\bar\nu
+-\frac12M^*\bar\nu^\dagger\bar\nu^\dagger
+\tag{91.4}
+$$
+
+不需要Higgs场，$M$的大小也不受电弱破缺尺度直接限制。这是马约拉纳质量。相同的奇场之积并不在这里消失，因为实际缩并的是两个不同的旋量分量。沿[已建立的缩并规则](/posts/srednicki-35/#c35-bilinears)，
+<span id="eq:c91-odd-bilinear"></span>
+
+$$
+\begin{aligned}
+\chi\psi&=\chi^a\psi_a
+=-\psi_a\chi^a=\psi^a\chi_a=\psi\chi,\\
+\psi\psi&=\psi_2\psi_1-\psi_1\psi_2=-2\psi_1\psi_2.
+\end{aligned}
+\tag{91.5}
+$$
+
+场换序和指标反对称各给一个负号，整个双线性因而对两个场对称。质量项前的$1/2$则抵消变分两个相同场产生的二重数。
+
+先把一代的参数化简。令旧$\ell,\bar e,\bar\nu$分别等于新场乘
+$e^{i\alpha},e^{i\gamma},e^{i\beta}$，三个系数的相位变成
+<span id="eq:c91-single-phases"></span>
+
+$$
+\begin{aligned}
+\arg y&\longmapsto\arg y+\alpha+\gamma,\\
+\arg\widetilde y&\longmapsto\arg\widetilde y+\alpha+\beta,\\
+\arg M&\longmapsto\arg M+2\beta .
+\end{aligned}
+\tag{91.6}
+$$
+
+当三个参数均非零时，先选$\beta=-\arg M/2$，再选$\alpha=-\arg\widetilde y-\beta$，最后选$\gamma=-\arg y-\alpha$，便使$M>0$、$\widetilde y,y>0$。以下单代计算采用这组实参数；零耦合的相位任意，三代计算则保留一般复矩阵。
+
+<span id="c91-seesaw"></span>
+
+## 两个质量怎样分离
+
+在真空附近令$H=0$，并暂记$n=\bar\nu$、$d=\widetilde m\ge0$。两种质量项合为
+<span id="eq:c91-two-mass-matrix"></span>
+
+$$
+\begin{gathered}
+\mathcal L_{\rm mass}
+=-\frac12
+ \begin{pmatrix}\nu&n\end{pmatrix}
+ \mathscr M
+ \begin{pmatrix}\nu\\n\end{pmatrix}
++\text{h.c.},\\
+\mathscr M=\begin{pmatrix}0&d\\d&M\end{pmatrix}.
+\end{gathered}
+\tag{91.7}
+$$
+
+矩阵的两个非对角项给$d\nu n+dn\nu=2d\nu n$，所以正确恢复原狄拉克项。求带符号的本征值时，
+<span id="eq:c91-exact-roots"></span>
+
+$$
+\begin{aligned}
+\det(\mathscr M-\lambda I)
+&=(-\lambda)(M-\lambda)-d^2
+=\lambda^2-M\lambda-d^2,\\
+\lambda_\pm&=\frac{M\pm\sqrt{M^2+4d^2}}2 .
+\end{aligned}
+\tag{91.8}
+$$
+
+$d>0$时一个根为负，另一个为正。先用实正交矩阵确定两个方向：
+<span id="eq:c91-two-state-rotation"></span>
+
+$$
+\begin{gathered}
+O=\begin{pmatrix}c&s\\-s&c\end{pmatrix},
+\qquad c=\cos\theta,\quad s=\sin\theta,\\
+(O^T\mathscr M O)_{12}
+=d(c^2-s^2)-Mcs=0,
+\qquad \tan2\theta=\frac{2d}{M},\\
+O^T\mathscr M O
+=\operatorname{diag}(-2dcs+Ms^2,\;2dcs+Mc^2)
+=\operatorname{diag}(\lambda_-,\lambda_+).
+\end{gathered}
+\tag{91.9}
+$$
+
+选$0\le\theta<\pi/4$便使第一列接近原来的$\nu$方向。负根可以用Weyl 场的相位吸收：令第一列再乘$i$，则
+<span id="eq:c91-positive-mass-basis"></span>
+
+$$
+\begin{gathered}
+N_2=O\operatorname{diag}(i,1)
+=\begin{pmatrix}ic&s\\-is&c\end{pmatrix},
+\qquad
+\begin{pmatrix}\nu\\n\end{pmatrix}
+=N_2\begin{pmatrix}\chi_l\\\chi_h\end{pmatrix},\\
+N_2^T\mathscr M N_2
+=\operatorname{diag}(m_l,m_h),\\
+m_l=\frac{\sqrt{M^2+4d^2}-M}{2},\qquad
+m_h=\frac{\sqrt{M^2+4d^2}+M}{2}.
+\end{gathered}
+\tag{91.10}
+$$
+
+动能中的相位乘积为$i^*i=1$，质量项中却是$i^2=-1$，因而质量变为正值，归一保持不变。四分量马约拉纳场的上下两块分别由$\chi$和$\chi^\dagger$构成，所以相应相位是$i$与$-i$。
+
+当$d/M\ll1$时，展开平方根
+$\sqrt{1+4d^2/M^2}=1+2d^2/M^2-2d^4/M^4+\cdots$，得到
+<span id="eq:c91-hierarchy"></span>
+
+$$
+\begin{aligned}
+m_l&=\frac{d^2}{M}-\frac{d^4}{M^3}
+ +O(d^6/M^5),\\
+m_h&=M+\frac{d^2}{M}-\frac{d^4}{M^3}
+ +O(d^6/M^5),\\
+m_lm_h&=d^2,\qquad m_h-m_l=M,\\
+\tan\theta&=\frac{d}{m_h}
+=\frac{d}{M}+O(d^3/M^3).
+\end{aligned}
+\tag{91.11}
+$$
+
+质量乘积由行列式的绝对值固定；增大$M$便使重质量进一步增大、轻质量反而减小。这给出“跷跷板”的名称。由式[（91.10）](#eq:c91-positive-mass-basis)，轻场中原单态与活跃场的比为
+$n/\nu=-s/c=-d/m_h$，所以轻粒子主要通过$\nu$参与弱作用，重粒子与弱流的混合只有$d/M$阶。有号本征值的领头结果分别为$M$和$-d^2/M$，其符号与物理质量的非负性由上述相位合同联系起来。
+
+可以用电子质量量级作一个例子。取已在第88节给出的$m_e=0.511$ MeV，并令$d=m_e$、$M=10^3$ GeV，单位换算为
+<span id="eq:c91-source-scale"></span>
+
+$$
+\frac{d^2}{M}
+=\frac{(0.511\times10^{-3}\ {\rm GeV})^2}
+ {10^3\ {\rm GeV}}
+=2.61121\times10^{-10}\ {\rm GeV}
+=0.261121\ {\rm eV}.
+\tag{91.12}
+$$
+
+因此在这个输入下，$10^3$ GeV量级的重尺度已经可以给出亚eV轻质量。不同的$d$对应不同的重尺度。若$d=0$，轻场为零模；若$M=0$而$d>0$，两种马约拉纳质量都等于$d$，可以重新合成一个狄拉克粒子，此时也就没有重轻消元的层级。
+
+<span id="c91-elimination"></span>
+
+## 直接积去重场
+
+另一条路从低能作用量出发。实验若不能激发质量为$M$的单态，只需要保留它对轻场的作用。令
+$\eta=\varphi^{\dagger i}\ell_i$，这是一个量纲$5/2$的左旋量。先不写厄米共轭，相关密度为
+$-\tfrac12Mn n-\widetilde y\,\eta n$。
+沿[第36节的左变分](/posts/srednicki-36/#c36-variation)，
+<span id="eq:c91-single-heavy-eom"></span>
+
+$$
+\begin{aligned}
+\delta_n\mathcal L
+&=-\widetilde y\,\eta\,\delta n
+-\frac12M(\delta n\,n+n\,\delta n)\\
+&=-\delta n\,(\widetilde y\,\eta+Mn),\\
+n_{\rm cl}&=-\frac{\widetilde y}{M}\eta .
+\end{aligned}
+\tag{91.13}
+$$
+
+第二行用了式[（91.5）](#eq:c91-odd-bilinear)，变分旋量本身也是奇量。在当前外部导数远小于$M$的领头阶，重场动能可以先略去，运动方程成为代数方程。
+
+把解代回时，汤川项给$+\widetilde y^2\eta\eta/M$，重质量项给
+$-\widetilde y^2\eta\eta/(2M)$，相加留下正的一半。完成平方可以同时看清这两个系数：
+<span id="eq:c91-single-completing-square"></span>
+
+$$
+\begin{aligned}
+-\frac12Mn n-\widetilde y\,\eta n
+={}&-\frac12M
+ \left(n+\frac{\widetilde y}{M}\eta\right)
+ \left(n+\frac{\widetilde y}{M}\eta\right)\\
+&+\frac{\widetilde y^2}{2M}\eta\eta .
+\end{aligned}
+\tag{91.14}
+$$
+
+两个交叉项相等，合为原来的$-\widetilde y\,\eta n$。在路径积分中，平移重Grassmann变量后，首项的Gaussian积分只留下与轻场无关的常数。低能的领头算符便是
+<span id="eq:c91-single-dimension-five"></span>
+
+$$
+\mathcal L_{\rm eff}^{(5)}
+=\frac{\widetilde y^2}{2M}
+ (\varphi^{\dagger i}\ell_i)
+ (\varphi^{\dagger j}\ell_j)
++\text{h.c.}
+\tag{91.15}
+$$
+
+算符量纲为5，其系数量纲为$-1$。它表明：在原场内容中，规范对称性允许中微子质量，只是最先出现的相应算符超过了可重整量纲。这里又给出了这个算符的一种具体来源。
+
+将$\eta=(v+H)\nu/\sqrt2$代入，
+<span id="eq:c91-single-effective-mass"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm eff}^{(5)}
+&=\frac{\widetilde y^2(v+H)^2}{4M}
+ (\nu\nu+\nu^\dagger\nu^\dagger)\\
+&=-\frac12m_\nu
+ (\nu\nu+\nu^\dagger\nu^\dagger)(1+H/v)^2,\\
+m_\nu&=-\frac{\widetilde y^2v^2}{2M}
+=-\frac{d^2}{M}.
+\end{aligned}
+\tag{91.16}
+$$
+
+这与精确的$\lambda_-$展开相同。再作$\nu=i\chi_l$的领头场换元，即可得到正物理质量$m_l=d^2/M$；$H$和$H^2$的耦合则由同一个$(v+H)^2$同时固定。
+
+<span id="c91-three-generations"></span>
+
+## 三代重场的消元次序
+
+现在把$\ell,\bar e,\bar\nu$各取三代。为使矩阵的两个空间清楚，活跃轻子用$I,J=1,2,3$，规范单态用$A,B=1,2,3$，并记
+$Y_{IA}=\widetilde y_{IA}$、$n_A=\bar\nu_A$。一般质量及汤川作用量为
+<span id="eq:c91-three-generation-action"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm Yuk+mass}={}&
+-\epsilon^{ij}\varphi_i\ell_{jI}y_{IJ}\bar e_J
+-\varphi^{\dagger i}\ell_{iI}Y_{IA}n_A\\
+&-\frac12M_{AB}n_An_B+\text{h.c.},
+\qquad M^T=M .
+\end{aligned}
+\tag{91.17}
+$$
+
+$y,Y$是一般复矩阵。$M$的对称性来自$n_An_B=n_Bn_A$，与它是否为实矩阵无关。幺正规范给
+<span id="eq:c91-three-generation-broken"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm Yuk+mass}={}&
+-\frac{v+H}{\sqrt2}e_Iy_{IJ}\bar e_J
+-\frac{v+H}{\sqrt2}\nu_IY_{IA}n_A\\
+&-\frac12M_{AB}n_An_B+\text{h.c.},
+\qquad m_D=\frac{v}{\sqrt2}Y .
+\end{aligned}
+\tag{91.18}
+$$
+
+全六场质量矩阵的四个块为
+$\left(\begin{smallmatrix}0&m_D\\m_D^T&M\end{smallmatrix}\right)$。
+我们先在规范不破缺的写法中消去重场，以便同时保留Higgs耦合。
+
+令$\eta_I=\varphi^{\dagger i}\ell_{iI}$。关于$n_A$作左变分，
+<span id="eq:c91-matrix-heavy-eom"></span>
+
+$$
+\begin{aligned}
+\delta_n\mathcal L_{\rm hol}
+&=-\delta n_A\left(Y_{IA}\eta_I+M_{AB}n_B\right),\\
+M_{AB}n_B&=-Y_{IA}\eta_I,\\
+n_A&=-(M^{-1})_{AB}Y_{IB}\eta_I,
+\qquad n=-M^{-1}Y^T\eta .
+\end{aligned}
+\tag{91.19}
+$$
+
+出现的是$Y^T$，因为运动方程的自由指标属于重场。关于$n^\dagger$的方程是它的厄米共轭。
+
+代回的两项分别为一份与负的半份$\eta^TYM^{-1}Y^T\eta$。因此
+<span id="eq:c91-matrix-effective-mass"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm eff}^{(5)}
+&=\frac12\eta^T K\eta+\text{h.c.},\\
+K_{IJ}&=Y_{IA}(M^{-1})_{AB}Y_{JB},
+\qquad K=YM^{-1}Y^T=K^T,\\
+m_\nu&=-\frac{v^2}{2}K=-m_D M^{-1}m_D^T .
+\end{aligned}
+\tag{91.20}
+$$
+
+每个$\eta$仍带一个旋量指标，$\eta^TK\eta$只省去代求和，不改变旋量缩并的次序。$(M^{-1})^T=M^{-1}$保证$K$对称。也可以沿一代完成平方的办法，将$n$平移为$n+M^{-1}Y^T\eta$；两个交叉项合为$-\eta^TYn$，留下的常数正是本式的$+\tfrac12\eta^TK\eta$。
+
+每个矩阵指标连接指定的代空间。譬如在一个二代子块中取
+<span id="eq:c91-matrix-order-example"></span>
+
+$$
+\begin{gathered}
+Y=\begin{pmatrix}0&a\\b&0\end{pmatrix},
+\qquad M=\operatorname{diag}(M_1,M_2),\\
+YM^{-1}Y^T
+=\operatorname{diag}(a^2/M_2,\;b^2/M_1),\\
+Y^TM^{-1}Y
+=\operatorname{diag}(b^2/M_2,\;a^2/M_1).
+\end{gathered}
+\tag{91.21}
+$$
+
+第一种结果中，轻场1只接重场2，所以分母为$M_2$、耦合为$a^2$，与所定义的汤川耦合吻合。
+
+换基也能检查这个方向。若旧$\eta=L\eta'$、旧$n=Vn'$，则
+<span id="eq:c91-matrix-covariance"></span>
+
+$$
+\begin{aligned}
+Y'&=L^TYV,\qquad M'=V^TMV,\\
+(M')^{-1}&=V^\dagger M^{-1}V^*,\\
+Y'(M')^{-1}(Y')^T
+&=L^TYV\,V^\dagger M^{-1}V^*V^TY^TL\\
+&=L^T(YM^{-1}Y^T)L .
+\end{aligned}
+\tag{91.22}
+$$
+
+重代矩阵由$VV^\dagger=V^*V^T=I$相消，剩下的正是轻质量应有的合同变换。这个检验同时说明，有效质量的定义与重场基的选择无关。
+
+由于$m_\nu$一般为复数，低能质量作用量应写成
+<span id="eq:c91-effective-hermitian-action"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm eff}\supset{}&
+-\frac{v+H}{\sqrt2}e_Iy_{IJ}\bar e_J+\text{h.c.}\\
+&-\frac12(1+H/v)^2
+ \left[(m_\nu)_{IJ}\nu_I\nu_J
+ +(m_\nu)^*_{IJ}\nu_J^\dagger\nu_I^\dagger\right].
+\end{aligned}
+\tag{91.23}
+$$
+
+共轭首先倒转场的次序；再用点旋量双线性的对称性，便可把$J,I$换回$I,J$。两个共轭单项式的系数也互为复共轭；在实质量基中，它们才相等。
+
+消去重场需要真实的质量层级。后面将证明，复对称$M$的物理质量是它的非负奇异值。因此要求最小重奇异值
+$\sigma_{\min}(M)$远大于外部尺度，并有
+$\|m_D\|/\sigma_{\min}(M)\ll1$，这里取矩阵谱范数。若$M$有零模，应先分离其重子空间，只积去其中的大质量态，把其余单态留在低能理论中。
+
+舍去的动能还指明了下一阶的大小。令
+$A=M^{-1}Y^T$，将$n=-A\eta$代入重场动能，得到
+<span id="eq:c91-kinetic-correction"></span>
+
+$$
+\begin{aligned}
+\Delta\mathcal L^{(6)}
+&=i\eta^\dagger A^\dagger A\,
+ \bar\sigma^\mu\partial_\mu\eta,\\
+R&=M^{-1}m_D^T,\qquad
+\delta Z=R^\dagger R,\qquad
+z^\dagger\delta Zz=\|Rz\|^2\ge0 .
+\end{aligned}
+\tag{91.24}
+$$
+
+$\eta$是规范单态，所以这里对整个$\eta$作普通导数。Higgs取真空后，第一行给轻动能的相对$\|R\|^2$修正。把轻场重新归一，也会相应改变弱流。以下保留维数五质量、略去这一维数六效应；由此得到的三轻态混合矩阵是幺正的。
+
+<span id="c91-takagi"></span>
+
+## 复对称质量矩阵怎样对角化
+
+带电质量仍可用[第88节的奇异值分解](/posts/srednicki-88/#c88-generations)。若
+$y=U_e d_e V_e^\dagger$，其中$d_e$为非负实对角阵，则取
+<span id="eq:c91-charged-mass-basis"></span>
+
+$$
+\begin{gathered}
+e_{\rm old}=Ee_{\rm m},\qquad
+\bar e_{\rm old}=\bar E\bar e_{\rm m},\\
+E=U_e^*,\qquad\bar E=V_e,\qquad
+E^Ty\bar E=d_e,\qquad
+m_{eI}=(d_e)_I\frac{v}{\sqrt2}.
+\end{gathered}
+\tag{91.25}
+$$
+
+中微子却只有一组左场，质量项的两个因子必须用同一个矩阵变换。所需的是
+$\nu_{\rm old}=N\nu_{\rm m}$、$N^Tm_\nu N=d_\nu$。
+这种把复对称矩阵化为非负实对角阵的分解称为Takagi分解。下面从实对称谱定理构造这一合同变换。
+
+暂以$A=A^T$表示任意$n\times n$复对称矩阵，写成
+$A=B+iC$，其中$B,C$均为实对称矩阵。引入
+<span id="eq:c91-takagi-real-matrices"></span>
+
+$$
+\begin{gathered}
+\mathscr H=\begin{pmatrix}B&-C\\-C&-B\end{pmatrix},
+\qquad
+\mathscr J=\begin{pmatrix}0&-I\\I&0\end{pmatrix},\\
+\mathscr H^T=\mathscr H,\qquad
+\mathscr J^T=-\mathscr J,\qquad
+\mathscr J^2=-I,\\
+\mathscr H\mathscr J
+=\begin{pmatrix}-C&-B\\-B&C\end{pmatrix}
+=-\mathscr J\mathscr H .
+\end{gathered}
+\tag{91.26}
+$$
+
+实对称矩阵$\mathscr H$可以用实正交本征向量分解。最后一个关系说明，若
+$\mathscr Hw=d\,w$，则$\mathscr H(\mathscr Jw)=-d\,\mathscr Jw$；
+每个非零本征值都有一个相反数。
+
+对正本征值$d_a>0$选实正交归一向量
+$w_a=(x_a,y_a)^T$，并令$u_a=x_a+iy_a$。两个实块方程给
+<span id="eq:c91-takagi-positive-vectors"></span>
+
+$$
+\begin{aligned}
+Bx_a-Cy_a&=d_ax_a,\\
+Cx_a+By_a&=-d_ay_a,\\
+Au_a&=(Bx_a-Cy_a)+i(Cx_a+By_a)
+=d_a u_a^* .
+\end{aligned}
+\tag{91.27}
+$$
+
+复内积的实部来自$w_a$的正交性，虚部则由反对易关系固定：
+<span id="eq:c91-takagi-orthogonality"></span>
+
+$$
+\begin{aligned}
+d_a w_a^T\mathscr Jw_b
+&=w_a^T\mathscr H\mathscr Jw_b
+=-d_b w_a^T\mathscr Jw_b,\\
+w_a^T\mathscr Jw_b&=0,\\
+u_a^\dagger u_b
+&=x_a^Tx_b+y_a^Ty_b
+ +i(x_a^Ty_b-y_a^Tx_b)\\
+&=w_a^Tw_b-iw_a^T\mathscr Jw_b=\delta_{ab}.
+\end{aligned}
+\tag{91.28}
+$$
+
+第二行用了$d_a+d_b>0$，所以即使两个正本征值相等，论证仍成立。
+
+零模则直接从$\ker A$补入。$\mathscr Hw=0$等价于
+$A(x+iy)=0$，因此若$\ker A$的复维数为$k$，$\mathscr H$的实核维数就是$2k$；余下的正负本征值共有$n-k$对。我们已经得到$n-k$个正质量列，再在$\ker A$中用复Gram–Schmidt选$k$个正交归一列$z_b$。它们与已有列的内积也为零：
+<span id="eq:c91-takagi-zero-vectors"></span>
+
+$$
+0=z_b^TAu_a=d_a z_b^Tu_a^*
+=d_a u_a^\dagger z_b .
+\tag{91.29}
+$$
+
+首个等号使用$Az_b=0$和$A^T=A$。把全部$n$个列收集成$N$，便有
+<span id="eq:c91-takagi-factorization"></span>
+
+$$
+\begin{gathered}
+N^\dagger N=I,\qquad AN=N^*D,\qquad
+N^TAN=N^TN^*D=D,\\
+D=\operatorname{diag}(d_1,\ldots,d_{n-k},0,\ldots,0),\\
+A^\dagger A u_a=d_a A^*u_a^*=d_a^2u_a .
+\end{gathered}
+\tag{91.30}
+$$
+
+最后一行用$A^\dagger=A^*$及式[（91.27）](#eq:c91-takagi-positive-vectors)的共轭式，说明$d_a$正是$A$的奇异值。这就完成了复对称质量矩阵的质量基构造。零奇异值对应无质量态，满秩矩阵的全部质量严格为正。
+
+剩余的基选择也由同一组式子确定。令另一组质量列为$N'=NR$，要求它给同一排序的$D$，则
+<span id="eq:c91-takagi-residual"></span>
+
+$$
+R^\dagger R=I,\qquad
+R^TDR=D,\qquad
+DR=R^*D,\qquad
+D^2R=RD^2 .
+\tag{91.31}
+$$
+
+所以不同质量平方之间不能混合。在正的相同质量块上，$DR=R^*D$要求$R$为实数，剩余自由是实正交旋转；在零质量块上则仍可作幺正旋转。一个孤立的正质量场只剩$\pm1$两种符号。这个结果马上会影响轻子混合相位的计数。
+
+<span id="c91-currents"></span>
+
+## 质量基中的流与相位
+
+现在将Takagi分解用于$m_\nu$，取$N^Tm_\nu N=d_\nu$，同时沿式[（91.25）](#eq:c91-charged-mass-basis)变换带电轻子。动能里的代矩阵分别为$N^\dagger N$、$E^\dagger E$和$\bar E^\dagger\bar E$，所以它们都成为单位矩阵。质量基中的四分量场为
+$\mathcal N_I=(\nu_I,\nu_I^\dagger)^T$和
+$\mathcal E_I=(e_I,\bar e_I^\dagger)^T$；以下的流只使用相应的左投影。
+
+原带电流连接双重态的两个分量，因此会留下两次换基的差：
+<span id="eq:c91-mass-basis-currents"></span>
+
+$$
+\begin{aligned}
+J^{+\mu}
+&=\bar{\mathcal E}_{LI}
+ (E^\dagger N)_{IJ}\gamma^\mu\mathcal N_{LJ}
+=\bar{\mathcal E}_{LI}(X^\dagger)_{IJ}
+ \gamma^\mu\mathcal N_{LJ},\\
+J^{-\mu}
+&=\bar{\mathcal N}_{LI}
+ (N^\dagger E)_{IJ}\gamma^\mu\mathcal E_{LJ}
+=\bar{\mathcal N}_{LI}X_{IJ}\gamma^\mu\mathcal E_{LJ},\\
+X&=N^\dagger E,\qquad X^\dagger X=XX^\dagger=I .
+\end{aligned}
+\tag{91.32}
+$$
+
+两套质量基的差别完全保存在$X=N^\dagger E$中。$X$的行对应中微子质量，列对应带电轻子质量。它与夸克的$V=U^\dagger D$承担相同的作用：两种质量基在带电流中未能同时对齐。
+
+中性流则只含同一种场的两次换基。例如
+$\nu_{\rm old}^\dagger\bar\sigma^\mu\nu_{\rm old}
+=\nu_{\rm m}^\dagger N^\dagger N\bar\sigma^\mu\nu_{\rm m}$，
+故
+<span id="eq:c91-neutral-currents"></span>
+
+$$
+\begin{aligned}
+J_3^\mu
+&=\frac12\sum_I
+ \left(\bar{\mathcal N}_{LI}\gamma^\mu\mathcal N_{LI}
+ -\bar{\mathcal E}_{LI}\gamma^\mu\mathcal E_{LI}\right),\\
+J_{\rm EM}^\mu&=-\sum_I\bar{\mathcal E}_I\gamma^\mu\mathcal E_I .
+\end{aligned}
+\tag{91.33}
+$$
+
+这里的中性中微子流是左手流；马约拉纳场完整向量双线性为零，并不使这个左投影流消失。它的轴部分正保留了中微子的弱相互作用。
+
+$X$有多少独立参数？先取三个中微子质量非零、非简并的一般情形。正马约拉纳质量只允许各场再乘符号，而带电狄拉克质量仍允许连续的矢量相位：
+<span id="eq:c91-rephasings"></span>
+
+$$
+\begin{gathered}
+E\longmapsto E D_e,\qquad
+\bar E\longmapsto\bar E D_e^*,\qquad
+N\longmapsto N D_\eta,\\
+D_e=\operatorname{diag}(e^{i\alpha_e},e^{i\alpha_\mu},e^{i\alpha_\tau}),
+\qquad D_\eta=\operatorname{diag}(\pm1,\pm1,\pm1),\\
+X\longmapsto D_\eta^\dagger X D_e .
+\end{gathered}
+\tag{91.34}
+$$
+
+三个带电相位可以分别调整$X$的三列。例如在第一行三元都非零的参数片中，取$\alpha_\alpha=-\arg X_{1\alpha}$便使该行实正。第一列一般不能同时取实，因为正马约拉纳质量不再允许独立的连续行相位。
+
+一个$3\times3$复矩阵有18个实参数，$X^\dagger X=I$给九个独立实条件，因此$U(3)$有九维。移去式[（91.34）](#eq:c91-rephasings)的三个连续相位后，还剩六个参数。借用[第89节已经构造的三角一相位矩阵](/posts/srednicki-89/#c89-parameters)$V$，可以将一般$X$写成
+<span id="eq:c91-six-parameters"></span>
+
+$$
+X=D_M V(\theta_1,\theta_2,\theta_3,\delta),
+\qquad
+D_M=\operatorname{diag}(1,e^{i\rho_2},e^{i\rho_3}).
+\tag{91.35}
+$$
+
+构造时先把一般幺正矩阵两侧的相位分出，再用带电相位去掉右侧对角阵；左侧共同相位也可移到右侧，故只留下两个相对相位。这六个参数就是三个角与三个相位。$\rho_2,\rho_3$通常称为马约拉纳相位；它们不能由保持正质量的中微子场连续换相去掉。若有零质量态或简并质量块，应使用式[（91.31）](#eq:c91-takagi-residual)的更大剩余变换群，六参数的通常计数便不再直接适用。
+
+<span id="c91-oscillation"></span>
+
+## 从产生到探测：中微子振荡
+
+弱流指定的是怎样产生和探测中微子，传播则由质量决定。为分清两组标签，以下用$\alpha,\beta=e,\mu,\tau$标记带电轻子，用$i,j=1,2,3$标记中微子质量。假设能量远大于三个质量，并且产生过程的能动量分辨率不能区分它们。由式[（91.32）](#eq:c91-mass-basis-currents)中的$J^-$，一个固定带电轻子$\alpha$参与的产生过程便给
+<span id="eq:c91-produced-state"></span>
+
+$$
+|\nu_\alpha\rangle
+=\sum_iX_{i\alpha}|\nu_i\rangle,
+\qquad
+\langle\nu_\beta|
+=\sum_iX_{i\beta}^*\langle\nu_i|,
+\qquad
+\langle\nu_\beta|\nu_\alpha\rangle=\delta_{\alpha\beta}.
+\tag{91.36}
+$$
+
+探测系数的复共轭来自$J^+$。产生指定带电味时固定的是$X$的第二个指标，第一指标遍历传播中的质量态。
+
+每个质量分量都积累自己的传播相位。先以共同中心动量$p$描述相干波包，沿传播方向记距离$L$；去掉公共相位后，把第$i$分量的传播因子记为$e^{-i\phi_i}$。于是
+<span id="eq:c91-propagation-phase"></span>
+
+$$
+\begin{aligned}
+E_i&=\sqrt{p^2+m_i^2}
+=p+\frac{m_i^2}{2p}+O(m_i^4/p^3),\\
+e^{i pL-iE_it}
+&=e^{ip(L-t)}
+ \exp\left[-i\frac{m_i^2t}{2p}
+ +O(m_i^4t/p^3)\right],\\
+\phi_i-\phi_j
+&=\frac{\Delta m_{ij}^2L}{2E},
+\qquad \Delta m_{ij}^2=m_i^2-m_j^2 .
+\end{aligned}
+\tag{91.37}
+$$
+
+最后一行取超相对论到达区$t\simeq L$，并以共同能量$E\simeq p$表示领头结果。所有分量在同一个探测事件比较，第一因子是无关的公共相位。若改用共同中心能量，则
+$p_i=E-m_i^2/(2E)+\cdots$，空间相位$p_iL$直接给出同一结果。
+
+因此从$\alpha$产生而由$\beta$探测的幅为
+<span id="eq:c91-oscillation-amplitude"></span>
+
+$$
+\begin{aligned}
+\mathcal A_{\alpha\to\beta}(L)
+&:=\sum_iX_{i\beta}^*X_{i\alpha}e^{-i\phi_i}\\
+&\simeq\sum_iX_{i\beta}^*X_{i\alpha}
+ e^{-im_i^2L/(2E)}.
+\end{aligned}
+\tag{91.38}
+$$
+
+这个幅由产生系数、自由传播因子和探测系数相乘后求和得到，将不同质量分量的传播组成一个可计算的干涉问题。不同速度会逐渐把波包分开：
+$|v_i-v_j|\simeq|\Delta m_{ij}^2|/(2E^2)$。
+只有当分离量$L|v_i-v_j|$远小于有效波包宽度$\sigma_x$时，上式的相干叠加才适用；产生和探测端也须维持刚才的不可分辨条件。相位差造成振荡，波包分离则最终使干涉消退。
+
+为求概率，记
+$Q_{ij}^{\alpha\beta}
+=X_{i\beta}^*X_{i\alpha}X_{j\beta}X_{j\alpha}^*$。
+将幅与共轭相乘，对每对$i>j$合并，有
+<span id="eq:c91-oscillation-probability"></span>
+
+$$
+\begin{aligned}
+P_{\alpha\to\beta}
+&=\sum_i|X_{i\beta}^*X_{i\alpha}|^2
+ +2\sum_{i>j}\operatorname{Re}
+ \left[Q_{ij}^{\alpha\beta}e^{-i\Delta m_{ij}^2L/(2E)}\right]\\
+&=\delta_{\alpha\beta}
+ -4\sum_{i>j}\operatorname{Re}Q_{ij}^{\alpha\beta}
+ \sin^2\frac{\Delta m_{ij}^2L}{4E}\\
+&\quad+2\sum_{i>j}\operatorname{Im}Q_{ij}^{\alpha\beta}
+ \sin\frac{\Delta m_{ij}^2L}{2E}.
+\end{aligned}
+\tag{91.39}
+$$
+
+第二步用了$\operatorname{Re}(Qe^{-ix})=(\operatorname{Re}Q)\cos x+
+(\operatorname{Im}Q)\sin x$与$\cos x=1-2\sin^2(x/2)$。
+所有不含传播相位的项合成
+$|\sum_iX_{i\beta}^*X_{i\alpha}|^2=\delta_{\alpha\beta}$。
+这也检查了$L=0$的极限。再对$\beta$求和，幺正性给
+$\sum_\beta X_{i\beta}^*X_{j\beta}=\delta_{ij}$，
+所以总概率为$\sum_i|X_{i\alpha}|^2=1$。
+
+作为补充，取只有两味混合的实矩阵
+$X=\left(\begin{smallmatrix}c&s\\-s&c\end{smallmatrix}\right)$。
+对$e\to\mu$，
+<span id="eq:c91-two-flavor-example"></span>
+
+$$
+\begin{aligned}
+\mathcal A_{e\to\mu}
+&=sc\left(e^{-im_1^2L/(2E)}
+-e^{-im_2^2L/(2E)}\right),\\
+P_{e\to\mu}
+&=4s^2c^2\sin^2\frac{(m_2^2-m_1^2)L}{4E}
+=\sin^22\theta\,
+ \sin^2\frac{\Delta m_{21}^2L}{4E}.
+\end{aligned}
+\tag{91.40}
+$$
+
+没有混合或没有质量平方差时，转换概率都为零。反过来，观测到这种振荡就排除了所有质量平方相等的情形，却允许其中一个质量为零。所以振荡本身不能证明三个质量都严格非零；绝对质量还需其他观测量确定。要进一步探测不同的带电轻子，过程还须有足够能量产生它的质量。
+
+最后看三个相位怎样进入这些结果。式[（91.38）](#eq:c91-oscillation-amplitude)中，每一行的两个$X$互为共轭，故$D_M$的相位逐项相消，普通味振荡只保留$V$中的相位组合。马约拉纳相位仍存在于质量作用量；把它写回带电轻子质量基，得到
+<span id="eq:c91-charged-basis-majorana-mass"></span>
+
+$$
+m_\nu^{(\ell)}
+=E^Tm_\nu E
+=E^TN^*d_\nu N^\dagger E
+=X^Td_\nu X .
+\tag{91.41}
+$$
+
+这里的两因子是$X_{i\alpha}X_{i\beta}$，没有复共轭相消。这使违反轻子数的过程能够依赖马约拉纳相位。下面从质量作用量本身求出轻子数的变化。
+
+<span id="c91-lepton-number"></span>
+
+## 质量项如何改变轻子数
+
+先给各基本场指定通常轻子数：
+<span id="eq:x91-lepton-charges"></span>
+
+$$
+L(\ell)=+1,\qquad
+L(\bar e)=L(\bar\nu)=-1,\qquad
+L(\varphi)=0,\qquad L(q)=L(\bar u)=L(\bar d)=0.
+\tag{91.42}
+$$
+
+$e$和$\bar e^\dagger$由此都具有$+1$，正好组成带轻子数的狄拉克电子；$\nu$和$\bar\nu^\dagger$也可作相同组合。两个汤川单态的总荷分别为
+$L(\varphi\ell\bar e)=0+1-1=0$和
+$L(\varphi^\dagger\ell\bar\nu)=0+1-1=0$。
+动能及规范相互作用含一个场与其共轭，故也保持这个连续$U(1)$。
+
+马约拉纳项的两个场却都带$-1$。写$n_A=\bar\nu_A$，在
+$n_A\to e^{-i\alpha}n_A$下，
+<span id="eq:x91-majorana-variation"></span>
+
+$$
+\begin{aligned}
+\mathcal L_M
+&=-\frac12M_{AB}n_An_B
+-\frac12M_{AB}^*n_B^\dagger n_A^\dagger,\\
+\delta_\alpha\mathcal L_M
+&=i\alpha M_{AB}n_An_B
+-i\alpha M_{AB}^*n_B^\dagger n_A^\dagger .
+\end{aligned}
+\tag{91.43}
+$$
+
+两个项的相位变化分别为$e^{-2i\alpha}$和$e^{+2i\alpha}$，微分时产生的2抵消原来的$1/2$。一般非零$M$使这个变分非零，所以通常连续轻子数已经被质量项显式破坏；相应顶角改变两个单位的轻子数。
+
+这一破缺在低能中同样存在。$\eta_I=\varphi^{\dagger i}\ell_{iI}$带$+1$，而式[（91.20）](#eq:c91-matrix-effective-mass)给
+<span id="eq:x91-effective-lepton-violation"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm eff}^{(5)}
+&=\frac12K_{IJ}\eta_I\eta_J
++\frac12K_{IJ}^*\eta_J^\dagger\eta_I^\dagger,\\
+\delta_\alpha\mathcal L_{\rm eff}^{(5)}
+&=i\alpha K_{IJ}\eta_I\eta_J
+-i\alpha K_{IJ}^*\eta_J^\dagger\eta_I^\dagger .
+\end{aligned}
+\tag{91.44}
+$$
+
+因此只要有效马约拉纳质量非零，所有活跃轻子同时作通常相位旋转就不再是对称性。这与积分重场前的结论相同。$M=0$的纯狄拉克模型保留上述经典轻子数；特殊的质量矩阵还可能保留某些味荷，由相应的场变换另行确定。
+
+这里的$\Delta L=2$是质量项的显式破缺。电弱量子反常也会影响全局轻子数，其计算使用第75–77节的流与规范场三角图。
+
+---
+
+[← 第 90 节](/posts/srednicki-90/) · [章节地图](/srednicki/) · [第 92 节 →](/posts/srednicki-92/)

@@ -1,0 +1,113 @@
+{
+  "execution_utc": "2026-09-14T12:25:49.178328+00:00",
+  "software": {
+    "python": "3.14.4",
+    "scipy": "1.16.2",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O"
+  },
+  "program_sha256": "d9920d0f72cdfafa678a8cd7d4dbd276cc109ffd3bbb04c72b34532bfb674fb6",
+  "assumptions": {
+    "model": "Dirac pseudoscalar Yukawa, vertex -g gamma5, metric (-+++)",
+    "positive_masses": "A=m^2>0, B=M^2>0, C=mu^2>0; M<2m in all cases",
+    "momentum": "p=p'=0, off-shell subtraction point",
+    "loop_normalization": "compare finite coefficient in units g^3 gamma5/(16*pi^2)",
+    "dimension": "d=4-epsilon, g_d=g mu_tilde^(epsilon/2); common vertex mu_tilde^(epsilon/2) stripped",
+    "scale": "mu^2=4*pi*exp(-gamma_E)*mu_tilde^2",
+    "radial_measure": "d4q_E/(2*pi)^4 = t dt/(16*pi^2), t=q_E^2",
+    "scope": "finite mass-subtracted integral only; does not numerically verify a divergent unregulated integral"
+  },
+  "quadrature_options": {
+    "epsabs": 3e-13,
+    "epsrel": 3e-13,
+    "limit": 100
+  },
+  "tolerance": 2e-11,
+  "maximum_scaled_error": 5.551115123125783e-17,
+  "passed": true,
+  "cases": [
+    {
+      "input": {
+        "name": "two_distinct_masses",
+        "A_m_squared": 0.64,
+        "B_M_squared": 1.21,
+        "C_mu_squared": 0.9
+      },
+      "three_parameter_log": -0.09363137163882018,
+      "three_parameter_inverse_mass": 1.2351987030277243,
+      "source_51_47_finite_part": -0.011105043392308056,
+      "cancelled_two_parameter_integral": -0.011105043392308087,
+      "convergent_radial_subtraction": -0.01110504339230806,
+      "analytic_closed_form": -0.011105043392308112,
+      "maximum_scaled_error": 5.551115123125783e-17,
+      "omit_source_finite_minus_half_residual": 0.5,
+      "quadrature_error_estimates": {
+        "log3": {
+          "outer_quad_error_estimate": 1.048785882827864e-15,
+          "largest_inner_quad_error_estimate": 1.747790832042037e-15
+        },
+        "inv3": {
+          "outer_quad_error_estimate": 1.3713460400885106e-14,
+          "largest_inner_quad_error_estimate": 1.238549300352336e-14
+        },
+        "two_parameter": 1.7548413759346377e-15,
+        "radial": 1.5563608934305719e-16
+      }
+    },
+    {
+      "input": {
+        "name": "light_pseudoscalar",
+        "A_m_squared": 2.25,
+        "B_M_squared": 0.36,
+        "C_mu_squared": 1.0
+      },
+      "three_parameter_log": 0.43491819032069845,
+      "three_parameter_inverse_mass": 0.6888220783576094,
+      "source_51_47_finite_part": -0.15999335216838784,
+      "cancelled_two_parameter_integral": -0.15999335216838778,
+      "convergent_radial_subtraction": -0.15999335216838784,
+      "analytic_closed_form": -0.15999335216838784,
+      "maximum_scaled_error": 5.551115123125783e-17,
+      "omit_source_finite_minus_half_residual": 0.5,
+      "quadrature_error_estimates": {
+        "log3": {
+          "outer_quad_error_estimate": 4.8285618872240255e-15,
+          "largest_inner_quad_error_estimate": 3.95904536587941e-14
+        },
+        "inv3": {
+          "outer_quad_error_estimate": 3.2477388472967546e-14,
+          "largest_inner_quad_error_estimate": 2.9280487200403907e-13
+        },
+        "two_parameter": 3.244211285571454e-14,
+        "radial": 1.8202311708933082e-15
+      }
+    },
+    {
+      "input": {
+        "name": "equal_mass_removable_limit",
+        "A_m_squared": 1.44,
+        "B_M_squared": 1.44,
+        "C_mu_squared": 0.81
+      },
+      "three_parameter_log": 0.5753641449035618,
+      "three_parameter_inverse_mass": 0.6944444444444444,
+      "source_51_47_finite_part": -0.5753641449035618,
+      "cancelled_two_parameter_integral": -0.5753641449035618,
+      "convergent_radial_subtraction": -0.5753641449035618,
+      "analytic_closed_form": -0.5753641449035618,
+      "maximum_scaled_error": 0.0,
+      "omit_source_finite_minus_half_residual": 0.5,
+      "quadrature_error_estimates": {
+        "log3": {
+          "outer_quad_error_estimate": 6.387825212156992e-15,
+          "largest_inner_quad_error_estimate": 6.373954570398976e-15
+        },
+        "inv3": {
+          "outer_quad_error_estimate": 7.709882115452476e-15,
+          "largest_inner_quad_error_estimate": 7.693140734893652e-15
+        },
+        "two_parameter": 6.387825212156992e-15,
+        "radial": 6.387825212156992e-15
+      }
+    }
+  ]
+}

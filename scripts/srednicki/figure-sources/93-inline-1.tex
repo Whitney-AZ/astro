@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\small}]
+\draw[thick] (-1.55,-1.4) -- (-1.55,1.4);
+\draw[thick] (1.55,-1.4) -- (1.55,1.4);
+\draw[thick] (0,1.4) ellipse (1.55 and .42);
+\draw[thick] (-1.55,-1.4) arc[start angle=180,end angle=360,x radius=1.55,y radius=.42];
+\draw[dashed] (1.55,-1.4) arc[start angle=0,end angle=180,x radius=1.55,y radius=.42];
+\node at (0,1.4) {$n_+,\quad x_4=+T$};
+\node at (0,-1.4) {$n_-,\quad x_4=-T$};
+\draw[->,thick] (0,1.85) -- (0,2.3) node[above] {$+\widehat x_4$};
+\draw[->,thick] (0,-1.85) -- (0,-2.3) node[below] {$-\widehat x_4$};
+\draw[->] (-2.15,-1.65) -- (-2.15,1.95) node[above] {$x_4$};
+\draw[->] (1.6,0) -- (2.3,0);
+\node[anchor=west,align=left] at (2.4,0) {$|\mathbf x|=R$\\$U=I,\quad A=0$};
+\node[align=center] at (0,0) {有限作用量\\场构型};
+\end{tikzpicture}

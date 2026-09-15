@@ -1,0 +1,1680 @@
+{
+  "checks": 328,
+  "passed": true,
+  "records": [
+    {
+      "name": "full chiral tensor 0",
+      "scaled_residual": 3.0444050049947057e-16,
+      "passed": true
+    },
+    {
+      "name": "contracted chiral tensors 0",
+      "scaled_residual": 1.1066475457369166e-15,
+      "passed": true
+    },
+    {
+      "name": "full chiral tensor 1",
+      "scaled_residual": 1.0443014697261473e-16,
+      "passed": true
+    },
+    {
+      "name": "contracted chiral tensors 1",
+      "scaled_residual": 2.39592839057812e-16,
+      "passed": true
+    },
+    {
+      "name": "full chiral tensor 2",
+      "scaled_residual": 1.6798489096235454e-16,
+      "passed": true
+    },
+    {
+      "name": "contracted chiral tensors 2",
+      "scaled_residual": 1.9374824123873838e-16,
+      "passed": true
+    },
+    {
+      "name": "full chiral tensor 3",
+      "scaled_residual": 1.5937997109039273e-16,
+      "passed": true
+    },
+    {
+      "name": "contracted chiral tensors 3",
+      "scaled_residual": 6.715385976100024e-17,
+      "passed": true
+    },
+    {
+      "name": "full chiral tensor 4",
+      "scaled_residual": 2.1359829920051848e-16,
+      "passed": true
+    },
+    {
+      "name": "contracted chiral tensors 4",
+      "scaled_residual": 1.6074063321130521e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 0, 1, 1, 1, 1)",
+      "scaled_residual": 2.6699934549259593e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 0, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (0.0, 0)",
+      "scaled_residual": 1.9737298215558337e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (0.0, 0)",
+      "scaled_residual": 3.9474596431116675e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 0, 1, 1, 1)",
+      "scaled_residual": 3.937563769724972e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 1, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 1, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (0.0, 1)",
+      "scaled_residual": 5.103786205235288e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (0.0, 1)",
+      "scaled_residual": 1.2772377938310919e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 0, 1, 1, 1)",
+      "scaled_residual": 1.1076371293832542e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.0, 2, 1, 1, 1, 1)",
+      "scaled_residual": 1.5351020751146946e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.0, 2, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (0.0, 2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (0.0, 2)",
+      "scaled_residual": 1.5046503637677536e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 0, 1, 1)",
+      "scaled_residual": 1.8122033639142898e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 0, 1, 1, 1)",
+      "scaled_residual": 7.979727989493313e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 0, 1, 1)",
+      "scaled_residual": 3.7330691092918256e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 0, 1, 1, 1, 1)",
+      "scaled_residual": 1.5090241211628228e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 0, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (0.4, 0)",
+      "scaled_residual": 1.9992381814829014e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (0.4, 0)",
+      "scaled_residual": 2.0275040806211624e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 0, 1, 1)",
+      "scaled_residual": 4.070158516756324e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 0, 1, 1)",
+      "scaled_residual": 4.070158516756324e-17,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 0, 1, 1)",
+      "scaled_residual": 9.62916895285626e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 0, 1, 1)",
+      "scaled_residual": 3.851667581142504e-17,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 1, 1, 1, 1, 1)",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 1, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (0.4, 1)",
+      "scaled_residual": 5.169747216763867e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (0.4, 1)",
+      "scaled_residual": 1.2924368041909666e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 0, 1, 0)",
+      "scaled_residual": 1.337569670761537e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 1, 1, 0)",
+      "scaled_residual": 2.2620778409285986e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 1, 1, 0)",
+      "scaled_residual": 1.8237454600281047e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 0, 1, 0)",
+      "scaled_residual": 2.482534153247273e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 1, 1, 0)",
+      "scaled_residual": 7.81362622855619e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 1, 1, 0)",
+      "scaled_residual": 2.2100272367476603e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (0.4, 2, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (0.4, 2, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (0.4, 2)",
+      "scaled_residual": 4.569687271960918e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (0.4, 2)",
+      "scaled_residual": 1.713632726985344e-17,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 0, 1, 1, 1)",
+      "scaled_residual": 4.9453482170219185e-17,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 0, 1, 1)",
+      "scaled_residual": 1.5586481636230458e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 0, 1, 1, 1, 1)",
+      "scaled_residual": 1.8709010346450942e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 0, 1, 1, 1, 1)",
+      "scaled_residual": 8.366923785282239e-17,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (3.5, 0)",
+      "scaled_residual": 3.7941749741557745e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (3.5, 0)",
+      "scaled_residual": 3.7941899803845416e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 0, 1, 0)",
+      "scaled_residual": 3.996548924688562e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 1, 1, 0)",
+      "scaled_residual": 8.078935389595451e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 0, 1, 0)",
+      "scaled_residual": 1.5156632395588132e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 1, 1, 0)",
+      "scaled_residual": 2.4222096344842695e-17,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 1, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 1, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (3.5, 1)",
+      "scaled_residual": 3.6791999749389345e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (3.5, 1)",
+      "scaled_residual": 2.45376989308298e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 0, 1, 1)",
+      "scaled_residual": 1.9688934281770466e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 0, 1, 1)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 0, 1, 1, 1)",
+      "scaled_residual": 1.3150062842550402e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 0, 1, 1)",
+      "scaled_residual": 1.6673800548991636e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 0, 1, 1)",
+      "scaled_residual": 1.6673800548991636e-16,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "external Fierz (3.5, 2, 1, 1, 1, 1)",
+      "scaled_residual": 1.4151487917820158e-16,
+      "passed": true
+    },
+    {
+      "name": "external conjugate (3.5, 2, 1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit spin sum (3.5, 2)",
+      "scaled_residual": 4.33619997046374e-16,
+      "passed": true
+    },
+    {
+      "name": "unsimplified massive vector traces (3.5, 2)",
+      "scaled_residual": 4.3368173268637545e-16,
+      "passed": true
+    },
+    {
+      "name": "two-left-field Yukawa rank 1",
+      "scaled_residual": 1.153387418090364e-16,
+      "passed": true
+    },
+    {
+      "name": "charged current preserved rank 1",
+      "scaled_residual": 6.665376326214582e-16,
+      "passed": true
+    },
+    {
+      "name": "two-left-field Yukawa rank 2",
+      "scaled_residual": 1.678037742937496e-16,
+      "passed": true
+    },
+    {
+      "name": "charged current preserved rank 2",
+      "scaled_residual": 4.443355911404402e-16,
+      "passed": true
+    },
+    {
+      "name": "two-left-field Yukawa rank 3",
+      "scaled_residual": 2.6926576188676986e-16,
+      "passed": true
+    },
+    {
+      "name": "charged current preserved rank 3",
+      "scaled_residual": 6.661611505402354e-16,
+      "passed": true
+    },
+    {
+      "name": "massive width integral rho=0.0",
+      "scaled_residual": 1.3988810110276972e-14,
+      "passed": true
+    },
+    {
+      "name": "massive width integral rho=2.3371781939388622e-05",
+      "scaled_residual": 3.752553823233029e-14,
+      "passed": true
+    },
+    {
+      "name": "massive width integral rho=0.01",
+      "scaled_residual": 1.2989609388114332e-14,
+      "passed": true
+    },
+    {
+      "name": "massive width integral rho=0.1",
+      "scaled_residual": 7.105427357601002e-15,
+      "passed": true
+    },
+    {
+      "name": "massive width integral rho=0.5",
+      "scaled_residual": 2.3592239273284576e-16,
+      "passed": true
+    },
+    {
+      "name": "massive width integral rho=0.81",
+      "scaled_residual": 1.4230153513872246e-18,
+      "passed": true
+    }
+  ],
+  "phase": [
+    {
+      "rho": 0.0,
+      "quadrature_factor": 1.000000000000014,
+      "formula_factor": 1.0
+    },
+    {
+      "rho": 2.3371781939388622e-5,
+      "quadrature_factor": 0.9998130956456908,
+      "formula_factor": 0.9998130956457283
+    },
+    {
+      "rho": 0.01,
+      "quadrature_factor": 0.9255341942231987,
+      "formula_factor": 0.9255341942231857
+    },
+    {
+      "rho": 0.1,
+      "quadrature_factor": 0.4842102111592926,
+      "formula_factor": 0.4842102111592855
+    },
+    {
+      "rho": 0.5,
+      "quadrature_factor": 0.016941541679836164,
+      "formula_factor": 0.016941541679835928
+    },
+    {
+      "rho": 0.81,
+      "quadrature_factor": 0.00010961375439607107,
+      "formula_factor": 0.00010961375439606964
+    }
+  ],
+  "script_sha256": "f3881bdb9708379721b84fc73309562bbd3f2c279f5efb6a1d5a1646b6bb5422",
+  "helper_sha256": "75c2ece494dd8cdef46e3043e588053e3f5cc8987403a34e9b75203e6afa7c74"
+}

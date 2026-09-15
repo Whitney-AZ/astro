@@ -1,0 +1,24 @@
+% Original vector reconstruction of Fig.51.3, PDF222 / printed210.
+% Three Yukawa vertices A,B,C. Fermion chain: p -> p+ell -> p'+ell -> p'.
+% Scalar C -> A carries ell; the external scalar enters B with k=p'-p.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \draw (0,0)--(90,0);
+  \draw[->] (3,0)--(11,0);
+  \draw[->] (24,0)--(36,0);
+  \draw[->] (54,0)--(66,0);
+  \draw[->] (79,0)--(87,0);
+  \draw[scalar] (75,0) arc[start angle=0,end angle=180,radius=30mm];
+  \draw[->] (50.209445,29.544233)
+    arc[start angle=80,end angle=100,radius=30mm];
+  \draw[scalar] (45,-21)--(45,0);
+  \draw[->] (45,-17)--(45,-7);
+  \foreach \x in {15,45,75}{\fill (\x,0) circle[radius=.55mm];}
+  \node at (45,25) {$\ell$};
+  \node[above] at (6,2) {$p$};
+  \node[above] at (30,2) {$p+\ell$};
+  \node[above] at (60,2) {$p'+\ell$};
+  \node[above] at (84,2) {$p'$};
+  \node[right] at (47,-12) {$k$};
+\end{tikzpicture}

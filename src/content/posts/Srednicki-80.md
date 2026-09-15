@@ -1,0 +1,739 @@
+---
+title: 'Srednicki §80 N × N 矩阵场的费曼规则'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [80]
+hideFromHome: true
+draft: false
+---
+
+<span id="c80"></span>
+
+上一节已将规范场的相互作用写成几个矩阵乘积的迹。若立即把矩阵展开成分量，计算中就会出现许多生成元的乘积及其缩并。我们也可以暂时保留每个矩阵的两个指标，让费曼图直接表示这些指标怎样相连。这样得到的双线图把颜色运算与动量运算分开，尤其适合外部粒子较多的过程。
+
+应用上一节的紧凑规范场密度时，须保留[场空间的区别](/posts/srednicki-79/#c79-su-projection)：仅有SU(N)时，作用量包含[（79.16）](/posts/srednicki-79/#eq:c79-corrected-su-density)中的双迹修正；完整U(N)实现则保留中央场。为先弄清矩阵指标与组合因子，下面定义一个矩阵标量模型。它的顶角不带洛伦兹指标，因而能把双线记法的实质完整地显示出来。
+
+<span id="c80-model"></span>
+
+## 厄米矩阵场与自由传播
+
+设$B(x)$是一个$N\times N$厄米矩阵。对角线上有$N$个实数，每对非对角元由一个复数及其共轭确定，共有$N+2N(N-1)/2=N^2$个实分量。取这个实向量空间的一组正交归一基$T^a$，并将单位阵方向放在最后。于是
+<span id="eq:c80-basis"></span>
+
+$$
+\begin{aligned}
+&T^{a\dagger}=T^a,\qquad
+\operatorname{Tr}(T^aT^b)=\delta^{ab},
+\qquad a,b=1,\ldots,N^2,\\
+&T^{N^2}=\frac{\mathbf1_N}{\sqrt N},\qquad
+B=B^aT^a,\qquad B^a=\operatorname{Tr}(T^aB).
+\end{aligned}
+\tag{80.1}
+$$
+
+最后一个等式来自展开式两边乘$T^a$再取迹。又因
+$(\operatorname{Tr}T^aB)^*=\operatorname{Tr}BT^a=\operatorname{Tr}T^aB$，这些系数都是实场。其余基矩阵与单位阵正交，故它们无迹；$B$本身此时没有无迹限制。
+
+考虑无质量模型
+<span id="eq:c80-model"></span>
+
+$$
+\mathcal L
+=\operatorname{Tr}\left[-\frac12\partial^\mu B\partial_\mu B
++\frac g3 B^3-\frac\lambda4 B^4\right].
+\tag{80.2}
+$$
+
+取$g,\lambda$为实数，密度便是实的。它在常数酉矩阵的$B\mapsto UBU^\dagger$变换下保持不变；这里的颜色标记就是矩阵场的分量标签。$g$是标量三次耦合，与上一节的规范耦合分别定义。令作用量无量纲，在$d$维便有
+<span id="eq:c80-dimensions"></span>
+
+$$
+[B]=\frac{d-2}{2},\qquad
+[g]=\frac{6-d}{2},\qquad[\lambda]=4-d.
+\tag{80.3}
+$$
+
+例如在四维，$g$具有一个质量的量纲，$\lambda$无量纲。当$g\ne0$时，零场不是稳定的经典真空：沿$B=t\mathbf1_N$，势能为$N(-gt^3/3+\lambda t^4/4)$，在零点任意近处可取到负值。下面在零场附近计算形式微扰振幅；加入正质量平方也得到同样的颜色规则。
+
+代入分量展开，二次项用基的正交性立即对角化，三次、四次项则留下按原顺序排列的生成元：
+<span id="eq:c80-components"></span>
+
+$$
+\begin{aligned}
+\mathcal L={}&-\frac12\partial^\mu B^a\partial_\mu B^a
++\frac g3\operatorname{Tr}(T^aT^bT^c)B^aB^bB^c\\
+&-\frac\lambda4\operatorname{Tr}(T^aT^bT^cT^d)
+B^aB^bB^cB^d.
+\end{aligned}
+\tag{80.4}
+$$
+
+对自由部分作一次分部积分，二次核为$\square\delta^{ab}$；在$e^{ikx}$上，$\square$给$-k^2$。因而时间序收缩的动量核为
+<span id="eq:c80-component-propagator"></span>
+
+$$
+\frac{\widetilde\Delta^{ab}(k)}{i}
+=\frac{-i\delta^{ab}}{k^2-i0},\qquad
+\widetilde\Delta^{ab}(k)=\frac{\delta^{ab}}{k^2-i0}.
+\tag{80.5}
+$$
+
+传播函数记为右边的$\widetilde\Delta$；画一条实际内线时使用$\widetilde\Delta/i$。这里的$0$是正的无穷小因果处方，度规仍为$(-,+,+,+)$。
+
+<span id="c80-completeness"></span>
+
+## 用两条线表示矩阵指标
+
+矩阵元写为$B_i{}^j$，下标表示行，上标表示列。由$B_i{}^j=B^a(T^a)_i{}^j$，两矩阵元的自由收缩包含$\sum_a(T^a)_i{}^j(T^a)_k{}^l$。要计算这个和，关键是基的完备性。
+
+任意复矩阵$X$都能写成两个厄米矩阵之和$X=H+iK$，其中$H=(X+X^\dagger)/2$、$K=(X-X^\dagger)/(2i)$。分别展开$H,K$，[（80.1）](#eq:c80-basis)就给出
+<span id="eq:c80-arbitrary-matrix"></span>
+
+$$
+\begin{aligned}
+X&=\sum_aT^a\operatorname{Tr}(T^aX),\\
+X_i{}^j
+&=\sum_a(T^a)_i{}^j(T^a)_k{}^l X_l{}^k.
+\end{aligned}
+\tag{80.6}
+$$
+
+另一方面，$X_i{}^j=\delta_i{}^l\delta_k{}^jX_l{}^k$。因为$X_l{}^k$的每个分量均可独立选取，比较系数便得到完备关系：
+<span id="eq:c80-completeness"></span>
+
+$$
+\boxed{\sum_{a=1}^{N^2}(T^a)_i{}^j(T^a)_k{}^l
+=\delta_i{}^l\delta_k{}^j.}
+\tag{80.7}
+$$
+
+将$j=i$、$l=k$代入时，两边都给$N$；将$j=k$、$l=i$代入时，两边都给$N^2$，后者正是$\sum_a\operatorname{Tr}T^aT^a=N^2$。这两种缩并检验了归一；作用于任意矩阵的[（80.6）](#eq:c80-arbitrary-matrix)则已经确定了核的完整指标结构。
+
+因此，实际矩阵内线为
+<span id="eq:c80-matrix-propagator"></span>
+
+$$
+\frac{\widetilde\Delta_i{}^j{}_k{}^l(k)}{i}
+=\frac{-i}{k^2-i0}\,\delta_i{}^l\delta_k{}^j.
+\tag{80.8}
+$$
+
+一个delta将右端的上指标$l$连到左端的下指标$i$，另一个将左端的上指标$j$连到右端的下指标$k$。这就是用两条平行线表示一条矩阵传播子的理由。箭头统一从上指标指向下指标，记录颜色怎样传递；两条线共同携带一份标量传播子，并不代表两个传播粒子。
+
+![完整厄米矩阵传播子的两股颜色线](/images/srednicki/s80_propagator.svg)
+
+完整厄米矩阵的双线传播子。左右端分别为$B_i{}^j$与$B_k{}^l$，每股箭头与相应delta连接一致。整个双线乘$-i/(k^2-i0)$。
+
+<span id="fig:c80-propagator"></span>
+
+稍后合并顶角时还要使用同一恒等式的迹形式。把矩阵元逐个展开并利用[（80.7）](#eq:c80-completeness)，得到
+<span id="eq:c80-trace-gluing"></span>
+
+$$
+\begin{aligned}
+\sum_a\operatorname{Tr}(XT^a)\operatorname{Tr}(T^aY)
+&=X_i{}^jY_l{}^k
+\sum_a(T^a)_j{}^i(T^a)_k{}^l\\
+&=X_i{}^jY_j{}^i=\operatorname{Tr}(XY).
+\end{aligned}
+\tag{80.9}
+$$
+
+它表明，一条完整矩阵内线能将两端的迹接成一个迹。双线图正是把这一步反复进行时的指标连接保留下来。
+
+<span id="c80-vertices"></span>
+
+## 循环顶角与玻色排列
+
+相互作用中的迹已经指定了颜色线在顶角处怎样转向。例如，
+<span id="eq:c80-cyclic-indices"></span>
+
+$$
+\operatorname{Tr}(B_1B_2\cdots B_n)
+=(B_1)_{i_1}{}^{i_2}(B_2)_{i_2}{}^{i_3}
+\cdots(B_n)_{i_n}{}^{i_1}.
+\tag{80.10}
+$$
+
+每个矩阵的上指标接到下一个矩阵的下指标，最后一股再接回第一个矩阵。这条闭合链只规定循环次序，没有选定哪一个矩阵必须是第一个。若将$n$条带标签外腿接到$\operatorname{Tr}B^n$上，$n!$种分配就分成若干循环类，每类含$n$种旋转。
+
+把这一组合因子直接从分量场求导也能看清。对于$h_n\operatorname{Tr}B^n/n$，对$n$个带指定颜色$a_1,\ldots,a_n$的外场分别求导，每次求导选中一个不同的矩阵因子。提出共同的动量守恒delta函数后，顶角为
+<span id="eq:c80-vertex-permutations"></span>
+
+$$
+\begin{aligned}
+iV_n^{a_1\cdots a_n}
+&=\frac{ih_n}{n}\sum_{\pi\in S_n}
+\operatorname{Tr}(T^{a_{\pi(1)}}\cdots T^{a_{\pi(n)}})\\
+&=ih_n\sum_{\pi\in S_n/C_n}
+\operatorname{Tr}(T^{a_{\pi(1)}}\cdots T^{a_{\pi(n)}}).
+\end{aligned}
+\tag{80.11}
+$$
+
+第二行对循环等价类求和，$C_n$表示$n$次循环旋转。这里先将外腿视为不同的带标签对象，再代入它们的颜色值；即使若干颜色相等，求导时产生的重复项也要保留。拉格朗日量中的$1/3$、$1/4$恰好消去每个类中的循环重数。
+
+为显示完整分量顶角，暂记$C(ab\cdots)=\operatorname{Tr}(T^aT^b\cdots)$。取$h_3=g$、$h_4=-\lambda$，上式分别给出
+<span id="eq:c80-full-vertices"></span>
+
+$$
+\begin{aligned}
+iV_3^{abc}&=ig\,[C(abc)+C(acb)],\\
+iV_4^{abcd}&=-i\lambda[\,C(abcd)+C(abdc)+C(acbd)\\
+&\hspace{33mm}+C(acdb)+C(adbc)+C(adcb)\,].
+\end{aligned}
+\tag{80.12}
+$$
+
+这些表达式对外腿的交换对称。当矩阵乘积的迹随排列改变时，各个非循环排列必须分别保留。
+
+用$SU(2)$的三个无迹基矩阵$T^a=\sigma^a/\sqrt2$就能看出差别。由$\sigma^a\sigma^b=\delta^{ab}\mathbf1+i\epsilon^{abc}\sigma^c$及$\operatorname{Tr}\sigma^a=0$，有
+<span id="eq:c80-pauli-traces"></span>
+
+$$
+\begin{aligned}
+\operatorname{Tr}(T^aT^bT^c)&=\frac{i}{\sqrt2}\epsilon^{abc},\\
+\operatorname{Tr}(T^aT^bT^cT^d)
+&=\frac12(\delta^{ab}\delta^{cd}
+-\delta^{ac}\delta^{bd}+\delta^{ad}\delta^{bc}).
+\end{aligned}
+\tag{80.13}
+$$
+
+第二式来自将前两个泡利矩阵相乘，再对剩下的两个取迹：$\delta^{ab}$项给$\delta^{ab}\delta^{cd}/2$，两个$\epsilon$相乘的项为$-\epsilon^{abe}\epsilon^{cde}/2$，展开后就是其余两项。于是颜色$123$的三点顶角为零。颜色$1122$的四点顶角中，六个迹有四个等于$1/2$、两个等于$-1/2$，合起来给$-i\lambda$。也可令$B=B^1T^1+B^2T^2$，此时
+<span id="eq:c80-component-check"></span>
+
+$$
+\begin{aligned}
+\operatorname{Tr}B^4&=\frac12[(B^1)^2+(B^2)^2]^2,\\
+i\frac{\partial^4\mathcal L}
+{\partial(B^1)^2\partial(B^2)^2}\bigg|_{B=0}
+&=i\left(-\frac\lambda4\right)2!2!=-i\lambda.
+\end{aligned}
+\tag{80.14}
+$$
+
+这两个例子所检验的是固定颜色的分量规则。在双线记法中，我们为每一种循环次序分别画图，因而一个有序三点顶角只乘$ig$，一个有序四点顶角只乘$-i\lambda$。把所有循环类的图相加，就恢复[（80.11）](#eq:c80-vertex-permutations)的完整顶角。
+
+![三点与四点色排序顶角](/images/srednicki/s80_vertices.svg)
+
+三点、四点循环顶角。每个外口代表一个矩阵，两股颜色线在顶角内与相邻外口相接。固定图中循环次序，顶角因子分别为$ig$、$-i\lambda$；其余非循环排列由另画的有序图计入。
+
+<span id="fig:c80-vertices"></span>
+
+<span id="c80-trees"></span>
+
+## 固定颜色次序的四点树图
+
+现在计算两个标量到两个标量的树级过程。物理入射粒子的颜色为$a_1,a_2$，出射粒子的颜色为$a_3,a_4$。采用全部流出的动量记号，因此
+<span id="eq:c80-outgoing-momenta"></span>
+
+$$
+k_1+k_2+k_3+k_4=0,\qquad
+k_1^0,k_2^0<0,\qquad
+k_i^2=0,
+\qquad q_{ij}=k_i+k_j.
+\tag{80.15}
+$$
+
+先将四条外腿沿逆时针排成$1,2,3,4$。保持这个边界次序时，一条内部双线只能将相邻的两条外腿与另外两条分开。因此有$12|34$和$14|23$两个交换通道，以及一个四点接触图。$13|24$通道会将边界上的相邻关系交叉，它属于另一种颜色次序。
+
+![固定1234次序的两条交换道及接触图](/images/srednicki/s80_trees.svg)
+
+固定逆时针次序$1234$的三张树图。前两图的内部动量平方分别为$q_{12}^2$、$q_{14}^2$，第三图是接触项。颜色箭头与外动量方向分别理解；图中标签是外腿编号。
+
+<span id="fig:c80-trees"></span>
+
+例如，第一张图的两个顶角按它们各自的循环次序给出$\operatorname{Tr}(T^{a_1}T^{a_2}T^b)$与$\operatorname{Tr}(T^bT^{a_3}T^{a_4})$。对内部颜色$b$求和，用[（80.9）](#eq:c80-trace-gluing)，得到$\operatorname{Tr}(T^{a_1}T^{a_2}T^{a_3}T^{a_4})$。第二张图可先得到$\operatorname{Tr}(T^{a_4}T^{a_1}T^{a_2}T^{a_3})$，再循环转动一次，也成为同一个迹。接触图已经是这个迹。记
+<span id="eq:c80-partial-amplitude"></span>
+
+$$
+\begin{aligned}
+C_{i_1\cdots i_n}
+&\equiv\operatorname{Tr}(T^{a_{i_1}}\cdots T^{a_{i_n}}),\\
+A(1234)&=\frac{g^2}{q_{12}^2-i0}
++\frac{g^2}{q_{14}^2-i0}-\lambda.
+\end{aligned}
+\tag{80.16}
+$$
+
+三图的动量因子为
+<span id="eq:c80-ordered-three-graphs"></span>
+
+$$
+\begin{aligned}
+i\mathcal T_{1234}
+&=C_{1234}\left[
+\frac{(ig)^2(-i)}{q_{12}^2-i0}
++\frac{(ig)^2(-i)}{q_{14}^2-i0}-i\lambda\right]\\
+&=iC_{1234}A(1234).
+\end{aligned}
+\tag{80.17}
+$$
+
+两个三点因子与内线合成$(ig)^2(-i)=ig^2$，所以提出共同$i$后，交换项与接触项的相对号如[（80.16）](#eq:c80-partial-amplitude)所示。对于$q_{12}^2,q_{14}^2$均非零的普通函数值，可以略去$i0$；讨论交换极点及因子化时仍须保留它。
+
+所有颜色次序怎样枚举也已由顶角的循环性决定。固定标签$1$的位置，再任意排列$2,3,4$，得到六种循环类：
+<span id="eq:c80-six-orders"></span>
+
+$$
+\begin{gathered}
+\mathcal O_4=\{1234,1342,1423,1243,1432,1324\},\\
+\mathcal T=\sum_{w\in\mathcal O_4}C_w A(w).
+\end{gathered}
+\tag{80.18}
+$$
+
+每种次序都有刚才的两张交换图和一张接触图，共$6\times3=18$张有序图。这一计数同时把[（80.12）](#eq:c80-full-vertices)中各个非循环排列包括进来。
+
+对更多外腿，方法也一样。任取树中的一条内边，它的两端属于两个不同顶角；沿这条边对颜色求和，用[（80.9）](#eq:c80-trace-gluing)把两个迹接成一个迹。收缩内边后仍是一棵树，故可继续，直到只剩一个顶角和全部外腿。每一步都保留图的循环连接，最终颜色因子就是外边界逆时针次序的单个迹。去掉这个迹后的部分振幅按$-i/(k^2-i0)$、$ig$、$-i\lambda$计算，再对不同外边界次序求和。这也解释了为什么有序树图虽比普通分量图多，单张图的颜色处理却格外简单。
+
+<span id="c80-color-sum"></span>
+
+## 从闭合颜色线到振幅模方
+
+求可观测量时，还要将振幅与其复共轭相乘，并按所制备或观测的颜色态求和。先考虑对四条外腿的全部$N^2$种颜色求和。展开[（80.18）](#eq:c80-six-orders)的模方后，动量函数与颜色求和分开：
+<span id="eq:c80-color-gram"></span>
+
+$$
+\begin{aligned}
+\sum_{a_1,\ldots,a_4}|\mathcal T|^2
+&=\sum_{w,v\in\mathcal O_4}A(w)A(v)^*\,G_{wv},\\
+G_{wv}&\equiv\sum_{a_1,\ldots,a_4}C_w C_v^*.
+\end{aligned}
+\tag{80.19}
+$$
+
+矩阵$G$是六个颜色张量的格拉姆矩阵。非对角元如$G_{1234,1243}$反映不同颜色次序之间的干涉。
+
+先处理共轭。因为每个$T^a$厄米，乘积的厄米共轭会反转次序，从而
+<span id="eq:c80-conjugate-trace"></span>
+
+$$
+\begin{aligned}
+\bigl[\operatorname{Tr}(T^{a_1}\cdots T^{a_n})\bigr]^*
+&=\operatorname{Tr}[(T^{a_1}\cdots T^{a_n})^\dagger]\\
+&=\operatorname{Tr}(T^{a_n}\cdots T^{a_1}).
+\end{aligned}
+\tag{80.20}
+$$
+
+随后，每个$a_r$只出现在两个迹中各一次，可以逐个使用完备关系，将振幅侧与共轭振幅侧的两股线相连。所有颜色指标连接后，每条独立的闭合单线给出$\sum_{i=1}^N\delta_i{}^i=N$。
+
+要确认究竟有多少条独立的线，最直接的办法是先保留全部指标。将一个循环次序记为置换$\sigma$，例如$1234$表示$\sigma=(1234)$，$\sigma(r)$是标签$r$的后一个标签。对另一循环次序用$\tau$。则两个迹可以分别表示成
+<span id="eq:c80-permutation-indices"></span>
+
+$$
+\begin{aligned}
+C_\sigma&=\sum_{i_1,\ldots,i_4}
+\prod_{r=1}^4(T^{a_r})_{i_r}{}^{i_{\sigma(r)}},\\
+C_\tau^*&=\sum_{j_1,\ldots,j_4}
+\prod_{r=1}^4(T^{a_r})_{j_r}{}^{j_{\tau^{-1}(r)}}.
+\end{aligned}
+\tag{80.21}
+$$
+
+第二个式子用了逆序，矩阵元已是普通数，所以它们的乘积可按标签$r$排列。对$a_r$求和后，[（80.7）](#eq:c80-completeness)给出两条约束：
+<span id="eq:c80-index-cycles"></span>
+
+$$
+i_r=j_{\tau^{-1}(r)},\qquad
+j_r=i_{\sigma(r)}
+\quad\Longrightarrow\quad
+i_r=i_{\sigma\tau^{-1}(r)}.
+\tag{80.22}
+$$
+
+因此，同一个置换循环中的$i$必须相等，不同循环中的$i$可以独立取$1,\ldots,N$。以$c(\rho)$表示置换$\rho$的循环个数，包括固定点，就得到
+<span id="eq:c80-cycle-formula"></span>
+
+$$
+G_{\sigma\tau}=N^{c(\sigma\tau^{-1})}.
+\tag{80.23}
+$$
+
+这也给出了直接数图中闭合单线的代数依据。
+
+例如[图80.4](#fig:c80-color-contraction)连接$C_{1234}$与$C_{1243}^*$。此时$\sigma\tau^{-1}=(143)(2)$，故约束为$i_1=i_4=i_3$，而$i_2$独立，两条闭合线合共给$N^2$。图中绕过多个顶角的长线携带同一个自由颜色指标。
+
+![四次迹交叉收缩产生两条闭合颜色线](/images/srednicki/s80_color_contraction.svg)
+
+颜色迹的交叉收缩。将$1234$与$1243$的共轭迹按相同标签连接后，颜色等式形成$(143)$与$(2)$两条独立闭合链；右侧是同一次收缩的整理结果，颜色因子为$N^2$。
+
+<span id="fig:c80-color-contraction"></span>
+
+固定第一种次序为$1234$，逐一计算其与六种次序的乘积，可列成
+
+| 第二种次序$\tau$ | $\sigma\tau^{-1}$的循环分解 | 颜色和 |
+| ---------------- | --------------------------- | ------ |
+| $1234$           | $(1)(2)(3)(4)$              | $N^4$  |
+| $1342$           | $(132)(4)$                  | $N^2$  |
+| $1423$           | $(142)(3)$                  | $N^2$  |
+| $1243$           | $(143)(2)$                  | $N^2$  |
+| $1432$           | $(13)(24)$                  | $N^2$  |
+| $1324$           | $(1)(243)$                  | $N^2$  |
+
+任意另一行都能通过同时重命名四个标签变成这一行，求和域并不改变。因此这张表已经确定全部$6\times6$个元素：相同循环次序给$N^4$，两个不同的循环次序给$N^2$。用$\mathbf1_6$表示六维单位阵、$J_6$表示各元素均为一的矩阵，结果为
+<span id="eq:c80-full-gram"></span>
+
+$$
+G=(N^4-N^2)\mathbf1_6+N^2J_6.
+\tag{80.24}
+$$
+
+它是正半定的：沿$(1,1,1,1,1,1)$方向的特征值为$N^4+5N^2$，与这个方向正交的五维子空间中为$N^4-N^2$。在$N=1$时，后五个特征值为零，因为此时所有迹都等于一，六个颜色结构合成同一个数。
+
+用直接迹收缩也能得到同一结果。将[（80.7）](#eq:c80-completeness)与任意矩阵相接，得到
+<span id="eq:c80-ex-full-completeness"></span>
+
+$$
+\begin{aligned}
+\sum_a\operatorname{Tr}(XT^a)\operatorname{Tr}(T^aY)
+&=\operatorname{Tr}(XY),\\
+\sum_aT^aXT^a&=\operatorname{Tr}X\,\mathbf1_N,
+\qquad\sum_aT^aT^a=N\mathbf1_N.
+\end{aligned}
+\tag{80.35}
+$$
+
+第一行已在[（80.9）](#eq:c80-trace-gluing)展开。第二行的矩阵元为$(T^a)_i{}^jX_j{}^k(T^a)_k{}^l$，完备关系使它变成$\delta_i{}^lX_j{}^j$；随后取$X=\mathbf1_N$得到最后一式。
+
+先在同字范数的最后一个颜色$d$处收缩，再依次对相邻的两个$T^c$、两个$T^b$求和：
+<span id="eq:c80-ex-full-norm-direct"></span>
+
+$$
+\begin{aligned}
+\sum_{a,b,c,d}|\operatorname{Tr}(T^aT^bT^cT^d)|^2
+&=\sum_{a,b,c}\operatorname{Tr}(T^aT^bT^cT^cT^bT^a)\\
+&=N\sum_{a,b}\operatorname{Tr}(T^aT^bT^bT^a)\\
+&=N^2\sum_a\operatorname{Tr}(T^aT^a)=N^4.
+\end{aligned}
+\tag{80.36}
+$$
+
+复共轭使第二迹次序反转，所以两份$d$正好接在两个迹相邻的端点。最后一个颜色和遍历$N^2$个基矩阵，每个$\operatorname{Tr}(T^aT^a)=1$，由此给出最后的$N^2$。
+
+对$1234$与$1243$的交叉项，第二字共轭并循环转动后为$T^dT^bT^aT^c$。先收缩$d$，再使用[（80.35）](#eq:c80-ex-full-completeness)第二行收缩隔着矩阵乘积的两个$T^c$，得到
+<span id="eq:c80-ex-cross-direct"></span>
+
+$$
+\begin{aligned}
+&\sum_{a,b,c,d}\operatorname{Tr}(T^aT^bT^cT^d)
+ [\operatorname{Tr}(T^aT^bT^dT^c)]^*\\
+&\quad=\sum_{a,b,c}\operatorname{Tr}(T^aT^bT^cT^bT^aT^c)\\
+&\quad=\sum_{a,b}\operatorname{Tr}(T^aT^b)
+                   \operatorname{Tr}(T^bT^a)
+ =\sum_{a,b}\delta^{ab}\delta^{ba}=N^2.
+\end{aligned}
+\tag{80.37}
+$$
+
+接下来利用四点运动学，把六个部分振幅分成三对。由总动量守恒，$q_{12}=-q_{34}$、$q_{13}=-q_{24}$、$q_{14}=-q_{23}$；一个颜色次序反过来后，其两个相邻交换通道因而相同。定义三个动量函数
+<span id="eq:c80-three-coefficients"></span>
+
+$$
+\begin{aligned}
+A_3&=A(1234)=A(1432)
+=\frac{g^2}{q_{12}^2-i0}+\frac{g^2}{q_{14}^2-i0}-\lambda,\\
+A_4&=A(1342)=A(1243)
+=\frac{g^2}{q_{13}^2-i0}+\frac{g^2}{q_{12}^2-i0}-\lambda,\\
+A_2&=A(1423)=A(1324)
+=\frac{g^2}{q_{14}^2-i0}+\frac{g^2}{q_{13}^2-i0}-\lambda.
+\end{aligned}
+\tag{80.25}
+$$
+
+下标$j$指出这一对次序中与标签$1$不相邻的外腿，因此$A_j$不含$q_{1j}$交换。每个$g^2/q^2$与$\lambda$都有$4-d$的质量维数，和四点振幅相合。于是整个振幅变成
+<span id="eq:c80-trace-pairs"></span>
+
+$$
+\begin{aligned}
+\mathcal T={}&A_3(C_{1234}+C_{1432})
++A_4(C_{1342}+C_{1243})\\
+&+A_2(C_{1423}+C_{1324}).
+\end{aligned}
+\tag{80.26}
+$$
+
+同一对内有两个迹，各自的模方给$N^4$，它们之间的两个交叉项各给$N^2$，所以$|A_j|^2$的系数为$2N^4+2N^2$。两个不同的对之间有$2\times2=4$种迹的配对，每种均给$N^2$，故$A_j^*A_k$的系数为$4N^2$。于是颜色求和的模方为
+<span id="eq:c80-color-summed-amplitude"></span>
+
+$$
+\begin{aligned}
+\sum_{a_1,\ldots,a_4}|\mathcal T|^2
+&=(2N^4+2N^2)\sum_{j=2}^4|A_j|^2
++4N^2\sum_{\substack{j,k=2\\j\ne k}}^4 A_j^*A_k\\
+&=(2N^4-2N^2)\sum_{j=2}^4|A_j|^2
++4N^2\left|\sum_{j=2}^4 A_j\right|^2.
+\end{aligned}
+\tag{80.27}
+$$
+
+第二行使用$|\sum_j A_j|^2=\sum_j|A_j|^2+\sum_{j\ne k}A_j^*A_k$，将干涉项合并为一个模方。两项系数在$N\ge1$均非负，与振幅模方应有的性质相符。这里对入态颜色也作了求和；若两束入射粒子各在$N^2$种颜色中等权制备，相应平均另除$N^4$。通量、相空间和末态相同粒子的计数仍按第11节处理。
+
+在$N=1$时，[（80.26）](#eq:c80-trace-pairs)给$\mathcal T=2(A_2+A_3+A_4)$。每个交换通道在这三个$A$中出现两次，因而
+<span id="eq:c80-one-component-limit"></span>
+
+$$
+\mathcal T\big|_{N=1}
+=4g^2\left(\frac1{q_{12}^2-i0}
++\frac1{q_{13}^2-i0}+\frac1{q_{14}^2-i0}\right)-6\lambda.
+\tag{80.28}
+$$
+
+普通单实标量的三点、四点顶角由[（80.2）](#eq:c80-model)分别求导，正是$2ig$、$-6i\lambda$；三张交换图及一张接触图于是给出相同结果。这个极限检验了循环图的重复计数。在这一特殊极限中，矩阵都成为数，各个排列的迹因而相等；对一般$N$仍须保留不同循环类。
+
+<span id="c80-traceless"></span>
+
+## 限制为无迹场
+
+至此，传播与颜色求和都使用了完整的$N^2$个厄米方向。现在施加$\operatorname{Tr}B=0$。这等于从[（80.1）](#eq:c80-basis)中删去单位阵方向，剩余$N^2-1$个分量仍有相同的自由动能归一。由于被删去的基矩阵是$\mathbf1_N/\sqrt N$，完备关系变成
+<span id="eq:c80-traceless-projector"></span>
+
+$$
+\begin{aligned}
+P_{0\,i}{}^j{}_k{}^l
+&\equiv\sum_{a=1}^{N^2-1}(T^a)_i{}^j(T^a)_k{}^l\\
+&=\delta_i{}^l\delta_k{}^j
+-\frac1N\delta_i{}^j\delta_k{}^l.
+\end{aligned}
+\tag{80.29}
+$$
+
+作用在任意矩阵$X_l{}^k$上，这个核给出
+<span id="eq:c80-projector-action"></span>
+
+$$
+P_0X=X-\frac{\mathbf1_N}{N}\operatorname{Tr}X,
+\qquad \operatorname{Tr}(P_0X)=0,\qquad P_0^2X=P_0X.
+\tag{80.30}
+$$
+
+第一式显示它恰好减去单位阵分量；末式再说明重复投影不作新的改变。其在矩阵空间中的秩为$N^2-1$，可由核的迹$P_{0\,i}{}^j{}_j{}^i=N^2-1$直接得到。
+
+![无迹传播子的直接项与单位阵减项](/images/srednicki/s80_traceless_propagator.svg)
+
+无迹传播子的两项。第一项在两端之间传递颜色，第二项在各端分别将上、下指标相接，系数为$-1/N$。两项共同乘同一个运动学因子$-i/(k^2-i0)$。
+
+<span id="fig:c80-traceless-propagator"></span>
+
+因此每条内线都要使用$-iP_0/(k^2-i0)$。原来的迹拼接也随之改变：
+<span id="eq:c80-su-trace-gluing"></span>
+
+$$
+\sum_{a=1}^{N^2-1}\operatorname{Tr}(XT^a)
+\operatorname{Tr}(T^aY)
+=\operatorname{Tr}(XY)
+-\frac1N\operatorname{Tr}X\operatorname{Tr}Y.
+\tag{80.31}
+$$
+
+例如两端分别有$T^{a_1}T^{a_2}$和$T^{a_3}T^{a_4}$时，一条内边给
+<span id="eq:c80-su-internal-edge"></span>
+
+$$
+C_{1234}-\frac1N\delta^{a_1a_2}\delta^{a_3a_4}.
+\tag{80.32}
+$$
+
+第二项成为两个迹的乘积。这说明在无迹模型中，固定树的颜色结果也须包括投影产生的双迹项。完整模型的单迹树规则可以作为计算的第一项，再逐条展开内线上的$-1/N$部分。
+
+单位阵方向在标量模型中的作用还可以从相互作用看出。写$B=b^0\mathbf1_N/\sqrt N+\widehat B$，$\operatorname{Tr}\widehat B=0$。单位阵与$\widehat B$对易，按普通二项式展开，有
+<span id="eq:c80-singlet-interactions"></span>
+
+$$
+\begin{aligned}
+\operatorname{Tr}B^3
+&=\operatorname{Tr}\widehat B^3
++\frac{3b^0}{\sqrt N}\operatorname{Tr}\widehat B^2
++\frac{(b^0)^3}{\sqrt N},\\
+\operatorname{Tr}B^4
+&=\operatorname{Tr}\widehat B^4
++\frac{4b^0}{\sqrt N}\operatorname{Tr}\widehat B^3\\
+&\quad+\frac{6(b^0)^2}{N}\operatorname{Tr}\widehat B^2
++\frac{(b^0)^4}{N}.
+\end{aligned}
+\tag{80.33}
+$$
+
+含单个$\operatorname{Tr}\widehat B$的项为零，纯单位阵项则由$\operatorname{Tr}\mathbf1_N=N$给出所示幂次。可见，即使所有外部粒子都无迹，完整模型的内部$b^0$仍通过这些顶角参与交换。将它从积分场中删去，会改变振幅；只将外部颜色限制为$1,\ldots,N^2-1$还没有完成这种改变。
+
+### 四次颜色迹的范数
+
+振幅与其共轭之间的外部颜色求和也采用[（80.29）](#eq:c80-traceless-projector)的投影。定义
+$\mathcal N_4=\sum_{a,b,c,d=1}^{N^2-1}|\operatorname{Tr}(T^aT^bT^cT^d)|^2$，
+以下取$N\ge2$。
+
+将两端分别接任意矩阵$X,Y$，或把中间两指标接到同一个$X$上，给出两个便于逐次求和的形式：
+<span id="eq:c80-ex-su-contraction-identities"></span>
+
+$$
+\begin{aligned}
+\sum_a\operatorname{Tr}(XT^a)\operatorname{Tr}(T^aY)
+ &=\operatorname{Tr}(XY)
+       -\frac1N\operatorname{Tr}X\operatorname{Tr}Y,\\
+\sum_aT^aXT^a
+ &=\operatorname{Tr}X\,\mathbf1_N-\frac1N X.
+\end{aligned}
+\tag{80.38}
+$$
+
+例如第一行的左侧是$X_j{}^iY_l{}^k\sum_a(T^a)_i{}^j(T^a)_k{}^l$；投影的第一项接成$\operatorname{Tr}(XY)$，第二项接成两个独立的迹。这说明每次删去单位阵方向，都会伴随一个明确的减项。第二行令$X=\mathbf1_N$，得到
+<span id="eq:c80-ex-su-casimir"></span>
+
+$$
+\sum_aT^aT^a=C_F\mathbf1_N,\qquad
+C_F=N-\frac1N=\frac{N^2-1}{N},\qquad
+D\equiv N^2-1.
+\tag{80.39}
+$$
+
+四次迹的计算会用到三次迹范数。先记
+$\mathcal N_3=\sum_{a,b,c}|\operatorname{Tr}(T^aT^bT^c)|^2$。
+利用厄米共轭的逆序，并在$c$处应用[（80.38）](#eq:c80-ex-su-contraction-identities)的第一行，得
+<span id="eq:c80-ex-three-trace-reduction"></span>
+
+$$
+\begin{aligned}
+\mathcal N_3
+ &=\sum_{a,b,c}\operatorname{Tr}(T^aT^bT^c)
+                    \operatorname{Tr}(T^cT^bT^a)\\
+ &=\sum_{a,b}\operatorname{Tr}(T^aT^bT^bT^a)
+    -\frac1N\sum_{a,b}
+       \operatorname{Tr}(T^aT^b)\operatorname{Tr}(T^bT^a).
+\end{aligned}
+\tag{80.40}
+$$
+
+第一项中相邻的两个$T^b$求和产生$C_F\mathbf1_N$，剩下$\sum_a\operatorname{Tr}(T^aT^a)=D$。第二项是$\sum_{a,b}\delta^{ab}\delta^{ba}=D$。所以
+<span id="eq:c80-ex-three-trace-norm"></span>
+
+$$
+\mathcal N_3=C_FD-\frac DN
+ =\frac{D(D-1)}N
+ =\frac{(N^2-1)(N^2-2)}N.
+\tag{80.41}
+$$
+
+现在在四次迹的最后一个矩阵$T^d$处作同样的收缩。这一步须保留两条迹的次序，才能识别投影减项：
+<span id="eq:c80-ex-four-trace-reduction"></span>
+
+$$
+\begin{aligned}
+\mathcal N_4
+ &=\sum_{a,b,c,d}\operatorname{Tr}(T^aT^bT^cT^d)
+                      \operatorname{Tr}(T^dT^cT^bT^a)\\
+ &=\sum_{a,b,c}\operatorname{Tr}(T^aT^bT^cT^cT^bT^a)\\
+ &\quad-\frac1N\sum_{a,b,c}
+       \operatorname{Tr}(T^aT^bT^c)\operatorname{Tr}(T^cT^bT^a)\\
+ &=C_F\sum_{a,b}\operatorname{Tr}(T^aT^bT^bT^a)
+        -\frac1N\mathcal N_3\\
+ &=C_F^2D-\frac1N\mathcal N_3.
+\end{aligned}
+\tag{80.42}
+$$
+
+正项中，先对最中间的两个$T^c$求和，再对两个相邻的$T^b$求和，各产生一个$C_F$。
+
+代入$C_F$和$\mathcal N_3$，得到
+
+<span id="eq:c80-su-trace-norm"></span>
+
+$$
+\sum_{a_1,\ldots,a_4=1}^{N^2-1}
+|C_{1234}|^2
+=\frac{(N^2-1)(N^4-3N^2+3)}{N^2}.
+\tag{80.34}
+$$
+
+对于$SU(2)$，[（80.13）](#eq:c80-pauli-traces)中三个颜色$\delta$张量各自的平方求和都是$3^2=9$，任何两个不同张量的乘积求和都是3。结合中间项的负号，得到
+<span id="eq:c80-ex-pauli-norm"></span>
+
+$$
+\mathcal N_4\big|_{N=2}
+ =\frac14\big[9+9+9+2(-3+3-3)\big]
+ =\frac{21}{4},
+\tag{80.43}
+$$
+
+与[（80.34）](#eq:c80-su-trace-norm)相符。无迹投影在每条被收缩的颜色线上都产生减项，这些项共同给出[（80.34）](#eq:c80-su-trace-norm)中低于$N^4$的各次幂。
+
+这里计算了单个颜色迹的范数。完整无迹散射幅还包含[（80.32）](#eq:c80-su-internal-edge)的双迹项及其干涉；两粒子初态等权颜色平均在完整颜色求和之后除以$(N^2-1)^2$。
+
+<span id="c80-large-n"></span>
+
+## 大 $N$ 展开与曲面的亏格
+
+闭合颜色线计数还可以用来组织所有连通真空图。令$\lambda=cg^2$，并在改变$N$时保持$c$和所有质量尺度不变。由[（80.3）](#eq:c80-dimensions)，$[c]=-2$；$c$的数值大小需在选定的质量单位中比较。把自由真空泛函除掉，定义
+
+<span id="eq:c80-vacuum-functional"></span>
+
+$$
+\frac{Z(g,N)}{Z(0,N)}=e^{iW(g,N)},\qquad
+W(0,N)=0.
+\tag{80.44}
+$$
+
+$W$是连通真空图之和。计数时使用共同且不随$N$改变的调节，例如先保留一个非零质量；这样真空积分的颜色幂次与无质量极限中的无尺度积分可以分别处理。
+
+设一幅连通双线真空图有$V_3$个三点顶角、$V_4$个四点顶角、$E$条传播子和$F$条闭合单线。每个顶角分别带$g$或$\lambda$，每条闭合线带$N$，所以除去动量积分、相位和图对称因子后，它的依赖关系是
+
+<span id="eq:c80-vacuum-power"></span>
+
+$$
+g^{V_3}\lambda^{V_4}N^F
+=c^{V_4}g^{V_3+2V_4}N^F,\qquad
+2E=3V_3+4V_4.
+\tag{80.45}
+$$
+
+第二式按传播子的两个端点计数：真空图的每个场槽都连到一条内边。取$V=V_3+V_4$，便有
+$E-V=V_3/2+V_4$，耦合幂次成为$g^{2(E-V)}$。
+
+现在把每个顶角加厚为圆盘，把每条双线边加厚为窄带。沿颜色箭头粘合后，边界恰有$F$个圈；在每个边界上补一个圆盘，就得到闭合可定向曲面。顶角、边和补上的圆盘分别提供这个曲面胞腔分解的$V,E,F$，因此欧拉示性数为
+
+<span id="eq:c80-euler-genus"></span>
+
+$$
+\chi=V-E+F=2-2G,\qquad
+F-(E-V)=2-2G.
+\tag{80.46}
+$$
+
+$G$是亏格，即曲面的把手数。球面上可把一棵生成树收缩成一点，再逐条删去分隔相邻面的边；每次同时少一条边和一个面，$V-E+F$保持不变，最后的一点加一个面给$\chi=2$。添一个把手相当于挖去两个圆盘再连接其边界，使$\chi$减二，得到上式。
+
+固定 ’t Hooft 耦合$\bar\lambda=g^2N$，一幅图便可重写为
+
+<span id="eq:c80-genus-power"></span>
+
+$$
+\begin{aligned}
+c^{V_4}g^{2(E-V)}N^F
+&=c^{V_4}
+ \left(\frac{\bar\lambda}{N}\right)^{E-V}N^F\\
+&=N^{2-2G}c^{V_4}\bar\lambda^{\,E-V},\\
+W(\bar\lambda,N)
+&=\sum_{G=0}^{\infty}N^{2-2G}W_G(\bar\lambda).
+\end{aligned}
+\tag{80.47}
+$$
+
+$W_G$收集亏格为$G$的所有连通图，固定的$c$、质量和调节参数在记号中略去。这是逐图得到的微扰级数分组。$G=0$的平面图为$N^2$阶，每增加一个把手便多一个$N^{-2}$；同一亏格内仍包括任意多顶角和动量圈的图。
+
+一个四点顶角已能给出两种亏格。把$\operatorname{Tr}B^4$的四个位置依次编号为$1,2,3,4$，真空威克配对有三种。令$\sigma=(1234)$表示绕顶角走一步，$\alpha$表示跨越一条配对的传播子；沿面走一圈就是$\sigma\alpha$的一个循环。逐次跟踪得到
+
+| 配对$\alpha$ | 面循环$\sigma\alpha$ | $F$ | $G$ | $\lambda N^F$      |
+| ------------ | -------------------- | --: | --: | ------------------ |
+| $(12)(34)$   | $(13)(2)(4)$         |   3 |   0 | $c\bar\lambda N^2$ |
+| $(14)(23)$   | $(1)(24)(3)$         |   3 |   0 | $c\bar\lambda N^2$ |
+| $(13)(24)$   | $(1432)$             |   1 |   1 | $c\bar\lambda$     |
+
+三图都有$V=1,E=2$，动量圈数都是$E-V+1=2$，颜色曲面的亏格却有零和一两种。平面性由双线的循环连接决定，不能只从动量圈数判断。
+
+下一节把色排序规则用于规范场，在循环顶角上加回洛伦兹指标和动量因子。
+
+---
+
+[← 第 79 节](/posts/srednicki-79/) · [章节地图](/srednicki/) · [第 81 节 →](/posts/srednicki-81/)

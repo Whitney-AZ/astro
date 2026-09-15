@@ -1,0 +1,2133 @@
+{
+  "checks": 425,
+  "all_passed": true,
+  "max_scaled_residual": 7.105427357601002e-15,
+  "script_sha256": "3fc348c9663148abda3a7b985f3d89c4a2fee0135ea403017198626547f38715",
+  "records": [
+    {
+      "name": "theta-vector Fierz (0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (0, 2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (0, 3)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (1, 2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (1, 3)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (2, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (2, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (2, 2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (2, 3)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (3, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (3, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (3, 2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "theta-vector Fierz (3, 3)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "left antitheta projection sign",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 2, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 2, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 2, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 2, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 2, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 2, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 2, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 2, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 2, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 2, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 2, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 2, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 3, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 3, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 3, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 3, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 3, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 3, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 3, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 3, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 3, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 3, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 3, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 3, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 4, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 4, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 4, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 4, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 4, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 4, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 4, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 4, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 4, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 4, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 4, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 4, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 5, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 5, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 5, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 5, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 5, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 5, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 5, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 5, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 5, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 5, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 5, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 5, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 6, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 6, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 6, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 6, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 6, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 6, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 6, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 6, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 6, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 6, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 6, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 6, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 7, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 7, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 7, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 7, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 7, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 7, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 7, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 7, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 7, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 7, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 7, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 7, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 8, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 8, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 8, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 8, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 8, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 8, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 8, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 8, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 8, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 8, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 8, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 8, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 9, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 9, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 9, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 9, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 9, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 9, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 9, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 9, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 9, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 9, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 9, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 9, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 10, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 10, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 10, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 10, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 10, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 10, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 10, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 10, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 10, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 10, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 10, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 10, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 11, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 11, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 11, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 11, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 11, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 11, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 11, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 11, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 11, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 11, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 11, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 11, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 12, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 12, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 12, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 12, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 12, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 12, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 12, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 12, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 12, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 12, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 12, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 12, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 13, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 13, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 13, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 13, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 13, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 13, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 13, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 13, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 13, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 13, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 13, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 13, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 14, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 14, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 14, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 14, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 14, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 14, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 14, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 14, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 14, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 14, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 14, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 14, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 15, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 15, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 15, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 15, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 15, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 15, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 15, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 15, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 15, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (0, 15, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (0, 15, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (0, 15, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 0, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 0, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 0, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 0, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 1, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 1, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 1, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 1, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 2, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 2, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 2, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 2, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 2, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 2, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 2, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 2, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 2, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 2, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 2, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 2, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 3, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 3, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 3, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 3, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 3, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 3, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 3, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 3, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 3, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 3, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 3, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 3, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 4, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 4, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 4, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 4, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 4, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 4, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 4, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 4, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 4, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 4, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 4, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 4, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 5, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 5, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 5, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 5, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 5, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 5, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 5, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 5, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 5, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 5, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 5, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 5, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 6, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 6, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 6, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 6, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 6, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 6, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 6, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 6, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 6, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 6, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 6, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 6, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 7, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 7, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 7, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 7, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 7, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 7, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 7, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 7, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 7, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 7, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 7, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 7, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 8, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 8, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 8, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 8, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 8, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 8, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 8, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 8, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 8, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 8, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 8, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 8, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 9, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 9, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 9, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 9, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 9, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 9, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 9, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 9, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 9, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 9, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 9, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 9, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 10, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 10, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 10, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 10, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 10, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 10, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 10, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 10, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 10, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 10, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 10, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 10, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 11, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 11, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 11, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 11, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 11, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 11, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 11, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 11, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 11, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 11, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 11, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 11, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 12, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 12, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 12, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 12, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 12, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 12, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 12, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 12, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 12, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 12, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 12, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 12, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 13, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 13, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 13, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 13, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 13, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 13, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 13, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 13, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 13, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 13, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 13, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 13, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 14, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 14, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 14, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 14, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 14, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 14, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 14, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 14, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 14, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 14, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 14, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 14, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 15, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 15, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 15, 0, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 15, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 15, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 15, 0, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 15, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 15, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 15, 1, 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q algebra full exterior basis (1, 15, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "D algebra full exterior basis (1, 15, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Q-D mixed full exterior basis (1, 15, 1, 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "chiral Fourier polynomial (0, 0)",
+      "scaled_residual": 9.155133597044475e-16,
+      "passed": true
+    },
+    {
+      "name": "chiral Fourier polynomial (0, 1)",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "complete kinetic D component 0",
+      "scaled_residual": 1.5935581695380913e-16,
+      "passed": true
+    },
+    {
+      "name": "full charged matter exponential D term 0",
+      "scaled_residual": 2.151181308804068e-16,
+      "passed": true
+    },
+    {
+      "name": "full nilpotent gauge inverse 0",
+      "scaled_residual": 5.1078069403546666e-15,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian projected field strength (0, 0)",
+      "scaled_residual": 2.705773707874408e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian projected field strength (0, 1)",
+      "scaled_residual": 2.5556054983322593e-16,
+      "passed": true
+    },
+    {
+      "name": "full projected W square gauge kinetic coefficient 0",
+      "scaled_residual": 2.1636848612777444e-16,
+      "passed": true
+    },
+    {
+      "name": "chiral Fourier polynomial (1, 0)",
+      "scaled_residual": 9.155133597044475e-16,
+      "passed": true
+    },
+    {
+      "name": "chiral Fourier polynomial (1, 1)",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "complete kinetic D component 1",
+      "scaled_residual": 1.5935581695380913e-16,
+      "passed": true
+    },
+    {
+      "name": "full charged matter exponential D term 1",
+      "scaled_residual": 3.724808964593302e-16,
+      "passed": true
+    },
+    {
+      "name": "full nilpotent gauge inverse 1",
+      "scaled_residual": 7.105427357601002e-15,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian projected field strength (1, 0)",
+      "scaled_residual": 1.5500331745832455e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian projected field strength (1, 1)",
+      "scaled_residual": 1.5500331745832455e-16,
+      "passed": true
+    },
+    {
+      "name": "full projected W square gauge kinetic coefficient 1",
+      "scaled_residual": 4.452916771517466e-16,
+      "passed": true
+    },
+    {
+      "name": "chiral Fourier polynomial (2, 0)",
+      "scaled_residual": 9.155133597044475e-16,
+      "passed": true
+    },
+    {
+      "name": "chiral Fourier polynomial (2, 1)",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "complete kinetic D component 2",
+      "scaled_residual": 1.5935581695380913e-16,
+      "passed": true
+    },
+    {
+      "name": "full charged matter exponential D term 2",
+      "scaled_residual": 1.178453415337562e-16,
+      "passed": true
+    },
+    {
+      "name": "full nilpotent gauge inverse 2",
+      "scaled_residual": 3.66205343881779e-15,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian projected field strength (2, 0)",
+      "scaled_residual": 2.083162897118428e-16,
+      "passed": true
+    },
+    {
+      "name": "full nonabelian projected field strength (2, 1)",
+      "scaled_residual": 1.9187924162927272e-16,
+      "passed": true
+    },
+    {
+      "name": "full projected W square gauge kinetic coefficient 2",
+      "scaled_residual": 1.0044358255678364e-15,
+      "passed": true
+    }
+  ]
+}

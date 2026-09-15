@@ -1,0 +1,55 @@
+% Original source Fig.31.4, PDF138 / printed126. Three rho two-point graphs.
+% Quartic tadpole, two-cubic bubble, corrected common counterterm -iX(k^2).
+% X=A k^2+(3C/2-B/2)m_rho^2; source31.21 printed coefficients are erroneous.
+% Upper bubble ell+k L->R; lower ell R->L; all external momenta k flow right.
+% lambda_d=lambda*mutilde^epsilon. Stubs are amputated for iPi.
+% Basic TikZ only; no caption or automatic numbering.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+  line cap=round,line join=round,
+  font=\fontsize{10.5}{12}\selectfont]
+\begin{scope}[shift={(20,0)}]
+  \draw (-17,0) -- (17,0);
+  \draw (0,10) circle[radius=10mm];
+  \draw[->] (-5,18.6603) arc[start angle=120,end angle=60,radius=10mm];
+  \draw[->] (-15,0) -- (-8,0);
+  \draw[->] (8,0) -- (15,0);
+  \fill (0,0) circle[radius=.65mm];
+  \node[above] at (-13,1.5) {$k$};
+  \node[above] at (13,1.5) {$k$};
+  \node[above] at (0,21) {$\ell$};
+  \node at (0,10) {$S=2$};
+  \node at (0,-23) {$-i\lambda_d$};
+\end{scope}
+\node at (45,0) {$+$};
+\begin{scope}[shift={(69,0)}]
+  \draw (-20,0) -- (-10,0);
+  \draw (10,0) -- (20,0);
+  \draw (-10,0) .. controls (-4,13) and (4,13) .. (10,0);
+  \draw (-10,0) .. controls (-4,-13) and (4,-13) .. (10,0);
+  \draw[->] (-10,0) .. controls (-7,6.5) and (-3.5,9.75) .. (0,9.75);
+  \draw[->] (10,0) .. controls (7,-6.5) and (3.5,-9.75) .. (0,-9.75);
+  \draw[->] (-19,0) -- (-12,0);
+  \draw[->] (12,0) -- (19,0);
+  \fill (-10,0) circle[radius=.65mm];
+  \fill (10,0) circle[radius=.65mm];
+  \node[above] at (-17,1.5) {$k$};
+  \node[above] at (17,1.5) {$k$};
+  \node[above] at (0,11.5) {$\ell+k$};
+  \node[below] at (0,-11.5) {$\ell$};
+  \node at (0,0) {$S=2$};
+  \node at (-10,-23) {$-ig_3$};
+  \node at (10,-23) {$-ig_3$};
+\end{scope}
+\node at (94,0) {$+$};
+\begin{scope}[shift={(119,0)}]
+  \draw (-17,0) -- (17,0);
+  \draw (-1.7,-1.7) -- (1.7,1.7);
+  \draw (-1.7,1.7) -- (1.7,-1.7);
+  \draw[->] (-15,0) -- (-8,0);
+  \draw[->] (8,0) -- (15,0);
+  \node[above] at (-13,1.5) {$k$};
+  \node[above] at (13,1.5) {$k$};
+  \node at (0,-23) {$-iX(k^2)$};
+\end{scope}
+\end{tikzpicture}
+

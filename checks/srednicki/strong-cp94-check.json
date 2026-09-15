@@ -1,0 +1,844 @@
+{
+  "checks": 139,
+  "all_passed": true,
+  "max_scaled_residual": 0.004697072488594856,
+  "max_algebraic_residual": 4.73080220475104e-11,
+  "script_sha256": "3b5464c8e5035b5482dddc3b891e9622a7d85f5febdf6cba283387a74d9f012c",
+  "helper_sha256": "75c2ece494dd8cdef46e3043e588053e3f5cc8987403a34e9b75203e6afa7c74",
+  "records": [
+    {
+      "name": "exact vacuum trace 0",
+      "scaled_residual": 1.1102230246251565e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 0",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 0",
+      "scaled_residual": 3.4092005716300095e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 0",
+      "scaled_residual": 2.3093018665497762e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 0",
+      "scaled_residual": 1.9158791870690146e-11,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 0",
+      "scaled_residual": 3.0980884198600916e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 0",
+      "scaled_residual": 5.9717662794905365e-18,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "exact vacuum trace 1",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 1",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 1",
+      "scaled_residual": 3.147408783087564e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 1",
+      "scaled_residual": 3.4245105608440447e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 1",
+      "scaled_residual": 1.6716046024456186e-11,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 1",
+      "scaled_residual": 1.5475305208069597e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 1",
+      "scaled_residual": 5.139806576885935e-18,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "exact vacuum trace 2",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 2",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 2",
+      "scaled_residual": 1.6410236256560082e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 2",
+      "scaled_residual": 1.0473270822074467e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 2",
+      "scaled_residual": 7.045273992949528e-12,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 2",
+      "scaled_residual": 1.585593334936144e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 2",
+      "scaled_residual": 6.6333400199090825e-19,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "exact vacuum trace 3",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 3",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 3",
+      "scaled_residual": 4.710277376051326e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 3",
+      "scaled_residual": 4.481708748830066e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 3",
+      "scaled_residual": 2.2737552212853646e-11,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 3",
+      "scaled_residual": 2.0906726957485681e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 3",
+      "scaled_residual": 7.308574809655826e-18,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "exact vacuum trace 4",
+      "scaled_residual": 2.8134769809716696e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 4",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 4",
+      "scaled_residual": 1.6508041237901103e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 4",
+      "scaled_residual": 1.2293386043238593e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 4",
+      "scaled_residual": 1.0766903943971907e-11,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 4",
+      "scaled_residual": 1.3394949717681895e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 4",
+      "scaled_residual": 2.2420642232250154e-17,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "exact vacuum trace 5",
+      "scaled_residual": 1.426940952826494e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 5",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 5",
+      "scaled_residual": 1.8684220503884649e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 5",
+      "scaled_residual": 2.2821642089057416e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 5",
+      "scaled_residual": 4.73080220475104e-11,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 5",
+      "scaled_residual": 1.3347582751155061e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 5",
+      "scaled_residual": 2.4373743913926448e-17,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "exact vacuum trace 6",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 6",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 6",
+      "scaled_residual": 3.719580868437395e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 6",
+      "scaled_residual": 3.330720777687494e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 6",
+      "scaled_residual": 1.885773823434952e-11,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 6",
+      "scaled_residual": 1.1573153063903374e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 6",
+      "scaled_residual": 1.1106319998254602e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "exact vacuum trace 7",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum dominates full group samples 7",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "four raw ordered mass operators 7",
+      "scaled_residual": 6.756683241361466e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "raw chiral-limit mass cancellation 7",
+      "scaled_residual": 6.662766859163431e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "CP derivative of original action 7",
+      "scaled_residual": 2.0382214595206615e-11,
+      "tolerance": 3e-9,
+      "passed": true
+    },
+    {
+      "name": "exact pseudoscalar mass removal 7",
+      "scaled_residual": 6.010642104204936e-17,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "vector and axial rotations 7",
+      "scaled_residual": 1.3141593919264799e-17,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "all six dual-spin identities",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis axial divergence 0",
+      "scaled_residual": 1.4489027822182106e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis exact Gordon 0",
+      "scaled_residual": 2.1035687140355136e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "two open loop chains 0",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "derivative-contact identity 0",
+      "scaled_residual": 1.4162968113166826e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "off-shell inverse propagator 0",
+      "scaled_residual": 3.075451971506629e-17,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis axial divergence 1",
+      "scaled_residual": 3.377403880455146e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis exact Gordon 1",
+      "scaled_residual": 1.9745094341633394e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "two open loop chains 1",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "derivative-contact identity 1",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "off-shell inverse propagator 1",
+      "scaled_residual": 1.74743042540966e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis axial divergence 2",
+      "scaled_residual": 1.3449562328789798e-15,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis exact Gordon 2",
+      "scaled_residual": 1.0125400995513315e-15,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "two open loop chains 2",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "derivative-contact identity 2",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "off-shell inverse propagator 2",
+      "scaled_residual": 1.143214936074012e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis axial divergence 3",
+      "scaled_residual": 4.677210279635734e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis exact Gordon 3",
+      "scaled_residual": 2.970181965502131e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "two open loop chains 3",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "derivative-contact identity 3",
+      "scaled_residual": 1.6576789369250882e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "off-shell inverse propagator 3",
+      "scaled_residual": 1.3487061644254633e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis axial divergence 4",
+      "scaled_residual": 2.3947726308458723e-15,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis exact Gordon 4",
+      "scaled_residual": 2.0004471156712498e-15,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "two open loop chains 4",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "derivative-contact identity 4",
+      "scaled_residual": 1.1902997611176373e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "off-shell inverse propagator 4",
+      "scaled_residual": 1.9792547812344155e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis axial divergence 5",
+      "scaled_residual": 5.777382097629879e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "complete spin basis exact Gordon 5",
+      "scaled_residual": 4.765876644371231e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "two open loop chains 5",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "derivative-contact identity 5",
+      "scaled_residual": 3.273170487555164e-17,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "off-shell inverse propagator 5",
+      "scaled_residual": 1.5400358496670197e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original radial cutoff integral ratio=0.3",
+      "scaled_residual": 1.1839487723541708e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original radial cutoff integral ratio=1.0",
+      "scaled_residual": 1.609823385706477e-15,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original radial cutoff integral ratio=8.0",
+      "scaled_residual": 1.8795088014418024e-14,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original radial cutoff integral ratio=40.0",
+      "scaled_residual": 1.9910542139728364e-14,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "relativistic two-graph logarithm ratio=0.001",
+      "scaled_residual": 0.004697072488594856,
+      "tolerance": 0.015,
+      "passed": true
+    },
+    {
+      "name": "relativistic two-graph logarithm ratio=0.0001",
+      "scaled_residual": 0.0004710396906482117,
+      "tolerance": 0.0015,
+      "passed": true
+    },
+    {
+      "name": "relativistic two-graph logarithm ratio=1e-05",
+      "scaled_residual": 4.7121437734887195e-5,
+      "tolerance": 0.00015000000000000001,
+      "passed": true
+    },
+    {
+      "name": "relativistic two-graph logarithm ratio=1e-06",
+      "scaled_residual": 4.712360489378398e-6,
+      "tolerance": 1.4999999999999999e-5,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (0.4, 0.9, 2.0)",
+      "scaled_residual": 1.6817579544617755e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (0.4, 0.9, 2.0)",
+      "scaled_residual": 1.671520503187752e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (0.4, 0.9, 2.0)",
+      "scaled_residual": 2.7755575615628914e-17,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (0.4, 0.9, 10.0)",
+      "scaled_residual": 1.6817579544617755e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (0.4, 0.9, 10.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (0.4, 0.9, 10.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (0.4, 0.9, 100.0)",
+      "scaled_residual": 1.6817579544617755e-16,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (0.4, 0.9, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (0.4, 0.9, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (1.0, 1.0, 2.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (1.0, 1.0, 2.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (1.0, 1.0, 2.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (1.0, 1.0, 10.0)",
+      "scaled_residual": 2.1350442781253012e-19,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (1.0, 1.0, 10.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (1.0, 1.0, 10.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (1.0, 1.0, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (1.0, 1.0, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (1.0, 1.0, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (0.0, 1.0, 2.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (0.0, 1.0, 2.0)",
+      "scaled_residual": 2.2487448609840453e-18,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (0.0, 1.0, 2.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "massless flavor exact zero (0.0, 1.0, 2.0)",
+      "scaled_residual": 9.50094703765759e-18,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (0.0, 1.0, 10.0)",
+      "scaled_residual": 2.1350442781253012e-19,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (0.0, 1.0, 10.0)",
+      "scaled_residual": 5.820381453115932e-20,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (0.0, 1.0, 10.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "massless flavor exact zero (0.0, 1.0, 10.0)",
+      "scaled_residual": 2.3683132132728727e-19,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (0.0, 1.0, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (0.0, 1.0, 100.0)",
+      "scaled_residual": 4.323704974990835e-22,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (0.0, 1.0, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "massless flavor exact zero (0.0, 1.0, 100.0)",
+      "scaled_residual": 1.7565332501723643e-21,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (1.0, 0.0, 2.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (1.0, 0.0, 2.0)",
+      "scaled_residual": 2.2487448609840453e-18,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (1.0, 0.0, 2.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "massless flavor exact zero (1.0, 0.0, 2.0)",
+      "scaled_residual": 9.50094703765759e-18,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (1.0, 0.0, 10.0)",
+      "scaled_residual": 2.1350442781253012e-19,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (1.0, 0.0, 10.0)",
+      "scaled_residual": 5.820381453115932e-20,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (1.0, 0.0, 10.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "massless flavor exact zero (1.0, 0.0, 10.0)",
+      "scaled_residual": 2.3683132132728727e-19,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "original two-cosine Hessian (1.0, 0.0, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "physical two-field masses (1.0, 0.0, 100.0)",
+      "scaled_residual": 4.323704974990835e-22,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "aligned potential curvature (1.0, 0.0, 100.0)",
+      "scaled_residual": 0.0,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "massless flavor exact zero (1.0, 0.0, 100.0)",
+      "scaled_residual": 1.7565332501723643e-21,
+      "tolerance": 5e-11,
+      "passed": true
+    },
+    {
+      "name": "historical EDM rounding in GeV inverse",
+      "scaled_residual": 4.1708639596169106e-5,
+      "tolerance": 5e-5,
+      "passed": true
+    },
+    {
+      "name": "historical EDM rounding in cm",
+      "scaled_residual": 0.004626581023252085,
+      "tolerance": 0.015625,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,795 @@
+{
+  "checks": 153,
+  "all_passed": true,
+  "max_scaled_residual": 2.623728836700946e-6,
+  "script_sha256": "458af0faef39be76f21581dd47c5a2496d0ea17d88251fbd35b7f2a389af4072",
+  "helper_sha256": "75c2ece494dd8cdef46e3043e588053e3f5cc8987403a34e9b75203e6afa7c74",
+  "numerical_results": {
+    "SM": {
+      "inv_alpha5": 41.47433728576998,
+      "log_scale": 29.665374968394524,
+      "MX": 697434602571906.4,
+      "weak_angle": 0.20735881151020652
+    },
+    "MSSM": {
+      "inv_alpha5": 24.241259898904794,
+      "log_scale": 33.12633538137389,
+      "MX": 2.2211582421970896e16,
+      "weak_angle": 0.23073629834548037
+    },
+    "CX": 6.229073099347957e-31,
+    "C_low": [1.7529112241769595e-30, 1.8539766203181987e-30],
+    "high_C": [2.2805842449133826, 2.4120730202527283],
+    "high_r": 2.264572421678468,
+    "tau_mass": 1.400010938724855,
+    "proton_width": 1.8395968474952845e-63,
+    "proton_lifetime_years": 1.1338070251900076e31
+  },
+  "records": [
+    {
+      "name": "Full scalar UV chain sample=0, xi=-0.3, direction=0",
+      "scaled_residual": 1.64829737120107e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=-0.3, direction=1",
+      "scaled_residual": 1.0274955447585755e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=-0.3, direction=2",
+      "scaled_residual": 1.645821823584448e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=-0.3, direction=3",
+      "scaled_residual": 1.1566840568657705e-17,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=0, xi=-0.3",
+      "scaled_residual": 3.1031676915590914e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.0, direction=0",
+      "scaled_residual": 8.730567877727403e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.0, direction=1",
+      "scaled_residual": 1.192755982322436e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.0, direction=2",
+      "scaled_residual": 1.480896943655201e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.0, direction=3",
+      "scaled_residual": 2.4119456135905504e-17,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=0, xi=0.0",
+      "scaled_residual": 3.925231146709438e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.6, direction=0",
+      "scaled_residual": 7.598456767406553e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.6, direction=1",
+      "scaled_residual": 1.2908753452897886e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.6, direction=2",
+      "scaled_residual": 1.233634875497311e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=0.6, direction=3",
+      "scaled_residual": 4.222608248955194e-18,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=0, xi=0.6",
+      "scaled_residual": 3.510833468576701e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=1.0, direction=0",
+      "scaled_residual": 6.574701885928097e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=1.0, direction=1",
+      "scaled_residual": 2.726538426684991e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=1.0, direction=2",
+      "scaled_residual": 1.704127065948901e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=0, xi=1.0, direction=3",
+      "scaled_residual": 3.806246024633376e-19,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=0, xi=1.0",
+      "scaled_residual": 4.47545209131181e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=-0.3, direction=0",
+      "scaled_residual": 6.960920952658957e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=-0.3, direction=1",
+      "scaled_residual": 1.6511643316780816e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=-0.3, direction=2",
+      "scaled_residual": 1.6674863181792138e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=-0.3, direction=3",
+      "scaled_residual": 1.8882114729490123e-17,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=1, xi=-0.3",
+      "scaled_residual": 2.6735572619005076e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.0, direction=0",
+      "scaled_residual": 1.4815991955354056e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.0, direction=1",
+      "scaled_residual": 5.093259898003273e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.0, direction=2",
+      "scaled_residual": 1.4484313231477505e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.0, direction=3",
+      "scaled_residual": 1.4980252439295853e-17,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=1, xi=0.0",
+      "scaled_residual": 3.818283603795215e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.6, direction=0",
+      "scaled_residual": 6.737478710904992e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.6, direction=1",
+      "scaled_residual": 6.49154339596167e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.6, direction=2",
+      "scaled_residual": 6.92172305714844e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=0.6, direction=3",
+      "scaled_residual": 4.043044918697622e-18,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=1, xi=0.6",
+      "scaled_residual": 3.3081863473783437e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=1.0, direction=0",
+      "scaled_residual": 4.2573345201641735e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=1.0, direction=1",
+      "scaled_residual": 1.6283329562387391e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=1.0, direction=2",
+      "scaled_residual": 2.5432339148766417e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=1, xi=1.0, direction=3",
+      "scaled_residual": 3.1373773418063155e-19,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=1, xi=1.0",
+      "scaled_residual": 2.762516498527099e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=-0.3, direction=0",
+      "scaled_residual": 2.9173813812111615e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=-0.3, direction=1",
+      "scaled_residual": 1.2128975055231952e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=-0.3, direction=2",
+      "scaled_residual": 1.6470684296057414e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=-0.3, direction=3",
+      "scaled_residual": 1.663090166433093e-16,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=2, xi=-0.3",
+      "scaled_residual": 6.753223014464258e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.0, direction=0",
+      "scaled_residual": 1.7804249162237545e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.0, direction=1",
+      "scaled_residual": 1.0831512257036513e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.0, direction=2",
+      "scaled_residual": 1.4821109600142665e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.0, direction=3",
+      "scaled_residual": 2.9822602270287263e-17,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=2, xi=0.0",
+      "scaled_residual": 8.326672684688674e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.6, direction=0",
+      "scaled_residual": 1.2344874166413476e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.6, direction=1",
+      "scaled_residual": 1.233703555492915e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.6, direction=2",
+      "scaled_residual": 1.2340395600261442e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=0.6, direction=3",
+      "scaled_residual": 1.9000626917806565e-17,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=2, xi=0.6",
+      "scaled_residual": 6.684427777288334e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=1.0, direction=0",
+      "scaled_residual": 1.1103719696851765e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=1.0, direction=1",
+      "scaled_residual": 7.758138450158529e-19,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=1.0, direction=2",
+      "scaled_residual": 1.6087390389065205e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=2, xi=1.0, direction=3",
+      "scaled_residual": 1.9891976444296968e-17,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=2, xi=1.0",
+      "scaled_residual": 7.791361360319882e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=-0.3, direction=0",
+      "scaled_residual": 1.6448330543844698e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=-0.3, direction=1",
+      "scaled_residual": 3.289552855122221e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=-0.3, direction=2",
+      "scaled_residual": 1.6495029967946155e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=-0.3, direction=3",
+      "scaled_residual": 1.658329250622449e-16,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=3, xi=-0.3",
+      "scaled_residual": 7.030469841898119e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.0, direction=0",
+      "scaled_residual": 1.4829585128983183e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.0, direction=1",
+      "scaled_residual": 1.4871675773427593e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.0, direction=2",
+      "scaled_residual": 1.3362872296793021e-17,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.0, direction=3",
+      "scaled_residual": 1.481454705743664e-16,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=3, xi=0.0",
+      "scaled_residual": 5.569407999111905e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.6, direction=0",
+      "scaled_residual": 2.4681040359585336e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.6, direction=1",
+      "scaled_residual": 1.2336211152385226e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.6, direction=2",
+      "scaled_residual": 1.234328626383945e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=0.6, direction=3",
+      "scaled_residual": 4.703307729682548e-18,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=3, xi=0.6",
+      "scaled_residual": 5.578801654593729e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=1.0, direction=0",
+      "scaled_residual": 6.65859291352065e-19,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=1.0, direction=1",
+      "scaled_residual": 1.1102523543427941e-16,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=1.0, direction=2",
+      "scaled_residual": 1.7577305073981263e-18,
+      "passed": true
+    },
+    {
+      "name": "Full scalar UV chain sample=3, xi=1.0, direction=3",
+      "scaled_residual": 9.813043530101746e-20,
+      "passed": true
+    },
+    {
+      "name": "Angular vector UV chain sample=3, xi=1.0",
+      "scaled_residual": 6.684427777288334e-16,
+      "passed": true
+    },
+    {
+      "name": "Full antisymmetric tensor pair SU2, basis=0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Fundamental and antifundamental singlet pair SU2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full antisymmetric tensor pair SU3, basis=0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full antisymmetric tensor pair SU3, basis=1",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Full antisymmetric tensor pair SU3, basis=2",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Fundamental and antifundamental singlet pair SU3",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "SM electromagnetic input recovered",
+      "scaled_residual": 1.1110041994528968e-16,
+      "passed": true
+    },
+    {
+      "name": "SM color input recovered",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "SM printed unification solution",
+      "scaled_residual": 8.990090243187263e-7,
+      "passed": true
+    },
+    {
+      "name": "MSSM electromagnetic input recovered",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "MSSM color input recovered",
+      "scaled_residual": 1.8041124150158794e-16,
+      "passed": true
+    },
+    {
+      "name": "MSSM printed unification solution",
+      "scaled_residual": 3.2174223057568606e-16,
+      "passed": true
+    },
+    {
+      "name": "RK4 full three gauge beta functions",
+      "scaled_residual": 1.2628786905111156e-15,
+      "passed": true
+    },
+    {
+      "name": "RK4 two Wilson coefficients",
+      "scaled_residual": 1.233543794492452e-14,
+      "passed": true
+    },
+    {
+      "name": "RK4 Yukawa ratio",
+      "scaled_residual": 2.5101170674275235e-14,
+      "passed": true
+    },
+    {
+      "name": "RK4 low QCD coupling at 2.0",
+      "scaled_residual": 6.716849298982197e-15,
+      "passed": true
+    },
+    {
+      "name": "RK4 low Wilson coefficients at 2.0",
+      "scaled_residual": 1.2831807821120776e-14,
+      "passed": true
+    },
+    {
+      "name": "RK4 low Yukawa ratio at 2.0",
+      "scaled_residual": 3.477499063711811e-14,
+      "passed": true
+    },
+    {
+      "name": "RK4 low QCD coupling at 4.3",
+      "scaled_residual": 4.218847493575595e-15,
+      "passed": true
+    },
+    {
+      "name": "RK4 low Wilson coefficients at 4.3",
+      "scaled_residual": 1.1856749029217031e-14,
+      "passed": true
+    },
+    {
+      "name": "RK4 low Yukawa ratio at 4.3",
+      "scaled_residual": 2.949601612050893e-14,
+      "passed": true
+    },
+    {
+      "name": "Printed Wilson coefficients in units 1e-30",
+      "scaled_residual": 1.822933257926029e-6,
+      "passed": true
+    },
+    {
+      "name": "Printed tau mass in GeV",
+      "scaled_residual": 6.705129641643389e-7,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 0",
+      "scaled_residual": 4.823225066678188e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 0",
+      "scaled_residual": 5.832893967032068e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 0",
+      "scaled_residual": 2.9391434112942585e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 0",
+      "scaled_residual": 1.1102453418097426e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 1",
+      "scaled_residual": 9.941104491591467e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 1",
+      "scaled_residual": 8.973229237592058e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 1",
+      "scaled_residual": 7.487624869398874e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 1",
+      "scaled_residual": 1.1102434243324887e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 2",
+      "scaled_residual": 1.0864895568345841e-15,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 2",
+      "scaled_residual": 3.4089773100088094e-17,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 2",
+      "scaled_residual": 1.1118962607046424e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 3",
+      "scaled_residual": 5.997662719306288e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 3",
+      "scaled_residual": 1.4360029379952047e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 3",
+      "scaled_residual": 4.308534661874539e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 3",
+      "scaled_residual": 5.3261399850979586e-17,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 4",
+      "scaled_residual": 1.1460460432962956e-15,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 4",
+      "scaled_residual": 1.156351912650375e-17,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 4",
+      "scaled_residual": 2.308734925612557e-17,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 5",
+      "scaled_residual": 1.1147767195931236e-15,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 5",
+      "scaled_residual": 6.510860829801495e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 5",
+      "scaled_residual": 8.684997683529738e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 5",
+      "scaled_residual": 2.1986705576227826e-18,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 6",
+      "scaled_residual": 2.779024842816778e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 6",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 6",
+      "scaled_residual": 1.1105279146216472e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 6",
+      "scaled_residual": 1.1102233266124423e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 7",
+      "scaled_residual": 6.892556333967134e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 7",
+      "scaled_residual": 8.012187935277625e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 7",
+      "scaled_residual": 5.7504336889585e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 7",
+      "scaled_residual": 1.1102233315574664e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 8",
+      "scaled_residual": 3.304975186072301e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 8",
+      "scaled_residual": 4.119797938505214e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 8",
+      "scaled_residual": 6.191754864409451e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 8",
+      "scaled_residual": 1.1104369469092972e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 9",
+      "scaled_residual": 5.308825186169052e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 9",
+      "scaled_residual": 5.996251707061329e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 9",
+      "scaled_residual": 6.007951721517579e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 9",
+      "scaled_residual": 1.1139240657628649e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 10",
+      "scaled_residual": 1.4943618633391842e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 10",
+      "scaled_residual": 7.227680552630788e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 10",
+      "scaled_residual": 8.675098667445813e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 10",
+      "scaled_residual": 1.110356900652358e-16,
+      "passed": true
+    },
+    {
+      "name": "All physical spin transitions: pole/contact ratio 11",
+      "scaled_residual": 3.4193003855959014e-16,
+      "passed": true
+    },
+    {
+      "name": "Full spin bases including complex chiral coefficients 11",
+      "scaled_residual": 1.8928268322178266e-16,
+      "passed": true
+    },
+    {
+      "name": "Direct spin sums versus full four-dimensional trace 11",
+      "scaled_residual": 1.933719218696611e-16,
+      "passed": true
+    },
+    {
+      "name": "Off-shell intermediate nucleon inverse 11",
+      "scaled_residual": 1.110223084913591e-16,
+      "passed": true
+    },
+    {
+      "name": "Full phase-space Jacobian and spin factor: width in 1e-63 GeV",
+      "scaled_residual": 1.7136903215361402e-6,
+      "passed": true
+    },
+    {
+      "name": "Historical proton lifetime in 1e31 years",
+      "scaled_residual": 2.623728836700946e-6,
+      "passed": true
+    }
+  ]
+}

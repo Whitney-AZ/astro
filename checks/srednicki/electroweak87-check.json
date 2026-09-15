@@ -1,0 +1,352 @@
+{
+  "checks": 64,
+  "passed": true,
+  "records": [
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A'), 0)",
+      "scaled_residual": 5.508688909930499e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A'), 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A'), 2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'Z'), 0)",
+      "scaled_residual": 2.783345872473193e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'Z'), 1)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'Z'), 2)",
+      "scaled_residual": 3.3670808700788175e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A', 'A'), 0)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A', 'A'), 1)",
+      "scaled_residual": 4.5014585554195e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A', 'A'), 2)",
+      "scaled_residual": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A', 'Z'), 0)",
+      "scaled_residual": 1.942890293094024e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A', 'Z'), 1)",
+      "scaled_residual": 5.743614824131737e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'A', 'Z'), 2)",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'Z', 'Z'), 0)",
+      "scaled_residual": 6.18829299242025e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'Z', 'Z'), 1)",
+      "scaled_residual": 5.402923248480925e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', 'Z', 'Z'), 2)",
+      "scaled_residual": 4.991660472764349e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', '+', '-'), 0)",
+      "scaled_residual": 6.310324184088712e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', '+', '-'), 1)",
+      "scaled_residual": 4.702819748717408e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.31, 0.7, ('+', '-', '+', '-'), 2)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "orbit (0.31, 0.7)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit SVD (0.31, 0.7)",
+      "scaled_residual": 1.2628757382263505e-17,
+      "passed": true
+    },
+    {
+      "name": "scalar mass (0.31, 0.7, 0.3)",
+      "scaled_residual": 1.6006675672219674e-17,
+      "passed": true
+    },
+    {
+      "name": "scalar mass (0.31, 0.7, 2.0)",
+      "scaled_residual": 6.40267026888787e-17,
+      "passed": true
+    },
+    {
+      "name": "full curvature density (0.31, 0.7, 0)",
+      "scaled_residual": 1.2095505715481381e-15,
+      "passed": true
+    },
+    {
+      "name": "full curvature density (0.31, 0.7, 1)",
+      "scaled_residual": 7.996543665354618e-16,
+      "passed": true
+    },
+    {
+      "name": "full curvature density (0.31, 0.7, 2)",
+      "scaled_residual": 4.55267490341633e-15,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A'), 0)",
+      "scaled_residual": 4.2194219317630225e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A'), 1)",
+      "scaled_residual": 2.732566119996739e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A'), 2)",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'Z'), 0)",
+      "scaled_residual": 2.0497319175725773e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'Z'), 1)",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'Z'), 2)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A', 'A'), 0)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A', 'A'), 1)",
+      "scaled_residual": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A', 'A'), 2)",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A', 'Z'), 0)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A', 'Z'), 1)",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'A', 'Z'), 2)",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'Z', 'Z'), 0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'Z', 'Z'), 1)",
+      "scaled_residual": 3.469446951953614e-17,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', 'Z', 'Z'), 2)",
+      "scaled_residual": 1.734723475976807e-18,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', '+', '-'), 0)",
+      "scaled_residual": 2.0816681711721685e-17,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', '+', '-'), 1)",
+      "scaled_residual": 6.938893903907228e-17,
+      "passed": true
+    },
+    {
+      "name": "vertex (0.9, 0.4, ('+', '-', '+', '-'), 2)",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "orbit (0.9, 0.4)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "explicit SVD (0.9, 0.4)",
+      "scaled_residual": 2.8450950936685514e-17,
+      "passed": true
+    },
+    {
+      "name": "scalar mass (0.9, 0.4, 0.3)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "scalar mass (0.9, 0.4, 2.0)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full curvature density (0.9, 0.4, 0)",
+      "scaled_residual": 3.541361864462856e-18,
+      "passed": true
+    },
+    {
+      "name": "full curvature density (0.9, 0.4, 1)",
+      "scaled_residual": 1.6270742354699762e-16,
+      "passed": true
+    },
+    {
+      "name": "full curvature density (0.9, 0.4, 2)",
+      "scaled_residual": 1.946648989139465e-17,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (0.8, 2.01)",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (0.8, 2.5)",
+      "scaled_residual": 5.421010862427522e-20,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (0.8, 10.0)",
+      "scaled_residual": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (0.8, 100.0)",
+      "scaled_residual": 5.063956224826138e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (80.4, 2.01)",
+      "scaled_residual": 2.1759325965540103e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (80.4, 2.5)",
+      "scaled_residual": 2.030788271924026e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (80.4, 10.0)",
+      "scaled_residual": 2.819271608463817e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (80.4, 100.0)",
+      "scaled_residual": 7.772887254378178e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (91.2, 2.01)",
+      "scaled_residual": 1.3142872047975543e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (91.2, 2.5)",
+      "scaled_residual": 4.906473749544628e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (91.2, 10.0)",
+      "scaled_residual": 3.405742078335598e-16,
+      "passed": true
+    },
+    {
+      "name": "decay nine polarizations (91.2, 100.0)",
+      "scaled_residual": 1.3414026675198414e-16,
+      "passed": true
+    },
+    {
+      "name": "WW numerical table",
+      "scaled_residual": 1.1003519942039459e-6,
+      "passed": true
+    },
+    {
+      "name": "ZZ numerical table",
+      "scaled_residual": 9.276940193814198e-8,
+      "passed": true
+    }
+  ],
+  "inputs": {
+    "e": 0.31345100004952897,
+    "g1": 0.3574427476632053,
+    "g2": 0.6521742836409911,
+    "v": 246.55985989247807,
+    "GF": 1.1631621271133254e-5,
+    "MZ_from_angle": 91.68385778823708
+  },
+  "widths": [
+    {
+      "M": 80.4,
+      "x": 0.16160400000000003,
+      "beta": 0.5946292962846683,
+      "polynomial": 0.6669742337919999,
+      "width": 1.0383188574825173
+    },
+    {
+      "M": 91.2,
+      "x": 0.207936,
+      "beta": 0.4101901997854166,
+      "polynomial": 0.687104561152,
+      "width": 0.3689380927694019
+    }
+  ],
+  "script_sha256": "d570607e1422f068203a605c7a0c75d5591f75fb7d23552d17d78c99ddb16ab8",
+  "helper_sha256": "0420afee5ab702b31b9b2e8735c4635c0fa24947563431a6f42d672bb6a642c5"
+}

@@ -1,0 +1,688 @@
+---
+title: 'Srednicki §44 费米子路径积分的形式化推导'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [44]
+hideFromHome: true
+draft: false
+---
+
+<span id="c44"></span>
+
+上一节从自由场的时间序矩阵元出发，构造了相应的生成泛函，并用源导数产生各个场的插入。对于狄拉克场，所得结果是
+<span id="eq:c44-target"></span>
+
+$$
+\begin{aligned}
+Z_{0,D}[\bar\eta,\eta]&=\exp(i\bar\eta S\eta),\\
+\mathscr D&=-i\slashed\partial+m,\qquad
+\mathscr D_xS(x-y)=\delta^4(x-y)I_4 .
+\end{aligned}
+\tag{44.1}
+$$
+
+对反交换变量的积分提取含有全部被积变量的顶阶系数。由这一定义可以求出线性换元的行列式因子，再通过平方完成得到含源高斯积分。
+
+我们先研究有限个变量，待积分规则和含源公式都建立后，再恢复连续时空指标。其中$\mathscr D$和$S$的边界条件仍采用[第42节](/posts/srednicki-42/#c42)的费曼处方，有限调节器下使用[上一节所定的相容逆核](/posts/srednicki-43/#c43-dirac-gaussian)。
+
+<span id="c44-algebra"></span>
+
+## 格拉斯曼 变量和微分
+
+满足$\psi_i\psi_j=-\psi_j\psi_i$的生成元称为格拉斯曼变量。系数取实数或复数时，令$i=j$便得到$\psi_i^2=0$。这些生成元构成外代数：每个生成元在单项式中至多出现一次，而交换两个相邻生成元会改变符号。因此，$n$个独立生成元的单项式基共有$2^n$个。若系数中还含有独立奇源，就将这些源也置于同一个外代数中，按统一的交换规则运算。
+
+先看单个$\psi$。由于它的平方为零，函数展开只剩常数项和一次项，将系数放到右边便有
+<span id="eq:c44-one-variable"></span>
+
+$$
+f(\psi)=a+\psi b,\qquad
+|a|=|f|,\qquad |b|=|f|+1\pmod2 .
+\tag{44.2}
+$$
+
+这里$|f|$是齐次函数的格拉斯曼宇称，系数$a,b$均不含$\psi$，并统一写在右侧。先取偶函数，此时$a$为偶、$b$为奇；因而$b$与$\psi$反交换，且$b^2=0$，同一个函数也可写成$f=a-b\psi$。这种重排说明，取变量左侧还是右侧的系数，会影响微分的符号。一般函数则可先拆成偶、奇两部分，分别作同样处理。
+
+具体地，将变分$\delta\psi$移到最左端或最右端，就分别定义左导数与右导数：
+<span id="eq:c44-left-right"></span>
+
+$$
+\begin{aligned}
+\delta f
+ &=\delta\psi\,\partial_\psi^L f
+  =(\partial_\psi^R f)\delta\psi,\\
+\partial_\psi^L f&=b,\qquad
+\partial_\psi^R f=(-1)^{|b|}b
+                 =(-1)^{|f|+1}b .
+\end{aligned}
+\tag{44.3}
+$$
+
+对于偶函数，左右导数分别为$+b$与$-b$。对乘积作左微分时，导数越过奇因子也会变号，因而有$\partial^L(AB)=(\partial^LA)B+(-1)^{|A|}A\,\partial^LB$。此后的积分与源微分均采用左导数，而第37节定义正则动量时使用右导数，以配合哈密顿密度中$\pi\dot\psi$的排列。例如，动能项$i\psi^\dagger\dot\psi$给出右动量$i\psi^\dagger$，左动量却是$-i\psi^\dagger$；两者之间的符号与将速度移回动量右边的操作相配，具体讨论见[第37节](/posts/srednicki-37/#c37)。
+
+<span id="c44-integral"></span>
+
+## 积分怎样定义
+
+定义奇变量积分时，可以保留普通全轴积分的两个基本性质。在收敛域内，普通积分满足线性$I(f+cg)=I(f)+cI(g)$及平移不变性$I(f(x+a))=I(f(x))$，其中$c$为数值常数。我们要求奇积分也满足这两项性质；对于置于右侧的外部系数，我们同时约定可以从积分的右边提出。
+
+由于单变量函数只有两项，积分由$I(1)=c_0$和$I(\psi)=c_1$完全决定。用一个独立奇数$\xi$作平移，便有$I(\psi+\xi)=c_1+c_0\xi$。平移不变性迫使$c_0=0$，余下的$c_1$只决定整体归一。取非平凡归一$c_1=1$，就得到
+<span id="eq:c44-berezin-one"></span>
+
+$$
+\int d\psi\,1=0,\qquad
+\int d\psi\,\psi=1,\qquad
+\int d\psi\,[a+\psi b]=b .
+\tag{44.4}
+$$
+
+这个取系数的线性运算称为贝雷津积分。单变量函数只有常数项和一次项，所以积分与左微分给出相同结果。推广到多变量时，仍可先将函数写成有限展开，再决定积分应取哪一项。多变量展开可统一写为
+<span id="eq:c44-expansion"></span>
+
+$$
+f(\psi)=\sum_{r=0}^{n}\frac1{r!}
+ \psi_{i_1}\cdots\psi_{i_r}\,c_{i_1\cdots i_r}.
+\tag{44.5}
+$$
+
+各指标从$1$到$n$，系数取全反对称形式，并放在全部$\psi$的右侧。对固定的一组有序指标，求和包含$r!$个排列；变量与系数各给出一个排列号，两号相乘为正，故需用$1/r!$除去重复计数。若函数的宇称确定，各阶系数满足$|c_{i_1\cdots i_r}|=|f|+r\bmod2$。
+
+这一写法也便于求导。用左导数$\partial_j^L$作用于第$r$阶项，选中第$a$个$\psi$时须越过前面的变量，产生$(-1)^{a-1}$；再将系数中相应指标移到首位，又产生$(-1)^{a-1}$。重命名余下的求和指标后，$r$个贡献全部相同，于是
+<span id="eq:c44-polynomial-derivative"></span>
+
+$$
+\partial_j^L f
+=\sum_{r=1}^{n}\frac1{(r-1)!}
+ \psi_{i_2}\cdots\psi_{i_r}\,c_{j i_2\cdots i_r}.
+\tag{44.6}
+$$
+
+对积分而言，关键是含有全部生成元的顶阶项。顶阶反对称张量只有一个独立分量，定向取$\epsilon_{1\cdots n}=1$后，便可写为
+<span id="eq:c44-top"></span>
+
+$$
+c_{i_1\cdots i_n}=d\,\epsilon_{i_1\cdots i_n},\qquad
+\frac1{n!}\psi_{i_1}\cdots\psi_{i_n}c_{i_1\cdots i_n}
+=\psi_1\cdots\psi_n d .
+\tag{44.7}
+$$
+
+这个顶阶项由右侧系数$d$决定；它可以包含外源，宇称为$|f|+n\bmod2$。仿照单变量的取系数规则，定义多变量积分为
+<span id="eq:c44-measure"></span>
+
+$$
+d^n\psi:=d\psi_n\cdots d\psi_1,\qquad
+\int d^n\psi\, f(\psi)=d .
+\tag{44.8}
+$$
+
+这个测度次序使最右端的$d\psi_1$先积分，然后依次取走$\psi_1,\psi_2,\ldots,\psi_n$，留下右边的$d$。将各$d\psi_i$看作奇测度记号，并令它们与其它$d\psi_j$及$\psi_j$反交换，便能用单变量规则$\int d\psi_i=0$、$\int d\psi_i\,\psi_j=\delta_{ij}$重现这一结果。
+
+还可以从平移不变性看出，为什么只能选取顶阶系数。平移某个$\psi_j$后，独立平移参数的系数必须消失，即$I_n(\partial_j^L f)=0$。任何缺少$\psi_j$的单项式$g$都能写成$\partial_j^L(\psi_jg)$，所以次数小于$n$的单项式积分均为零。这样，只剩顶阶单项式的归一尚可选择，式[（44.8）](#eq:c44-measure)将它定为1。反过来，$\psi_j\mapsto\psi_j+\xi_j$不会改变含全部积分变量的系数，因而这个定义也确实满足平移不变性。
+
+逐个取走奇变量还会改变结果的宇称。这决定了奇系数从哪一侧提出时会变号：若$c$是不含被积变量的齐次外部系数，则
+<span id="eq:c44-graded-linearity"></span>
+
+$$
+I_n(fc)=I_n(f)c,\qquad
+I_n(cf)=(-1)^{n|c|}c\,I_n(f).
+\tag{44.9}
+$$
+
+第二式中的符号来自把$c$移过顶阶单项式的$n$个变量。
+
+<span id="c44-jacobian"></span>
+
+## 线性变量变换
+
+积分已经化为顶阶系数的提取，变量变换的规则便可从顶阶项本身求出。取$\psi_i=J_{ij}\psi'_j$，其中$J$先取普通复数的可逆矩阵，矩阵元与所有奇变量交换。展开顶阶乘积时，重复的$j$指标使该项为零；其余项各对应一个排列$\pi$，所以
+<span id="eq:c44-top-jacobian"></span>
+
+$$
+\begin{aligned}
+\psi_1\cdots\psi_n
+ &=\sum_{\pi\in S_n}J_{1\pi(1)}\cdots J_{n\pi(n)}
+    \psi'_{\pi(1)}\cdots\psi'_{\pi(n)}\\
+ &=\left[\sum_{\pi\in S_n}\operatorname{sgn}(\pi)
+             \prod_{i=1}^nJ_{i\pi(i)}\right]\psi'_1\cdots\psi'_n\\
+ &=(\det J)\psi'_1\cdots\psi'_n .
+\end{aligned}
+\tag{44.10}
+$$
+
+将同一结果写成列维–奇维塔形式，就是$\epsilon_{i_1\cdots i_n}J_{i_1j_1}\cdots J_{i_nj_n}
+=(\det J)\epsilon_{j_1\cdots j_n}$。将变元代入带系数$d$的顶阶项，新系数便为$(\det J)d$。比较两套坐标下所提取的系数，便得到
+<span id="eq:c44-inverse-jacobian"></span>
+
+$$
+\begin{aligned}
+\int d^n\psi'\,f(J\psi')&=(\det J)\int d^n\psi\,f(\psi),\\
+\int d^n\psi\,f(\psi)
+ &=(\det J)^{-1}\int d^n\psi'\,f(J\psi'),\\
+d^n\psi&=(\det J)^{-1}d^n\psi' .
+\end{aligned}
+\tag{44.11}
+$$
+
+测度中的逆雅可比行列式由此确定：变元后的顶阶系数已乘上$\det J$，测度必须补以倒数，才能保持积分不变。单变量例子最为直接，若$\psi=a\psi'$，则$\int a^{-1}d\psi'\,a\psi'=1$，仍满足原来的归一。
+
+作为比较，再看普通实变元$x=Jx'$。对于实全空间上的正测度，变量变换公式应写成
+<span id="eq:c44-real-jacobian"></span>
+
+$$
+\int_{\mathbb R^n}d^nx\,f(x)
+=|\det J|\int_{\mathbb R^n}d^nx'\,f(Jx').
+\tag{44.12}
+$$
+
+绝对值对不保向的实变换尤其重要。取$x=-x'$和$f=e^{-x^2/2}$时，新旧坐标下均为正积分，因此普通测度不能仅乘$-1$；若采用有向微分形式，积分方向也应一同变换。格拉斯曼积分则已由变量次序选定定向，式[（44.11）](#eq:c44-inverse-jacobian)中的$\det J$因而不取绝对值。
+
+<span id="c44-pfaffian"></span>
+
+## 反对称核的 高斯 积分
+
+有了变量变换规则，现在计算$\int d^n\psi\,\exp(\psi^TM\psi/2)$。矩阵$M$的元素取普通复数，而$\psi^TM\psi=\psi^T(M-M^T)\psi/2$，因此二次型只保留矩阵的反对称部分，可以直接设$M^T=-M$。先从二维积分着手：
+<span id="eq:c44-two-gaussian"></span>
+
+$$
+\begin{aligned}
+M&=\begin{pmatrix}0&m\\-m&0\end{pmatrix},\\
+\frac12\psi^TM\psi&=m\psi_1\psi_2,\qquad
+e^{\psi^TM\psi/2}=1+m\psi_1\psi_2,\\
+\int d\psi_2d\psi_1\,e^{\psi^TM\psi/2}&=m .
+\end{aligned}
+\tag{44.13}
+$$
+
+由于$(\psi_1\psi_2)^2=0$，指数只剩两项，积分直接取出含两份变量的系数。这里$m$可为任意复数，整个计算是有限多项式运算，无须控制积分变量在无穷远处的行为。
+
+一般维数的计算可以化为这些二维积分的乘积。为此选取酉矩阵$U$，使$U^TMU$成为二维分块的形式，这种变换称为酉合同变换。为说明它的构造，设$M\ne0$，则厄米矩阵$M^\dagger M$至少有一个正本征值$\sigma^2$。选取相应的单位本征向量$v$，并定义
+<span id="eq:c44-pair-construction"></span>
+
+$$
+M^\dagger Mv=\sigma^2v,\qquad
+u=\frac{\overline{Mv}}{\sigma}.
+\tag{44.14}
+$$
+
+这样有$u^\dagger u=1$，同时$u^\dagger v=(Mv)^Tv/\sigma=-v^TMv/\sigma=0$，因为普通数值向量的反对称二次型$v^TMv$为零。由这两个向量的定义和本征方程，还可得到它们与原矩阵的关系：
+<span id="eq:c44-pair-identities"></span>
+
+$$
+\begin{aligned}
+u^TM&=\frac{(Mv)^\dagger M}{\sigma}
+     =\frac{v^\dagger M^\dagger M}{\sigma}
+     =\sigma v^\dagger,\\
+v^TM&=-(Mv)^T=-\sigma u^\dagger .
+\end{aligned}
+\tag{44.15}
+$$
+
+因此$u^TMv=\sigma$、$v^TMu=-\sigma$，它们正好构成所需二维块。若$q$在厄米内积下同时正交于$u,v$，则$u^TMq=v^TMq=0$，反对称性又使反向交叉项同时消失。将$u,v$补成正交单位基，就分离出了一个与其余方向解耦的二维块。余下矩阵仍然反对称，重复这一过程便得到
+<span id="eq:c44-skew-congruence"></span>
+
+$$
+U^TMU=
+\bigoplus_{I=1}^{r}
+\begin{pmatrix}0&\sigma_I\\-\sigma_I&0\end{pmatrix}
+\oplus 0_{n-2r},\qquad
+U^\dagger U=I,\quad \sigma_I>0 .
+\tag{44.16}
+$$
+
+每次分离出的非零块都占两个维度，所以反对称矩阵的秩必为偶数。奇数维至少保留一个零方向，偶数维的奇异矩阵也会留下零块。正实块参数描述非零部分，上式中的零块则描述核的零模。
+
+先取$n=2r$且$M$可逆，令$\psi=U\psi'$，并保留式[（44.11）](#eq:c44-inverse-jacobian)的变元因子。各块二次型都是偶量，彼此交换，包含两个变量的整块互换也不产生负号，因此积分分解为
+<span id="eq:c44-block-integral"></span>
+
+$$
+\begin{aligned}
+P(M)&:=\int d^{2r}\psi\,e^{\psi^TM\psi/2}\\
+&=(\det U)^{-1}\prod_{I=1}^r
+ \int d\psi'_{2I}d\psi'_{2I-1}\,
+ e^{\sigma_I\psi'_{2I-1}\psi'_{2I}}\\
+&=(\det U)^{-1}\prod_{I=1}^r\sigma_I .
+\end{aligned}
+\tag{44.17}
+$$
+
+要将这个结果与原矩阵联系起来，对式[（44.16）](#eq:c44-skew-congruence)取行列式即可。每个二维块贡献$\sigma_I^2$，于是
+<span id="eq:c44-square-determinant"></span>
+
+$$
+(\det U)^2\det M=\prod_I\sigma_I^2,\qquad
+P(M)^2=\det M .
+\tag{44.18}
+$$
+
+积分的平方虽等于行列式，积分本身的符号和相位仍由既定变量次序决定。直接展开指数可以把它们一并保留下来：只有第$r$次项含有全部$2r$个变量，将指数中的$1/r!$与每个二次型的$1/2$相乘，再把变量排回固定次序，就有
+<span id="eq:c44-pfaffian"></span>
+
+$$
+\begin{aligned}
+P(M)
+ &=\frac{1}{2^r r!}\,
+   \epsilon_{i_1\cdots i_{2r}}
+   M_{i_1i_2}\cdots M_{i_{2r-1}i_{2r}}\\
+ &\equiv\operatorname{Pf}M .
+\end{aligned}
+\tag{44.19}
+$$
+
+这一多项式称为Pfaffian，它连同相位一起确定了积分，而不必再选择行列式的平方根。以四维为例，所有配对归并后只剩三项：
+<span id="eq:c44-four-pfaffian"></span>
+
+$$
+\operatorname{Pf}M
+=M_{12}M_{34}-M_{13}M_{24}+M_{14}M_{23}.
+\tag{44.20}
+$$
+
+第二项的次序$1,3,2,4$需要交换一次，第三项的次序$1,4,2,3$需要交换两次，因而三项的符号为$+,-,+$。每对内部的两种方向给出$2^2$，两对的排列给出$2!$，恰好消去式[（44.19）](#eq:c44-pfaffian)中的分母。可见，Pfaffian的组合系数和符号都来自同一次顶阶展开。
+
+再比较线性变元前后的顶阶系数，便得到它的变换性质和平方关系：
+<span id="eq:c44-pfaffian-transform"></span>
+
+$$
+\operatorname{Pf}(J^TMJ)=(\det J)\operatorname{Pf}M,\qquad
+(\operatorname{Pf}M)^2=\det M .
+\tag{44.21}
+$$
+
+第一式来自式[（44.10）](#eq:c44-top-jacobian)；第二式已由非奇异核的分块积分得到。由于两边都是矩阵元的多项式，让非奇异反对称矩阵趋于奇异矩阵，恒等式也随之延续。奇数维的情形则更直接：二次指数只含偶数阶变量，无法产生奇数阶顶项，所以无源积分为零。
+
+固定测度为何必须保留，可以再看二维式[（44.13）](#eq:c44-two-gaussian)，它的答案始终是$m$。当$m<0$时，若将$(\det M)^{1/2}$逐次解释为主平方根，就会误得$|m|$。式[（44.17）](#eq:c44-block-integral)中的$\det U$相位已为积分选定了平方根。对于固定的自由核，这一源无关因子可在$Z[0]=1$的归一中消去；若核随其它场改变，它的变化也须留在积分中，节末会用到这一点。
+
+<span id="c44-real-gaussian"></span>
+
+## 与普通实 高斯 的比较
+
+再与普通实变量的高斯积分比较，就能看出行列式幂次的区别。普通积分还需选定收敛域：设$M=A+iB$为复对称矩阵，$A,B$均实对称，并取$A>0$，则$|e^{-x^TMx/2}|=e^{-x^TAx/2}$可积。先用实正定平方根$A^{-1/2}$化简实部，再用正交矩阵$O$对角化$A^{-1/2}BA^{-1/2}$，就能将积分分成一维积分：
+<span id="eq:c44-real-whitening"></span>
+
+$$
+\begin{aligned}
+x&=A^{-1/2}Oy,\qquad
+O^TA^{-1/2}BA^{-1/2}O=\operatorname{diag}(\lambda_j),\\
+d^nx&=(\det A)^{-1/2}d^ny,\qquad
+x^TMx=\sum_j(1+i\lambda_j)y_j^2 .
+\end{aligned}
+\tag{44.22}
+$$
+
+所有$\lambda_j$都为实数，而这里的普通雅可比行列式已经取绝对值。所需的一维积分见[第6节](/posts/srednicki-06/#c06-gaussian)；为了确定此次延拓的平方根，记$G(a)=\int_{\mathbb R}dy\,e^{-ay^2/2}$，并取$\operatorname{Re}a>0$。高斯衰减使分部积分的边界项消失，从而
+<span id="eq:c44-one-complex-gaussian"></span>
+
+$$
+\begin{aligned}
+0&=\int_{\mathbb R}dy\,\frac{d}{dy}
+                  (y e^{-ay^2/2})
+  =G(a)-a\int_{\mathbb R}dy\,y^2e^{-ay^2/2},\\
+G'(a)&=-\frac{G(a)}{2a},\qquad
+G(1)=\sqrt{2\pi},\\
+G(a)&=\sqrt{2\pi}\,
+       \exp\!\left[-\frac12\operatorname{Log}a\right].
+\end{aligned}
+\tag{44.23}
+$$
+
+其中$\operatorname{Log}a$取右半平面内由$a=1$连续确定的分支。衰减还允许将参数导数移入积分号内，所以这个微分方程与初值共同固定了一维结果。将它代入式[（44.22）](#eq:c44-real-whitening)，便有
+<span id="eq:c44-real-gaussian"></span>
+
+$$
+\begin{aligned}
+\int_{\mathbb R^n}d^nx\,e^{-x^TMx/2}
+ &=(2\pi)^{n/2}(\det A)^{-1/2}
+   \prod_j(1+i\lambda_j)^{-1/2}\\
+ &=(2\pi)^{n/2}(\det M)^{-1/2}.
+\end{aligned}
+\tag{44.24}
+$$
+
+最后一行的平方根由前一行定义，也就是从正实核连续延拓而来；它不一定等于对最终复数$\det M$单独取主平方根。普通积分给出行列式的负半幂，奇积分给出正半幂，这与两者变量变换因子的相反幂次相配。普通积分除了要求$M$复对称，还需要上述收敛条件；例如$M=-I$时，普通积分发散，有限格拉斯曼积分仍是一个有定义的多项式。
+
+<span id="c44-complex"></span>
+
+## 复 格拉斯曼 变量与配对测度
+
+接下来为两套独立场变量准备相应的积分规则。仿照普通复变量的记号，将两个生成元组合成
+<span id="eq:c44-complex-definition"></span>
+
+$$
+\chi=\frac{\psi_1+i\psi_2}{\sqrt2},\qquad
+\bar\chi=\frac{\psi_1-i\psi_2}{\sqrt2}.
+\tag{44.25}
+$$
+
+这只是以复数系数换一组基，仍然保留两个独立生成元。反解这两个关系时，按右侧列的次序$(\bar\chi,\chi)^T$排列，变换矩阵及其行列式为
+<span id="eq:c44-complex-inverse"></span>
+
+$$
+\begin{pmatrix}\psi_1\\\psi_2\end{pmatrix}
+=\frac1{\sqrt2}
+ \begin{pmatrix}1&1\\i&-i\end{pmatrix}
+ \begin{pmatrix}\bar\chi\\\chi\end{pmatrix},\qquad
+\det J=\frac{-i-i}{2}=-i .
+\tag{44.26}
+$$
+
+因此，逆雅可比行列式给出测度关系$d\psi_2d\psi_1=(-i)^{-1}d\chi d\bar\chi$。二次单项式也需换到同一组变量中：
+<span id="eq:c44-complex-product"></span>
+
+$$
+\psi_1\psi_2
+=\frac{i}{2}(\bar\chi+\chi)(\bar\chi-\chi)
+=-i\bar\chi\chi .
+\tag{44.27}
+$$
+
+测度和单项式带来的两个因子互相抵消，原来的归一便成为
+<span id="eq:c44-complex-normalization"></span>
+
+$$
+1=\int d\psi_2d\psi_1\,\psi_1\psi_2
+ =\int d\chi d\bar\chi\,\bar\chi\chi .
+\tag{44.28}
+$$
+
+按照这个次序，先对$\bar\chi$积分，再对$\chi$积分。一对复生成元的函数只有四项，积分取出其中同时含两份变量的系数，所以
+<span id="eq:c44-complex-one-pair"></span>
+
+$$
+\begin{aligned}
+f(\chi,\bar\chi)&=a+\chi b+\bar\chi c+\bar\chi\chi d,\\
+\int d\chi d\bar\chi\,f&=d,\\
+\int d\chi d\bar\chi\,e^{m\bar\chi\chi}
+ &=\int d\chi d\bar\chi\,(1+m\bar\chi\chi)=m .
+\end{aligned}
+\tag{44.29}
+$$
+
+推广到$n$个复对时，需要连同这个次序一起推广。将测度定义为
+<span id="eq:c44-paired-measure"></span>
+
+$$
+\begin{aligned}
+d^n\chi\,d^n\bar\chi
+ &:=d\chi_n d\bar\chi_n\cdots d\chi_1 d\bar\chi_1,\\
+\int d^n\chi\,d^n\bar\chi\,
+ \bar\chi_1\chi_1\cdots\bar\chi_n\chi_n&=1 .
+\end{aligned}
+\tag{44.30}
+$$
+
+左边是右边交错测度的简写。每对积分包含两个奇积分，整体为偶，因而整对交换不会变号。若改将顶阶变量排成全部带横线的变量在前、其余变量在后的两组，每个$\chi_i$都需越过后面的$n-i$个带横线的变量，交换总数为$\sum_i(n-i)=n(n-1)/2$，因此
+<span id="eq:c44-measure-conversion"></span>
+
+$$
+\begin{aligned}
+\bar\chi_1\chi_1\cdots\bar\chi_n\chi_n
+ &=(-1)^{n(n-1)/2}
+   \bar\chi_1\cdots\bar\chi_n\chi_1\cdots\chi_n,\\
+I_{\rm pair}(f)&=(-1)^{n(n-1)/2}I_{\rm group}(f).
+\end{aligned}
+\tag{44.31}
+$$
+
+[第43节的有限算例](/posts/srednicki-43/#c43-finite-check)采用的是后一种分组顶阶次序。它在$n=2$时给狄拉克零源积分$+1$，换成本节配对测度就给$-1$。相同换序也作用于带源分子，所以零源归一后的生成泛函和关联函数保持不变。以下采用式[（44.30）](#eq:c44-paired-measure)的配对测度。
+
+两套生成元可以分别作独立的可逆变元$\chi=J\chi'$、$\bar\chi=K\bar\chi'$，两组坐标的总变换行列式为$\det J\det K$。若将坐标重新排成配对次序，只是同时排列矩阵的行和列，行列式不变。因此
+<span id="eq:c44-complex-jacobian"></span>
+
+$$
+d^n\chi\,d^n\bar\chi
+=(\det J)^{-1}(\det K)^{-1}
+ d^n\chi'\,d^n\bar\chi'.
+\tag{44.32}
+$$
+
+这些代数变元不要求$K=J^*$，因为两套积分生成元彼此独立。后面所用的$\chi^\dagger=(\bar\chi_1,\ldots,\bar\chi_n)$，也只是由带横线的变量组成的行，不会额外限制变元矩阵。
+
+<span id="c44-determinant"></span>
+
+## 一般复核给出行列式
+
+现在用两套独立变元计算$I_C(M)=\int d^n\chi\,d^n\bar\chi\,e^{\chi^\dagger M\chi}$，其中$M$为一般复矩阵。用两个独立酉矩阵可将这个核化为对角形式。这两个矩阵可从厄米矩阵的谱分解构造：取$M^\dagger M$的一组正交单位本征向量$u_j$，将本征值记为$\sigma_j^2\geq0$；在$\sigma_j>0$的方向上定义$r_j=Mu_j/\sigma_j$，则
+<span id="eq:c44-singular-vectors"></span>
+
+$$
+r_i^\dagger r_j
+=\frac{u_i^\dagger M^\dagger Mu_j}{\sigma_i\sigma_j}
+=\delta_{ij}.
+\tag{44.33}
+$$
+
+这些$r_j$彼此正交且范数为一，将它们补成一组完整的正交单位基即可。其余方向满足$\sigma_j=0$，相应地$Mu_j=0$。取$U=(u_1,\ldots,u_n)$、$R=(r_1,\ldots,r_n)$和$V=R^\dagger$，便得到奇异值分解
+<span id="eq:c44-svd"></span>
+
+$$
+VMU=\operatorname{diag}(\sigma_1,\ldots,\sigma_n).
+\tag{44.34}
+$$
+
+非零奇异值为正；若矩阵奇异，零值也保留在这个对角形式内。令$\chi=U\chi'$、$\chi^\dagger=\chi'^\dagger V$，后一式写成带横线的列时对应$K=V^T$，所以测度中出现$\det V$。随后用式[（44.29）](#eq:c44-complex-one-pair)逐对积分，得到
+<span id="eq:c44-determinant-integral"></span>
+
+$$
+\begin{aligned}
+I_C(M)
+ &=\frac1{\det U\,\det V}
+   \prod_{j=1}^n\int d\chi'_j d\bar\chi'_j\,
+                         e^{\sigma_j\bar\chi'_j\chi'_j}\\
+ &=\frac{\prod_j\sigma_j}{\det U\,\det V}
+ =\det M .
+\end{aligned}
+\tag{44.35}
+$$
+
+由于各二次型和整对积分均为偶，这里的分块乘积没有额外交换号。若出现零奇异值，相应一对只留下常数项，其积分为零，结果仍与$\det M=0$一致。
+
+行列式的排列结构也可以直接从顶阶项看出。指数中只有$(\bar\chi M\chi)^n/n!$能含全部积分变量；先将带横线的变量移到前面，会得到$(-1)^{n(n-1)/2}$。随后，带横线的指标和未加横线的指标分别组成排列$\sigma,\tau$，所以分组顶阶系数为
+<span id="eq:c44-determinant-permutations"></span>
+
+$$
+\begin{aligned}
+I_{\rm group}\!\left(e^{\bar\chi M\chi}\right)
+ &=\frac{(-1)^{n(n-1)/2}}{n!}
+   \sum_{\sigma,\tau\in S_n}
+   \operatorname{sgn}\sigma\,\operatorname{sgn}\tau
+   \prod_{a=1}^nM_{\sigma(a),\tau(a)}\\
+ &=(-1)^{n(n-1)/2}\det M .
+\end{aligned}
+\tag{44.36}
+$$
+
+固定$\sigma$并令$\pi=\tau\circ\sigma^{-1}$，矩阵元的乘积成为$\prod_iM_{i,\pi(i)}$，两排列号之积则为$\operatorname{sgn}\pi$。这样，每个$\sigma$都给出同一个$\det M$，共有$n!$个贡献，恰好消去分母。再依式[（44.31）](#eq:c44-measure-conversion)换回配对次序，两个相同的整体符号相乘为正，便重新得到式[（44.35）](#eq:c44-determinant-integral)。行列式中的反对称求和，正是在计算奇变量乘积的排列。
+
+<span id="c44-complex-gaussian"></span>
+
+## 与普通复 高斯 的比较
+
+与前面的实变量对照相似，我们还可以计算普通复变量的高斯积分。采用坐标及测度
+<span id="eq:c44-ordinary-complex-measure"></span>
+
+$$
+z_j=\frac{x_j+iy_j}{\sqrt2},\qquad
+\bar z_j=\frac{x_j-iy_j}{\sqrt2},\qquad
+d^nz\,d^n\bar z:=d^nx\,d^ny .
+\tag{44.37}
+$$
+
+这里$z$与$\bar z$在实际积分区域内互为共轭。为保证收敛，取$H=(M+M^\dagger)/2>0$，于是$|e^{-z^\dagger Mz}|=e^{-z^\dagger Hz}$可积。变量变换也应保持这个共轭关系，因此采用酉变元$z=Uw$：选$M$的一个单位本征向量作为$U$的第一列并补成正交单位基，变换后第一列在对角线以下的矩阵元便全为零；对余下块重复操作，就将$U^\dagger MU$化为上三角矩阵$T$。酉变元的实雅可比行列式为$|\det U|^2=1$，故测度不变。
+
+上三角形式使我们能够逐个积分。关于第一个变量$w_1$的部分只有
+<span id="eq:c44-triangular-first"></span>
+
+$$
+T_{11}|w_1|^2+\bar w_1 A_1,\qquad
+A_1=\sum_{j>1}T_{1j}w_j,\qquad
+\operatorname{Re}T_{11}>0 .
+\tag{44.38}
+$$
+
+最后一个条件由$U^\dagger HU>0$保证。代入$w_1=(r\cos\theta+ir\sin\theta)/\sqrt2$后，展开$e^{-\bar w_1A_1}$，其第$k$项含有$e^{-ik\theta}$，因而除$k=0$外，角积分全为零。固定其它变量时，各项绝对值之和由$e^{-\operatorname{Re}T_{11}r^2/2+|A_1|r/\sqrt2}$控制，可以逐项积分。因此
+<span id="eq:c44-complex-radial"></span>
+
+$$
+\begin{aligned}
+\int dx_1dy_1\,e^{-T_{11}|w_1|^2-\bar w_1 A_1}
+ &=2\pi\int_0^\infty r\,dr\,e^{-T_{11}r^2/2}\\
+ &=\frac{2\pi}{T_{11}} .
+\end{aligned}
+\tag{44.39}
+$$
+
+积掉第一个变量后，余下主子块的厄米部分仍正定，可以继续采用同一方法。全积分的绝对收敛允许使用富比尼定理按此顺序逐个积分，最终得到
+<span id="eq:c44-ordinary-complex-gaussian"></span>
+
+$$
+\int d^nz\,d^n\bar z\,e^{-z^\dagger Mz}
+=\frac{(2\pi)^n}{\prod_jT_{jj}}
+=\frac{(2\pi)^n}{\det M}.
+\tag{44.40}
+$$
+
+其中每对变量贡献的$2\pi$来自$1/\sqrt2$坐标定义和$dx\,dy$测度。若改用$z=x+iy$并仍用$dx\,dy$，每对贡献$\pi$。普通复高斯给出行列式的负一次幂，与奇复高斯的正一次幂相对应。上述正定条件保证普通积分收敛，例如$M=-I$时该积分便不收敛。
+
+<span id="c44-shifts"></span>
+
+## 加入外源并完成平方
+
+无源高斯已求出，积分的平移不变性又允许消去线性项，因此可以继续求含源积分。以下外源与所有被积变量反交换，矩阵核$M$取可逆，以便确定所需平移。
+
+先考虑$M^T=-M$的情形，配以一套奇列源$\eta$。记$a=M^{-1}\eta$，由$(M^{-1})^T=-M^{-1}$得$a^T=-\eta^TM^{-1}$。在展开二次型之前，将三个相关乘积写出：
+<span id="eq:c44-real-shift-cross"></span>
+
+$$
+\begin{aligned}
+\psi^TMa&=\psi^T\eta=-\eta^T\psi,\\
+a^TM\psi&=-\eta^T\psi,\\
+a^TMa&=-\eta^TM^{-1}\eta .
+\end{aligned}
+\tag{44.41}
+$$
+
+前两个交叉项相同：交换奇向量的符号与反对称核的转置号相配。利用这三个关系逐项展开平移后的二次型，就能完成平方：
+<span id="eq:c44-real-square"></span>
+
+$$
+\frac12\psi^TM\psi+\eta^T\psi
+=\frac12(\psi-a)^TM(\psi-a)
+ +\frac12\eta^TM^{-1}\eta .
+\tag{44.42}
+$$
+
+新变量$\xi=\psi-a$仍与源反交换。其线性变元部分为单位矩阵，而奇平移不改变顶阶系数，所以积分保持不变。剩余的纯源二次项是偶量，可以从被积指数中提出，得到
+<span id="eq:c44-real-source-gaussian"></span>
+
+$$
+\int d^{2r}\psi\,e^{\psi^TM\psi/2+\eta^T\psi}
+=\operatorname{Pf}M\,
+ e^{+\eta^TM^{-1}\eta/2}.
+\tag{44.43}
+$$
+
+这里的Pfaffian按式[（44.19）](#eq:c44-pfaffian)由固定测度确定。纯源项的正号与$1/2$都由式[（44.41）](#eq:c44-real-shift-cross)中的交叉项确定。
+
+对于复对，则有两套独立奇源，将$\bar\eta$写成行。保持奇量原有次序相乘，平方完成成为
+<span id="eq:c44-complex-square"></span>
+
+$$
+\begin{aligned}
+\bar\chi M\chi+\bar\eta\chi+\bar\chi\eta
+ &=(\bar\chi+\bar\eta M^{-1})
+      M(\chi+M^{-1}\eta)
+   -\bar\eta M^{-1}\eta .
+\end{aligned}
+\tag{44.44}
+$$
+
+右侧乘积展开后依次给出原二次型、两个线性源项和$+\bar\eta M^{-1}\eta$，最后这个纯源项由末项抵消。因此可定义新变量$\xi=\chi+M^{-1}\eta$、$\bar\xi=\bar\chi+\bar\eta M^{-1}$；若反过来以新变量表示旧变量，就分别减去这两个移位。利用平移不变性，积分遂为
+<span id="eq:c44-complex-source-gaussian"></span>
+
+$$
+\int d^n\chi\,d^n\bar\chi\,
+ e^{\bar\chi M\chi+\bar\eta\chi+\bar\chi\eta}
+=\det M\,e^{-\bar\eta M^{-1}\eta}.
+\tag{44.45}
+$$
+
+单源公式留下正二次源项，双源公式留下负二次源项。核有零模时，可以回到最高系数定义求积分。以$M=\left(\begin{smallmatrix}0&m\\-m&0\end{smallmatrix}\right)$为例，式[（44.43）](#eq:c44-real-source-gaussian)在$m\ne0$时给出
+<span id="eq:c44-zero-mode"></span>
+
+$$
+I(m,\eta)=m\,e^{-\eta_1\eta_2/m}
+         =m-\eta_1\eta_2 .
+\tag{44.46}
+$$
+
+直接展开原积分也能得到这个多项式。原二次型贡献$m\psi_1\psi_2$，源指数的二次项贡献$\eta_1\psi_1\eta_2\psi_2=-\psi_1\psi_2\eta_1\eta_2$，其余项都不含顶阶积分所需的全部变量。因此，即使$m=0$，结果仍含$-\eta_1\eta_2$，两份外源补足了两个零模。此时无源积分却为零，不能再除以$I(0,0)$。
+
+<span id="c44-application"></span>
+
+## 回到 狄拉克 和 马约拉纳 场
+
+现在可以将有限指标推广为旋量和时空指标。先保留有限个模式，并将积分权重吸收入模式坐标，使二次型、源项和核乘法都由同一组有限矩阵表示。自由传播子的费曼边界条件按式[（44.1）](#eq:c44-target)选择，受调节的$\mathscr D$与$S$互为真正的逆，最后再撤去模式截断和边界调节。这样，刚建立的平方完成便可用于各个场分量。
+
+狄拉克作用量中的指数为$-i\bar\Psi\mathscr D\Psi+i\bar\eta\Psi+i\bar\Psi\eta$。为代入式[（44.45）](#eq:c44-complex-source-gaussian)，暂将有限公式的参数加下标$f$，对应关系是
+<span id="eq:c44-dirac-conversion"></span>
+
+$$
+M_f=-i\mathscr D,\qquad
+M_f^{-1}=iS,\qquad
+\eta_f=i\eta,\qquad \bar\eta_f=i\bar\eta .
+\tag{44.47}
+$$
+
+两套源独立缩放，因此两者都乘$i$。代回纯源二次型，得到$-\bar\eta_fM_f^{-1}\eta_f
+=-i^3\bar\eta S\eta=+i\bar\eta S\eta$，于是未归一积分及其归一比值分别为
+<span id="eq:c44-dirac-generator"></span>
+
+$$
+\begin{aligned}
+I_D[\bar\eta,\eta]
+ &=\det(-i\mathscr D)\,e^{i\bar\eta S\eta},\\
+Z_{0,D}[\bar\eta,\eta]
+ &=\frac{I_D[\bar\eta,\eta]}{I_D[0,0]}
+ =e^{i\bar\eta S\eta}.
+\end{aligned}
+\tag{44.48}
+$$
+
+第一行使用本节的配对测度。例如，第43节的二维有限核$D$满足$\det D=1$，在这里给出的无源值是$\det(-iD)=-1$；按照式[（44.31）](#eq:c44-measure-conversion)改回当时的分组测度，就得到$+1$。共同因子在分子、分母间消去，所以第二行的生成泛函完全相同。
+
+马约拉纳场只有一套奇变量，因而使用单源公式。沿[上一节](/posts/srednicki-43/#c43-majorana-square)，核$K=\mathcal C\mathscr D$在连同连续指标交换及分部积分的转置下满足$K^T=-K$，其逆是$F=S\mathcal C^{-1}$；这里的转置同时作用于旋量和时空指标。对作用量指数$-i\Psi^TK\Psi/2+i\eta^T\Psi$，应代入
+<span id="eq:c44-majorana-conversion"></span>
+
+$$
+M_f=-iK,\qquad M_f^{-1}=iF,\qquad \eta_f=i\eta .
+\tag{44.49}
+$$
+
+纯源项由此成为$\eta_f^TM_f^{-1}\eta_f/2=i^3\eta^TF\eta/2
+=-i\eta^TF\eta/2$，积分及归一结果为
+<span id="eq:c44-majorana-generator"></span>
+
+$$
+\begin{aligned}
+I_M[\eta]
+ &=\operatorname{Pf}(-i\mathcal C\mathscr D)\,
+        e^{-i\eta^TF\eta/2},\\
+Z_{0,M}[\eta]
+ &=\frac{I_M[\eta]}{I_M[0]}
+ =e^{-i\eta^TS\mathcal C^{-1}\eta/2}.
+\end{aligned}
+\tag{44.50}
+$$
+
+所得生成式与式[（43.34）](/posts/srednicki-43/#eq:c43-majorana-generator)一致。一套奇变量的二次积分给出Pfaffian，两套独立奇变量的二次积分给出行列式；零源归一以后，分别留下上述两种源高斯。再按上一节的源导数规则求导，就产生自由场的全部威克配对。
+
+恢复连续记号时，$\bar\eta S\eta=\int d^4x\,d^4y\,
+ \bar\eta_\alpha(x)S_{\alpha\beta}(x-y)\eta_\beta(y)$。四维中$[\Psi]=3/2$、$[\eta]=5/2$、$[S(x-y)]=3$，所以这一指数的质量维数为$-8+5/2+3+5/2=0$，与作用量中的源项$\int d^4x\,\bar\eta\Psi$相符。有限模式积分确定了生成泛函的这些代数关系，连续极限则仍按原理论的调节和边界条件处理。
+
+这里的自由核固定，行列式或Pfaffian因而不依赖外源及被积场，可以由零源归一消去。若矩阵核$M[\varphi]$还依赖另一个尚待积分的场$\varphi$，积掉费米子后所得$\det M[\varphi]$仍是$\varphi$的函数，必须保留在$\varphi$的积分内。[第53节](/posts/srednicki-53/#c53)与[第71节](/posts/srednicki-71/#c71)的计算将具体用到这一依赖关系。下一节将先利用已经求出的自由生成泛函，讨论狄拉克场的费曼规则。
+
+---
+
+[← 第 43 节](/posts/srednicki-43/) · [章节地图](/srednicki/) · [第 45 节 →](/posts/srednicki-45/)

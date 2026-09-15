@@ -1,0 +1,23 @@
+% Original vector reconstruction: CN2006-local PDF90, figure18.1.
+% Four cubic corners, four internal edges, four amputated short external legs.
+% Source figure has no momentum labels. Basic TikZ only.
+% Intrinsic bounding box: 48.3 mm x 48.3 mm.
+\begingroup
+\begin{tikzpicture}[x=1.15cm,y=1.15cm,line width=.75pt,font=\normalsize]
+\path[use as bounding box] (-2.1,-2.1) rectangle (2.1,2.1);
+\coordinate (ul) at (-1.3,1.3);
+\coordinate (ll) at (-1.3,-1.3);
+\coordinate (lr) at (1.3,-1.3);
+\coordinate (ur) at (1.3,1.3);
+\draw (ul)--(ll)--(lr)--(ur)--cycle;
+\draw (-1.95,1.95)--(ul);
+\draw (-1.95,-1.95)--(ll);
+\draw (1.95,-1.95)--(lr);
+\draw (1.95,1.95)--(ur);
+\fill (ul) circle[radius=1.2pt];
+\fill (ll) circle[radius=1.2pt];
+\fill (lr) circle[radius=1.2pt];
+\fill (ur) circle[radius=1.2pt];
+\end{tikzpicture}
+\endgroup
+

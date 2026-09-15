@@ -1,0 +1,572 @@
+[
+  {
+    "chapter": 5,
+    "source": "scripts/srednicki/figure-sources/05-inline-1.tex",
+    "sha256": "6b429526676a997b028d7392f9285431257ab76251cba6ab40869e98f471963f",
+    "output": "public/images/srednicki/05-inline-1.svg"
+  },
+  {
+    "chapter": 10,
+    "source": "scripts/srednicki/figure-sources/10-inline-1.tex",
+    "sha256": "8ae3fac4c7d85adb4ca1453c8edb72c76b96f12e5d55daf91903d2b621391abb",
+    "output": "public/images/srednicki/10-inline-1.svg"
+  },
+  {
+    "chapter": 10,
+    "source": "scripts/srednicki/figure-sources/10-inline-2.tex",
+    "sha256": "2e038824a02dcf4084b5bdf32699b14782fcc2afffd8daab56418420abf1ba57",
+    "output": "public/images/srednicki/10-inline-2.svg"
+  },
+  {
+    "chapter": 10,
+    "source": "scripts/srednicki/figure-sources/10-inline-3.tex",
+    "sha256": "bd6fdcdead58e7985f8265a98360677c250af57dc28d071059cab802d1ef4b1b",
+    "output": "public/images/srednicki/10-inline-3.svg"
+  },
+  {
+    "chapter": 14,
+    "source": "scripts/srednicki/figure-sources/s14/fig14-1.tex",
+    "sha256": "ee75ce671193a0caf2897e8a8b25bd5da18fd17f2b9badbfaa1bd5d157bd948f",
+    "output": "public/images/srednicki/s14-fig14-1.svg"
+  },
+  {
+    "chapter": 14,
+    "source": "scripts/srednicki/figure-sources/s14/fig14-2.tex",
+    "sha256": "625187ab854f581eec4ce508ebccb8d35ff52cd26cfee4c8b0923b737fe11b21",
+    "output": "public/images/srednicki/s14-fig14-2.svg"
+  },
+  {
+    "chapter": 14,
+    "source": "scripts/srednicki/figure-sources/s14/fig14-3.tex",
+    "sha256": "deaed7a9e1816e91a7ee96a00e3a443c6d536e125e165cba22b5529cedca95fa",
+    "output": "public/images/srednicki/s14-fig14-3.svg"
+  },
+  {
+    "chapter": 14,
+    "source": "scripts/srednicki/figure-sources/s14/fig14-4.tex",
+    "sha256": "a8467aad8fe933dbd0f11a6c861085635a506fac63e054ec9c936b9d64dbb95d",
+    "output": "public/images/srednicki/s14-fig14-4.svg"
+  },
+  {
+    "chapter": 14,
+    "source": "scripts/srednicki/figure-sources/s14/self-energy.pdf",
+    "sha256": "2308452b03d986dc2e7a4715639752d36b0a370b35141bef568039e93b0db609",
+    "output": "public/images/srednicki/s14-self-energy.svg"
+  },
+  {
+    "chapter": 16,
+    "source": "scripts/srednicki/figure-sources/s16/triangle.tex",
+    "sha256": "6e1863e16c70fb7fa9f1b8e06cd8f8e0957a44f95649487f6a7a58fb048838b0",
+    "output": "public/images/srednicki/s16-triangle.svg"
+  },
+  {
+    "chapter": 17,
+    "source": "scripts/srednicki/figure-sources/s17/box.tex",
+    "sha256": "30a9aaaaa7662a651c84ae3092b5248dcbe817aea5979d725b677a90116d180b",
+    "output": "public/images/srednicki/s17-box.svg"
+  },
+  {
+    "chapter": 18,
+    "source": "scripts/srednicki/figure-sources/s18/box.tex",
+    "sha256": "d1fc17e38b40ee422cfe2a6f6bd19e39de38b2c66414ea40e48a1b8ad91ead2d",
+    "output": "public/images/srednicki/s18-box.svg"
+  },
+  {
+    "chapter": 18,
+    "source": "scripts/srednicki/figure-sources/s18/subtractions.tex",
+    "sha256": "148f5c3c11b4b97767d01fd6807bebcbf429e0c62416fab5fc10e7ca4adf52fb",
+    "output": "public/images/srednicki/s18-subtractions.svg"
+  },
+  {
+    "chapter": 20,
+    "source": "scripts/srednicki/figure-sources/s20/channels.tex",
+    "sha256": "0e7ae1750d959f2b559a1b97b70bac2e9f2bb04bdade19959a7d6d6798afad18",
+    "output": "public/images/srednicki/s20-channels.svg"
+  },
+  {
+    "chapter": 25,
+    "source": "scripts/srednicki/figure-sources/c25_decay.tex",
+    "sha256": "543f3d7fd7d7632cca6600ebf6ce45bbf92fbd27dc6fcf5d0882263578b52a17",
+    "output": "public/images/srednicki/c25_decay.svg"
+  },
+  {
+    "chapter": 25,
+    "source": "scripts/srednicki/figure-sources/c25_self_energy.tex",
+    "sha256": "9f8c405cace0eae0dfcda0aef482b8af01a75403d358986503d6e9dabc722d1e",
+    "output": "public/images/srednicki/c25_self_energy.svg"
+  },
+  {
+    "chapter": 25,
+    "source": "scripts/srednicki/figure-sources/c25_resonance.tex",
+    "sha256": "141be604e8786ebb79caa9c704c6b196bb6b0f53b33b69b0689b327cefb5cacb",
+    "output": "public/images/srednicki/c25_resonance.svg"
+  },
+  {
+    "chapter": 26,
+    "source": "scripts/srednicki/figure-sources/c26_split.tex",
+    "sha256": "6b94fc16ae08399793f86d3c5f861ee0bb1df42921f1ed1477e0556053d09ff0",
+    "output": "public/images/srednicki/c26_split.svg"
+  },
+  {
+    "chapter": 29,
+    "source": "scripts/srednicki/figure-sources/c29_high_mode_ring.tex",
+    "sha256": "4b8c4933ca430eadf09c9717b1eaf246cc3b6c0d321a2cb4c28ba37bedd5c080",
+    "output": "public/images/srednicki/c29_high_mode_ring.svg"
+  },
+  {
+    "chapter": 29,
+    "source": "scripts/srednicki/figure-sources/c29_phi6_mixing.tex",
+    "sha256": "38a16fc449a0693c6a52e685d1d9b99c639c3de527d0b18d890cf9eb4f61685f",
+    "output": "public/images/srednicki/c29_phi6_mixing.svg"
+  },
+  {
+    "chapter": 31,
+    "source": "scripts/srednicki/figure-sources/c31_symmetric_two.tex",
+    "sha256": "4f24428f1ac78a25b77246039448d79e006e7d96ac349715230e6c829c56a8ed",
+    "output": "public/images/srednicki/c31_symmetric_two.svg"
+  },
+  {
+    "chapter": 31,
+    "source": "scripts/srednicki/figure-sources/c31_four_point.tex",
+    "sha256": "c460fcf1fd79df45aaf4446a2091ccaf14102db392d51d7a62fca01105895f31",
+    "output": "public/images/srednicki/c31_four_point.svg"
+  },
+  {
+    "chapter": 31,
+    "source": "scripts/srednicki/figure-sources/c31_one_point.tex",
+    "sha256": "99554ec0e88e0895323cd33fb08efa52273caef5e82b30f5f7c89afa7e37785e",
+    "output": "public/images/srednicki/c31_one_point.svg"
+  },
+  {
+    "chapter": 31,
+    "source": "scripts/srednicki/figure-sources/c31_broken_two.tex",
+    "sha256": "c359444cc94185b64486df9da2a9d2db666f4d0bfc253f26f381b69528fcfb40",
+    "output": "public/images/srednicki/c31_broken_two.svg"
+  },
+  {
+    "chapter": 31,
+    "source": "scripts/srednicki/figure-sources/c31_three_point.tex",
+    "sha256": "d5eecd381b4f83b7d01412b47488d9176d6460b8ad86f7f5eb02e21d06e9fcdb",
+    "output": "public/images/srednicki/c31_three_point.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_01.tex",
+    "sha256": "dc09a91c672ded9b865938c0bff05b0a13d3cf8b15e4806262e91afa3b1f8b71",
+    "output": "public/images/srednicki/s45-c45_01.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_02.tex",
+    "sha256": "d65426159e62a670ee1f38bb454aec11cc0cac654c2be6fd4c1ea7fb31785c29",
+    "output": "public/images/srednicki/s45-c45_02.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_03.tex",
+    "sha256": "40a09389f76fb54a4c3513bcc5b6cd2c546d43411aa8ea4fe3d3db2db93f7cd9",
+    "output": "public/images/srednicki/s45-c45_03.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_04.tex",
+    "sha256": "e5fe1b88abe66c753b316628e46f312858d583062e1972c559b7f6833f5ec191",
+    "output": "public/images/srednicki/s45-c45_04.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_05.tex",
+    "sha256": "33ef61b7750f219bdc421ae06b69651dee728fa4504da03bbc8f90ed00314ee6",
+    "output": "public/images/srednicki/s45-c45_05.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_06.tex",
+    "sha256": "766a86502dfb32dd8534ec78de9003493ebc81c84c9493ef89d76e16b34fe014",
+    "output": "public/images/srednicki/s45-c45_06.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_07.tex",
+    "sha256": "5a4e8fdb414771ce332b262bdf354a4764cf5eb385227413c258a5c1e1d29698",
+    "output": "public/images/srednicki/s45-c45_07.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_08.tex",
+    "sha256": "66a1a6405d3e6a556c8fc64aee5963c64b9e2490936668986006d647c99a87c5",
+    "output": "public/images/srednicki/s45-c45_08.svg"
+  },
+  {
+    "chapter": 45,
+    "source": "scripts/srednicki/figure-sources/s45/c45_09.tex",
+    "sha256": "1d976e198b25c495bfd751466ce96ec7ce3cf21480fdec48f2ad925a412b5280",
+    "output": "public/images/srednicki/s45-c45_09.svg"
+  },
+  {
+    "chapter": 49,
+    "source": "scripts/srednicki/figure-sources/s49_decay.tex",
+    "sha256": "3c2bbdf083afd70f500a64adced372eb06bf58e91711d1e38f8defa7bd84eb62",
+    "output": "public/images/srednicki/s49_decay.svg"
+  },
+  {
+    "chapter": 49,
+    "source": "scripts/srednicki/figure-sources/s49_scattering.tex",
+    "sha256": "92d7c70518996a09dc4b5db2ed9b3ec9c7bfa90f87318d9833f5db0925733312",
+    "output": "public/images/srednicki/s49_scattering.svg"
+  },
+  {
+    "chapter": 51,
+    "source": "scripts/srednicki/figure-sources/s51_scalar_self_energy.tex",
+    "sha256": "6273c49e7aff8e765c579f00d055f2d66d3e48fb06c4e922361d09375ec0c727",
+    "output": "public/images/srednicki/s51_scalar_self_energy.svg"
+  },
+  {
+    "chapter": 51,
+    "source": "scripts/srednicki/figure-sources/s51_fermion_self_energy.tex",
+    "sha256": "9dc634cc4132c5bc0b88329639be20ca169c83ac7052acfc5466595c8b04f15e",
+    "output": "public/images/srednicki/s51_fermion_self_energy.svg"
+  },
+  {
+    "chapter": 51,
+    "source": "scripts/srednicki/figure-sources/s51_vertex.tex",
+    "sha256": "e96079ed2777af3acd1044c6323026197fc0b8f84ab1c2df21ab510011ba5792",
+    "output": "public/images/srednicki/s51_vertex.svg"
+  },
+  {
+    "chapter": 51,
+    "source": "scripts/srednicki/figure-sources/s51_box.tex",
+    "sha256": "8518012000f9380ec4adf5421a67f3ed1365ac525f92140532a3a9991207cae6",
+    "output": "public/images/srednicki/s51_box.svg"
+  },
+  {
+    "chapter": 53,
+    "source": "scripts/srednicki/figure-sources/s53_background_ring.tex",
+    "sha256": "9627de0621db364418b5e5a093f8491056aebb9e13dc7341d6dc9f8200510fe0",
+    "output": "public/images/srednicki/s53_background_ring.svg"
+  },
+  {
+    "chapter": 59,
+    "source": "scripts/srednicki/figure-sources/s59/c59_01.tex",
+    "sha256": "604b5530051eb08afb0c85cb937260b10bb3ced7b1b8dadf6a31306d4bbd05b6",
+    "output": "public/images/srednicki/s59-c59_01.svg"
+  },
+  {
+    "chapter": 60,
+    "source": "scripts/srednicki/figure-sources/s60/c60_01.tex",
+    "sha256": "99b0f7a8a676ad29657aa16954395bd448fc19716a5812c1fde6693e3dda358d",
+    "output": "public/images/srednicki/s60-c60_01.svg"
+  },
+  {
+    "chapter": 60,
+    "source": "scripts/srednicki/figure-sources/s60/c60_02.tex",
+    "sha256": "0e350d8032958ff1db6d015f1cfb00424cdd51fe776b2f6000289c973b90eca0",
+    "output": "public/images/srednicki/s60-c60_02.svg"
+  },
+  {
+    "chapter": 61,
+    "source": "scripts/srednicki/figure-sources/s61/c61_01.tex",
+    "sha256": "22ea8516ecf795bffeeab8d6a6a7d1eb4234d8e8f22fe91ffb708eb35ab7987e",
+    "output": "public/images/srednicki/s61-c61_01.svg"
+  },
+  {
+    "chapter": 61,
+    "source": "scripts/srednicki/figure-sources/s61/c61_02.tex",
+    "sha256": "a094efd17769cd3b2c56f6cfde4334119264427a81e552487cc959d3abb872aa",
+    "output": "public/images/srednicki/s61-c61_02.svg"
+  },
+  {
+    "chapter": 62,
+    "source": "scripts/srednicki/figure-sources/s62/c62_01.tex",
+    "sha256": "c81313e5665b583ecf492d083aca645d0f0a6616b0e2543c941bd9b01614d2ec",
+    "output": "public/images/srednicki/s62-c62_01.svg"
+  },
+  {
+    "chapter": 62,
+    "source": "scripts/srednicki/figure-sources/s62/c62_02.tex",
+    "sha256": "aaa54de175b43e18302f9cb96787c1d9e4b0282e409ac43704e97e16d941ee09",
+    "output": "public/images/srednicki/s62-c62_02.svg"
+  },
+  {
+    "chapter": 62,
+    "source": "scripts/srednicki/figure-sources/s62/c62_03.tex",
+    "sha256": "daf013ad35f8341c28dd9c0f0010a0f1898be29a1944edde1557733001a2dc61",
+    "output": "public/images/srednicki/s62-c62_03.svg"
+  },
+  {
+    "chapter": 63,
+    "source": "scripts/srednicki/figure-sources/s63/c63_01.tex",
+    "sha256": "e6a9afa6e9779c15f6aa38d3f3b3091fbd495a5d7ad725d95c112729e08a591d",
+    "output": "public/images/srednicki/s63-c63_01.svg"
+  },
+  {
+    "chapter": 65,
+    "source": "scripts/srednicki/figure-sources/s65/c65_01.tex",
+    "sha256": "ad67545607da5103f91e3d447811e9964c899c0fabd6e9087af7322c286d69e3",
+    "output": "public/images/srednicki/s65-c65_01.svg"
+  },
+  {
+    "chapter": 65,
+    "source": "scripts/srednicki/figure-sources/s65/c65_02.tex",
+    "sha256": "90ac4d809bac3b4dcd7cb54a95c7c26345e3d454c251bc002c499f5aa5e9cb35",
+    "output": "public/images/srednicki/s65-c65_02.svg"
+  },
+  {
+    "chapter": 65,
+    "source": "scripts/srednicki/figure-sources/s65/c65_03.tex",
+    "sha256": "6eea1fa72825f9048d230b1919f7a7e6d5a5848846cc2c1c4ba6894d7a5e5b3a",
+    "output": "public/images/srednicki/s65-c65_03.svg"
+  },
+  {
+    "chapter": 65,
+    "source": "scripts/srednicki/figure-sources/s65/c65_04.tex",
+    "sha256": "bca9c150c345df8db3102e397875c837dce1f4f7fb7cb5b039c7bf4dedbfeeb8",
+    "output": "public/images/srednicki/s65-c65_04.svg"
+  },
+  {
+    "chapter": 65,
+    "source": "scripts/srednicki/figure-sources/s65/c65_05.tex",
+    "sha256": "feec9d0735c6f5ee9b46b4364c71046ef186c89d78521db4d47ab15bda0d8efb",
+    "output": "public/images/srednicki/s65-c65_05.svg"
+  },
+  {
+    "chapter": 72,
+    "source": "scripts/srednicki/figure-sources/s72_gluon_vertices.tex",
+    "sha256": "ed11b8fca0b31d77eaa95e787498bc27375af59fa1dca1a26d147efaf506aad6",
+    "output": "public/images/srednicki/s72_gluon_vertices.svg"
+  },
+  {
+    "chapter": 72,
+    "source": "scripts/srednicki/figure-sources/s72_matter_vertices.tex",
+    "sha256": "6be3b15aeae2b3a6f9fd206870b657c0c40dff5ae2d7f07ca38b7660c872214c",
+    "output": "public/images/srednicki/s72_matter_vertices.svg"
+  },
+  {
+    "chapter": 73,
+    "source": "scripts/srednicki/figure-sources/s73_quark_self_energy.tex",
+    "sha256": "b82c680f1d9f98a015eb4b14bfbca66b694ae12e9d425b59336152d21dee1245",
+    "output": "public/images/srednicki/s73_quark_self_energy.svg"
+  },
+  {
+    "chapter": 73,
+    "source": "scripts/srednicki/figure-sources/s73_quark_vertices.tex",
+    "sha256": "dc84d2a5e9b245d7b05cdd5632a46527474dec2a8402038ca8e1c11227a96904",
+    "output": "public/images/srednicki/s73_quark_vertices.svg"
+  },
+  {
+    "chapter": 73,
+    "source": "scripts/srednicki/figure-sources/s73_gluon_self_energy.tex",
+    "sha256": "b4468bebce71763ae0b0b994632322058c270124cc647636ab2c089df1bec37d",
+    "output": "public/images/srednicki/s73_gluon_self_energy.svg"
+  },
+  {
+    "chapter": 75,
+    "source": "scripts/srednicki/figure-sources/s75_polarization.tex",
+    "sha256": "511fa124268bcbb7d8fdffddd91b580a8b04a7de3b2394349b4498ea3baf96cb",
+    "output": "public/images/srednicki/s75_polarization.svg"
+  },
+  {
+    "chapter": 75,
+    "source": "scripts/srednicki/figure-sources/s75_triangles.tex",
+    "sha256": "3b2309b5dd25e8cbc0c3a7e5a10d4c6dc2fc14fe386876c9071de58836df02ec",
+    "output": "public/images/srednicki/s75_triangles.svg"
+  },
+  {
+    "chapter": 78,
+    "source": "scripts/srednicki/figure-sources/s78_background_loops.tex",
+    "sha256": "c5d3ce461dd9864db1330a7f77ca6ffd63950d22c63e449e7a3e8f2d44334de2",
+    "output": "public/images/srednicki/s78_background_loops.svg"
+  },
+  {
+    "chapter": 80,
+    "source": "scripts/srednicki/figure-sources/s80_propagator.tex",
+    "sha256": "87981398f5691a381225a03055e441d8ecb72bb4fb0dc0fca8a28cbba9972194",
+    "output": "public/images/srednicki/s80_propagator.svg"
+  },
+  {
+    "chapter": 80,
+    "source": "scripts/srednicki/figure-sources/s80_vertices.tex",
+    "sha256": "1c1eea2bc31e48197abc0ca1c053786b6fa115cbe0104c5d5284263c466f000f",
+    "output": "public/images/srednicki/s80_vertices.svg"
+  },
+  {
+    "chapter": 80,
+    "source": "scripts/srednicki/figure-sources/s80_trees.tex",
+    "sha256": "a5057787972ee57df4b27c52390759740f233a45ef82373474737d87a9a94a86",
+    "output": "public/images/srednicki/s80_trees.svg"
+  },
+  {
+    "chapter": 80,
+    "source": "scripts/srednicki/figure-sources/s80_color_contraction.tex",
+    "sha256": "00cee9ce7c087e9b8efddc15228287c4a8fc9e9050ed83e1b0c532a1db7e9f47",
+    "output": "public/images/srednicki/s80_color_contraction.svg"
+  },
+  {
+    "chapter": 80,
+    "source": "scripts/srednicki/figure-sources/s80_traceless_propagator.tex",
+    "sha256": "063a906b53cacb1e5a3d16c8dc8de0397afa0188fadb9cf67595d9a9c2194b0d",
+    "output": "public/images/srednicki/s80_traceless_propagator.svg"
+  },
+  {
+    "chapter": 81,
+    "source": "scripts/srednicki/figure-sources/s81_gluon_trees.tex",
+    "sha256": "1b2fcbed13d821e0c2ac38743ed4832263da1693534f79b6d57819b58f148eae",
+    "output": "public/images/srednicki/s81_gluon_trees.svg"
+  },
+  {
+    "chapter": 81,
+    "source": "scripts/srednicki/figure-sources/s81_quark_trees.tex",
+    "sha256": "fbeeba221b6a012380ef419a93455155b9a50b352510a1dad94ac36daed5a4a8",
+    "output": "public/images/srednicki/s81_quark_trees.svg"
+  },
+  {
+    "chapter": 81,
+    "source": "scripts/srednicki/figure-sources/s81_quark_colors.tex",
+    "sha256": "f6fd0aaa06de9adf2a523fd7ce3d87d3f13b32cd6a4052315fe77022b36d9573",
+    "output": "public/images/srednicki/s81_quark_colors.svg"
+  },
+  {
+    "chapter": 82,
+    "source": "scripts/srednicki/figure-sources/s82_plaquette.tex",
+    "sha256": "f4af0153e463fc8fc729e37c2ec7c7cab84a141b446fce0909ce377e5f9cb58d",
+    "output": "public/images/srednicki/s82_plaquette.svg"
+  },
+  {
+    "chapter": 88,
+    "source": "scripts/srednicki/figure-sources/88-muon.pdf",
+    "sha256": "fb4cbb1c6b9bea57c8430f77e7fb31bf3df63721bdbfdcdf70c06fe8adf2b037",
+    "output": "public/images/srednicki/88-muon.svg"
+  },
+  {
+    "chapter": 90,
+    "source": "scripts/srednicki/figure-sources/90-nucleon-triangles.tex",
+    "sha256": "cfefa5f015315284ec052d4c3205a735781f2d1d85e9f213acd7bc59ec5ee1a8",
+    "output": "public/images/srednicki/90-nucleon-triangles.svg"
+  },
+  {
+    "chapter": 93,
+    "source": "scripts/srednicki/figure-sources/93-inline-1.tex",
+    "sha256": "0737f6617f8ee0585cdf94d6ec1f8c5906b1a06a9cfdf66d2e5a387c4feef8bb",
+    "output": "public/images/srednicki/93-inline-1.svg"
+  },
+  {
+    "chapter": 94,
+    "source": "scripts/srednicki/figure-sources/94-inline-1.tex",
+    "sha256": "e8c4b4eba7ff608944d5cce4e0b2396ade4913d8f7839f091631a1abd5119365",
+    "output": "public/images/srednicki/94-inline-1.svg"
+  },
+  {
+    "chapter": 94,
+    "source": "scripts/srednicki/figure-sources/94-inline-2.tex",
+    "sha256": "131c85102776045c6ff4d65670c9e48f839fde224b3c2fd775f55061bb3f325b",
+    "output": "public/images/srednicki/94-inline-2.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g01-01.tex",
+    "sha256": "bf17eef54ede7a7115e755cf3c37d8636fe881ebfa8cedb4adfe391af15e438d",
+    "output": "public/images/srednicki/s09-g01-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g01-02.tex",
+    "sha256": "82dfa2eb50e49704f3aaf3f130a3e3853724df9fd9197fdb1562a76cf9dc3cfd",
+    "output": "public/images/srednicki/s09-g01-02.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g03-01.tex",
+    "sha256": "9333999658a5545221bd6c363b11c86c54f14677e8c3c4e8113972196c4ea3c9",
+    "output": "public/images/srednicki/s09-g03-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g05-01.tex",
+    "sha256": "e5c41b12e2bf87e169ec55ac9604afa2e17aa1d8996653d1fac009ab8261c8b7",
+    "output": "public/images/srednicki/s09-g05-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g06-01.tex",
+    "sha256": "88b56dea1faf140583a8eb39dc8029f7b423012a68e3ca3c76693e8a65157326",
+    "output": "public/images/srednicki/s09-g06-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g07-02.tex",
+    "sha256": "35a43e41548aba12a8dc9ff647428d48fab0e1c457052bc3ff1599338eb5b5f8",
+    "output": "public/images/srednicki/s09-g07-02.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g07-03.tex",
+    "sha256": "4de0fb11261fdb134fa4e7f566d0dcfce7bb0311ee4e77dd7bd6bbf8e89a55c2",
+    "output": "public/images/srednicki/s09-g07-03.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g07-08.tex",
+    "sha256": "2bcf763109516cda00a430624d17be831cff5e45679540cbbc2822ab8a8f6a68",
+    "output": "public/images/srednicki/s09-g07-08.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g08-01.tex",
+    "sha256": "bf793ac1dbd11adb6176013b2912342efe6704c76ad64e92c80174e6f35d3a12",
+    "output": "public/images/srednicki/s09-g08-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g09-01.tex",
+    "sha256": "40742a4c485d69d6a6bcdb150c111d1411c0bc92f536ce0fee492b09e7e58b33",
+    "output": "public/images/srednicki/s09-g09-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g09-02.tex",
+    "sha256": "23755e23ccb767611d5b962cef1b5137b1157993b09fbe14d34f6215fb8e2daf",
+    "output": "public/images/srednicki/s09-g09-02.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g10-01.tex",
+    "sha256": "6d60d6570581285e1f4fcdbfb81994de0df6bf011a9d518af51d2ebc1736c405",
+    "output": "public/images/srednicki/s09-g10-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g11-01.tex",
+    "sha256": "550c2b6993667a83ff1965507307fc35a786a59d4290027bbcdb0fc90c83fc4c",
+    "output": "public/images/srednicki/s09-g11-01.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g11-02.tex",
+    "sha256": "45c6c80e14bd530007e94d9bfd3c50721a2743bc2bb0b361acd9add6acdcbb33",
+    "output": "public/images/srednicki/s09-g11-02.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g11-04.tex",
+    "sha256": "b655036e6d8efc87717e73ae23cf12c285772a68f11702d31e414b1d917c22a3",
+    "output": "public/images/srednicki/s09-g11-04.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g11-05.tex",
+    "sha256": "f5523da2873144be6c7518e7d7bde844edc3704ab1de8189e69d7e578fc1eda3",
+    "output": "public/images/srednicki/s09-g11-05.svg"
+  },
+  {
+    "chapter": 9,
+    "source": "scripts/srednicki/figure-sources/s09/g12-01.tex",
+    "sha256": "9dbf541ac988a3f62574e365ea5873127b3ca51bddbd397e0ac2ea0448bf35c9",
+    "output": "public/images/srednicki/s09-g12-01.svg"
+  },
+  {
+    "chapter": 97,
+    "source": "scripts/srednicki/figure-sources/97-proton-decay.tex",
+    "sha256": "8aec38e02d011b3eef591198db72800c2d6773242ac75fe9e9ccd79fc7f66adf",
+    "output": "public/images/srednicki/97-proton-decay.svg"
+  }
+]

@@ -1,0 +1,27 @@
+% Original vector reconstruction of source Fig.80.5, PDF326 / printed314.
+% Both terms have the same scalar propagator. The second term is -1/N.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+\draw (0,2)--(44,2) (0,-2)--(44,-2);
+\draw[->] (27,2)--(19,2);
+\draw[->] (17,-2)--(25,-2);
+\node[above] at (0,3) {$i$};
+\node[below] at (0,-3) {$j$};
+\node[above] at (44,3) {$l$};
+\node[below] at (44,-3) {$k$};
+\node at (22,-15) {$\delta_i{}^l\,\delta_k{}^j$};
+\node at (59,0) {$-\dfrac1N$};
+\begin{scope}[shift={(78,0)}]
+  \draw (0,-2)--(15,-2) arc[start angle=-90,end angle=90,radius=2mm]--(0,2);
+  \draw (44,2)--(29,2) arc[start angle=90,end angle=270,radius=2mm]--(44,-2);
+  \draw[->] (4,-2)--(10,-2);
+  \draw[->] (10,2)--(4,2);
+  \draw[->] (40,2)--(34,2);
+  \draw[->] (34,-2)--(40,-2);
+  \node[above] at (0,3) {$i$};
+  \node[below] at (0,-3) {$j$};
+  \node[above] at (44,3) {$l$};
+  \node[below] at (44,-3) {$k$};
+  \node at (22,-15) {$\delta_i{}^j\,\delta_k{}^l$};
+\end{scope}
+\end{tikzpicture}

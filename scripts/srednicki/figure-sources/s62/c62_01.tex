@@ -1,0 +1,23 @@
+% Original vector reconstruction of source Fig.62.1, PDF257.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+ \draw (28,0) circle[radius=12mm];
+ \draw[->] (22,10.3923) arc[start angle=120,end angle=60,radius=12mm];
+ \draw[->] (34,-10.3923) arc[start angle=-60,end angle=-120,radius=12mm];
+ \foreach \x in {0,40}{
+  \draw[domain=0:1,samples=81,smooth,variable=\u]
+   plot ({\x+16*\u},{.9*sin(720*\u)});
+  \draw[->] (\x+4,3)--(\x+12,3);
+  \node[above] at (\x+8,3) {$k$};
+ }
+ \fill (16,0) circle[radius=.55mm];
+ \fill (40,0) circle[radius=.55mm];
+ \node[above] at (28,13) {$\ell+k$};
+ \node[below] at (28,-13) {$\ell$};
+ \node at (66,0) {$+$};
+ \draw[domain=0:1,samples=101,smooth,variable=\u]
+  plot ({80+28*\u},{.9*sin(1440*\u)});
+ \draw (92,-2)--(96,2);
+ \draw (92,2)--(96,-2);
+ \node[below] at (94,-5) {$\delta Z_3$};
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+% Original vector reconstruction of source Fig.62.3, PDF260.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+ \draw (0,0)--(66,0);
+ \foreach \x in {3,19,38,57}{\draw[->] (\x,0)--(\x+7,0);}
+ \draw[domain=0:1,samples=241,smooth,variable=\u]
+  plot ({32+(18+.85*sin(1800*\u))*cos(180*\u)},
+        {(18+.85*sin(1800*\u))*sin(180*\u)});
+ \draw[->] (36,21)--(28,21);
+ \node[above] at (32,22) {$\ell$};
+ \draw[domain=0:1,samples=121,smooth,variable=\u]
+  plot ({32+.85*sin(1080*\u)},{-25+25*\u});
+ \draw[->] (35,-20)--(35,-12);
+ \node[right] at (36,-16) {$k=p'-p$};
+ \foreach \x in {14,32,50}{\fill (\x,0) circle[radius=.55mm];}
+ \node[below] at (6,-2) {$p$};
+ \node[below] at (22,-2) {$p+\ell$};
+ \node[below] at (43,-2) {$p'+\ell$};
+ \node[below] at (61,-2) {$p'$};
+\end{tikzpicture}

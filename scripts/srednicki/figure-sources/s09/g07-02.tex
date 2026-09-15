@@ -1,0 +1,36 @@
+% Original TikZ embedding of S09-G07-02; incidences from sources/units/S09.json.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.65pt,line cap=round,line join=round]
+\path[use as bounding box] (-3.52,-1.8) rectangle (3.52,1.8);
+% Edge T0--T2; multiplicity=1.
+\draw (-1.3000,0.0000) -- (0.0000,0.9000);
+% Edge T0--T3; multiplicity=1.
+\draw (-1.3000,0.0000) -- (0.0000,-0.9000);
+% Edge T1--T2; multiplicity=1.
+\draw (1.3000,0.0000) -- (0.0000,0.9000);
+% Edge T1--T3; multiplicity=1.
+\draw (1.3000,0.0000) -- (0.0000,-0.9000);
+% Edge T2--T3; multiplicity=1.
+\draw (0.0000,0.9000) -- (0.0000,-0.9000);
+% Edge T0--J0; multiplicity=1.
+\draw (-1.3000,0.0000) -- (-2.6000,0.0000);
+% Edge T1--J1; multiplicity=1.
+\draw (1.3000,0.0000) -- (2.6000,0.0000);
+% Node T0: cubic_vertex; only marked nodes are vertices.
+\fill (-1.3000,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-1.3895,-0.2864) {$T_{0}$};
+% Node T1: cubic_vertex; only marked nodes are vertices.
+\fill (1.3000,0.0000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (1.3895,-0.2864) {$T_{1}$};
+% Node T2: cubic_vertex; only marked nodes are vertices.
+\fill (0.0000,0.9000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (0.0000,1.2000) {$T_{2}$};
+% Node T3: cubic_vertex; only marked nodes are vertices.
+\fill (0.0000,-0.9000) circle[radius=1.7pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-0.0000,-1.2000) {$T_{3}$};
+% Node J0: source; only marked nodes are vertices.
+\draw[fill=white] (-2.6000,0.0000) circle[radius=2.5pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (-2.9600,0.0000) {$J_{0}$};
+% Node J1: source; only marked nodes are vertices.
+\draw[fill=white] (2.6000,0.0000) circle[radius=2.5pt];
+\node[font=\scriptsize,inner sep=0.4pt,fill=white] at (2.9600,0.0000) {$J_{1}$};
+\end{tikzpicture}

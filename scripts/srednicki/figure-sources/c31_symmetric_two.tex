@@ -1,0 +1,33 @@
+% Original vector reconstruction of source Fig.31.1, PDF135 / printed123.
+% phi quartic tadpole plus two-point counterterm. External stubs amputated for iPi.
+% Momentum arrows only; S divides the amplitude. lambda_d=lambda*mutilde^epsilon.
+% Basic TikZ only. No caption, figure environment, bitmap, or automatic numbering.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+  line cap=round,line join=round,
+  font=\fontsize{10.5}{12}\selectfont]
+\begin{scope}[shift={(23,0)}]
+  \draw (-17,0) -- (17,0);
+  \draw (0,10) circle[radius=10mm];
+  \draw[->] (-5,18.6603) arc[start angle=120,end angle=60,radius=10mm];
+  \draw[->] (-15,0) -- (-8,0);
+  \draw[->] (8,0) -- (15,0);
+  \fill (0,0) circle[radius=.65mm];
+  \node[above] at (-13,1.5) {$k$};
+  \node[above] at (13,1.5) {$k$};
+  \node[above] at (0,21) {$\ell$};
+  \node at (0,10) {$S=2$};
+  \node at (0,-9) {$-i\lambda_d$};
+\end{scope}
+\node at (56,0) {$+$};
+\begin{scope}[shift={(88,0)}]
+  \draw (-17,0) -- (17,0);
+  \draw (-1.7,-1.7) -- (1.7,1.7);
+  \draw (-1.7,1.7) -- (1.7,-1.7);
+  \draw[->] (-15,0) -- (-8,0);
+  \draw[->] (8,0) -- (15,0);
+  \node[above] at (-13,1.5) {$k$};
+  \node[above] at (13,1.5) {$k$};
+  \node at (0,-9) {$-i(Ak^2+Bm^2)$};
+\end{scope}
+\end{tikzpicture}
+

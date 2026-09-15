@@ -1,0 +1,475 @@
+{
+  "status": "pass",
+  "executed_utc": "2026-09-14T12:21:12.288818+00:00",
+  "python_version": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "numpy_version": "2.3.3",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "script_sha256": "f161cc13470b678d37ee9eeac195c1a1584d44a7399b2b7259f9e4f17ba2cbd6",
+  "random_seed": null,
+  "sampling": "Two specified finite configurations; no random draws.",
+  "conventions": {
+    "metric": "(-,+,+,+)",
+    "gamma_anticommutator": "-2g",
+    "gamma5": "diag(-1,-1,+1,+1)",
+    "E_lower": [
+      [0, -1],
+      [1, 0]
+    ],
+    "phi": "sqrt(2omega)*(-sin(theta/2)exp(-i azimuth),cos(theta/2))",
+    "brackets": "[pq]=(U phi_p)^T phi_q; <pq>=phi_p^dagger U phi_q^*; U=-E",
+    "epsilon": "epsilon_upper0123=+1; contract lowered momenta"
+  },
+  "future_null_inputs": {
+    "p": [5.0, 3.0, 0.0, 4.0],
+    "q": [4.0, 0.0, 4.0, 0.0],
+    "r": [3.0, -1.0, 2.0, -2.0],
+    "s": [7.0, 6.0, 3.0, 2.0]
+  },
+  "source_phase_phi_values": {
+    "p": [
+      [-0.9999999999999999, 0.0],
+      [3.0, 0.0]
+    ],
+    "q": [
+      [-1.2246467991473532e-16, 2.0],
+      [2.0000000000000004, 0.0]
+    ],
+    "r": [
+      [0.9999999999999999, 1.9999999999999998],
+      [0.9999999999999998, 0.0]
+    ],
+    "s": [
+      [-2.0, 1.0],
+      [3.0, 0.0]
+    ]
+  },
+  "Schouten_three_terms": [
+    [20.000000000000004, 39.99999999999999],
+    [-7.999999999999993, -39.99999999999999],
+    [-12.000000000000004, 2.220446049250313e-15]
+  ],
+  "four_bracket_product": [240.00000000000003, 480.0000000000001],
+  "epsilon_contraction_lowered": 240.0,
+  "wrong_epsilon_control": {
+    "wrong_value": [240.0, -480.0],
+    "rejected": true
+  },
+  "physical_massless_elastic_inputs": {
+    "p": [5.0, 3.0, 0.0, 4.0],
+    "k": [5.0, -3.0, 0.0, -4.0],
+    "pprime": [5.0, 0.0, 4.0, 3.0],
+    "kprime": [5.0, 0.0, -4.0, -3.0]
+  },
+  "mandelstam": {
+    "s": 100.0,
+    "t": -26.0,
+    "u": -74.0
+  },
+  "g": 0.7,
+  "independent_rephasing_angles_radians": {
+    "p": 0.173,
+    "k": -0.419,
+    "pprime": 0.731,
+    "kprime": -0.293
+  },
+  "tolerance": 2e-12,
+  "comparisons": 52,
+  "maximum_normalized_error": 7.444291678311382e-15,
+  "checks": [
+    {
+      "label": "rank_one_p",
+      "shape": [2, 2],
+      "max_absolute_error": 4.440892098500626e-16,
+      "normalized_error": 4.9343245538895844e-17,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_p+",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_p-",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "rank_one_q",
+      "shape": [2, 2],
+      "max_absolute_error": 1.7763568394002505e-15,
+      "normalized_error": 4.440892098500624e-16,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_q+",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_q-",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "rank_one_r",
+      "shape": [2, 2],
+      "max_absolute_error": 8.881784197001252e-16,
+      "normalized_error": 1.7763568394002506e-16,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_r+",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_r-",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "rank_one_s",
+      "shape": [2, 2],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_s+",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "massless_C_phase_s-",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "angle_conjugate_pq",
+      "shape": [],
+      "max_absolute_error": 2.220446049250313e-16,
+      "normalized_error": 3.510833468576701e-17,
+      "pass": true
+    },
+    {
+      "label": "bracket_dot_pq",
+      "shape": [],
+      "max_absolute_error": 2.220446049250313e-15,
+      "normalized_error": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "label": "bracket_Dirac_pq",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "angle_conjugate_pr",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "bracket_dot_pr",
+      "shape": [],
+      "max_absolute_error": 1.432144669219779e-14,
+      "normalized_error": 2.7541243638841903e-16,
+      "pass": true
+    },
+    {
+      "label": "bracket_Dirac_pr",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "angle_conjugate_ps",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "bracket_dot_ps",
+      "shape": [],
+      "max_absolute_error": 3.580361673049448e-15,
+      "normalized_error": 1.9890898183608039e-16,
+      "pass": true
+    },
+    {
+      "label": "bracket_Dirac_ps",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "angle_conjugate_qr",
+      "shape": [],
+      "max_absolute_error": 6.280369834735101e-16,
+      "normalized_error": 2.2204460492503123e-16,
+      "pass": true
+    },
+    {
+      "label": "bracket_dot_qr",
+      "shape": [],
+      "max_absolute_error": 3.552713678800501e-15,
+      "normalized_error": 4.440892098500624e-16,
+      "pass": true
+    },
+    {
+      "label": "bracket_Dirac_qr",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "angle_conjugate_qs",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "bracket_dot_qs",
+      "shape": [],
+      "max_absolute_error": 7.32410687763558e-15,
+      "normalized_error": 2.288783399261118e-16,
+      "pass": true
+    },
+    {
+      "label": "bracket_Dirac_qs",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "angle_conjugate_rs",
+      "shape": [],
+      "max_absolute_error": 8.881784197001252e-16,
+      "normalized_error": 1.2560739669470203e-16,
+      "pass": true
+    },
+    {
+      "label": "bracket_dot_rs",
+      "shape": [],
+      "max_absolute_error": 1.517719948885615e-14,
+      "normalized_error": 3.03543989777123e-16,
+      "pass": true
+    },
+    {
+      "label": "bracket_Dirac_rs",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "Schouten",
+      "shape": [],
+      "max_absolute_error": 7.444291678311382e-15,
+      "normalized_error": 7.444291678311382e-15,
+      "pass": true,
+      "actual": [7.105427357601002e-15, 2.220446049250313e-15],
+      "expected": [0.0, 0.0]
+    },
+    {
+      "label": "four_brackets_vs_projected_trace",
+      "shape": [],
+      "max_absolute_error": 1.1718571004216928e-13,
+      "normalized_error": 2.1836267803822513e-16,
+      "pass": true,
+      "actual": [240.00000000000003, 480.0000000000001],
+      "expected": [240.0, 480.0]
+    },
+    {
+      "label": "projected_trace_vs_invariants",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true,
+      "actual": [240.0, 480.0],
+      "expected": [240.0, 480.0]
+    },
+    {
+      "label": "single_gamma_reversal_50_38",
+      "shape": [4],
+      "max_absolute_error": 8.881784197001252e-16,
+      "normalized_error": 1.4043333874306802e-16,
+      "pass": true
+    },
+    {
+      "label": "single_gamma_conjugate_50_39",
+      "shape": [4],
+      "max_absolute_error": 2.220446049250313e-16,
+      "normalized_error": 3.5108334685767005e-17,
+      "pass": true
+    },
+    {
+      "label": "single_gamma_norm_50_40",
+      "shape": [4],
+      "max_absolute_error": 8.881784197001252e-16,
+      "normalized_error": 8.881784197001253e-17,
+      "pass": true
+    },
+    {
+      "label": "single_gamma_zero_50_41",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "single_gamma_zero_50_42",
+      "shape": [4],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true
+    },
+    {
+      "label": "matrix_Fierz_50_43",
+      "shape": [4, 4],
+      "max_absolute_error": 3.216245299353273e-16,
+      "normalized_error": 5.3604088322554537e-17,
+      "pass": true
+    },
+    {
+      "label": "matrix_Fierz_50_44",
+      "shape": [4, 4],
+      "max_absolute_error": 1.224646799147353e-16,
+      "normalized_error": 2.041077998578921e-17,
+      "pass": true
+    },
+    {
+      "label": "current_Fierz_50_45",
+      "shape": [],
+      "max_absolute_error": 1.0805156823142814e-14,
+      "normalized_error": 4.502148676309503e-16,
+      "pass": true,
+      "actual": [0.0, -24.000000000000014],
+      "expected": [-1.7763568394002505e-15, -24.000000000000004]
+    },
+    {
+      "label": "massless_tree_++",
+      "shape": [],
+      "max_absolute_error": 2.7755575615628914e-17,
+      "normalized_error": 2.7755575615628914e-17,
+      "pass": true,
+      "actual": [-0.9776420134697034, 0.16294033557828388],
+      "expected": [-0.9776420134697034, 0.1629403355782839]
+    },
+    {
+      "label": "massless_tree_+-",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true,
+      "actual": [0.0, 0.0],
+      "expected": [0.0, 0.0]
+    },
+    {
+      "label": "massless_tree_-+",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true,
+      "actual": [0.0, 0.0],
+      "expected": [0.0, 0.0]
+    },
+    {
+      "label": "massless_tree_--",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true,
+      "actual": [-0.9776420134697034, -0.16294033557828388],
+      "expected": [-0.9776420134697034, -0.16294033557828388]
+    },
+    {
+      "label": "massless_spin_average",
+      "shape": [],
+      "max_absolute_error": 2.220446049250313e-16,
+      "normalized_error": 2.220446049250313e-16,
+      "pass": true,
+      "actual": [0.9823334594594594, 0.0],
+      "expected": [0.9823334594594592, 0.0]
+    },
+    {
+      "label": "rephased_tree_++",
+      "shape": [],
+      "max_absolute_error": 1.2412670766236366e-16,
+      "normalized_error": 1.2412670766236366e-16,
+      "pass": true,
+      "actual": [-0.9156245355859084, -0.37942742295800014],
+      "expected": [-0.9156245355859083, -0.3794274229580001]
+    },
+    {
+      "label": "rephased_tree_+-",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true,
+      "actual": [0.0, 0.0],
+      "expected": [0.0, 0.0]
+    },
+    {
+      "label": "rephased_tree_-+",
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "normalized_error": 0.0,
+      "pass": true,
+      "actual": [0.0, 0.0],
+      "expected": [0.0, 0.0]
+    },
+    {
+      "label": "rephased_tree_--",
+      "shape": [],
+      "max_absolute_error": 1.2412670766236366e-16,
+      "normalized_error": 1.2412670766236366e-16,
+      "pass": true,
+      "actual": [-0.9156245355859084, 0.37942742295800014],
+      "expected": [-0.9156245355859083, 0.3794274229580002]
+    },
+    {
+      "label": "external_phase_weight_plus",
+      "shape": [],
+      "max_absolute_error": 2.0014830212433607e-16,
+      "normalized_error": 2.0014830212433607e-16,
+      "pass": true,
+      "actual": [-0.9156245355859084, -0.37942742295800014],
+      "expected": [-0.9156245355859083, -0.3794274229580003]
+    },
+    {
+      "label": "external_phase_weight_minus",
+      "shape": [],
+      "max_absolute_error": 2.0014830212433607e-16,
+      "normalized_error": 2.0014830212433607e-16,
+      "pass": true,
+      "actual": [-0.9156245355859084, 0.37942742295800014],
+      "expected": [-0.9156245355859083, 0.3794274229580003]
+    }
+  ],
+  "limitations": "Finite examples support the specified source-phase identities, epsilon sign and amplitude conversion. No old program rerun; no proof of general analytic crossing, global spinor phase section, collinear limits or loop/IR behavior."
+}

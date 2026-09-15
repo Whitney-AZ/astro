@@ -40,7 +40,7 @@ export default defineConfig({
     rehypePlugins: [
       rehypeHeadingIds,
       rehypeEquationNumbering,
-      rehypeKatex,
+      [rehypeKatex, { macros: { '\\slashed': '\\mathord{\\not{#1}}' } }],
       rehypeLink,
       rehypeImage,
       rehypeHeading,

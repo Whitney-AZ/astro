@@ -1,0 +1,765 @@
+---
+title: 'Srednicki §31 破缺对称性与圈修正'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [31]
+hideFromHome: true
+draft: false
+---
+
+<span id="c31"></span>
+
+上一节在不同的真空附近展开了同一个实四次理论。场平移后出现的一价和三价顶点，其系数都由原来的质量、四次耦合和场归一决定。加入量子涨落后，需要弄清这些关系能否维持：反项的系数既然彼此受约束，它们是否仍能同时消去一点、二点以及更高点函数的发散？本节从一圈计算回答这个问题：先在较简单的对称相求出反项的极点，再把同一组反项带到破缺相，依次计算各点函数。有限部分则用来确定真空位置、粒子质量和场的归一。
+
+仍采用$(-,+,+,+)$度规，以$\lambda_d=\lambda\widetilde\mu^\epsilon$恢复正则化期间的耦合维数，取$d=4-\epsilon$、$\mu^2=4\pi e^{-\gamma}\widetilde\mu^2$，并记$c_4=16\pi^2$以缩短圈系数。
+
+<span id="c31-symmetric"></span>
+
+## 对称相的二点函数
+
+先把质量、四次耦合和动能各自的反项留在拉格朗日量中。在正则化维数中写为
+
+<span id="eq:c31-model"></span>
+
+$$
+\mathcal L=-\frac12Z_\varphi(\partial\varphi)^2
+-\frac12Z_m m^2\varphi^2
+-\frac{Z_\lambda\lambda_d}{24}\varphi^4,\qquad
+Z_\varphi=1+A,\quad Z_m=1+B,\quad Z_\lambda=1+C .
+\tag{31.1}
+$$
+
+先令$m^2>0$，在对称真空$\varphi=0$附近展开。每条内部线给$1/[i(\ell^2+m^2-i0)]$，自能插入仍记$i\Pi$。这一阶只有一个四次顶点形成的蝌蚪图：从顶点的四个场中选出两个连接指定的两条外腿，有$4\cdot3$种选择，余下两个场彼此收缩；除以拉格朗日量中的$4!=24$，图的权重就是$1/2$。外动量直接穿过顶点，圈内积分不随外动量改变，因而与二价反项相加后得到
+
+<span id="eq:c31-symmetric-graphs"></span>
+
+$$
+\begin{aligned}
+i\Pi(z)&=\frac12(-i\lambda_d)\frac{\widetilde\Delta_m(0)}i
+-i(Az+Bm^2)+O(\lambda^2m^2),\\
+\widetilde\Delta_m(0)&=\int\frac{d^d\ell}{(2\pi)^d}
+\frac1{\ell^2+m^2-i0},\qquad z=k^2 .
+\end{aligned}
+\tag{31.2}
+$$
+
+求自能因而归结为同一点传播子的积分。图中的外线标明自能插入的位置；把这个核放回完整传播子时，还须在两侧各接一条传播子。
+
+![对称相的四次蝌蚪自能图和二价反项](/images/srednicki/c31_symmetric_two.svg)
+
+对称相二点函数的一圈图及二价反项。箭头表示动量流向，$S$为图的对称因子。
+
+<span id="fig:c31-symmetric-two"></span>
+
+<span id="c31-integrals"></span>
+
+### 两个圈积分
+
+蝌蚪积分以及稍后出现的泡图，可以一起用[第14节的Wick转动和径向积分](/posts/srednicki-14/#c14-wick)求出。本节的维数改为$4-\epsilon$，先取$Q>0$计算欧氏积分，定义
+
+<span id="eq:c31-master-integral"></span>
+
+$$
+I_n(Q)=\widetilde\mu^\epsilon
+\int\frac{d^dq_E}{(2\pi)^d}\frac1{(q_E^2+Q)^n}
+=\frac{\widetilde\mu^\epsilon}{(4\pi)^{d/2}}
+\frac{\Gamma(n-d/2)}{\Gamma(n)}Q^{d/2-n}.
+\tag{31.3}
+$$
+
+右式在$\operatorname{Re}n>d/2$时由收敛的径向积分得到，随后解析延拓到所需的$n$。泡图需要取$n=2$，这时$\Gamma(\epsilon/2)=2/\epsilon-\gamma+O(\epsilon)$；尺度因子也须保留到一阶，因其一阶项会与极点相乘：$(4\pi\widetilde\mu^2/Q)^{\epsilon/2}
+=1+\frac\epsilon2\ln(4\pi\widetilde\mu^2/Q)+O(\epsilon^2)$。蝌蚪积分则取$n=1$，用递推关系$\Gamma(-1+\epsilon/2)=\Gamma(\epsilon/2)/(-1+\epsilon/2)$化为同一个Gamma函数。两种展开分别给出
+
+<span id="eq:c31-tadpole-bubble-integrals"></span>
+
+$$
+\begin{aligned}
+I_1(Q)&=-\frac{Q}{c_4}
+\left(\frac2\epsilon+1+\ln\frac{\mu^2}{Q}\right)+O(\epsilon),
+\\
+I_2(Q)&=\frac1{c_4}
+\left(\frac2\epsilon+\ln\frac{\mu^2}{Q}\right)+O(\epsilon).
+\end{aligned}
+\tag{31.4}
+$$
+
+第一式多出的常数1来自Gamma函数递推关系中分母的展开。负极点来自 $\Gamma(-1+\epsilon/2)$ 在 $\epsilon=0$ 附近的洛朗展开。转回洛伦兹积分时，Wick转动还带来一个$i$，于是蝌蚪积分为
+
+<span id="eq:c31-minkowski-tadpole"></span>
+
+$$
+\widetilde\mu^\epsilon\widetilde\Delta_m(0)
+=iI_1(m^2)
+=-\frac{im^2}{c_4}
+\left(\frac2\epsilon+1+\ln\frac{\mu^2}{m^2}\right)+O(\epsilon).
+\tag{31.5}
+$$
+
+这里的$-i$来自转动产生的$i$与$I_1$的负号。
+
+有了单个分母幂次的积分，再处理含两个传播子的泡图就只剩参数积分。令$a=x(1-x)$，用$1/(AB)=\int_0^1dx/[xA+(1-x)B]^2$合并分母，再平移$q=\ell+xk$以消去圈动量的一次项，得到
+
+<span id="eq:c31-bubble"></span>
+
+$$
+\begin{aligned}
+iF_m(z)
+&=\widetilde\mu^\epsilon\int\frac{d^d\ell}{(2\pi)^d}
+\frac1{[(\ell+k)^2+m^2-i0](\ell^2+m^2-i0)},\\
+F_m(z)&=\int_0^1dx\,I_2(m^2+az-i0)
+=\frac1{c_4}\left[\frac2\epsilon+J_m(z)\right]+O(\epsilon),\\
+J_m(z)&=\int_0^1dx\,\ln\frac{\mu^2}{m^2+az-i0}.
+\end{aligned}
+\tag{31.6}
+$$
+
+圈动量平移的雅可比为1，维数正则化也容许这样的平移。剩下的参数积分先在类空$z>0$求值，再按$i0$处方延拓。为利用被积函数关于参数中点的对称性，令$t=2x-1$；偶性把原来的$x$积分化为$t\in[0,1]$上的积分，分母随之成为$m^2+z/4-zt^2/4$。所需的对数积分可用原函数
+
+<span id="eq:c31-log-primitive"></span>
+
+$$
+\int dt\,\ln(A-Bt^2)
+=t\ln(A-Bt^2)-2t
++2\sqrt{\frac AB}\operatorname{artanh}\!\left(t\sqrt{\frac BA}\right)
+\tag{31.7}
+$$
+
+求出。对右侧求导时，末两项恰好抵消第一项求导所产生的有理式，留下原来的对数；因此可以直接代入积分端点，得到
+
+<span id="eq:c31-bubble-evaluated"></span>
+
+$$
+\begin{aligned}
+J_m(z)&=\ln\frac{\mu^2}{m^2}+2
+-2r\operatorname{artanh}\frac1r,\qquad
+r=\sqrt{1+\frac{4m^2}{z}},\quad z>0,\\
+J_m(0)&=\ln\frac{\mu^2}{m^2},\\
+J_m(-s-i0)&=\ln\frac{\mu^2}{m^2}+2
+-\beta\ln\frac{1+\beta}{1-\beta}+i\pi\beta,
+\\
+&\hspace{8mm}\beta=\sqrt{1-\frac{4m^2}{s}},\qquad s>4m^2 .
+\end{aligned}
+\tag{31.8}
+$$
+
+这组结果同时给出泡图的零动量值和割线上的边界值。阈值以下$0<s<4m^2$时，相同的延拓写成实函数即为$J_m(-s)=\ln(\mu^2/m^2)+2-2b\arctan(1/b)$，其中$b=\sqrt{4m^2/s-1}$。超过阈值后，参数区间$x\in((1-\beta)/2,(1+\beta)/2)$内的分母变负；按原来的处方，$-\log(D-i0)$在这一区间贡献$+i\pi$。其区间长度决定第三式的虚部，也固定了它的正号。
+
+现在回到对称相的二点图，除去整体$i$并代入式[（31.5）](#eq:c31-minkowski-tadpole)，自能成为
+
+<span id="eq:c31-symmetric-selfenergy"></span>
+
+$$
+\Pi(z)=\frac{\lambda m^2}{2c_4}
+\left(\frac2\epsilon+1+\ln\frac{\mu^2}{m^2}\right)
+-Az-Bm^2+O(\lambda^2m^2).
+\tag{31.9}
+$$
+
+圈图的发散项与质量平方成正比，正可由二价反项中的质量部分消去。因此质量反项必须取为
+
+<span id="eq:c31-mass-counterterm"></span>
+
+$$
+B=\frac{\lambda}{c_4}
+\left(\frac1\epsilon+\kappa_B\right)+O(\lambda^2).
+\tag{31.10}
+$$
+
+圈图的极点没有动量依赖，所以这一阶的消除发散并不要求波函数反项。在$\overline{\mathrm{MS}}$中取$A=O(\lambda^2)$和$\kappa_B=0$。也可以用指定的质量条件确定有限的$\kappa_B$，这时它随$\mu$变化。类似地，有限的场归一仍可自由选定；破缺相中要把场的极点留数归一为1，就会用到这项自由。
+
+<span id="c31-fourpoint"></span>
+
+## 四点函数和贝塔函数
+
+二点函数确定了质量反项，四次耦合的反项则要从四点函数求出。取四个外动量均流入，并定义$s=-(k_1+k_2)^2$、$t=-(k_1+k_3)^2$、$u=-(k_1+k_4)^2$。三种外腿分组各给一道泡图，每道图的两条内部边可以互换，因此都有$S=2$。这个因子也能直接由收缩计数得到：固定外腿分组后，把两组分配到两个标记顶点有2种方法，每个顶点连接两条指定外腿有$4\cdot3$种方法，余下两条内部边又有2种配对。除以展开式中的$2!(4!)^2$，权重为$2\cdot12^2\cdot2/[2(24)^2]=1/2$。
+
+![四点泡图的三种外腿配对通道](/images/srednicki/c31_four_point.svg)
+
+四点函数的一道泡图及另两道的外腿交换。内部上下动量与两个顶点的守恒相容。
+
+<span id="fig:c31-fourpoint"></span>
+
+两个顶点与两条内部线给出的相位乘积是$(-i\lambda_d)^2(1/i)^2=+\lambda_d^2$；圈积分的转动因子已包含在前面的定义中。还要注意，$F$已吸收$\widetilde\mu^\epsilon$，把各项共同的质量维数恢复后，四点顶角为
+
+<span id="eq:c31-fourpoint-sum"></span>
+
+$$
+iV_4=\widetilde\mu^\epsilon
+\left\{-i\lambda(1+C)
++\frac{i\lambda^2}{2}[F_m(-s)+F_m(-t)+F_m(-u)]\right\}
++O(\lambda^3\widetilde\mu^\epsilon).
+\tag{31.11}
+$$
+
+三个通道各贡献相同的极点，总和为$+i3\lambda^2/(c_4\epsilon)$。它们没有外动量依赖，因而可以用一个四价反项同时消去，得到
+
+<span id="eq:c31-coupling-counterterm"></span>
+
+$$
+C=\frac{3\lambda}{c_4}
+\left(\frac1\epsilon+\kappa_C\right)+O(\lambda^2).
+\tag{31.12}
+$$
+
+这里把有限部分也归一在共同因子3之内，后面比较不同反项时须保留这一因子。极点抵消后取$\epsilon\to0$，四点核的有限部分为
+
+<span id="eq:c31-fourpoint-finite"></span>
+
+$$
+V_4=-\lambda+
+\frac{\lambda^2}{2c_4}
+[J_m(-s)+J_m(-t)+J_m(-u)-6\kappa_C]+O(\lambda^3).
+\tag{31.13}
+$$
+
+取$\kappa_C=0$就是$\overline{\mathrm{MS}}$方案；若在指定运动学点定义耦合，则用该处四点函数的数值确定这个有限参数。局部反项消去发散后，这个有限条件进一步规定重整化参数怎样与指定运动学点的振幅相联系。
+
+<span id="c31-rg"></span>
+
+### 固定裸量求尺度导数
+
+接下来从耦合反项求尺度变化。裸场与重整化场的关系是$\varphi_0=\sqrt{Z_\varphi}\varphi$，将它代入四次单项式，裸耦合便满足
+
+<span id="eq:c31-bare"></span>
+
+$$
+\lambda_0=Z_\lambda Z_\varphi^{-2}\lambda\widetilde\mu^\epsilon,
+\qquad
+\ln(Z_\lambda Z_\varphi^{-2})
+=\frac{3\lambda}{c_4\epsilon}+O(\lambda^2)
+\quad(\overline{\mathrm{MS}}).
+\tag{31.14}
+$$
+
+令$B_\epsilon=d\lambda/d\ln\mu=-\epsilon\lambda+\beta_\lambda$，把工程维数造成的变化与四维的贝塔函数分开。对第一式取对数，再固定裸耦合$\lambda_0$求尺度导数，得到
+
+<span id="eq:c31-beta-equation"></span>
+
+$$
+0=\epsilon+\frac{B_\epsilon}{\lambda}
++B_\epsilon\,\partial_\lambda\ln(Z_\lambda Z_\varphi^{-2}).
+\tag{31.15}
+$$
+
+此时按第28节的极点递推比较有限项。第二项的有限部分为$\beta_\lambda/\lambda$；第三项中，$-\epsilon\lambda$与简单极点相乘，留下$-3\lambda/c_4$。令二者相消，就得到一圈贝塔函数
+
+<span id="eq:c31-beta"></span>
+
+$$
+\beta_\lambda=\frac{3\lambda^2}{c_4}+O(\lambda^3).
+\tag{31.16}
+$$
+
+质量的裸量关系为 $m_0^2=(Z_m/Z_\varphi)m^2$。固定它求导，得到 $0=d\ln m^2/d\ln\mu+B_\epsilon\partial_\lambda\ln(Z_m/Z_\varphi)$；简单极点 $\lambda/(c_4\epsilon)$ 与 $B_\epsilon$ 中的 $-\epsilon\lambda$ 相乘，便给出 $dm^2/d\ln\mu=\lambda m^2/c_4+O(\lambda^2m^2)$。这一阶的场反常量纲为 $\gamma_\varphi=O(\lambda^2)$。正的贝塔函数意味着在微扰区内向高能移动时耦合增强，其适用范围及一圈Landau尺度已在第29节讨论。至此，对称相中需要的反项和尺度变化都已确定，可以把它们带到另一真空附近。
+
+<span id="c31-shift"></span>
+
+## 平移到破缺相
+
+现在令$m^2<0$，在正的树级最低点附近定义涨落场：
+
+<span id="eq:c31-shift-definitions"></span>
+
+$$
+M^2=-2m^2,\qquad v_0^2=\frac{3M^2}{\lambda_d},\qquad
+\varphi=v_0+\rho,\qquad
+g_3=\lambda_d v_0=\sqrt{3\lambda_d}\,M .
+\tag{31.17}
+$$
+
+这里的$M$是涨落场的树级质量。在四维，$g_3$的质量维数为1；本节定义的$g_3$为正，拉格朗日量中的立方项带负号，因而三价顶角为$-ig_3$。要确定反项怎样随场平移，须将含$Z$的势展开后代回拉格朗日量。展开$(v_0+\rho)^2$、$(v_0+\rho)^4$后，一次项的系数为$-(Z_m m^2v_0+Z_\lambda\lambda_dv_0^3/6)$，二次项的系数为$-Z_m m^2/2-Z_\lambda\lambda_dv_0^2/4$。再代入$v_0^2$，场依赖部分为
+
+<span id="eq:c31-shifted-lagrangian"></span>
+
+$$
+\begin{aligned}
+\mathcal L={}&-\frac12Z_\varphi(\partial\rho)^2
+-\frac12\left(\frac32Z_\lambda-\frac12Z_m\right)M^2\rho^2\\
+&+\frac12(Z_m-Z_\lambda)M^2v_0\rho
+-\frac{Z_\lambda g_3}{6}\rho^3
+-\frac{Z_\lambda\lambda_d}{24}\rho^4 .
+\end{aligned}
+\tag{31.18}
+$$
+
+被省去的场无关常数可按同一真空能归一减除。二次项括号中的$3/2$与$-1/2$分别来自四次势和原二次势；令所有$Z=1$，括号等于1，便回到树级质量$M^2$。将树项与反项分开，便可读出
+
+<span id="eq:c31-shifted-counterterms"></span>
+
+$$
+Y=\frac12(B-C)M^2v_0,\qquad
+X(z)=Az+\left(\frac32C-\frac12B\right)M^2.
+\tag{31.19}
+$$
+
+所以一价、二价、三价和四价反项的顶角依次是$iY,-iX,-iCg_3,-iC\lambda_d$。新增的低价顶点并未引入独立耦合：$Y$与$g_3$仍由原来的$B,C,\lambda_d,M$确定，而二价反项$X$也随同一场平移固定。下面分别考察这些受约束的顶角如何进入一点和二点函数。
+
+<span id="c31-tadpole"></span>
+
+## 一点函数与真空条件
+
+量子涨落一般会移动树势的最低点，因此首先计算涨落场的真空期望。立方顶点有3种方式连接指定外场，余下两场彼此收缩，图的权重为$3/3!=1/2$。把圈图与一价反项合成$i\mathcal K_1$，再接回求真空期望所需的外传播子，有
+
+<span id="eq:c31-onepoint"></span>
+
+$$
+\begin{aligned}
+i\mathcal K_1&=iY+\frac12(-iZ_\lambda g_3)
+\frac{\widetilde\Delta_M(0)}i,\\
+\langle\rho(x)\rangle
+&=i\mathcal K_1\int d^dy\,\frac{\Delta_M(x-y)}i
+=\frac{\mathcal K_1}{M^2}.
+\end{aligned}
+\tag{31.20}
+$$
+
+这里最后一步用了$\int d^dy\,\Delta_M(x-y)=1/M^2$：平移不变的真空只允许零动量流入外线。圈项中可以令$Z_\lambda=1$，因为其修正乘上已有的圈积分后才在下一圈出现。
+
+![三次顶点的蝌蚪收缩与线性反项](/images/srednicki/c31_one_point.svg)
+
+一点函数的一圈插入。平移不变性最终使外动量为零；求真空期望时须接上式中显式写出的外传播子。
+
+<span id="fig:c31-onepoint"></span>
+
+为求有限部分，记$L=\ln(\mu^2/M^2)$，在蝌蚪积分中作$m^2\mapsto M^2$，并保留耦合与积分之间的尺度关系$g_3\widetilde\mu^{-\epsilon}=\lambda v_0$。于是
+
+<span id="eq:c31-onepoint-poles"></span>
+
+$$
+\mathcal K_1=\frac{M^2v_0}{2}
+\left[B-C+\frac{\lambda}{c_4}
+\left(\frac2\epsilon+1+L\right)\right]
++O(\lambda^2M^2v_0).
+\tag{31.21}
+$$
+
+前面从对称相求得的反项在此以差的形式出现：$B-C=(\lambda/c_4)(-2/\epsilon+\kappa_B-3\kappa_C)$。把它代入，极点与圈项抵消，剩下
+
+<span id="eq:c31-onepoint-finite"></span>
+
+$$
+\mathcal K_1=\frac{\lambda M^2v_0}{2c_4}
+(\kappa_B-3\kappa_C+1+L)+O(\lambda^2M^2v_0).
+\tag{31.22}
+$$
+
+如果仍要把$v_0$选为量子真空，即要求$\langle\rho\rangle=0$，就须用有限反项消去这一剩余量。这给出两个有限参数之间的关系
+
+<span id="eq:c31-tadpole-condition"></span>
+
+$$
+\kappa_B-3\kappa_C=-1-L .
+\tag{31.23}
+$$
+
+有限部分中的$3\kappa_C$直接继承了$C$定义中的因子3。满足真空条件以后，零动量线上的整个一价核都相消了；计算更高点函数时，从图中伸出的一价蝌蚪插入便不再贡献。这个消去针对的是一价核，四次顶点构成的二点蝌蚪仍须保留。
+
+也可以保留$\overline{\mathrm{MS}}$的选择$\kappa_B=\kappa_C=0$，让量子真空本身相对树最低点移动。此时由式[（31.20）](#eq:c31-onepoint)得到
+
+<span id="eq:c31-ms-vacuum"></span>
+
+$$
+v=v_0+\delta v,\qquad
+\delta v=\frac{\lambda v_0}{2c_4}(1+L)+O(\lambda^2v_0).
+\tag{31.24}
+$$
+
+这两种参数化分别把圈修正放在有限反项和真空位移中；计算粒子质量时必须沿用各自的真空选择。还应注意圈阶在这里的含义：固定$M$时有$v_0\sim\lambda^{-1/2}$，所以一圈真空修正相对于树真空值为$O(\lambda/c_4)$。后面用量子势求最低点时，会把这一位移与质量联系起来。
+
+<span id="c31-broken-two"></span>
+
+## 破缺相的二点函数
+
+破缺相的二点函数除了原有的四次蝌蚪，还包含由两个三次顶点形成的泡图，如[下图](#fig:c31-broken-two)所示。把两条指定外腿分别接到两个立方点，有$2\cdot3^2$种选择；余下内部场有2种配对，除以$2!(3!)^2$仍得$1/2$。两类圈图虽然有相同的对称因子，耦合系数却不同：泡图含$g_3^2=3\lambda_dM^2$，因而保留了场平移产生的因子3。
+
+![破缺相二点函数的四次蝌蚪、双三次顶点泡图和反项](/images/srednicki/c31_broken_two.svg)
+
+破缺相二点函数的四次蝌蚪、立方泡图和二价反项。两个圈图都除以2，泡图另含两个三次耦合。
+
+<span id="fig:c31-broken-two"></span>
+
+沿用前面的参数积分，以$J_M$表示式[（31.6）](#eq:c31-bubble)中质量换成$M$的结果，再把两个圈图与二价反项按原来的相位和维数相加，得到
+
+<span id="eq:c31-broken-selfenergy-unsubtracted"></span>
+
+$$
+\begin{aligned}
+\Pi_\rho(z)
+&=-\frac{\lambda_d}{2i}\widetilde\Delta_M(0)
++\frac{g_3^2}{2}\widetilde\mu^{-\epsilon}F_M(z)-X(z)\\
+&=\frac{\lambda M^2}{2c_4}
+\left(\frac2\epsilon+1+L\right)
++\frac{3\lambda M^2}{2c_4}
+\left(\frac2\epsilon+J_M(z)\right)\\
+&\hspace{8mm}-Az-\left(\frac32C-\frac12B\right)M^2
++O(\lambda^2M^2).
+\end{aligned}
+\tag{31.25}
+$$
+
+两个圈图的极点合为$4\lambda M^2/(c_4\epsilon)$；另一方面，质量反项部分为
+
+<span id="eq:c31-two-point-pole-cancellation"></span>
+
+$$
+\left(\frac32C-\frac12B\right)M^2
+=\frac{\lambda M^2}{c_4}
+\left(\frac4\epsilon+\frac92\kappa_C-\frac12\kappa_B\right)
++O(\lambda^2M^2).
+\tag{31.26}
+$$
+
+两式的极点正好相等，因此在对称相确定的反项同样消去了破缺相二点函数的发散。剩余的自能为
+
+<span id="eq:c31-broken-selfenergy-finite"></span>
+
+$$
+\Pi_\rho(z)=\frac{\lambda M^2}{2c_4}
+[1+L+3J_M(z)-9\kappa_C+\kappa_B]
+-Az+O(\lambda^2M^2).
+\tag{31.27}
+$$
+
+这里有限反项的符号和大小同样由平移后的拉格朗日量确定。反项消除了局部的发散部分，泡图中完整的动量依赖则留在有限自能里。要确定它对极点留数的影响，对外动量平方求导，得到
+
+<span id="eq:c31-selfenergy-derivative"></span>
+
+$$
+\Pi_\rho'(z)
+=-\frac{3\lambda M^2}{2c_4}
+\int_0^1dx\,\frac{a}{M^2+az-i0}-A+O(\lambda^2),
+\qquad a=x(1-x).
+\tag{31.28}
+$$
+
+当$z>-4M^2$时，实积分区间中的分母为正，积分也为正；因此若取$A=0$，在壳导数并不为零。除极点附近的变化以外，泡图还保留了两粒子阈值，在割线上给出
+
+<span id="eq:c31-selfenergy-cut"></span>
+
+$$
+\operatorname{Im}\Pi_\rho(-s-i0)
+=\frac{3\lambda M^2}{32\pi}
+\sqrt{1-\frac{4M^2}{s}}\,\theta(s-4M^2)
++O(\lambda^2M^2).
+\tag{31.29}
+$$
+
+其虚部来自式[（31.8）](#eq:c31-bubble-evaluated)中的$+i\pi\beta$。极点附近的$s=M^2$低于两粒子阈值，故单个$\rho$粒子在这一阶仍是稳定的；泡图造成的是质量与留数的修正。
+
+<span id="c31-onshell"></span>
+
+## 在壳质量与场归一
+
+现在实施在壳归一条件：保持一点函数为零，把$M$定义为极点质量，并把场的极点留数归一为1。这三个要求写成
+
+<span id="eq:c31-onshell-conditions"></span>
+
+$$
+\mathcal K_1=0,\qquad
+\Pi_\rho(-M^2)=0,\qquad
+\Pi_\rho'(-M^2)=0 .
+\tag{31.30}
+$$
+
+这三个条件由$\kappa_B,\kappa_C$和有限$A$共同满足。一圈没有波函数的UV发散，意味着消去发散时无须这一反项的极点；有限$A$仍可用于归一粒子态。实际求解前，先把在壳所需的两个参数积分算出。第一个积分用$1-a=(x-\frac12)^2+3/4$配方，可得
+
+<span id="eq:c31-onshell-rational-integral"></span>
+
+$$
+\begin{aligned}
+\int_0^1\frac{dx}{1-a}
+&=\frac2{\sqrt3}
+\left[\arctan\frac{2x-1}{\sqrt3}\right]_0^1
+=\frac{2\pi}{3\sqrt3},\\
+I_*:=\int_0^1\frac{a\,dx}{1-a}
+&=\frac{2\pi}{3\sqrt3}-1 .
+\end{aligned}
+\tag{31.31}
+$$
+
+第二个对数积分作$t=x-\frac12$的代换，并使用原函数$\int\ln(t^2+b^2)dt=t\ln(t^2+b^2)-2t+2b\arctan(t/b)$。取$b=\sqrt3/2$后代入两端，结果为
+
+<span id="eq:c31-onshell-log-integral"></span>
+
+$$
+\int_0^1dx\,\ln(1-a)=-2+\frac{\pi}{\sqrt3},
+\qquad J_M(-M^2)=L+2-\frac{\pi}{\sqrt3}.
+\tag{31.32}
+$$
+
+先用不含质量反项的留数条件求场归一。把上面的有理积分代入自能导数，得到
+
+<span id="eq:c31-os-wavefunction"></span>
+
+$$
+A_{\rm OS}=-\frac{3\lambda}{2c_4}I_*
+=\frac{\lambda}{2c_4}
+\left(3-\frac{2\pi}{\sqrt3}\right)+O(\lambda^2).
+\tag{31.33}
+$$
+
+再把这一有限反项与式[（31.32）](#eq:c31-onshell-log-integral)的对数积分代入质量条件，并除去共同因子$\lambda M^2/(2c_4)$，便有
+
+<span id="eq:c31-os-mass-linear"></span>
+
+$$
+0=10+4L-\frac{5\pi}{\sqrt3}-9\kappa_C+\kappa_B .
+\tag{31.34}
+$$
+
+剩下的是两个有限参数的线性方程。将它与一点条件[（31.23）](#eq:c31-tadpole-condition)联立，先相减求出$6\kappa_C$，再回代求$\kappa_B$，得到
+
+<span id="eq:c31-os-finite-counterterms"></span>
+
+$$
+\kappa_C=\frac32+\frac L2-\frac{5\pi}{6\sqrt3},
+\qquad
+\kappa_B=\frac72+\frac L2-\frac{5\pi}{2\sqrt3}.
+\tag{31.35}
+$$
+
+有限反项随减除尺度变化，恰是为了补偿圈函数的尺度变化，使规定的极点和留数保持不变。把这三项有限反项代回自能，常数项与一次项可合并成在壳点的两次减除：
+
+<span id="eq:c31-os-selfenergy"></span>
+
+$$
+\Pi_{\rm OS}(z)=\frac{3\lambda M^2}{2c_4}
+\left[J_M(z)-J_M(-M^2)-(z+M^2)J_M'(-M^2)\right]
++O(\lambda^2M^2).
+\tag{31.36}
+$$
+
+这个形式直接表明，自能的值和导数在减除点同时为零；其余动量依赖仍由式[（31.8）](#eq:c31-bubble-evaluated)给出。若改选$A=0$，则只用一点和质量两个条件也能确定$\kappa_C=1+L/2-\pi/(2\sqrt3)$、$\kappa_B=2+L/2-3\pi/(2\sqrt3)$。这种选择保留了非单位的场留数，因此散射外腿须带上第27节的$\sqrt R$，其中$R=[1-\Pi_\rho'(-M^2)]^{-1}$。
+
+<span id="c31-higher"></span>
+
+## 三点和四点函数的发散
+
+真空位置与二点函数处理完后，再计算三点顶角。固定$M$时，树顶角为$O(\sqrt\lambda M)$；一圈有三个立方点组成的三角图，以及一个立方点和一个四次点组成的泡图，两类修正都是$O(\lambda^{3/2}M/c_4)$。虽然圈阶相同，它们的UV行为却不同：三角图含三个传播子，大圈动量次数为$4-6=-2$，泡图则为$4-4=0$。因此先用泡图的极点确定反项相消，再把有限三角图接回完整三点函数。
+
+![三点函数的有限三角图和三种泡图](/images/srednicki/c31_three_point.svg)
+
+三点函数的一圈图。第一个三角图UV有限；后三图分别把一条指定外腿接到立方点，每图都有$S=2$。
+
+<span id="fig:c31-threepoint"></span>
+
+以第一条外腿单独接到立方点的泡图为例，选择该点上的场有3种方法，四次点连接另外两条指定外腿有$4\cdot3$种方法，两条内部边的配对又有2种。除以$3!4!$，权重为$72/144=1/2$。分别让三条外腿接到立方点，三道泡图之和就是
+
+<span id="eq:c31-threepoint-bubbles"></span>
+
+$$
+iV_{3,\mathrm{bub}}
+=\frac{i\lambda g_3}{2}
+[F_M(k_1^2)+F_M(k_2^2)+F_M(k_3^2)] .
+\tag{31.37}
+$$
+
+此处四次耦合与泡积分的尺度因子结合为$\lambda_d\widetilde\mu^{-\epsilon}=\lambda$，而$g_3$仍保留其$d$维量纲。三道泡图的极点相加为$+i3\lambda g_3/(c_4\epsilon)$，再与树项和三价反项合并，可写成
+
+<span id="eq:c31-threepoint-pole"></span>
+
+$$
+V_{3,\mathrm{tree+UV}}
+=-g_3\left(1+C-\frac{3\lambda}{c_4\epsilon}\right),
+\tag{31.38}
+$$
+
+由式[（31.12）](#eq:c31-coupling-counterterm)可见，对称相中确定的$C$也使三价反项的极点恰好消去这一发散。求完整的有限三点函数时，还要加上前面分出的三角图。
+
+对固定外腿，三角图的权重为1。在四维引入三个分母的费曼参数，平移圈动量后积分，得到
+
+<span id="eq:c31-finite-triangle"></span>
+
+$$
+V_{3,\triangle}
+=-\frac{g_3^3}{c_4}
+\int_{x,y,w\ge0}dx\,dy\,dw\,
+\frac{\delta(1-x-y-w)}
+{M^2+xyk_1^2+ywk_2^2+wxk_3^2-i0}.
+\tag{31.39}
+$$
+
+这个负号可从原图的相位逐项追踪：三个顶角、三条线和Wick转动合起来给$-i$，再除去顶角核约定的整体$i$。数值因子也随参数化固定，$\Gamma(3)=2$与式[（31.3）](#eq:c31-master-integral)在$n=3$时给出的$I_3(Q)=1/(2c_4Q)$相消，所以无需再乘$1/2$。例如外动量全部为零时，参数分母成为常数，单纯形面积为$1/2$，从而$V_{3,\triangle}(0)=-g_3^3/(2c_4M^2)$。把这个值与泡图及有限反项相加，便得到一个完全求值的有限顶角：
+
+<span id="eq:c31-threepoint-zero"></span>
+
+$$
+V_3(0,0,0)
+=-g_3+\frac{3\lambda g_3}{2c_4}
+(L-1-2\kappa_C)+O(\lambda^2g_3).
+\tag{31.40}
+$$
+
+这里已用$g_3^2=3\lambda M^2$合并耦合，并取四维极限。
+
+四点函数的发散也可以先按图的拓扑分出，而不必计算所有有限积分。令四次点、三次点的数目分别为$a,b$。一圈连通图满足$I=a+b$，同时每条内线占两个端口、四条外线占四个端口，故$2I+4=4a+3b$。联立这两个关系，得到允许的顶点组合及其大圈动量次数：
+
+<span id="eq:c31-fourpoint-power-count"></span>
+
+$$
+2a+b=4,\qquad
+(a,b)=(2,0),(1,2),(0,4),\qquad
+\omega=4-2(a+b)=0,-2,-4 .
+\tag{31.41}
+$$
+
+因此只有两个四次点形成的泡图发散，其余两类三角图和箱图都是有限的。四点函数的UV极点就是式[（31.11）](#eq:c31-fourpoint-sum)中作$m\mapsto M$后得到的三道泡图，仍由同一个$C$消去。
+
+<span id="c31-potential"></span>
+
+## 用量子势连接这些计算
+
+一点、二点和高点函数的发散能够由同一组反项消去，是因为这些反项来自同一个势的场平移。用上一节的量子作用量看这一点更为直接：恒定背景下的量子势，其各阶导数正好给出零动量顶角。下面补算这个一圈势，把真空方程和刚才的二点、三点计算联系起来。取四维重整化参数及恒定背景$\phi$，定义
+
+<span id="eq:c31-background-mass"></span>
+
+$$
+V_0(\phi)=\frac12m^2\phi^2+\frac{\lambda}{24}\phi^4,\qquad
+Q(\phi)=V_0''(\phi)=m^2+\frac{\lambda}{2}\phi^2 .
+\tag{31.42}
+$$
+
+先在$Q>0$的区域展开，二次涨落的高斯积分给出行列式项$U_{1,B}=\frac12\widetilde\mu^\epsilon\int_q\ln(q_E^2+Q)$。对背景质量平方$Q$求导，就能把对数积分化为已经求出的$I_1/2$：
+
+<span id="eq:c31-potential-integral-derivative"></span>
+
+$$
+\frac{dU_{1,B}}{dQ}
+=-\frac{Q}{2c_4}
+\left(\frac2\epsilon+1+\ln\frac{\mu^2}{Q}\right).
+\tag{31.43}
+$$
+
+再用$\int Q\ln(\mu^2/Q)dQ=\frac12Q^2\ln(\mu^2/Q)+\frac14Q^2$积回去。将结果按背景场的幂次展开，除一个场无关的积分常数外，有
+
+<span id="eq:c31-potential-pole"></span>
+
+$$
+\begin{aligned}
+U_{1,B}
+&=\frac{Q^2}{4c_4}
+\left[-\frac2\epsilon+\ln\frac Q{\mu^2}-\frac32\right],\\
+U_{1,\mathrm{div}}
+&=-\frac1{2c_4\epsilon}
+\left(m^4+\lambda m^2\phi^2+\frac{\lambda^2}{4}\phi^4\right).
+\end{aligned}
+\tag{31.44}
+$$
+
+原反项在势中的贡献为$Bm^2\phi^2/2+C\lambda\phi^4/24$，代入先前求出的极点，二次项和四次项分别给$+\lambda m^2\phi^2/(2c_4\epsilon)$与$+\lambda^2\phi^4/(8c_4\epsilon)$，恰好消去上式中的两个场依赖项。若还要固定真空能的绝对值，则加上$m^4/(2c_4\epsilon)$的常数反项。由此可见，一点到四点函数中的发散，原来都是同一个对称多项式在不同背景下的导数。
+
+在$\overline{\mathrm{MS}}$方案中减去这些极点，量子势的有限部分为
+
+<span id="eq:c31-ms-potential"></span>
+
+$$
+U_{\rm MS}(\phi)=V_0(\phi)
++\frac{Q(\phi)^2}{4c_4}
+\left[\ln\frac{Q(\phi)}{\mu^2}-\frac32\right]
++O(\text{两圈}).
+\tag{31.45}
+$$
+
+为把它与图的计算对应，取$Q'=\lambda\phi,Q''=\lambda$，对圈修正连续使用链式法则，可得
+
+<span id="eq:c31-potential-derivatives"></span>
+
+$$
+\begin{aligned}
+U_1'(\phi)&=\frac{QQ'}{2c_4}
+\left(\ln\frac Q{\mu^2}-1\right),\\
+U_1''(\phi)&=\frac{(Q')^2}{2c_4}\ln\frac Q{\mu^2}
++\frac{QQ''}{2c_4}\left(\ln\frac Q{\mu^2}-1\right),\\
+U_1'''(\phi)&=\frac{3Q'Q''}{2c_4}\ln\frac Q{\mu^2}
++\frac{(Q')^3}{2c_4Q}.
+\end{aligned}
+\tag{31.46}
+$$
+
+回到树真空$v_0$，此处$Q=M^2$、$Q'=g_3$，前两阶导数成为
+
+<span id="eq:c31-potential-vacuum-check"></span>
+
+$$
+U_1'(v_0)=-\frac{g_3M^2}{2c_4}(1+L),\qquad
+U_1''(v_0)=-\frac{\lambda M^2}{2c_4}(1+4L).
+\tag{31.47}
+$$
+
+把第一式代入真空方程$M^2\delta v+U_1'(v_0)=0$，就得到式[（31.24）](#eq:c31-ms-vacuum)的真空位移；把第二式用于$U''(v_0)=M^2-\Pi_{\rho,\rm MS}(0)$，则正好包含四次蝌蚪和系数为3的立方泡图。第三阶导数同样给出$U_1'''(v_0)=3\lambda g_3(1-L)/(2c_4)$，再按$V_3(0)=-U'''(v_0)$读出式[（31.40）](#eq:c31-threepoint-zero)中的圈修正。若加上一般的有限反项，它们对三个导数的贡献为
+
+<span id="eq:c31-potential-counterterms"></span>
+
+$$
+\delta U'(v_0)=-\frac12(B-C)M^2v_0,\qquad
+\delta U''(v_0)=\left(\frac32C-\frac12B\right)M^2,\qquad
+\delta U'''(v_0)=Cg_3 .
+\tag{31.48}
+$$
+
+因此各阶顶角的反项关系，已经包含在原来同一个势的导数中。
+
+<span id="c31-ms-pole"></span>
+
+### 最小减除参数与真正的极点
+
+采用$\overline{\mathrm{MS}}$时，一点函数告诉我们真空已经移动；求二点函数时也须在这个真空附近展开。从$v_0$移到$v=v_0+\delta v$，树势的二阶导数增加$\lambda v_0\delta v=g_3\delta v$。这一变化属于一圈阶，而在已有一圈积分中再改变背景只会影响两圈。因此在真实真空附近，仍以原来的$M^2=-2m^2$作为参数时，自能应写成
+
+<span id="eq:c31-true-ms-selfenergy"></span>
+
+$$
+\begin{aligned}
+\Pi_{\rm true,MS}(z)
+&=\Pi_{\rho,\rm MS}(z)-g_3\delta v\\
+&=\frac{\lambda M^2}{2c_4}
+[3J_M(z)-2(1+L)]+O(\lambda^2M^2).
+\end{aligned}
+\tag{31.49}
+$$
+
+负号由逆传播子的定义$z+M^2-\Pi$确定：树质量增加，相当于从$\Pi$中减去同样的量。求极点时按圈阶展开方程，右侧的一圈函数可先在树极点处求值，得到
+
+<span id="eq:c31-ms-pole-and-residue"></span>
+
+$$
+\begin{aligned}
+M_{\rm pole}^2&=M^2-\Pi_{\rm true,MS}(-M^2)+O(\lambda^2M^2)\\
+&=M^2\left[1-\frac{\lambda}{2c_4}
+(L+4-\sqrt3\pi)\right]+O(\lambda^2M^2),\\
+R_{\rm MS}&=1+\Pi_{\rm true,MS}'(-M^2)+O(\lambda^2)
+=1-\frac{3\lambda}{2c_4}I_*+O(\lambda^2).
+\end{aligned}
+\tag{31.50}
+$$
+
+其中已用$3J_M(-M^2)-2(1+L)=L+4-\sqrt3\pi$算出极点质量中的有限常数。尽管表达式仍含减除尺度，物理极点不应依赖任意的$\mu$。由式[（31.15）](#eq:c31-beta-equation)后的质量跑动，有$dM^2/d\ln\mu=\lambda M^2/c_4+O(\lambda^2M^2)$；同时$L$的显式尺度导数为2。这两种变化在式[（31.50）](#eq:c31-ms-pole-and-residue)中抵消到一圈。
+
+真空位置的尺度变化也须把树值与位移一起考虑。由$v_0^2=3M^2/\lambda$得$d\ln v_0/d\ln\mu=-\lambda/c_4+O(\lambda^2)$，而$\delta v/v_0$的显式尺度导数为$+\lambda/c_4$。因此$v$在这一阶的跑动与$\gamma_\varphi=0$相符。最后，为同极点质量作比较，计算量子势在真实最低点的曲率及动能系数：
+
+<span id="eq:c31-curvature-kinetic"></span>
+
+$$
+U_{\rm MS}''(v)
+=M^2\left[1+\frac{\lambda}{2c_4}(2-L)\right]
++O(\lambda^2M^2),\qquad
+Z(v)=1+\frac{\lambda}{4c_4}+O(\lambda^2).
+\tag{31.51}
+$$
+
+第一式由$U''(v_0)+g_3\delta v$相加得到；第二式从$Z(v)=1-\Pi_{\rm true,MS}'(0)$出发，使用$\int_0^1a\,dx=1/6$求值。$U''(v)$描述的是零动量响应，而极点质量须将外动量移到$z=-M_{\rm pole}^2$；两者有限常数的差别正来自泡图在不同动量处的取值。导数展开中的$U''/Z$只使用了零动量附近的信息；要确定在壳极点，仍须使用完整的泡图动量依赖。
+
+<span id="c31-renormalization"></span>
+
+## 同一个对称理论的不同展开
+
+这一圈计算表明，实四次模型全部场依赖的UV发散都组成式[（31.44）](#eq:c31-potential-pole)中的对称局域多项式。它的系数可以先在较简单的$m^2>0$区域求出，再用同一组反项在破缺真空附近展开。有限圈函数则描述给定真空中的传播与散射，须用实际真空附近的正$M^2$重新计算；负质量平方的原点并不是稳定粒子的展开点。
+
+这个结构逐圈延续的依据是[第18节的局域减除](/posts/srednicki-18/#c18-forest)。减去子图发散后，剩余的UV反项是次数受限的局域多项式；如果调节和测度保持原来的内部对称性，这些多项式也可取为对称的。随后作常量场平移，只是把同一个有限反项集合写成另一组场坐标的函数。平移的雅可比为1，逐圈的背景展开满足$\Gamma_\rho[\rho;v]=\Gamma_\varphi[\rho+v]$，所以平移产生的低价顶点，其反项仍受原参数约束。推广到其他自发破缺的可重整化理论时，同样须确定保持对称性的调节方法与允许的局域反项。
+
+本节的一圈势在 $Q>0$ 的稳定高斯背景附近计算，展开参数为 $\lambda/c_4$ 及相应的增强对数。若沿同一分支延到$Q<0$，由于$\log(Q-i0)=\ln|Q|-i\pi$，式[（31.45）](#eq:c31-ms-potential)便产生$\operatorname{Im}U_1=-Q^2/(64\pi)$。虚部来自负的涨落模，反映所选均匀背景的不稳定性。另一种需要注意的情形是$Q\to0$：此时$Q^2\ln Q$虽然趋于零，高阶背景导数却可能带有IR对数，无质量方向因而须结合外动量与真空极限的次序处理。下一节讨论连续对称性破缺时，正会遇到这样的方向。
+
+---
+
+[← 第 30 节](/posts/srednicki-30/) · [章节地图](/srednicki/) · [第 32 节 →](/posts/srednicki-32/)

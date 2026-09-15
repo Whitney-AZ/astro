@@ -12,9 +12,9 @@ import type { CollectionEntry } from 'astro:content'
 import Hero from '@/components/hero/Hero.astro'
 
 export const getStaticPaths = (async () => {
-  const sortedPosts = await getSortedPosts()
+  const sortedPosts = (await getSortedPosts()).filter((post) => !post.data.hideFromHome)
   const { perPage } = appConfig.posts
-  const totalPage = Math.ceil(sortedPosts.length / perPage)
+  const totalPage = Math.max(1, Math.ceil(sortedPosts.length / perPage))
 
   const paths = Array.from({ length: totalPage }).map((_, i) => {
     const data = sortedPosts.slice(i * perPage, (i + 1) * perPage)

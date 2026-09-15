@@ -1,0 +1,29 @@
+% Original vector artwork for source Figs72.2/72.3, PDF292/printed280.
+% Ghost c is incoming at vertex, bar c outgoing; quark matrix row i, column j.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+ \draw[densely dotted] (-22,0)--(22,0);
+ \draw[->] (-16,0)--(-9,0);
+ \draw[->] (9,0)--(16,0);
+ \fill (0,0) circle[radius=.65mm];
+ \node[above] at (-20,2) {$c$};
+ \node[above] at (20,2) {$b$};
+ \node[below] at (-14,-2) {$r$};
+ \node[below] at (14,-2) {$q$};
+ \draw[domain=0:18,samples=85,smooth,variable=\u]
+  plot ({.7*sin(60*\u)},{-\u});
+ \node[below] at (0,-20) {$(a,\mu)$};
+ \node at (0,-31) {鬼—鬼—胶子顶角};
+ \begin{scope}[shift={(76,0)}]
+  \draw (-22,0)--(22,0);
+  \draw[->] (-16,0)--(-9,0);
+  \draw[->] (9,0)--(16,0);
+  \fill (0,0) circle[radius=.65mm];
+  \node[above] at (-20,2) {$j$};
+  \node[above] at (20,2) {$i$};
+  \draw[domain=0:18,samples=85,smooth,variable=\u]
+   plot ({.7*sin(60*\u)},{-\u});
+  \node[below] at (0,-20) {$(a,\mu)$};
+  \node at (0,-31) {夸克—夸克—胶子顶角};
+ \end{scope}
+\end{tikzpicture}

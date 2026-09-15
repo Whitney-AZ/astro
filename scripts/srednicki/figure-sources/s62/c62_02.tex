@@ -1,0 +1,23 @@
+% Original vector reconstruction of source Fig.62.2, PDF259.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+ \draw (0,0)--(54,0);
+ \foreach \x in {3,23,45}{\draw[->] (\x,0)--(\x+6,0);}
+ \draw[domain=0:1,samples=201,smooth,variable=\u]
+  plot ({27+(13+.75*sin(1440*\u))*cos(180*\u)},
+        {(13+.75*sin(1440*\u))*sin(180*\u)});
+ \draw[->] (31,16)--(23,16);
+ \node[above] at (27,17) {$\ell$};
+ \fill (14,0) circle[radius=.55mm];
+ \fill (40,0) circle[radius=.55mm];
+ \node[below] at (6,-2) {$p$};
+ \node[below] at (27,-2) {$p+\ell$};
+ \node[below] at (48,-2) {$p$};
+ \node at (66,0) {$+$};
+ \draw (80,0)--(110,0);
+ \draw[->] (82,0)--(89,0);
+ \draw[->] (101,0)--(108,0);
+ \draw (93,-2)--(97,2);
+ \draw (93,2)--(97,-2);
+ \node[below] at (95,-4) {$\delta Z_2,\ \delta Z_m$};
+\end{tikzpicture}

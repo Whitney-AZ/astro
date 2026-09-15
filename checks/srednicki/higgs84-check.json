@@ -1,0 +1,467 @@
+{
+  "checks": 71,
+  "passed": true,
+  "records": [
+    {
+      "name": "SU2 fundamental",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "SO2 fundamental",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU3 fundamental",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "SO3 fundamental",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU4 fundamental",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "SO4 fundamental",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU5 fundamental",
+      "residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "SO5 fundamental",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU6 fundamental",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "SO6 fundamental",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "adjoint eigenvalues [-1.0, 1.0]",
+      "residual": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "adjoint component Gram [-1.0, 1.0]",
+      "residual": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "adjoint eigenvalues [-1.0, 0.0, 1.0]",
+      "residual": 4.440892098500626e-15,
+      "passed": true
+    },
+    {
+      "name": "adjoint component Gram [-1.0, 0.0, 1.0]",
+      "residual": 1.3322676295501878e-15,
+      "passed": true
+    },
+    {
+      "name": "adjoint eigenvalues [-1.0, -1.0, 1.0, 1.0]",
+      "residual": 7.105427357601002e-15,
+      "passed": true
+    },
+    {
+      "name": "adjoint component Gram [-1.0, -1.0, 1.0, 1.0]",
+      "residual": 1.3322676295501878e-15,
+      "passed": true
+    },
+    {
+      "name": "adjoint eigenvalues [-0.3333333333333333, -0.3333333333333333, -0.3333333333333333, 0.5, 0.5]",
+      "residual": 2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "adjoint component Gram [-0.3333333333333333, -0.3333333333333333, -0.3333333333333333, 0.5, 0.5]",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=2",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=3",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=4",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=5",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=6",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=7",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=8",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=9",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "two block minimum N=10",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root tangent ((np.int64(1), np.int64(2), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(1), np.int64(2), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "passed": true,
+      "energy_difference": -1.9999999267827917e-8
+    },
+    {
+      "name": "three root tangent ((np.int64(1), np.int64(3), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(1), np.int64(3), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "passed": true,
+      "energy_difference": -1.9999999267827917e-8
+    },
+    {
+      "name": "three root tangent ((np.int64(2), np.int64(1), np.int64(2)), (np.float64(-0.5), np.float64(0.0), np.float64(0.5)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(2), np.int64(1), np.int64(2)), (np.float64(-0.5), np.float64(0.0), np.float64(0.5)))",
+      "passed": true,
+      "energy_difference": -2.4999997072505664e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(1), np.int64(4), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(1), np.int64(4), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "passed": true,
+      "energy_difference": -1.9999999212316766e-8
+    },
+    {
+      "name": "three root tangent ((np.int64(2), np.int64(2), np.int64(2)), (np.float64(-0.377964473009), np.float64(-0.188982236505), np.float64(0.566946709514)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(2), np.int64(2), np.int64(2)), (np.float64(-0.377964473009), np.float64(-0.188982236505), np.float64(0.566946709514)))",
+      "passed": true,
+      "energy_difference": -5.7142853504554836e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(1), np.int64(5), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(1), np.int64(5), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "passed": true,
+      "energy_difference": -1.9999999267827917e-8
+    },
+    {
+      "name": "three root tangent ((np.int64(2), np.int64(4), np.int64(1)), (np.float64(-0.588348405415), np.float64(0.196116135138), np.float64(0.392232270276)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(2), np.int64(4), np.int64(1)), (np.float64(-0.588348405415), np.float64(0.196116135138), np.float64(0.392232270276)))",
+      "passed": true,
+      "energy_difference": -6.153845821810222e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(3), np.int64(1), np.int64(3)), (np.float64(-0.408248290464), np.float64(0.0), np.float64(0.408248290464)))",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(3), np.int64(1), np.int64(3)), (np.float64(-0.408248290464), np.float64(0.0), np.float64(0.408248290464)))",
+      "passed": true,
+      "energy_difference": -1.4814813542596283e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(1), np.int64(4), np.int64(2)), (np.float64(-0.392232270276), np.float64(-0.196116135138), np.float64(0.588348405415)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(1), np.int64(4), np.int64(2)), (np.float64(-0.392232270276), np.float64(-0.196116135138), np.float64(0.588348405415)))",
+      "passed": true,
+      "energy_difference": -6.15384571078792e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(2), np.int64(3), np.int64(2)), (np.float64(-0.5), np.float64(0.0), np.float64(0.5)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(2), np.int64(3), np.int64(2)), (np.float64(-0.5), np.float64(0.0), np.float64(0.5)))",
+      "passed": true,
+      "energy_difference": -9.99999949513608e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(1), np.int64(6), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(1), np.int64(6), np.int64(1)), (np.float64(-0.707106781187), np.float64(0.0), np.float64(0.707106781187)))",
+      "passed": true,
+      "energy_difference": -1.9999999267827917e-8
+    },
+    {
+      "name": "three root tangent ((np.int64(2), np.int64(5), np.int64(1)), (np.float64(-0.58976782462), np.float64(0.147441956155), np.float64(0.442325868465)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(2), np.int64(5), np.int64(1)), (np.float64(-0.58976782462), np.float64(0.147441956155), np.float64(0.442325868465)))",
+      "passed": true,
+      "energy_difference": -8.695651698698015e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(3), np.int64(1), np.int64(4)), (np.float64(-0.452267016867), np.float64(0.150755672289), np.float64(0.301511344578)))",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(3), np.int64(1), np.int64(4)), (np.float64(-0.452267016867), np.float64(0.150755672289), np.float64(0.301511344578)))",
+      "passed": true,
+      "energy_difference": -7.575757798861105e-10
+    },
+    {
+      "name": "three root tangent ((np.int64(4), np.int64(1), np.int64(3)), (np.float64(-0.301511344578), np.float64(-0.150755672289), np.float64(0.452267016867)))",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(4), np.int64(1), np.int64(3)), (np.float64(-0.301511344578), np.float64(-0.150755672289), np.float64(0.452267016867)))",
+      "passed": true,
+      "energy_difference": -7.575757798861105e-10
+    },
+    {
+      "name": "three root tangent ((np.int64(1), np.int64(5), np.int64(2)), (np.float64(-0.442325868465), np.float64(-0.147441956155), np.float64(0.58976782462)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(1), np.int64(5), np.int64(2)), (np.float64(-0.442325868465), np.float64(-0.147441956155), np.float64(0.58976782462)))",
+      "passed": true,
+      "energy_difference": -8.695651698698015e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(2), np.int64(4), np.int64(2)), (np.float64(-0.5), np.float64(0.0), np.float64(0.5)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(2), np.int64(4), np.int64(2)), (np.float64(-0.5), np.float64(0.0), np.float64(0.5)))",
+      "passed": true,
+      "energy_difference": -9.99999949513608e-9
+    },
+    {
+      "name": "three root tangent ((np.int64(3), np.int64(2), np.int64(3)), (np.float64(-0.408248290464), np.float64(0.0), np.float64(0.408248290464)))",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "three root descent ((np.int64(3), np.int64(2), np.int64(3)), (np.float64(-0.408248290464), np.float64(0.0), np.float64(0.408248290464)))",
+      "passed": true,
+      "energy_difference": -6.666666302335145e-9
+    },
+    {
+      "name": "N3 flat direction 0.2",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "N3 flat direction 0.7",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "N3 flat direction 1.1",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "N3 flat direction 2.3",
+      "residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "SU5 potential (2.0, 0.3, 0.7)",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "SU5 traceless gradient (2.0, 0.3, 0.7)",
+      "residual": 5.342948306008566e-16,
+      "passed": true
+    },
+    {
+      "name": "SU5 potential (0.1, 1.0, 2.0)",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "SU5 traceless gradient (0.1, 1.0, 2.0)",
+      "residual": 3.63207727782644e-18,
+      "passed": true
+    },
+    {
+      "name": "SU5 potential (3.0, 2.0, 0.2)",
+      "residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "SU5 traceless gradient (3.0, 2.0, 0.2)",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    }
+  ],
+  "three_root_directions": [
+    {
+      "N": 4,
+      "multiplicities": [1, 2, 1],
+      "roots": [-0.7071067811865475, 0.0, 0.7071067811865475],
+      "descent": -1.9999999267827917e-8
+    },
+    {
+      "N": 5,
+      "multiplicities": [1, 3, 1],
+      "roots": [-0.7071067811865475, 0.0, 0.7071067811865475],
+      "descent": -1.9999999267827917e-8
+    },
+    {
+      "N": 5,
+      "multiplicities": [2, 1, 2],
+      "roots": [-0.5, 0.0, 0.5],
+      "descent": -2.4999997072505664e-9
+    },
+    {
+      "N": 6,
+      "multiplicities": [1, 4, 1],
+      "roots": [-0.7071067811865476, 0.0, 0.7071067811865476],
+      "descent": -1.9999999212316766e-8
+    },
+    {
+      "N": 6,
+      "multiplicities": [2, 2, 2],
+      "roots": [-0.3779644730092272, -0.1889822365046136, 0.5669467095138409],
+      "descent": -5.7142853504554836e-9
+    },
+    {
+      "N": 7,
+      "multiplicities": [1, 5, 1],
+      "roots": [-0.7071067811865475, 0.0, 0.7071067811865475],
+      "descent": -1.9999999267827917e-8
+    },
+    {
+      "N": 7,
+      "multiplicities": [2, 4, 1],
+      "roots": [-0.5883484054145521, 0.19611613513818404, 0.3922322702763681],
+      "descent": -6.153845821810222e-9
+    },
+    {
+      "N": 7,
+      "multiplicities": [3, 1, 3],
+      "roots": [-0.4082482904638631, 0.0, 0.4082482904638631],
+      "descent": -1.4814813542596283e-9
+    },
+    {
+      "N": 7,
+      "multiplicities": [1, 4, 2],
+      "roots": [-0.3922322702763681, -0.19611613513818404, 0.5883484054145521],
+      "descent": -6.15384571078792e-9
+    },
+    {
+      "N": 7,
+      "multiplicities": [2, 3, 2],
+      "roots": [-0.5, 0.0, 0.5],
+      "descent": -9.99999949513608e-9
+    },
+    {
+      "N": 8,
+      "multiplicities": [1, 6, 1],
+      "roots": [-0.7071067811865475, 0.0, 0.7071067811865475],
+      "descent": -1.9999999267827917e-8
+    },
+    {
+      "N": 8,
+      "multiplicities": [2, 5, 1],
+      "roots": [-0.5897678246195885, 0.14744195615489714, 0.4423258684646914],
+      "descent": -8.695651698698015e-9
+    },
+    {
+      "N": 8,
+      "multiplicities": [3, 1, 4],
+      "roots": [-0.45226701686664544, 0.15075567228888181, 0.30151134457776363],
+      "descent": -7.575757798861105e-10
+    },
+    {
+      "N": 8,
+      "multiplicities": [4, 1, 3],
+      "roots": [-0.30151134457776363, -0.15075567228888181, 0.45226701686664544],
+      "descent": -7.575757798861105e-10
+    },
+    {
+      "N": 8,
+      "multiplicities": [1, 5, 2],
+      "roots": [-0.4423258684646914, -0.14744195615489714, 0.5897678246195885],
+      "descent": -8.695651698698015e-9
+    },
+    {
+      "N": 8,
+      "multiplicities": [2, 4, 2],
+      "roots": [-0.5, 0.0, 0.5],
+      "descent": -9.99999949513608e-9
+    },
+    {
+      "N": 8,
+      "multiplicities": [3, 2, 3],
+      "roots": [-0.4082482904638631, 0.0, 0.4082482904638631],
+      "descent": -6.666666302335145e-9
+    }
+  ],
+  "script_sha256": "7ca54d8808bb27a788c43a81efa3ce4cb4a1c6a21f0039eead18709346acf257",
+  "helper_sha256": "680d9c959da535c1cee6eee8b6a9e695644c2aa83b018585183710929fae3987"
+}

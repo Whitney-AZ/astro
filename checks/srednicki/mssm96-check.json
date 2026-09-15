@@ -1,0 +1,1178 @@
+{
+  "checks": 234,
+  "all_passed": true,
+  "max_scaled_residual": 7.0912471413909e-13,
+  "script_sha256": "4df80c2ce624913c2f963f9ac0988723fb1a9216c957bf6c3f7e10b88396335b",
+  "records": [
+    {
+      "name": "Gram determinant 0",
+      "scaled_residual": 1.5888749761595052e-15,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 0",
+      "scaled_residual": 1.4368474372526066e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 0",
+      "scaled_residual": 4.3105423117578204e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 0",
+      "scaled_residual": 2.195529790867665e-16,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 1",
+      "scaled_residual": 5.191049845159866e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 1",
+      "scaled_residual": 1.246033748641841e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 1",
+      "scaled_residual": 2.492067497283682e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 1",
+      "scaled_residual": 1.1680705510765408e-16,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 2",
+      "scaled_residual": 7.413755765992249e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 2",
+      "scaled_residual": 1.757942987987617e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 2",
+      "scaled_residual": 3.515885975975235e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 2",
+      "scaled_residual": 1.4302830985075973e-16,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 3",
+      "scaled_residual": 1.3676797011537766e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 4",
+      "scaled_residual": 5.390775325840117e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 4",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 4",
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 4",
+      "scaled_residual": 1.2966410311174612e-16,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 5",
+      "scaled_residual": 1.232938411301814e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 5",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 5",
+      "scaled_residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 6",
+      "scaled_residual": 3.602446905134032e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 6",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 6",
+      "scaled_residual": 1.7302063224660576e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 6",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 6",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 7",
+      "scaled_residual": 3.347161461888392e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 7",
+      "scaled_residual": 1.1599339421195073e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 7",
+      "scaled_residual": 2.3198678842390145e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 7",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 7",
+      "scaled_residual": 1.9148915566680508e-16,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 8",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 8",
+      "scaled_residual": 1.2243337653841934e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 8",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 8",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 8",
+      "scaled_residual": 1.3632302883385987e-16,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 9",
+      "scaled_residual": 1.4520174176437584e-15,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 9",
+      "scaled_residual": 2.449693492225487e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 9",
+      "scaled_residual": 2.4496934922254877e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 9",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 9",
+      "scaled_residual": 1.1895936548202372e-16,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 10",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 10",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 10",
+      "scaled_residual": 1.9484016546802597e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 10",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 10",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gram determinant 11",
+      "scaled_residual": 9.992007221626409e-16,
+      "passed": true
+    },
+    {
+      "name": "Pauli quartic against raw moment maps 11",
+      "scaled_residual": 1.4314716085539384e-16,
+      "passed": true
+    },
+    {
+      "name": "Full finite SU2 and hypercharge invariance 11",
+      "scaled_residual": 1.4314716085539387e-16,
+      "passed": true
+    },
+    {
+      "name": "All four higgsino singular masses 11",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "F potential from four holomorphic derivatives 11",
+      "scaled_residual": 1.546831126548918e-16,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 0",
+      "scaled_residual": 4.818657499203414e-17,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 0",
+      "scaled_residual": 9.769962616701378e-15,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 0",
+      "scaled_residual": 8.898319945347603e-15,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 0",
+      "scaled_residual": 3.0256849088627704e-15,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 0",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 0",
+      "scaled_residual": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 1",
+      "scaled_residual": 3.083949834508289e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 1",
+      "scaled_residual": 4.192202140984591e-13,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 1",
+      "scaled_residual": 2.450464617003677e-13,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 1",
+      "scaled_residual": 2.638832774691308e-13,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 1",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 1",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 2",
+      "scaled_residual": 1.1022722086935961e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 2",
+      "scaled_residual": 1.472433286409114e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 2",
+      "scaled_residual": 2.2938605257629757e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 2",
+      "scaled_residual": 7.941440313643941e-15,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 2",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 2",
+      "scaled_residual": 1.0842021724855044e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 2",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 3",
+      "scaled_residual": 1.2914067601746404e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 3",
+      "scaled_residual": 1.0930145677434666e-13,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 3",
+      "scaled_residual": 1.219024881038422e-13,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 3",
+      "scaled_residual": 5.913013363347273e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 3",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 3",
+      "scaled_residual": 4.5102810375396984e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 4",
+      "scaled_residual": 8.19182503948579e-17,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 4",
+      "scaled_residual": 4.773959005888173e-15,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 4",
+      "scaled_residual": 4.725084396786095e-15,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 4",
+      "scaled_residual": 1.6759078493644229e-15,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 4",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 4",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 5",
+      "scaled_residual": 4.625929269271485e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 5",
+      "scaled_residual": 9.08162434143378e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 5",
+      "scaled_residual": 8.260059303211165e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 5",
+      "scaled_residual": 6.277408225034812e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 5",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 5",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 6",
+      "scaled_residual": 6.167901927771104e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 6",
+      "scaled_residual": 2.0088162162217402e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 6",
+      "scaled_residual": 2.3090390327439645e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 6",
+      "scaled_residual": 9.307180302537185e-15,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 6",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 6",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 6",
+      "scaled_residual": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 6",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 7",
+      "scaled_residual": 6.47630097698008e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 7",
+      "scaled_residual": 7.939368982390182e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 7",
+      "scaled_residual": 1.05229554462874e-13,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 7",
+      "scaled_residual": 2.0374346680215516e-13,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 7",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 7",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 7",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 7",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 8",
+      "scaled_residual": 3.5501974262585243e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 8",
+      "scaled_residual": 1.3847595104168519e-13,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 8",
+      "scaled_residual": 1.5146411405097785e-13,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 8",
+      "scaled_residual": 8.073902902561815e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 8",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 8",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 8",
+      "scaled_residual": 1.3747683547116196e-16,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 8",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 9",
+      "scaled_residual": 6.8136098253674766e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 9",
+      "scaled_residual": 7.0912471413909e-13,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 9",
+      "scaled_residual": 5.149350290827323e-13,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 9",
+      "scaled_residual": 3.679362779803281e-13,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 9",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 9",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 9",
+      "scaled_residual": 3.8163916471489756e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 9",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 10",
+      "scaled_residual": 6.601594090537936e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 10",
+      "scaled_residual": 4.9342248805965657e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 10",
+      "scaled_residual": 4.1328736716641377e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 10",
+      "scaled_residual": 1.3876798693764792e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 10",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 10",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 10",
+      "scaled_residual": 2.0816681711721685e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 10",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 11",
+      "scaled_residual": 7.709883621288827e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 11",
+      "scaled_residual": 3.7384488540236775e-13,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 11",
+      "scaled_residual": 3.108492470795552e-13,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 11",
+      "scaled_residual": 3.9143718757185025e-13,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 11",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 11",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 11",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 11",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 12",
+      "scaled_residual": 2.1202025233859242e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 12",
+      "scaled_residual": 2.3225922795691918e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 12",
+      "scaled_residual": 2.3225922795691918e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 12",
+      "scaled_residual": 1.6961738997575465e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 12",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 12",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 12",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 12",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 13",
+      "scaled_residual": 6.167905692361982e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 13",
+      "scaled_residual": 3.186340080674199e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 13",
+      "scaled_residual": 3.186340080674199e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 13",
+      "scaled_residual": 1.4199034201016481e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 13",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 13",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 13",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 13",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 14",
+      "scaled_residual": 7.288323229081202e-17,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 14",
+      "scaled_residual": 5.4567461660326444e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 14",
+      "scaled_residual": 6.550315845288424e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 14",
+      "scaled_residual": 1.2341200239164512e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 14",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 14",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 14",
+      "scaled_residual": 3.925231146709437e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 14",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 15",
+      "scaled_residual": 5.027084073091122e-15,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 15",
+      "scaled_residual": 3.6626257582383914e-13,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 15",
+      "scaled_residual": 3.46126432571267e-13,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 15",
+      "scaled_residual": 2.0722946765613953e-13,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 15",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 15",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 15",
+      "scaled_residual": 1.2589178922514504e-32,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 15",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 16",
+      "scaled_residual": 2.1202025233859242e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 16",
+      "scaled_residual": 3.0839525450137205e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 16",
+      "scaled_residual": 3.0839525450137205e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 16",
+      "scaled_residual": 1.6961738997575465e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 16",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 16",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 16",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 16",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 17",
+      "scaled_residual": 2.794836031442399e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 17",
+      "scaled_residual": 2.538941279439655e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 17",
+      "scaled_residual": 1.7696204330292244e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 17",
+      "scaled_residual": 1.1360867334866764e-14,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 17",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 17",
+      "scaled_residual": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 17",
+      "scaled_residual": 4.163336342344337e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 17",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 18",
+      "scaled_residual": 4.481368979606752e-18,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 18",
+      "scaled_residual": 1.0824674490095276e-15,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 18",
+      "scaled_residual": 1.1916726772032144e-15,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 18",
+      "scaled_residual": 7.123084415019023e-18,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 18",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 18",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 18",
+      "scaled_residual": 2.03235497052043e-18,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 18",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Original quartic full stationary point 19",
+      "scaled_residual": 1.1564823173178715e-16,
+      "passed": true
+    },
+    {
+      "name": "All 64 Hessian entries from original potential 19",
+      "scaled_residual": 1.5539652897800238e-14,
+      "passed": true
+    },
+    {
+      "name": "Full eight scalar mass eigenvalues 19",
+      "scaled_residual": 1.8591125077225146e-14,
+      "passed": true
+    },
+    {
+      "name": "Gauge generators give Hessian null vectors 19",
+      "scaled_residual": 9.233772059542162e-15,
+      "passed": true
+    },
+    {
+      "name": "Exactly three broken gauge directions 19",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Gauge masses from full covariant kinetic term 19",
+      "scaled_residual": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "Rayleigh Higgs bound 19",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "Full complex field energy samples 19",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Origin spectrum (0.4, 1.1, 0.3)",
+      "scaled_residual": 1.8335985246672978e-16,
+      "passed": true
+    },
+    {
+      "name": "Origin spectrum (0.4, 0.9, 0.6)",
+      "scaled_residual": 3.4160708450004814e-16,
+      "passed": true
+    },
+    {
+      "name": "Origin spectrum (-0.2, 1.3, 0.2)",
+      "scaled_residual": 3.348561943476268e-16,
+      "passed": true
+    },
+    {
+      "name": "Origin spectrum (0.2, 0.4, 0.5)",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "Finite boundary excess Sigma=3.898025719978264",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Positive decreasing approach Sigma=3.898025719978264",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Finite boundary excess Sigma=30.0",
+      "scaled_residual": 1.8041124150158794e-16,
+      "passed": true
+    },
+    {
+      "name": "Positive decreasing approach Sigma=30.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Finite boundary excess Sigma=90.0",
+      "scaled_residual": 6.168676680573526e-15,
+      "passed": true
+    },
+    {
+      "name": "Positive decreasing approach Sigma=90.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Finite boundary excess Sigma=270.0",
+      "scaled_residual": 9.46465128492946e-15,
+      "passed": true
+    },
+    {
+      "name": "Positive decreasing approach Sigma=270.0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Explicit doublet anomaly traces Y=-0.5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Explicit doublet anomaly traces Y=0.5",
+      "scaled_residual": 0.0,
+      "passed": true
+    }
+  ]
+}

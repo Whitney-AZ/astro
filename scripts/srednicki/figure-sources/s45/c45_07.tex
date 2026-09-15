@@ -1,0 +1,25 @@
+% Original vector reconstruction: source Fig.45.7, PDF198 / printed186.
+% Fixed incoming order p1,p2; outgoing p1',p2' or p2',p1'. Relative minus.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \foreach \shift/\pa/\pb/\channel in {0/1/2/t,78/2/1/u}{
+    \begin{scope}[shift={(\shift,0)}]
+      \foreach \y in {0,-24}{
+        \draw (0,\y)--(54,\y);
+        \draw[->] (8,\y)--(18,\y);
+        \draw[->] (35,\y)--(45,\y);
+        \fill (27,\y) circle[radius=.55mm];
+      }
+      \draw[scalar] (27,0)--(27,-24);
+      \draw[->] (27,-8)--(27,-15);
+      \node[above] at (4,2) {$p_1$};
+      \node[above] at (50,2) {$p'_{\pa}$};
+      \node[below] at (4,-26) {$p_2$};
+      \node[below] at (50,-26) {$p'_{\pb}$};
+      \node[right] at (30,-12) {$p_1-p'_{\pa}$};
+      \node at (27,-37) {$(\channel)$};
+    \end{scope}
+  }
+  \node at (66,-12) {$-$};
+\end{tikzpicture}

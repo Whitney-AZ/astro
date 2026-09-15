@@ -1,0 +1,223 @@
+{
+  "checks": 30,
+  "passed": true,
+  "records": [
+    {
+      "name": "circle chord a/R=0.001",
+      "residual": 9.931682143360376e-10,
+      "scaled_residual": 7.915812692738056e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "circle chord a/R=0.01",
+      "residual": 6.139089236967266e-11,
+      "scaled_residual": 4.963106162902411e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "circle chord a/R=0.1",
+      "residual": 2.4158453015843406e-12,
+      "scaled_residual": 2.2706187933596652e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "circle chord a/R=0.3",
+      "residual": 3.055333763768431e-13,
+      "scaled_residual": 1.2964529234123093e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "circle chord a/R=1.0",
+      "residual": 1.4210854715202004e-14,
+      "scaled_residual": 6.2419301360375036e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "same edge L=1.0",
+      "residual": 6.991740519879386e-12,
+      "scaled_residual": 3.703455228244681e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "same edge L=3.0",
+      "residual": 2.1316282072803006e-12,
+      "scaled_residual": 2.797465906224568e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "same edge L=20.0",
+      "residual": 7.889866537880152e-11,
+      "scaled_residual": 5.984748887541339e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "opposite edges L=1.0, d=3.0",
+      "residual": 3.608224830031759e-16,
+      "scaled_residual": 3.608224830031759e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "opposite edges L=3.0, d=1.0",
+      "residual": 2.7533531010703882e-14,
+      "scaled_residual": 5.303385495447617e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "opposite edges L=20.0, d=0.2",
+      "residual": 4.376943252282217e-12,
+      "scaled_residual": 1.4447794241384704e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "opposite edges L=0.3, d=0.7",
+      "residual": 7.216449660063518e-16,
+      "scaled_residual": 7.216449660063518e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "SU2 trace moment 0",
+      "residual": 2.6645352591003757e-14,
+      "scaled_residual": 2.6645352591003757e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "SU2 trace moment 1",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "SU2 trace moment 2",
+      "residual": 2.708944180085382e-14,
+      "scaled_residual": 2.708944180085382e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "SU2 trace moment 3",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "SU2 trace moment 4",
+      "residual": 5.417888360170764e-14,
+      "scaled_residual": 2.708944180085382e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "SU2 one plaquette h=0.0001",
+      "residual": 6.166399856011306e-17,
+      "scaled_residual": 6.166399856011306e-17,
+      "tolerance": 2e-9,
+      "passed": true
+    },
+    {
+      "name": "SU2 one plaquette h=0.001",
+      "residual": 1.3903808659954109e-15,
+      "scaled_residual": 1.3903808659954109e-15,
+      "tolerance": 2e-9,
+      "passed": true
+    },
+    {
+      "name": "SU2 one plaquette h=0.01",
+      "residual": 1.33319032896706e-10,
+      "scaled_residual": 1.33319032896706e-10,
+      "tolerance": 2e-9,
+      "passed": true
+    },
+    {
+      "name": "plaquette unitarity a=0.1",
+      "residual": 3.330669073876434e-16,
+      "scaled_residual": 3.330669073876434e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "plaquette unitarity a=0.05",
+      "residual": 8.88178419723467e-16,
+      "scaled_residual": 8.88178419723467e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "plaquette unitarity a=0.025",
+      "residual": 2.2204460497670835e-16,
+      "scaled_residual": 2.2204460497670835e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "plaquette unitarity a=0.0125",
+      "residual": 5.551115123138184e-16,
+      "scaled_residual": 5.551115123138184e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "curvature convergence step 1",
+      "residual": 0.00570950286613936,
+      "scaled_residual": 0.00570950286613936,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "real trace convergence step 1",
+      "residual": 0.0001259316920239062,
+      "scaled_residual": 0.0001259316920239062,
+      "tolerance": 0.03,
+      "passed": true
+    },
+    {
+      "name": "curvature convergence step 2",
+      "residual": 0.002944231097237293,
+      "scaled_residual": 0.002944231097237293,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "real trace convergence step 2",
+      "residual": 6.826334323661865e-5,
+      "scaled_residual": 6.826334323661865e-5,
+      "tolerance": 0.03,
+      "passed": true
+    },
+    {
+      "name": "curvature convergence step 3",
+      "residual": 0.0014934323022175455,
+      "scaled_residual": 0.0014934323022175455,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "real trace convergence step 3",
+      "residual": 0.015109110327254677,
+      "scaled_residual": 0.015109110327254677,
+      "tolerance": 0.03,
+      "passed": true
+    }
+  ],
+  "curvature_errors": [
+    0.009054269181926552, 0.004578829966808283, 0.0023028961169813803, 0.0011548872779404416
+  ],
+  "real_trace_errors": [
+    0.0006422316527595617, 0.0001604770358711871, 4.013021366677805e-5, 9.42622159094686e-6
+  ],
+  "script_sha256": "9df3c2e01f3fe5893cb56c723e071793bc4259218952d9b8275a4f8882026123"
+}

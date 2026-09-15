@@ -1,0 +1,31 @@
+% Original vector reconstruction: source Fig.45.9, PDF199 / printed187.
+% Same two diagrams as45.8, reshaped with every fermion arrow L->R.
+% Fixed left order: (p1,-p2'). Right orders: (p1',-p2) and (-p2,p1').
+% Relative minus is the odd right-endpoint permutation; internal scalar is t or s.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \foreach \shift in {0,78}{
+    \begin{scope}[shift={(\shift,0)}]
+      \foreach \y in {0,-24}{
+        \draw (0,\y)--(54,\y);
+        \draw[->] (8,\y)--(18,\y);
+        \draw[->] (35,\y)--(45,\y);
+        \fill (27,\y) circle[radius=.55mm];
+      }
+      \draw[scalar] (27,0)--(27,-24);
+      \draw[->] (27,-8)--(27,-15);
+      \node[above] at (4,2) {$p_1$};
+      \node[below] at (4,-26) {$-p'_2$};
+    \end{scope}
+  }
+  \node[above] at (50,2) {$p'_1$};
+  \node[below] at (50,-26) {$-p_2$};
+  \node[right] at (30,-12) {$p_1-p'_1$};
+  \node at (27,-37) {$(t)$};
+  \node[above] at (128,2) {$-p_2$};
+  \node[below] at (128,-26) {$p'_1$};
+  \node[right] at (108,-12) {$p_1+p_2$};
+  \node at (105,-37) {$(s)$};
+  \node at (66,-12) {$-$};
+\end{tikzpicture}

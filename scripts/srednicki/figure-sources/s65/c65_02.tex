@@ -1,0 +1,60 @@
+% Original vector reconstruction of source Fig.65.2, PDF269.
+% Dashed arrows denote complex-scalar charge flow; arrows beside photon waves denote momentum.
+% All dimensions are native millimetres; definitions are local to this picture.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont,
+ scalar/.style={dash pattern=on 2pt off 1.7pt}]
+% S65-D004: scalar a->vL->vR->b, upper photon momentum vR->vL; S=1.
+\draw[scalar] (0,0)--(13,0);
+\draw[->] (5.07,0)--(8.06,0);
+\node[below] at (6.5,-2) {$k$};
+\draw[scalar] (13,0)--(39,0);
+\draw[->] (23.14,0)--(29.12,0);
+\node[below] at (26,-2) {$k+\ell$};
+\draw[scalar] (39,0)--(52,0);
+\draw[->] (44.07,0)--(47.06,0);
+\node[below] at (45.5,-2) {$k$};
+\draw[domain=0:1,samples=161,smooth,variable=\u]
+ plot ({26+(13+0.7*sin(2160*\u))*cos(0+(180)*\u)},
+       {0+(13+0.7*sin(2160*\u))*sin(0+(180)*\u)});
+\draw[->] (30,16)--(22,16);
+\node[above] at (26,17) {$\ell$};
+\fill (13,0) circle[radius=.55mm];
+\fill (39,0) circle[radius=.55mm];
+\node at (65,0) {$+$};
+% S65-D005: same-photon tadpole, S=2. The explicit 1/2 repairs the omission in source65.19/65.20.
+\node at (77,1) {$\frac12$};
+\draw[scalar] (84,0)--(108,0);
+\draw[->] (93.36,0)--(98.88,0);
+\node[below] at (96,-2) {$k$};
+\draw[scalar] (108,0)--(132,0);
+\draw[->] (117.36,0)--(122.88,0);
+\node[below] at (120,-2) {$k$};
+\draw[domain=0:1,samples=161,smooth,variable=\u]
+ plot ({108+(10+0.7*sin(4320*\u))*cos(-90+(360)*\u)},
+       {10+(10+0.7*sin(4320*\u))*sin(-90+(360)*\u)});
+\node at (108,10) {$\ell$};
+\fill (108,0) circle[radius=.55mm];
+% S65-D006: complex-scalar tadpole at one four-scalar vertex, S=1.
+\node at (-9,-35) {$+$};
+\draw[scalar] (0,-35)--(26,-35);
+\draw[->] (10.14,-35)--(16.12,-35);
+\node[below] at (13,-37) {$k$};
+\draw[scalar] (26,-35)--(52,-35);
+\draw[->] (36.14,-35)--(42.12,-35);
+\node[below] at (39,-37) {$k$};
+\draw[scalar] (26,-25) circle[radius=10mm];
+\draw[->] (21,-16.3397) arc[start angle=120,end angle=60,radius=10mm];
+\node at (26,-25) {$\ell$};
+\fill (26,-35) circle[radius=.55mm];
+\node at (65,-35) {$+$};
+% S65-D007: scalar two-point counterterm; both external charge arrows point right.
+\draw[scalar] (84,-35)--(108,-35);
+\draw[->] (93.36,-35)--(98.88,-35);
+\node[below] at (96,-37) {$k$};
+\draw[scalar] (108,-35)--(132,-35);
+\draw[->] (117.36,-35)--(122.88,-35);
+\node[below] at (120,-37) {$k$};
+\draw (106.3,-36.7)--(109.7,-33.3);
+\draw (106.3,-33.3)--(109.7,-36.7);
+\end{tikzpicture}

@@ -1,0 +1,337 @@
+{
+  "status": "passed",
+  "execution": {
+    "attempt": 1,
+    "timestamp_utc": "2026-09-14T13:24:04.796359+00:00",
+    "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "argv": [
+      "scripts/srednicki/check_thresholds66.py",
+      "--output",
+      "checks/srednicki/thresholds66-check.json"
+    ],
+    "randomness": "none",
+    "code_sha256": "7322007fdc15bb7af271371e84c3a7c436e863529ba008d1720ed5bef302d979"
+  },
+  "model": {
+    "MW_GeV": 80.4,
+    "MW_source": "S87 PDF357/345 after(87.12)",
+    "alpha_OS_inverse": 137.036,
+    "species_inputs": [
+      {
+        "name": "e",
+        "source_mass_text": "0.511",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.0005110000000000001,
+        "colors": 1,
+        "source_charge": "-1",
+        "N_c_Q_squared": "1",
+        "source": "S88 PDF360/348 table2",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "mu",
+        "source_mass_text": "105.7",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.1057,
+        "colors": 1,
+        "source_charge": "-1",
+        "N_c_Q_squared": "1",
+        "source": "S88 PDF360/348 table2",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "tau",
+        "source_mass_text": "1777",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 1.7770000000000001,
+        "colors": 1,
+        "source_charge": "-1",
+        "N_c_Q_squared": "1",
+        "source": "S88 PDF360/348 table2",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "u",
+        "source_mass_text": "300",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.3,
+        "colors": 3,
+        "source_charge": "2/3",
+        "N_c_Q_squared": "4/3",
+        "source": "S66 PDF275/263 exercise66.4 threshold",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "d",
+        "source_mass_text": "300",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.3,
+        "colors": 3,
+        "source_charge": "-1/3",
+        "N_c_Q_squared": "1/3",
+        "source": "S66 PDF275/263 exercise66.4 threshold",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "s",
+        "source_mass_text": "300",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.3,
+        "colors": 3,
+        "source_charge": "-1/3",
+        "N_c_Q_squared": "1/3",
+        "source": "S66 PDF275/263 exercise66.4 threshold",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "c",
+        "source_mass_text": "1.3",
+        "source_mass_unit": "GeV",
+        "mass_GeV": 1.3,
+        "colors": 3,
+        "source_charge": "2/3",
+        "N_c_Q_squared": "4/3",
+        "source": "S83 PDF340/328 table1",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "b",
+        "source_mass_text": "4.3",
+        "source_mass_unit": "GeV",
+        "mass_GeV": 4.3,
+        "colors": 3,
+        "source_charge": "-1/3",
+        "N_c_Q_squared": "1/3",
+        "source": "S83 PDF340/328 table1",
+        "active_below_MW": true,
+        "exclusion_reason": null
+      },
+      {
+        "name": "t",
+        "source_mass_text": "178",
+        "source_mass_unit": "GeV",
+        "mass_GeV": 178.0,
+        "colors": 3,
+        "source_charge": "2/3",
+        "N_c_Q_squared": "4/3",
+        "source": "S83 PDF340/328 table1",
+        "active_below_MW": false,
+        "exclusion_reason": "mass above MW"
+      },
+      {
+        "name": "nu_e",
+        "source_mass_text": "0",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.0,
+        "colors": 1,
+        "source_charge": "0",
+        "N_c_Q_squared": "0",
+        "source": "S88 PDF360/348 table2; neutral",
+        "active_below_MW": false,
+        "exclusion_reason": "neutral"
+      },
+      {
+        "name": "nu_mu",
+        "source_mass_text": "0",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.0,
+        "colors": 1,
+        "source_charge": "0",
+        "N_c_Q_squared": "0",
+        "source": "S88 PDF360/348 table2; neutral",
+        "active_below_MW": false,
+        "exclusion_reason": "neutral"
+      },
+      {
+        "name": "nu_tau",
+        "source_mass_text": "0",
+        "source_mass_unit": "MeV",
+        "mass_GeV": 0.0,
+        "colors": 1,
+        "source_charge": "0",
+        "N_c_Q_squared": "0",
+        "source": "S88 PDF360/348 table2; neutral",
+        "active_below_MW": false,
+        "exclusion_reason": "neutral"
+      }
+    ],
+    "approximation": "One-loop QED with constant source masses, sharp thresholds and continuous leading-log matching; no higher-order or QCD data.",
+    "factor_2_over_3pi": 0.2122065907891938
+  },
+  "per_flavor": [
+    {
+      "name": "e",
+      "mass_GeV": 0.0005110000000000001,
+      "N_c_Q_squared": "1",
+      "log_MW_over_m": 11.96615514394549,
+      "weighted_log": 11.96615514394549,
+      "inverse_alpha_drop": 2.5392969879512473,
+      "cumulative_weighted_log_by_flavor": 11.96615514394549,
+      "inverse_at_MW_after_this_subset": 134.49670301204875
+    },
+    {
+      "name": "mu",
+      "mass_GeV": 0.1057,
+      "N_c_Q_squared": "1",
+      "log_MW_over_m": 6.634164562290866,
+      "weighted_log": 6.634164562290866,
+      "inverse_alpha_drop": 1.4078134444982286,
+      "cumulative_weighted_log_by_flavor": 18.600319706236355,
+      "inverse_at_MW_after_this_subset": 133.08888956755052
+    },
+    {
+      "name": "u",
+      "mass_GeV": 0.3,
+      "N_c_Q_squared": "4/3",
+      "log_MW_over_m": 5.5909869805108565,
+      "weighted_log": 7.454649307347808,
+      "inverse_alpha_drop": 1.5819257150413033,
+      "cumulative_weighted_log_by_flavor": 26.054969013584163,
+      "inverse_at_MW_after_this_subset": 131.50696385250922
+    },
+    {
+      "name": "d",
+      "mass_GeV": 0.3,
+      "N_c_Q_squared": "1/3",
+      "log_MW_over_m": 5.5909869805108565,
+      "weighted_log": 1.863662326836952,
+      "inverse_alpha_drop": 0.3954814287603258,
+      "cumulative_weighted_log_by_flavor": 27.91863134042112,
+      "inverse_at_MW_after_this_subset": 131.1114824237489
+    },
+    {
+      "name": "s",
+      "mass_GeV": 0.3,
+      "N_c_Q_squared": "1/3",
+      "log_MW_over_m": 5.5909869805108565,
+      "weighted_log": 1.863662326836952,
+      "inverse_alpha_drop": 0.3954814287603258,
+      "cumulative_weighted_log_by_flavor": 29.78229366725807,
+      "inverse_at_MW_after_this_subset": 130.71600099498858
+    },
+    {
+      "name": "c",
+      "mass_GeV": 1.3,
+      "N_c_Q_squared": "4/3",
+      "log_MW_over_m": 4.124649911717429,
+      "weighted_log": 5.499533215623239,
+      "inverse_alpha_drop": 1.1670371946193396,
+      "cumulative_weighted_log_by_flavor": 35.281826882881305,
+      "inverse_at_MW_after_this_subset": 129.54896380036922
+    },
+    {
+      "name": "tau",
+      "mass_GeV": 1.7770000000000001,
+      "N_c_Q_squared": "1",
+      "log_MW_over_m": 3.8120876270124064,
+      "weighted_log": 3.8120876270124064,
+      "inverse_alpha_drop": 0.8089501191179705,
+      "cumulative_weighted_log_by_flavor": 39.093914509893715,
+      "inverse_at_MW_after_this_subset": 128.74001368125127
+    },
+    {
+      "name": "b",
+      "mass_GeV": 4.3,
+      "N_c_Q_squared": "1/3",
+      "log_MW_over_m": 2.928399153485404,
+      "weighted_log": 0.9761330511618014,
+      "inverse_alpha_drop": 0.20714186694369954,
+      "cumulative_weighted_log_by_flavor": 40.07004756105552,
+      "inverse_at_MW_after_this_subset": 128.53287181430755
+    }
+  ],
+  "piecewise_intervals": [
+    {
+      "lower_GeV": 0.0005110000000000001,
+      "upper_GeV": 0.1057,
+      "active_flavors": ["e"],
+      "active_weight": "1",
+      "weighted_log_interval": 5.331990581654624,
+      "inverse_alpha_start": 137.036,
+      "inverse_alpha_end": 135.904516456547
+    },
+    {
+      "lower_GeV": 0.1057,
+      "upper_GeV": 0.3,
+      "active_flavors": ["e", "mu"],
+      "active_weight": "2",
+      "weighted_log_interval": 2.086355163560018,
+      "inverse_alpha_start": 135.904516456547,
+      "inverse_alpha_end": 135.46177814011247
+    },
+    {
+      "lower_GeV": 0.3,
+      "upper_GeV": 1.3,
+      "active_flavors": ["e", "mu", "u", "d", "s"],
+      "active_weight": "4",
+      "weighted_log_interval": 5.865348275173709,
+      "inverse_alpha_start": 135.46177814011247,
+      "inverse_alpha_end": 134.21711257884658
+    },
+    {
+      "lower_GeV": 1.3,
+      "upper_GeV": 1.7770000000000001,
+      "active_flavors": ["e", "mu", "u", "d", "s", "c"],
+      "active_weight": "16/3",
+      "weighted_log_interval": 1.6669988517601237,
+      "inverse_alpha_start": 134.21711257884658,
+      "inverse_alpha_end": 133.86336443566506
+    },
+    {
+      "lower_GeV": 1.7770000000000001,
+      "upper_GeV": 4.3,
+      "active_flavors": ["e", "mu", "u", "d", "s", "c", "tau"],
+      "active_weight": "19/3",
+      "weighted_log_interval": 5.5966936656710145,
+      "inverse_alpha_start": 133.86336443566506,
+      "inverse_alpha_end": 132.67570915318154
+    },
+    {
+      "lower_GeV": 4.3,
+      "upper_GeV": 80.4,
+      "active_flavors": ["e", "mu", "u", "d", "s", "c", "tau", "b"],
+      "active_weight": "20/3",
+      "weighted_log_interval": 19.52266102323603,
+      "inverse_alpha_start": 132.67570915318154,
+      "inverse_alpha_end": 128.53287181430755
+    }
+  ],
+  "low_scale_controls": [
+    {
+      "mu_GeV": 0.00025550000000000003,
+      "inverse_from_correct_max": 128.53287181430755,
+      "inverse_from_printed_min": 119.12675074631323
+    },
+    {
+      "mu_GeV": 0.00012775000000000002,
+      "inverse_from_correct_max": 128.53287181430755,
+      "inverse_from_printed_min": 118.14614807896811
+    }
+  ],
+  "checks": {
+    "direct_vs_piecewise_log_sum_abs_error": 0.0,
+    "direct_vs_cumulative_inverse_abs_error": 0.0,
+    "max_low_scale_dependence_abs_error": 0.0,
+    "printed_min_spurious_low_scale_change": -0.9806026673451242,
+    "inverse_alpha_positive": true
+  },
+  "summary": {
+    "active_flavors": 8,
+    "color_expanded_charged_Dirac_fields": 18,
+    "sum_active_NcQ2": "20/3",
+    "direct_weighted_log_sum": 40.07004756105552,
+    "piecewise_weighted_log_sum": 40.07004756105552,
+    "inverse_alpha_drop": 8.503128185692441,
+    "alpha_MW_inverse": 128.53287181430755,
+    "alpha_MW": 0.007780110923256331
+  }
+}

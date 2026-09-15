@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1.35cm,y=1.12cm]
+\fill[blue!9] (-2.7,4) -- plot[domain=-2.7:2.7,samples=80]
+(\x,{sqrt(\x*\x+4)}) -- (2.7,4) -- cycle;
+\draw[->,gray!80] (-3,0) -- (3,0) node[right] {$P/m$};
+\draw[->,gray!80] (0,-0.15) -- (0,4.3) node[above] {$E/m$};
+\draw[blue!75!black,very thick,domain=-2.7:2.7,samples=80]
+plot(\x,{sqrt(\x*\x+1)});
+\draw[blue!55!black,thick,domain=-2.7:2.7,samples=80]
+plot(\x,{sqrt(\x*\x+4)});
+\fill (0,0) circle (2pt) node[below left] {$0$};
+\draw (-0.05,1) -- (0.05,1) node[left=4pt] {$1$};
+\draw (-0.05,2) -- (0.05,2) node[left=4pt] {$2$};
+\node[blue!75!black,fill=white,inner sep=2pt] at (1.35,1.2) {孤立单粒子壳};
+\node[blue!55!black] at (1.25,3.65) {多粒子连续谱};
+\node[anchor=west] at (0.18,0.18) {真空};
+\end{tikzpicture}

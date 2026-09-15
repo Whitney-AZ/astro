@@ -1,0 +1,1720 @@
+{
+  "runs": [
+    {
+      "invocation": 1,
+      "started_utc": "2026-09-14T12:49:35.505151+00:00",
+      "command": "python3 scripts/srednicki/check_scattering59.py",
+      "script_sha256": "dd833d3d03fc78e4e6b51bd8bcd56fb626bc9b6626618b2629c2568c29926223",
+      "software": {
+        "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "numpy": "2.3.3",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "matrix_dtype": "complex128",
+        "real_dtype": "float64",
+        "float64_epsilon": 2.220446049250313e-16
+      },
+      "source": {
+        "file": "量子场论（Srednicki中译本）.pdf",
+        "sha256": "91eead3d237b8e750dc8e0b3b778d39809a087a9336c4eac3b930a98d434425b",
+        "pdf_pages": [245, 246, 247],
+        "printed_pages": [233, 234, 235],
+        "equations": ["59.4", "59.8", "59.15", "59.18", "59.19", "59.22-59.25"]
+      },
+      "conventions": {
+        "metric": [-1, 1, 1, 1],
+        "clifford": "-2g",
+        "slash": "-p0 gamma0 + pi gammai",
+        "e": -0.3,
+        "spin_average": 0.25,
+        "photon_polarizations": "sum, not average",
+        "final_photon_phase_space_factor_included": false,
+        "ward_projection": "Q @ contraction(A) @ P",
+        "finite_i_epsilon": "not used; both internal denominators positive"
+      },
+      "tolerance": 2e-10,
+      "random_seed": null,
+      "sampling": "four fixed inputs; no random number generator",
+      "scope_limits": [
+        "finite on-shell 4D tree examples, not an all-kinematics proof",
+        "squared kernels cannot test the common Fock phase",
+        "no phase-space integration or cross-section threshold limit",
+        "mass retained in the high-energy near-forward example"
+      ],
+      "cases": [
+        {
+          "inputs": {
+            "id": "threshold",
+            "m": 1.0,
+            "E_over_m": 1.0,
+            "theta": 0.8,
+            "azimuth": 0.4
+          },
+          "kinematics": {
+            "p1": [1.0, 0.0, 0.0, 0.0],
+            "p2": [1.0, 0.0, 0.0, -0.0],
+            "k1": [1.0, 0.6607287141379384, 0.2793516197631058, 0.6967067093471654],
+            "k2": [1.0, -0.6607287141379384, -0.2793516197631058, -0.6967067093471654],
+            "a": [0.0, -0.6607287141379384, -0.2793516197631058, -0.6967067093471654],
+            "b": [0.0, 0.6607287141379384, 0.2793516197631058, 0.6967067093471654],
+            "s": 4.0,
+            "t": -1.0,
+            "u": -1.0,
+            "beta": 0.0,
+            "denom_t": 2.0,
+            "denom_u": 2.0,
+            "s_over_4m2": 1.0,
+            "m2_over_s": 0.25,
+            "shell_residuals": [0.0, 0.0, 0.0, 0.0],
+            "momentum_conservation_residual": [0.0, 0.0, 0.0, 0.0],
+            "s_plus_t_plus_u_minus_2m2": 0.0,
+            "passed": true
+          },
+          "four_traces": {
+            "tt": {
+              "actual": {
+                "real": 8.0,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 8.0,
+                "imag": 0.0
+              },
+              "absolute_residual": 0.0,
+              "scale": 8.0,
+              "scaled_residual": 0.0,
+              "passed": true
+            },
+            "tu": {
+              "actual": {
+                "real": 8.881784197001252e-16,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 0.0,
+                "imag": 0.0
+              },
+              "absolute_residual": 8.881784197001252e-16,
+              "scale": 1.0,
+              "scaled_residual": 8.881784197001252e-16,
+              "passed": true
+            },
+            "ut": {
+              "actual": {
+                "real": 1.7763568394002505e-15,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 0.0,
+                "imag": 0.0
+              },
+              "absolute_residual": 1.7763568394002505e-15,
+              "scale": 1.0,
+              "scaled_residual": 1.7763568394002505e-15,
+              "passed": true
+            },
+            "uu": {
+              "actual": {
+                "real": 8.0,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 8.0,
+                "imag": 0.0
+              },
+              "absolute_residual": 0.0,
+              "scale": 8.0,
+              "scaled_residual": 0.0,
+              "passed": true
+            }
+          },
+          "assembled_from_traces": {
+            "real": 0.032400000000000005,
+            "imag": 0.0
+          },
+          "assembled_from_polynomials": {
+            "real": 0.0324,
+            "imag": 0.0
+          },
+          "physical_polarization_bases": [
+            [
+              [0.0, -0.5254588674731331, 0.8349534709318042, 0.1635410650961567],
+              [0.0, -0.5360322237584966, -0.4741469961042274, 0.6984655189612864]
+            ],
+            [
+              [0.0, -0.2714375054997891, 0.9542771978971928, -0.12520666987638546],
+              [0.0, 0.6998280123870996, 0.1063846892612437, -0.7063448527235903]
+            ]
+          ],
+          "basis_checks": [
+            {
+              "gram_max_residual": 4.440892098500626e-16,
+              "transverse_scaled_residual": 5.551115123125783e-17,
+              "passed": true
+            },
+            {
+              "gram_max_residual": 2.220446049250313e-16,
+              "transverse_scaled_residual": 5.551115123125783e-17,
+              "passed": true
+            }
+          ],
+          "physical_pairs": [
+            {
+              "polarization_indices": [0, 0],
+              "spin_average": {
+                "real": 0.0025201998624228596,
+                "imag": 0.0
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [0, 1],
+              "spin_average": {
+                "real": 0.01367980013757714,
+                "imag": 0.0
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 0],
+              "spin_average": {
+                "real": 0.013679800137577145,
+                "imag": 0.0
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 1],
+              "spin_average": {
+                "real": 0.0025201998624228604,
+                "imag": 0.0
+              },
+              "real_nonnegative_passed": true
+            }
+          ],
+          "physical_sum": {
+            "real": 0.032400000000000005,
+            "imag": 0.0
+          },
+          "physical_comparisons": {
+            "against_four_matrix_traces": {
+              "actual": {
+                "real": 0.032400000000000005,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 0.032400000000000005,
+                "imag": 0.0
+              },
+              "absolute_residual": 0.0,
+              "scale": 0.032400000000000005,
+              "scaled_residual": 0.0,
+              "passed": true
+            },
+            "against_four_source_polynomials": {
+              "actual": {
+                "real": 0.032400000000000005,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 0.0324,
+                "imag": 0.0
+              },
+              "absolute_residual": 6.938893903907228e-18,
+              "scale": 0.032400000000000005,
+              "scaled_residual": 2.1416339209590208e-16,
+              "passed": true
+            }
+          },
+          "ward": [
+            {
+              "photon": 1,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 2.943923360032078e-17,
+                  "projected_u_norm": 3.925231146709438e-17,
+                  "projected_total_norm": 0.0,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 0.0
+                    }
+                  },
+                  "unprojected_total_norm": 0.18,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.09,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 0.09,
+                  "scaled_residual": 0.0,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 0.5091168824543142,
+                  "projected_u_norm": 0.5091168824543142,
+                  "projected_total_norm": 1.962615573354719e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 6.938893903907228e-18
+                    }
+                  },
+                  "unprojected_total_norm": 0.17999999999999997,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -0.06270360384124486,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 1.0182337649086284,
+                  "scaled_residual": 1.9274705288631192e-17,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 0.5091168824543142,
+                  "projected_u_norm": 0.5091168824543142,
+                  "projected_total_norm": 0.0,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 0.0
+                    }
+                  },
+                  "unprojected_total_norm": 0.17999999999999997,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 0.06270360384124486
+                    }
+                  },
+                  "scale": 1.0182337649086284,
+                  "scaled_residual": 0.0,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 0.5091168824543142,
+                  "projected_u_norm": 0.5091168824543142,
+                  "projected_total_norm": 0.0,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 0.0
+                    }
+                  },
+                  "unprojected_total_norm": 0.18,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 0.059465584272414454,
+                      "imag": -0.02514164577867952
+                    }
+                  },
+                  "scale": 1.0182337649086284,
+                  "scaled_residual": 0.0,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 0.5091168824543142,
+              "single_graph_u_max_norm": 0.5091168824543142,
+              "single_graph_nonzero_floor": 9e-10,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 0.18,
+              "max_scaled_residual": 1.9274705288631192e-17,
+              "passed": true
+            },
+            {
+              "photon": 2,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 3.925231146709438e-17,
+                  "projected_u_norm": 2.943923360032078e-17,
+                  "projected_total_norm": 0.0,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 0.0
+                    }
+                  },
+                  "unprojected_total_norm": 0.18,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.09,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 0.09,
+                  "scaled_residual": 0.0,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 0.5091168824543142,
+                  "projected_u_norm": 0.5091168824543142,
+                  "projected_total_norm": 1.962615573354719e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 6.938893903907228e-18
+                    }
+                  },
+                  "unprojected_total_norm": 0.17999999999999997,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 0.06270360384124486,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 1.0182337649086284,
+                  "scaled_residual": 1.9274705288631192e-17,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 0.5091168824543142,
+                  "projected_u_norm": 0.5091168824543142,
+                  "projected_total_norm": 0.0,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 0.0
+                    }
+                  },
+                  "unprojected_total_norm": 0.17999999999999997,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 0.0,
+                      "imag": -0.06270360384124486
+                    }
+                  },
+                  "scale": 1.0182337649086284,
+                  "scaled_residual": 0.0,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 0.5091168824543142,
+                  "projected_u_norm": 0.5091168824543142,
+                  "projected_total_norm": 0.0,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": 0.0
+                    }
+                  },
+                  "unprojected_total_norm": 0.18,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -0.059465584272414454,
+                      "imag": 0.02514164577867952
+                    }
+                  },
+                  "scale": 1.0182337649086284,
+                  "scaled_residual": 0.0,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 0.5091168824543142,
+              "single_graph_u_max_norm": 0.5091168824543142,
+              "single_graph_nonzero_floor": 9e-10,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 0.18,
+              "max_scaled_residual": 1.9274705288631192e-17,
+              "passed": true
+            }
+          ],
+          "bose": {
+            "tensor_difference_norm": 0.0,
+            "scale": 0.5692099788303082,
+            "scaled_residual": 0.0,
+            "passed": true
+          },
+          "threshold_4e4": {
+            "actual": {
+              "real": 0.032400000000000005,
+              "imag": 0.0
+            },
+            "expected": {
+              "real": 0.0324,
+              "imag": 0.0
+            },
+            "absolute_residual": 6.938893903907228e-18,
+            "scale": 0.032400000000000005,
+            "scaled_residual": 2.1416339209590208e-16,
+            "passed": true
+          },
+          "passed": true
+        },
+        {
+          "inputs": {
+            "id": "near_threshold",
+            "m": 0.7,
+            "E_over_m": 1.0008,
+            "theta": 1.1,
+            "azimuth": 0.7
+          },
+          "kinematics": {
+            "p1": [0.7005599999999998, 0.0, 0.0, 0.028005599440110426],
+            "p2": [0.7005599999999998, 0.0, 0.0, -0.028005599440110426],
+            "k1": [0.7005599999999998, 0.4775248050878883, 0.40221359470842505, 0.3177712988259024],
+            "k2": [
+              0.7005599999999998, -0.4775248050878883, -0.40221359470842505, -0.3177712988259024
+            ],
+            "a": [0.0, -0.4775248050878883, -0.40221359470842505, -0.28976569938579194],
+            "b": [0.0, 0.4775248050878883, 0.40221359470842505, 0.3457768982660128],
+            "s": 1.9631372543999992,
+            "t": -0.4737698757830361,
+            "u": -0.5093673786169636,
+            "beta": 0.039976018385449404,
+            "denom_t": 0.963769875783036,
+            "denom_u": 0.9993673786169635,
+            "s_over_4m2": 1.0016006399999997,
+            "m2_over_s": 0.24960047948851158,
+            "shell_residuals": [
+              5.551115123125783e-17, 5.551115123125783e-17, 8.326672684688674e-17,
+              8.326672684688674e-17
+            ],
+            "momentum_conservation_residual": [0.0, 0.0, 0.0, 0.0],
+            "s_plus_t_plus_u_minus_2m2": -2.220446049250313e-16,
+            "passed": true
+          },
+          "four_traces": {
+            "tt": {
+              "actual": {
+                "real": 1.8945093052373287,
+                "imag": -7.703719777548943e-34
+              },
+              "expected": {
+                "real": 1.8945093052373294,
+                "imag": 0.0
+              },
+              "absolute_residual": 6.661338147750939e-16,
+              "scale": 1.8945093052373294,
+              "scaled_residual": 3.5161284926581336e-16,
+              "passed": true
+            },
+            "tu": {
+              "actual": {
+                "real": 0.003074509311999263,
+                "imag": -3.851859888774472e-34
+              },
+              "expected": {
+                "real": 0.0030745093119994666,
+                "imag": 0.0
+              },
+              "absolute_residual": 2.0383000842727483e-16,
+              "scale": 0.24009999999999992,
+              "scaled_residual": 8.489379776229691e-16,
+              "passed": true
+            },
+            "ut": {
+              "actual": {
+                "real": 0.0030745093120000955,
+                "imag": -3.851859888774472e-34
+              },
+              "expected": {
+                "real": 0.0030745093119994666,
+                "imag": 0.0
+              },
+              "absolute_residual": 6.288372600415926e-16,
+              "scale": 0.24009999999999992,
+              "scaled_residual": 2.619063973517671e-15,
+              "passed": true
+            },
+            "uu": {
+              "actual": {
+                "real": 1.9642804107918277,
+                "imag": -7.703719777548943e-34
+              },
+              "expected": {
+                "real": 1.9642804107918272,
+                "imag": 0.0
+              },
+              "absolute_residual": 4.440892098500626e-16,
+              "scale": 1.9642804107918277,
+              "scaled_residual": 2.2608238997356e-16,
+              "passed": true
+            }
+          },
+          "assembled_from_traces": {
+            "real": 0.03250348531162963,
+            "imag": -1.9444583813472407e-35
+          },
+          "assembled_from_polynomials": {
+            "real": 0.032503485311629624,
+            "imag": 0.0
+          },
+          "physical_polarization_bases": [
+            [
+              [0.0, -0.7063452299051725, 0.6780827642965552, 0.20317524690313898],
+              [0.0, -0.19092639361266886, -0.4588864070208866, 0.8677386574732748]
+            ],
+            [
+              [0.0, -0.26459193131746006, 0.7713839272468501, -0.5787555154527022],
+              [0.0, 0.6821785554159754, -0.2744809766993386, -0.6777113042887437]
+            ]
+          ],
+          "basis_checks": [
+            {
+              "gram_max_residual": 2.220446049250313e-16,
+              "transverse_scaled_residual": 1.5847650802574466e-16,
+              "passed": true
+            },
+            {
+              "gram_max_residual": 4.440892098500626e-16,
+              "transverse_scaled_residual": 3.9619127006436165e-17,
+              "passed": true
+            }
+          ],
+          "physical_pairs": [
+            {
+              "polarization_indices": [0, 0],
+              "spin_average": {
+                "real": 0.01051355982965671,
+                "imag": 0.0
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [0, 1],
+              "spin_average": {
+                "real": 0.005701367715033824,
+                "imag": 4.336808689942018e-19
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 0],
+              "spin_average": {
+                "real": 0.005731751102719323,
+                "imag": 8.673617379884035e-19
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 1],
+              "spin_average": {
+                "real": 0.010556806664219768,
+                "imag": 0.0
+              },
+              "real_nonnegative_passed": true
+            }
+          ],
+          "physical_sum": {
+            "real": 0.032503485311629624,
+            "imag": 1.3010426069826053e-18
+          },
+          "physical_comparisons": {
+            "against_four_matrix_traces": {
+              "actual": {
+                "real": 0.032503485311629624,
+                "imag": 1.3010426069826053e-18
+              },
+              "expected": {
+                "real": 0.03250348531162963,
+                "imag": -1.9444583813472407e-35
+              },
+              "absolute_residual": 7.05981306231723e-18,
+              "scale": 0.03250348531162963,
+              "scaled_residual": 2.172017245114097e-16,
+              "passed": true
+            },
+            "against_four_source_polynomials": {
+              "actual": {
+                "real": 0.032503485311629624,
+                "imag": 1.3010426069826053e-18
+              },
+              "expected": {
+                "real": 0.032503485311629624,
+                "imag": 0.0
+              },
+              "absolute_residual": 1.3010426069826053e-18,
+              "scale": 0.032503485311629624,
+              "scaled_residual": 4.002778762058164e-17,
+              "passed": true
+            }
+          },
+          "ward": [
+            {
+              "photon": 1,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 3.3471147327571204e-17,
+                  "projected_u_norm": 1.9239949136551013e-17,
+                  "projected_total_norm": 3.458996415454142e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": -1.6171113063318346e-17,
+                      "imag": 8.033969008575201e-35
+                    }
+                  },
+                  "unprojected_total_norm": 0.1800591945411953,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0906975414935246,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 0.04409999999999999,
+                  "scaled_residual": 7.843529286744087e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 0.24986657969751241,
+                  "projected_u_norm": 0.2498665796975124,
+                  "projected_total_norm": 3.797713111919451e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 1.635002013045035e-17,
+                      "imag": -3.541638623648116e-18
+                    }
+                  },
+                  "unprojected_total_norm": 0.1800591945411953,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": -0.06131809211294479,
+                      "imag": -0.0009365227066085932
+                    }
+                  },
+                  "scale": 0.49973315939502483,
+                  "scaled_residual": 7.599481924547391e-17,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 0.24986657969751241,
+                  "projected_u_norm": 0.2498665796975124,
+                  "projected_total_norm": 3.784705219269251e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -3.541638623648116e-18,
+                      "imag": -1.635002013045035e-17
+                    }
+                  },
+                  "unprojected_total_norm": 0.1800591945411953,
+                  "unprojected_total_largest_entry": {
+                    "index": [1, 3],
+                    "value": {
+                      "real": 0.0030035857235519332,
+                      "imag": 0.061411630638138155
+                    }
+                  },
+                  "scale": 0.49973315939502483,
+                  "scaled_residual": 7.573452247697555e-17,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 0.24966684622053603,
+                  "projected_u_norm": 0.24966684622053598,
+                  "projected_total_norm": 4.765062419207894e-17,
+                  "projected_total_largest_entry": {
+                    "index": [3, 3],
+                    "value": {
+                      "real": 1.646750208917518e-17,
+                      "imag": 3.538807577586047e-18
+                    }
+                  },
+                  "unprojected_total_norm": 0.18028751974932022,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 0.06382036076684502,
+                      "imag": -0.05375514831087534
+                    }
+                  },
+                  "scale": 0.499333692441072,
+                  "scaled_residual": 9.542841773630636e-17,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 0.24986657969751241,
+              "single_graph_u_max_norm": 0.2498665796975124,
+              "single_graph_nonzero_floor": 4.409999999999999e-10,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 0.18028751974932022,
+              "max_scaled_residual": 7.843529286744087e-16,
+              "passed": true
+            },
+            {
+              "photon": 2,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 3.563928734149162e-17,
+                  "projected_u_norm": 1.7487612543114176e-17,
+                  "projected_total_norm": 2.965962252260948e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": -1.6171113063318346e-17,
+                      "imag": 8.033969008575201e-35
+                    }
+                  },
+                  "unprojected_total_norm": 0.1800591945411953,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.0906975414935246,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 0.04409999999999999,
+                  "scaled_residual": 6.725537986986278e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 0.24986657969751241,
+                  "projected_u_norm": 0.2498665796975124,
+                  "projected_total_norm": 3.902913137442892e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -1.6744843830291454e-17,
+                      "imag": 3.541638623648116e-18
+                    }
+                  },
+                  "unprojected_total_norm": 0.18005919454119532,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 0.06131809211294479,
+                      "imag": -0.0009365227066085932
+                    }
+                  },
+                  "scale": 0.49973315939502483,
+                  "scaled_residual": 7.809994322105311e-17,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 0.24986657969751241,
+                  "projected_u_norm": 0.2498665796975124,
+                  "projected_total_norm": 4.248843013372626e-17,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 3.541638623648116e-18,
+                      "imag": 1.6744843830291454e-17
+                    }
+                  },
+                  "unprojected_total_norm": 0.1800591945411953,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 2],
+                    "value": {
+                      "real": 0.0030035857235519332,
+                      "imag": 0.061411630638138155
+                    }
+                  },
+                  "scale": 0.49973315939502483,
+                  "scaled_residual": 8.502223503671959e-17,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 0.249666846220536,
+                  "projected_u_norm": 0.24966684622053598,
+                  "projected_total_norm": 4.706727640812691e-17,
+                  "projected_total_largest_entry": {
+                    "index": [3, 3],
+                    "value": {
+                      "real": -1.8017251315533027e-17,
+                      "imag": 3.538807577586047e-18
+                    }
+                  },
+                  "unprojected_total_norm": 0.18028751974932022,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -0.06382036076684502,
+                      "imag": 0.05375514831087534
+                    }
+                  },
+                  "scale": 0.49933369244107195,
+                  "scaled_residual": 9.426016533759432e-17,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 0.24986657969751241,
+              "single_graph_u_max_norm": 0.2498665796975124,
+              "single_graph_nonzero_floor": 4.409999999999999e-10,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 0.18028751974932022,
+              "max_scaled_residual": 6.725537986986278e-16,
+              "passed": true
+            }
+          ],
+          "bose": {
+            "tensor_difference_norm": 0.0,
+            "scale": 0.8130302244858837,
+            "scaled_residual": 0.0,
+            "passed": true
+          },
+          "threshold_4e4": null,
+          "passed": true
+        },
+        {
+          "inputs": {
+            "id": "general_angle",
+            "m": 1.3,
+            "E_over_m": 1.8,
+            "theta": 1.2,
+            "azimuth": -0.6
+          },
+          "kinematics": {
+            "p1": [2.3400000000000003, 0.0, 0.0, 1.9456618411224493],
+            "p2": [2.3400000000000003, 0.0, 0.0, -1.9456618411224493],
+            "k1": [2.3400000000000003, 1.8000334219996799, -1.2314691202352355, 0.8479171454754164],
+            "k2": [
+              2.3400000000000003, -1.8000334219996799, 1.2314691202352355, -0.8479171454754164
+            ],
+            "a": [0.0, -1.8000334219996799, 1.2314691202352355, 1.097744695647033],
+            "b": [0.0, 1.8000334219996799, -1.2314691202352355, 2.7935789865978657],
+            "s": 21.902400000000007,
+            "t": -5.9616799312300195,
+            "u": -12.560720068769982,
+            "beta": 0.8314794192830979,
+            "denom_t": 7.65167993123002,
+            "denom_u": 14.250720068769981,
+            "s_over_4m2": 3.2400000000000007,
+            "m2_over_s": 0.07716049382716048,
+            "shell_residuals": [
+              -2.4424906541753444e-15, -2.4424906541753444e-15, -9.992007221626409e-16,
+              -9.992007221626409e-16
+            ],
+            "momentum_conservation_residual": [0.0, 0.0, 0.0, 0.0],
+            "s_plus_t_plus_u_minus_2m2": 5.773159728050814e-15,
+            "passed": true
+          },
+          "four_traces": {
+            "tt": {
+              "actual": {
+                "real": 246.96045384668324,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 246.96045384668324,
+                "imag": 0.0
+              },
+              "absolute_residual": 0.0,
+              "scale": 246.96045384668324,
+              "scaled_residual": 0.0,
+              "passed": true
+            },
+            "tu": {
+              "actual": {
+                "real": 51.18131199999984,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 51.18131200000003,
+                "imag": 0.0
+              },
+              "absolute_residual": 1.8474111129762605e-13,
+              "scale": 51.18131200000003,
+              "scaled_residual": 3.609542312975993e-15,
+              "passed": true
+            },
+            "ut": {
+              "actual": {
+                "real": 51.18131199999987,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 51.18131200000003,
+                "imag": 0.0
+              },
+              "absolute_residual": 1.5631940186722204e-13,
+              "scale": 51.18131200000003,
+              "scaled_residual": 3.0542281109796866e-15,
+              "passed": true
+            },
+            "uu": {
+              "actual": {
+                "real": 291.5699651764534,
+                "imag": 0.0
+              },
+              "expected": {
+                "real": 291.5699651764534,
+                "imag": 0.0
+              },
+              "absolute_residual": 0.0,
+              "scale": 291.5699651764534,
+              "scaled_residual": 0.0,
+              "passed": true
+            }
+          },
+          "assembled_from_traces": {
+            "real": 0.05339952408429221,
+            "imag": 0.0
+          },
+          "assembled_from_polynomials": {
+            "real": 0.05339952408429224,
+            "imag": 0.0
+          },
+          "physical_polarization_bases": [
+            [
+              [0.0, 0.4815929021962808, 0.8502463420490697, 0.21248396265680883],
+              [0.0, -0.41991704694796517, 0.011056685679617095, 0.9074951368378139]
+            ],
+            [
+              [0.0, -0.2310555802081157, 0.2996200203979087, 0.9256571515585281],
+              [0.0, 0.5957141668770578, 0.7957819650147885, -0.10888386262056893]
+            ]
+          ],
+          "basis_checks": [
+            {
+              "gram_max_residual": 2.220446049250313e-16,
+              "transverse_scaled_residual": 3.558407130208835e-17,
+              "passed": true
+            },
+            {
+              "gram_max_residual": 1.988455876016867e-17,
+              "transverse_scaled_residual": 4.744542840278446e-17,
+              "passed": true
+            }
+          ],
+          "physical_pairs": [
+            {
+              "polarization_indices": [0, 0],
+              "spin_average": {
+                "real": 0.017790124892518286,
+                "imag": -5.421010862427522e-19
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [0, 1],
+              "spin_average": {
+                "real": 0.002399886607494903,
+                "imag": -2.168404344971009e-19
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 0],
+              "spin_average": {
+                "real": 0.01597625946577183,
+                "imag": 0.0
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 1],
+              "spin_average": {
+                "real": 0.017233253118507215,
+                "imag": 4.336808689942018e-19
+              },
+              "real_nonnegative_passed": true
+            }
+          ],
+          "physical_sum": {
+            "real": 0.05339952408429224,
+            "imag": -3.2526065174565133e-19
+          },
+          "physical_comparisons": {
+            "against_four_matrix_traces": {
+              "actual": {
+                "real": 0.05339952408429224,
+                "imag": -3.2526065174565133e-19
+              },
+              "expected": {
+                "real": 0.05339952408429221,
+                "imag": 0.0
+              },
+              "absolute_residual": 2.775748137433345e-17,
+              "scale": 0.05339952408429224,
+              "scaled_residual": 5.19807654662197e-16,
+              "passed": true
+            },
+            "against_four_source_polynomials": {
+              "actual": {
+                "real": 0.05339952408429224,
+                "imag": -3.2526065174565133e-19
+              },
+              "expected": {
+                "real": 0.05339952408429224,
+                "imag": 0.0
+              },
+              "absolute_residual": 3.2526065174565133e-19,
+              "scale": 0.05339952408429224,
+              "scaled_residual": 6.091077726314953e-18,
+              "passed": true
+            }
+          },
+          "ward": [
+            {
+              "photon": 1,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 4.303632615754413e-16,
+                  "projected_u_norm": 4.633336161335613e-16,
+                  "projected_total_norm": 6.559009354115274e-16,
+                  "projected_total_largest_entry": {
+                    "index": [3, 3],
+                    "value": {
+                      "real": -3.0023581690579263e-16,
+                      "imag": 1.276608339910752e-33
+                    }
+                  },
+                  "unprojected_total_norm": 0.197153955648074,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 2],
+                    "value": {
+                      "real": 0.07149770154151813,
+                      "imag": -3.469446951953614e-18
+                    }
+                  },
+                  "scale": 0.1521,
+                  "scaled_residual": 4.312300693040943e-15,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 2.7877204015668426,
+                  "projected_u_norm": 2.787720401566843,
+                  "projected_total_norm": 6.586905887127949e-16,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -3.392339848688179e-16,
+                      "imag": 6.958634160715939e-17
+                    }
+                  },
+                  "unprojected_total_norm": 0.19715395564807398,
+                  "unprojected_total_largest_entry": {
+                    "index": [1, 3],
+                    "value": {
+                      "real": 0.08625409237873538,
+                      "imag": 0.06514337708493481
+                    }
+                  },
+                  "scale": 5.575440803133686,
+                  "scaled_residual": 1.1814143705777966e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 2.7877204015668426,
+                  "projected_u_norm": 2.787720401566843,
+                  "projected_total_norm": 6.522971439401944e-16,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 6.958634160715939e-17,
+                      "imag": 3.392339848688179e-16
+                    }
+                  },
+                  "unprojected_total_norm": 0.197153955648074,
+                  "unprojected_total_largest_entry": {
+                    "index": [1, 3],
+                    "value": {
+                      "real": -0.05900959946639751,
+                      "imag": 0.09521981026402973
+                    }
+                  },
+                  "scale": 5.575440803133686,
+                  "scaled_residual": 1.1699472148884974e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 1.5487335564260238,
+                  "projected_u_norm": 1.5487335564260238,
+                  "projected_total_norm": 4.865534755031829e-16,
+                  "projected_total_largest_entry": {
+                    "index": [3, 0],
+                    "value": {
+                      "real": -2.8200687265372093e-16,
+                      "imag": 9.669946464617011e-17
+                    }
+                  },
+                  "unprojected_total_norm": 0.28578465096171896,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 0.13945660240542385,
+                      "imag": 0.09540739487182302
+                    }
+                  },
+                  "scale": 3.0974671128520477,
+                  "scaled_residual": 1.5708107875766278e-16,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 2.7877204015668426,
+              "single_graph_u_max_norm": 2.787720401566843,
+              "single_graph_nonzero_floor": 1.5210000000000002e-9,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 0.28578465096171896,
+              "max_scaled_residual": 4.312300693040943e-15,
+              "passed": true
+            },
+            {
+              "photon": 2,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 4.322046865586247e-16,
+                  "projected_u_norm": 4.397314420337009e-16,
+                  "projected_total_norm": 6.559009354115274e-16,
+                  "projected_total_largest_entry": {
+                    "index": [3, 3],
+                    "value": {
+                      "real": -3.0023581690579263e-16,
+                      "imag": 1.276608339910752e-33
+                    }
+                  },
+                  "unprojected_total_norm": 0.197153955648074,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 2],
+                    "value": {
+                      "real": 0.07149770154151813,
+                      "imag": -3.469446951953614e-18
+                    }
+                  },
+                  "scale": 0.1521,
+                  "scaled_residual": 4.312300693040943e-15,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 2.787720401566843,
+                  "projected_u_norm": 2.787720401566843,
+                  "projected_total_norm": 6.400830248491753e-16,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 3.338865086343624e-16,
+                      "imag": -6.958634160715939e-17
+                    }
+                  },
+                  "unprojected_total_norm": 0.19715395564807398,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 2],
+                    "value": {
+                      "real": 0.08625409237873538,
+                      "imag": 0.06514337708493481
+                    }
+                  },
+                  "scale": 5.575440803133686,
+                  "scaled_residual": 1.1480402132319574e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 2.787720401566843,
+                  "projected_u_norm": 2.787720401566843,
+                  "projected_total_norm": 6.434920598315472e-16,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -6.958634160715939e-17,
+                      "imag": -3.338865086343624e-16
+                    }
+                  },
+                  "unprojected_total_norm": 0.197153955648074,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 2],
+                    "value": {
+                      "real": -0.05900959946639751,
+                      "imag": 0.09521981026402973
+                    }
+                  },
+                  "scale": 5.575440803133686,
+                  "scaled_residual": 1.154154590736344e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 1.5487335564260238,
+                  "projected_u_norm": 1.5487335564260238,
+                  "projected_total_norm": 5.078292884392874e-16,
+                  "projected_total_largest_entry": {
+                    "index": [3, 0],
+                    "value": {
+                      "real": 2.8723213770377184e-16,
+                      "imag": -1.0099562516394423e-16
+                    }
+                  },
+                  "unprojected_total_norm": 0.28578465096171896,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": -0.13945660240542385,
+                      "imag": -0.09540739487182302
+                    }
+                  },
+                  "scale": 3.0974671128520477,
+                  "scaled_residual": 1.6394985642694831e-16,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 2.787720401566843,
+              "single_graph_u_max_norm": 2.787720401566843,
+              "single_graph_nonzero_floor": 1.5210000000000002e-9,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 0.28578465096171896,
+              "max_scaled_residual": 4.312300693040943e-15,
+              "passed": true
+            }
+          ],
+          "bose": {
+            "tensor_difference_norm": 0.0,
+            "scale": 0.3034389698710422,
+            "scaled_residual": 0.0,
+            "passed": true
+          },
+          "threshold_4e4": null,
+          "passed": true
+        },
+        {
+          "inputs": {
+            "id": "high_energy_near_forward",
+            "m": 0.9,
+            "E_over_m": 20.0,
+            "theta": 0.018,
+            "azimuth": 0.5
+          },
+          "kinematics": {
+            "p1": [18.0, 0.0, 0.0, 17.97748591989436],
+            "p2": [18.0, 0.0, 0.0, -17.97748591989436],
+            "k1": [18.0, 0.28432139611671375, 0.15532548661442336, 17.99708407873115],
+            "k2": [18.0, -0.28432139611671375, -0.15532548661442336, -17.99708407873115],
+            "a": [0.0, -0.28432139611671375, -0.15532548661442336, -0.01959815883678928],
+            "b": [0.0, 0.28432139611671375, 0.15532548661442336, 35.97456999862551],
+            "s": 1296.0,
+            "t": -0.10534875091155668,
+            "u": -1294.2746512490885,
+            "beta": 0.9987492177719088,
+            "denom_t": 0.9153487509115568,
+            "denom_u": 1295.0846512490884,
+            "s_over_4m2": 400.0,
+            "m2_over_s": 0.000625,
+            "shell_residuals": [-5.906386491005833e-14, -5.906386491005833e-14, 0.0, 0.0],
+            "momentum_conservation_residual": [0.0, 0.0, 0.0, 0.0],
+            "s_plus_t_plus_u_minus_2m2": -1.092459456231154e-13,
+            "passed": true
+          },
+          "four_traces": {
+            "tt": {
+              "actual": {
+                "real": 2368.625165644119,
+                "imag": -1.9721522630525295e-31
+              },
+              "expected": {
+                "real": 2368.625165644118,
+                "imag": 0.0
+              },
+              "absolute_residual": 9.094947017729282e-13,
+              "scale": 2368.625165644119,
+              "scaled_residual": 3.839757826458802e-16,
+              "passed": true
+            },
+            "tu": {
+              "actual": {
+                "real": 2094.2711999998874,
+                "imag": 1.9721522630525295e-31
+              },
+              "expected": {
+                "real": 2094.2712,
+                "imag": 0.0
+              },
+              "absolute_residual": 1.127773430198431e-10,
+              "scale": 2094.2712,
+              "scaled_residual": 5.385040056886763e-14,
+              "passed": true
+            },
+            "ut": {
+              "actual": {
+                "real": 2094.2711999998874,
+                "imag": 1.9721522630525295e-31
+              },
+              "expected": {
+                "real": 2094.2712,
+                "imag": 0.0
+              },
+              "absolute_residual": 1.127773430198431e-10,
+              "scale": 2094.2712,
+              "scaled_residual": 5.385040056886763e-14,
+              "passed": true
+            },
+            "uu": {
+              "actual": {
+                "real": 6561.733705738292,
+                "imag": -1.9721522630525295e-31
+              },
+              "expected": {
+                "real": 6561.733705738211,
+                "imag": 0.0
+              },
+              "absolute_residual": 8.094502845779061e-11,
+              "scale": 6561.733705738292,
+              "scaled_residual": 1.2335920975732906e-14,
+              "passed": true
+            }
+          },
+          "assembled_from_traces": {
+            "real": 22.927211234662146,
+            "imag": -1.903873769340108e-33
+          },
+          "assembled_from_polynomials": {
+            "real": 22.927211234662135,
+            "imag": 0.0
+          },
+          "physical_polarization_bases": [
+            [
+              [0.0, 0.9735138372034048, 0.2279690354338379, -0.01734726655321621],
+              [0.0, -0.22808179837049053, 0.9736301432779491, -0.004799724225753556]
+            ],
+            [
+              [0.0, -0.3615703172593547, 0.9323419199857912, -0.0023345051249123267],
+              [0.0, 0.9322110295696914, 0.3614748694629859, -0.017846991212341016]
+            ]
+          ],
+          "basis_checks": [
+            {
+              "gram_max_residual": 2.220446049250313e-16,
+              "transverse_scaled_residual": 3.0839528461809902e-18,
+              "passed": true
+            },
+            {
+              "gram_max_residual": 3.0283123807150594e-17,
+              "transverse_scaled_residual": 1.927470528863119e-18,
+              "passed": true
+            }
+          ],
+          "physical_pairs": [
+            {
+              "polarization_indices": [0, 0],
+              "spin_average": {
+                "real": 5.737803351054386,
+                "imag": 8.890457814381136e-18
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [0, 1],
+              "spin_average": {
+                "real": 5.728619363540318,
+                "imag": 5.2475385148298415e-17
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 0],
+              "spin_average": {
+                "real": 5.722628585684873,
+                "imag": -3.686287386450715e-18
+              },
+              "real_nonnegative_passed": true
+            },
+            {
+              "polarization_indices": [1, 1],
+              "spin_average": {
+                "real": 5.738159934382562,
+                "imag": 1.5178830414797062e-17
+              },
+              "real_nonnegative_passed": true
+            }
+          ],
+          "physical_sum": {
+            "real": 22.92721123466214,
+            "imag": 7.28583859910259e-17
+          },
+          "physical_comparisons": {
+            "against_four_matrix_traces": {
+              "actual": {
+                "real": 22.92721123466214,
+                "imag": 7.28583859910259e-17
+              },
+              "expected": {
+                "real": 22.927211234662146,
+                "imag": -1.903873769340108e-33
+              },
+              "absolute_residual": 7.105800889312476e-15,
+              "scale": 22.927211234662146,
+              "scaled_residual": 3.099287050912534e-16,
+              "passed": true
+            },
+            "against_four_source_polynomials": {
+              "actual": {
+                "real": 22.92721123466214,
+                "imag": 7.28583859910259e-17
+              },
+              "expected": {
+                "real": 22.927211234662135,
+                "imag": 0.0
+              },
+              "absolute_residual": 3.553460683326242e-15,
+              "scale": 22.92721123466214,
+              "scaled_residual": 1.5498878808051453e-16,
+              "passed": true
+            }
+          },
+          "ward": [
+            {
+              "photon": 1,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 2.5175325558637635e-13,
+                  "projected_u_norm": 7.003860753627407e-15,
+                  "projected_total_norm": 2.5112922365028496e-13,
+                  "projected_total_largest_entry": {
+                    "index": [3, 0],
+                    "value": {
+                      "real": -1.343282458044426e-13,
+                      "imag": -9.673672117376558e-15
+                    }
+                  },
+                  "unprojected_total_norm": 4.787550822778788,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 3.185413182034988,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 0.0729,
+                  "scaled_residual": 3.4448453175622075e-12,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 164.95386991519783,
+                  "projected_u_norm": 164.95386991519786,
+                  "projected_total_norm": 2.6125112734611274e-13,
+                  "projected_total_largest_entry": {
+                    "index": [3, 2],
+                    "value": {
+                      "real": -1.7313113965865442e-13,
+                      "imag": 2.8088798377078756e-17
+                    }
+                  },
+                  "unprojected_total_norm": 4.787550822778788,
+                  "unprojected_total_largest_entry": {
+                    "index": [1, 0],
+                    "value": {
+                      "real": -3.183161591764663,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 329.9077398303957,
+                  "scaled_residual": 7.918914769335843e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 164.95386991519783,
+                  "projected_u_norm": 164.95386991519786,
+                  "projected_total_norm": 2.620994398653801e-13,
+                  "projected_total_largest_entry": {
+                    "index": [3, 2],
+                    "value": {
+                      "real": -2.8088798377078756e-17,
+                      "imag": -1.7313113965865442e-13
+                    }
+                  },
+                  "unprojected_total_norm": 4.787550822778788,
+                  "unprojected_total_largest_entry": {
+                    "index": [1, 0],
+                    "value": {
+                      "real": 0.0,
+                      "imag": -3.183161591764663
+                    }
+                  },
+                  "scale": 329.9077398303957,
+                  "scaled_residual": 7.944628398234137e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 8.247693495760055,
+                  "projected_u_norm": 8.24769349575989,
+                  "projected_total_norm": 2.523352470893056e-13,
+                  "projected_total_largest_entry": {
+                    "index": [0, 3],
+                    "value": {
+                      "real": 1.3456324108386818e-13,
+                      "imag": -9.781308809585397e-15
+                    }
+                  },
+                  "unprojected_total_norm": 4.788325414326821,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": -3.185412817287213,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 16.495386991519943,
+                  "scaled_residual": 1.5297322046401686e-14,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 164.95386991519783,
+              "single_graph_u_max_norm": 164.95386991519786,
+              "single_graph_nonzero_floor": 7.290000000000001e-10,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 4.788325414326821,
+              "max_scaled_residual": 3.4448453175622075e-12,
+              "passed": true
+            },
+            {
+              "photon": 2,
+              "components": [
+                {
+                  "remaining_index": 0,
+                  "projected_t_norm": 2.5193568912502047e-13,
+                  "projected_u_norm": 7.033054984927438e-15,
+                  "projected_total_norm": 2.51610772630267e-13,
+                  "projected_total_largest_entry": {
+                    "index": [3, 0],
+                    "value": {
+                      "real": -1.343282458044426e-13,
+                      "imag": -9.673672117376558e-15
+                    }
+                  },
+                  "unprojected_total_norm": 4.787550822778788,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 3.185413182034988,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 0.0729,
+                  "scaled_residual": 3.451450927712853e-12,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 1,
+                  "projected_t_norm": 164.95386991519783,
+                  "projected_u_norm": 164.95386991519783,
+                  "projected_total_norm": 2.610687220832146e-13,
+                  "projected_total_largest_entry": {
+                    "index": [1, 0],
+                    "value": {
+                      "real": -1.7337143400969047e-13,
+                      "imag": 2.8088798377078756e-17
+                    }
+                  },
+                  "unprojected_total_norm": 4.787550822778788,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 1],
+                    "value": {
+                      "real": 3.183161591764663,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 329.90773983039566,
+                  "scaled_residual": 7.91338579135576e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 2,
+                  "projected_t_norm": 164.95386991519783,
+                  "projected_u_norm": 164.95386991519783,
+                  "projected_total_norm": 2.616693935098893e-13,
+                  "projected_total_largest_entry": {
+                    "index": [1, 0],
+                    "value": {
+                      "real": -2.8088798377078756e-17,
+                      "imag": -1.7337143400969047e-13
+                    }
+                  },
+                  "unprojected_total_norm": 4.787550822778788,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 1],
+                    "value": {
+                      "real": 0.0,
+                      "imag": -3.183161591764663
+                    }
+                  },
+                  "scale": 329.90773983039566,
+                  "scaled_residual": 7.93159304611685e-16,
+                  "passed": true
+                },
+                {
+                  "remaining_index": 3,
+                  "projected_t_norm": 8.247693495760055,
+                  "projected_u_norm": 8.24769349575989,
+                  "projected_total_norm": 2.5256289066978755e-13,
+                  "projected_total_largest_entry": {
+                    "index": [3, 0],
+                    "value": {
+                      "real": 1.346581259258108e-13,
+                      "imag": 9.82723964760535e-15
+                    }
+                  },
+                  "unprojected_total_norm": 4.788325414326821,
+                  "unprojected_total_largest_entry": {
+                    "index": [0, 0],
+                    "value": {
+                      "real": 3.185412817287213,
+                      "imag": 0.0
+                    }
+                  },
+                  "scale": 16.495386991519943,
+                  "scaled_residual": 1.531112248531221e-14,
+                  "passed": true
+                }
+              ],
+              "single_graph_t_max_norm": 164.95386991519783,
+              "single_graph_u_max_norm": 164.95386991519783,
+              "single_graph_nonzero_floor": 7.290000000000001e-10,
+              "single_graph_control_passed": true,
+              "max_unprojected_total_norm": 4.788325414326821,
+              "max_scaled_residual": 3.451450927712853e-12,
+              "passed": true
+            }
+          ],
+          "bose": {
+            "tensor_difference_norm": 0.0,
+            "scale": 0.7524695868180674,
+            "scaled_residual": 0.0,
+            "passed": true
+          },
+          "threshold_4e4": null,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "finished_utc": "2026-09-14T12:49:35.528404+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "actual_invocation_count": 1,
+  "latest_passed": true
+}

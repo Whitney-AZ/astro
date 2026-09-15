@@ -1,0 +1,280 @@
+{
+  "status": "pass",
+  "executed_utc": "2026-09-14T12:12:24.195497+00:00",
+  "python_version": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "dependencies": "Python standard library only; fractions.Fraction exact coefficients",
+  "script_sha256": "16644bccdebe24d201c859ce7cd9942bef74b50ef4d83415a55977ab1ba929b7",
+  "random_seed": null,
+  "sampling": "Exact four-variable polynomials; no random draws.",
+  "variables": ["s", "u", "m", "M"],
+  "constraint": "t=2m^2+2M^2-s-u",
+  "clifford_and_trace": "{gamma,gamma}=-2g;Tr1=4;even trace recursion with (-1)^j dot;odd trace0",
+  "electron_factors": "Pprime, Ns/Nu, P, Ns/Nu;P=-slashp+m;Ns=-slashk+2m;Nu=+slashkprime+2m",
+  "annihilation_factors": "Q2,Nt/Nu,P1,Nt/Nu;Q2=-slashp2-m;Nt=+slashk1+2m;Nu=+slashk2+2m",
+  "average_factors": {
+    "electron_scalar": "1/2",
+    "annihilation": "1/4"
+  },
+  "electron_polynomials": {
+    "ss": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "-1"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "9"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "7"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "-8"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "1"
+      }
+    ],
+    "uu": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "-1"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "9"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "7"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "-8"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "1"
+      }
+    ],
+    "su": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "3"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "3"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "9"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "-8"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "-1"
+      }
+    ],
+    "us": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "3"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "3"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "9"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "-8"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "-1"
+      }
+    ]
+  },
+  "source48_26_to_29_residuals": {
+    "ss": [],
+    "uu": [],
+    "su": [],
+    "us": []
+  },
+  "corrected_crossing_minus_half_residuals": {
+    "ss": [],
+    "uu": [],
+    "su": [],
+    "us": []
+  },
+  "source48_2_minus_one_residuals": {
+    "ss": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "1/2"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "-9/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 2, 0, 0],
+        "coefficient": "1/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "-5"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 0, 2],
+        "coefficient": "-1"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "25/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "5"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "1/2"
+      }
+    ],
+    "uu": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "1/2"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "-1/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 2, 0, 0],
+        "coefficient": "1/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "3"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 0, 2],
+        "coefficient": "-1"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "9/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "-3"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "1/2"
+      }
+    ],
+    "su": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "-1/2"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "-3/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 2, 0, 0],
+        "coefficient": "-1/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 0, 2],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "15/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "-1"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "-1/2"
+      }
+    ],
+    "us": [
+      {
+        "powers_s_u_m_M": [1, 1, 0, 0],
+        "coefficient": "-1/2"
+      },
+      {
+        "powers_s_u_m_M": [1, 0, 2, 0],
+        "coefficient": "-3/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 2, 0, 0],
+        "coefficient": "-1/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 2, 0],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [0, 1, 0, 2],
+        "coefficient": "1"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 4, 0],
+        "coefficient": "15/2"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 2, 2],
+        "coefficient": "-1"
+      },
+      {
+        "powers_s_u_m_M": [0, 0, 0, 4],
+        "coefficient": "-1/2"
+      }
+    ]
+  },
+  "source48_2_wrong_factor_rejected": true,
+  "exact_zero_comparisons": 8,
+  "intentional_wrong_factor_controls": 4,
+  "arithmetic_error": "0:exact rational polynomial coefficients",
+  "limitations": "Checks algebraic numerators and crossing spin-average weights only; no new flux integral, loop correction, generic crossing analyticity theorem or optional decay computation."
+}

@@ -1,0 +1,651 @@
+---
+title: 'Srednicki §79 Gervais–Neveu 规范'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [79]
+hideFromHome: true
+draft: false
+---
+
+<span id="c79"></span>
+
+上一节把圈修正收进一个保持背景规范不变性的量子作用量。求散射振幅时，可以把它的各阶导数当作顶角，再用传播子连接成树图。这种安排留下了一项自由：计算圈修正时选定的规范，并不要求随后连接这些顶角时仍用同一种规范。本节利用这项自由，重新整理杨—米尔斯作用量，使三次和四次相互作用各只含一个有序矩阵迹。许多颜色和洛伦兹指标的组合因而可以留到最后才展开。
+
+我们从[第78节](/posts/srednicki-78/#c78)的背景作用量出发，先解释树图构造，再改变生成元归一，并按导数的个数化简作用量。规范函数将包含单位矩阵分量，因此必须区分两种群空间：$SU(N)$要求无迹投影，完整$U(N)$则还包括中央场。先展开完整矩阵多项式，再作无迹投影，就能用四胶子散射具体看出两种实现所需的内部场和顶角。
+
+<span id="c79-effective"></span>
+
+## 从背景量子作用量得到树图
+
+第19、21节的结果是，固定规范下的勒让德有效作用量已经包含全部1PI部分；把这些部分连成树，就能恢复连通函数。这里“树”说的是1PI部分之间的连接，每个顶角内部仍可有圈。若对完整有效作用量再作一次任意圈展开，就会重复计入这些量子修正。
+
+背景方法与这一结论怎样相接，可以先用一个平移看清楚。用$b$表示固定背景，$Q$表示涨落，$a$表示总场的平均值。把规范条件写成$G_b=\!D_b^\mu(A_\mu-b_\mu)$。在同一固定$b$的泛函积分中，令$A=b+Q$；线性平移的雅可比因子为1，源项只多出$\int Jb$。于是
+
+<span id="eq:c79-diagonal"></span>
+
+$$
+\begin{aligned}
+Z_Q[J;b]&=e^{-i\int Jb}Z_A[J;b],\\
+W_Q[J;b]&=W_A[J;b]-\int Jb,\qquad
+\widehat Q=a-b,\\
+\Gamma_Q[\widehat Q;b]
+ &=W_Q-\int J\widehat Q
+ =W_A-\int Ja=\Gamma_A[a;b],\\
+\Gamma_{\rm bg}[b]&=\Gamma_A[a;b]\big|_{a=b}.
+\end{aligned}
+\tag{79.1}
+$$
+
+最后一行就是上一节的对角限制。沿对角线求导会同时改变平均场和规范条件中的背景参数。省略指标及位置，有
+
+<span id="eq:c79-diagonal-derivatives"></span>
+
+$$
+\frac{\delta^n\Gamma_{\rm bg}[b]}{\delta b^n}
+=
+\left(\frac{\delta}{\delta a}+\frac{\delta}{\delta b}\right)^n
+\Gamma_A[a;b]\bigg|_{a=b}.
+\tag{79.2}
+$$
+
+只有$a$导数的项才是固定$b$时的通常1PI顶角；其余项含对规范条件的变分。这些规范条件的变分在物理散射中为零，可由[第74节的BRST性质](/posts/srednicki-74/#c74)说明。保留辅助场后，将规范固定与鬼作用量合写为$s\Psi_b$，则$\delta_bS=s(\delta_b\Psi_b)$。在无规范反常、测度和边界保持BRST的微扰定义中，对物理入出态有
+
+<span id="eq:c79-background-independence"></span>
+
+$$
+\begin{gathered}
+\delta_b S_{\rm phys}
+=i\langle{\rm out}|\,T\,s(\delta_b\Psi_b)\,|{\rm in}\rangle=0,
+\\
+Q_{\rm B}|{\rm in}\rangle=0,\quad
+\langle{\rm out}|Q_{\rm B}=0.
+\end{gathered}
+\tag{79.3}
+$$
+
+这里$sX$由BRST荷与$X$的分级对易子实现；把荷移到两端，两个矩阵元都为零。等价的格林函数证明先使用相应沃德恒等式，再作物理偏振的LSZ截肢。这个次序也要求外腿留数和红外处理相容。
+
+从[（79.2）](#eq:c79-diagonal-derivatives)到完整树图之和，还需使用背景场的散射等价定理：在这些条件下，给$\Gamma_{\rm bg}$再加一个可用的规范固定项，以所得二次核的逆连接其1PI顶角，得到通常的物理$S$矩阵。含背景参数导数的额外树图在物理LSZ极限中相消。证明见[Abbott、Grisaru 与 Schaefer，第2节](https://columbia.edu/cu/neurotheory/Larry/AbbottNP83.pdf#page=2)：先将对背景参数的导数表示成附加顶角，再用BRST恒等式整理连接图；物理偏振消去纵向外腿，其余附加项在截肢后没有所需的外腿在壳极点。[（79.2）](#eq:c79-diagonal-derivatives)中的这些额外导数在离壳时仍会存在，所以两种1PI函数一般不同。
+
+$\Gamma_{\rm bg}$仍有规范零方向，故它的二次核不能直接求逆。第二次规范固定便是为了给这些连接线定义传播子，可以按过程选择方便的规范。这一次树连接不需要显式鬼顶角，理由如下。没有外鬼的树图若含鬼线，沿其箭头经过各顶角，鬼数守恒使箭头不能中途终止；有限图中最终必形成闭圈。因此鬼顶角不参与这一次无外鬼的树连接，而先前已经收入$\Gamma_{\rm bg}$的鬼圈仍保留在各顶角里。
+
+本节以下只取$\Gamma_{\rm bg}=S_{\rm YM}+O(\hbar)$，求最低阶树幅。若第二次仍用通常$R_\xi$规范，就恢复第72节的规则；三、四胶子顶角各有多个张量项，逐图展开很繁。Gervais–Neveu规范的用意，是让规范固定项同时抵消一部分相互作用，并使自由核可逆。
+
+<span id="c79-matrices"></span>
+
+## 改用单位迹归一的矩阵场
+
+先讨论$SU(N)$基本矩阵，并把生成元的迹归一改为1。以前的生成元记作$t^a$，现在取
+
+<span id="eq:c79-generators"></span>
+
+$$
+T^a=\sqrt2\,t^a,\qquad
+\operatorname{Tr}T^aT^b=\delta^{ab},\qquad
+[T^a,T^b]=i\sqrt2 f^{abc}T^c.
+\tag{79.4}
+$$
+
+第三式由$[\,\sqrt2t^a,\sqrt2t^b\,]=2if^{abc}t^c$直接得到。这里保留原来的$f^{abc}$。把相同物理分量$A_\mu^a$乘上新的基底，矩阵场随之变大$\sqrt2$倍，因此矩阵连接中的系数必须反向改变：
+
+<span id="eq:c79-connection"></span>
+
+$$
+\begin{aligned}
+A_\mu&=A_\mu^aT^a=\sqrt2\,A_{\mu,\rm old},
+\qquad \kappa\equiv \frac{g}{\sqrt2},\\
+D_\mu&=\partial_\mu-i\kappa A_\mu
+      =\partial_\mu-igA_{\mu,\rm old},\\
+F_{\mu\nu}
+ &=\partial_\mu A_\nu-\partial_\nu A_\mu
+       -i\kappa[A_\mu,A_\nu]
+ =F_{\mu\nu}^aT^a,\\
+F_{\mu\nu}^a
+ &=\partial_\mu A_\nu^a-\partial_\nu A_\mu^a
+        +gf^{abc}A_\mu^bA_\nu^c.
+\end{aligned}
+\tag{79.5}
+$$
+
+这样$g$和分量场强都保持原值。由单位迹归一，动能为
+
+<span id="eq:c79-ym"></span>
+
+$$
+\mathcal L_{\rm YM}
+=-\frac14\operatorname{Tr}F^{\mu\nu}F_{\mu\nu}
+=-\frac14F^{a\mu\nu}F_{\mu\nu}^a.
+\tag{79.6}
+$$
+
+接着将场强的两类项合在一个不必反对称的张量里，定义
+
+<span id="eq:c79-h"></span>
+
+$$
+H_{\mu\nu}=\partial_\mu A_\nu-i\kappa A_\mu A_\nu,
+\qquad F_{\mu\nu}=H_{\mu\nu}-H_{\nu\mu}.
+\tag{79.7}
+$$
+
+$A_\mu$为厄米矩阵，但$H$通常不是；两指标反对称以后，二次矩阵项变成$-i\kappa[A_\mu,A_\nu]$，才恢复厄米的场强。使用$H$的好处是，每个$H$中只保留一种矩阵次序，后面的抵消更容易看见。
+
+先展开两份反对称差。在最后两项交换求和指标$\mu,\nu$，得到
+
+<span id="eq:c79-h-square"></span>
+
+$$
+\begin{aligned}
+\operatorname{Tr}F^{\mu\nu}F_{\mu\nu}
+={}&\operatorname{Tr}\bigl(
+ H^{\mu\nu}H_{\mu\nu}-H^{\mu\nu}H_{\nu\mu}\\
+&\hspace{17mm}
+-H^{\nu\mu}H_{\mu\nu}+H^{\nu\mu}H_{\nu\mu}\bigr)\\
+={}&2\operatorname{Tr}
+ \bigl(H^{\mu\nu}H_{\mu\nu}-H^{\mu\nu}H_{\nu\mu}\bigr),\\
+\mathcal L_{\rm YM}
+={}&-\frac12\operatorname{Tr}
+ \bigl(H^{\mu\nu}H_{\mu\nu}-H^{\mu\nu}H_{\nu\mu}\bigr).
+\end{aligned}
+\tag{79.8}
+$$
+
+因子2来自哑指标重命名。
+
+<span id="c79-expansion"></span>
+
+## 按导数的个数整理作用量
+
+取$\xi=1$，把规范函数选作$H$的洛伦兹迹：
+
+<span id="eq:c79-full-gauge"></span>
+
+$$
+\begin{aligned}
+G&=H^\mu{}_\mu
+  =\partial^\mu A_\mu-i\kappa A_\mu A^\mu,\\
+\mathcal L_{\rm gf}^{\rm full}
+ &=-\frac12\operatorname{Tr}G^2,\\
+\mathcal L_{\rm full}
+ &=-\frac12\operatorname{Tr}
+ \bigl(H^{\mu\nu}H_{\mu\nu}
+       -H^{\mu\nu}H_{\nu\mu}
+       +H^\mu{}_\mu H^\nu{}_\nu\bigr).
+\end{aligned}
+\tag{79.9}
+$$
+
+规范固定项采用普通平方$G^2$，其中的$(-i)^2$决定了四次相互作用项的号。对$SU(N)$场，第一项$\partial\cdot A$无迹，$A_\mu A^\mu$却通常有迹，所以$G$已超出无迹代数；下标“full”标明这里使用完整矩阵平方。[无迹投影](#c79-su-projection)会对其中的四次项产生修正。
+
+有两个导数时，只能从每个$H$中取$\partial A$。第二、第三项分别给交叉导数与散度平方。令
+
+<span id="eq:c79-two-derivatives"></span>
+
+$$
+\begin{aligned}
+J^\mu&=\operatorname{Tr}
+ \bigl(A_\nu\partial^\nu A^\mu
+       -A^\mu\partial_\nu A^\nu\bigr),\\
+\partial_\mu J^\mu
+ &=\operatorname{Tr}\bigl[
+  (\partial^\mu A^\nu)(\partial_\nu A_\mu)
+   -(\partial_\mu A^\mu)(\partial_\nu A^\nu)\bigr],\\
+\mathcal L_{2\partial}
+ &=-\frac12\operatorname{Tr}
+   (\partial^\mu A^\nu)(\partial_\mu A_\nu)
+   +\frac12\partial_\mu J^\mu.
+\end{aligned}
+\tag{79.10}
+$$
+
+验证第二行时，先对$J^\mu$用乘法法则。除所写的两项外，还有$A_\nu\partial_\mu\partial^\nu A^\mu$及$-A^\mu\partial_\mu\partial_\nu A^\nu$；导数对易，并在第一项重命名两个指标，二者相消。在衰减波包或无边界通量的条件下，全导数积分为零，只留下显示的动能项。自由核因此仍是$\xi=1$的核，其实际分量内线为$g_{\mu\nu}\delta^{ab}/[i(k^2-i0)]$。
+
+没有导数时，每个$H$各给$-i\kappa AA$，平方产生$-\kappa^2$，再乘外面的$-1/2$。三个迹因而组合为
+
+<span id="eq:c79-zero-derivatives"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{0\partial}
+&=\frac{\kappa^2}{2}\operatorname{Tr}\bigl(
+ A^\mu A^\nu A_\mu A_\nu
+ -A^\mu A^\nu A_\nu A_\mu\\
+&\hspace{30mm}+A^\mu A_\mu A^\nu A_\nu\bigr).
+\end{aligned}
+\tag{79.11}
+$$
+
+将第二项的最后一个矩阵绕迹移到最前，得到$\operatorname{Tr}A_\mu A^\mu A^\nu A_\nu$。收缩指标的度规对称，使$A_\mu A^\mu=A^\mu A_\mu$，所以第二、第三项抵消。剩下$g^2\operatorname{Tr}A^\mu A^\nu A_\mu A_\nu/4$。这里用的是迹的循环性；一般的$A_\mu A_\nu$并不等于$A_\nu A_\mu$。
+
+最后看只有一个导数的项。从每对$HH$中，可以在第一或第二个因子里取导数，两种选择经循环迹相等。因此，三个有序迹都带系数$i\kappa$。为把分部积分的去向写清，记
+
+<span id="eq:c79-one-derivative"></span>
+
+$$
+\begin{aligned}
+X&=\operatorname{Tr}(\partial^\mu A^\nu)A_\mu A_\nu,\\
+Y&=\operatorname{Tr}(\partial^\mu A^\nu)A_\nu A_\mu,\\
+Z&=\operatorname{Tr}(\partial^\mu A_\mu)A^\nu A_\nu,\\
+\mathcal L_{1\partial}&=i\kappa(X-Y+Z).
+\end{aligned}
+\tag{79.12}
+$$
+
+各导数只作用于括号里的那个场。要处理$Z$，对完整三场乘积$K^\mu=\operatorname{Tr}A^\mu A^\nu A_\nu$求导：
+
+<span id="eq:c79-one-derivative-ibp"></span>
+
+$$
+\begin{aligned}
+\partial_\mu K^\mu
+ &=Z+\operatorname{Tr}A^\mu(\partial_\mu A^\nu)A_\nu
+       +\operatorname{Tr}A^\mu A^\nu(\partial_\mu A_\nu)\\
+ &=Z+Y+X,\\
+\mathcal L_{1\partial}
+ &=i\kappa(X-Y-X-Y+\partial_\mu K^\mu)\\
+ &=-2i\kappa Y+i\kappa\partial_\mu K^\mu.
+\end{aligned}
+\tag{79.13}
+$$
+
+第二行中，把第二项的最前矩阵移到最后就得到$Y$；第三项则把被微分的矩阵移到最前，得到$X$。因此分部积分所生的一项抵消原来的$X$，另一项与$-Y$相加。合起来的系数便是$-i\sqrt2 g$。
+
+将三种导数阶数合起来，得到简洁的有序矩阵形式：
+
+<span id="eq:c79-compact-density"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm full}&\doteq
+\operatorname{Tr}\Bigl[
+ -\frac12(\partial^\mu A^\nu)(\partial_\mu A_\nu)\\
+&\hspace{13mm}-i\sqrt2g(\partial^\mu A^\nu)A_\nu A_\mu
+ +\frac{g^2}{4}A^\mu A^\nu A_\mu A_\nu
+ \Bigr].
+\end{aligned}
+\tag{79.14}
+$$
+
+符号$\doteq$表示作用量相等：未写出的密度是$\partial_\mu J^\mu/2+i\kappa\partial_\mu K^\mu$。现在三次项只含一个导数位置，四次项只含交替的矩阵次序。每项的质量维数也都是4，三、四次项分别带$g,g^2$，与上一节的分量理论一致。怎样从这样的有序迹读出规则，是下一节的主题；在使用它之前，先解决规范函数的单位矩阵分量。
+
+<span id="c79-su-projection"></span>
+
+## 无迹条件带来的修正
+
+$SU(N)$只有$N^2-1$个独立规范参数。相应的规范条件应为$G^a=\operatorname{Tr}(T^aG)$，也就是$G$沿无迹基的分量。单位矩阵与所有$T^a$迹正交，因此将$G$分解成
+
+<span id="eq:c79-traceless-projection"></span>
+
+$$
+\begin{aligned}
+\operatorname{Tr}G&=-i\kappa\,\mathscr S,
+\qquad \mathscr S\equiv\operatorname{Tr}(A_\mu A^\mu),\\
+\widehat G&=P_0G
+ =G-\frac{\mathbf1_N}{N}\operatorname{Tr}G,\\
+\sum_{a=1}^{N^2-1}G^aG^a
+ &=\operatorname{Tr}\widehat G^2
+ =\operatorname{Tr}G^2-\frac1N(\operatorname{Tr}G)^2 .
+\end{aligned}
+\tag{79.15}
+$$
+
+最后一行可直接展开平方验证：交叉项是$-2(\operatorname{Tr}G)^2/N$，单位阵平方的迹补回$(\operatorname{Tr}G)^2/N$。这也是无迹基完备性的作用。仅使用这$N^2-1$个条件时，规范固定项及总密度应为
+
+<span id="eq:c79-corrected-su-density"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm gf}^{\rm SU}
+ &=-\frac12\operatorname{Tr}\widehat G^2
+  =-\frac12\operatorname{Tr}G^2
+     +\frac1{2N}(\operatorname{Tr}G)^2\\
+ &=\mathcal L_{\rm gf}^{\rm full}
+      -\frac{g^2}{4N}\mathscr S^2,\\
+\mathcal L_{\rm SU}
+ &\doteq\mathcal L_{\rm compact}
+     -\frac{g^2}{4N}
+        [\operatorname{Tr}(A_\mu A^\mu)]^2 .
+\end{aligned}
+\tag{79.16}
+$$
+
+$\mathcal L_{\rm compact}$是[（79.14）](#eq:c79-compact-density)右边的三个项。这里的负号来自$(-i)^2=-1$，因为规范函数仍取普通平方。双迹项把规范固定限制在$SU(N)$的$N^2-1$个方向上。
+
+可以用$SU(2)$看出它的直接后果。此时$T^a=\sigma^a/\sqrt2$，由泡利矩阵的乘法式，$\{T^a,T^b\}=\delta^{ab}\mathbf1_2$。$A_\mu^aA^{b\mu}$对$a,b$对称，反对称乘积不贡献，故
+
+<span id="eq:c79-su2-projection"></span>
+
+$$
+\begin{gathered}
+A_\mu A^\mu
+ =\frac12A_\mu^aA^{a\mu}\mathbf1_2,\qquad
+\widehat G=\partial^\mu A_\mu,\\
+\mathcal L_{\rm full}-\mathcal L_{\rm SU}
+ =\frac{g^2}{8}(A_\mu^aA^{a\mu})^2 .
+\end{gathered}
+\tag{79.17}
+$$
+
+所以投影后的$SU(2)$规范就是通常的费曼规范。若四条外胶子都取颜色1，普通杨—米尔斯四点接触以及三条交换道的颜色因子都含$f^{11b}=0$，树幅为零。未经投影的密度却多出上式最后一项。只留下颜色1的场$W_\mu$，对它作四次带标签的泛函微分，得到
+
+<span id="eq:c79-extra-contact"></span>
+
+$$
+\begin{aligned}
+\Delta\mathcal L&=\frac{g^2}{8}(W_\mu W^\mu)^2,\\
+i\Delta V_{\mu\nu\rho\sigma}
+ &=ig^2\bigl(
+ g_{\mu\nu}g_{\rho\sigma}
+ +g_{\mu\rho}g_{\nu\sigma}
+ +g_{\mu\sigma}g_{\nu\rho}\bigr).
+\end{aligned}
+\tag{79.18}
+$$
+
+四条带标签的腿有$4!=24$种分配，分成三种度规配对；每种配对有$2\times2\times2=8$种，抵消$1/8$。这里的$i$来自作用量指数。这个项对物理横向偏振也可以非零。例如取以下全部流入的动量和实偏振，$E>0$：
+
+<span id="eq:c79-four-point-kinematics"></span>
+
+$$
+\begin{aligned}
+k_1&=(E,0,0,E),& k_2&=(E,0,0,-E),\\
+k_3&=(-E,-E,0,0),&k_4&=(-E,E,0,0),\\
+\varepsilon_i&=(0,0,1,0),&& i=1,2,3,4.
+\end{aligned}
+\tag{79.19}
+$$
+
+四个动量之和为零，每个动量平方为零，且$k_i\cdot\varepsilon_i=0$。偏振垂直于散射平面，彼此内积全为1。三道内动量平方为$-4E^2,2E^2,2E^2$，也没有零分母。于是
+
+<span id="eq:c79-su2-counterexample"></span>
+
+$$
+i\mathcal T_{\rm SU}=0,\qquad
+i\mathcal T_{\rm full,\;SU\ internal}
+=ig^2(1+1+1)=3ig^2 .
+\tag{79.20}
+$$
+
+未经投影时没有别的三点图补偿这个差：$SU(2)$的非线性规范三次项含$\operatorname{Tr}[(\partial\cdot A)A^2]$，第二因子正比单位阵，第一因子无迹，故它为零。由此可见，只用$SU(N)$内色而直接采用$\mathcal L_{\rm compact}$、不加双迹修正，会改变所求的胶子树幅。
+
+<span id="c79-un-completion"></span>
+
+## 完整矩阵空间与中央场的交换
+
+还有一种保留[（79.14）](#eq:c79-compact-density)简洁形式的办法：把单位矩阵也作为一个独立规范方向。取$T^0=\mathbf1_N/\sqrt N$，用$\mathbb A$表示这个完整的$U(N)$场，则
+
+<span id="eq:c79-un-fields"></span>
+
+$$
+\begin{aligned}
+\mathbb A_\mu&=a_\mu T^0+W_\mu^aT^a,\qquad
+\operatorname{Tr}T^AT^B=\delta^{AB},
+\quad A,B=0,\ldots,N^2-1,\\
+\mathbb F_{\mu\nu}
+ &=f^0_{\mu\nu}T^0+F^a_{\mu\nu}(W)T^a,\qquad
+f^0_{\mu\nu}=\partial_\mu a_\nu-\partial_\nu a_\mu,\\
+-\frac14\operatorname{Tr}\mathbb F^{\mu\nu}\mathbb F_{\mu\nu}
+ &=-\frac14f^{0\mu\nu}f^0_{\mu\nu}
+   -\frac14F^{a\mu\nu}(W)F_{\mu\nu}^a(W).
+\end{aligned}
+\tag{79.21}
+$$
+
+单位阵与其余生成元对易，所以未固定规范时，中央场只是一个自由麦克斯韦场。此时共有$N^2$个规范条件，完整的$\operatorname{Tr}\mathbb G^2$恰好等于它们的平方和。前面的代数可逐步照用，只须把其中所有$A$都解释为$\mathbb A$。
+
+[Siegel《Fields》，VI.B.4](https://arxiv.org/pdf/hep-th/9912205v2#page=369)也在完整$U(N)$空间中使用这一选择，其规范函数写为$f_{0,S}=\partial\cdot A_S+iA_S^2$。它把耦合吸入连接；用本节记号比较时，作
+
+<span id="eq:c79-siegel-conversion"></span>
+
+$$
+\begin{gathered}
+A_{S,\mu}=-\kappa\mathbb A_\mu,\qquad
+\partial_\mu+iA_{S,\mu}=D_\mu,\\
+f_{0,S}=-\kappa
+ \bigl(\partial\cdot\mathbb A-i\kappa\mathbb A^2\bigr)
+=-\kappa\mathbb G .
+\end{gathered}
+\tag{79.22}
+$$
+
+这说明规范函数的形式相合，也明确了它所作用的群空间。下面的传播子和顶角继续从本节[（79.21）](#eq:c79-un-fields)的动能归一求出。完整$U(N)$实现的内部变量包括中央场及相应的鬼和辅助场，即使外部粒子全属于$SU(N)$也是如此。
+
+中央场在未固定规范时虽自由，非线性规范条件却会把它与$W$联系起来。令$h=g/\sqrt{2N}$，并定义$d^{abc}=\operatorname{Tr}(T^a\{T^b,T^c\})/\sqrt2$。迹的循环性使它对三个指标全对称；这一定义与旧基底$t^a$的通常$d$归一相合。展开矩阵平方可得
+
+<span id="eq:c79-central-gauge"></span>
+
+$$
+\begin{aligned}
+\mathbb G^0
+ &=\partial\cdot a-ih(a_\mu a^\mu+W_\mu^aW^{a\mu}),\\
+\mathbb G^a
+ &=\partial\cdot W^a-2ih\,a_\mu W^{a\mu}
+       -\frac{ig}{2}d^{abc}W_\mu^bW^{c\mu}.
+\end{aligned}
+\tag{79.23}
+$$
+
+第一式用$\operatorname{Tr}T^0\mathbb A^2=(a^2+W^2)/\sqrt N$；第二式的混合项来自$aT^0$在乘积中的两个位置。在$SU(2)$例中$d^{abc}=0$、$h=g/2$。将$-\sum_A(\mathbb G^A)^2/2$展开，含一条$a$和两条$W$的部分是
+
+<span id="eq:c79-central-vertex"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{aWW}
+ &=ih(\partial\cdot a)\,W_\mu^aW^{a\mu}
+     +2ih(\partial\cdot W^a)a_\mu W^{a\mu},\\
+iV_{\alpha\nu\rho}^{0ab}(k,p,r)
+ &=-2ih\,\delta^{ab}
+   \bigl(k_\alpha g_{\nu\rho}
+         +p_\nu g_{\alpha\rho}+r_\rho g_{\alpha\nu}\bigr),\\
+iV_{\alpha\nu\rho}^{0ab}
+ \varepsilon_p^\nu\varepsilon_r^\rho
+ &=-2ih\,\delta^{ab}k_\alpha
+            (\varepsilon_p\cdot\varepsilon_r).
+\end{aligned}
+\tag{79.24}
+$$
+
+这里$k+p+r=0$，顶角按上指标场$a^\alpha,W^{a\nu},W^{b\rho}$微分。第一项中两个$W$的分配给2，第二项中被微分的$W$有两个选择，给后面两项。系数的相位是$i(ih)i=-ih$。两个外$W$取横向后，后两项消失，中央内线便由纵向电流激发。
+
+以$(12)|(34)$道为例，令$P=k_1+k_2$。两个顶角上的中央入动量分别为$-P,+P$。用[（79.21）](#eq:c79-un-fields)的费曼内线连接，得到
+
+<span id="eq:c79-central-exchange"></span>
+
+$$
+\begin{aligned}
+i\mathcal T_{0,(12|34)}
+ &=(2ihP_\alpha)
+  \frac{g^{\alpha\beta}}{i(P^2-i0)}
+  (-2ihP_\beta)
+ (\varepsilon_1\cdot\varepsilon_2)
+ (\varepsilon_3\cdot\varepsilon_4)\\
+ &=-4ih^2\frac{P^2}{P^2-i0}
+ (\varepsilon_1\cdot\varepsilon_2)
+ (\varepsilon_3\cdot\varepsilon_4)\\
+ &\longrightarrow-\frac{2ig^2}{N}
+ (\varepsilon_1\cdot\varepsilon_2)
+ (\varepsilon_3\cdot\varepsilon_4).
+\end{aligned}
+\tag{79.25}
+$$
+
+对[（79.19）](#eq:c79-four-point-kinematics)的非退化动量，最后极限直接成立。在$N=2$时，每一道为$-ig^2$，三道合成$-3ig^2$，恰好抵消[（79.20）](#eq:c79-su2-counterexample)的额外接触项，完整$U(2)$理论对这些外部$SU(2)$态仍给零。中央内线的纵向分子约去传播子的$P^2$，正好产生所需的局部补偿。
+
+<span id="c79-complex-brst"></span>
+
+## 复规范选择和非线性鬼项
+
+规范函数$G$非厄米，因而还须说明这种复规范选择如何定义。为此从第74节的BRST形式出发。在仅有$SU(N)$场的版本中，取一族规范函数
+
+<span id="eq:c79-gauge-family"></span>
+
+$$
+\begin{aligned}
+G_t&=\partial\cdot A-it\kappa
+  \left(A_\mu A^\mu-\frac{\mathbf1_N}{N}
+       \operatorname{Tr}A_\mu A^\mu\right),\\
+\Psi_t&=\int d^4x\,\operatorname{Tr}
+ \bar c\left(-G_t+\frac{\xi}{2}B\right),\\
+sA_\mu&=D_\mu c,\qquad sc=i\kappa c^2,\qquad
+s\bar c=B,\qquad sB=0 .
+\end{aligned}
+\tag{79.26}
+$$
+
+$t=0$是通常的线性规范，$t=1,\xi=1$是投影后的Gervais–Neveu选择。这里$s$是左奇微分；由$sA=Dc$可得$s(Dc)=D(sc)-i\kappa\{Dc,c\}=0$，其中$D(c^2)=(Dc)c+c(Dc)$，所以采用的矩阵号与第74节的幂零变分一致。对$\Psi_t$作奇微分时，穿过前置的$\bar c$要变号：
+
+<span id="eq:c79-gauge-fermion"></span>
+
+$$
+\begin{gathered}
+s\Psi_t=\int d^4x\,\operatorname{Tr}
+ \left(-BG_t+\frac{\xi}{2}B^2+\bar c\,sG_t\right),\\
+B=\frac{G_t}{\xi},\qquad
+\mathcal L_{\rm gf+gh}
+=-\frac1{2\xi}\operatorname{Tr}G_t^2
+ +\operatorname{Tr}\bar c\,sG_t .
+\end{gathered}
+\tag{79.27}
+$$
+
+辅助场的代数方程给出第二行。在参考真空附近作微扰展开时，可以将规范系数延拓到这里的复值，同时保持原来的极点处方和BRST 沃德恒等式。若用泛函积分表达这种延拓，还要求积分轮廓能连续变形，且没有边界贡献。对BRST闭合的偶插入$O$，归一化积分的导数给
+
+<span id="eq:c79-complex-gauge-independence"></span>
+
+$$
+\begin{aligned}
+\frac{d}{dt}\langle O\rangle_t
+ &=i\langle O\,s(\partial_t\Psi_t)\rangle_{t,c}\\
+ &=i\langle s(O\,\partial_t\Psi_t)\rangle_{t,c}=0 .
+\end{aligned}
+\tag{79.28}
+$$
+
+下标$c$扣除了归一分母的导数。第二行用了$sO=0$；最后一步正是测度与边界的BRST恒等式。用于散射时取物理BRST态和相容的LSZ极限，就回到[（79.3）](#eq:c79-background-independence)的论证。复规范由这个保持BRST恒等式的连续微扰延拓定义。完整$U(N)$版本采用同一公式，但去掉$P_0$，并把$A,c,\bar c,B$全都扩成$N^2$个分量。
+
+为看清鬼为何只在本节的树图中可以省略，再求一次这非线性函数的FP核。普通无穷小参数沿上一节取$\delta_\theta A=-D\theta$，所以
+
+<span id="eq:c79-ghost-kernel"></span>
+
+$$
+\begin{aligned}
+\delta_\theta G
+ &=-\partial^\mu D_\mu\theta
+       +i\kappa\{A^\mu,D_\mu\theta\},\\
+M_{\rm SU}\theta
+ &=P_0\left[-\partial^\mu D_\mu\theta
+       +i\kappa\{A^\mu,D_\mu\theta\}\right],\\
+\mathcal L_{\rm gh}
+ &=-\operatorname{Tr}\bar c\,M_{\rm SU}c .
+\end{aligned}
+\tag{79.29}
+$$
+
+两个反对易子项来自$\delta(A_\mu A^\mu)=(\delta A_\mu)A^\mu+A_\mu\delta A^\mu$。因反鬼无迹，最后一行可不显写$P_0$，但核的定义域和值域仍是无迹子空间。完整$U(N)$版本的核则作用于全部矩阵分量，包括中央鬼。
+
+代入$D_\mu c=\partial_\mu c-i\kappa[A_\mu,c]$，只对最外层的$\partial$分部积分，得到
+
+<span id="eq:c79-ghost-expanded"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm gh}\doteq{}&
+-\operatorname{Tr}(\partial^\mu\bar c)(\partial_\mu c)
++i\kappa\operatorname{Tr}(\partial^\mu\bar c)[A_\mu,c]\\
+&-i\kappa\operatorname{Tr}\bar c\{A^\mu,\partial_\mu c\}
+-\kappa^2\operatorname{Tr}\bar c[A_\mu A^\mu,c].
+\end{aligned}
+\tag{79.30}
+$$
+
+最后一个号来自$(-i\kappa)^2=-\kappa^2$；其矩阵结构用了
+$\{A^\mu,[A_\mu,c]\}=A^2c-cA^2$，中间两个$AcA$项相消。反鬼始终放在鬼之前。这里移动的$A$是偶变量，计算没有另作两个奇变量的交换。
+
+还可以把新增鬼顶角明确写出来。以本节定义的$d^{abc}$表示对称乘积，新的基本矩阵满足
+
+<span id="eq:c79-d-symbol"></span>
+
+$$
+\{T^a,T^b\}
+=\frac{2}{N}\delta^{ab}\mathbf1_N+\sqrt2d^{abc}T^c,
+\qquad
+\widehat G^a=\partial\cdot A^a
+       -\frac{ig}{2}d^{abc}A_\mu^bA^{c\mu}.
+\tag{79.31}
+$$
+
+把[（79.30）](#eq:c79-ghost-expanded)中的迹分别取出，使用[（79.4）](#eq:c79-generators)的对易关系，四项依次成为
+
+<span id="eq:c79-ghost-components"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\rm gh}\doteq{}&
+-(\partial^\mu\bar c^b)(\partial_\mu c^b)
++gf^{abc}A_\mu^a(\partial^\mu\bar c^b)c^c\\
+&-ig d^{abc}A_\mu^a\bar c^b\partial^\mu c^c
++\frac{ig^2}{2}d^{ade}f^{ebc}
+  A_\mu^aA^{d\mu}\bar c^bc^c .
+\end{aligned}
+\tag{79.32}
+$$
+
+例如最后一项中，$A^2$的无迹部分是$d^{ade}A^a\cdot A^dT^e/\sqrt2$；再同$c^cT^c$取对易子，得到$if^{ecb}T^b$。乘上$-\kappa^2$并将$f^{ecb}$换成$-f^{ebc}$，就得到所写的$+ig^2/2$。前两项是线性规范已有的动能与鬼顶角，后两项来自新的$A^2$条件。
+
+取全部流入的$A^{a\mu}(k),\bar c^b(r),c^c(s)$，各导数给$+ip$，再乘作用量指数的$i$。对四点项，两个胶子在对称的$d^{ade}$中给相同贡献，消去$1/2$，于是
+
+<span id="eq:c79-nonlinear-ghost-vertices"></span>
+
+$$
+\begin{aligned}
+iV_\mu^{\,a;bc}(k,r,s)
+ &=-gf^{abc}r_\mu+ig d^{abc}s_\mu,\qquad k+r+s=0,\\
+iV_{\mu\nu}^{\,ad;bc}
+ &=-g^2d^{ade}f^{ebc}g_{\mu\nu}.
+\end{aligned}
+\tag{79.33}
+$$
+
+$SU(2)$的$d^{abc}=0$时，两类新增鬼项都为零，与[（79.17）](#eq:c79-su2-projection)的线性投影规范相合。完整$U(2)$的情况可直接从[（79.23）](#eq:c79-central-gauge)求出。取
+$\delta a_\mu=-\partial_\mu\theta^0$、
+$\delta W_\mu^a=-D_\mu^{ab}\theta^b$，其中
+$D_\mu^{ab}=\delta^{ab}\partial_\mu+gf^{acb}W_\mu^c$。
+对$\mathbb G^0$中的$W^2$变分时，
+$W^{a\mu}D_\mu^{ab}\theta^b=W^{a\mu}\partial_\mu\theta^a$，
+因为两个$W$的颜色乘积对称，与$f^{acb}$缩并为零。因此，定义
+$\delta\mathbb G^A=M^{AB}\theta^B$后得到
+
+<span id="eq:c79-central-ghost-kernel"></span>
+
+$$
+\begin{aligned}
+M^{00}&=-\Box+2ih\,a^\mu\partial_\mu,\\
+M^{0b}&=2ih\,W^{b\mu}\partial_\mu,\\
+M^{a0}&=2ih\,W^{a\mu}\partial_\mu,\\
+M^{ab}&=-\partial^\mu D_\mu^{ab}
+             +2ih\,a^\mu D_\mu^{ab},
+\qquad h=\frac g2,\\
+\mathcal L_{\rm gh}&=-\bar c^A M^{AB}c^B .
+\end{aligned}
+\tag{79.35}
+$$
+
+各微分算符作用于右侧参数或鬼场，第一项$\partial^\mu D_\mu$也微分$D_\mu$中的$W$。两个非对角块分别来自$\delta(W^2)$和$\delta(a\cdot W)$，给中央鬼与非中央鬼之间的顶角。无外鬼的树图仍按开头的鬼数论证排除这些顶角；圈计算则包含整个核。
+
+矩阵形式的优点现在已经清楚：迹保存了场的排列次序，而分量仍可随时由
+
+<span id="eq:c79-component-recovery"></span>
+
+$$
+A_\mu^a=\operatorname{Tr}(T^aA_\mu)
+\tag{79.34}
+$$
+
+恢复。下一节将先用一个矩阵标量理论说明怎样沿这些次序读出费曼图。自由核中的颜色完备关系也随场空间确定：$SU(N)$使用无迹投影和[（79.16）](#eq:c79-corrected-su-density)的双迹项，完整$U(N)$使用[（79.14）](#eq:c79-compact-density)及全部$N^2$个内部颜色。
+
+---
+
+[← 第 78 节](/posts/srednicki-78/) · [章节地图](/srednicki/) · [第 80 节 →](/posts/srednicki-80/)

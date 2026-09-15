@@ -1,0 +1,67 @@
+% Original reconstruction of source Fig.90.1, PDF372 / printed360.
+% This is a basic-TikZ input fragment; the standalone PDF is generated from it.
+% P is the physical incoming pion momentum; k1,k2 are physical outgoing photons.
+% The axial current kernel follows S76 with all momenta outgoing: r=-P.
+% Black arrows on solid lines are the fermion/momentum directions of the
+% selected loop routing. Grey photon arrows indicate outgoing physical momenta.
+% First orientation:
+%   upper -> axial: ell-k1; lower -> upper: ell; axial -> lower: ell+k2.
+% Reversed orientation:
+%   axial -> upper: ell+k1; upper -> lower: ell; lower -> axial: ell-k2.
+% These correspond to the two traces described in MW.07--12 of
+% checks/review_S90_massive_ward_independent.md.
+% All three dots are local current insertions. No vertex factor is assigned.
+% The unexplained infinity-shaped marks in the source scan are not reproduced
+% and are not assigned a mathematical meaning.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,
+  font=\fontsize{10.5}{12}\selectfont,
+  momentum/.style={->,line width=.45pt,draw=black!58}]
+  \foreach \shift/\orientation in {0/1,80/2} {
+    \begin{scope}[xshift=\shift mm]
+      % Fixed original layout shared by the two opposite loop orientations.
+      \draw (0,0)--(27,16)--(27,-16)--cycle;
+      \draw[dashed] (-18,0)--(0,0);
+      \draw[->] (-13,0)--(-6,0);
+      \node[anchor=west,inner sep=0pt] at (-18,4) {$\pi^0$};
+      \node[anchor=south,inner sep=0pt] at (-8,2) {$P$};
+
+      % Two sinusoidal vector photon paths; separate arrows fix k1,k2 outward.
+      \draw plot[domain=0:1,samples=141,variable=\t]
+        ({27+18*\t-.30*sin(360*5*\t)},
+         {16+8*\t+.68*sin(360*5*\t)});
+      \draw plot[domain=0:1,samples=141,variable=\t]
+        ({27+18*\t+.30*sin(360*5*\t)},
+         {-16-8*\t+.68*sin(360*5*\t)});
+      \draw[momentum] (34,22.5)--(43,26.5);
+      \draw[momentum] (34,-22.5)--(43,-26.5);
+      \node[anchor=south,inner sep=0pt,text=black!65] at (38.5,28) {$k_1$};
+      \node[anchor=north,inner sep=0pt,text=black!65] at (38.5,-28) {$k_2$};
+
+      \fill (0,0) circle[radius=.5mm];
+      \fill (27,16) circle[radius=.5mm];
+      \fill (27,-16) circle[radius=.5mm];
+      \node[anchor=west,inner sep=0pt] at (29.5,0) {$\ell$};
+
+      \ifnum\orientation=1
+        \draw[->] (18,10.666667)--(9,5.333333);
+        \draw[->] (27,-5)--(27,5);
+        \draw[->] (9,-5.333333)--(18,-10.666667);
+        \node[anchor=south,inner sep=0pt] at (11,11.5) {$\ell-k_1$};
+        \node[anchor=north,inner sep=0pt] at (11,-11.5) {$\ell+k_2$};
+        \node[inner sep=0pt] at (11,27) {$(a)$};
+      \else
+        \draw[->] (9,5.333333)--(18,10.666667);
+        \draw[->] (27,5)--(27,-5);
+        \draw[->] (18,-10.666667)--(9,-5.333333);
+        \node[anchor=south,inner sep=0pt] at (11,11.5) {$\ell+k_1$};
+        \node[anchor=north,inner sep=0pt] at (11,-11.5) {$\ell-k_2$};
+        \node[inner sep=0pt] at (11,27) {$(b)$};
+      \fi
+    \end{scope}
+  }
+  \node[inner sep=0pt] at (54,0) {$+$};
+  \node[inner sep=0pt] at (53.5,-37)
+    {$P=k_1+k_2,\qquad r=-P\quad\text{（轴核全出）}$};
+\end{tikzpicture}
+

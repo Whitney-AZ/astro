@@ -1,0 +1,27 @@
+% Original vector reconstruction: source Fig.45.6, PDF198 / printed186.
+% e+ e- -> phi phi. Primed outgoing k labels align with source Eq.45.23;
+% the original figure omitted the primes. One continuous directed fermion chain.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \foreach \shift/\ka/\kb/\channel in {0/1/2/t,78/2/1/u}{
+    \begin{scope}[shift={(\shift,0)}]
+      \draw (0,0)--(24,0)--(24,-24)--(0,-24);
+      \draw[->] (6,0)--(15,0);
+      \draw[->] (24,-7)--(24,-16);
+      \draw[->] (15,-24)--(6,-24);
+      \foreach \y in {0,-24}{
+        \draw[scalar] (24,\y)--(54,\y);
+        \draw[->] (36,\y)--(42,\y);
+        \fill (24,\y) circle[radius=.55mm];
+      }
+      \node[above] at (10,2) {$p_1$};
+      \node[below] at (10,-26) {$-p_2$};
+      \node[above] at (43,2) {$k'_{\ka}$};
+      \node[below] at (43,-26) {$k'_{\kb}$};
+      \node[right] at (27,-12) {$p_1-k'_{\ka}$};
+      \node at (27,-37) {$(\channel)$};
+    \end{scope}
+  }
+  \node at (66,-12) {$+$};
+\end{tikzpicture}

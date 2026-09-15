@@ -1,0 +1,35 @@
+% Original vector reconstruction of source Fig.82.1, PDF337 / printed325.
+% The four black points are lattice sites. The cross x is only the center.
+% Counterclockwise links, starting at lower left:
+% +epsilon1, +epsilon2, -epsilon1, -epsilon2.
+% Their midpoint fields occur from right to left in source Eq.(82.24).
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.75pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+  \draw (-16,-16)--(16,-16)--(16,16)--(-16,16)--cycle;
+  \draw[->] (-7,-16)--(7,-16);
+  \draw[->] (16,-7)--(16,7);
+  \draw[->] (7,16)--(-7,16);
+  \draw[->] (-16,7)--(-16,-7);
+  \foreach \xx/\yy in {-16/-16,16/-16,16/16,-16/16}
+    {\fill (\xx,\yy) circle[radius=.65mm];}
+  % Midpoint leader ticks do not end at another lattice site.
+  \draw[line width=.4pt] (0,-16)--(0,-19)
+    (16,0)--(19,0) (0,16)--(0,19) (-16,0)--(-19,0);
+  \node[below,inner sep=1.5pt] at (0,-19)
+    {$x-\varepsilon_2/2$};
+  \node[right,inner sep=1.5pt] at (19,0)
+    {$x+\varepsilon_1/2$};
+  \node[above,inner sep=1.5pt] at (0,19)
+    {$x+\varepsilon_2/2$};
+  \node[left,inner sep=1.5pt] at (-19,0)
+    {$x-\varepsilon_1/2$};
+  % Direction 1 is rightward; direction 2 is upward.
+  \node at (7,-12) {$1$};
+  \node at (12,7) {$2$};
+  % Geometric center, deliberately distinguished from the four filled sites.
+  \draw[line width=.45pt] (-.7,0)--(.7,0) (0,-.7)--(0,.7);
+  \node[below right,inner sep=1pt] at (.8,-.8) {$x$};
+  \node at (0,-30) {$\varepsilon_1=a\widehat e_1,\qquad
+                     \varepsilon_2=a\widehat e_2$};
+\end{tikzpicture}
+

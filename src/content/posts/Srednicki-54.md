@@ -1,0 +1,685 @@
+---
+title: 'Srednicki §54 麦克斯韦方程'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [54]
+hideFromHome: true
+draft: false
+---
+
+<span id="c54"></span>
+
+从本节起，我们进入自旋一的理论。最熟悉的自旋一粒子是光子；
+要讨论物质发射和吸收光子的过程，先须把经典电磁场写成适于量子化的形式。
+本节从麦克斯韦方程出发，引入势和规范变换，再建立产生这些方程的作用量。
+下一节将从这个作用量继续讨论电磁场的独立自由度。
+
+这里的电荷和电流先作为给定的外源；
+它们如何随带电物质运动，要由物质的动力学另行确定。
+
+<span id="c54-input"></span>
+
+## 经典方程与电荷单位
+
+以$\mathbf E,\mathbf B$分别记电场和磁场，
+$\rho,\mathbf J$分别记电荷密度和电流密度。
+采用亥维赛–洛伦兹单位制，并令$c=1$，
+四条麦克斯韦方程为
+
+<span id="eq:c54-maxwell-input"></span>
+
+$$
+\begin{aligned}
+\boldsymbol\nabla\cdot\mathbf E&=\rho,&
+\boldsymbol\nabla\times\mathbf B-\dot{\mathbf E}&=\mathbf J,\\
+\boldsymbol\nabla\cdot\mathbf B&=0,&
+\boldsymbol\nabla\times\mathbf E+\dot{\mathbf B}&=0.
+\end{aligned}
+\tag{54.1}
+$$
+
+这一单位制把有源方程中的常数吸收到电荷定义里，而球面的几何因子仍然存在。
+例如对原点的静止点电荷$Q$，由球对称性和高斯定律，
+
+<span id="eq:c54-coulomb-normalization"></span>
+
+$$
+\int_{S_r}\mathbf E\cdot d\mathbf S
+=4\pi r^2E_r(r)=Q,\qquad
+\mathbf E(\mathbf x)=\frac{Q}{4\pi r^2}\hat{\mathbf r},\qquad
+|\mathbf F|=\frac{Q^2}{4\pi r^2}.
+\tag{54.2}
+$$
+
+最后一个式子是另一枚等电荷所受的静电力。
+因此$4\pi$出现在库仑力中，而不出现在微分形式的高斯定律中。
+以下继续使用本书的自然单位$\hbar=c=1$。
+
+<span id="c54-potentials"></span>
+
+## 用势解齐次方程
+
+四条方程中有两条不含源。引入标势$\varphi$和矢势$\mathbf A$，令
+
+<span id="eq:c54-potentials"></span>
+
+$$
+\mathbf B=\boldsymbol\nabla\times\mathbf A,\qquad
+\mathbf E=-\boldsymbol\nabla\varphi-\dot{\mathbf A}.
+\tag{54.3}
+$$
+
+这就自动满足两条齐次方程。对光滑势，空间导数彼此对易，
+散度作用于旋度中的两个导数与反对称的$\epsilon$缩并而为零；
+电场的旋度则给
+
+<span id="eq:c54-homogeneous-from-potentials"></span>
+
+$$
+\begin{aligned}
+\partial_iB_i
+ &=\epsilon_{ijk}\partial_i\partial_jA_k=0,\\
+(\boldsymbol\nabla\times\mathbf E)_i+\dot B_i
+ &=-\epsilon_{ijk}\partial_j\partial_k\varphi
+   -\partial_t(\epsilon_{ijk}\partial_jA_k)
+   +\partial_t(\epsilon_{ijk}\partial_jA_k)=0 .
+\end{aligned}
+\tag{54.4}
+$$
+
+反过来，满足齐次方程的场也能在局部写成这种形式。
+为了把存在性看得具体一些，取一个关于原点星形的空间区域：
+从原点到区域内任一点的线段都留在区域内，并假定场在其中光滑。
+时间暂作参数；若$\boldsymbol\nabla\cdot\mathbf B=0$，可以构造
+
+<span id="eq:c54-vector-potential-construction"></span>
+
+$$
+\begin{aligned}
+\mathbf A(\mathbf x,t)
+ &=\int_0^1ds\,s\,\mathbf B(s\mathbf x,t)\times\mathbf x,\\
+\boldsymbol\nabla_{\mathbf x}\times
+ [s\mathbf B(s\mathbf x,t)\times\mathbf x]
+ &=2s\mathbf B(s\mathbf x,t)
+   +s^2(\mathbf x\cdot\boldsymbol\nabla_{\mathbf y})
+       \mathbf B(\mathbf y,t)\big|_{\mathbf y=s\mathbf x}\\
+ &=\frac{d}{ds}\bigl[s^2\mathbf B(s\mathbf x,t)\bigr].
+\end{aligned}
+\tag{54.5}
+$$
+
+第二行使用恒等式
+$\boldsymbol\nabla\times(\mathbf U\times\mathbf x)
+=2\mathbf U+(\mathbf x\cdot\boldsymbol\nabla)\mathbf U
+-\mathbf x(\boldsymbol\nabla\cdot\mathbf U)$。
+取$\mathbf U=s\mathbf B(s\mathbf x,t)$后，最后一项为零，
+导数作用于场自变量又带来一个$s$。
+对最后一行积分，$s=0$端因光滑性而消失，
+留下$s=1$端的$\mathbf B(\mathbf x,t)$，所以所构造的矢势确实具有正确的旋度。
+
+再令$\mathbf C=\mathbf E+\dot{\mathbf A}$。
+法拉第方程使$\boldsymbol\nabla\times\mathbf C=0$，
+即$\partial_iC_j=\partial_jC_i$。沿同一条径向线段定义
+
+<span id="eq:c54-scalar-potential-construction"></span>
+
+$$
+\begin{aligned}
+\varphi(\mathbf x,t)
+ &=-\int_0^1ds\,x^jC_j(s\mathbf x,t),\\
+\partial_i\varphi
+ &=-\int_0^1ds\,
+ \left[C_i(s\mathbf x,t)
+  +s x^j\partial_{y^i}C_j(\mathbf y,t)\big|_{\mathbf y=s\mathbf x}\right]\\
+ &=-\int_0^1ds\,\frac{d}{ds}
+       [sC_i(s\mathbf x,t)]
+ =-C_i(\mathbf x,t).
+\end{aligned}
+\tag{54.6}
+$$
+
+从第二行到第三行，先用无旋条件把$\partial_iC_j$换成$\partial_jC_i$，
+再把括号认作对$s$的导数。
+这样得到的标势与矢势共同重现式[（54.3）](#eq:c54-potentials)。
+例如常量静场给$\mathbf A=\mathbf B\times\mathbf x/2$、
+$\varphi=-\mathbf E\cdot\mathbf x$。
+这个构造说明了局部势的存在；要把同一势延伸到整个区域，
+还须考虑区域的拓扑和边界。存在非平凡磁通时，可以改用相互衔接的分区势。
+
+势的选择并不唯一。取任意光滑函数$\Gamma(\mathbf x,t)$，作变换
+
+<span id="eq:c54-three-dimensional-gauge"></span>
+
+$$
+\begin{aligned}
+\varphi'&=\varphi+\dot\Gamma,&
+\mathbf A'&=\mathbf A-\boldsymbol\nabla\Gamma,\\
+\mathbf E'-\mathbf E
+ &=-\boldsymbol\nabla\dot\Gamma
+   +\partial_t\boldsymbol\nabla\Gamma=0,&
+\mathbf B'-\mathbf B
+ &=-\boldsymbol\nabla\times\boldsymbol\nabla\Gamma=0 .
+\end{aligned}
+\tag{54.7}
+$$
+
+这种改变势而保持电磁场的变换称为规范变换（gauge transformation）。
+在上述局部区域内，两组给出同一磁场的矢势之差无旋，
+所以可写成$-\boldsymbol\nabla\Gamma$。
+再要求电场相同，便有
+$\boldsymbol\nabla(\varphi'-\varphi-\dot\Gamma)=0$；
+括号中仅依赖时间的函数，可吸收到$\Gamma$的时间函数部分中。
+因此上式也说明了同一电磁场的局部势之间怎样联系。
+
+<span id="c54-tensor"></span>
+
+## 四矢势与反对称场强
+
+标势与矢势在不同惯性系中混合，适合组成一个四矢量。
+采用$(-,+,+,+)$度规，定义
+
+<span id="eq:c54-four-vector-conventions"></span>
+
+$$
+\begin{gathered}
+A^\mu=(\varphi,\mathbf A),\qquad
+A_\mu=(-\varphi,\mathbf A),\\
+\partial_\mu=(\partial_t,\boldsymbol\nabla),\qquad
+\partial^\mu=(-\partial_t,\boldsymbol\nabla),\qquad
+J^\mu=(\rho,\mathbf J).
+\end{gathered}
+\tag{54.8}
+$$
+
+$A^\mu$称为四矢势，也称规范场（gauge field）。
+电荷–电流密度组成$J^\mu$，使它与势的耦合可以写成洛伦兹标量。
+现在以势的一阶导数定义场强张量（field-strength tensor）：
+
+<span id="eq:c54-field-strength"></span>
+
+$$
+F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu,
+\qquad F^{\nu\mu}=-F^{\mu\nu}.
+\tag{54.9}
+$$
+
+反对称性来自两个指标交换后两项恰好换位，
+因而它有六个独立分量。把这些分量与电磁场比较，
+
+<span id="eq:c54-field-components"></span>
+
+$$
+\begin{aligned}
+F^{0i}&=-\dot A^i-\partial_i\varphi=E^i,
+&F_{0i}&=-E_i,\\
+F^{ij}&=\partial_iA_j-\partial_jA_i
+ =\epsilon^{ijk}\epsilon_{klm}\partial_lA_m
+ =\epsilon^{ijk}B_k .
+\end{aligned}
+\tag{54.10}
+$$
+
+空间指标按欧几里得度规升降。
+第二行用了
+$\epsilon^{ijk}\epsilon_{klm}
+=\delta^i_l\delta^j_m-\delta^i_m\delta^j_l$。
+因此六个分量恰好装下电场与磁场；按行、列指标依次为$0,1,2,3$，有
+
+<span id="eq:c54-field-matrix"></span>
+
+$$
+(F^{\mu\nu})=
+\begin{pmatrix}
+0&E_1&E_2&E_3\\
+-E_1&0&B_3&-B_2\\
+-E_2&-B_3&0&B_1\\
+-E_3&B_2&-B_1&0
+\end{pmatrix}.
+\tag{54.11}
+$$
+
+电场分量在首行取正号，与$\partial^0=-\partial_t$相配。
+两条含源的麦克斯韦方程现在可以合写成
+$\partial_\nu F^{\mu\nu}=J^\mu$，因为
+
+<span id="eq:c54-inhomogeneous-components"></span>
+
+$$
+\begin{aligned}
+\partial_\nu F^{0\nu}
+ &=\partial_iE^i=\rho,\\
+\partial_\nu F^{i\nu}
+ &=-\dot E^i+\epsilon^{ijk}\partial_jB_k
+ =-\dot E^i+(\boldsymbol\nabla\times\mathbf B)^i=J^i .
+\end{aligned}
+\tag{54.12}
+$$
+
+这里导数缩并的是场强的第二个指标。
+这一顺序在后面的作用量变分中也会出现，届时须与反对称性一起使用。
+
+<span id="c54-current-bianchi"></span>
+
+## 电流守恒和齐次恒等式
+
+给定外源时，电荷密度和电流密度仍不能任意独立选择。
+对有源方程再取一次散度，交换哑指标并利用导数对易，
+
+<span id="eq:c54-current-conservation"></span>
+
+$$
+\begin{aligned}
+\partial_\mu J^\mu
+ &=\partial_\mu\partial_\nu F^{\mu\nu}
+ =\frac12\partial_\mu\partial_\nu
+       (F^{\mu\nu}+F^{\nu\mu})=0,\\
+\partial_\mu J^\mu&=\dot\rho+\boldsymbol\nabla\cdot\mathbf J .
+\end{aligned}
+\tag{54.13}
+$$
+
+所以局部电荷守恒是麦克斯韦方程有解所需的相容条件。
+把它在固定空间区域$V$中积分，便得到熟悉的通量关系：
+
+<span id="eq:c54-charge-flux"></span>
+
+$$
+\frac{d}{dt}\int_Vd^3x\,\rho
+=-\int_Vd^3x\,\boldsymbol\nabla\cdot\mathbf J
+=-\int_{\partial V}\mathbf J\cdot d\mathbf S .
+\tag{54.14}
+$$
+
+区域内电荷的减少量等于从边界流出的电流。
+若整个空间无穷远处的通量消失，总电荷便守恒。
+
+另外两条方程则由场强的定义自动满足。
+沿第34节取$\epsilon^{0123}=+1$、$\epsilon_{0123}=-1$，
+将场强导数与完全反对称张量缩并，记为
+$H_\sigma=\epsilon_{\mu\nu\rho\sigma}\partial^\rho F^{\mu\nu}$。
+分别取时间与空间自由指标，有
+
+<span id="eq:c54-bianchi-components"></span>
+
+$$
+\begin{aligned}
+H_0
+ &=\epsilon_{ijk0}\partial^kF^{ij}
+ =\epsilon_{ijk}\epsilon^{ijl}\partial_kB_l
+ =2\boldsymbol\nabla\cdot\mathbf B,\\
+H_l
+ &=\epsilon_{ij0l}\partial^0F^{ij}
+   +2\epsilon_{0ijl}\partial^jF^{0i}\\
+ &=(-\epsilon_{ijl})(-\partial_t)\epsilon^{ijk}B_k
+   -2\epsilon_{ijl}\partial_jE_i\\
+ &=2\dot B_l+2(\boldsymbol\nabla\times\mathbf E)_l .
+\end{aligned}
+\tag{54.15}
+$$
+
+时间指标在$\epsilon_{ijk0}$中移过三个位次，
+所以它等于正的三维$\epsilon_{ijk}$；
+空间分量中的时间导数则另有$\partial^0=-\partial_t$。
+因而$H_\sigma=0$恰好就是两条齐次方程。
+直接代入势表示也可得到
+
+<span id="eq:c54-bianchi-identity"></span>
+
+$$
+\begin{aligned}
+H_\sigma
+ &=\epsilon_{\mu\nu\rho\sigma}
+   \partial^\rho(\partial^\mu A^\nu-\partial^\nu A^\mu)\\
+ &=2\epsilon_{\mu\nu\rho\sigma}
+   \partial^\rho\partial^\mu A^\nu=0 .
+\end{aligned}
+\tag{54.16}
+$$
+
+第二项交换$\mu,\nu$后与第一项相同，给出二；
+余下的两个导数对$\rho,\mu$对称，与$\epsilon$的反对称性相消。
+这就是此处的比安基恒等式，它由势的定义成立，
+无须先满足含源的运动方程。
+
+同样的导数对易关系还保证四维场强的规范不变性。
+把式[（54.7）](#eq:c54-three-dimensional-gauge)合成四维变换，
+
+<span id="eq:c54-four-dimensional-gauge"></span>
+
+$$
+\begin{aligned}
+A'^\mu&=A^\mu-\partial^\mu\Gamma,\\
+F'^{\mu\nu}
+ &=\partial^\mu A'^\nu-\partial^\nu A'^\mu\\
+ &=F^{\mu\nu}
+   -(\partial^\mu\partial^\nu-\partial^\nu\partial^\mu)\Gamma
+ =F^{\mu\nu}.
+\end{aligned}
+\tag{54.17}
+$$
+
+时间分量给$\varphi'=\varphi+\dot\Gamma$，空间分量给矢势的负梯度，
+所以这里的四维写法与前面的三维计算完全相配。
+
+<span id="c54-action"></span>
+
+## 电磁场的作用量
+
+为了使用场论的变分方法，现在寻找一个以麦克斯韦方程为运动方程的作用量。
+取
+
+<span id="eq:c54-maxwell-action"></span>
+
+$$
+S[A;J]=\int d^4x\,\mathcal L,\qquad
+\mathcal L=-\frac14F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu .
+\tag{54.18}
+$$
+
+外源固定时，只对$A_\mu$变分。
+先把这个式子写回电磁场分量，就能看清两个项的物理归一化：
+
+<span id="eq:c54-action-components"></span>
+
+$$
+\begin{aligned}
+F^{\mu\nu}F_{\mu\nu}
+ &=2\sum_iF^{0i}F_{0i}
+   +2\sum_{i<j}F^{ij}F_{ij}
+ =2(\mathbf B^2-\mathbf E^2),\\
+J^\mu A_\mu&=-\rho\varphi+\mathbf J\cdot\mathbf A,\\
+\mathcal L
+ &=\frac12(\mathbf E^2-\mathbf B^2)
+   -\rho\varphi+\mathbf J\cdot\mathbf A .
+\end{aligned}
+\tag{54.19}
+$$
+
+每个反对称分量在缩并中出现两次，所以原来的四分之一变成二分之一。
+电场项还带有降低时间指标的负号，最终其速度平方项为正。
+在四维自然单位下，$\mathcal L$的质量维数为四，
+从而$[A]=1$、$[F]=2$、$[J]=3$。
+电荷$Q=\int d^3x\,\rho$以及规范函数$\Gamma$均无量纲。
+
+这个作用量应具有洛伦兹不变性、规范不变性、宇称不变性和时间反演不变性。
+洛伦兹性质由指标缩并保证；讨论包含外源的作用量时，$J^\mu$也按四矢量变换。
+在相应坐标反射之外，三维场的变号规律为
+
+| 变换        | $\mathbf E,\rho,\varphi$            | $\mathbf B$ | $\mathbf J,\mathbf A$ |
+| ----------- | ----------------------------------- | ----------- | --------------------- |
+| 宇称$P$     | $\mathbf E$反号，$\rho,\varphi$不变 | 不变        | 反号                  |
+| 时间反演$T$ | 不变                                | 反号        | 反号                  |
+
+因此式[（54.19）](#eq:c54-action-components)的各项都是偶的。
+另一个可由两个场强形成的洛伦兹标量使用$\epsilon$缩并，
+在三维语言中正比于$\mathbf E\cdot\mathbf B$，
+它在$P,T$下均为奇，故不列入这里选择的偶拉氏密度。
+
+为重现对势线性的麦克斯韦方程，取局域的二次场作用量，
+并保留至多两个导数和指定的线性外流耦合。
+在相差全散度的表达式中选择一个代表后，
+平直时空中具有常系数的洛伦兹协变二次核只能由
+
+<span id="eq:c54-general-quadratic-kernel"></span>
+
+$$
+\mathscr K^{\mu\nu}
+=a\,g^{\mu\nu}\partial^2
+ +b\,\partial^\mu\partial^\nu
+ +c\,g^{\mu\nu}
+\tag{54.20}
+$$
+
+组成。两个导数可以相互缩并，或分别带两个自由指标；
+不含导数的项只能与度规成正比。
+若用$\epsilon$把两个导数反对称缩并，则在体积项中为零。
+$a,b$无量纲，而$c$具有质量平方的量纲。
+规范变换使二次作用量出现交叉项
+$-\int d^4x\,A_\mu\mathscr K^{\mu\nu}\partial_\nu\Gamma$；
+要求它对任意$A_\mu$消失，自由二次核就必须沿纯规范方向为零：
+
+<span id="eq:c54-gauge-kernel-condition"></span>
+
+$$
+\mathscr K^{\mu\nu}\partial_\nu\Gamma
+=(a+b)\partial^\mu\partial^2\Gamma+c\,\partial^\mu\Gamma=0
+\quad\Longrightarrow\quad b=-a,\qquad c=0 .
+\tag{54.21}
+$$
+
+这里要求等式对任意内部光滑$\Gamma$成立，
+一阶与三阶导数的系数必须分别消失。
+剩下的整体系数$a$由电荷单位和麦克斯韦方程固定。
+下面的变分将给出
+$a\,\partial_\nu F^{\mu\nu}=J^\mu$，
+所以按式[（54.12）](#eq:c54-inhomogeneous-components)取$a=1$。
+因此在这些条件下，作用量只剩常数密度与全散度的自由，它们不改变局部运动方程。
+若允许非线性电动力学，$(F^{\mu\nu}F_{\mu\nu})^2$同样具有这些连续和离散对称性，
+而且运动方程的最高导数仍是二阶；它却含四个一阶导数，并产生非线性场方程。
+二次场与总导数数目的要求，便把麦克斯韦作用量从这些非线性项中选出。
+
+<span id="c54-gauge-action"></span>
+
+## 外源耦合的规范不变性
+
+场强本身不变，所以作用量的第一项逐点不变。
+外源项则在规范变换后成为$J^\mu A'_\mu$。
+降低式[（54.17）](#eq:c54-four-dimensional-gauge)的指标，
+$A'_\mu-A_\mu=-\partial_\mu\Gamma$，于是
+
+<span id="eq:c54-gauge-source-variation"></span>
+
+$$
+\begin{aligned}
+\delta_\Gamma\mathcal L
+ &=J^\mu(A'_\mu-A_\mu)=-J^\mu\partial_\mu\Gamma\\
+ &=+(\partial_\mu J^\mu)\Gamma
+   -\partial_\mu(J^\mu\Gamma),\\
+\delta_\Gamma S
+ &=\int_\Omega d^4x\,(\partial_\mu J^\mu)\Gamma
+   -\int_{\partial\Omega}d\Sigma_\mu\,J^\mu\Gamma .
+\end{aligned}
+\tag{54.22}
+$$
+
+第二行只是乘积法则
+$\partial_\mu(J^\mu\Gamma)
+=(\partial_\mu J^\mu)\Gamma+J^\mu\partial_\mu\Gamma$的重新排列。
+电流守恒时，含电流散度的体积项为零，只剩边界积分。
+再取$\Gamma$为紧支撑函数，或采用使边界通量消失的条件，便有
+$\delta_\Gamma S=0$。
+
+这也给出电流守恒的另一种理解。
+若从作用量出发，要求任意内部紧支撑的规范变换都不改变它，
+上式的体积积分就必须对任意$\Gamma$为零，因而$\partial_\mu J^\mu=0$。
+所以电流守恒同时保证了有源方程的相容性和外源耦合的规范不变性。
+
+<span id="c54-variation"></span>
+
+## 展开作用量并取变分
+
+现在把场强写回势，以便直接读出微分核。
+两个反对称差相乘产生四项：
+
+<span id="eq:c54-expanded-strength-square"></span>
+
+$$
+\begin{aligned}
+F^{\mu\nu}F_{\mu\nu}
+ &=(\partial^\mu A^\nu-\partial^\nu A^\mu)
+   (\partial_\mu A_\nu-\partial_\nu A_\mu)\\
+ &=\partial^\mu A^\nu\partial_\mu A_\nu
+   -\partial^\mu A^\nu\partial_\nu A_\mu
+   -\partial^\nu A^\mu\partial_\mu A_\nu
+   +\partial^\nu A^\mu\partial_\nu A_\mu\\
+ &=2\partial^\mu A^\nu\partial_\mu A_\nu
+   -2\partial^\mu A^\nu\partial_\nu A_\mu .
+\end{aligned}
+\tag{54.23}
+$$
+
+第三、四项同时交换哑指标$\mu,\nu$后，
+分别成为第二项和第一项，所以成对合并。
+乘上$-1/4$并加入外源项，得到
+
+<span id="eq:c54-expanded-lagrangian"></span>
+
+$$
+\mathcal L
+=-\frac12\partial^\mu A^\nu\partial_\mu A_\nu
+ +\frac12\partial^\mu A^\nu\partial_\nu A_\mu
+ +J^\mu A_\mu .
+\tag{54.24}
+$$
+
+接着把两个场导数移到同一份势上。
+对前两项分别作一次乘积法则变形，保留全散度，
+
+<span id="eq:c54-two-integrations-by-parts"></span>
+
+$$
+\begin{aligned}
+-\frac12\partial^\mu A^\nu\partial_\mu A_\nu
+ &=\frac12A^\nu\partial^2A_\nu
+   -\frac12\partial^\mu(A^\nu\partial_\mu A_\nu),\\
++\frac12\partial^\mu A^\nu\partial_\nu A_\mu
+ &=-\frac12A^\nu\partial^\mu\partial_\nu A_\mu
+   +\frac12\partial^\mu(A^\nu\partial_\nu A_\mu).
+\end{aligned}
+\tag{54.25}
+$$
+
+第一项中的$\partial^2$不带自由指标；
+第二项把两个导数都留在后面的$A_\mu$上。
+重新命名哑指标并合并边界流后，得到
+
+<span id="eq:c54-kernel-and-boundary"></span>
+
+$$
+\begin{gathered}
+\mathcal L
+=\frac12A_\mu D^{\mu\nu}A_\nu
+ +J^\mu A_\mu-\partial^\mu K_\mu,\\
+D^{\mu\nu}=g^{\mu\nu}\partial^2-\partial^\mu\partial^\nu,\qquad
+K_\mu=\frac12A^\nu(\partial_\mu A_\nu-\partial_\nu A_\mu).
+\end{gathered}
+\tag{54.26}
+$$
+
+这里$K_\mu$收集了分部积分产生的边界流。
+在整个区域积分时，它给出边界积分；
+求内部运动方程可以先取紧支撑变分，使这个边界部分的变分为零。
+
+对剩下的二次作用量变分，两个$A$的位置各产生一项。
+第二项中的导数原本作用于$\delta A$，
+连续分部积分两次把它们移回$A$，两个负号相消；
+再交换$\mu,\nu$，便与第一项相同：
+
+<span id="eq:c54-quadratic-variation"></span>
+
+$$
+\begin{aligned}
+\delta S
+ &=\frac12\int d^4x\,\delta A_\mu D^{\mu\nu}A_\nu
+   +\frac12\int d^4x\,A_\mu D^{\mu\nu}\delta A_\nu
+   +\int d^4x\,J^\mu\delta A_\mu\\
+ &=\int d^4x\,\delta A_\mu
+       (D^{\mu\nu}A_\nu+J^\mu).
+\end{aligned}
+\tag{54.27}
+$$
+
+因此任意内部变分都使作用量驻定的条件为
+
+<span id="eq:c54-euler-lagrange-maxwell"></span>
+
+$$
+\begin{aligned}
+D^{\mu\nu}A_\nu+J^\mu&=0,\\
+\partial_\nu F^{\mu\nu}
+ &=\partial^\mu\partial^\nu A_\nu-\partial^2A^\mu
+ =-D^{\mu\nu}A_\nu=J^\mu .
+\end{aligned}
+\tag{54.28}
+$$
+
+第二行把势的运动方程重新写成场强形式。
+由式[（54.12）](#eq:c54-inhomogeneous-components)，
+这恰好是两条有源的麦克斯韦方程；两条齐次方程则已包含在势的定义中。
+若在自由二次项前保留系数$a$，上述变分的自由部分整体乘$a$，
+就得到前面所说的$a\,\partial_\nu F^{\mu\nu}=J^\mu$，
+所以这里的归一化与最初的电荷单位一致。
+
+还可以直接对未展开的场强作用量变分，以检查反对称张量中的号：
+
+<span id="eq:c54-direct-field-variation"></span>
+
+$$
+\begin{aligned}
+\delta\mathcal L
+ &=-\frac12F^{\mu\nu}
+  (\partial_\mu\delta A_\nu-\partial_\nu\delta A_\mu)
+  +J^\nu\delta A_\nu\\
+ &=-F^{\mu\nu}\partial_\mu\delta A_\nu+J^\nu\delta A_\nu\\
+ &=(\partial_\mu F^{\mu\nu}+J^\nu)\delta A_\nu
+   -\partial_\mu(F^{\mu\nu}\delta A_\nu).
+\end{aligned}
+\tag{54.29}
+$$
+
+第二项交换两个哑指标时，$F$的反对称性再给一个负号，
+从而第一行的两个半项合成第二行。
+所得到的体积方程缩并场强的第一个指标；
+用$F^{\mu\nu}=-F^{\nu\mu}$便回到式[（54.28）](#eq:c54-euler-lagrange-maxwell)。
+若直接用三维拉氏量检查，标势变化给$\delta\mathbf E=-\boldsymbol\nabla\delta\varphi$，
+矢势变化给$\delta\mathbf E=-\partial_t\delta\mathbf A$、
+$\delta\mathbf B=\boldsymbol\nabla\times\delta\mathbf A$，因而
+
+<span id="eq:c54-three-dimensional-variation"></span>
+
+$$
+\begin{aligned}
+\delta_\varphi S
+ &=\int d^4x\,[-\mathbf E\cdot\boldsymbol\nabla\delta\varphi
+               -\rho\,\delta\varphi]
+ =\int d^4x\,(\boldsymbol\nabla\cdot\mathbf E-\rho)\delta\varphi,\\
+\delta_{\mathbf A}S
+ &=\int d^4x\,[-\mathbf E\cdot\partial_t\delta\mathbf A
+               -\mathbf B\cdot\boldsymbol\nabla\times\delta\mathbf A
+               +\mathbf J\cdot\delta\mathbf A]\\
+ &=\int d^4x\,
+   (\dot{\mathbf E}-\boldsymbol\nabla\times\mathbf B+\mathbf J)
+   \cdot\delta\mathbf A .
+\end{aligned}
+\tag{54.30}
+$$
+
+这里仍取内部变分。第一行作空间分部积分，
+最后一行的电场项作时间分部积分，
+磁场项则用
+$\boldsymbol\nabla\cdot(\delta\mathbf A\times\mathbf B)
+=\mathbf B\cdot\boldsymbol\nabla\times\delta\mathbf A
+-\delta\mathbf A\cdot\boldsymbol\nabla\times\mathbf B$。
+两种势的系数分别给高斯方程与含位移电流的安培方程。
+
+由此，经典电动力学已经写成与前面场论相同的作用量语言。
+但它的二次核有一个新的性质：
+
+<span id="eq:c54-gauge-zero-direction"></span>
+
+$$
+D^{\mu\nu}\partial_\nu\Gamma
+=\partial^\mu\partial^2\Gamma
+ -\partial^\mu\partial^2\Gamma=0 .
+\tag{54.31}
+$$
+
+这正反映同一个电磁场有许多势的表示。
+上一节的高斯积分需要自由核的逆，而这里纯规范方向使这个逆尚未确定。
+下一节将在库仑规范中处理这项自由，并从中选出可以量子化的独立变量。
+
+---
+
+[← 第 53 节](/posts/srednicki-53/) · [章节地图](/srednicki/) · [第 55 节 →](/posts/srednicki-55/)

@@ -70,6 +70,48 @@
   @apply overflow-x-auto my-5;
 }
 
+.markdown .katex-display {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25em;
+}
+
+.markdown .katex-display > .katex {
+  display: inline-block;
+  width: max-content;
+  min-width: 100%;
+}
+
+.markdown .katex-display > .katex > .katex-html > .tag {
+  position: relative;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.markdown .srednicki-diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.25rem;
+  margin-block: 1.5rem;
+}
+
+.markdown .srednicki-diagram-grid figure {
+  margin: 0;
+}
+
+.markdown .srednicki-diagram-grid img {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.markdown .srednicki-diagram-grid figcaption {
+  text-align: center;
+  font-size: 0.875em;
+  line-height: 1.6;
+}
+
 .markdown table {
   @apply w-auto mx-auto text-left table-auto text-sm;
 }

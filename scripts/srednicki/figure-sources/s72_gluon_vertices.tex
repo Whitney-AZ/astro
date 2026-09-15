@@ -1,0 +1,34 @@
+% Original vector artwork for source Fig.72.1, PDF291/printed279.
+% Arrows beside wavy lines indicate outgoing momentum, not charge flow.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+ \begin{scope}
+  \foreach \ang in {150,270,30}{
+   \begin{scope}[rotate=\ang]
+    \draw[domain=0:18,samples=85,smooth,variable=\u]
+     plot ({\u},{.7*sin(60*\u)});
+    \draw[->] (7,2.6)--(13,2.6);
+   \end{scope}
+  }
+  \fill (0,0) circle[radius=.65mm];
+  \node[above left] at (-16,11) {$(a,\mu,p)$};
+  \node[above right] at (16,11) {$(c,\rho,r)$};
+  \node[below] at (0,-20) {$(b,\nu,q)$};
+  \node at (0,-31) {三胶子顶角};
+ \end{scope}
+ \begin{scope}[shift={(76,0)}]
+  \foreach \ang in {135,225,315,45}{
+   \begin{scope}[rotate=\ang]
+    \draw[domain=0:18,samples=85,smooth,variable=\u]
+     plot ({\u},{.7*sin(60*\u)});
+    \draw[->] (7,2.6)--(13,2.6);
+   \end{scope}
+  }
+  \fill (0,0) circle[radius=.65mm];
+  \node[above left] at (-14,14) {$(a,\mu)$};
+  \node[below left] at (-14,-14) {$(b,\nu)$};
+  \node[below right] at (14,-14) {$(c,\rho)$};
+  \node[above right] at (14,14) {$(d,\sigma)$};
+  \node at (0,-31) {四胶子顶角};
+ \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+% Original vector graph for source Fig.73.1, PDF293.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+\draw (0,0)--(54,0);
+\foreach \x in {3,23,45}{\draw[->] (\x,0)--(\x+6,0);}
+\draw[domain=0:1,samples=181,smooth,variable=\u]
+ plot ({27+(13+.65*sin(1440*\u))*cos(180*\u)},
+       {(13+.65*sin(1440*\u))*sin(180*\u)});
+\draw[->] (31,16)--(23,16);
+\node[above] at (27,17) {$\ell$};
+\fill (14,0) circle[radius=.55mm];
+\fill (40,0) circle[radius=.55mm];
+\node[above left] at (14,1) {$b$};
+\node[above right] at (40,1) {$a$};
+\node[below] at (27,-1) {$p+\ell$};
+\node[below] at (5,-1) {$p,j$};
+\node[below] at (49,-1) {$p,i$};
+\node at (66,0) {$+$};
+\draw (80,0)--(110,0);
+\draw[->] (82,0)--(89,0);
+\draw[->] (101,0)--(108,0);
+\draw (93,-2)--(97,2);
+\draw (93,2)--(97,-2);
+\node[below] at (82,-2) {$p,j$};
+\node[below] at (108,-2) {$p,i$};
+\node[below] at (95,-10) {$\delta Z_2,\ \delta Z_m$};
+\end{tikzpicture}

@@ -1,0 +1,122 @@
+% Original TikZ artwork; source correspondence is in index.json.
+% Requires tikz only; no additional library or shared style file.
+\begingroup%
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.7pt,line cap=round,line join=round]
+\path[use as bounding box] (-7.6,-1.660) rectangle (7.6,1.450);
+% Source occurrence S14-G03-01; original coordinate embedding.
+\begin{scope}[shift={(-5.7500,0.0000)}]
+\coordinate (g3a-in) at (-1.3500,0.0000);
+\coordinate (g3a-out) at (1.3500,0.0000);
+\coordinate (g3a-v1) at (-0.7200,0.0000);
+\coordinate (g3a-v2) at (0.7200,0.0000);
+\coordinate (g3a-v3) at (-0.4500,0.6200);
+\coordinate (g3a-v4) at (0.4500,0.6200);
+% Edge e1: in--v1; path orientation in to v1.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3a-in) -- (g3a-v1);
+% Edge e2: v1--v2; path orientation v1 to v2.
+\draw (g3a-v1) .. controls (-0.7200,-0.9800) and (0.7200,-0.9800) .. (g3a-v2);
+% Edge e3: v1--v3; path orientation v1 to v3.
+\draw (g3a-v1) .. controls (-0.7200,0.3500) and (-0.6100,0.4700) .. (g3a-v3);
+% Edge e4: v3--v4; path orientation v3 to v4.
+\draw (g3a-v3) .. controls (-0.4500,1.3000) and (0.4500,1.3000) .. (g3a-v4);
+% Edge e5: v3--v4; path orientation v3 to v4.
+\draw (g3a-v3) .. controls (-0.4500,0.1300) and (0.4500,0.1300) .. (g3a-v4);
+% Edge e6: v4--v2; path orientation v4 to v2.
+\draw (g3a-v4) .. controls (0.6100,0.4700) and (0.7200,0.3500) .. (g3a-v2);
+% Edge e7: v2--out; path orientation v2 to out.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3a-v2) -- (g3a-out);
+% Node in: fixed_external_endpoint.
+% Node out: fixed_external_endpoint.
+% Node v1: cubic_vertex.
+\fill (g3a-v1) circle[radius=1.45pt];
+% Node v2: cubic_vertex.
+\fill (g3a-v2) circle[radius=1.45pt];
+% Node v3: cubic_vertex.
+\fill (g3a-v3) circle[radius=1.45pt];
+% Node v4: cubic_vertex.
+\fill (g3a-v4) circle[radius=1.45pt];
+\end{scope}
+\node[font=\large] at (-3.9200,0.0000) {$+$};
+% Source occurrence S14-G03-02; original coordinate embedding.
+\begin{scope}[shift={(-2.1000,0.0000)}]
+\coordinate (g3b-in) at (-1.3500,0.0000);
+\coordinate (g3b-out) at (1.3500,0.0000);
+\coordinate (g3b-v1) at (-0.7200,0.0000);
+\coordinate (g3b-v2) at (0.7200,0.0000);
+\coordinate (g3b-c) at (0.0000,0.8000);
+% Edge e1: in--v1; path orientation in to v1.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3b-in) -- (g3b-v1);
+% Edge e2: v1--v2; path orientation v1 to v2.
+\draw (g3b-v1) .. controls (-0.7200,-1.0500) and (0.7200,-1.0500) .. (g3b-v2);
+% Edge e3: v1--c; path orientation v1 to c.
+\draw (g3b-v1) .. controls (-0.7200,0.4800) and (-0.3500,0.8000) .. (g3b-c);
+% Edge e4: c--v2; path orientation c to v2.
+\draw (g3b-c) .. controls (0.3500,0.8000) and (0.7200,0.4800) .. (g3b-v2);
+% Edge e5: v2--out; path orientation v2 to out.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3b-v2) -- (g3b-out);
+% Node in: fixed_external_endpoint.
+% Node out: fixed_external_endpoint.
+% Node v1: cubic_vertex.
+\fill (g3b-v1) circle[radius=1.45pt];
+% Node v2: cubic_vertex.
+\fill (g3b-v2) circle[radius=1.45pt];
+% Node c: quadratic_counterterm.
+\draw[line width=0.85pt] (-0.1200,0.6800) -- (0.1200,0.9200);
+\draw[line width=0.85pt] (-0.1200,0.9200) -- (0.1200,0.6800);
+\end{scope}
+\node[font=\large] at (-0.1500,0.0000) {$+$};
+% Source occurrence S14-G03-03; original coordinate embedding.
+\begin{scope}[shift={(1.8000,0.0000)}]
+\coordinate (g3c-in) at (-1.3500,0.0000);
+\coordinate (g3c-out) at (1.3500,0.0000);
+\coordinate (g3c-v1) at (-0.7200,0.0000);
+\coordinate (g3c-v2) at (0.7200,0.0000);
+\coordinate (g3c-v3) at (0.0000,0.8000);
+\coordinate (g3c-v4) at (0.0000,-0.8000);
+% Edge e1: in--v1; path orientation in to v1.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3c-in) -- (g3c-v1);
+% Edge e2: v1--v3; path orientation v1 to v3.
+\draw (g3c-v1) .. controls (-0.7200,0.4400) and (-0.4000,0.8000) .. (g3c-v3);
+% Edge e3: v3--v2; path orientation v3 to v2.
+\draw (g3c-v3) .. controls (0.4000,0.8000) and (0.7200,0.4400) .. (g3c-v2);
+% Edge e4: v2--v4; path orientation v2 to v4.
+\draw (g3c-v2) .. controls (0.7200,-0.4400) and (0.4000,-0.8000) .. (g3c-v4);
+% Edge e5: v4--v1; path orientation v4 to v1.
+\draw (g3c-v4) .. controls (-0.4000,-0.8000) and (-0.7200,-0.4400) .. (g3c-v1);
+% Edge e6: v3--v4; path orientation v3 to v4.
+\draw (g3c-v3) -- (g3c-v4);
+% Edge e7: v2--out; path orientation v2 to out.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3c-v2) -- (g3c-out);
+% Node in: fixed_external_endpoint.
+% Node out: fixed_external_endpoint.
+% Node v1: cubic_vertex.
+\fill (g3c-v1) circle[radius=1.45pt];
+% Node v2: cubic_vertex.
+\fill (g3c-v2) circle[radius=1.45pt];
+% Node v3: cubic_vertex.
+\fill (g3c-v3) circle[radius=1.45pt];
+% Node v4: cubic_vertex.
+\fill (g3c-v4) circle[radius=1.45pt];
+\end{scope}
+\node[font=\large] at (3.7000,0.0000) {$+$};
+% Source occurrence S14-G03-04; original coordinate embedding.
+\begin{scope}[shift={(5.5500,0.0000)}]
+\coordinate (g3d-in) at (-1.3500,0.0000);
+\coordinate (g3d-out) at (1.3500,0.0000);
+\coordinate (g3d-c) at (0.0000,0.0000);
+% Edge e1: in--c; path orientation in to c.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3d-in) -- (g3d-c);
+% Edge e2: c--out; path orientation c to out.
+\draw[draw=black!55,dash pattern=on 2.4pt off 1.8pt] (g3d-c) -- (g3d-out);
+% Node in: fixed_external_endpoint.
+% Node out: fixed_external_endpoint.
+% Node c: quadratic_counterterm.
+\draw[line width=0.85pt] (-0.1200,-0.1200) -- (0.1200,0.1200);
+\draw[line width=0.85pt] (-0.1200,0.1200) -- (0.1200,-0.1200);
+\end{scope}
+\node[font=\small] at (-5.7500,-1.4000) {(a)};
+\node[font=\small] at (-2.1000,-1.4000) {(b)};
+\node[font=\small] at (1.8000,-1.4000) {(c)};
+\node[font=\small] at (5.5500,-1.4000) {(d)};
+\end{tikzpicture}%
+\endgroup%

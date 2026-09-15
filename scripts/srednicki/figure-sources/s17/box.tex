@@ -1,0 +1,45 @@
+% Original vector box for CN2006-local, PDF87, figure17.1.
+% External legs are amputated; every arrow denotes momentum flow.
+% Vertices: 1 upper left, 2 lower left, 3 lower right, 4 upper right.
+% Basic TikZ only. Intrinsic bounding box: 97.5 mm by 61.25 mm.
+\begingroup
+\begin{tikzpicture}[x=1.25cm,y=1.25cm,line width=.75pt,>=latex,font=\normalsize]
+\path[use as bounding box] (-3.35,-2.45) rectangle (4.45,2.45);
+\coordinate (v1) at (-2,1.25);
+\coordinate (v2) at (-2,-1.25);
+\coordinate (v3) at (2,-1.25);
+\coordinate (v4) at (2,1.25);
+
+% Internal loop and four midpoint arrows.
+\draw (v1)--(v2)--(v3)--(v4)--cycle;
+\draw[->] (-2,.35)--(-2,-.35);
+\draw[->] (-.35,-1.25)--(.35,-1.25);
+\draw[->] (2,-.35)--(2,.35);
+\draw[->] (.35,1.25)--(-.35,1.25);
+
+% Short amputated legs, with all four arrows pointing into the graph.
+\draw (-3,2)--(v1);
+\draw (-3,-2)--(v2);
+\draw (3,-2)--(v3);
+\draw (3,2)--(v4);
+\draw[->] (-2.88,1.91)--(-2.45,1.5875);
+\draw[->] (-2.88,-1.91)--(-2.45,-1.5875);
+\draw[->] (2.88,-1.91)--(2.45,-1.5875);
+\draw[->] (2.88,1.91)--(2.45,1.5875);
+\fill (v1) circle[radius=1.4pt];
+\fill (v2) circle[radius=1.4pt];
+\fill (v3) circle[radius=1.4pt];
+\fill (v4) circle[radius=1.4pt];
+
+% Momentum labels follow the source routing; no Feynman parameters.
+\node at (-2.9,2.24) {$k_1$};
+\node at (-2.9,-2.24) {$k_2$};
+\node at (2.9,-2.24) {$k_3$};
+\node at (2.9,2.24) {$k_4$};
+\node[anchor=east] at (-2.24,0) {$\ell$};
+\node at (0,-1.63) {$\ell+k_2$};
+\node[anchor=west] at (2.24,0) {$\ell+k_2+k_3$};
+\node at (0,1.63) {$\ell-k_1$};
+\end{tikzpicture}
+\endgroup
+

@@ -1,0 +1,71 @@
+% Original vector graphs for source Fig.73.3, PDF295.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{9}{11}\selectfont]
+\def\gline#1#2#3{\begin{scope}[shift={(#1)},rotate=#2]
+ \draw[domain=0:1,samples=81,smooth,variable=\u]
+ plot ({#3*\u},{.6*sin(720*\u)});
+ \end{scope}}
+\def\external{\gline{-13,0}{0}{13}\gline{26,0}{0}{13}
+ \draw[->] (-11,-3)--(-4,-3);
+ \draw[->] (29,-3)--(36,-3);
+ \node[left] at (-14,1) {$a,\mu$};
+ \node[right] at (40,1) {$b,\nu$};
+ \node[below] at (-7,-3) {$k$};
+ \node[below] at (33,-3) {$k$};}
+\begin{scope}[shift={(24,34)}]
+\gline{-12,0}{0}{12}
+\gline{0,0}{0}{15}
+\draw[domain=0:1,samples=181,smooth,variable=\u]
+ plot ({(8+.6*sin(4320*\u))*sin(360*\u)},
+       {8-(8+.6*sin(4320*\u))*cos(360*\u)});
+\fill (0,0) circle[radius=.5mm];
+\node[above] at (0,18) {$\ell$};
+\node[left] at (-13,1) {$a,\mu$};
+\node[right] at (16,1) {$b,\nu$};
+\draw[->] (-11,-3)--(-4,-3);
+\draw[->] (5,-3)--(12,-3);
+\node[below] at (-7,-3) {$k$};
+\node[below] at (9,-3) {$k$};
+\end{scope}
+\begin{scope}[shift={(91,34)}]
+\external
+\foreach \sgn in {-1,1}{
+ \draw[domain=0:1,samples=181,smooth,variable=\u]
+ plot ({13+(13+.6*sin(2160*\u))*cos(180*\u)},
+       {\sgn*(13+.6*sin(2160*\u))*sin(180*\u)});
+}
+\node[above] at (13,15) {$\ell+k,c,\rho$};
+\node[below] at (13,-15) {$\ell,d,\sigma$};
+\end{scope}
+\begin{scope}[shift={(10,-27)}]
+\gline{-11,0}{0}{11}
+\gline{22,0}{0}{11}
+\draw[densely dotted,line width=.85pt] (11,0) circle[radius=11mm];
+\draw[->] (8,11)--(14,11);
+\draw[->] (14,-11)--(8,-11);
+\node[above] at (11,13) {$\ell+k,c$};
+\node[below] at (11,-13) {$\ell,d$};
+\node[below] at (-8,-2) {$a,\mu,k$};
+\node[below] at (30,-2) {$b,\nu,k$};
+\end{scope}
+\begin{scope}[shift={(67,-27)}]
+\gline{-11,0}{0}{11}
+\gline{22,0}{0}{11}
+\draw (11,0) circle[radius=11mm];
+\draw[->] (8,11)--(14,11);
+\draw[->] (14,-11)--(8,-11);
+\node[above] at (11,13) {$\ell+k$};
+\node[below] at (11,-13) {$\ell$};
+\node[below] at (-8,-2) {$a,\mu,k$};
+\node[below] at (30,-2) {$b,\nu,k$};
+\end{scope}
+\begin{scope}[shift={(120,-27)}]
+\gline{-9,0}{0}{9}
+\gline{0,0}{0}{12}
+\draw (-2,-2)--(2,2);
+\draw (-2,2)--(2,-2);
+\node[below] at (-7,-3) {$a,\mu,k$};
+\node[below] at (10,-3) {$b,\nu,k$};
+\node[above] at (0,7) {$\delta Z_3$};
+\end{scope}
+\end{tikzpicture}

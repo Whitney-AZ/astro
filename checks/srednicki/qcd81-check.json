@@ -1,0 +1,2211 @@
+{
+  "task": "S81 four-point tree amplitudes at three nondegenerate physical configurations",
+  "utc_time": "2026-09-14T15:14:16.169018+00:00",
+  "command": "python3 scripts/srednicki/check_qcd81.py",
+  "scripts": {
+    "check_qcd81.py": "855c9299b08ec132e86088c6905c2904cab222794c9dc4649a69088c3fe631b5",
+    "check_helicity60.py": "75c2ece494dd8cdef46e3043e588053e3f5cc8987403a34e9b75203e6afa7c74",
+    "check_matrix80.py": "680d9c959da535c1cee6eee8b6a9e695644c2aa83b018585183710929fae3987"
+  },
+  "scope": "Finite Lorentz and Dirac trees, explicit SU2/SU3 sums; not an all-order factorization proof",
+  "check_count": 366,
+  "checks": [
+    {
+      "name": "p1:g:++++:GN",
+      "residual": 3.1879063867282187e-15,
+      "scaled_residual": 3.1879063867282187e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++++:F",
+      "residual": 1.1102230246251565e-15,
+      "scaled_residual": 1.1102230246251565e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++++:reference",
+      "residual": 3.809553865111266e-15,
+      "scaled_residual": 3.809553865111266e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++++:Ward",
+      "residual": 1.943944006754398e-15,
+      "scaled_residual": 1.943944006754398e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++++:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++++:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++++:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+++-:GN",
+      "residual": 1.0303264460093434e-15,
+      "scaled_residual": 1.0303264460093434e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+++-:F",
+      "residual": 1.790180836524724e-15,
+      "scaled_residual": 1.790180836524724e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+++-:reference",
+      "residual": 1.1983210615419905e-15,
+      "scaled_residual": 1.1983210615419905e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+++-:Ward",
+      "residual": 2.870153332337407e-15,
+      "scaled_residual": 2.870153332337407e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+++-:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+++-:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+++-:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++-+:GN",
+      "residual": 2.336254579962001e-15,
+      "scaled_residual": 2.336254579962001e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++-+:F",
+      "residual": 9.155133597044475e-16,
+      "scaled_residual": 9.155133597044475e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++-+:reference",
+      "residual": 2.5689304359011853e-15,
+      "scaled_residual": 2.5689304359011853e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++-+:Ward",
+      "residual": 4.280234642631591e-16,
+      "scaled_residual": 4.280234642631591e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++-+:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++-+:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++-+:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++--:GN",
+      "residual": 2.5829094694466907e-15,
+      "scaled_residual": 2.5112734703853243e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++--:F",
+      "residual": 2.7716690571155507e-15,
+      "scaled_residual": 2.6947978836103946e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++--:reference",
+      "residual": 2.0380985511143445e-15,
+      "scaled_residual": 1.981572672982863e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:++--:Ward",
+      "residual": 1.3127536380592129e-15,
+      "scaled_residual": 1.3127536380592129e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++--:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++--:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:++--:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-++:GN",
+      "residual": 1.2165050633956078e-15,
+      "scaled_residual": 1.2165050633956078e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-++:F",
+      "residual": 1.7422013638940487e-15,
+      "scaled_residual": 1.7422013638940487e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-++:reference",
+      "residual": 9.32603861714756e-16,
+      "scaled_residual": 9.32603861714756e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-++:Ward",
+      "residual": 1.3653937842860002e-15,
+      "scaled_residual": 1.3653937842860002e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+-++:generic",
+      "residual": 5.551115123125783e-16,
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+-++:mutual",
+      "residual": 6.938893903907228e-18,
+      "scaled_residual": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+-++:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-+-:GN",
+      "residual": 1.151010769383548e-15,
+      "scaled_residual": 1.151010769383548e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-+-:F",
+      "residual": 1.4307182561628514e-15,
+      "scaled_residual": 1.4307182561628514e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-+-:reference",
+      "residual": 1.2849290117660013e-15,
+      "scaled_residual": 1.2849290117660013e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+-+-:Ward",
+      "residual": 5.772225570600925e-16,
+      "scaled_residual": 5.772225570600925e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+-+-:generic",
+      "residual": 2.8254441747695885e-16,
+      "scaled_residual": 2.8254441747695885e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+-+-:mutual",
+      "residual": 9.891822368120407e-18,
+      "scaled_residual": 9.891822368120407e-18,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+-+-:alternate",
+      "residual": 1.2806442590615301e-17,
+      "scaled_residual": 1.2806442590615301e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+--+:GN",
+      "residual": 2.7938161855448887e-15,
+      "scaled_residual": 2.7938161855448887e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+--+:F",
+      "residual": 2.3525204118543076e-15,
+      "scaled_residual": 2.3525204118543076e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+--+:reference",
+      "residual": 3.0952133876939516e-15,
+      "scaled_residual": 3.0952133876939516e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+--+:Ward",
+      "residual": 5.582684061009224e-16,
+      "scaled_residual": 5.582684061009224e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+--+:generic",
+      "residual": 6.922568298053505e-16,
+      "scaled_residual": 6.922568298053505e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+--+:mutual",
+      "residual": 1.1443916996305594e-16,
+      "scaled_residual": 1.1443916996305594e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+--+:alternate",
+      "residual": 1.1443916996305594e-16,
+      "scaled_residual": 1.1443916996305594e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+---:GN",
+      "residual": 1.2779626727101132e-15,
+      "scaled_residual": 1.2779626727101132e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+---:F",
+      "residual": 1.790180836524724e-15,
+      "scaled_residual": 1.790180836524724e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+---:reference",
+      "residual": 1.053707081184919e-15,
+      "scaled_residual": 1.053707081184919e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:+---:Ward",
+      "residual": 1.4689420835528853e-15,
+      "scaled_residual": 1.4689420835528853e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+---:generic",
+      "residual": 1.7772239894833365e-16,
+      "scaled_residual": 1.7772239894833365e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+---:mutual",
+      "residual": 9.437916079723832e-17,
+      "scaled_residual": 9.437916079723832e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:q:+---:alternate",
+      "residual": 7.664410578991255e-17,
+      "scaled_residual": 7.664410578991255e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+++:GN",
+      "residual": 1.666259465938195e-15,
+      "scaled_residual": 1.666259465938195e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+++:F",
+      "residual": 1.4217791915866692e-15,
+      "scaled_residual": 1.4217791915866692e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+++:reference",
+      "residual": 1.164845824162759e-15,
+      "scaled_residual": 1.164845824162759e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+++:Ward",
+      "residual": 1.943944006754398e-15,
+      "scaled_residual": 1.943944006754398e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+++:generic",
+      "residual": 1.7554167342883506e-16,
+      "scaled_residual": 1.7554167342883506e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+++:mutual",
+      "residual": 6.938893903907228e-17,
+      "scaled_residual": 6.938893903907228e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+++:alternate",
+      "residual": 1.1339208006640685e-16,
+      "scaled_residual": 1.1339208006640685e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-++-:GN",
+      "residual": 1.1157603309187458e-15,
+      "scaled_residual": 1.1157603309187458e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-++-:F",
+      "residual": 7.771561172376096e-16,
+      "scaled_residual": 7.771561172376096e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-++-:reference",
+      "residual": 1.3506446028928517e-15,
+      "scaled_residual": 1.3506446028928517e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-++-:Ward",
+      "residual": 2.870153332337407e-15,
+      "scaled_residual": 2.870153332337407e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-++-:generic",
+      "residual": 7.468261590855958e-16,
+      "scaled_residual": 7.468261590855958e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-++-:mutual",
+      "residual": 1.303699802838727e-16,
+      "scaled_residual": 1.303699802838727e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-++-:alternate",
+      "residual": 1.0772060116306953e-16,
+      "scaled_residual": 1.0772060116306953e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-++-:mutual_gluon_zero",
+      "residual": 4.343572253583072e-17,
+      "scaled_residual": 4.343572253583072e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-++-:alternate_quark_zero",
+      "residual": 1.6473221778907277e-16,
+      "scaled_residual": 1.6473221778907277e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+-+:GN",
+      "residual": 7.018574834300044e-16,
+      "scaled_residual": 7.018574834300044e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+-+:F",
+      "residual": 2.7717457442715725e-16,
+      "scaled_residual": 2.7717457442715725e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+-+:reference",
+      "residual": 5.074800035632624e-16,
+      "scaled_residual": 5.074800035632624e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+-+:Ward",
+      "residual": 4.280234642631591e-16,
+      "scaled_residual": 4.280234642631591e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+-+:generic",
+      "residual": 1.2433563200318e-16,
+      "scaled_residual": 1.2433563200318e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+-+:mutual",
+      "residual": 8.182674270850422e-18,
+      "scaled_residual": 8.182674270850422e-18,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+-+:alternate",
+      "residual": 2.6111046005032556e-18,
+      "scaled_residual": 2.6111046005032556e-18,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+-+:mutual_gluon_zero",
+      "residual": 1.4123737311624164e-17,
+      "scaled_residual": 1.4123737311624164e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+-+:alternate_quark_zero",
+      "residual": 6.791915258951914e-18,
+      "scaled_residual": 6.791915258951914e-18,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+--:GN",
+      "residual": 1.8329190366704946e-15,
+      "scaled_residual": 1.8329190366704946e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+--:F",
+      "residual": 2.914203267236168e-15,
+      "scaled_residual": 2.914203267236168e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+--:reference",
+      "residual": 2.0055684203867847e-15,
+      "scaled_residual": 2.0055684203867847e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:-+--:Ward",
+      "residual": 1.3127536380592129e-15,
+      "scaled_residual": 1.3127536380592129e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+--:generic",
+      "residual": 3.3306690738754696e-16,
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+--:mutual",
+      "residual": 2.0816681711721685e-17,
+      "scaled_residual": 2.0816681711721685e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:q:-+--:alternate",
+      "residual": 2.0816681711721685e-17,
+      "scaled_residual": 2.0816681711721685e-17,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--++:GN",
+      "residual": 2.334110243043934e-15,
+      "scaled_residual": 2.269374594676189e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--++:F",
+      "residual": 1.4130832128153977e-15,
+      "scaled_residual": 1.3738918943025734e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--++:reference",
+      "residual": 1.7554167342883505e-15,
+      "scaled_residual": 1.7067309274425061e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--++:Ward",
+      "residual": 1.3653937842860002e-15,
+      "scaled_residual": 1.3653937842860002e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:--++:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:--++:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:--++:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--+-:GN",
+      "residual": 2.0108909744775923e-15,
+      "scaled_residual": 2.0108909744775923e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--+-:F",
+      "residual": 3.1421469200065623e-15,
+      "scaled_residual": 3.1421469200065623e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--+-:reference",
+      "residual": 1.8402104929268904e-15,
+      "scaled_residual": 1.8402104929268904e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:--+-:Ward",
+      "residual": 5.772225570600925e-16,
+      "scaled_residual": 5.772225570600925e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:--+-:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:--+-:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:--+-:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:---+:GN",
+      "residual": 1.747719912285191e-15,
+      "scaled_residual": 1.747719912285191e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:---+:F",
+      "residual": 1.7798229048217483e-15,
+      "scaled_residual": 1.7798229048217483e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:---+:reference",
+      "residual": 1.5476066938469758e-15,
+      "scaled_residual": 1.5476066938469758e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:---+:Ward",
+      "residual": 5.582684061009224e-16,
+      "scaled_residual": 5.582684061009224e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:q:---+:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:---+:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:---+:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:g:----:GN",
+      "residual": 2.6230487464634353e-15,
+      "scaled_residual": 2.6230487464634353e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:----:F",
+      "residual": 2.094764613337708e-15,
+      "scaled_residual": 2.094764613337708e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:----:reference",
+      "residual": 2.7752648115375167e-15,
+      "scaled_residual": 2.7752648115375167e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:g:----:Ward",
+      "residual": 1.4689420835528853e-15,
+      "scaled_residual": 1.4689420835528853e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:q:----:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:----:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:q:----:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p1:nonadjacent:12_and_contact",
+      "residual": 6.908104513589182e-19,
+      "scaled_residual": 6.908104513589182e-19,
+      "passed": true
+    },
+    {
+      "name": "p1:nonadjacent:23",
+      "residual": 1.701368519427782e-18,
+      "scaled_residual": 1.701368519427782e-18,
+      "passed": true
+    },
+    {
+      "name": "p1:SU2:g_color_hel_average",
+      "residual": 8.185452315956354e-12,
+      "scaled_residual": 1.21135946149764e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:SU2:q_color_hel_average",
+      "residual": 7.105427357601002e-15,
+      "scaled_residual": 3.8793645578059704e-16,
+      "passed": true
+    },
+    {
+      "name": "p1:SU3:g_color_hel_average",
+      "residual": 7.275957614183426e-12,
+      "scaled_residual": 1.2761647001785837e-15,
+      "passed": true
+    },
+    {
+      "name": "p1:SU3:q_color_hel_average",
+      "residual": 7.105427357601002e-15,
+      "scaled_residual": 1.8191598411729866e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++++:GN",
+      "residual": 5.757191532588118e-16,
+      "scaled_residual": 5.757191532588118e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++++:F",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++++:reference",
+      "residual": 1.621089574673893e-15,
+      "scaled_residual": 1.621089574673893e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++++:Ward",
+      "residual": 1.2412670766236366e-15,
+      "scaled_residual": 1.2412670766236366e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++++:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++++:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++++:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+++-:GN",
+      "residual": 3.3306690738754696e-16,
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+++-:F",
+      "residual": 2.2887833992611187e-16,
+      "scaled_residual": 2.2887833992611187e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+++-:reference",
+      "residual": 2.2266822963392197e-15,
+      "scaled_residual": 2.2266822963392197e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+++-:Ward",
+      "residual": 4.577566798522237e-16,
+      "scaled_residual": 4.577566798522237e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+++-:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+++-:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+++-:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++-+:GN",
+      "residual": 5.551115123125783e-16,
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++-+:F",
+      "residual": 2.220446049250313e-16,
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++-+:reference",
+      "residual": 1.4915878357495863e-15,
+      "scaled_residual": 1.4915878357495863e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++-+:Ward",
+      "residual": 7.021666937153402e-16,
+      "scaled_residual": 7.021666937153402e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++-+:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++-+:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++-+:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++--:GN",
+      "residual": 2.482534153247273e-16,
+      "scaled_residual": 1.547395001911068e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++--:F",
+      "residual": 7.021666937153402e-16,
+      "scaled_residual": 4.3766939961019477e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++--:reference",
+      "residual": 1.3911054626160788e-15,
+      "scaled_residual": 8.670936660297763e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:++--:Ward",
+      "residual": 1.1322097734007353e-15,
+      "scaled_residual": 1.1322097734007353e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++--:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++--:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:++--:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-++:GN",
+      "residual": 8.125323285481903e-16,
+      "scaled_residual": 8.125323285481903e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-++:F",
+      "residual": 2.220446049250313e-16,
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-++:reference",
+      "residual": 1.2490009027033011e-15,
+      "scaled_residual": 1.2490009027033011e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-++:Ward",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+-++:generic",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+-++:mutual",
+      "residual": 1.7772239894833365e-16,
+      "scaled_residual": 1.7772239894833365e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+-++:alternate",
+      "residual": 5.551115123125783e-17,
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-+-:GN",
+      "residual": 1.6184142622847341e-16,
+      "scaled_residual": 1.6184142622847341e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-+-:F",
+      "residual": 8.777083671441753e-17,
+      "scaled_residual": 8.777083671441753e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-+-:reference",
+      "residual": 1.159106867033638e-15,
+      "scaled_residual": 1.159106867033638e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+-+-:Ward",
+      "residual": 4.0412728104402656e-16,
+      "scaled_residual": 4.0412728104402656e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+-+-:generic",
+      "residual": 2.618455766672135e-16,
+      "scaled_residual": 2.618455766672135e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+-+-:mutual",
+      "residual": 1.4152622167509192e-16,
+      "scaled_residual": 1.4152622167509192e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+-+-:alternate",
+      "residual": 1.3877787807814457e-16,
+      "scaled_residual": 1.3877787807814457e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+--+:GN",
+      "residual": 6.329245045284193e-16,
+      "scaled_residual": 6.329245045284193e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+--+:F",
+      "residual": 2.8305244335018383e-16,
+      "scaled_residual": 2.8305244335018383e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+--+:reference",
+      "residual": 1.2947314098277873e-15,
+      "scaled_residual": 1.2947314098277873e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+--+:Ward",
+      "residual": 1.2008898127460164e-15,
+      "scaled_residual": 1.2008898127460164e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+--+:generic",
+      "residual": 1.6243534171511178e-16,
+      "scaled_residual": 1.6243534171511178e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+--+:mutual",
+      "residual": 1.6883057536160646e-16,
+      "scaled_residual": 1.6883057536160646e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+--+:alternate",
+      "residual": 6.938893903907228e-17,
+      "scaled_residual": 6.938893903907228e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+---:GN",
+      "residual": 6.335327934766281e-16,
+      "scaled_residual": 6.335327934766281e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+---:F",
+      "residual": 6.106226635438361e-16,
+      "scaled_residual": 6.106226635438361e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+---:reference",
+      "residual": 6.938893903907228e-16,
+      "scaled_residual": 6.938893903907228e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:+---:Ward",
+      "residual": 5.551115123125783e-16,
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+---:generic",
+      "residual": 2.8449465006019636e-16,
+      "scaled_residual": 2.8449465006019636e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+---:mutual",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:+---:alternate",
+      "residual": 8.271867565849794e-17,
+      "scaled_residual": 8.271867565849794e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+++:GN",
+      "residual": 4.577566798522237e-16,
+      "scaled_residual": 4.577566798522237e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+++:F",
+      "residual": 3.1401849173675503e-16,
+      "scaled_residual": 3.1401849173675503e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+++:reference",
+      "residual": 9.485749680535094e-16,
+      "scaled_residual": 9.485749680535094e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+++:Ward",
+      "residual": 1.2412670766236366e-15,
+      "scaled_residual": 1.2412670766236366e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+++:generic",
+      "residual": 1.6540931736891719e-16,
+      "scaled_residual": 1.6540931736891719e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+++:mutual",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+++:alternate",
+      "residual": 5.778054838449311e-17,
+      "scaled_residual": 5.778054838449311e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-++-:GN",
+      "residual": 5.266250202865052e-16,
+      "scaled_residual": 5.266250202865052e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-++-:F",
+      "residual": 1.7554167342883506e-16,
+      "scaled_residual": 1.7554167342883506e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-++-:reference",
+      "residual": 1.2325475812854655e-15,
+      "scaled_residual": 1.2325475812854655e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-++-:Ward",
+      "residual": 4.577566798522237e-16,
+      "scaled_residual": 4.577566798522237e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-++-:generic",
+      "residual": 2.8066088919804617e-16,
+      "scaled_residual": 2.8066088919804617e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-++-:mutual",
+      "residual": 6.938893903907228e-17,
+      "scaled_residual": 6.938893903907228e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-++-:alternate",
+      "residual": 1.1857187100668868e-16,
+      "scaled_residual": 1.1857187100668868e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-++-:mutual_gluon_zero",
+      "residual": 6.586720168909727e-17,
+      "scaled_residual": 6.586720168909727e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-++-:alternate_quark_zero",
+      "residual": 4.299907339712779e-17,
+      "scaled_residual": 4.299907339712779e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+-+:GN",
+      "residual": 1.457167719820518e-16,
+      "scaled_residual": 1.457167719820518e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+-+:F",
+      "residual": 2.6558837364083264e-16,
+      "scaled_residual": 2.6558837364083264e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+-+:reference",
+      "residual": 1.7342238036525468e-15,
+      "scaled_residual": 1.7342238036525468e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+-+:Ward",
+      "residual": 7.021666937153402e-16,
+      "scaled_residual": 7.021666937153402e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+-+:generic",
+      "residual": 2.5589376332604516e-16,
+      "scaled_residual": 2.5589376332604516e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+-+:mutual",
+      "residual": 1.0007415106216804e-16,
+      "scaled_residual": 1.0007415106216804e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+-+:alternate",
+      "residual": 6.206335383118183e-17,
+      "scaled_residual": 6.206335383118183e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+-+:mutual_gluon_zero",
+      "residual": 7.714453705165696e-17,
+      "scaled_residual": 7.714453705165696e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+-+:alternate_quark_zero",
+      "residual": 4.3689059869980535e-17,
+      "scaled_residual": 4.3689059869980535e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+--:GN",
+      "residual": 6.473657049138937e-16,
+      "scaled_residual": 6.473657049138937e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+--:F",
+      "residual": 2.220446049250313e-16,
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+--:reference",
+      "residual": 1.8906416838689214e-15,
+      "scaled_residual": 1.8906416838689214e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:-+--:Ward",
+      "residual": 1.1322097734007353e-15,
+      "scaled_residual": 1.1322097734007353e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+--:generic",
+      "residual": 3.510833468576701e-16,
+      "scaled_residual": 3.510833468576701e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+--:mutual",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:-+--:alternate",
+      "residual": 1.6653345369377348e-16,
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--++:GN",
+      "residual": 1.7763568394002505e-15,
+      "scaled_residual": 1.1072257319413e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--++:F",
+      "residual": 1.7763568394002505e-15,
+      "scaled_residual": 1.1072257319413e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--++:reference",
+      "residual": 2.3314683517128287e-15,
+      "scaled_residual": 1.4532337731729578e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--++:Ward",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:--++:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:--++:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:--++:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--+-:GN",
+      "residual": 2.7336071744532853e-16,
+      "scaled_residual": 2.7336071744532853e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--+-:F",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--+-:reference",
+      "residual": 2.0261570199409107e-15,
+      "scaled_residual": 2.0261570199409107e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:--+-:Ward",
+      "residual": 4.0412728104402656e-16,
+      "scaled_residual": 4.0412728104402656e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:--+-:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:--+-:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:--+-:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:g:---+:GN",
+      "residual": 3.510833468576701e-16,
+      "scaled_residual": 3.510833468576701e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:---+:F",
+      "residual": 5.551115123125783e-17,
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:g:---+:reference",
+      "residual": 2.0014830212433605e-15,
+      "scaled_residual": 2.0014830212433605e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:---+:Ward",
+      "residual": 1.2008898127460164e-15,
+      "scaled_residual": 1.2008898127460164e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:q:---+:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:---+:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:---+:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:g:----:GN",
+      "residual": 4.518280359883027e-16,
+      "scaled_residual": 4.518280359883027e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:----:F",
+      "residual": 6.280369834735101e-16,
+      "scaled_residual": 6.280369834735101e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:g:----:reference",
+      "residual": 1.4637612725888057e-15,
+      "scaled_residual": 1.4637612725888057e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:g:----:Ward",
+      "residual": 5.551115123125783e-16,
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:q:----:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:----:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:q:----:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p2:nonadjacent:12_and_contact",
+      "residual": 2.761424108553032e-17,
+      "scaled_residual": 2.761424108553032e-17,
+      "passed": true
+    },
+    {
+      "name": "p2:nonadjacent:23",
+      "residual": 1.9456762441208352e-16,
+      "scaled_residual": 1.9456762441208352e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:SU2:g_color_hel_average",
+      "residual": 5.684341886080802e-14,
+      "scaled_residual": 1.3113549732713263e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:SU2:q_color_hel_average",
+      "residual": 3.3306690738754696e-16,
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "p2:SU3:g_color_hel_average",
+      "residual": 4.263256414560601e-14,
+      "scaled_residual": 1.1656488651300677e-15,
+      "passed": true
+    },
+    {
+      "name": "p2:SU3:q_color_hel_average",
+      "residual": 6.661338147750939e-16,
+      "scaled_residual": 5.274369208103871e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++++:GN",
+      "residual": 1.4155343563970746e-15,
+      "scaled_residual": 1.4155343563970746e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++++:F",
+      "residual": 1.5888218580782548e-14,
+      "scaled_residual": 1.5888218580782548e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++++:reference",
+      "residual": 1.4723705014876122e-15,
+      "scaled_residual": 1.4723705014876122e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++++:Ward",
+      "residual": 2.1493929225986095e-14,
+      "scaled_residual": 2.1493929225986095e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++++:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++++:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++++:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+++-:GN",
+      "residual": 4.252675928139117e-15,
+      "scaled_residual": 4.252675928139117e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+++-:F",
+      "residual": 7.944109290391274e-15,
+      "scaled_residual": 7.944109290391274e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+++-:reference",
+      "residual": 4.211262672868486e-15,
+      "scaled_residual": 4.211262672868486e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+++-:Ward",
+      "residual": 5.539923896331059e-14,
+      "scaled_residual": 5.539923896331059e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+++-:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+++-:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+++-:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++-+:GN",
+      "residual": 4.049271190539746e-15,
+      "scaled_residual": 4.049271190539746e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++-+:F",
+      "residual": 1.2809491335957509e-14,
+      "scaled_residual": 1.2809491335957509e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++-+:reference",
+      "residual": 4.176938928242989e-15,
+      "scaled_residual": 4.176938928242989e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++-+:Ward",
+      "residual": 3.318805566638151e-14,
+      "scaled_residual": 3.318805566638151e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++-+:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++-+:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++-+:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++--:GN",
+      "residual": 6.165737292347812e-15,
+      "scaled_residual": 5.7260085667357515e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++--:F",
+      "residual": 5.029506363606642e-15,
+      "scaled_residual": 4.670811479465e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++--:reference",
+      "residual": 6.252832847199451e-15,
+      "scaled_residual": 5.806892631294267e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:++--:Ward",
+      "residual": 3.172441652169953e-14,
+      "scaled_residual": 3.172441652169953e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++--:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++--:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:++--:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-++:GN",
+      "residual": 1.0309692648900756e-14,
+      "scaled_residual": 1.0309692648900756e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-++:F",
+      "residual": 1.9131948672901813e-14,
+      "scaled_residual": 1.9131948672901813e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-++:reference",
+      "residual": 1.0446315224274731e-14,
+      "scaled_residual": 1.0446315224274731e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-++:Ward",
+      "residual": 3.724264607415596e-14,
+      "scaled_residual": 3.724264607415596e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+-++:generic",
+      "residual": 2.5121479338940403e-15,
+      "scaled_residual": 2.5121479338940403e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+-++:mutual",
+      "residual": 1.279468816630226e-16,
+      "scaled_residual": 1.279468816630226e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+-++:alternate",
+      "residual": 1.6711069443220838e-16,
+      "scaled_residual": 1.6711069443220838e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-+-:GN",
+      "residual": 7.9164882713176e-15,
+      "scaled_residual": 7.9164882713176e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-+-:F",
+      "residual": 2.862622262620818e-15,
+      "scaled_residual": 2.862622262620818e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-+-:reference",
+      "residual": 8.032794164363493e-15,
+      "scaled_residual": 8.032794164363493e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+-+-:Ward",
+      "residual": 4.60077278718943e-14,
+      "scaled_residual": 4.60077278718943e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+-+-:generic",
+      "residual": 1.3695444089524666e-15,
+      "scaled_residual": 1.3695444089524666e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+-+-:mutual",
+      "residual": 1.0417371955916405e-17,
+      "scaled_residual": 1.0417371955916405e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+-+-:alternate",
+      "residual": 2.883244014823445e-17,
+      "scaled_residual": 2.883244014823445e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+--+:GN",
+      "residual": 3.735394203305869e-15,
+      "scaled_residual": 3.735394203305869e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+--+:F",
+      "residual": 4.938328454123255e-15,
+      "scaled_residual": 4.938328454123255e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+--+:reference",
+      "residual": 4.125789526923561e-15,
+      "scaled_residual": 4.125789526923561e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+--+:Ward",
+      "residual": 2.3603665272841412e-15,
+      "scaled_residual": 2.3603665272841412e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+--+:generic",
+      "residual": 5.28085841456928e-16,
+      "scaled_residual": 5.28085841456928e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+--+:mutual",
+      "residual": 1.942890293094024e-16,
+      "scaled_residual": 1.942890293094024e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+--+:alternate",
+      "residual": 2.5133742693021536e-16,
+      "scaled_residual": 2.5133742693021536e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+---:GN",
+      "residual": 4.130268402344377e-15,
+      "scaled_residual": 4.130268402344377e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+---:F",
+      "residual": 3.66205343881779e-15,
+      "scaled_residual": 3.66205343881779e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+---:reference",
+      "residual": 4.175161926517072e-15,
+      "scaled_residual": 4.175161926517072e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:+---:Ward",
+      "residual": 2.853618747075428e-14,
+      "scaled_residual": 2.853618747075428e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+---:generic",
+      "residual": 8.473409486550037e-16,
+      "scaled_residual": 8.473409486550037e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+---:mutual",
+      "residual": 1.6306400674181987e-16,
+      "scaled_residual": 1.6306400674181987e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:+---:alternate",
+      "residual": 7.437425742835084e-17,
+      "scaled_residual": 7.437425742835084e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+++:GN",
+      "residual": 8.207394576532066e-15,
+      "scaled_residual": 8.207394576532066e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+++:F",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+++:reference",
+      "residual": 8.249303076501252e-15,
+      "scaled_residual": 8.249303076501252e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+++:Ward",
+      "residual": 2.1493929225986095e-14,
+      "scaled_residual": 2.1493929225986095e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+++:generic",
+      "residual": 1.4655364458042816e-15,
+      "scaled_residual": 1.4655364458042816e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+++:mutual",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+++:alternate",
+      "residual": 8.524599923202497e-17,
+      "scaled_residual": 8.524599923202497e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-++-:GN",
+      "residual": 6.146732129351781e-15,
+      "scaled_residual": 6.146732129351781e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-++-:F",
+      "residual": 4.598408707195434e-15,
+      "scaled_residual": 4.598408707195434e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-++-:reference",
+      "residual": 6.527932009563959e-15,
+      "scaled_residual": 6.527932009563959e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-++-:Ward",
+      "residual": 5.539923896331059e-14,
+      "scaled_residual": 5.539923896331059e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-++-:generic",
+      "residual": 2.8701197811473104e-15,
+      "scaled_residual": 2.8701197811473104e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-++-:mutual",
+      "residual": 2.0206364052201328e-16,
+      "scaled_residual": 2.0206364052201328e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-++-:alternate",
+      "residual": 2.7894008272968645e-16,
+      "scaled_residual": 2.7894008272968645e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-++-:mutual_gluon_zero",
+      "residual": 4.966330576582287e-17,
+      "scaled_residual": 4.966330576582287e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-++-:alternate_quark_zero",
+      "residual": 8.219813360661425e-17,
+      "scaled_residual": 8.219813360661425e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+-+:GN",
+      "residual": 8.472170892989786e-15,
+      "scaled_residual": 8.472170892989786e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+-+:F",
+      "residual": 9.105759222927468e-15,
+      "scaled_residual": 9.105759222927468e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+-+:reference",
+      "residual": 8.502328379307663e-15,
+      "scaled_residual": 8.502328379307663e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+-+:Ward",
+      "residual": 3.318805566638151e-14,
+      "scaled_residual": 3.318805566638151e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+-+:generic",
+      "residual": 7.846287750477884e-16,
+      "scaled_residual": 7.846287750477884e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+-+:mutual",
+      "residual": 9.540979117872439e-18,
+      "scaled_residual": 9.540979117872439e-18,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+-+:alternate",
+      "residual": 1.8683543625880677e-17,
+      "scaled_residual": 1.8683543625880677e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+-+:mutual_gluon_zero",
+      "residual": 1.5520316503640902e-17,
+      "scaled_residual": 1.5520316503640902e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+-+:alternate_quark_zero",
+      "residual": 2.4049851869336108e-17,
+      "scaled_residual": 2.4049851869336108e-17,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+--:GN",
+      "residual": 2.0651342011721887e-15,
+      "scaled_residual": 2.0651342011721887e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+--:F",
+      "residual": 8.881784197001252e-15,
+      "scaled_residual": 8.881784197001252e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+--:reference",
+      "residual": 2.0053283331865004e-15,
+      "scaled_residual": 2.0053283331865004e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:-+--:Ward",
+      "residual": 3.172441652169953e-14,
+      "scaled_residual": 3.172441652169953e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+--:generic",
+      "residual": 1.9860273225978185e-15,
+      "scaled_residual": 1.9860273225978185e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+--:mutual",
+      "residual": 1.5011122659325205e-16,
+      "scaled_residual": 1.5011122659325205e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:q:-+--:alternate",
+      "residual": 1.3668035872266426e-16,
+      "scaled_residual": 1.3668035872266426e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--++:GN",
+      "residual": 3.685957161943871e-15,
+      "scaled_residual": 3.423081666503318e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--++:F",
+      "residual": 3.705967028916239e-15,
+      "scaled_residual": 3.4416644675975557e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--++:reference",
+      "residual": 3.708149057271984e-15,
+      "scaled_residual": 3.443690877816714e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--++:Ward",
+      "residual": 3.724264607415596e-14,
+      "scaled_residual": 3.724264607415596e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:--++:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:--++:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:--++:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--+-:GN",
+      "residual": 1.0551208236468243e-14,
+      "scaled_residual": 1.0551208236468243e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--+-:F",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 3.552713678800501e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--+-:reference",
+      "residual": 1.0522568933154724e-14,
+      "scaled_residual": 1.0522568933154724e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:g:--+-:Ward",
+      "residual": 4.60077278718943e-14,
+      "scaled_residual": 4.60077278718943e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:--+-:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:--+-:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:--+-:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:g:---+:GN",
+      "residual": 4.1213057840373734e-15,
+      "scaled_residual": 4.1213057840373734e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:---+:F",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 3.552713678800501e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:---+:reference",
+      "residual": 4.1977039256226365e-15,
+      "scaled_residual": 4.1977039256226365e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:---+:Ward",
+      "residual": 2.3603665272841412e-15,
+      "scaled_residual": 2.3603665272841412e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:q:---+:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:---+:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:---+:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:g:----:GN",
+      "residual": 3.614624287906422e-15,
+      "scaled_residual": 3.614624287906422e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:----:F",
+      "residual": 7.588599744428075e-15,
+      "scaled_residual": 7.588599744428075e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:----:reference",
+      "residual": 3.420932752830047e-15,
+      "scaled_residual": 3.420932752830047e-15,
+      "passed": true
+    },
+    {
+      "name": "p3:g:----:Ward",
+      "residual": 2.853618747075428e-14,
+      "scaled_residual": 2.853618747075428e-14,
+      "passed": true
+    },
+    {
+      "name": "p3:q:----:generic",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:----:mutual",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:q:----:alternate",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p3:nonadjacent:12_and_contact",
+      "residual": 3.3389727844558115e-18,
+      "scaled_residual": 3.3389727844558115e-18,
+      "passed": true
+    },
+    {
+      "name": "p3:nonadjacent:23",
+      "residual": 8.673617379884035e-19,
+      "scaled_residual": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "name": "p3:SU2:g_color_hel_average",
+      "residual": 4.547473508864641e-13,
+      "scaled_residual": 4.593966848098763e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:SU2:q_color_hel_average",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 5.856195446992913e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:SU3:g_color_hel_average",
+      "residual": 3.410605131648481e-13,
+      "scaled_residual": 4.083526087198899e-16,
+      "passed": true
+    },
+    {
+      "name": "p3:SU3:q_color_hel_average",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 2.689271205767649e-16,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

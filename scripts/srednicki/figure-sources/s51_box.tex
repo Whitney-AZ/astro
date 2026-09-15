@@ -1,0 +1,32 @@
+% Original vector reconstruction of Fig.51.4, PDF222 / printed210.
+% Routing deliberately follows Eq.(51.49), PDF223 / printed211:
+% clockwise: left ell, top ell+k2, right ell+k2+k3, bottom ell-k1.
+% All four scalar momenta enter; k1+k2+k3+k4=0.
+% The source picture puts its ell label on the bottom arc instead.
+% Thus ell_here=ell_source_picture+k1; this is only a loop-variable choice.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  \draw (0,0) circle[radius=18mm];
+  % Clockwise fermion arrows, with a separate momentum for every arc.
+  \foreach \a/\b in {190/170,100/80,10/-10,280/260}{
+    \draw[->] (\a:18) arc[start angle=\a,end angle=\b,radius=18mm];
+  }
+  % External scalar legs enter the lower-left, upper-left, upper-right,
+  % and lower-right vertices, respectively.
+  \foreach \a in {225,135,45,315}{
+    \draw[scalar] (\a:36)--(\a:18);
+    \draw[->] (\a:31)--(\a:23);
+    \fill (\a:18) circle[radius=.55mm];
+  }
+  \node[below left] at (-23,-27) {$k_1$};
+  \node[above left] at (-23,27) {$k_2$};
+  \node[above right] at (23,27) {$k_3$};
+  \node[below right] at (23,-27) {$k_4$};
+  \node[left] at (-21,0) {$\ell$};
+  \node[above] at (0,21) {$\ell+k_2$};
+  \node[right] at (21,0) {$\ell+k_2+k_3$};
+  \node[below] at (0,-21) {$\ell-k_1$};
+  \node[font=\fontsize{9.5}{11}\selectfont] at (3,-40)
+    {圈动量 $\ell$ 取在左弧。};
+\end{tikzpicture}

@@ -1,0 +1,462 @@
+{
+  "task": "S77: solve s integrated Tr[w(bb+b1*aab+b2*aba+b3*baa+c*aaaa)]=0 modulo d",
+  "execution": {
+    "utc_time": "2026-09-14T14:29:10.422608+00:00",
+    "command": "python3 scripts/srednicki/check_consistency77.py",
+    "adapted_source": "/Users/Admin/Documents/Srednicki-QFT-Trans/checks/s77_consistency_check.py",
+    "adapted_source_sha256": "412197408e5a59870517d4057a8b04885d44209347225778f603a21c4f298a53",
+    "python_version": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "software": "Python standard library; fractions.Fraction exact rational arithmetic",
+    "script_sha256": "ee1cfe54e7a796c4b3441ef5c265703e1cf33395982cade54756c8e6d79c6f2f",
+    "expected_coefficients_were_not_inputs": true
+  },
+  "conventions": {
+    "degrees_form_ghost": {
+      "a": [1, 0],
+      "b": [2, 0],
+      "w": [0, 1],
+      "q": [1, 1]
+    },
+    "parity": "(form degree + ghost number) mod 2",
+    "d_rules": {
+      "a": [
+        {
+          "word": "b",
+          "coefficient": "1"
+        }
+      ],
+      "b": [],
+      "w": [
+        {
+          "word": "q",
+          "coefficient": "1"
+        }
+      ],
+      "q": []
+    },
+    "s_rules": {
+      "a": [
+        {
+          "word": "q",
+          "coefficient": "-1"
+        },
+        {
+          "word": "aw",
+          "coefficient": "-1"
+        },
+        {
+          "word": "wa",
+          "coefficient": "-1"
+        }
+      ],
+      "b": [
+        {
+          "word": "aq",
+          "coefficient": "-1"
+        },
+        {
+          "word": "bw",
+          "coefficient": "1"
+        },
+        {
+          "word": "qa",
+          "coefficient": "1"
+        },
+        {
+          "word": "wb",
+          "coefficient": "-1"
+        }
+      ],
+      "w": [
+        {
+          "word": "ww",
+          "coefficient": "-1"
+        }
+      ],
+      "q": [
+        {
+          "word": "qw",
+          "coefficient": "1"
+        },
+        {
+          "word": "wq",
+          "coefficient": "-1"
+        }
+      ]
+    },
+    "trace_relation": "Tr(P Q)=(-1)^(total_parity(P)*total_parity(Q)) Tr(Q P)",
+    "integrated_equivalence": "identify d of every (form degree 3, ghost number 2) trace word with zero",
+    "density_ansatz": {
+      "fixed": {
+        "wbb": "1"
+      },
+      "unknown": {
+        "b1": "waab",
+        "b2": "waba",
+        "b3": "wbaa",
+        "c": "waaaa"
+      }
+    }
+  },
+  "spaces": {
+    "target_degree": [4, 2],
+    "primitive_degree": [3, 2],
+    "target_raw_word_count": 104,
+    "primitive_raw_word_count": 43,
+    "target_trace_basis": [
+      "bqq",
+      "aaqq",
+      "abqw",
+      "abwq",
+      "aqbw",
+      "aqwb",
+      "awbq",
+      "awqb",
+      "bbww",
+      "aaaqw",
+      "aaawq",
+      "aabww",
+      "aaqaw",
+      "aawaq",
+      "aawbw",
+      "aawwb",
+      "abaww",
+      "abwaw",
+      "awawb",
+      "aaaaww",
+      "aaawaw"
+    ],
+    "primitive_trace_basis": [
+      "aqq",
+      "bqw",
+      "bwq",
+      "aaqw",
+      "aawq",
+      "abww",
+      "aqaw",
+      "awbw",
+      "awwb",
+      "aaaww",
+      "aawaw"
+    ],
+    "linear_matrix_shape": [21, 15],
+    "column_order": [
+      "b1",
+      "b2",
+      "b3",
+      "c",
+      "primitive:aqq",
+      "primitive:bqw",
+      "primitive:bwq",
+      "primitive:aaqw",
+      "primitive:aawq",
+      "primitive:abww",
+      "primitive:aqaw",
+      "primitive:awbw",
+      "primitive:awwb",
+      "primitive:aaaww",
+      "primitive:aawaw"
+    ]
+  },
+  "generator_checks_in_free_algebra": {
+    "a": {
+      "d_squared": [],
+      "s_squared": [],
+      "d_s_plus_s_d": []
+    },
+    "b": {
+      "d_squared": [],
+      "s_squared": [],
+      "d_s_plus_s_d": []
+    },
+    "q": {
+      "d_squared": [],
+      "s_squared": [],
+      "d_s_plus_s_d": []
+    },
+    "w": {
+      "d_squared": [],
+      "s_squared": [],
+      "d_s_plus_s_d": []
+    }
+  },
+  "operators_descend_to_trace": {
+    "d": {
+      "input_degree": [3, 2],
+      "raw_words_checked": 43,
+      "failures": []
+    },
+    "s": {
+      "input_degree": [4, 1],
+      "raw_words_checked": 30,
+      "failures": []
+    }
+  },
+  "linear_system": {
+    "matrix": [
+      ["0", "0", "0", "0", "-1", "-1", "-1", "0", "0", "0", "0", "0", "0", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "-1", "-1", "0", "0", "0", "0", "0", "0"],
+      ["0", "1", "0", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "0"],
+      ["-1", "0", "0", "0", "0", "0", "0", "0", "1", "-1", "0", "0", "0", "0", "0"],
+      ["1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", "0", "0", "0"],
+      ["0", "0", "1", "0", "0", "0", "0", "-1", "0", "0", "0", "0", "1", "0", "0"],
+      ["0", "0", "-1", "0", "0", "0", "0", "0", "0", "0", "-1", "-1", "0", "0", "0"],
+      ["0", "-1", "0", "0", "0", "0", "0", "0", "-1", "0", "0", "0", "-1", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "-1", "0", "0", "-1", "0", "0"],
+      ["-1", "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0"],
+      ["0", "0", "1", "-1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1", "0"],
+      ["1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1", "0"],
+      ["1", "1", "0", "-1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1"],
+      ["0", "1", "1", "-1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"],
+      ["0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1", "0"],
+      ["0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1"],
+      ["0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+    ],
+    "rhs": [
+      "0",
+      "0",
+      "0",
+      "-1",
+      "1",
+      "1",
+      "-1",
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "solution": {
+      "consistent": true,
+      "rref": [
+        ["1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1/2"],
+        ["0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1/2"],
+        ["0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1/2"],
+        ["0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "1", "1", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "-1", "0", "0", "-1/2"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "0", "1", "0", "0", "1/2"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "1", "0", "0", "1"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", "0", "0", "0", "1/2"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "1/2"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+      ],
+      "pivots": [0, 1, 2, 3, 4, 7, 8, 9, 10, 13, 14],
+      "free_columns": [5, 6, 11, 12],
+      "particular": [
+        "1/2",
+        "-1/2",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "nullspace": [
+        ["0", "0", "0", "0", "-1", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "-1", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "-1", "1", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "1", "-1", "-1", "0", "0", "1", "0", "0"]
+      ]
+    }
+  },
+  "scope": [
+    "All words in the two stated bidegrees of the free algebra are included.",
+    "No finite-matrix-size trace identities or extra Lie-algebra identities are imposed.",
+    "The input BRST rules and the ansatz are assumed; this is not a derivation of a quantum anomaly.",
+    "Modulo a total derivative means compact support or boundary conditions that remove that integral.",
+    "This calculation does not establish global gauge-anomaly cancellation."
+  ],
+  "obtained": {
+    "coefficients": {
+      "b1": "1/2",
+      "b2": "-1/2",
+      "b3": "1/2",
+      "c": "0"
+    },
+    "coefficient_solution_unique": true,
+    "homogeneous_parameter_directions": [
+      ["0", "0", "0", "0"],
+      ["0", "0", "0", "0"],
+      ["0", "0", "0", "0"],
+      ["0", "0", "0", "0"]
+    ],
+    "rank": 11,
+    "free_certificate_or_parameter_directions": 4,
+    "density_original_words": [
+      {
+        "word": "wbb",
+        "coefficient": "1"
+      },
+      {
+        "word": "waab",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "waba",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "wbaa",
+        "coefficient": "1/2"
+      }
+    ],
+    "primitive_certificate": [
+      {
+        "word": "aaqw",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "aawq",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "abww",
+        "coefficient": "1"
+      },
+      {
+        "word": "aqaw",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "aaaww",
+        "coefficient": "1/2"
+      }
+    ],
+    "certificate_equation": "s Tr(density) = d Tr(primitive_certificate)",
+    "readable_primitive": "(-1/2) Tr(aaqw) + (1/2) Tr(aawq) + (1) Tr(abww) + (1/2) Tr(aqaw) + (1/2) Tr(aaaww)",
+    "s_density_trace": [
+      {
+        "word": "abqw",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "abwq",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "aqbw",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "aqwb",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "awbq",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "awqb",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "bbww",
+        "coefficient": "1"
+      },
+      {
+        "word": "aaaqw",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "aaawq",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "aabww",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "aawwb",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "abaww",
+        "coefficient": "-1/2"
+      }
+    ],
+    "d_primitive_trace": [
+      {
+        "word": "abqw",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "abwq",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "aqbw",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "aqwb",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "awbq",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "awqb",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "bbww",
+        "coefficient": "1"
+      },
+      {
+        "word": "aaaqw",
+        "coefficient": "-1/2"
+      },
+      {
+        "word": "aaawq",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "aabww",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "aawwb",
+        "coefficient": "1/2"
+      },
+      {
+        "word": "abaww",
+        "coefficient": "-1/2"
+      }
+    ],
+    "exact_certificate_residual": []
+  },
+  "all_required_checks_passed": true
+}

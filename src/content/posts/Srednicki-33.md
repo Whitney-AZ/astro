@@ -1,0 +1,493 @@
+---
+title: 'Srednicki §33 洛伦兹群的表示'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [33]
+hideFromHome: true
+draft: false
+---
+
+<span id="c33"></span>
+
+前面研究的基本场都是标量：洛伦兹变换只改变场的时空宗量，不使它同别的场分量混合。为了描述自旋不为零的粒子，我们需要引入具有若干分量的场，规定这些分量在变换下怎样彼此混合。四矢量是熟悉的例子，却未必是标量之外最简单的选择。从标量的导数出发，考察矢量和张量的变换，就能把寻找这类场的问题归结为有限维矩阵表示的分类；在分类中，我们将遇到两种只有两个分量的旋量。
+
+沿用[第2节](/posts/srednicki-02/#c02)的洛伦兹变换及生成元约定。取$\hbar=1$，保持$(-,+,+,+)$度规；除讨论共轭的地方外，分量空间均为复向量空间。以下先考虑与恒等变换连通的固有正时洛伦兹变换，空间反射和时间反演的作用需要另外指定。
+
+<span id="c33-tensors"></span>
+
+## 从标量的导数到张量分解
+
+标量场没有需要混合的分量，其变换只由时空宗量的变化给出：
+<span id="eq:c33-scalar"></span>
+
+$$
+U(\Lambda)^{-1}\varphi(x)U(\Lambda)=\varphi(y),
+\qquad y^\mu=(\Lambda^{-1})^\mu{}_{\nu}x^\nu .
+\tag{33.1}
+$$
+
+虽然场本身是标量，它的导数还带有一个时空指标。为确定这个指标的变换，对$x$求导并使用链式法则，得到
+<span id="eq:c33-gradient"></span>
+
+$$
+\begin{aligned}
+U^{-1}\partial^\mu\varphi(x)U
+&=g^{\mu\nu}(\Lambda^{-1})^\rho{}_{\nu}
+  \frac{\partial\varphi(y)}{\partial y^\rho}\\
+&=\Lambda^\mu{}_{\sigma}g^{\sigma\rho}
+  \frac{\partial\varphi(y)}{\partial y^\rho}
+=\Lambda^\mu{}_{\sigma}\bar\partial^\sigma\varphi(y).
+\end{aligned}
+\tag{33.2}
+$$
+
+从第一行到第二行使用了洛伦兹变换保持度规的关系$\Lambda^Tg\Lambda=g$，其指标形式为
+$g^{\mu\nu}(\Lambda^{-1})^\rho{}_{\nu}
+=\Lambda^\mu{}_{\sigma}g^{\sigma\rho}$。横线表示对$y$求导。可见导数场的洛伦兹变换既改变宗量，又通过一个洛伦兹矩阵作用于导数指标，因而四个导数分量组成四矢量。以此为例，可以规定一般矢量场$A^\mu$及二阶张量场$B^{\mu\nu}$的变换；张量每多一个矢量指标，就多一个相应的变换矩阵：
+<span id="eq:c33-vector-tensor"></span>
+
+$$
+\begin{aligned}
+U^{-1}A^\mu(x)U&=\Lambda^\mu{}_{\rho}A^\rho(y),\\
+U^{-1}B^{\mu\nu}(x)U
+&=\Lambda^\mu{}_{\rho}\Lambda^\nu{}_{\sigma}B^{\rho\sigma}(y).
+\end{aligned}
+\tag{33.3}
+$$
+
+二阶张量虽然有十六个分量，其中某些组合却能单独变换。若$B^{\mu\nu}=B^{\nu\mu}$，在变换结果中交换$\mu,\nu$，再交换求和指标$\rho,\sigma$，便回到原来的式子；若$B^{\mu\nu}=-B^{\nu\mu}$，同样操作则使结果变号。因此，对称部分和反对称部分在洛伦兹变换下各自保持其性质，不会彼此混合。进一步用度规收缩两个指标，还能取出一个单独变换的分量，即张量的迹：
+<span id="eq:c33-trace"></span>
+
+$$
+T(x)\equiv g_{\mu\nu}B^{\mu\nu}(x),\qquad
+U^{-1}T(x)U
+=g_{\mu\nu}\Lambda^\mu{}_{\rho}\Lambda^\nu{}_{\sigma}B^{\rho\sigma}(y)
+=T(y).
+\tag{33.4}
+$$
+
+迹按标量变换，反对称部分又不贡献迹，所以迹完全包含在对称部分中。把它从对称部分减去，二阶张量便分成反对称、对称无迹和纯迹三部分：
+<span id="eq:c33-tensor-projections"></span>
+
+$$
+\begin{aligned}
+A^{\mu\nu}&=\frac12(B^{\mu\nu}-B^{\nu\mu}),\\
+S^{\mu\nu}&=\frac12(B^{\mu\nu}+B^{\nu\mu})-\frac14g^{\mu\nu}T,\\
+B^{\mu\nu}&=A^{\mu\nu}+S^{\mu\nu}+\frac14g^{\mu\nu}T.
+\end{aligned}
+\tag{33.5}
+$$
+
+按此定义，$A$反对称，$S$对称，并且满足
+$g_{\mu\nu}S^{\mu\nu}=T-\frac14g_{\mu\nu}g^{\mu\nu}T=0$；减去迹时的系数$1/4$正是由四维关系$g_{\mu\nu}g^{\mu\nu}=4$确定的。整个分解只用到指标交换和不变度规，这些操作同洛伦兹变换可交换，因而分解出的每一部分都能单独变换。反对称部分有6个独立分量，对称无迹部分有$10-1=9$个，另有1个迹分量，合计仍为16个。将这三个投影分别记为 $P_A,P_S,P_T$。反对称张量再次取反对称部分保持不变，对称无迹张量再次去迹也保持不变，纯迹张量则只留下纯迹部分。因此
+
+<span id="eq:c33-projection-algebra"></span>
+
+$$
+P_rP_s=\delta_{rs}P_r,\qquad
+P_A+P_S+P_T=I,\qquad r,s\in\{A,S,T\}.
+$$
+
+第二个等式给出分解的存在性；对任意一种分解分别作用 $P_A,P_S,P_T$，又唯一取回 $A,S,T$，所以分解唯一。
+
+从这个例子自然产生进一步的问题：已经分出的部分能否继续分解，更高阶张量又应怎样处理？此外，新的场是否一定要用矢量指标来描述？这些问题都取决于分量在变换下怎样混合，因此可以先暂时放下具体的时空指标，把分量变换统一写成矩阵形式。
+
+<span id="c33-representation"></span>
+
+## 分量矩阵及其生成元
+
+用$A$标记一个场的全部分量，将它的洛伦兹变换写为
+<span id="eq:c33-field-law"></span>
+
+$$
+U(\Lambda)^{-1}\varphi_A(x)U(\Lambda)
+=L_A{}^B(\Lambda)\varphi_B(\Lambda^{-1}x).
+\tag{33.6}
+$$
+
+分量场 $\varphi_A$ 可以是复场。式中的$U$作用于物理态的希尔伯特空间，$L$则作用于有限个场分量，两者所属的空间及其内积应当区分。分量矩阵还不能任意选取：连续施行两次变换，必须与施行相应的合成变换得到相同结果，因此$L$也要保持群的乘法。利用$U(\Lambda'\Lambda)=U(\Lambda')U(\Lambda)$，逐次作用于场，得到
+<span id="eq:c33-composition-calculation"></span>
+
+$$
+\begin{aligned}
+U(\Lambda'\Lambda)^{-1}\varphi_A(x)U(\Lambda'\Lambda)
+&=U(\Lambda)^{-1}
+ [U(\Lambda')^{-1}\varphi_A(x)U(\Lambda')]U(\Lambda)\\
+&=L_A{}^B(\Lambda')L_B{}^C(\Lambda)
+ \varphi_C(\Lambda^{-1}\Lambda'^{-1}x).
+\end{aligned}
+\tag{33.7}
+$$
+
+将最后一行与[（33.6）](#eq:c33-field-law)对合成变换的规定相比，同一时空宗量前的分量矩阵必须相同，因而
+<span id="eq:c33-group-law"></span>
+
+$$
+L(\Lambda'\Lambda)=L(\Lambda')L(\Lambda).
+\tag{33.8}
+$$
+
+满足这一乘法关系的矩阵族称为群的表示（representation）。合成时，分量矩阵依次相乘，而作用于时空宗量的逆矩阵按相反次序相乘，两者共同保证了场变换律的一致性。
+
+一个表示所描述的分量变换不依赖于所选基底。若换用分量$\varphi'_A=C_A{}^B\varphi_B$，其中$C$可逆，将新分量代入变换律便得
+<span id="eq:c33-equivalence"></span>
+
+$$
+L'(\Lambda)=CL(\Lambda)C^{-1}.
+\tag{33.9}
+$$
+
+这两个矩阵表示称为等价表示。张量分解的例子则对应另一种情形：分量空间中存在非零、又不等于整个空间的子空间$W$，所有$L(\Lambda)$都将$W$映入自身。这时表示称为可约的；没有这样的$W$时，表示称为不可约。分类所要寻找的，正是不能再这样分开的部分。一般复基底之间的变换允许任意可逆$C$。若已经选定不变正定内积，联系两组正交归一基底的矩阵才是幺正的。下面将在角动量分类之前构造这样的内积。
+
+对于与恒等元连通的变换，可以从无穷小变换的生成元入手。写成$\Lambda^\mu{}_{\nu}=\delta^\mu{}_{\nu}+\omega^\mu{}_{\nu}$，其中$\omega_{\mu\nu}=-\omega_{\nu\mu}$，并定义
+<span id="eq:c33-generators"></span>
+
+$$
+\begin{aligned}
+U(1+\omega)&=I+\frac i2\omega_{\mu\nu}M^{\mu\nu}+O(\omega^2),\\
+L(1+\omega)&=I+\frac i2\omega_{\mu\nu}S^{\mu\nu}+O(\omega^2).
+\end{aligned}
+\tag{33.10}
+$$
+
+这里的指标对取遍所有值，所以需要用$1/2$补偿反对称指标对的重复计数。生成元对场的作用同时包含宗量变化与分量混合；将[（33.6）](#eq:c33-field-law)两边展开到一阶，就能分别取出这两项：
+<span id="eq:c33-expansion"></span>
+
+$$
+\begin{aligned}
+U^{-1}\varphi_AU
+&=\varphi_A+\frac i2\omega_{\mu\nu}[\varphi_A,M^{\mu\nu}],\\
+L_A{}^B\varphi_B(\Lambda^{-1}x)
+&=\varphi_A-\omega^\rho{}_{\sigma}x^\sigma\partial_\rho\varphi_A
+ +\frac i2\omega_{\mu\nu}(S^{\mu\nu})_A{}^B\varphi_B.
+\end{aligned}
+\tag{33.11}
+$$
+
+利用变换参数的反对称性，宗量变化项可写为
+$\frac12\omega_{\mu\nu}(x^\mu\partial^\nu-x^\nu\partial^\mu)\varphi_A$。两边比较各个独立参数$\omega_{\mu\nu}$的系数，得到
+<span id="eq:c33-orbital-spin"></span>
+
+$$
+[\varphi_A(x),M^{\mu\nu}]
+=\mathcal L^{\mu\nu}\varphi_A(x)
+ +(S^{\mu\nu})_A{}^B\varphi_B(x),\qquad
+\mathcal L^{\mu\nu}=-i(x^\mu\partial^\nu-x^\nu\partial^\mu).
+\tag{33.12}
+$$
+
+第一项通过微分改变场的宗量，称为轨道作用；第二项通过有限矩阵混合场的分量，称为自旋作用。要分类后一项中的矩阵，可以利用群乘法对生成元施加的约束。第2节已经由无穷小变换的合成得到
+<span id="eq:c33-lorentz-algebra"></span>
+
+$$
+[M^{\mu\nu},M^{\rho\sigma}]
+=i\bigl(g^{\mu\rho}M^{\nu\sigma}-g^{\nu\rho}M^{\mu\sigma}
+         -g^{\mu\sigma}M^{\nu\rho}+g^{\nu\sigma}M^{\mu\rho}\bigr).
+\tag{33.13}
+$$
+
+分量矩阵$L$服从同样的群乘法，因而以$S$替换$M$仍有这一代数关系。具体说来，在第2节的无穷小群对易计算中，将$U=I+i\omega M/2$逐处换成$L=I+i\omega S/2$，二阶混合项的系数不变，就得到所需的矩阵对易子。轨道部分也满足同一代数：从
+$[x^\mu\partial^\nu,x^\rho\partial^\sigma]
+=g^{\nu\rho}x^\mu\partial^\sigma-g^{\sigma\mu}x^\rho\partial^\nu$
+出发，记 $D^{\mu\nu}=x^\mu\partial^\nu-x^\nu\partial^\mu$，对两对指标分别反对称化，得到
+
+<span id="eq:c33-orbital-algebra-check"></span>
+
+$$
+[D^{\mu\nu},D^{\rho\sigma}]
+=g^{\nu\rho}D^{\mu\sigma}-g^{\mu\rho}D^{\nu\sigma}
+-g^{\nu\sigma}D^{\mu\rho}+g^{\mu\sigma}D^{\nu\rho}.
+$$
+
+代入 $\mathcal L=-iD$，两边就化为式[（33.13）](#eq:c33-lorentz-algebra)的形式。又因为 $S$ 不依赖 $x$，分量矩阵与轨道微分作用彼此对易，两个作用因而能按前式相加。
+
+为看清六个生成元之间的关系，将它们分别排成三项转动和三项推动：
+<span id="eq:c33-jk"></span>
+
+$$
+\begin{gathered}
+J_i=\frac12\epsilon_{ijk}M^{jk},\qquad K_i=M^{i0},\\
+[J_i,J_j]=i\epsilon_{ijk}J_k,\qquad
+[J_i,K_j]=i\epsilon_{ijk}K_k,\qquad
+[K_i,K_j]=-i\epsilon_{ijk}J_k.
+\end{gathered}
+\tag{33.14}
+$$
+
+这些关系的指标化简可直接沿用[第2节的生成元计算](/posts/srednicki-02/#c02-generators)。需要留意推动对易子中的负号。例如$[K_1,K_2]=[M^{10},M^{20}]=ig^{00}M^{12}=-iJ_3$，它来自时间度规分量的负号，也使推动生成元不能单独构成一组转动代数。以下在分类分量表示时，仍用$J_i,K_i$表示由$S^{\mu\nu}$组成的这六个矩阵。
+
+<span id="c33-split"></span>
+
+## 两组对易的角动量代数
+
+转动和推动在原来的对易关系中相互耦合。由于推动之间的对易子比转动之间多一个负号，可以在复数域中把二者重新组合，尝试消去两组之间的耦合。为此定义
+<span id="eq:c33-n-definitions"></span>
+
+$$
+N_i=\frac12(J_i-iK_i),\qquad
+\bar N_i=\frac12(J_i+iK_i),\qquad
+J_i=N_i+\bar N_i,\quad K_i=i(N_i-\bar N_i).
+\tag{33.15}
+$$
+
+在物理希尔伯特空间上，$J_i,K_i$是厄米生成元，因而$\bar N_i=N_i^\dagger$。到了有限维分量空间，矩阵只须保持生成元的对易关系，并不必保持物理态空间上的厄米共轭运算。因此在分量矩阵中，我们将第二组记为$\bar N_i$，用横线区别两组。
+
+为了求出新生成元的代数，先由[（33.14）](#eq:c33-jk)交换一次指标与对易次序，得到
+$[K_i,J_j]=-[J_j,K_i]=i\epsilon_{ijk}K_k$。将它连同另外三个对易关系代入，新组合中的四项可依次展开为
+<span id="eq:c33-two-algebras"></span>
+
+$$
+\begin{aligned}
+\relax[N_i,N_j]
+&=\frac14\bigl([J_i,J_j]-i[J_i,K_j]-i[K_i,J_j]-[K_i,K_j]\bigr)\\
+&=\frac14\epsilon_{ijk}(iJ_k+K_k+K_k+iJ_k)
+=i\epsilon_{ijk}N_k,\\
+[\bar N_i,\bar N_j]
+&=\frac14\bigl([J_i,J_j]+i[J_i,K_j]+i[K_i,J_j]-[K_i,K_j]\bigr)\\
+&=\frac14\epsilon_{ijk}(iJ_k-K_k-K_k+iJ_k)
+=i\epsilon_{ijk}\bar N_k,\\
+[N_i,\bar N_j]
+&=\frac14\bigl([J_i,J_j]+i[J_i,K_j]-i[K_i,J_j]+[K_i,K_j]\bigr)\\
+&=\frac14\epsilon_{ijk}(iJ_k-K_k+K_k-iJ_k)=0.
+\end{aligned}
+\tag{33.16}
+$$
+
+两组内部各满足角动量代数，组间对易子则为零。反过来，以 $J=N+\bar N$、$K=i(N-\bar N)$ 代回，交叉对易子为零，剩下
+
+<span id="eq:c33-inverse-algebra-check"></span>
+
+$$
+\begin{aligned}
+[J_i,J_j]&=i\epsilon_{ijk}(N_k+\bar N_k)=i\epsilon_{ijk}J_k,\\
+[J_i,K_j]&=-\epsilon_{ijk}(N_k-\bar N_k)=i\epsilon_{ijk}K_k,\\
+[K_i,K_j]&=-i\epsilon_{ijk}(N_k+\bar N_k)=-i\epsilon_{ijk}J_k.
+\end{aligned}
+$$
+
+正向和反向的计算说明，原来的六个生成元及全部对易关系都被保留。由于这次重新组合使用了复数$i$，所得到的是复化李代数的分解：
+<span id="eq:c33-complexification"></span>
+
+$$
+\mathfrak{so}(1,3)\otimes_{\mathbb R}\mathbb C
+\simeq\mathfrak{sl}_2(\mathbb C)\oplus\mathfrak{sl}_2(\mathbb C).
+\tag{33.17}
+$$
+
+因此，求有限维复表示时，可以对每个因子分别使用SU(2)的角动量方法。这里SU(2)是完成表示分类的辅助群；实际洛伦兹推动的参数仍为实数，推动的有限变换也仍须由原来的生成元恢复。
+
+<span id="c33-compact"></span>
+
+## 角动量分类为何适用于一般分量矩阵
+
+普通量子力学的角动量分类使用正定内积和厄米生成元，本征值的实性、升降态范数的非负性以及不变子空间的正交分解都依靠这些条件。本节的$S^{\mu\nu}$一般不厄米，所以在沿用角动量分类之前，需要先证明：任意满足角动量对易关系的有限维复矩阵，都可通过可逆基变换化为厄米矩阵。
+
+设三个矩阵$X_i$满足$[X_i,X_j]=i\epsilon_{ijk}X_k$。取SU(2)的反厄米基$t_i=-i\sigma_i/2$，映射$t_i\mapsto-iX_i$便保持$[t_i,t_j]=\epsilon_{ijk}t_k$。接下来用到两个群论结果：连通、单连通李群的李代数同态唯一积分为群同态；紧李群存在左右平移不变、总质量为1的哈尔测度。前者将这些生成元变为群的表示，后者则使我们能对群平均，从任意正定内积构造不变内积。这两个结果分别见 Etingof 讲义的[定理9.12](https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf#page=56)和[定理37.1](https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf#page=200)。SU(2)的矩阵可写为
+<span id="eq:c33-su2-sphere"></span>
+
+$$
+g=\begin{pmatrix}a&b\\-b^*&a^*\end{pmatrix},\qquad
+|a|^2+|b|^2=1,
+\tag{33.18}
+$$
+
+其参数构成三维球面$S^3$，所以SU(2)紧、连通且单连通，满足刚才使用的条件。积分得到的有限矩阵表示记为$D(g)$，沿各个单参数子群有$D(e^{t t_i})=e^{-itX_i}$。为了使这些变换保持内积，从任意初始正定内积出发，对变换后的内积在群上取平均，用矩阵表示为
+<span id="eq:c33-average-metric"></span>
+
+$$
+H=\int_{SU(2)}D(g)^\dagger D(g)\,d\mu(g).
+\tag{33.19}
+$$
+
+由于矩阵元连续而群是紧的，这个积分有限。对$v\ne0$，还有$v^\dagger Hv=\int\|D(g)v\|^2d\mu(g)>0$，因为所有$D(g)$都可逆；故$H$为正定厄米矩阵。这个平均之所以给出不变内积，在于群的右平移只改变积分变量。以$g'=gh$换元，利用哈尔测度的不变性，得到
+<span id="eq:c33-invariant-metric"></span>
+
+$$
+D(h)^\dagger HD(h)
+=\int D(gh)^\dagger D(gh)\,d\mu(g)=H.
+\tag{33.20}
+$$
+
+令$C=H^{1/2}$，将表示矩阵换为$D'(g)=CD(g)C^{-1}$，上式就化成$D'(g)^\dagger D'(g)=I$。于是对$D'(e^{t t_i})=e^{-itCX_iC^{-1}}$的幺正关系在$t=0$求导，可知$CX_iC^{-1}$厄米。以下选用这个基底并省略撇号，从而可以使用通常的正定内积来讨论角动量。
+
+厄米性首先保证了完全可约性。若$W$是$X_i$的公共不变子空间，对$w\in W,v\in W^\perp$有
+$\langle w,X_iv\rangle=\langle X_iw,v\rangle=0$，故$W^\perp$也不变。将这两个子空间分别继续分解，有限维空间经过有限步便成为不可约块的直和。因此只须在每个不可约块内求出可能的矩阵，再把这些块组合起来。
+
+在一个不可约块上定义升降算符和总角动量平方
+$X_\pm=X_1\pm iX_2$、$Q=X_1^2+X_2^2+X_3^2$。由原来的对易关系得到
+<span id="eq:c33-ladder-algebra"></span>
+
+$$
+\begin{gathered}
+\relax[X_3,X_\pm]=\pm X_\pm,\qquad [X_+,X_-]=2X_3,
+\qquad X_+^\dagger=X_-,\\
+Q=X_-X_++X_3(X_3+1)=X_+X_-+X_3(X_3-1),\qquad [Q,X_i]=0.
+\end{gathered}
+\tag{33.21}
+$$
+
+其中，例如$[Q,X_i]=i\sum_{jk}\epsilon_{jik}(X_jX_k+X_kX_j)=0$，是因为括号对$j,k$对称而反对称系数使求和相消。$Q$厄米，且它的每个本征空间在$X_i$的作用下保持不变，因此不可约性要求整个块上$Q=qI$。再设$X_3$的最大本征值为$n$，取相应归一态$|n\rangle$。必有$X_+|n\rangle=0$，否则升算符会产生更大的本征值$n+1$；代入总角动量平方的表达式便得$q=n(n+1)$。从最高态逐次下降，链中任一归一化本征态$|m\rangle$的下降系数由范数确定：
+<span id="eq:c33-lowering-norm"></span>
+
+$$
+\|X_-|m\rangle\|^2
+=\langle m|X_+X_-|m\rangle
+=n(n+1)-m(m-1)=(n+m)(n-m+1).
+\tag{33.22}
+$$
+
+空间有限维，下降过程必须在某个$m=n-r$处终止，其中$r$为非负整数。在终点，右边第二因子为$r+1>0$，所以范数为零只能来自第一因子，从而$m=-n$、$r=2n$。终止条件同时限制了最高权的取值，并确定整条升降链：
+<span id="eq:c33-spin-matrices"></span>
+
+$$
+\begin{aligned}
+n&=0,\tfrac12,1,\ldots,\qquad m=-n,-n+1,\ldots,n,\\
+X_3|n,m\rangle&=m|n,m\rangle,\\
+X_\pm|n,m\rangle
+&=\sqrt{(n\mp m)(n\pm m+1)}\,|n,m\pm1\rangle .
+\end{aligned}
+\tag{33.23}
+$$
+
+这条链在三个$X_i$的作用下封闭，又因所在块不可约，必定张成整个块，故其维数为$2n+1$。反过来，按上式定义升降矩阵，先升后降与先降后升的系数之差正好为$2m$，因而每个列出的$n$都给出一个角动量表示。从一般复矩阵出发，也就得到同样的一族不可约块；最初是否厄米，只关系到选用哪一组基底。
+
+<span id="c33-classification"></span>
+
+## 用两个自旋标记洛伦兹表示
+
+现在回到两组彼此对易的生成元。对由$-iN_i,-i\bar N_i$生成的SU(2)$\times$SU(2)作内积平均，便可在同一个内积中使两组矩阵各自厄米。因此总表示也完全可约，问题归结为确定它的不可约块。取一个对全部六个矩阵都不可约的空间$V$，先只考虑第一组$N_i$，并把相同自旋的副本收集在一起：
+<span id="eq:c33-multiplicity-space"></span>
+
+$$
+V=\bigoplus_n V_n\otimes M_n,\qquad
+N_i=\bigoplus_n X_i^{(n)}\otimes I_{M_n}.
+\tag{33.24}
+$$
+
+这里$V_n$是自旋$n$的不可约空间，$M_n$的基向量则标记这种块出现的各个副本。由于$\bar N_i$与第一组的所有矩阵对易，它特别保持$\sum_iN_i^2$的本征值$n(n+1)$，因而不能混合不同$n$的和项。这些和项便同时对两组生成元不变；总表示不可约，迫使其中只有一个$n$，即$V=V_n\otimes M$。
+
+第二组究竟怎样作用，还可由对易性进一步确定。在副本指标上把$\bar N_i$写成分块矩阵，每一块都是$V_n$到自身的映射，并同全部$X_j^{(n)}$对易。任意这样的映射$T$必为标量矩阵：在复有限维空间上，$T$有本征值$\lambda$，非零本征空间$\ker(T-\lambda I)$在全部$X_j^{(n)}$下保持不变；第一组的不可约性因而使这个本征空间等于整个$V_n$。这就是此处需要的舒尔引理。应用到每个分块，得到$\bar N_i=I\otimes Y_i$，其中$Y_i$只在$M$上作用，并且仍满足角动量代数。若$M$可约，$V_n\otimes M$也随之可约，所以$M$必须是某个自旋$n'$的不可约空间。这样，两组角动量各自作用于一个因子，总空间便为二者的张量积：
+<span id="eq:c33-irrep"></span>
+
+$$
+\begin{aligned}
+V&=V_n\otimes V_{n'},\qquad \dim V=(2n+1)(2n'+1),\\
+N_i&=X_i^{(n)}\otimes I,\qquad
+\bar N_i=I\otimes X_i^{(n')},\\
+J_i&=X_i^{(n)}\otimes I+I\otimes X_i^{(n')},\\
+K_i&=i\bigl(X_i^{(n)}\otimes I-I\otimes X_i^{(n')}\bigr).
+\end{aligned}
+\tag{33.25}
+$$
+
+反过来，这样构造出的张量积确实不可约。若有公共不变子空间，它的正交投影$P$同两组厄米矩阵都对易。先对第一组使用刚才的分块论证，得$P=I\otimes p$；再对第二组使用同一论证，得$p=cI$。投影条件$P^2=P$只允许$c=0$或1，因此公共不变子空间只能为零空间或整个空间。
+
+这里用两个因子的**维数**命名表示，写作$(2n+1,2n'+1)$。例如$(2,1)$对应$n=1/2,n'=0$，其两个分量上的生成元为$J_i=\sigma_i/2$、$K_i=i\sigma_i/2$。这个最小的非标量表示也说明了分量变换与物理态变换的区别：沿第三方向作快度为$\eta$的推动，分量矩阵为
+<span id="eq:c33-nonunitary-example"></span>
+
+$$
+L_B(\eta)=e^{i\eta K_3}
+=\begin{pmatrix}e^{-\eta/2}&0\\0&e^{\eta/2}\end{pmatrix}.
+\tag{33.26}
+$$
+
+除$\eta=0$外，这个矩阵对两个分量作互为倒数的实数缩放，不保持欧氏范数；物理态上的$U$则仍保持概率内积。在同一个例子中，$N_i^\dagger=N_i$而$\bar N_i=0$，可见两组生成元的横线记号不能在有限维分量空间中读作普通厄米共轭。
+
+<span id="c33-rotations"></span>
+
+## 一个洛伦兹表示包含哪些转动自旋
+
+洛伦兹表示已经由两个自旋标记，但实际空间转动由$J_i=N_i+\bar N_i$生成，因此同一个洛伦兹不可约表示在转动下还要按角动量合成分解。为了求出其中每个转动自旋的重数，可以先数总角动量第三分量的本征态。在乘积基$|n,m\rangle\otimes|n',m'\rangle$中，$J_3$的本征值为$M=m+m'$。先设$n\ge n'$；对允许的非负$M$，总本征值固定后，简并度就是同时满足
+<span id="eq:c33-weight-interval"></span>
+
+$$
+-n\le m\le n,\qquad M-n'\le m\le M+n'
+\tag{33.27}
+$$
+
+的单位间隔格点数。当$0\le M\le n-n'$时，第二个区间完全落在第一个区间内，交集共有$2n'+1$个点；当$n-n'\le M\le n+n'$时，第二个区间的右端到达或越过第一个区间的右端，交集为$[M-n',n]$。继续增大总本征值，两区间最终不再相交。因此简并度为
+<span id="eq:c33-weight-count"></span>
+
+$$
+d_M=\begin{cases}
+2n'+1,&0\le M\le n-n',\\
+n+n'-M+1,&n-n'\le M\le n+n',\\
+0,&M>n+n'.
+\end{cases}
+\tag{33.28}
+$$
+
+这里$M$只取$m+m'$允许的整数或半整数格点。为了从这个简并度取回各个不可约块的重数，注意每个自旋$j$的块在每个$M=-j,\ldots,j$处恰好贡献一个态。若自旋$j$出现$a_j$次，那么$d_j=a_j+a_{j+1}+\cdots$，于是$a_j=d_j-d_{j+1}$。对[（33.28）](#eq:c33-weight-count)中的相邻简并度作差，就得到
+<span id="eq:c33-rotation-content"></span>
+
+$$
+j=|n-n'|,\ |n-n'|+1,\ldots,n+n',
+\qquad\text{每个自旋恰出现一次}.
+\tag{33.29}
+$$
+
+这些转动块的总维数为
+$\sum_{j=n-n'}^{n+n'}(2j+1)
+=(2n'+1)[(n-n')+(n+n')+1]=(2n+1)(2n'+1)$，恰好等于原来两个空间的维数之积，与逐个权重求出的重数相符。
+
+从无穷小转动走到有限转动时，还要区分转过一整周的作用。在自旋$j$上，绕第三轴转$2\pi$使每个分量乘上$e^{-2\pi im}=(-1)^{2j}$。半整数自旋因此不能给出SO(3)的单值表示，而给出其双覆盖SU(2)的表示。在SU(2)中，$e^{-i\pi\sigma_3}=-I$，要转过$4\pi$才回到$I$。相应地，讨论洛伦兹旋量的有限变换也须使用覆盖群；式[（33.25）](#eq:c33-irrep)中的$2\pi$转动在两个因子上分别作用，合起来给出
+<span id="eq:c33-two-pi"></span>
+
+$$
+(-1)^{2n}(-1)^{2n'}=(-1)^{2(n+n')}.
+\tag{33.30}
+$$
+
+当$n+n'$为整数时，这个符号为正，表示块可以下降为固有正时洛伦兹群的单值表示；其余的块则保留旋量的双值性质。[下一节的二阶矩阵构造](/posts/srednicki-34/#c34-double-cover)将具体给出这一覆盖，并证明其核恰为$I,-I$。
+
+<span id="c33-vector"></span>
+
+## 标量、旋量与四矢量
+
+将最小的几个$n,n'$代入分类结果，就得到以下基本表示：
+
+| 维数标记 | 分量数 | 转动自旋 | 名称                            |
+| -------- | -----: | -------- | ------------------------------- |
+| $(1,1)$  |      1 | $j=0$    | 标量，或单态                    |
+| $(2,1)$  |      2 | $j=1/2$  | 左手旋量（left-handed spinor）  |
+| $(1,2)$  |      2 | $j=1/2$  | 右手旋量（right-handed spinor） |
+| $(2,2)$  |      4 | $j=0,1$  | 四矢量                          |
+
+前三行由[（33.25）](#eq:c33-irrep)和[（33.29）](#eq:c33-rotation-content)即可读出。要认出最后一行，还须证明熟悉的四矢量是洛伦兹不可约表示，再考察它的转动内容。用第2节的矢量生成元可以直接证明不可约性：
+<span id="eq:c33-vector-generators"></span>
+
+$$
+(S_V^{\mu\nu})^\rho{}_{\tau}
+=-i\bigl(g^{\mu\rho}\delta^\nu{}_{\tau}
+        -g^{\nu\rho}\delta^\mu{}_{\tau}\bigr)
+\tag{33.31}
+$$
+
+设$e_0,e_1,e_2,e_3$为标准基，并考察生成元的公共不变子空间。转动保持时间方向$e_0$，并在$e_1,e_2,e_3$上按通常三矢量作用，因此总转动角动量的平方及两个相应投影为
+<span id="eq:c33-vector-rotation-projectors"></span>
+
+$$
+\mathbf J^2=\operatorname{diag}(0,2,2,2),\qquad
+P_0=I-\frac12\mathbf J^2,\qquad P_1=\frac12\mathbf J^2.
+\tag{33.32}
+$$
+
+其中$P_0$投影到时间分量，$P_1$投影到空间三分量。若$W$对全部洛伦兹生成元不变，它也必对生成元的这些多项式不变，故$P_0W,P_1W$都包含于$W$。非零$W$至少有一个投影非零：若$P_0W\ne0$，由于时间子空间只有一维，必有$e_0\in W$；若$P_1W\ne0$，由于三矢量是转动的自旋1不可约块，三个$e_i$便都在$W$中。再使用推动生成元的作用
+<span id="eq:c33-vector-boost-connection"></span>
+
+$$
+K_i e_0=-ie_i,\qquad K_i e_j=-i\delta_{ij}e_0.
+\tag{33.33}
+$$
+
+可知无论先得到时间部分还是空间部分，推动都会把另一部分带入$W$。因此任何非零$W$都只能是整个四维空间，四矢量确为洛伦兹不可约表示。
+
+四维不可约块的维数对只有$(4,1),(1,4),(2,2)$三种可能。前两者在空间转动下都只有$j=3/2$，而四矢量的时间分量给出$j=0$、空间分量给出$j=1$，所以四矢量只能对应$(2,2)$。这也说明，对洛伦兹群不可约的表示，在限制到转动子群后仍可分解；推动将这里的$0\oplus1$连接为一个洛伦兹不可约块。
+
+分类于是把我们从熟悉的标量和四矢量引向了两个更少分量的对象：左手旋量和右手旋量。二者在空间转动下都表现为自旋$1/2$，推动的作用却不同。下一节将写出这两种变换的具体矩阵，进而用旋量指标建立它们与四矢量、张量之间的联系。
+
+---
+
+[← 第 32 节](/posts/srednicki-32/) · [章节地图](/srednicki/) · [第 34 节 →](/posts/srednicki-34/)

@@ -1,0 +1,73 @@
+% Original vectors: CN2006-local PDF90, figure18.2, left + right panels.
+% Added explanations (absent in the source image): p arrow, a/b labels,
+% panel names and insertion factors. All arrows denote momentum flow.
+% Left internal edges: UL-LL, LL-LR, LR-UR, UL-a, a-b (upper),
+% a-b (lower), b-UR. There is NO straight edge between a and b.
+% Right cross is a two-valent counterterm, not an additional propagator.
+% Basic TikZ only; intrinsic bounding box: 123.05 mm x 62.675 mm.
+\begingroup
+\begin{tikzpicture}[x=1.15cm,y=1.15cm,line width=.75pt,>=latex,font=\normalsize]
+\path[use as bounding box] (-5.35,-3.2) rectangle (5.35,2.25);
+
+\begin{scope}[xshift=-3.68cm]
+\coordinate (ul) at (-1.3,1.3);
+\coordinate (ll) at (-1.3,-1.3);
+\coordinate (lr) at (1.3,-1.3);
+\coordinate (ur) at (1.3,1.3);
+\coordinate (a) at (-.48,1.3);
+\coordinate (b) at (.48,1.3);
+% Three unchanged sides, two stems, and two parallel bubble propagators.
+\draw (ul)--(ll)--(lr)--(ur);
+\draw (ul)--(a);
+\draw (a) arc[start angle=180,end angle=0,radius=.48];
+\draw (a) arc[start angle=180,end angle=360,radius=.48];
+\draw (b)--(ur);
+\draw (-1.95,1.95)--(ul);
+\draw (-1.95,-1.95)--(ll);
+\draw (1.95,-1.95)--(lr);
+\draw (1.95,1.95)--(ur);
+\fill (ul) circle[radius=1.2pt];
+\fill (ll) circle[radius=1.2pt];
+\fill (lr) circle[radius=1.2pt];
+\fill (ur) circle[radius=1.2pt];
+\fill (a) circle[radius=1.2pt];
+\fill (b) circle[radius=1.2pt];
+\draw[->] (-1.18,1.3)--(-.73,1.3);
+\node at (-.98,1.54) {$p$};
+\node[anchor=north east,inner sep=1pt] at (-.53,1.16) {$a$};
+\node[anchor=north west,inner sep=1pt] at (.53,1.16) {$b$};
+\node[align=center] at (0,-2.55) {泡图插入\\[2pt]$i\Pi_{\rm loop}(p^2)$};
+\end{scope}
+
+\node at (0,0) {\Large $+$};
+
+\begin{scope}[xshift=3.68cm]
+\coordinate (ul) at (-1.3,1.3);
+\coordinate (ll) at (-1.3,-1.3);
+\coordinate (lr) at (1.3,-1.3);
+\coordinate (ur) at (1.3,1.3);
+\coordinate (ct) at (0,1.3);
+% Three unchanged sides and two propagator segments meeting at the cross.
+\draw (ul)--(ll)--(lr)--(ur);
+\draw (ul)--(ct);
+\draw (ct)--(ur);
+\draw (-1.95,1.95)--(ul);
+\draw (-1.95,-1.95)--(ll);
+\draw (1.95,-1.95)--(lr);
+\draw (1.95,1.95)--(ur);
+\fill (ul) circle[radius=1.2pt];
+\fill (ll) circle[radius=1.2pt];
+\fill (lr) circle[radius=1.2pt];
+\fill (ur) circle[radius=1.2pt];
+% These diagonal strokes mark a vertex; they are not graph edges.
+\draw[line width=.95pt] (-.12,1.18)--(.12,1.42);
+\draw[line width=.95pt] (-.12,1.42)--(.12,1.18);
+\draw[->] (-1.18,1.3)--(-.73,1.3);
+\node at (-.98,1.54) {$p$};
+\node[align=center] at (0,-2.55)
+ {二价反项插入\\[2pt]叉点：$-i(Ap^2+Bm^2)$};
+\end{scope}
+
+\end{tikzpicture}
+\endgroup
+

@@ -1,0 +1,30 @@
+% Original source Fig.31.3, PDF136 / printed124. rho cubic tadpole plus iY.
+% rho one-point kernel has zero external momentum after imposing translation
+% invariance; the external propagator is restored explicitly when computing <rho>.
+% The loop momentum ell is counterclockwise as the circular source drawing.
+% Basic TikZ only; no caption or automatic numbering.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+  line cap=round,line join=round,
+  font=\fontsize{10.5}{12}\selectfont]
+\begin{scope}[shift={(29,0)}]
+  \draw (-25,0) -- (0,0);
+  \draw (10,0) circle[radius=10mm];
+  \draw[->] (18.6603,-5) arc[start angle=-30,end angle=30,radius=10mm];
+  \draw[->] (-23,0) -- (-15,0);
+  \fill (0,0) circle[radius=.65mm];
+  \node[above] at (-18,1.5) {$k$};
+  \node[right] at (21,0) {$\ell$};
+  \node at (10,0) {$S=2$};
+  \node at (0,-16) {$-ig_3$};
+\end{scope}
+\node at (68,0) {$+$};
+\begin{scope}[shift={(104,0)}]
+  \draw (-25,0) -- (0,0);
+  \draw (-1.7,-1.7) -- (1.7,1.7);
+  \draw (-1.7,1.7) -- (1.7,-1.7);
+  \draw[->] (-23,0) -- (-15,0);
+  \node[above] at (-18,1.5) {$k$};
+  \node at (0,-16) {$iY$};
+\end{scope}
+\end{tikzpicture}
+

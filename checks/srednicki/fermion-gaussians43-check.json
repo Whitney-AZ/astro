@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "Dirac",
+      "zero_source_integral": "1",
+      "source_polynomial_matches": true,
+      "ordered_insertions_checked": 65,
+      "arithmetic": "exact complex rational coefficients using Python fractions"
+    },
+    {
+      "case": "Majorana",
+      "zero_source_integral": "-3",
+      "source_polynomial_matches": true,
+      "ordered_insertions_checked": 65,
+      "arithmetic": "exact complex rational coefficients using Python fractions"
+    }
+  ]
+}

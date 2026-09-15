@@ -1,0 +1,29 @@
+{
+  "python": "3.14.4",
+  "numpy": "2.3.3",
+  "input": {
+    "m": 1.0,
+    "E": 2.0,
+    "cos_theta": 0.3333333333333333,
+    "e": -0.37
+  },
+  "invariants": {
+    "s": 16.0,
+    "dt": 5.690598923241497,
+    "du": 10.309401076758501,
+    "rho": 0.27272727272727276
+  },
+  "full_Ward_max": [1.520617526396545e-16, 1.520617526396545e-16],
+  "reduced_Ward_max": [0.5476, 0.5476],
+  "physical_full": 0.09045537388429752,
+  "physical_reduced": 0.0904553738842975,
+  "full_metric_square": 0.09045537388429752,
+  "reduced_metric_square": 0.24038825388429752,
+  "analytic_physical_square": 0.09045537388429752,
+  "spurious_difference": 0.14993288,
+  "expected_spurious_difference": 0.14993288,
+  "amplitude_matrix": [
+    [0.12445454545454547, 0.0],
+    [0.0, -0.2738]
+  ]
+}

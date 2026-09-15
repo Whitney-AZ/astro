@@ -1,0 +1,19 @@
+{
+  "new_posts": 96,
+  "website_sections": 97,
+  "reviewed_sections": 96,
+  "map_links": 97,
+  "map_missing": [],
+  "home_pages_checked": 2,
+  "new_posts_on_home": [],
+  "rss_missing": [],
+  "metadata_problems": [],
+  "pdf_sha256": "91eead3d237b8e750dc8e0b3b778d39809a087a9336c4eac3b930a98d434425b",
+  "figure_count": 95,
+  "figure_source_and_output_hashes_verified": true,
+  "build_command": "pnpm build",
+  "build_exit_code": 0,
+  "audit_command": "python3 scripts/srednicki/audit.py",
+  "audit_report": "checks/srednicki/build-audit.json",
+  "visual_scope": "Representative desktop and 390px samples recorded in reviews; not every paragraph rendered by eye."
+}

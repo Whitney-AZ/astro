@@ -1,0 +1,317 @@
+{
+  "checks": 62,
+  "passed": true,
+  "records": [
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=0.25 inverse",
+      "residual": 1.734723475976807e-17,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=0.25 invariant pole",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=1.0 inverse",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=1.0 invariant pole",
+      "residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=3.0 inverse",
+      "residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=3.0 invariant pole",
+      "residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=100.0 inverse",
+      "residual": 8.881784197001252e-15,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[3.0, 1.0, 1.0, 0.0],xi=100.0 invariant pole",
+      "residual": 8.881784197001252e-15,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=0.25 inverse",
+      "residual": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=0.25 invariant pole",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=1.0 inverse",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=1.0 invariant pole",
+      "residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=3.0 inverse",
+      "residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=3.0 invariant pole",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=100.0 inverse",
+      "residual": 2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 3.0, 0.0, 2.0],xi=100.0 invariant pole",
+      "residual": 2.886579864025407e-15,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=0.25 inverse",
+      "residual": 3.730349362740526e-14,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=0.25 invariant pole",
+      "residual": 3.68594044175552e-14,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=1.0 inverse",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=1.0 invariant pole",
+      "residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=3.0 inverse",
+      "residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=3.0 invariant pole",
+      "residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=100.0 inverse",
+      "residual": 2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "M=0.7,k=[1.0, 0.0, 0.0, 1.0],xi=100.0 invariant pole",
+      "residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "boosted completeness (0.7, [0.3, 0.4, 0.7])",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "boosted canonical (0.7, [0.3, 0.4, 0.7])",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "boosted completeness (0.7, [2.0, -0.5, 1.0])",
+      "residual": 3.552713678800501e-15,
+      "passed": true
+    },
+    {
+      "name": "boosted canonical (0.7, [2.0, -0.5, 1.0])",
+      "residual": 3.1086244689504383e-15,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=0.25 inverse",
+      "residual": 7.632783294297951e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=0.25 invariant pole",
+      "residual": 6.938893903907228e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=1.0 inverse",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=1.0 invariant pole",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=3.0 inverse",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=3.0 invariant pole",
+      "residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=100.0 inverse",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[3.0, 1.0, 1.0, 0.0],xi=100.0 invariant pole",
+      "residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=0.25 inverse",
+      "residual": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=0.25 invariant pole",
+      "residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=1.0 inverse",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=1.0 invariant pole",
+      "residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=3.0 inverse",
+      "residual": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=3.0 invariant pole",
+      "residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=100.0 inverse",
+      "residual": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 3.0, 0.0, 2.0],xi=100.0 invariant pole",
+      "residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=0.25 inverse",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=0.25 invariant pole",
+      "residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=1.0 inverse",
+      "residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=1.0 invariant pole",
+      "residual": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=3.0 inverse",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=3.0 invariant pole",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=100.0 inverse",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "M=2.1,k=[1.0, 0.0, 0.0, 1.0],xi=100.0 invariant pole",
+      "residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "boosted completeness (2.1, [0.3, 0.4, 0.7])",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "boosted canonical (2.1, [0.3, 0.4, 0.7])",
+      "residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "boosted completeness (2.1, [2.0, -0.5, 1.0])",
+      "residual": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "boosted canonical (2.1, [2.0, -0.5, 1.0])",
+      "residual": 2.220446049250313e-15,
+      "passed": true
+    },
+    {
+      "name": "current expansion 1",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "current finite local gauge 1",
+      "residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "current expansion 2",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "current finite local gauge 2",
+      "residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "current expansion 3",
+      "residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "current finite local gauge 3",
+      "residual": 4.718447854656915e-16,
+      "passed": true
+    }
+  ],
+  "script_sha256": "d088c29f9ea3ad70629e0b1065141e0ce5e89067c0cb383998d233728b8c09ea"
+}

@@ -1,0 +1,1672 @@
+{
+  "schema_version": 1,
+  "check_id": "S65_labelled_Wick_contractions",
+  "execution": {
+    "attempt_number": 1,
+    "previous_attempts": [],
+    "timestamp_utc": "2026-09-14T13:20:25.621485+00:00",
+    "python_version": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "python_implementation": "CPython",
+    "python_executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "argv": ["scripts/srednicki/check_wick65.py", "--output", "checks/srednicki/wick65-check.json"],
+    "code_sha256": "5101fde9c17c1625d9b13a32496202cdb5d424bb3f627f79f44c0b861809b1c6",
+    "random_seed": null,
+    "randomness": "none; exhaustive deterministic integer enumeration",
+    "arithmetic": "Python integers and fractions.Fraction; no tolerance or rounding"
+  },
+  "model": {
+    "local_monomials": {
+      "seagull": "-e^2 phidag phi A^2",
+      "quartic": "-lambda phidag^2 phi^2 / 4"
+    },
+    "allowed_contractions": [
+      ["phi", "phidag"],
+      ["A", "A"]
+    ],
+    "external_external_contractions": "forbidden by generator",
+    "external_state_convention": "phi = integral(a exp(ipx)+bdag exp(-ipx)); incoming a gives phidag at external correlator insertion, outgoing a gives phi",
+    "bosonic_pairing_weight": 1,
+    "normal_ordered_interactions": false,
+    "bubble_selection": "two labelled identical insertions; two external slots per vertex; exactly two internal lines, both cross vertices; connected and still connected after deleting any one internal line",
+    "factor_convention": "Positive rational multiplicity after factoring couplings, (-i)^V from insertions, (1/i)^I from internal propagators, external propagators, spacetime/loop integrations, and photon Lorentz tensors",
+    "dimension_and_metric": "Applicable to the book's (-+++) and d=4-epsilon; combinatorics does not numerically evaluate d, metric contractions, momenta, or regulators",
+    "excluded_claims": "No UV/IR integral, Ward identity, Fock phase, gauge-propagator trace, or all-order diagram theorem is tested."
+  },
+  "cases": [
+    {
+      "case_id": "tree_seagull",
+      "source": "Auxiliary differentiation normalization of -e^2 phidag phi A^2",
+      "input": {
+        "vertex_kind": "seagull",
+        "labelled_vertex_count": 1,
+        "fields": [
+          {
+            "name": "ext.1",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "1",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.3",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "3",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "ext.mu",
+            "species": "A",
+            "vertex": null,
+            "external_label": "mu",
+            "physical_role": "fixed photon index mu"
+          },
+          {
+            "name": "ext.nu",
+            "species": "A",
+            "vertex": null,
+            "external_label": "nu",
+            "physical_role": "fixed photon index nu"
+          },
+          {
+            "name": "v0.phidag0",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi0",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A0",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A1",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          }
+        ],
+        "selected_topology": "tree",
+        "identical_insertion_expansion_denominator": 1,
+        "local_monomial_coefficient_each": {
+          "numerator": 1,
+          "denominator": 1,
+          "exact": "1"
+        },
+        "combined_prefactor_before_pairing_count": {
+          "numerator": 1,
+          "denominator": 1,
+          "exact": "1"
+        }
+      },
+      "generated_compatible_pairings_without_external_external": 2,
+      "accepted_pairing_count": 2,
+      "rejections": {},
+      "accepted_internal_species": [
+        {
+          "species": [],
+          "pairing_count": 2
+        }
+      ],
+      "accepted_internal_arrows": [
+        {
+          "arrows": [],
+          "pairing_count": 2
+        }
+      ],
+      "loop_number_counts": {
+        "0": 2
+      },
+      "total_normalized_weight": {
+        "numerator": 2,
+        "denominator": 1,
+        "exact": "2"
+      },
+      "endpoint_choices": [
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi0",
+            "3": "v0.phidag0",
+            "mu": "v0.A0",
+            "nu": "v0.A1"
+          },
+          "pairing_count": 1
+        },
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi0",
+            "3": "v0.phidag0",
+            "mu": "v0.A1",
+            "nu": "v0.A0"
+          },
+          "pairing_count": 1
+        }
+      ],
+      "raw_pairings": [
+        "ext.1--v0.phi0; ext.3--v0.phidag0; ext.mu--v0.A0; ext.nu--v0.A1",
+        "ext.1--v0.phi0; ext.3--v0.phidag0; ext.mu--v0.A1; ext.nu--v0.A0"
+      ],
+      "enumerated_differentiated_vertex_product": {
+        "numerator": 2,
+        "denominator": 1,
+        "exact": "2"
+      },
+      "weight_relative_to_that_vertex_product": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      }
+    },
+    {
+      "case_id": "tree_quartic",
+      "source": "Auxiliary differentiation normalization of -lambda phidag^2 phi^2/4",
+      "input": {
+        "vertex_kind": "quartic",
+        "labelled_vertex_count": 1,
+        "fields": [
+          {
+            "name": "ext.1",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "1",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.2",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "2",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.3",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "3",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "ext.4",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "4",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "v0.phidag0",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phidag1",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi0",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi1",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          }
+        ],
+        "selected_topology": "tree",
+        "identical_insertion_expansion_denominator": 1,
+        "local_monomial_coefficient_each": {
+          "numerator": 1,
+          "denominator": 4,
+          "exact": "1/4"
+        },
+        "combined_prefactor_before_pairing_count": {
+          "numerator": 1,
+          "denominator": 4,
+          "exact": "1/4"
+        }
+      },
+      "generated_compatible_pairings_without_external_external": 4,
+      "accepted_pairing_count": 4,
+      "rejections": {},
+      "accepted_internal_species": [
+        {
+          "species": [],
+          "pairing_count": 4
+        }
+      ],
+      "accepted_internal_arrows": [
+        {
+          "arrows": [],
+          "pairing_count": 4
+        }
+      ],
+      "loop_number_counts": {
+        "0": 4
+      },
+      "total_normalized_weight": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      },
+      "endpoint_choices": [
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi0",
+            "2": "v0.phi1",
+            "3": "v0.phidag0",
+            "4": "v0.phidag1"
+          },
+          "pairing_count": 1
+        },
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi0",
+            "2": "v0.phi1",
+            "3": "v0.phidag1",
+            "4": "v0.phidag0"
+          },
+          "pairing_count": 1
+        },
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi1",
+            "2": "v0.phi0",
+            "3": "v0.phidag0",
+            "4": "v0.phidag1"
+          },
+          "pairing_count": 1
+        },
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi1",
+            "2": "v0.phi0",
+            "3": "v0.phidag1",
+            "4": "v0.phidag0"
+          },
+          "pairing_count": 1
+        }
+      ],
+      "raw_pairings": [
+        "ext.1--v0.phi0; ext.2--v0.phi1; ext.3--v0.phidag0; ext.4--v0.phidag1",
+        "ext.1--v0.phi0; ext.2--v0.phi1; ext.3--v0.phidag1; ext.4--v0.phidag0",
+        "ext.1--v0.phi1; ext.2--v0.phi0; ext.3--v0.phidag0; ext.4--v0.phidag1",
+        "ext.1--v0.phi1; ext.2--v0.phi0; ext.3--v0.phidag1; ext.4--v0.phidag0"
+      ],
+      "enumerated_differentiated_vertex_product": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      },
+      "weight_relative_to_that_vertex_product": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      }
+    },
+    {
+      "case_id": "self_energy_photon_tadpole",
+      "source": "PDF268-269, (65.19)-(65.20), Fig.65.2 upper-right; S65-D005",
+      "input": {
+        "vertex_kind": "seagull",
+        "labelled_vertex_count": 1,
+        "fields": [
+          {
+            "name": "ext.1",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "1",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.3",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "3",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "v0.phidag0",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi0",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A0",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A1",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          }
+        ],
+        "selected_topology": "tadpole",
+        "identical_insertion_expansion_denominator": 1,
+        "local_monomial_coefficient_each": {
+          "numerator": 1,
+          "denominator": 1,
+          "exact": "1"
+        },
+        "combined_prefactor_before_pairing_count": {
+          "numerator": 1,
+          "denominator": 1,
+          "exact": "1"
+        }
+      },
+      "generated_compatible_pairings_without_external_external": 1,
+      "accepted_pairing_count": 1,
+      "rejections": {},
+      "accepted_internal_species": [
+        {
+          "species": ["photon"],
+          "pairing_count": 1
+        }
+      ],
+      "accepted_internal_arrows": [
+        {
+          "arrows": ["A:0--0"],
+          "pairing_count": 1
+        }
+      ],
+      "loop_number_counts": {
+        "1": 1
+      },
+      "total_normalized_weight": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      },
+      "endpoint_choices": [
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi0",
+            "3": "v0.phidag0"
+          },
+          "pairing_count": 1
+        }
+      ],
+      "raw_pairings": ["ext.1--v0.phi0; ext.3--v0.phidag0; v0.A0--v0.A1"],
+      "enumerated_differentiated_vertex_product": {
+        "numerator": 2,
+        "denominator": 1,
+        "exact": "2"
+      },
+      "weight_relative_to_that_vertex_product": {
+        "numerator": 1,
+        "denominator": 2,
+        "exact": "1/2"
+      }
+    },
+    {
+      "case_id": "self_energy_scalar_tadpole",
+      "source": "PDF268-269, (65.19)-(65.20), Fig.65.2 lower-left; S65-D006",
+      "input": {
+        "vertex_kind": "quartic",
+        "labelled_vertex_count": 1,
+        "fields": [
+          {
+            "name": "ext.1",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "1",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.3",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "3",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "v0.phidag0",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phidag1",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi0",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi1",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          }
+        ],
+        "selected_topology": "tadpole",
+        "identical_insertion_expansion_denominator": 1,
+        "local_monomial_coefficient_each": {
+          "numerator": 1,
+          "denominator": 4,
+          "exact": "1/4"
+        },
+        "combined_prefactor_before_pairing_count": {
+          "numerator": 1,
+          "denominator": 4,
+          "exact": "1/4"
+        }
+      },
+      "generated_compatible_pairings_without_external_external": 4,
+      "accepted_pairing_count": 4,
+      "rejections": {},
+      "accepted_internal_species": [
+        {
+          "species": ["complex_scalar"],
+          "pairing_count": 4
+        }
+      ],
+      "accepted_internal_arrows": [
+        {
+          "arrows": ["scalar:0->0"],
+          "pairing_count": 4
+        }
+      ],
+      "loop_number_counts": {
+        "1": 4
+      },
+      "total_normalized_weight": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      },
+      "endpoint_choices": [
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi0",
+            "3": "v0.phidag0"
+          },
+          "pairing_count": 1
+        },
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi0",
+            "3": "v0.phidag1"
+          },
+          "pairing_count": 1
+        },
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi1",
+            "3": "v0.phidag0"
+          },
+          "pairing_count": 1
+        },
+        {
+          "external_to_vertex_slot": {
+            "1": "v0.phi1",
+            "3": "v0.phidag1"
+          },
+          "pairing_count": 1
+        }
+      ],
+      "raw_pairings": [
+        "ext.1--v0.phi0; ext.3--v0.phidag0; v0.phi1--v0.phidag1",
+        "ext.1--v0.phi0; ext.3--v0.phidag1; v0.phi1--v0.phidag0",
+        "ext.1--v0.phi1; ext.3--v0.phidag0; v0.phi0--v0.phidag1",
+        "ext.1--v0.phi1; ext.3--v0.phidag1; v0.phi0--v0.phidag0"
+      ],
+      "enumerated_differentiated_vertex_product": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      },
+      "weight_relative_to_that_vertex_product": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      }
+    },
+    {
+      "case_id": "four_scalar_photon_bubbles",
+      "source": "PDF271, (65.34), Fig.65.5 first/second; S65-D015/S65-D016",
+      "input": {
+        "vertex_kind": "seagull",
+        "labelled_vertex_count": 2,
+        "fields": [
+          {
+            "name": "ext.1",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "1",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.2",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "2",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.3",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "3",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "ext.4",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "4",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "v0.phidag0",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi0",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A0",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A1",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phidag0",
+            "species": "phidag",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phi0",
+            "species": "phi",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.A0",
+            "species": "A",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.A1",
+            "species": "A",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          }
+        ],
+        "selected_topology": "bubble",
+        "identical_insertion_expansion_denominator": 2,
+        "local_monomial_coefficient_each": {
+          "numerator": 1,
+          "denominator": 1,
+          "exact": "1"
+        },
+        "combined_prefactor_before_pairing_count": {
+          "numerator": 1,
+          "denominator": 2,
+          "exact": "1/2"
+        }
+      },
+      "generated_compatible_pairings_without_external_external": 12,
+      "accepted_pairing_count": 8,
+      "rejections": {
+        "internal_self_contraction_instead_of_two_crossing_lines": 4
+      },
+      "accepted_internal_species": [
+        {
+          "species": ["photon", "photon"],
+          "pairing_count": 8
+        }
+      ],
+      "accepted_internal_arrows": [
+        {
+          "arrows": ["A:0--1", "A:0--1"],
+          "pairing_count": 8
+        }
+      ],
+      "loop_number_counts": {
+        "1": 8
+      },
+      "total_normalized_weight": {
+        "numerator": 4,
+        "denominator": 1,
+        "exact": "4"
+      },
+      "ordered_external_allocations": [
+        {
+          "v0_external_labels": ["1", "2"],
+          "v1_external_labels": ["3", "4"],
+          "pairing_count": 0,
+          "normalized_weight": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          },
+          "raw_pairings": []
+        },
+        {
+          "v0_external_labels": ["1", "3"],
+          "v1_external_labels": ["2", "4"],
+          "pairing_count": 2,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          },
+          "raw_pairings": [
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.A0--v1.A0; v0.A1--v1.A1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.A0--v1.A1; v0.A1--v1.A0"
+          ]
+        },
+        {
+          "v0_external_labels": ["1", "4"],
+          "v1_external_labels": ["2", "3"],
+          "pairing_count": 2,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          },
+          "raw_pairings": [
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.A0--v1.A0; v0.A1--v1.A1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.A0--v1.A1; v0.A1--v1.A0"
+          ]
+        },
+        {
+          "v0_external_labels": ["2", "3"],
+          "v1_external_labels": ["1", "4"],
+          "pairing_count": 2,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          },
+          "raw_pairings": [
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.A0--v1.A0; v0.A1--v1.A1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.A0--v1.A1; v0.A1--v1.A0"
+          ]
+        },
+        {
+          "v0_external_labels": ["2", "4"],
+          "v1_external_labels": ["1", "3"],
+          "pairing_count": 2,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          },
+          "raw_pairings": [
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.A0--v1.A0; v0.A1--v1.A1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.A0--v1.A1; v0.A1--v1.A0"
+          ]
+        },
+        {
+          "v0_external_labels": ["3", "4"],
+          "v1_external_labels": ["1", "2"],
+          "pairing_count": 0,
+          "normalized_weight": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          },
+          "raw_pairings": []
+        }
+      ],
+      "vertex_exchange_classes": [
+        {
+          "external_partition": [
+            ["1", "2"],
+            ["3", "4"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 0,
+          "normalized_weight": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          }
+        },
+        {
+          "external_partition": [
+            ["1", "3"],
+            ["2", "4"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 4,
+          "normalized_weight": {
+            "numerator": 2,
+            "denominator": 1,
+            "exact": "2"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          }
+        },
+        {
+          "external_partition": [
+            ["1", "4"],
+            ["2", "3"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 4,
+          "normalized_weight": {
+            "numerator": 2,
+            "denominator": 1,
+            "exact": "2"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          }
+        }
+      ],
+      "enumerated_differentiated_vertex_product": {
+        "numerator": 4,
+        "denominator": 1,
+        "exact": "4"
+      },
+      "weight_relative_to_that_vertex_product": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      }
+    },
+    {
+      "case_id": "four_scalar_scalar_bubbles",
+      "source": "PDF271, (65.34), Fig.65.5 third/fourth/fifth; S65-D017/S65-D018/S65-D019",
+      "input": {
+        "vertex_kind": "quartic",
+        "labelled_vertex_count": 2,
+        "fields": [
+          {
+            "name": "ext.1",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "1",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.2",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "2",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.3",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "3",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "ext.4",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "4",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "v0.phidag0",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phidag1",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi0",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi1",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phidag0",
+            "species": "phidag",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phidag1",
+            "species": "phidag",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phi0",
+            "species": "phi",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phi1",
+            "species": "phi",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          }
+        ],
+        "selected_topology": "bubble",
+        "identical_insertion_expansion_denominator": 2,
+        "local_monomial_coefficient_each": {
+          "numerator": 1,
+          "denominator": 4,
+          "exact": "1/4"
+        },
+        "combined_prefactor_before_pairing_count": {
+          "numerator": 1,
+          "denominator": 32,
+          "exact": "1/32"
+        }
+      },
+      "generated_compatible_pairings_without_external_external": 288,
+      "accepted_pairing_count": 80,
+      "rejections": {
+        "external_degree_not_selected_topology": 144,
+        "internal_self_contraction_instead_of_two_crossing_lines": 64
+      },
+      "accepted_internal_species": [
+        {
+          "species": ["complex_scalar", "complex_scalar"],
+          "pairing_count": 80
+        }
+      ],
+      "accepted_internal_arrows": [
+        {
+          "arrows": ["scalar:0->1", "scalar:0->1"],
+          "pairing_count": 8
+        },
+        {
+          "arrows": ["scalar:0->1", "scalar:1->0"],
+          "pairing_count": 64
+        },
+        {
+          "arrows": ["scalar:1->0", "scalar:1->0"],
+          "pairing_count": 8
+        }
+      ],
+      "loop_number_counts": {
+        "1": 80
+      },
+      "total_normalized_weight": {
+        "numerator": 5,
+        "denominator": 2,
+        "exact": "5/2"
+      },
+      "ordered_external_allocations": [
+        {
+          "v0_external_labels": ["1", "2"],
+          "v1_external_labels": ["3", "4"],
+          "pairing_count": 8,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 4,
+            "exact": "1/4"
+          },
+          "raw_pairings": [
+            "ext.1--v0.phi0; ext.2--v0.phi1; ext.3--v1.phidag0; ext.4--v1.phidag1; v0.phidag0--v1.phi0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v0.phi1; ext.3--v1.phidag0; ext.4--v1.phidag1; v0.phidag0--v1.phi1; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi0; ext.2--v0.phi1; ext.3--v1.phidag1; ext.4--v1.phidag0; v0.phidag0--v1.phi0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v0.phi1; ext.3--v1.phidag1; ext.4--v1.phidag0; v0.phidag0--v1.phi1; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v1.phidag1; v0.phidag0--v1.phi0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v1.phidag1; v0.phidag0--v1.phi1; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v0.phi0; ext.3--v1.phidag1; ext.4--v1.phidag0; v0.phidag0--v1.phi0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v0.phi0; ext.3--v1.phidag1; ext.4--v1.phidag0; v0.phidag0--v1.phi1; v0.phidag1--v1.phi0"
+          ]
+        },
+        {
+          "v0_external_labels": ["1", "3"],
+          "v1_external_labels": ["2", "4"],
+          "pairing_count": 16,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          },
+          "raw_pairings": [
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi0"
+          ]
+        },
+        {
+          "v0_external_labels": ["1", "4"],
+          "v1_external_labels": ["2", "3"],
+          "pairing_count": 16,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          },
+          "raw_pairings": [
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi1--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi1--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi0; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi1--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi1--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi0; ext.2--v1.phi1; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi0; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v0.phi1; ext.2--v1.phi1; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi0"
+          ]
+        },
+        {
+          "v0_external_labels": ["2", "3"],
+          "v1_external_labels": ["1", "4"],
+          "pairing_count": 16,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          },
+          "raw_pairings": [
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi1--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v0.phidag0; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v0.phidag0; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v0.phidag1; ext.4--v1.phidag0; v0.phi0--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v0.phidag1; ext.4--v1.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi0"
+          ]
+        },
+        {
+          "v0_external_labels": ["2", "4"],
+          "v1_external_labels": ["1", "3"],
+          "pairing_count": 16,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          },
+          "raw_pairings": [
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi1--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi1--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi0; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag1; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag0; v0.phidag1--v1.phi1",
+            "ext.1--v1.phi0; ext.2--v0.phi1; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi1",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi1--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi1--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi1--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi0; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi1--v1.phidag0; v0.phidag0--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v1.phidag0; ext.4--v0.phidag0; v0.phi0--v1.phidag1; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v1.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag1; v0.phidag0--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v1.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag0; v0.phidag1--v1.phi0",
+            "ext.1--v1.phi1; ext.2--v0.phi1; ext.3--v1.phidag1; ext.4--v0.phidag1; v0.phi0--v1.phidag0; v0.phidag0--v1.phi0"
+          ]
+        },
+        {
+          "v0_external_labels": ["3", "4"],
+          "v1_external_labels": ["1", "2"],
+          "pairing_count": 8,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 4,
+            "exact": "1/4"
+          },
+          "raw_pairings": [
+            "ext.1--v1.phi0; ext.2--v1.phi1; ext.3--v0.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag0; v0.phi1--v1.phidag1",
+            "ext.1--v1.phi0; ext.2--v1.phi1; ext.3--v0.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag1; v0.phi1--v1.phidag0",
+            "ext.1--v1.phi0; ext.2--v1.phi1; ext.3--v0.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag0; v0.phi1--v1.phidag1",
+            "ext.1--v1.phi0; ext.2--v1.phi1; ext.3--v0.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag1; v0.phi1--v1.phidag0",
+            "ext.1--v1.phi1; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag0; v0.phi1--v1.phidag1",
+            "ext.1--v1.phi1; ext.2--v1.phi0; ext.3--v0.phidag0; ext.4--v0.phidag1; v0.phi0--v1.phidag1; v0.phi1--v1.phidag0",
+            "ext.1--v1.phi1; ext.2--v1.phi0; ext.3--v0.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag0; v0.phi1--v1.phidag1",
+            "ext.1--v1.phi1; ext.2--v1.phi0; ext.3--v0.phidag1; ext.4--v0.phidag0; v0.phi0--v1.phidag1; v0.phi1--v1.phidag0"
+          ]
+        }
+      ],
+      "vertex_exchange_classes": [
+        {
+          "external_partition": [
+            ["1", "2"],
+            ["3", "4"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 16,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 1,
+            "denominator": 2,
+            "exact": "1/2"
+          }
+        },
+        {
+          "external_partition": [
+            ["1", "3"],
+            ["2", "4"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 32,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          }
+        },
+        {
+          "external_partition": [
+            ["1", "4"],
+            ["2", "3"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 32,
+          "normalized_weight": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          }
+        }
+      ],
+      "enumerated_differentiated_vertex_product": {
+        "numerator": 1,
+        "denominator": 1,
+        "exact": "1"
+      },
+      "weight_relative_to_that_vertex_product": {
+        "numerator": 5,
+        "denominator": 2,
+        "exact": "5/2"
+      }
+    },
+    {
+      "case_id": "mixed_four_two_seagull_bubbles",
+      "source": "Optional bounded extension: PDF271, (65.31), Fig.65.4 first class; S65-D012",
+      "input": {
+        "vertex_kind": "seagull",
+        "labelled_vertex_count": 2,
+        "fields": [
+          {
+            "name": "ext.1",
+            "species": "phidag",
+            "vertex": null,
+            "external_label": "1",
+            "physical_role": "incoming charged scalar"
+          },
+          {
+            "name": "ext.3",
+            "species": "phi",
+            "vertex": null,
+            "external_label": "3",
+            "physical_role": "outgoing charged scalar"
+          },
+          {
+            "name": "ext.mu",
+            "species": "A",
+            "vertex": null,
+            "external_label": "mu",
+            "physical_role": "fixed photon index mu"
+          },
+          {
+            "name": "ext.nu",
+            "species": "A",
+            "vertex": null,
+            "external_label": "nu",
+            "physical_role": "fixed photon index nu"
+          },
+          {
+            "name": "v0.phidag0",
+            "species": "phidag",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.phi0",
+            "species": "phi",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A0",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v0.A1",
+            "species": "A",
+            "vertex": 0,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phidag0",
+            "species": "phidag",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.phi0",
+            "species": "phi",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.A0",
+            "species": "A",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          },
+          {
+            "name": "v1.A1",
+            "species": "A",
+            "vertex": 1,
+            "external_label": null,
+            "physical_role": null
+          }
+        ],
+        "selected_topology": "bubble",
+        "identical_insertion_expansion_denominator": 2,
+        "local_monomial_coefficient_each": {
+          "numerator": 1,
+          "denominator": 1,
+          "exact": "1"
+        },
+        "combined_prefactor_before_pairing_count": {
+          "numerator": 1,
+          "denominator": 2,
+          "exact": "1/2"
+        }
+      },
+      "generated_compatible_pairings_without_external_external": 48,
+      "accepted_pairing_count": 16,
+      "rejections": {
+        "external_degree_not_selected_topology": 28,
+        "internal_self_contraction_instead_of_two_crossing_lines": 4
+      },
+      "accepted_internal_species": [
+        {
+          "species": ["complex_scalar", "photon"],
+          "pairing_count": 16
+        }
+      ],
+      "accepted_internal_arrows": [
+        {
+          "arrows": ["A:0--1", "scalar:0->1"],
+          "pairing_count": 8
+        },
+        {
+          "arrows": ["A:0--1", "scalar:1->0"],
+          "pairing_count": 8
+        }
+      ],
+      "loop_number_counts": {
+        "1": 16
+      },
+      "total_normalized_weight": {
+        "numerator": 8,
+        "denominator": 1,
+        "exact": "8"
+      },
+      "ordered_external_allocations": [
+        {
+          "v0_external_labels": ["1", "3"],
+          "v1_external_labels": ["mu", "nu"],
+          "pairing_count": 0,
+          "normalized_weight": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          },
+          "raw_pairings": []
+        },
+        {
+          "v0_external_labels": ["1", "mu"],
+          "v1_external_labels": ["3", "nu"],
+          "pairing_count": 4,
+          "normalized_weight": {
+            "numerator": 2,
+            "denominator": 1,
+            "exact": "2"
+          },
+          "raw_pairings": [
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v0.A0; ext.nu--v1.A0; v0.A1--v1.A1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v0.A0; ext.nu--v1.A1; v0.A1--v1.A0; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v0.A1; ext.nu--v1.A0; v0.A0--v1.A1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v0.A1; ext.nu--v1.A1; v0.A0--v1.A0; v0.phidag0--v1.phi0"
+          ]
+        },
+        {
+          "v0_external_labels": ["1", "nu"],
+          "v1_external_labels": ["3", "mu"],
+          "pairing_count": 4,
+          "normalized_weight": {
+            "numerator": 2,
+            "denominator": 1,
+            "exact": "2"
+          },
+          "raw_pairings": [
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v1.A0; ext.nu--v0.A0; v0.A1--v1.A1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v1.A0; ext.nu--v0.A1; v0.A0--v1.A1; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v1.A1; ext.nu--v0.A0; v0.A1--v1.A0; v0.phidag0--v1.phi0",
+            "ext.1--v0.phi0; ext.3--v1.phidag0; ext.mu--v1.A1; ext.nu--v0.A1; v0.A0--v1.A0; v0.phidag0--v1.phi0"
+          ]
+        },
+        {
+          "v0_external_labels": ["3", "mu"],
+          "v1_external_labels": ["1", "nu"],
+          "pairing_count": 4,
+          "normalized_weight": {
+            "numerator": 2,
+            "denominator": 1,
+            "exact": "2"
+          },
+          "raw_pairings": [
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v0.A0; ext.nu--v1.A0; v0.A1--v1.A1; v0.phi0--v1.phidag0",
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v0.A0; ext.nu--v1.A1; v0.A1--v1.A0; v0.phi0--v1.phidag0",
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v0.A1; ext.nu--v1.A0; v0.A0--v1.A1; v0.phi0--v1.phidag0",
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v0.A1; ext.nu--v1.A1; v0.A0--v1.A0; v0.phi0--v1.phidag0"
+          ]
+        },
+        {
+          "v0_external_labels": ["3", "nu"],
+          "v1_external_labels": ["1", "mu"],
+          "pairing_count": 4,
+          "normalized_weight": {
+            "numerator": 2,
+            "denominator": 1,
+            "exact": "2"
+          },
+          "raw_pairings": [
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v1.A0; ext.nu--v0.A0; v0.A1--v1.A1; v0.phi0--v1.phidag0",
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v1.A0; ext.nu--v0.A1; v0.A0--v1.A1; v0.phi0--v1.phidag0",
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v1.A1; ext.nu--v0.A0; v0.A1--v1.A0; v0.phi0--v1.phidag0",
+            "ext.1--v1.phi0; ext.3--v0.phidag0; ext.mu--v1.A1; ext.nu--v0.A1; v0.A0--v1.A0; v0.phi0--v1.phidag0"
+          ]
+        },
+        {
+          "v0_external_labels": ["mu", "nu"],
+          "v1_external_labels": ["1", "3"],
+          "pairing_count": 0,
+          "normalized_weight": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          },
+          "raw_pairings": []
+        }
+      ],
+      "vertex_exchange_classes": [
+        {
+          "external_partition": [
+            ["1", "3"],
+            ["mu", "nu"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 0,
+          "normalized_weight": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 0,
+            "denominator": 1,
+            "exact": "0"
+          }
+        },
+        {
+          "external_partition": [
+            ["1", "mu"],
+            ["3", "nu"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 8,
+          "normalized_weight": {
+            "numerator": 4,
+            "denominator": 1,
+            "exact": "4"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          }
+        },
+        {
+          "external_partition": [
+            ["1", "nu"],
+            ["3", "mu"]
+          ],
+          "pairing_count_including_both_vertex_labellings": 8,
+          "normalized_weight": {
+            "numerator": 4,
+            "denominator": 1,
+            "exact": "4"
+          },
+          "relative_weight_from_count_not_assigned_symmetry_factor": {
+            "numerator": 1,
+            "denominator": 1,
+            "exact": "1"
+          }
+        }
+      ],
+      "enumerated_differentiated_vertex_product": {
+        "numerator": 4,
+        "denominator": 1,
+        "exact": "4"
+      },
+      "weight_relative_to_that_vertex_product": {
+        "numerator": 2,
+        "denominator": 1,
+        "exact": "2"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "check": "tree_seagull: raw/accepted/normalized",
+      "actual": [2, 2, "2"],
+      "expected": [2, 2, "2"],
+      "passed": true
+    },
+    {
+      "check": "tree_quartic: raw/accepted/normalized",
+      "actual": [4, 4, "1"],
+      "expected": [4, 4, "1"],
+      "passed": true
+    },
+    {
+      "check": "self_energy_photon_tadpole: raw/accepted/normalized",
+      "actual": [1, 1, "1"],
+      "expected": [1, 1, "1"],
+      "passed": true
+    },
+    {
+      "check": "self_energy_scalar_tadpole: raw/accepted/normalized",
+      "actual": [4, 4, "1"],
+      "expected": [4, 4, "1"],
+      "passed": true
+    },
+    {
+      "check": "four_scalar_photon_bubbles: raw/accepted/normalized",
+      "actual": [12, 8, "4"],
+      "expected": [12, 8, "4"],
+      "passed": true
+    },
+    {
+      "check": "four_scalar_scalar_bubbles: raw/accepted/normalized",
+      "actual": [288, 80, "5/2"],
+      "expected": [288, 80, "5/2"],
+      "passed": true
+    },
+    {
+      "check": "mixed_four_two_seagull_bubbles: raw/accepted/normalized",
+      "actual": [48, 16, "8"],
+      "expected": [48, 16, "8"],
+      "passed": true
+    },
+    {
+      "check": "four_scalar_photon_bubbles: all six ordered external allocations",
+      "actual": [0, 2, 2, 2, 2, 0],
+      "expected": [0, 2, 2, 2, 2, 0],
+      "passed": true
+    },
+    {
+      "check": "four_scalar_scalar_bubbles: all six ordered external allocations",
+      "actual": [8, 16, 16, 16, 16, 8],
+      "expected": [8, 16, 16, 16, 16, 8],
+      "passed": true
+    },
+    {
+      "check": "mixed_four_two_seagull_bubbles: all six ordered external allocations",
+      "actual": [0, 4, 4, 4, 4, 0],
+      "expected": [0, 4, 4, 4, 4, 0],
+      "passed": true
+    },
+    {
+      "check": "self_energy_photon_tadpole: relative to independently counted vertex",
+      "actual": "1/2",
+      "expected": "1/2",
+      "passed": true
+    },
+    {
+      "check": "self_energy_scalar_tadpole: relative to independently counted vertex",
+      "actual": "1",
+      "expected": "1",
+      "passed": true
+    },
+    {
+      "check": "four_scalar_photon_bubbles: derived weights by external partition",
+      "actual": ["0", "1/2", "1/2"],
+      "expected": ["0", "1/2", "1/2"],
+      "passed": true
+    },
+    {
+      "check": "four_scalar_scalar_bubbles: derived weights by external partition",
+      "actual": ["1/2", "1", "1"],
+      "expected": ["1/2", "1", "1"],
+      "passed": true
+    },
+    {
+      "check": "mixed_four_two_seagull_bubbles: derived weights by external partition",
+      "actual": ["0", "1", "1"],
+      "expected": ["0", "1", "1"],
+      "passed": true
+    },
+    {
+      "check": "tree_seagull: exhaustive partition of generated pairings",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "check": "tree_seagull: all accepted graphs have selected loop number",
+      "actual": ["0"],
+      "expected": ["0"],
+      "passed": true
+    },
+    {
+      "check": "tree_quartic: exhaustive partition of generated pairings",
+      "actual": 4,
+      "expected": 4,
+      "passed": true
+    },
+    {
+      "check": "tree_quartic: all accepted graphs have selected loop number",
+      "actual": ["0"],
+      "expected": ["0"],
+      "passed": true
+    },
+    {
+      "check": "self_energy_photon_tadpole: exhaustive partition of generated pairings",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "check": "self_energy_photon_tadpole: all accepted graphs have selected loop number",
+      "actual": ["1"],
+      "expected": ["1"],
+      "passed": true
+    },
+    {
+      "check": "self_energy_scalar_tadpole: exhaustive partition of generated pairings",
+      "actual": 4,
+      "expected": 4,
+      "passed": true
+    },
+    {
+      "check": "self_energy_scalar_tadpole: all accepted graphs have selected loop number",
+      "actual": ["1"],
+      "expected": ["1"],
+      "passed": true
+    },
+    {
+      "check": "four_scalar_photon_bubbles: exhaustive partition of generated pairings",
+      "actual": 12,
+      "expected": 12,
+      "passed": true
+    },
+    {
+      "check": "four_scalar_photon_bubbles: all accepted graphs have selected loop number",
+      "actual": ["1"],
+      "expected": ["1"],
+      "passed": true
+    },
+    {
+      "check": "four_scalar_scalar_bubbles: exhaustive partition of generated pairings",
+      "actual": 288,
+      "expected": 288,
+      "passed": true
+    },
+    {
+      "check": "four_scalar_scalar_bubbles: all accepted graphs have selected loop number",
+      "actual": ["1"],
+      "expected": ["1"],
+      "passed": true
+    },
+    {
+      "check": "mixed_four_two_seagull_bubbles: exhaustive partition of generated pairings",
+      "actual": 48,
+      "expected": 48,
+      "passed": true
+    },
+    {
+      "check": "mixed_four_two_seagull_bubbles: all accepted graphs have selected loop number",
+      "actual": ["1"],
+      "expected": ["1"],
+      "passed": true
+    }
+  ],
+  "status": "passed",
+  "summary": {
+    "case_count": 7,
+    "generated_pairing_total": 359,
+    "accepted_pairing_total": 115,
+    "explicit_ordered_allocations": 18,
+    "checks_passed": 29,
+    "checks_total": 29,
+    "failed_checks": []
+  }
+}

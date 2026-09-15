@@ -1,0 +1,104 @@
+[
+  {
+    "id": "S09-G01-01",
+    "node_automorphisms": 2,
+    "loops": 2,
+    "symmetry_factor": 8
+  },
+  {
+    "id": "S09-G01-02",
+    "node_automorphisms": 2,
+    "loops": 0,
+    "symmetry_factor": 12
+  },
+  {
+    "id": "S09-G03-01",
+    "node_automorphisms": 1,
+    "loops": 1,
+    "symmetry_factor": 2
+  },
+  {
+    "id": "S09-G05-01",
+    "node_automorphisms": 2,
+    "loops": 0,
+    "symmetry_factor": 2
+  },
+  {
+    "id": "S09-G06-01",
+    "node_automorphisms": 2,
+    "loops": 0,
+    "symmetry_factor": 4
+  },
+  {
+    "id": "S09-G07-02",
+    "node_automorphisms": 4,
+    "loops": 0,
+    "symmetry_factor": 4
+  },
+  {
+    "id": "S09-G07-03",
+    "node_automorphisms": 2,
+    "loops": 0,
+    "symmetry_factor": 8
+  },
+  {
+    "id": "S09-G07-08",
+    "node_automorphisms": 2,
+    "loops": 0,
+    "symmetry_factor": 4
+  },
+  {
+    "id": "S09-G08-01",
+    "node_automorphisms": 6,
+    "loops": 0,
+    "symmetry_factor": 6
+  },
+  {
+    "id": "S09-G09-01",
+    "node_automorphisms": 6,
+    "loops": 0,
+    "symmetry_factor": 6
+  },
+  {
+    "id": "S09-G09-02",
+    "node_automorphisms": 2,
+    "loops": 0,
+    "symmetry_factor": 4
+  },
+  {
+    "id": "S09-G10-01",
+    "node_automorphisms": 8,
+    "loops": 0,
+    "symmetry_factor": 8
+  },
+  {
+    "id": "S09-G11-01",
+    "node_automorphisms": 8,
+    "loops": 0,
+    "symmetry_factor": 16
+  },
+  {
+    "id": "S09-G11-02",
+    "node_automorphisms": 8,
+    "loops": 0,
+    "symmetry_factor": 8
+  },
+  {
+    "id": "S09-G11-04",
+    "node_automorphisms": 4,
+    "loops": 0,
+    "symmetry_factor": 4
+  },
+  {
+    "id": "S09-G11-05",
+    "node_automorphisms": 2,
+    "loops": 0,
+    "symmetry_factor": 4
+  },
+  {
+    "id": "S09-G12-01",
+    "node_automorphisms": 1,
+    "loops": 0,
+    "symmetry_factor": 1
+  }
+]

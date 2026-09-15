@@ -1,0 +1,730 @@
+---
+title: 'Srednicki §86 自发破缺的非阿贝尔规范理论'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [86]
+hideFromHome: true
+draft: false
+---
+
+<span id="c86"></span>
+
+上一节的$R_\xi$规范把矢量场与角向标量的二次混合消去了，而保留下来的标量和鬼场使圈图计算具有方便的形式。一般规范理论中的问题相同，只是许多场可以互相混合：势决定一组标量质量，真空值又决定一组矢量质量，而我们还要使规范固定和鬼场与这两组质量相配。本节将看到，这些关系都可以由一个实矩形矩阵来组织。
+
+<span id="c86-realification"></span>
+
+## 把所有标量放在同一个实表示中
+
+对于一般理论，标量既可以是实场，也可以是复场，还可以属于不同的群表示。先将每一个复场拆成实部和虚部，再把所得实场排成一列$\phi_i$，$i=1,\ldots,N$。这样，规范变换就成为这个实向量空间中的旋转，所有标量动能可以用同一种记法写出。
+
+为说明这个构造，取一个复酉表示$R$，将它的厄米生成元分解为
+<span id="eq:c86-complex-input"></span>
+
+$$
+\begin{aligned}
+T_R^a&=A^a+iB^a,\qquad
+A^{aT}=A^a,\quad B^{aT}=-B^a,\\
+\varphi&=\frac{x+iy}{\sqrt2},\qquad
+\delta\varphi=-i\alpha^aT_R^a\varphi .
+\end{aligned}
+\tag{86.1}
+$$
+
+$A^a,B^a,x,y$都是实的。将$-i(A+iB)(x+iy)$相乘，实部为$Bx+Ay$，虚部为$-Ax+By$，因此
+<span id="eq:c86-real-generators"></span>
+
+$$
+\begin{aligned}
+\delta\begin{pmatrix}x\\y\end{pmatrix}
+ &=\alpha^a
+ \begin{pmatrix}B^a&A^a\\-A^a&B^a\end{pmatrix}
+ \begin{pmatrix}x\\y\end{pmatrix}
+ =-i\alpha^aT^a\begin{pmatrix}x\\y\end{pmatrix},\\
+T^a&=i\begin{pmatrix}B^a&A^a\\-A^a&B^a\end{pmatrix},
+\qquad T^{aT}=-T^a,\quad T^{a\dagger}=T^a .
+\end{aligned}
+\tag{86.2}
+$$
+
+由于$-iT^a$实反对称，指数$\exp(-i\alpha^aT^a)$是与单位元连通的实正交矩阵，行列式为1；这就是$SO(N)$旋转。这个表示的像是$SO(N)$的一个子群，物质表示可以是可约的。
+
+还要确认，拆成实部和虚部没有改变生成元的代数。对任意复矩阵$Z=X+iY$定义
+<span id="eq:c86-realification-product"></span>
+
+$$
+\begin{aligned}
+\mathscr R(Z)&=\begin{pmatrix}X&-Y\\Y&X\end{pmatrix},\\
+\mathscr R(Z)\mathscr R(W)
+ &=\begin{pmatrix}
+ XP-YQ&-(XQ+YP)\\
+ YP+XQ&XP-YQ
+ \end{pmatrix}
+ =\mathscr R(ZW),\qquad W=P+iQ .
+\end{aligned}
+\tag{86.3}
+$$
+
+这里只用了保持原矩阵次序的块乘法。令$t_R^a=-iT_R^a$，则$[t_R^a,t_R^b]=f^{abc}t_R^c$；而式[（86.2）](#eq:c86-real-generators)给$-iT^a=\mathscr R(t_R^a)$。因此
+<span id="eq:c86-realification-algebra"></span>
+
+$$
+\begin{aligned}
+\relax[-iT^a,-iT^b]
+ &=\mathscr R([t_R^a,t_R^b])
+ =f^{abc}(-iT^c),\\
+[T^a,T^b]&=if^{abc}T^c .
+\end{aligned}
+\tag{86.4}
+$$
+
+同一个变换作用于协变导数，所以
+<span id="eq:c86-realification-kinetic"></span>
+
+$$
+-(D_\mu\varphi)^\dagger D^\mu\varphi
+ =-\frac12(D_\mu x)^TD^\mu x
+  -\frac12(D_\mu y)^TD^\mu y .
+\tag{86.5}
+$$
+
+复场分解中的$1/\sqrt2$恰好给出标准实场动能的$1/2$。将各个表示的实场依次并在一起，便可采用统一的拉格朗日量
+<span id="eq:c86-model"></span>
+
+$$
+\begin{aligned}
+\mathcal L&=-\frac12(D_\mu\phi)^TD^\mu\phi
+ -V(\phi)-\frac14F_{\mu\nu}^aF^{a\mu\nu},\\
+(D_\mu\phi)_i&=\partial_\mu\phi_i
+ -ig_aA_\mu^a(T^a)_{ij}\phi_j .
+\end{aligned}
+\tag{86.6}
+$$
+
+紧致群的酉表示和正定标量动能内积保证了上述正交形式。物质生成元取各自表示的归一。指标$a$遍历全部规范生成元，同一简单因子共用一个非零耦合$g_a$；阿贝尔动能也已选成标准对角形式，耦合非零。
+
+<span id="c86-hessian"></span>
+
+## 势的零模和真空的规范轨道
+
+选定一个使势取到极小值的常数背景$v_i$，在所选真空及规范中记$\langle0|\phi_i(x)|0\rangle=v_i$；本节用它的经典值求树级质量。在这个背景附近进行微扰展开，意味着把真空取向固定下来；上一节的阿贝尔圆周现在变成一般的规范轨道。如果$T^av=0$，相应变换保持这个点不动；如果$T^av\ne0$，它就沿着轨道移动。势在轨道上不变，所以沿这些切向的二阶变化应当为零。
+
+将这一说法写成公式，需要先用势的精确不变性
+<span id="eq:c86-potential-invariance"></span>
+
+$$
+V(e^{-i\alpha^aT^a}\phi)=V(\phi)
+\quad\Longrightarrow\quad
+V_j(\phi)(T^a)_{jk}\phi_k=0,\qquad
+V_j=\frac{\partial V}{\partial\phi_j}.
+\tag{86.7}
+$$
+
+右式来自左式对$\alpha^a$在零点求导。在线性阶，可以把指数写成$1-i\alpha^aT^a$；精确不变性则应保留完整指数。再对$\phi_i$求导，乘积法则给
+<span id="eq:c86-potential-differentiation"></span>
+
+$$
+V_{ij}(\phi)(T^a)_{jk}\phi_k
+ +V_j(\phi)(T^a)_{ji}=0 .
+\tag{86.8}
+$$
+
+第二项中的$\phi_k$被求导成$\delta_{ki}$，因而留下$T^a_{ji}$。两项都只剩$i$为自由标量指标，这也检查了生成元的指标顺序。
+
+在$\phi=v$处，$V_j(v)=0$。定义势的黑塞矩阵
+<span id="eq:c86-hessian-zero-modes"></span>
+
+$$
+\begin{aligned}
+H_{ij}&=V_{ij}(v),\qquad H^T=H,\qquad H\ge0,\\
+H_{ij}(T^av)_j&=0,\qquad
+V(v+\chi)=V(v)+\frac12\chi^TH\chi+O(\chi^3).
+\end{aligned}
+\tag{86.9}
+$$
+
+于是每一个独立的轨道切向量都是标量质量平方矩阵的零本征矢。这给出了势的戈德斯通零模。这里的独立性是切向量的独立性：不同生成元之差若属于未破缺代数，它们可以产生同一个切向量。由规范变换得到的独立零模数目等于轨道的维数，即群的维数减去稳定子群的维数。
+
+接下来平移标量场，并把耦合与轨道切向量写成矩阵：
+<span id="eq:c86-mass-rectangular-matrix"></span>
+
+$$
+\begin{aligned}
+\phi&=v+\chi,\qquad
+\tau^a=ig_aT^a,\qquad \tau^{aT}=-\tau^a,\\
+F_{ai}&=(\tau^av)_i,\qquad
+F\in\mathbb R^{n_g\times N},\qquad HF^T=0 .
+\end{aligned}
+\tag{86.10}
+$$
+
+矩形$F$的一行记录一个生成元在真空处产生的切向量，其中已包括该生成元的耦合。因此$r=\operatorname{rank}F$就是破缺方向的数目。它与场强$F_{\mu\nu}^a$是不同的对象，后者带有两个时空指标。
+
+一个简单例子可以说明为什么应当数秩。取两个$U(1)$场共同作用于一个复标量，实化后令
+<span id="eq:c86-two-abelian-rank"></span>
+
+$$
+\begin{aligned}
+\tau^1&=g_1J,\qquad \tau^2=g_2J,\qquad
+J=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad
+v_i=(v,0),\\
+F&=v\begin{pmatrix}0&g_1\\0&g_2\end{pmatrix},\qquad
+FF^T=v^2\begin{pmatrix}g_1^2&g_1g_2\\g_1g_2&g_2^2\end{pmatrix}.
+\end{aligned}
+\tag{86.11}
+$$
+
+两个单独的生成元都移动真空，但它们沿同一条切线，所以$F$只有秩1。矩阵$FF^T$作用于$(g_1,g_2)^T$给$v^2(g_1^2+g_2^2)$倍原向量，作用于$(g_2,-g_1)^T$则为零；只有一个规范场组合获得质量。一般非阿贝尔情形中的混合也由同样的矩形矩阵控制。
+
+势的这些零模目前仍是未规范固定的场坐标。加入规范固定后，这些场与有质量矢量的非物理分量相配；矢量的物理螺旋度零态则保留在物理谱中。
+
+<span id="c86-kinetic-svd"></span>
+
+## 展开动能并求矢量质量
+
+用刚才的记号，平移后的协变导数成为
+<span id="eq:c86-shifted-covariant-derivative"></span>
+
+$$
+(D_\mu\phi)_i
+ =\partial_\mu\chi_i
+  -A_\mu^a(F_{ai}+(\tau^a)_{ij}\chi_j).
+\tag{86.12}
+$$
+
+真空是常数，所以没有$\partial_\mu v$。把括号中的两项分别看作常数向量$F_a$和线性向量$\tau^a\chi$，动能平方的三个部分为
+<span id="eq:c86-kinetic-square"></span>
+
+$$
+\begin{aligned}
+-\frac12(D\phi)^T(D\phi)
+={}&-\frac12(\partial\chi)^2
+ +A_\mu^a(\partial^\mu\chi)^T(F_a+\tau^a\chi)\\
+&-\frac12A_\mu^aA^{b\mu}
+ (F_a+\tau^a\chi)^T(F_b+\tau^b\chi).
+\end{aligned}
+\tag{86.13}
+$$
+
+最后一个括号中的两个线性项，在交换$a,b$后相等，因此它们合起来消去前面的$1/2$。余下两处转置则用$\tau^{aT}=-\tau^a$处理：
+<span id="eq:c86-antisymmetric-signs"></span>
+
+$$
+\begin{aligned}
+(\partial_\mu\chi)^T\tau^a\chi
+ &=-\chi^T\tau^a\partial_\mu\chi,\\
+(\tau^a\chi)^T(\tau^b\chi)
+ &=-\chi^T\tau^a\tau^b\chi .
+\end{aligned}
+\tag{86.14}
+$$
+
+所以完整的标量动能展开是
+<span id="eq:c86-kinetic-expanded"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\mathrm{kin}}={}&
+ -\frac12(\partial\chi)^2
+ -\frac12(FF^T)_{ab}A_\mu^aA^{b\mu}
+ +F_{ai}A_\mu^a\partial^\mu\chi_i\\
+&-A_\mu^a\chi_i(\tau^a)_{ij}\partial^\mu\chi_j\\
+&-A_\mu^aA^{b\mu}F_{ai}(\tau^b)_{ij}\chi_j\\
+&+\frac12A_\mu^aA^{b\mu}
+ \chi_i(\tau^a\tau^b)_{ij}\chi_j .
+\end{aligned}
+\tag{86.15}
+$$
+
+导数三次项为负，最后一个四次项为正，这两个符号均由式[（86.14）](#eq:c86-antisymmetric-signs)中的反对称矩阵转置确定。中间的$AA F\tau\chi$项为负号。用上一节的单$U(1)$模型检查，取$\tau=gJ$、$F=(0,gv)$、$\chi=(h,b)^T$，这三项依次变为
+<span id="eq:c86-abelian-kinetic-check"></span>
+
+$$
+gA^\mu(h\partial_\mu b-b\partial_\mu h),\qquad
+-g^2vhA_\mu A^\mu,\qquad
+-\frac{g^2}{2}(h^2+b^2)A_\mu A^\mu .
+\tag{86.16}
+$$
+
+它们与式[（85.26）](/posts/srednicki-85/#eq:c85-cartesian-kinetic-expanded)一致，从而接上了已经推导的阿贝尔理论。
+
+动能中的矢量二次项给出质量平方矩阵
+<span id="eq:c86-vector-mass"></span>
+
+$$
+M_V^2=FF^T,\qquad
+z^TM_V^2z=(F^Tz)^T(F^Tz)\ge0 .
+\tag{86.17}
+$$
+
+它是实对称半正定矩阵，可以用正交变换对角化。若只处理这一矩阵，还不能同时说明标量与哪个矢量相配；为此需要把$F$本身也化成对角形。这就是奇异值分解（singular value decomposition）。
+
+该分解可以直接从质量矩阵构造。设$r$个正本征值为$M_a^2$，选择相应的正交单位本征矢$u_a$，并定义标量空间中的向量
+<span id="eq:c86-svd-construction"></span>
+
+$$
+\begin{aligned}
+FF^Tu_a&=M_a^2u_a,\qquad
+u_a^Tu_b=\delta_{ab},\qquad M_a>0,\\
+w_a&=\frac{F^Tu_a}{M_a},\\
+w_a^Tw_b&=\frac{u_a^TFF^Tu_b}{M_aM_b}
+ =\frac{M_b^2}{M_aM_b}\delta_{ab}=\delta_{ab},\\
+Fw_a&=\frac{FF^Tu_a}{M_a}=M_au_a .
+\end{aligned}
+\tag{86.18}
+$$
+
+若$a\ne b$，正交性使第三行等于零；若$a=b$，质量比等于1。即使正本征值简并，也可以先在简并空间选一组正交基。将$u_a$补成规范空间的一组正交基，补入的向量位于$\ker F^T$；将$w_a$补成标量空间的一组正交基，补入的向量位于$\ker F$。于是$F$只把前$r$个$w_a$映为$M_au_a$，而湮灭其余的$w$。
+
+以$u_a$为列构成$S$，以$w_i^T$为行构成$R$，便有
+<span id="eq:c86-svd-and-fields"></span>
+
+$$
+\begin{aligned}
+F&=S\Sigma R,\qquad S^TS=I_{n_g},\quad RR^T=I_N,\\
+\Sigma_{ai}&=M_a\delta_{ai}\quad(a\le r),\qquad
+\Sigma_{ai}=0\quad(a>r),\\
+\widetilde A&=S^TA,\qquad \widetilde\chi=R\chi,\\
+S^TFF^TS&=\Sigma\Sigma^T,\qquad
+RF^TFR^T=\Sigma^T\Sigma .
+\end{aligned}
+\tag{86.19}
+$$
+
+$\Sigma$始终是$n_g\times N$矩形矩阵。后面将$M_a=0$用于$a>r$的未破缺规范方向，因而每个$\widetilde A^a$都有确定质量。两个正交变换保持自由动能的归一；它们的方向已经由此固定，相互作用也按这个方向变换。
+
+<span id="c86-gauge-fixing"></span>
+
+## 规范固定如何分开两类标量
+
+式[（86.15）](#eq:c86-kinetic-expanded)中的$F_{ai}A_\mu^a\partial^\mu\chi_i$仍把矢量和标量混在同一个二次核内。按照上一节的办法，对每一个规范方向选取
+<span id="eq:c86-gauge-function"></span>
+
+$$
+G^a=\partial^\mu A_\mu^a-\xi F_{ai}\chi_i,\qquad
+\mathcal L_{\mathrm{gf}}=-\frac1{2\xi}G^aG^a,
+\qquad 0<\xi<\infty .
+\tag{86.20}
+$$
+
+将平方展开，得到
+<span id="eq:c86-gauge-fixing-expanded"></span>
+
+$$
+\mathcal L_{\mathrm{gf}}
+ =-\frac1{2\xi}(\partial\cdot A^a)^2
+  +F_{ai}\chi_i\partial^\mu A_\mu^a
+  -\frac{\xi}{2}\chi^TF^TF\chi .
+\tag{86.21}
+$$
+
+其中间一项与动能混合之和为
+$\partial^\mu(F_{ai}A_\mu^a\chi_i)$。在周期边界或场足够快衰减的边界条件下，它不贡献作用量，因而矢量和标量的自由核分开了。第一项还可改写成$\partial_\mu A_\nu\partial^\nu A^\mu$的形式，所用的完整恒等式为
+<span id="eq:c86-boundary-identity"></span>
+
+$$
+(\partial\cdot A)^2-\partial_\mu A_\nu\partial^\nu A^\mu
+ =\partial_\mu\left[
+ A^\mu(\partial\cdot A)-A_\nu\partial^\nu A^\mu
+ \right].
+\tag{86.22}
+$$
+
+展开右边后，含二阶导数的两项相消。这说明两种导数写法作为作用量密度只差一个全微分。
+
+规范固定的最后一项给标量增加了质量平方。为区别两个不同空间中的矩阵，记
+<span id="eq:c86-scalar-mass-sum"></span>
+
+$$
+Q=F^TF,\qquad H_\xi=H+\xi Q,\qquad HQ=0,\quad QH=0 .
+\tag{86.23}
+$$
+
+这里$H$和$Q$都是$N$阶矩阵，$FF^T$则是$n_g$阶矩阵。第一个乘积为零直接来自$HF^T=0$；对它转置，再用$H,Q$对称，便得第二个乘积也为零。这样，势和规范固定的质量贡献确实作用在互相正交的方向上。
+
+更具体地，标量空间分解为
+<span id="eq:c86-orbit-scalar-masses"></span>
+
+$$
+\begin{aligned}
+\mathbb R^N&=\operatorname{im}F^T\oplus\ker F,\\
+Hw_a&=0,\qquad Qw_a=M_a^2w_a
+ \quad(a=1,\ldots,r),\\
+H_\xi w_a&=\xi M_a^2w_a .
+\end{aligned}
+\tag{86.24}
+$$
+
+第一行的正交性来自$(F^Tz)^Ty=z^TFy=0$，其中$y\in\ker F$；两个空间的维数之和为$N$，所以它们也穷尽整个空间。对前$r$个方向，式[（86.18）](#eq:c86-svd-construction)给$Qw_a=M_a^2w_a$，而黑塞零模关系给$Hw_a=0$。因此戈德斯通场的质量平方为$\xi M_a^2$，质量为$\sqrt\xi M_a$。
+
+在剩下的$\ker F$内，$Q$为零，只有势决定质量。这个空间在$H$作用下仍保持不变，因为$FH=0$。利用$R$在其中尚可任意旋转的自由度，将$H$的这一块对角化，便得到
+<span id="eq:c86-scalar-mass-basis"></span>
+
+$$
+RH_\xi R^T
+ =\operatorname{diag}\bigl(
+ \xi M_1^2,\ldots,\xi M_r^2,
+ m_{r+1}^2,\ldots,m_N^2\bigr),
+\qquad m_I^2\ge0 .
+\tag{86.25}
+$$
+
+后面$N-r$个场是物理标量方向。黑塞矩阵在这里的正本征值给物理标量质量平方，零本征值则留下树级无质量标量。
+
+现在自由传播子可以沿上一节逐个读出。矢量核和其逆为
+<span id="eq:c86-vector-propagators"></span>
+
+$$
+\begin{aligned}
+K_a^{\mu\nu}(k)
+ &=(k^2+M_a^2)g^{\mu\nu}
+  -(1-\xi^{-1})k^\mu k^\nu,\\
+\Delta_a^{\mu\nu}(k)
+ &=\frac{g^{\mu\nu}}{k^2+M_a^2-i0}
+ +\frac{(\xi-1)k^\mu k^\nu}
+ {(k^2+M_a^2-i0)(k^2+\xi M_a^2-i0)} .
+\end{aligned}
+\tag{86.26}
+$$
+
+这就是式[（85.36）](/posts/srednicki-85/#eq:c85-rxi-propagator-projectors)合并投影后的形式，代入时只将$M$换成$M_a$，并为规范指标加上$\delta^{ab}$。两个因果边界值按上一节的二次核处方理解。对未破缺方向直接取$M_a=0$，得到通常无质量$R_\xi$传播子；这里没有使用含$1/M_a^2$的幺正规范表达式。标量传播子则为
+<span id="eq:c86-scalar-propagators"></span>
+
+$$
+\Delta_{\widetilde\chi_i\widetilde\chi_j}(k)
+ =\frac{\delta_{ij}}{k^2+\mu_i^2-i0},
+\qquad
+\mu_i^2=
+\begin{cases}
+\xi M_i^2,&i\le r,\\
+m_i^2,&i>r .
+\end{cases}
+\tag{86.27}
+$$
+
+图中的内部线仍是$\Delta/i$。当$\xi=1$时，矢量传播子成为对角的$g^{\mu\nu}/(k^2+M_a^2-i0)$，而戈德斯通场具有与相应矢量相同的质量，计算尤其简便。
+
+质量谱也使自由度的去向清楚了：每个破缺方向使原来有两个物理偏振的规范粒子得到第三个偏振，并消去一个独立的标量外态。于是物理自由度总数为
+<span id="eq:c86-degree-count"></span>
+
+$$
+3r+2(n_g-r)+(N-r)=2n_g+N .
+\tag{86.28}
+$$
+
+这与破缺前相同。在幺正规范中，轨道方向的标量被置为零；在$R_\xi$规范中它们仍进入内部计算，与非物理矢量分量和鬼场共同保证物理振幅的规范独立性。有质量矢量的物理螺旋度零态属于三个偏振之一，其质量为$M_a$，并不随$\xi$移动。
+
+<span id="c86-ghost"></span>
+
+## 鬼场为何具有同一组规范质量
+
+规范函数已经选好，鬼场作用量便由它对规范变换的响应决定。第71节的FP构造在这里给出规范固定与鬼项的组合
+
+$$
+\mathcal L_{\mathrm{gf}}+\mathcal L_{\mathrm{gh}}
+ =-\frac1{2\xi}G^aG^a
+  -\bar c^a\frac{\delta G^a}{\delta\theta^b}c^b .
+$$
+
+先把耦合的记号统一起来。前面势不变性中的$\alpha^a$是群角，这里的$\theta^a$则采用连接的参数归一。二者及伴随协变导数的关系为
+<span id="eq:c86-weighted-algebra"></span>
+
+$$
+\begin{aligned}
+\alpha^a&=g_a\theta^a,\qquad
+h^{abc}=g_af^{abc},\\
+[\tau^a,\tau^b]&=-\frac{g_ag_b}{g_c}f^{abc}\tau^c
+ =-h^{abc}\tau^c,\\
+D_\mu^{ab}&=\delta^{ab}\partial_\mu+h^{acb}A_\mu^c .
+\end{aligned}
+\tag{86.29}
+$$
+
+第二行由$[T^a,T^b]=if^{abc}T^c$直接乘上两个$i g$得到。非零$f^{abc}$的三个指标在同一个简单因子内，那里$g_a=g_b=g_c$；阿贝尔因子的$f$为零。因此$h$已包含正确的耦合，并在当前正交规范基中保持全反对称性。
+
+使用第69节已推导的连接变换，标量和规范场的变化量是
+<span id="eq:c86-gauge-variations"></span>
+
+$$
+\begin{aligned}
+\delta_\theta A_\mu^a&=-D_\mu^{ab}\theta^b,\\
+\delta_\theta\chi_i&=-\theta^b(\tau^b)_{ij}(v+\chi)_j .
+\end{aligned}
+\tag{86.30}
+$$
+
+第二式直接来自$\delta\phi=-i\alpha^bT^b\phi$，其中$v$作为展开所选的固定背景留在右边。这里列的是场的变化量$\delta\chi$；变换后的场为$\chi+\delta\chi$。
+
+将这两个变化代入$G^a$，第一项给$-\partial^\mu(D_\mu^{ab}\theta^b)$，第二项中的两个负号相乘给正号。把参数的时空位置也写出，FP核便为
+<span id="eq:c86-fp-kernel"></span>
+
+$$
+\begin{aligned}
+\mathcal M^{ab}(x,y)
+ &=\frac{\delta G^a(x)}{\delta\theta^b(y)}\\
+ &=\left[-\partial_x^\mu D_\mu^{ab}(x)
+ +\xi F_{aj}(\tau^b)_{jk}(v+\chi(x))_k
+ \right]\delta^4(x-y)\\
+ &=\left[-\partial_x^\mu D_\mu^{ab}(x)
+ +\xi(FF^T)_{ab}
+ +\xi F_{aj}(\tau^b)_{jk}\chi_k(x)
+ \right]\delta^4(x-y).
+\end{aligned}
+\tag{86.31}
+$$
+
+最后一步用了$(\tau^bv)_j=F_{bj}$。外层$\partial_x^\mu$作用于右方整个$D_\mu^{ab}\theta^b$，其中也包括连接的导数。行指标$a$来自所选的规范函数，列指标$b$来自变换参数；因而最后一项中的$F_a$和$\tau^b$不能交换。
+
+按照第71节的FP行列式和Grassmann积分，将反鬼放在前面，得到
+<span id="eq:c86-ghost-lagrangian"></span>
+
+$$
+\begin{aligned}
+\mathcal L_{\mathrm{gh}}
+ &=-\bar c^a\mathcal M^{ab}c^b\\
+ &=-(\partial^\mu\bar c^a)D_\mu^{ab}c^b
+   -\xi(FF^T)_{ab}\bar c^ac^b
+   -\xi F_{aj}(\tau^b)_{jk}\chi_k\bar c^ac^b .
+\end{aligned}
+\tag{86.32}
+$$
+
+第一项只作普通的分部积分，没有让$c$越过$\bar c$，所以不会额外产生Grassmann负号。规范固定和行列式在所选真空附近的局部微扰规范片中使用，残余零模按第71、74章的办法处理。
+
+鬼的质量平方矩阵正是$\xi FF^T$，因此它和矢量质量矩阵用同一个$S$对角化：
+<span id="eq:c86-ghost-mass-basis"></span>
+
+$$
+\begin{aligned}
+\widetilde c&=S^Tc,\qquad
+\widetilde{\bar c}=S^T\bar c,\\
+\mathcal L_{\mathrm{gh},0}
+ &=-\partial^\mu\widetilde{\bar c}^{\,a}
+       \partial_\mu\widetilde c^{\,a}
+   -\xi M_a^2\widetilde{\bar c}^{\,a}\widetilde c^{\,a},\\
+\langle\widetilde c^{\,a}\widetilde{\bar c}^{\,b}\rangle_0(k)
+ &=\frac1i\,\frac{\delta^{ab}}{k^2+\xi M_a^2-i0}.
+\end{aligned}
+\tag{86.33}
+$$
+
+两个鬼变量虽独立，却须作相同的实正交变换，才能同时保持动能和对角质量。这样，戈德斯通、鬼与非物理矢量极点中的$\xi M_a^2$都由同一个$F$产生。物理振幅中这些规范依赖部分的消去，仍由第74节的BRST关系及上一节给出的规范参数独立性论证保证；所需的相容调节、无规范反常和物理外态条件不变。
+
+<span id="c86-interaction-basis"></span>
+
+## 将整个相互作用转到质量基
+
+找出自由场之后，还要用同一组新场表达顶角。把已确定的旧场
+$A=S\widetilde A$、$\chi=R^T\widetilde\chi$直接代回协变导数，并左乘$R$。式[（86.12）](#eq:c86-shifted-covariant-derivative)成为
+<span id="eq:c86-rotated-covariant-derivative"></span>
+
+$$
+\begin{aligned}
+(RD_\mu\phi)_i
+ ={}&\partial_\mu\widetilde\chi_i
+ -\widetilde A_\mu^a\Big[
+ (S^TFR^T)_{ai}\\
+ &\hspace{37mm}
+ +\sum_bS^{ba}(R\tau^bR^T)_{ij}\widetilde\chi_j
+ \Big].
+\end{aligned}
+\tag{86.34}
+$$
+
+第一项之所以保持原样，是因为$R$为常数。真空项中的矩阵来自
+$R_{ij}S^{ba}F_{bj}$；线性项则同时有旧规范指标的$S^{ba}$和旧标量向量的$R^T$。因此新的系数为
+<span id="eq:c86-rotated-generators"></span>
+
+$$
+\widetilde F=S^TFR^T=\Sigma,\qquad
+\widetilde\tau^a=\sum_bS^{ba}R\tau^bR^T .
+\tag{86.35}
+$$
+
+第一式把真空作用矩阵变成$M_a\delta_{ai}$，第二式则给出同时旋转规范指标和标量指标后的生成矩阵。正交变换仍保持$\widetilde\tau^{aT}=-\widetilde\tau^a$，所以动能展开中的反对称性和顶角对称性不会改变。
+
+规范自相互作用也可以直接从场强变换。将旧场代入并左乘$S^T$，有
+<span id="eq:c86-rotated-curvature"></span>
+
+$$
+\begin{aligned}
+\widetilde F_{\mu\nu}^a
+ &:=S^{da}F_{\mu\nu}^d\\
+ &=\partial_\mu\widetilde A_\nu^a
+   -\partial_\nu\widetilde A_\mu^a
+   +\widetilde h^{abc}\widetilde A_\mu^b\widetilde A_\nu^c,\\
+\widetilde h^{abc}
+ &=S^{da}S^{eb}S^{fc}h^{def}.
+\end{aligned}
+\tag{86.36}
+$$
+
+场强的平方因$S$正交而保持标准归一。三个规范指标都按同一方向旋转。当所有相关因子具有同一$g$时，可以提出$g$而只旋转$f$；如果质量基混合了不同耦合的因子，就必须先组成$h^{def}=g_df^{def}$，再作三个指标的旋转。下一节的中性规范场混合会用到这一点。
+
+这个规则与物质表示的代数相容。将式[（86.35）](#eq:c86-rotated-generators)代入对易子，得到
+<span id="eq:c86-rotated-algebra-check"></span>
+
+$$
+\begin{aligned}
+\relax[\widetilde\tau^a,\widetilde\tau^b]
+ &=-S^{da}S^{eb}h^{def}R\tau^fR^T,\\
+\widetilde h^{abc}\widetilde\tau^c
+ &=S^{da}S^{eb}S^{fc}h^{def}
+   S^{\ell c}R\tau^\ell R^T\\
+ &=S^{da}S^{eb}h^{def}R\tau^fR^T .
+\end{aligned}
+\tag{86.37}
+$$
+
+最后一行用了$\sum_cS^{fc}S^{\ell c}=\delta^{f\ell}$。两个式子相比较，仍有$[\widetilde\tau^a,\widetilde\tau^b]=-\widetilde h^{abc}\widetilde\tau^c$。因此规范、物质和鬼的相互作用共享同一组旋转后的系数。
+
+势也要变成$\widetilde V(\widetilde\chi)=V(v+R^T\widetilde\chi)$。至此，完整作用量就是式[（86.6）](#eq:c86-model)中的规范场强和势，加上已展开的标量动能、规范固定及鬼项，并在其中统一使用
+$F\to\Sigma$、$\tau\to\widetilde\tau$、$h\to\widetilde h$。例如新鬼标量相互作用为
+<span id="eq:c86-rotated-ghost-scalar"></span>
+
+$$
+\mathcal L_{\widetilde\chi\mathrm{gh}}
+ =-\xi\Sigma_{aj}(\widetilde\tau^b)_{jk}
+   \widetilde\chi_k
+   \widetilde{\bar c}^{\,a}\widetilde c^{\,b}.
+\tag{86.38}
+$$
+
+这项同时含真空作用矩阵和生成矩阵各一次；在阿贝尔例中，它就是$-\xi g^2vh\bar cc$。
+
+<span id="c86-vertices"></span>
+
+## 从质量基作用量读取顶角
+
+现在从质量基作用量读取费曼规则。三类自由线已经求出；对于相互作用，可以按第72节的方法，对$i\mathcal L_{\mathrm{int}}$接上所有有标签的外腿。以下全部用质量基，保留波浪以便辨认，并令所有外动量流入顶点。顶角的下指标$\mu,\nu,\ldots$与外部的上指标规范场相接。
+
+先将势在所选真空展开：
+<span id="eq:c86-potential-vertices"></span>
+
+$$
+\begin{aligned}
+\widetilde V
+ &=V(v)+\frac12\widetilde\chi^T(RHR^T)\widetilde\chi\\
+ &\quad
+ +\sum_{n\ge3}\frac1{n!}
+ \widetilde V_{i_1\cdots i_n}
+ \widetilde\chi_{i_1}\cdots\widetilde\chi_{i_n},\\
+\widetilde V_{i_1\cdots i_n}
+ &=\left.
+ \frac{\partial^n\widetilde V}
+ {\partial\widetilde\chi_{i_1}\cdots\partial\widetilde\chi_{i_n}}
+ \right|_0 .
+\end{aligned}
+\tag{86.39}
+$$
+
+每一组有标签外腿有$n!$种分配，消去Taylor系数的$n!$，所以$n$标量顶角为$-i\widetilde V_{i_1\cdots i_n}$。若取四维可重整化的多项式势，和式止于$n=4$；一般势的局部展开则按其实际高阶导数继续。
+
+导数三次项为
+$-\widetilde A_\mu^a\widetilde\chi_i
+(\widetilde\tau^a)_{ij}\partial^\mu\widetilde\chi_j$。
+接入$\widetilde\chi_i(p)$和$\widetilde\chi_j(q)$时，有两种分配。导数分别给$iq^\mu$和$ip^\mu$，故顶角为
+<span id="eq:c86-vector-two-scalar-vertex"></span>
+
+$$
+\begin{aligned}
+\mathcal V\bigl(\widetilde A_\mu^a,\widetilde\chi_i(p),
+                  \widetilde\chi_j(q)\bigr)
+ &=i\left[-i(\widetilde\tau^a)_{ij}q_\mu
+          -i(\widetilde\tau^a)_{ji}p_\mu\right]\\
+ &=(\widetilde\tau^a)_{ij}(q-p)_\mu .
+\end{aligned}
+\tag{86.40}
+$$
+
+交换两条标量外腿，$\tau$和动量差同时变号，顶角不变。阿贝尔例中$(\tau)_{hb}=-g$，于是得到上一节的$g(k_h-k_b)_\mu$。
+
+对含两个规范场的三次项，两条规范外腿可交换，因而
+<span id="eq:c86-two-vector-scalar-vertex"></span>
+
+$$
+\mathcal V\bigl(\widetilde A_\mu^a,\widetilde A_\nu^b,
+                  \widetilde\chi_k\bigr)
+ =-ig_{\mu\nu}
+ \left[\Sigma_{aj}(\widetilde\tau^b)_{jk}
+       +\Sigma_{bj}(\widetilde\tau^a)_{jk}\right].
+\tag{86.41}
+$$
+
+若两条规范腿同类，这两项相等，但仍是两条有标签外腿的两种收缩，不能删去其中一项。对四次项，交换两条规范腿和两条标量腿共给四项；利用$(\tau^a\tau^b)^T=\tau^b\tau^a$，可合并为
+<span id="eq:c86-two-vector-two-scalar-vertex"></span>
+
+$$
+\begin{aligned}
+&\frac12\Big[
+ (\widetilde\tau^a\widetilde\tau^b)_{ij}
+ +(\widetilde\tau^b\widetilde\tau^a)_{ij}\\
+&\hspace{12mm}
+ +(\widetilde\tau^a\widetilde\tau^b)_{ji}
+ +(\widetilde\tau^b\widetilde\tau^a)_{ji}\Big]
+ =\{\widetilde\tau^a,\widetilde\tau^b\}_{ij},\\
+&\mathcal V\bigl(\widetilde A_\mu^a,\widetilde A_\nu^b,
+                  \widetilde\chi_i,\widetilde\chi_j\bigr)
+ =ig_{\mu\nu}\{\widetilde\tau^a,\widetilde\tau^b\}_{ij}.
+\end{aligned}
+\tag{86.42}
+$$
+
+在单$U(1)$例中$\tau^2=-g^2I$，式[（86.41）](#eq:c86-two-vector-scalar-vertex)和[（86.42）](#eq:c86-two-vector-two-scalar-vertex)分别给$hAA$的$-2ig^2v g_{\mu\nu}$及$hhAA,bbAA$的$-2ig^2g_{\mu\nu}$，与上一节完全相配。
+
+鬼与反鬼是两种独立的有向外腿，所以鬼标量顶角没有交换它们所得的因子2。保持$\bar c^a,c^b$次序，式[（86.38）](#eq:c86-rotated-ghost-scalar)及鬼导数项给
+<span id="eq:c86-ghost-vertices"></span>
+
+$$
+\begin{aligned}
+\mathcal V\bigl(\widetilde\chi_k,
+ \widetilde{\bar c}^{\,a},\widetilde c^{\,b}\bigr)
+ &=-i\xi\Sigma_{aj}(\widetilde\tau^b)_{jk},\\
+\mathcal V\bigl(\widetilde A_\mu^d,
+ \widetilde{\bar c}^{\,a}(\ell),\widetilde c^{\,b}\bigr)
+ &=\widetilde h^{adb}\ell_\mu .
+\end{aligned}
+\tag{86.43}
+$$
+
+第二行来自$i[-\widetilde h^{adb}(i\ell_\mu)]$，其中$\ell$是反鬼的入顶动量。若改成第72节的反鬼出顶动量$q=-\ell$，再用$h^{adb}=-h^{dab}$，就得到该章的$h^{dab}q_\mu$。每个闭合鬼圈仍另乘$-1$。
+
+最后，规范场的三次和四次密度只是第72节密度中的$gf$换成$\widetilde h$。该章已经分别展开六种和二十四种收缩，质量的引入没有改变这些分配。三点规则在全入顶记法中为
+<span id="eq:c86-three-vector-vertex"></span>
+
+$$
+\begin{aligned}
+\mathcal V_{\mu\nu\rho}^{abc}(p,q,r)
+ =-\widetilde h^{abc}\big[
+ &(q-r)_\mu g_{\nu\rho}
+ +(r-p)_\nu g_{\rho\mu}\\
+ &+(p-q)_\rho g_{\mu\nu}\big],
+\qquad p+q+r=0 .
+\end{aligned}
+\tag{86.44}
+$$
+
+共同负号来自式[（72.10）](/posts/srednicki-72/#eq:c72-three-vertex)的三个全出动量同时反号。四点规则没有动量，直接在式[（72.15）](/posts/srednicki-72/#eq:c72-four-vertex)中替换两个$gf$即可：
+<span id="eq:c86-four-vector-vertex"></span>
+
+$$
+\begin{aligned}
+\mathcal V_{\mu\nu\rho\sigma}^{abcd}=-i\big[
+ &\widetilde h^{abe}\widetilde h^{cde}
+   (g_{\mu\rho}g_{\nu\sigma}-g_{\mu\sigma}g_{\nu\rho})\\
+ +&\widetilde h^{ace}\widetilde h^{dbe}
+   (g_{\mu\sigma}g_{\rho\nu}-g_{\mu\nu}g_{\rho\sigma})\\
+ +&\widetilde h^{ade}\widetilde h^{bce}
+   (g_{\mu\nu}g_{\sigma\rho}-g_{\mu\rho}g_{\sigma\nu})\big].
+\end{aligned}
+\tag{86.45}
+$$
+
+两类规则保留了玻色外腿交换的对称性；含$\widetilde h$的各项也同时保留了原来的Jacobi关系。所有三次导数顶角有一个动量，$\Sigma\tau$顶角有一个质量量纲，四次规范标量顶角则无量纲，与四维作用量的量纲一致。
+
+下一节对标准模型求出$F$和中性规范场的质量基，再将这里的顶角转写为$W^\pm$、$Z$和光子的相互作用。
+
+---
+
+[← 第 85 节](/posts/srednicki-85/) · [章节地图](/srednicki/) · [第 87 节 →](/posts/srednicki-87/)

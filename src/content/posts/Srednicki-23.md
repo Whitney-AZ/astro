@@ -1,0 +1,521 @@
+---
+title: 'Srednicki §23 离散对称性：P、T、C 与 Z'
+date: 2026-09-14
+category: 笔记
+tags: [物理, 量子场论, Srednicki]
+series: 'Srednicki QFT'
+srednickiSections: [23]
+hideFromHome: true
+draft: false
+---
+
+<span id="c23"></span>
+
+第22节由无穷小变换构造了守恒流和生成元。现在把注意力转向宇称和时间反演：这两种变换不能由正规正时洛伦兹变换连续累积而成，因此需要另行规定它们对场的作用。规定场的变换之后，还要使能量、动量和粒子态的变换彼此相容。时间反演尤其值得注意：倒转时间演化时，能量仍应保持原值，这就要求变换也作用于复数系数中的$i$。沿着这个问题，我们将先讨论时空反射，再讨论不移动时空宗量的荷共轭和实标量符号变换。
+
+仍采用四维时空和$(-,+,+,+)$度规。用不同记号把坐标矩阵$\mathcal P,\mathcal T$与态空间算符$P,T$区分开来；上一节的平移算符$T(a)$则始终带有平移宗量。
+
+<span id="c23-spacetime"></span>
+
+## 宇称和时间反演的场变换
+
+宇称（parity）倒转三个空间坐标，时间反演（time reversal）倒转时间坐标。相应的坐标矩阵及其作用为
+<span id="eq:c23-coordinate-reflections"></span>
+
+$$
+\begin{aligned}
+\mathcal P&=\operatorname{diag}(1,-1,-1,-1),
+&\mathcal P x&=(t,-\mathbf x),\\
+\mathcal T&=\operatorname{diag}(-1,1,1,1),
+&\mathcal T x&=(-t,\mathbf x).
+\end{aligned}
+\tag{23.1}
+$$
+
+两个矩阵都是自身的逆，并满足$M^{\mathsf T}gM=g$，因为每个对角元在这个乘积中只以平方出现。因此它们保持时空间隔，也属于洛伦兹变换。然而，两者的行列式都是$-1$；连续变化的可逆矩阵若不经过行列式为零的情形，就不能改变行列式的符号。所以，这两种反射都不在恒等元所在的洛伦兹群连通分支中。
+
+为了把坐标反射落实到场上，先回想第2节对标量场的变换约定：
+<span id="eq:c23-continuous-field"></span>
+
+$$
+U(\Lambda)^{-1}\varphi(x)U(\Lambda)
+=\varphi(\Lambda^{-1}x).
+\tag{23.2}
+$$
+
+把离散变换在态空间中的实现记作$P=U(\mathcal P)$、$T=U(\mathcal T)$。仿照连续变换，可以先把场的宗量反射到相应的时空点。不过，离散变换还允许场本身带一个符号；对一个厄米实标量，场变换可以写成
+<span id="eq:c23-intrinsic-signs"></span>
+
+$$
+\begin{aligned}
+P^{-1}\varphi(t,\mathbf x)P
+ &=\eta_P\varphi(t,-\mathbf x),\\
+T^{-1}\varphi(t,\mathbf x)T
+ &=\eta_T\varphi(-t,\mathbf x),
+\qquad \eta_P,\eta_T=\pm1.
+\end{aligned}
+\tag{23.3}
+$$
+
+这两种选择都满足反射应有的二次作用。具体地说，厄米性要求场前的系数为实数，而连续作两次同一反射应恢复原场，因而系数的平方必须为1：
+<span id="eq:c23-double-field-action"></span>
+
+$$
+\begin{aligned}
+P^{-2}\varphi(x)P^2&=\eta_P^2\varphi(\mathcal P^2x)=\varphi(x),\\
+T^{-2}\varphi(x)T^2&=\eta_T^2\varphi(\mathcal T^2x)=\varphi(x).
+\end{aligned}
+\tag{23.4}
+$$
+
+连续两次反射对两种符号都恢复原场。在与恒等变换相连的分支中，若给场再乘一个只取$\pm1$的连续系数，该系数就必须始终等于恒等变换处的$+1$；离散反射则容许另一种选择。$\eta_P=-1$的标量称为赝标量（pseudoscalar）。它在正规正时洛伦兹变换下仍服从式[（23.2）](#eq:c23-continuous-field)，所以仍具有零自旋。以下“标量”一词涵盖这两种宇称。
+
+究竟应给每个场选择哪一种符号，要由拉氏密度的各项来判断。若希望反射成为理论的对称性，就应使整个拉氏密度在反射下为偶：
+<span id="eq:c23-lagrangian-symmetry"></span>
+
+$$
+P^{-1}\mathcal L(x)P=\mathcal L(\mathcal P x),
+\qquad
+T^{-1}\mathcal L(x)T=\mathcal L(\mathcal T x).
+\tag{23.5}
+$$
+
+这两个坐标变换的雅可比绝对值均为1，对$d^4x$积分并作坐标换元，便得到作用量不变。要考察场的符号怎样满足这一要求，可以先看上一节采用的标准实标量模型：
+<span id="eq:c23-standard-potential"></span>
+
+$$
+\mathcal L=\frac12\dot\varphi_a^2
+-\frac12(\boldsymbol\nabla\varphi_a)^2-V(\varphi),
+\qquad V\ \text{的系数为实数},
+\tag{23.6}
+$$
+
+在这类模型中，把所有实分量取偶就能保持拉氏密度：时间导数和空间梯度都成平方出现，势也只把时空宗量换到反射后的点。若把某个分量取奇，动能仍不变，势则须满足$V(\eta_a\varphi_a)=V(\varphi_a)$。例如，对只有一个实场的模型，三次项会随场变号，四次项则保持不变。
+
+场与其他场耦合后，这种选择还要顾及混合的相互作用项。若双线性$B$在宇称下为奇，为使$g\varphi B$为偶，$\varphi$也必须取奇；若各项对符号的要求无法同时满足，宇称就被显式破缺。[第40节](/posts/srednicki-40/#c40)将具体讨论标量与自旋二分之一场的这类耦合。对于这里的式[（23.6）](#eq:c23-standard-potential)，前面的平方项与势函数已经给出了判断反射对称性的全部条件。
+
+<span id="c23-antiunitary"></span>
+
+## 时间反演为什么必须反幺正
+
+场的变换确定之后，四动量的变换也应随之确定。幺正洛伦兹变换下的规律是
+<span id="eq:c23-unitary-momentum"></span>
+
+$$
+U(\Lambda)^{-1}P^\mu U(\Lambda)
+=\Lambda^\mu{}_\nu P^\nu.
+\tag{23.7}
+$$
+
+代入$\Lambda=\mathcal P$，便有$P^{-1}HP=H$、$P^{-1}\mathbf P P=-\mathbf P$：空间反射保持能量而倒转动量，符合预期。若对时间反演也直接套用这一规律，就会得到以下候选关系：
+<span id="eq:c23-rejected-candidate"></span>
+
+$$
+T^{-1}P^\mu T\stackrel{?}{=}\mathcal T^\mu{}_\nu P^\nu,
+\qquad T^{-1}HT\stackrel{?}{=}-H.
+\tag{23.8}
+$$
+
+问题出在时间分量。时间反演对称性要求$T^{-1}HT=H$，而候选式却给出相反的结果，两者只能在$H=0$时同时成立。这个矛盾要求我们重新考察离散变换在态空间中的实现。
+
+要找出额外负号的来由，需要回到式[（23.7）](#eq:c23-unitary-momentum)的推导，查明其中何处用到了幺正性。为此从平移开始。第22节已由正则对易关系求得
+<span id="eq:c23-translations"></span>
+
+$$
+T(a)=e^{-iP^\mu a_\mu},
+\qquad
+T(a)^{-1}\varphi(x)T(a)=\varphi(x-a).
+\tag{23.9}
+$$
+
+先作洛伦兹变换，再作平移，最后变换回来，得到的仍应是一个平移，只是平移参数有所改变。记$K=U(\Lambda)^{-1}T(a)U(\Lambda)$，依次计算它对场的共轭作用。利用$U\varphi(x)U^{-1}=\varphi(\Lambda x)$，三个步骤给出
+<span id="eq:c23-conjugate-translation-field"></span>
+
+$$
+\begin{aligned}
+K^{-1}\varphi(x)K
+&=U^{-1}T(a)^{-1}\varphi(\Lambda x)T(a)U\\
+&=U^{-1}\varphi(\Lambda x-a)U\\
+&=\varphi(x-\Lambda^{-1}a).
+\end{aligned}
+\tag{23.10}
+$$
+
+这与平移$T(\Lambda^{-1}a)$对场的作用相同。沿用固定真空的实现约定，两个算符也都固定真空，因而对场多项式作用于真空所生成的态具有相同作用。这个子空间稠密，而两个算符都有界，所以它们在整个态空间中相等：
+<span id="eq:c23-translation-covariance"></span>
+
+$$
+U(\Lambda)^{-1}T(a)U(\Lambda)=T(\Lambda^{-1}a).
+\tag{23.11}
+$$
+
+对反射作同样的共轭计算时，场的内禀符号出现两次并相消，因此平移参数仍按同一几何规律变化。下一步要从有限平移中取出生成元。为便于比较系数，先把右边平移参数的指标降下来：洛伦兹条件$\Lambda^{\mathsf T}g\Lambda=g$给出$\Lambda^{-1}=g^{-1}\Lambda^{\mathsf T}g$，于是
+<span id="eq:c23-inverse-indices"></span>
+
+$$
+\begin{aligned}
+(\Lambda^{-1}a)_\nu
+&=g_{\nu\rho}(\Lambda^{-1})^\rho{}_\sigma g^{\sigma\mu}a_\mu\\
+&=\Lambda^\mu{}_\nu a_\mu.
+\end{aligned}
+\tag{23.12}
+$$
+
+等价地，$(\Lambda^{-1})_\nu{}^\mu=\Lambda^\mu{}_\nu$。这里逆矩阵的第一个指标下置、第二个指标上置，度规转换使它成为右边的形式。用这一关系，把式[（23.11）](#eq:c23-translation-covariance)展开到$a$的一阶，就能在两边使用同一组平移参数：
+<span id="eq:c23-infinitesimal"></span>
+
+$$
+U^{-1}(I-ia_\mu P^\mu)U
+=I-ia_\mu\Lambda^\mu{}_\nu P^\nu+O(a^2).
+\tag{23.13}
+$$
+
+若$U$幺正且线性，则$U^{-1}iU=i$，左边的一阶项为$-ia_\mu U^{-1}P^\mu U$。逐一比较独立实参数$a_\mu$的系数，才得到式[（23.7）](#eq:c23-unitary-momentum)。关键就在这一步：将虚数单位从共轭作用中直接提出，使用了算符的线性。
+
+保持态的范数和跃迁概率还容许另一类变换。反幺正（antiunitary）算符是反线性的，并且反转内积中两个态的次序，其定义为
+<span id="eq:c23-antiunitary-definition"></span>
+
+$$
+\begin{aligned}
+T(c|\psi\rangle+d|\chi\rangle)
+ &=c^*T|\psi\rangle+d^*T|\chi\rangle,\\
+\langle T\psi|T\chi\rangle&=\langle\chi|\psi\rangle.
+\end{aligned}
+\tag{23.14}
+$$
+
+第二行使范数和跃迁概率保持不变，第一行则规定复数系数在变换中取共轭。对作为恒等算符倍数的数系数，这意味着$T^{-1}(cI)T=c^*I$；特别地，虚数单位变号，而算符乘积的共轭作用仍满足
+<span id="eq:c23-antilinear-conjugation"></span>
+
+$$
+T^{-1}iT=-i,\qquad
+T^{-1}(AB)T=(T^{-1}AT)(T^{-1}BT).
+\tag{23.15}
+$$
+
+后一关系只需在右边两因子之间插入$TT^{-1}=I$就能得到。因此，反幺正共轭虽然共轭数系数，仍保持算符乘积的先后次序。
+
+现在用反幺正算符实现时间反演。式[（23.13）](#eq:c23-infinitesimal)右边的平移参数仍按坐标反射改变，左边的$i$则也要接受共轭作用。展开后，两边的一阶项为
+<span id="eq:c23-time-infinitesimal"></span>
+
+$$
+\begin{aligned}
+T^{-1}(I-ia_\mu P^\mu)T
+ &=I+ia_\mu T^{-1}P^\mu T+O(a^2)\\
+ &=I-ia_\mu\mathcal T^\mu{}_\nu P^\nu+O(a^2).
+\end{aligned}
+\tag{23.16}
+$$
+
+两边虚数单位前的符号相反。比较各个平移参数的系数，便得到
+<span id="eq:c23-time-momentum"></span>
+
+$$
+T^{-1}P^\mu T=-\mathcal T^\mu{}_\nu P^\nu,
+\qquad
+T^{-1}HT=H,\qquad T^{-1}\mathbf P T=-\mathbf P.
+\tag{23.17}
+$$
+
+时间反演于是保持粒子的正能量，同时把三动量反向。这个结果也使时间演化具有所需的意义：对通常的演化算符作同样的反幺正共轭，有
+<span id="eq:c23-evolution"></span>
+
+$$
+T^{-1}e^{-iHt}T=e^{+iHt}=e^{-iH(-t)}.
+\tag{23.18}
+$$
+
+变换后的演化沿相反的时间方向进行，能谱本身保持不变。
+
+还可以直接从第22节构造的能量和动量看出这些符号的来源，并说明改变场的内禀奇偶为什么不能代替反幺正性。先对式[（23.3）](#eq:c23-intrinsic-signs)求导；由链式法则，时间反射给时间导数一个负号，空间反射给空间导数一个负号：
+<span id="eq:c23-derivative-signs"></span>
+
+$$
+\begin{array}{c|cc}
+ &P^{-1}(\cdot)P&T^{-1}(\cdot)T\\ \hline
+\Pi(t,\mathbf x)&\eta_P\Pi(t,-\mathbf x)&-\eta_T\Pi(-t,\mathbf x)\\
+\partial_i\varphi(t,\mathbf x)&-\eta_P\partial_i\varphi(t,-\mathbf x)
+ &\eta_T\partial_i\varphi(-t,\mathbf x).
+\end{array}
+\tag{23.19}
+$$
+
+把这些导数变换代入$H=\int[\Pi^2+(\nabla\varphi)^2+2V]/2$，二次项中的负号都被平方消去；势的变化则由前面选定的反射对称性控制。宇称下再作$\mathbf x\mapsto-\mathbf x$的积分换元，就有$P^{-1}HP=H$；时间反演下则有$T^{-1}H(t)T=H(-t)=H$。对于$P^i=-\int\Pi\partial_i\varphi$，时间导数和空间导数相乘，任一种反射都只使其中一项变号，故两者均给出$P^i\mapsto-P^i$。内禀符号始终以$\eta^2=1$出现，所以把场改为时间反演奇场，也不会给能量添上整体负号。
+
+同一原因还反映在等时正则关系中。对场和共轭动量同时作时间反演，得到
+<span id="eq:c23-ccr-time"></span>
+
+$$
+\begin{aligned}
+\relax[T^{-1}\varphi(t,\mathbf x)T,T^{-1}\Pi(t,\mathbf y)T]
+&=[\eta_T\varphi(-t,\mathbf x),-\eta_T\Pi(-t,\mathbf y)]\\
+&=-i\delta^3(\mathbf x-\mathbf y).
+\end{aligned}
+\tag{23.20}
+$$
+
+这一结果恰与原对易子经反幺正变换得到的$T^{-1}(i\delta^3)T=-i\delta^3$一致。若把$T$取为线性幺正算符，原对易子的右边仍为$+i\delta^3$，就与场和共轭动量的变换不相容。
+
+<span id="c23-one-particle"></span>
+
+## 补充：反射对单粒子态的作用
+
+场的变换也确定了粒子态的变换。为把这层联系写出来，使用已经建立的自由场或稳定粒子的渐近场，并记$kx=\mathbf k\cdot\mathbf x-\omega_{\mathbf k}t$。实场展开为
+<span id="eq:c23-real-modes"></span>
+
+$$
+\varphi(x)=\int d\widetilde k\,
+ [a(\mathbf k)e^{ikx}+a^\dagger(\mathbf k)e^{-ikx}],
+\qquad
+d\widetilde k=\frac{d^3k}{(2\pi)^3\,2\omega_{\mathbf k}}.
+\tag{23.21}
+$$
+
+对宇称，由于指数中的数系数保持不变，只需在右边的$\varphi(t,-\mathbf x)$中作$\mathbf k\mapsto-\mathbf k$，就能与左边的模态展开比较。时间反演的处理多一个步骤：左边的$e^{ikx}$先被共轭为$e^{-ikx}$，而右边的$\varphi(-t,\mathbf x)$经过同一动量换元后，湮灭项也带有$e^{-ikx}$。匹配相同的指数，得到
+<span id="eq:c23-real-mode-reflections"></span>
+
+$$
+\begin{aligned}
+P^{-1}a(\mathbf k)P&=\eta_Pa(-\mathbf k),
+&P^{-1}a^\dagger(\mathbf k)P&=\eta_Pa^\dagger(-\mathbf k),\\
+T^{-1}a(\mathbf k)T&=\eta_Ta(-\mathbf k),
+&T^{-1}a^\dagger(\mathbf k)T&=\eta_Ta^\dagger(-\mathbf k).
+\end{aligned}
+\tag{23.22}
+$$
+
+两种反射都使模态的三动量反向，并分别保持产生和湮灭算符的性质；时间宗量的反射与指数共轭共同保证正、负频率模态各自对应。由于$\omega_{-\mathbf k}=\omega_{\mathbf k}$，积分测度和$2\omega_{\mathbf k}(2\pi)^3\delta^3(\mathbf k-\mathbf q)$的态归一化也保持不变。
+
+下面选取固定真空、平方为1的实现，相位的确定见下文[算符的平方](#c23-squares)。把产生算符的变换作用于真空，对$|\mathbf k\rangle=a^\dagger(\mathbf k)|0\rangle$及其波包叠加$|f\rangle=\int d\widetilde k\,f(\mathbf k)|\mathbf k\rangle$，分别得到
+<span id="eq:c23-wavepackets"></span>
+
+$$
+\begin{aligned}
+P|\mathbf k\rangle&=\eta_P|-\mathbf k\rangle,
+&T|\mathbf k\rangle&=\eta_T|-\mathbf k\rangle,\\
+P|f\rangle&=\int d\widetilde k\,\eta_Pf(-\mathbf k)|\mathbf k\rangle,
+&T|f\rangle&=\int d\widetilde k\,\eta_Tf^*(-\mathbf k)|\mathbf k\rangle.
+\end{aligned}
+\tag{23.23}
+$$
+
+单个动量本征态的两种变换形式相同，差别在一般复系数的叠加态中显现出来：时间反演还共轭波包系数。这里单粒子态的相位已由场展开固定；若将$|\mathbf k\rangle$重定为$e^{i\chi(\mathbf k)}|\mathbf k\rangle$，$T$的系数便相应成为$\eta_Te^{-i[\chi(\mathbf k)+\chi(-\mathbf k)]}$。这个系数虽随基底相位改变，连续两次反演的作用仍不变。
+
+<span id="c23-squares"></span>
+
+## 内部符号变换与算符的平方
+
+接着考虑不改变时空点的离散变换。若干实场可以各自保持或倒转符号：
+<span id="eq:c23-internal-z"></span>
+
+$$
+Z^{-1}\varphi_a(x)Z=\eta_a\varphi_a(x),
+\qquad \eta_a=\pm1.
+\tag{23.24}
+$$
+
+这里$Z$为幺正算符，所有时空宗量都保持原值。连续作两次变换，每个实场都恢复原状；把群元$0,1$分别对应到$+1,-1$，模2相加就等价于符号相乘，这便是$\mathbb Z_2$群。
+
+从场的二次作用走到态空间算符的平方，还要固定$Z$的整体相位，因为这个相位不会出现在场的共轭变换中。在当前的对称真空表示中，设$Z|0\rangle=e^{i\gamma}|0\rangle$，用$e^{-i\gamma}Z$替换$Z$就使它固定真空。于是$Z^2$既与所有场对易，又固定真空，对场多项式作用于真空所生成的稠密子空间，$Z^2$均为恒等算符。幺正算符的有界性使这一关系延拓到整个表示空间，因而$Z^2=I$、$Z^{-1}=Z$。宇称也可以采用同样的相位选择。
+
+时间反演中，相位要受到反线性的作用。若$T|0\rangle=e^{i\theta}|0\rangle$，第二次变换会把第一次产生的相位取共轭，故
+<span id="eq:c23-antiunitary-square"></span>
+
+$$
+T^2|0\rangle=e^{-i\theta}e^{i\theta}|0\rangle=|0\rangle,
+\qquad
+(e^{i\beta}T)^2=T^2.
+\tag{23.25}
+$$
+
+两次时间反演固定真空；再结合式[（23.4）](#eq:c23-double-field-action)对场的二次作用，就在本节对角实场的真空表示中得到$T^2=I$。上式第二个等式同时说明，反幺正算符的整体相位会在平方中自行抵消，因此不能用重定相位改变它的平方。有内部多重态或更高自旋时，应从相应的场变换重新确定二次作用。
+
+<span id="c23-charge"></span>
+
+## 荷共轭把粒子与反粒子互换
+
+内部反射的一个重要例子出现在第22节的复标量模型中。先把同一个拉氏密度写成复场和两个实分量的形式。代入$\varphi=(\varphi_1+i\varphi_2)/\sqrt2$，有
+<span id="eq:c23-complex-model"></span>
+
+$$
+\begin{aligned}
+\mathcal L
+&=-\partial^\mu\varphi^\dagger\partial_\mu\varphi
+  -m^2\varphi^\dagger\varphi-\frac{\lambda}{4}(\varphi^\dagger\varphi)^2\\
+&=-\frac12\sum_{a=1}^2\partial^\mu\varphi_a\partial_\mu\varphi_a
+  -\frac{m^2}{2}(\varphi_1^2+\varphi_2^2)
+  -\frac{\lambda}{16}(\varphi_1^2+\varphi_2^2)^2.
+\end{aligned}
+\tag{23.26}
+$$
+
+动能展开中的两个交叉项分别带有$i$和$-i$，相加抵消；质量项使用$\varphi^\dagger\varphi=(\varphi_1^2+\varphi_2^2)/2$，四次项再把这个因子平方，便得到$1/16$。这样写保留了上一节的场归一化，也让两个实分量之间的对称性直接显现出来。
+
+先看已经知道的相位变换$e^{-i\alpha}\varphi$。它的实部和虚部分别为$\varphi_1\cos\alpha+\varphi_2\sin\alpha$、$-\varphi_1\sin\alpha+\varphi_2\cos\alpha$，所以相位变换就是实分量平面内的旋转。把旋转矩阵记下，并同时列出一个实分量反射矩阵：
+<span id="eq:c23-rotation-reflection"></span>
+
+$$
+R(\alpha)=
+\begin{pmatrix}\cos\alpha&\sin\alpha\\-\sin\alpha&\cos\alpha\end{pmatrix},
+\qquad
+F=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\tag{23.27}
+$$
+
+第一矩阵给出$SO(2)$旋转；第二矩阵把$\varphi_2$变号，从而使$\varphi$变为$\varphi^\dagger$。两种操作都保持$\varphi_1^2+\varphi_2^2$和导数的正交内积，所以都保持式[（23.26）](#eq:c23-complex-model)。这说明该拉氏密度除了连续旋转之外，还具有一个额外的离散对称性。
+
+从群的结构看，$R$的行列式为$+1$，$F$的行列式为$-1$。任意二维正交矩阵若行列式为正，就是某个旋转；若行列式为负，乘以$F$便成为旋转。因此，旋转和这一个反射共同给出全部$O(2)$变换。两者怎样组合，可以直接由矩阵乘法看出：
+<span id="eq:c23-o2-group-law"></span>
+
+$$
+FR(\alpha)F
+=\begin{pmatrix}\cos\alpha&-\sin\alpha\\
+                 \sin\alpha&\cos\alpha\end{pmatrix}
+=R(-\alpha).
+\tag{23.28}
+$$
+
+在旋转前后各作一次反射，旋转方向就倒转了，所以反射一般不与旋转对易。群的这种组合关系写作$O(2)=SO(2)\rtimes\mathbb Z_2$，称为半直积。
+
+在复场语言中，这个反射称为荷共轭（charge conjugation）。用幺正算符$C$实现它，实分量反射、复场变换和拉氏密度不变性便可一起写成
+<span id="eq:c23-charge-field"></span>
+
+$$
+\begin{aligned}
+C^{-1}\varphi_1C&=\varphi_1,&C^{-1}\varphi_2C&=-\varphi_2,\\
+C^{-1}\varphi C&=\varphi^\dagger,
+& C^{-1}\mathcal L C&=\mathcal L.
+\end{aligned}
+\tag{23.29}
+$$
+
+$C$的幺正性使$i$保持不变；复场之所以变成厄米共轭，是因为第二个实分量变号。这里的额外对称性已由拉氏密度的各项对反射的不变性确定，它把本例中连续的$U(1)$荷反号，并将$SO(2)$扩大为$O(2)$。
+
+要看清“荷共轭”的物理意义，可以比较变换前后的模态。上一节展开中，$\varphi$的正频率项为$a e^{ikx}$，负频率项为$b^\dagger e^{-ikx}$；$\varphi^\dagger$中的对应项则为$b e^{ikx}$和$a^\dagger e^{-ikx}$。荷共轭保持时空宗量和指数，把同频率项的系数对应起来，就有
+<span id="eq:c23-charge-modes"></span>
+
+$$
+C^{-1}a(\mathbf k)C=b(\mathbf k),\qquad
+C^{-1}b(\mathbf k)C=a(\mathbf k),
+\tag{23.30}
+$$
+
+取厄米共轭，还得到产生算符之间的对应关系。因此这个变换在同一动量处交换两类粒子。将它作用于上一节由流求出的$Q=N_a-N_b$，并利用能量、动量在这一内部对称性下的不变性，有
+<span id="eq:c23-charge-spectrum"></span>
+
+$$
+C^{-1}QC=-Q,\qquad
+C^{-1}HC=H,\qquad C^{-1}\mathbf P C=\mathbf P.
+\tag{23.31}
+$$
+
+第一式来自$a,b$的交换；能量和空间平移的生成元保持原值，则给出后两式。这些算符关系把两个物种的能谱也联系起来。取$C|0\rangle=|0\rangle$，便有$C|a,\mathbf k\rangle=|b,\mathbf k\rangle$。若$a$粒子的能量为$E_{\mathbf k}$，将三个生成元分别作用在变换后的态上，得到
+<span id="eq:c23-antiparticle-state"></span>
+
+$$
+\begin{aligned}
+H\,C|a,\mathbf k\rangle&=E_{\mathbf k}C|a,\mathbf k\rangle,\\
+\mathbf P\,C|a,\mathbf k\rangle&=\mathbf k\,C|a,\mathbf k\rangle,\\
+Q\,C|a,\mathbf k\rangle&=-C|a,\mathbf k\rangle.
+\end{aligned}
+\tag{23.32}
+$$
+
+对应的$b$粒子具有相反的荷，同时保持原来的$E_{\mathbf k}$和$\mathbf k$，所以质量平方$E_{\mathbf k}^2-\mathbf k^2$也相同。这个$b$粒子称为$a$粒子的反粒子（antiparticle）。
+
+同一对称性还约束散射。在保持荷共轭的散射理论中，$C^{-1}SC=S$；对一个过程的入态和出态同时作荷共轭，相当于交换其中全部粒子与反粒子。利用幺正性，
+<span id="eq:c23-charge-scattering"></span>
+
+$$
+\langle Cf|S|Ci\rangle
+=\langle f|C^{-1}SC|i\rangle
+=\langle f|S|i\rangle.
+\tag{23.33}
+$$
+
+因此，同时交换全部粒子与反粒子，散射振幅保持不变。
+
+复场的时间反演也可以在实分量语言中确定。若两个实分量都按式[（23.3）](#eq:c23-intrinsic-signs)取时间反演偶，并把这一实现记作$T_0$，则反线性会共轭第二分量前的虚数单位，给出
+<span id="eq:c23-complex-time-even"></span>
+
+$$
+T_0^{-1}\varphi(t,\mathbf x)T_0
+=\frac{\varphi_1(-t,\mathbf x)-i\varphi_2(-t,\mathbf x)}{\sqrt2}
+=\varphi^\dagger(-t,\mathbf x).
+\tag{23.34}
+$$
+
+把两边展开为模态，再比较已经共轭的指数，便有$T_0^{-1}a(\mathbf k)T_0=b(-\mathbf k)$、$T_0^{-1}b(\mathbf k)T_0=a(-\mathbf k)$。因此这一实现既倒转动量，也交换两种粒子，使$Q$变号。当前模型还保持$C$对称性，因而可以把它与上述时间反演组合，选择$T_q=CT_0$。依次施加两个共轭作用，就得到
+<span id="eq:c23-charge-preserving-time"></span>
+
+$$
+\begin{aligned}
+T_q^{-1}\varphi(t,\mathbf x)T_q&=\varphi(-t,\mathbf x),\\
+T_q^{-1}a(\mathbf k)T_q&=a(-\mathbf k),\qquad
+T_q^{-1}b(\mathbf k)T_q=b(-\mathbf k),\\
+T_q^{-1}QT_q&=Q.
+\end{aligned}
+\tag{23.35}
+$$
+
+组合后的时间反演使两个实分量分别取$(+,-)$，并保持每一类粒子的荷。两种实现都保持本模型的$H$，对荷的作用却不同，所以使用复场记号时须随同给定的实分量变换来确定时间反演。
+
+<span id="c23-vacuum"></span>
+
+## $\mathbb Z_2$对称性与真空期望值
+
+内部符号变换也可以作用于只有一个实场的模型。考虑四次理论及其场变号：
+<span id="eq:c23-real-quartic"></span>
+
+$$
+\mathcal L=-\frac12\partial^\mu\varphi\partial_\mu\varphi
+-\frac12m^2\varphi^2-\frac{\lambda}{24}\varphi^4,
+\qquad Z^{-1}\varphi(x)Z=-\varphi(x).
+\tag{23.36}
+$$
+
+场及其导数同时变号，而每一项都含偶数个场，故$\mathcal L$和$H$保持不变。要用这一内部对称性求单点函数，还须确定它对真空的作用。先设$H|0\rangle=E_0|0\rangle$，利用$[Z,H]=0$，可见变换后的态仍有最低能量：
+<span id="eq:c23-vacuum-eigenstate"></span>
+
+$$
+HZ|0\rangle=ZH|0\rangle=E_0Z|0\rangle.
+\tag{23.37}
+$$
+
+若基态唯一，$Z|0\rangle$就只能与$|0\rangle$成比例。幺正性保证比例系数的模为1，再按前面说明的整体相位选择，即可使真空矢量本身保持不变：
+<span id="eq:c23-vacuum-phase"></span>
+
+$$
+Z|0\rangle=Z^{-1}|0\rangle=|0\rangle.
+\tag{23.38}
+$$
+
+现在在单点函数中插入$ZZ^{-1}$，把变换的作用分别移到场和两侧的真空上。真空保持原值而场变号，因而
+<span id="eq:c23-vacuum-selection"></span>
+
+$$
+\begin{aligned}
+\langle0|\varphi(x)|0\rangle
+&=\langle0|Z[Z^{-1}\varphi(x)Z]Z^{-1}|0\rangle\\
+&=-\langle0|\varphi(x)|0\rangle=0.
+\end{aligned}
+\tag{23.39}
+$$
+
+所选真空的对称性使单点函数为零，这一结论不依赖微扰展开的阶数。在任意奇数个场的关联函数中作同样的插入，也会得到一个总负号。
+
+把这一符号性质转到粒子态上，式[（23.24）](#eq:c23-internal-z)使每个产生算符都变号，所以$N$粒子态的$Z$本征值为$(-1)^N$。若散射保持这个对称性，由$[Z,S]=0$便得到
+<span id="eq:c23-number-parity"></span>
+
+$$
+\bigl[(-1)^{N_f}-(-1)^{N_i}\bigr]\langle f|S|i\rangle=0.
+\tag{23.40}
+$$
+
+散射只允许连接粒子数奇偶性相同的入态和出态。例如，两粒子不能散射成三粒子，两粒子到四粒子的过程则符合这一选择定则。
+
+在保持$\mathbb Z_2$的调节和重整化中，反项也须是场的偶函数。线性反项$Y\varphi$为奇，而式[（23.39）](#eq:c23-vacuum-selection)已由对称性保证单点函数为零，因而不必像三次理论那样另用线性反项强制这个条件。[第30节](/posts/srednicki-30/#c30)将讨论简并基态中选定真空破坏 $Z$ 对称性的情形；届时单点函数可非零，场将围绕新的真空值展开。
+
+---
+
+[← 第 22 节](/posts/srednicki-22/) · [章节地图](/srednicki/) · [第 24 节 →](/posts/srednicki-24/)

@@ -39,6 +39,24 @@ Enjoy it!
 
 前往：[Documentation](https://gyoza.lxchapu.com/posts/guide)
 
+### Srednicki 笔记与首页显示
+
+笔记放在 `src/content/posts/`，使用 Markdown 格式。以下 frontmatter 将笔记关联到 Srednicki 第 1 节，并从首页及其分页文章列表中隐藏：
+
+```yaml
+---
+title: 'Srednicki §1 阅读笔记'
+date: 2026-09-09
+category: 笔记
+series: 'Srednicki QFT'
+srednickiSections: [1]
+hideFromHome: true
+draft: false
+---
+```
+
+`hideFromHome` 默认为 `false`。设为 `true` 后，文章仍正常发布，可从 Srednicki 地图、分类、标签、搜索及直接链接访问，也仍包含在 RSS 中。它不影响 `draft` 的发布规则。`srednickiSections` 可以填写多个章节编号（1–97）。
+
 ## 🚀 Project Structure
 
 ```text

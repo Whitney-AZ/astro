@@ -1,0 +1,404 @@
+
+> astro-gyoza@0.0.1 build /Users/Admin/Documents/astro
+> astro check && astro build && pagefind --site dist
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+09:59:36 [types] Generated 193ms
+09:59:36 [check] Getting diagnostics for Astro files in /Users/Admin/Documents/astro...
+[96msrc/components/post/PostRating.astro[0m:[93m14[0m:[93m62[0m - [93mwarning[0m[90m ts(6385): [0m'(from: number, length?: number | undefined): string' is deprecated.
+
+[7m14[0m const gradientId = `rating-clip-${Math.random().toString(36).substr(2, 9)}`;
+[7m  [0m [93m                                                             ~~~~~~[0m
+
+[96msrc/plugins/rehypeEquationNumbering.js[0m:[93m50[0m:[93m71[0m - [93mwarning[0m[90m ts(6133): [0m'match' is declared but its value is never read.
+
+[7m50[0m           textNode.value = textNode.value.replace(/\\ref\{(.*?)\}/g, (match, label) => {
+[7m  [0m [93m                                                                      ~~~~~[0m
+
+Result (104 files): 
+- 0 errors
+- 0 warnings
+- 2 hints
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+09:59:41 [types] Generated 171ms
+09:59:41 [build] output: "static"
+09:59:41 [build] directory: /Users/Admin/Documents/astro/dist/
+09:59:41 [build] Collecting build info...
+09:59:41 [build] ✓ Completed in 196ms.
+09:59:41 [build] Building static entrypoints...
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+--- 正在运行公式编号插件 ---
+10:00:10 [vite] ✓ built in 28.70s
+10:00:10 [build] ✓ Completed in 28.72s.
+
+ building client (vite) 
+10:00:10 [vite] transforming...
+10:00:11 [vite] ✓ 1305 modules transformed.
+10:00:11 [vite] rendering chunks...
+10:00:11 [vite] computing gzip size...
+10:00:11 [vite] dist/_astro/ToastContainer.BE4BdE5o.css        13.97 kB │ gzip:  2.65 kB
+10:00:11 [vite] dist/_astro/_spec_.BwbXQ6L5.css                20.43 kB │ gzip:  4.38 kB
+10:00:11 [vite] dist/_astro/viewport.CRqWawEY.js                0.07 kB │ gzip:  0.09 kB
+10:00:11 [vite] dist/_astro/scrollInfo.B7Z0kgKU.js              0.09 kB │ gzip:  0.10 kB
+10:00:11 [vite] dist/_astro/theme.47AsDpQK.js                   0.11 kB │ gzip:  0.11 kB
+10:00:11 [vite] dist/_astro/context.CV9BPdII.js                 0.14 kB │ gzip:  0.14 kB
+10:00:11 [vite] dist/_astro/metaInfo.CYfVtNSf.js                0.19 kB │ gzip:  0.15 kB
+10:00:11 [vite] dist/_astro/RelativeDate.DH-oJ5cA.js            0.28 kB │ gzip:  0.23 kB
+10:00:11 [vite] dist/_astro/theme.BxgT0uNq.js                   0.36 kB │ gzip:  0.25 kB
+10:00:11 [vite] dist/_astro/hooks.lVUMsp6m.js                   0.37 kB │ gzip:  0.27 kB
+10:00:11 [vite] dist/_astro/clsx.B-dksMZM.js                    0.37 kB │ gzip:  0.24 kB
+10:00:11 [vite] dist/_astro/RunningDays.FOxdG5Id.js             0.39 kB │ gzip:  0.34 kB
+10:00:11 [vite] dist/_astro/head-gradient.B1_Ab36_.js           0.41 kB │ gzip:  0.31 kB
+10:00:11 [vite] dist/_astro/ToastContainer.h28xm8qs.js          0.56 kB │ gzip:  0.37 kB
+10:00:11 [vite] dist/_astro/ReadingProgress.DhaJsAif.js         0.58 kB │ gzip:  0.42 kB
+10:00:11 [vite] dist/_astro/Outdate.Bx1g972Z.js                 0.63 kB │ gzip:  0.53 kB
+10:00:11 [vite] dist/_astro/Flashlight.CvNvlCt0.js              0.67 kB │ gzip:  0.44 kB
+10:00:11 [vite] dist/_astro/BackToTopFAB.7fA3Mcjo.js            0.85 kB │ gzip:  0.52 kB
+10:00:11 [vite] dist/_astro/floor.C7O8BxQ9.js                   0.87 kB │ gzip:  0.52 kB
+10:00:11 [vite] dist/_astro/jsx-runtime.DVTPKKJG.js             0.92 kB │ gzip:  0.58 kB
+10:00:11 [vite] dist/_astro/SocialList.Crff1ihc.js              0.93 kB │ gzip:  0.57 kB
+10:00:11 [vite] dist/_astro/date.Dfx-CKFM.js                    0.99 kB │ gzip:  0.52 kB
+10:00:11 [vite] dist/_astro/PostCardHoverOverlay.BiTRWk_r.js    1.05 kB │ gzip:  0.55 kB
+10:00:11 [vite] dist/_astro/modal.kwkAoqIV.js                   1.08 kB │ gzip:  0.62 kB
+10:00:11 [vite] dist/_astro/SwupScriptsPlugin.CRD5-C2F.js       1.10 kB │ gzip:  0.62 kB
+10:00:11 [vite] dist/_astro/ThemeSwitch.CrXm5bAP.js             1.20 kB │ gzip:  0.52 kB
+10:00:11 [vite] dist/_astro/SwupBodyClassPlugin.B6xGcJnL.js     1.24 kB │ gzip:  0.66 kB
+10:00:11 [vite] dist/_astro/toNumber.DCaU3JdG.js                1.30 kB │ gzip:  0.66 kB
+10:00:11 [vite] dist/_astro/config.C2UwH1Um.js                  1.44 kB │ gzip:  0.73 kB
+10:00:11 [vite] dist/_astro/PostToc.B_aHv4ja.js                 1.69 kB │ gzip:  0.95 kB
+10:00:11 [vite] dist/_astro/client.tK6p4b6n.js                  1.75 kB │ gzip:  0.90 kB
+10:00:11 [vite] dist/_astro/index.modern.BC8Oj8jT.js            1.76 kB │ gzip:  0.91 kB
+10:00:11 [vite] dist/_astro/SwupHeadPlugin.d6nb3Z__.js          2.57 kB │ gzip:  1.28 kB
+10:00:11 [vite] dist/_astro/Provider.DKvbktKL.js                2.85 kB │ gzip:  1.34 kB
+10:00:11 [vite] dist/_astro/index.DZDwMZsD.js                   2.98 kB │ gzip:  1.44 kB
+10:00:11 [vite] dist/_astro/page.-V3TH0hG.js                    3.39 kB │ gzip:  1.54 kB
+10:00:11 [vite] dist/_astro/SwupA11yPlugin.B0fTfpSW.js          5.24 kB │ gzip:  2.13 kB
+10:00:11 [vite] dist/_astro/TimelineProgress.Dh2koTs0.js        5.81 kB │ gzip:  2.81 kB
+10:00:11 [vite] dist/_astro/SwupPreloadPlugin.CiyJa6X8.js       6.05 kB │ gzip:  2.35 kB
+10:00:11 [vite] dist/_astro/SwupMorphPlugin.DcfkGz1r.js         7.32 kB │ gzip:  3.12 kB
+10:00:11 [vite] dist/_astro/index.Wp2u197Z.js                   7.35 kB │ gzip:  2.96 kB
+10:00:11 [vite] dist/_astro/SwupScrollPlugin.t9jexBOd.js        8.00 kB │ gzip:  2.41 kB
+10:00:11 [vite] dist/_astro/react.DtzUAjhz.js                   8.07 kB │ gzip:  3.45 kB
+10:00:11 [vite] dist/_astro/Header.BmVLySF3.js                 10.27 kB │ gzip:  3.81 kB
+10:00:11 [vite] dist/_astro/PostCopyright.DILHy8zj.js          12.39 kB │ gzip:  5.48 kB
+10:00:11 [vite] dist/_astro/SrednickiMap.CqlhITkS.js           15.07 kB │ gzip:  5.76 kB
+10:00:11 [vite] dist/_astro/react-toastify.esm.BjLG7rXT.js     15.46 kB │ gzip:  6.34 kB
+10:00:11 [vite] dist/_astro/ActionAside.QXgz4IpC.js            16.26 kB │ gzip:  6.44 kB
+10:00:11 [vite] dist/_astro/Swup.DhuoVEBe.js                   21.62 kB │ gzip:  7.43 kB
+10:00:11 [vite] dist/_astro/index.Cxw4oSH7.js                  31.97 kB │ gzip: 11.09 kB
+10:00:11 [vite] dist/_astro/hoisted.T9ltfQxQ.js                36.76 kB │ gzip: 14.75 kB
+10:00:11 [vite] dist/_astro/SVGVisualElement.CBU4GYSh.js       52.60 kB │ gzip: 18.69 kB
+10:00:11 [vite] dist/_astro/proxy.DooHrIcH.js                  59.97 kB │ gzip: 19.30 kB
+10:00:11 [vite] dist/_astro/index.CkeTH89P.js                 133.95 kB │ gzip: 43.14 kB
+10:00:11 [vite] dist/_astro/Waline.W6bmhwBd.js                177.23 kB │ gzip: 67.25 kB
+10:00:11 [vite] ✓ built in 1.09s
+
+ generating static routes 
+10:00:11 ▶ src/pages/404.astro
+10:00:11   └─ /404.html (+6ms)
+10:00:11 ▶ src/pages/archives.astro
+10:00:11   └─ /archives/index.html (+468ms)
+10:00:11 ▶ src/pages/bangumi/index.astro
+10:00:11   └─ /bangumi/index.htmlFailed to fetch bangumi data TypeError: fetch failed
+    at node:internal/deps/undici/undici:15845:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///Users/Admin/Documents/astro/dist/pages/bangumi.astro.mjs?time=1789437611902:14:25
+    at async callComponentAsTemplateResultOrResponse (file:///Users/Admin/Documents/astro/node_modules/.pnpm/astro@4.16.19_@types+node@24.7.1_rollup@2.79.2_terser@5.44.0_typescript@5.9.3/node_modules/astro/dist/runtime/server/render/astro/render.js:90:25)
+    at async renderToString (file:///Users/Admin/Documents/astro/node_modules/.pnpm/astro@4.16.19_@types+node@24.7.1_rollup@2.79.2_terser@5.44.0_typescript@5.9.3/node_modules/astro/dist/runtime/server/render/astro/render.js:8:26)
+    at async renderPage (file:///Users/Admin/Documents/astro/node_modules/.pnpm/astro@4.16.19_@types+node@24.7.1_rollup@2.79.2_terser@5.44.0_typescript@5.9.3/node_modules/astro/dist/runtime/server/render/page.js:44:12)
+    at async lastNext (file:///Users/Admin/Documents/astro/node_modules/.pnpm/astro@4.16.19_@types+node@24.7.1_rollup@2.79.2_terser@5.44.0_typescript@5.9.3/node_modules/astro/dist/core/render-context.js:147:25)
+    at async NOOP_MIDDLEWARE_FN (file:///Users/Admin/Documents/astro/node_modules/.pnpm/astro@4.16.19_@types+node@24.7.1_rollup@2.79.2_terser@5.44.0_typescript@5.9.3/node_modules/astro/dist/core/middleware/noop-middleware.js:3:20)
+    at async callMiddleware (file:///Users/Admin/Documents/astro/node_modules/.pnpm/astro@4.16.19_@types+node@24.7.1_rollup@2.79.2_terser@5.44.0_typescript@5.9.3/node_modules/astro/dist/core/middleware/callMiddleware.js:11:10)
+    at async RenderContext.render (file:///Users/Admin/Documents/astro/node_modules/.pnpm/astro@4.16.19_@types+node@24.7.1_rollup@2.79.2_terser@5.44.0_typescript@5.9.3/node_modules/astro/dist/core/render-context.js:178:22) {
+  [cause]: Error: getaddrinfo ENOTFOUND api.bgm.tv
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'api.bgm.tv'
+  }
+}
+ (+20ms)
+10:00:11 ▶ src/pages/categories/[category].astro
+10:00:11   ├─ /categories/杂谈/index.html (+3ms)
+10:00:11   ├─ /categories/测试/index.html (+3ms)
+10:00:11   ├─ /categories/笔记/index.html (+3ms)
+10:00:11   └─ /categories/翻译/index.html (+3ms)
+10:00:12 ▶ src/pages/posts/[...slug].astro
+10:00:12   ├─ /posts/srednicki-02/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-03/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-04/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-05/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-06/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-07/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-08/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-09/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-10/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-11/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-12/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-13/index.html (+4ms)
+10:00:12   ├─ /posts/srednicki-14/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-15/index.html (+4ms)
+10:00:12   ├─ /posts/srednicki-16/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-17/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-18/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-19/index.html (+4ms)
+10:00:12   ├─ /posts/srednicki-20/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-21/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-22/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-23/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-24/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-25/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-26/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-27/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-28/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-29/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-30/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-31/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-32/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-33/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-34/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-35/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-36/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-37/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-38/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-39/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-40/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-41/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-42/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-43/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-44/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-45/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-46/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-47/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-48/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-49/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-50/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-51/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-52/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-53/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-54/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-55/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-56/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-57/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-58/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-59/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-60/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-61/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-62/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-63/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-64/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-65/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-66/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-67/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-68/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-69/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-70/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-71/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-72/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-73/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-74/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-75/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-76/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-77/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-78/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-79/index.html (+5ms)
+10:00:12   ├─ /posts/srednicki-80/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-81/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-82/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-83/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-84/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-85/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-86/index.html (+13ms)
+10:00:12   ├─ /posts/srednicki-87/index.html (+17ms)
+10:00:12   ├─ /posts/srednicki-88/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-89/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-90/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-91/index.html (+6ms)
+10:00:12   ├─ /posts/srednicki-92/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-93/index.html (+7ms)
+10:00:12   ├─ /posts/srednicki-94/index.html (+8ms)
+10:00:12   ├─ /posts/srednicki-95/index.html (+9ms)
+10:00:12   ├─ /posts/srednicki-96/index.html (+12ms)
+10:00:12   ├─ /posts/srednicki-97/index.html (+17ms)
+10:00:12   ├─ /posts/srednicki-01/index.html (+5ms)
+10:00:12   ├─ /posts/yanineko/index.html (+3ms)
+10:00:12   ├─ /posts/diracgr/index.html (+6ms)
+10:00:12   ├─ /posts/raqexamples/index.html (+4ms)
+10:00:12   ├─ /posts/carlo04apctrans/index.html (+3ms)
+10:00:12   ├─ /posts/raq/index.html (+4ms)
+10:00:12   ├─ /posts/rep1/index.html (+3ms)
+10:00:12   ├─ /posts/adm/index.html (+3ms)
+10:00:12   ├─ /posts/idol/index.html (+3ms)
+10:00:12   ├─ /posts/repcat/index.html (+3ms)
+10:00:12   ├─ /posts/donutuniverse/index.html (+3ms)
+10:00:12   ├─ /posts/csrevised/index.html (+3ms)
+10:00:12   ├─ /posts/lorentzcurrents/index.html (+3ms)
+10:00:12   ├─ /posts/makecomment/index.html (+3ms)
+10:00:12   └─ /posts/test/index.html (+3ms)
+10:00:12 λ src/pages/robots.txt.ts
+10:00:12   └─ /robots.txt (+0ms)
+10:00:12 λ src/pages/rss.xml.ts
+10:00:12   └─ /rss.xml (+4ms)
+10:00:12 ▶ src/pages/srednicki/sections/[section].astro
+10:00:12   ├─ /srednicki/sections/1/index.html (+3ms)
+10:00:12   ├─ /srednicki/sections/2/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/3/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/4/index.html (+3ms)
+10:00:12   ├─ /srednicki/sections/5/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/6/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/7/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/8/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/9/index.html (+3ms)
+10:00:12   ├─ /srednicki/sections/10/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/11/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/12/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/13/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/14/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/15/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/16/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/17/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/18/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/19/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/20/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/21/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/22/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/23/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/24/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/25/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/26/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/27/index.html (+1ms)
+10:00:12   ├─ /srednicki/sections/28/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/29/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/30/index.html (+3ms)
+10:00:12   ├─ /srednicki/sections/31/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/32/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/33/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/34/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/35/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/36/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/37/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/38/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/39/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/40/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/41/index.html (+1ms)
+10:00:12   ├─ /srednicki/sections/42/index.html (+1ms)
+10:00:12   ├─ /srednicki/sections/43/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/44/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/45/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/46/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/47/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/48/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/49/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/50/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/51/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/52/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/53/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/54/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/55/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/56/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/57/index.html (+3ms)
+10:00:12   ├─ /srednicki/sections/58/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/59/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/60/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/61/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/62/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/63/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/64/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/65/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/66/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/67/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/68/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/69/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/70/index.html (+1ms)
+10:00:12   ├─ /srednicki/sections/71/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/72/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/73/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/74/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/75/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/76/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/77/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/78/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/79/index.html (+1ms)
+10:00:12   ├─ /srednicki/sections/80/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/81/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/82/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/83/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/84/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/85/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/86/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/87/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/88/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/89/index.html (+1ms)
+10:00:12   ├─ /srednicki/sections/90/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/91/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/92/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/93/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/94/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/95/index.html (+2ms)
+10:00:12   ├─ /srednicki/sections/96/index.html (+2ms)
+10:00:12   └─ /srednicki/sections/97/index.html (+2ms)
+10:00:12 ▶ src/pages/srednicki.astro
+10:00:12   └─ /srednicki/index.html (+6ms)
+10:00:12 ▶ src/pages/tags/[tag].astro
+10:00:12   ├─ /tags/漫评/index.html (+2ms)
+10:00:12   ├─ /tags/精神分析/index.html (+2ms)
+10:00:12   ├─ /tags/测试/index.html (+2ms)
+10:00:12   ├─ /tags/数学/index.html (+2ms)
+10:00:12   ├─ /tags/物理/index.html (+2ms)
+10:00:12   ├─ /tags/量子场论/index.html (+2ms)
+10:00:12   ├─ /tags/微分几何/index.html (+2ms)
+10:00:12   ├─ /tags/范畴论/index.html (+2ms)
+10:00:12   ├─ /tags/代数/index.html (+2ms)
+10:00:12   ├─ /tags/杂谈/index.html (+4ms)
+10:00:12   ├─ /tags/广义相对论/index.html (+2ms)
+10:00:12   ├─ /tags/群论/index.html (+2ms)
+10:00:12   ├─ /tags/圈量子引力/index.html (+2ms)
+10:00:12   ├─ /tags/物理，翻译/index.html (+2ms)
+10:00:12   └─ /tags/srednicki/index.html (+2ms)
+10:00:12 ▶ src/pages/tags/index.astro
+10:00:12   └─ /tags/index.html (+2ms)
+10:00:12 ▶ src/pages/[spec].astro
+10:00:12   ├─ /about/index.html (+3ms)
+10:00:12   ├─ /friends/index.html (+3ms)
+10:00:12   └─ /projects/index.html (+2ms)
+10:00:12 ▶ src/pages/[...page].astro
+10:00:12   ├─ /index.html (+4ms)
+10:00:12   └─ /page/2/index.html (+3ms)
+10:00:12 ✓ Completed in 1.55s.
+
+10:00:12 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+10:00:12 [build] 237 page(s) built in 31.71s
+10:00:12 [build] Complete!
+
+Running Pagefind v1.4.0 (Extended)
+Running from: "/Users/Admin/Documents/astro"
+Source:       "dist"
+Output:       "dist/pagefind"
+
+[Walking source directory]
+Found 237 files matching **/*.{html}
+
+[Parsing files]
+Found a data-pagefind-body element on the site.
+↳ Ignoring pages without this tag.
+
+[Reading languages]
+Discovered 1 language: zh-cn
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 211 pages
+  Indexed 36612 words
+  Indexed 0 filters
+  Indexed 0 sorts
+Note: Pagefind doesn't support stemming for the language zh-cn. 
+Search will still work, but will not match across root words.
+Note: Pagefind doesn't support stemming for the language zh-cn. 
+Search will still work, but will not match across root words.
+
+Finished in 4.507 seconds

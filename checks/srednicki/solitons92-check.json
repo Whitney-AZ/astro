@@ -1,0 +1,464 @@
+{
+  "checks": 88,
+  "passed": true,
+  "records": [
+    {
+      "name": "Cartesian nonabelian B 0",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 0",
+      "scaled_residual": 1.6264019128603443e-16,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 0",
+      "scaled_residual": 2.1633985767184083e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 0",
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 0",
+      "scaled_residual": 2.455391715824585e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 1",
+      "scaled_residual": 9.429556982377832e-17,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 1",
+      "scaled_residual": 1.0340493920128727e-16,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 1",
+      "scaled_residual": 4.3305327599954017e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 1",
+      "scaled_residual": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 1",
+      "scaled_residual": 1.9813794052876526e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 2",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 2",
+      "scaled_residual": 9.548999886391399e-17,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 2",
+      "scaled_residual": 1.602307556747922e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 2",
+      "scaled_residual": 1.5051709528032908e-16,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 2",
+      "scaled_residual": 1.6138087922468015e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 3",
+      "scaled_residual": 2.0424080528516293e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 3",
+      "scaled_residual": 7.838422818693493e-17,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 3",
+      "scaled_residual": 1.9664743417002248e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 3",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 3",
+      "scaled_residual": 1.7042059117662115e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 4",
+      "scaled_residual": 1.2518761401527453e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 4",
+      "scaled_residual": 1.2603913578106729e-16,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 4",
+      "scaled_residual": 1.35307455051306e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 4",
+      "scaled_residual": 2.134670515712929e-16,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 4",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 5",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 5",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 5",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 5",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 6",
+      "scaled_residual": 2.314764213612984e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 6",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 6",
+      "scaled_residual": 2.4082877067044754e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 6",
+      "scaled_residual": 2.4231159519226832e-16,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 6",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 7",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 7",
+      "scaled_residual": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 7",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 7",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 7",
+      "scaled_residual": 2.0002653131625852e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 8",
+      "scaled_residual": 1.97758476261356e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 8",
+      "scaled_residual": 4.163336342344337e-17,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 8",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 8",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 8",
+      "scaled_residual": 1.1235591144951847e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 9",
+      "scaled_residual": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 9",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 9",
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 9",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 9",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 10",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 10",
+      "scaled_residual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 10",
+      "scaled_residual": 3.306727602909833e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 10",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 10",
+      "scaled_residual": 1.568837625946586e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian nonabelian B 11",
+      "scaled_residual": 4.208977435909667e-16,
+      "passed": true
+    },
+    {
+      "name": "Cartesian covariant gradient 11",
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "full Cartesian kinetic energy 11",
+      "scaled_residual": 3.2756814583677716e-16,
+      "passed": true
+    },
+    {
+      "name": "electromagnetic tensor expansion 11",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vortex radial Bogomolny identity 11",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "four independent trial energy integrals (1.5, np.float64(0.4330127018922193))",
+      "scaled_residual": 3.1058489113888754e-13,
+      "passed": true
+    },
+    {
+      "name": "four independent trial energy integrals (2.0, 0.5)",
+      "scaled_residual": 3.1058489113888754e-13,
+      "passed": true
+    },
+    {
+      "name": "four independent trial energy integrals (5.0, 0.9)",
+      "scaled_residual": 5.564992910933597e-13,
+      "passed": true
+    },
+    {
+      "name": "strict trial counterexample",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "BPS first-order equations 0.05",
+      "scaled_residual": 6.439293542825908e-15,
+      "passed": true
+    },
+    {
+      "name": "BPS second-order equations 0.05",
+      "scaled_residual": 3.7127436153476346e-13,
+      "passed": true
+    },
+    {
+      "name": "BPS first-order equations 0.2",
+      "scaled_residual": 1.1657341758564144e-15,
+      "passed": true
+    },
+    {
+      "name": "BPS second-order equations 0.2",
+      "scaled_residual": 7.174728917827804e-15,
+      "passed": true
+    },
+    {
+      "name": "BPS first-order equations 0.7",
+      "scaled_residual": 2.7755575615628914e-16,
+      "passed": true
+    },
+    {
+      "name": "BPS second-order equations 0.7",
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "BPS first-order equations 2.0",
+      "scaled_residual": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "BPS second-order equations 2.0",
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "BPS first-order equations 7.0",
+      "scaled_residual": 3.642919299551295e-17,
+      "passed": true
+    },
+    {
+      "name": "BPS second-order equations 7.0",
+      "scaled_residual": 3.469446951953614e-17,
+      "passed": true
+    },
+    {
+      "name": "BPS first-order equations 20.0",
+      "scaled_residual": 1.2929613832702073e-17,
+      "passed": true
+    },
+    {
+      "name": "BPS second-order equations 20.0",
+      "scaled_residual": 1.2249102268922047e-17,
+      "passed": true
+    },
+    {
+      "name": "finite-radius BPS energy R=1.0",
+      "scaled_residual": 5.828670879282072e-16,
+      "passed": true
+    },
+    {
+      "name": "finite-radius BPS energy R=4.0",
+      "scaled_residual": 1.509903313490213e-14,
+      "passed": true
+    },
+    {
+      "name": "finite-radius BPS energy R=10.0",
+      "scaled_residual": 2.2426505097428162e-14,
+      "passed": true
+    },
+    {
+      "name": "finite-radius BPS energy R=40.0",
+      "scaled_residual": 1.84297022087776e-14,
+      "passed": true
+    },
+    {
+      "name": "boosted kink energy and momentum 0.0",
+      "scaled_residual": 4.9705137964723215e-14,
+      "passed": true
+    },
+    {
+      "name": "boosted kink energy and momentum 0.3",
+      "scaled_residual": 4.923935960163283e-14,
+      "passed": true
+    },
+    {
+      "name": "boosted kink energy and momentum -0.7",
+      "scaled_residual": 4.9452484363132284e-14,
+      "passed": true
+    },
+    {
+      "name": "oriented sphere degree -3",
+      "scaled_residual": 2.6793382327620446e-14,
+      "passed": true
+    },
+    {
+      "name": "oriented sphere degree -1",
+      "scaled_residual": 2.6423307986078726e-14,
+      "passed": true
+    },
+    {
+      "name": "oriented sphere degree 0",
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oriented sphere degree 1",
+      "scaled_residual": 2.6423307986078726e-14,
+      "passed": true
+    },
+    {
+      "name": "oriented sphere degree 4",
+      "scaled_residual": 2.6423307986078726e-14,
+      "passed": true
+    }
+  ],
+  "trial": [
+    {
+      "beta_squared": 1.5,
+      "c": 0.4330127018922193,
+      "energy_over_2pi_v2": 0.9582122893692611
+    },
+    {
+      "beta_squared": 2.0,
+      "c": 0.5,
+      "energy_over_2pi_v2": 1.025199587476959
+    },
+    {
+      "beta_squared": 5.0,
+      "c": 0.9,
+      "energy_over_2pi_v2": 1.3224218096988136
+    }
+  ],
+  "script_sha256": "85ea9a87eafa7fc400815bcb085cad7c39130cb2705fa139b384db337027d47c"
+}

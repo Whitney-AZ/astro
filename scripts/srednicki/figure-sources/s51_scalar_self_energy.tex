@@ -1,0 +1,47 @@
+% Original vector reconstruction of Fig.51.1, PDF219 / printed207.
+% Three contributions: a directed fermion bubble, a scalar tadpole,
+% and the scalar two-point counterterm. Scalar arrows only specify momentum.
+% The fermion-loop matrix trace is read against the clockwise arrows.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+  line cap=round,line join=round,font=\fontsize{10.5}{12}\selectfont,
+  scalar/.style={dash pattern=on 2.1pt off 1.8pt}]
+  % Fermion bubble: upper line L -> R carries k+ell; lower R -> L carries ell.
+  \draw[scalar] (0,0)--(13,0) (33,0)--(46,0);
+  \draw[->] (3,0)--(9,0);
+  \draw[->] (37,0)--(43,0);
+  \draw (23,0) circle[radius=10mm];
+  \draw[->] (21.263518,9.848078)
+    arc[start angle=100,end angle=80,radius=10mm];
+  \draw[->] (24.736482,-9.848078)
+    arc[start angle=280,end angle=260,radius=10mm];
+  \fill (13,0) circle[radius=.55mm];
+  \fill (33,0) circle[radius=.55mm];
+  \node[above] at (23,12) {$k+\ell$};
+  \node[below] at (23,-12) {$\ell$};
+  \node[below] at (6,-2) {$k$};
+  \node[below] at (40,-2) {$k$};
+  \node at (54,0) {$+$};
+  % One quartic vertex: two external legs and both ends of the scalar loop.
+  \begin{scope}[shift={(63,0)}]
+    \draw[scalar] (0,0)--(32,0);
+    \draw[scalar] (16,10) circle[radius=10mm];
+    \draw[->] (4,0)--(11,0);
+    \draw[->] (21,0)--(28,0);
+    \draw[->] (14.263518,19.848078)
+      arc[start angle=100,end angle=80,radius=10mm];
+    \fill (16,0) circle[radius=.55mm];
+    \node at (16,15) {$\ell$};
+    \node[below] at (4,-2) {$k$};
+    \node[below] at (28,-2) {$k$};
+  \end{scope}
+  \node at (102,0) {$+$};
+  % The cross denotes the complete scalar quadratic counterterm insertion.
+  \begin{scope}[shift={(111,0)}]
+    \draw[scalar] (0,0)--(28,0);
+    \draw[->] (3,0)--(10,0);
+    \draw[->] (18,0)--(25,0);
+    \draw (12.2,-1.8)--(15.8,1.8) (12.2,1.8)--(15.8,-1.8);
+    \node[below] at (5,-2) {$k$};
+    \node[below] at (23,-2) {$k$};
+  \end{scope}
+\end{tikzpicture}

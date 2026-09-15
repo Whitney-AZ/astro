@@ -1,0 +1,43 @@
+% Original vector reconstruction of source Fig.61.2, PDF255.
+% Source middle lower-photon label corrected by momentum conservation.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{9.5}{11}\selectfont]
+ \foreach \offset in {0,56}{
+  \begin{scope}[shift={(\offset,0)}]
+   \draw[dashed] (0,12)--(16,12)--(16,-12)--(0,-12);
+   \draw[->] (3,12)--(9,12);
+   \draw[->] (16,5)--(16,-3);
+   \draw[->] (9,-12)--(3,-12);
+   \foreach \height in {12,-12}{
+    \draw[domain=0:29,samples=91,smooth,variable=\u]
+     plot ({16+\u},{\height+.8*sin(50*\u)});
+    \draw[->] (32,\height)--(38,\height);
+    \fill (16,\height) circle[radius=.5mm];
+   }
+   \node[above] at (5,14) {$p$};
+   \node[below] at (5,-14) {$-q$};
+  \end{scope}
+ }
+ \node[right] at (17,0) {$p-k$};
+ \node[right] at (73,0) {$p-l$};
+ \node[above] at (37,14) {$k$};
+ \node[below] at (37,-14) {$l$};
+ \node[above] at (93,14) {$l$};
+ \node[below] at (93,-14) {$k$};
+ \node at (50,0) {$+$};
+ \node at (107,0) {$+$};
+ \draw[dashed] (113,12)--(126,0)--(113,-12);
+ \draw[->] (116,9.231)--(121,4.615);
+ \draw[->] (121,-4.615)--(116,-9.231);
+ \node[above] at (115,14) {$p$};
+ \node[below] at (115,-14) {$-q$};
+ \foreach \direction in {-1,1}{
+  \draw[domain=0:22,samples=91,smooth,variable=\u]
+   plot ({126+\u},{\direction*(12*\u/22)+.75*sin(65*\u)});
+  \draw[->] ({126+13},{\direction*12*13/22})
+   --({126+18},{\direction*12*18/22});
+ }
+ \fill (126,0) circle[radius=.55mm];
+ \node[above] at (145,14) {$k$};
+ \node[below] at (145,-14) {$l$};
+\end{tikzpicture}

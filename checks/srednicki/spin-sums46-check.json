@@ -1,0 +1,301 @@
+{
+  "status": "pass",
+  "executed_utc": "2026-09-14T12:07:10.964359+00:00",
+  "python_version": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "numpy_version": "2.3.3",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "script_sha256": "7143bd25888a71a5c919f9318a20eee42bcb853b8bc26c4082925efa2877b16f",
+  "random_seed": null,
+  "sampling": "Seven fully specified deterministic kinematic points; no random draws.",
+  "conventions": {
+    "metric": "(-,+,+,+)",
+    "gamma_anticommutator": "-2g",
+    "slash": "-p0 gamma0 + pi gammai",
+    "rest_spinors": "u=sqrt(m)(e,e), v=sqrt(m)(E e,-E e), E=[[0,-1],[1,0]]",
+    "spinors": "Source38 rotation-free boost; no prior spinor-check script imported or rerun.",
+    "pair_basis_rotations_theta_phi": [
+      [0.31, 0.82],
+      [1.11, -0.44],
+      [0.71, 1.37],
+      [1.43, -0.93]
+    ],
+    "propagators": "Real off-pole tree denominators; no finite width or absorptive part.",
+    "spin_average": "1/2 for one unpolarized initial fermion;1/4 for independent unpolarized pair."
+  },
+  "normalized_error_definition": "abs(actual-expected)/max(1,abs(actual),abs(expected))",
+  "tolerance": 1e-8,
+  "scalar_comparisons": 230,
+  "max_normalized_error": 9.159339953157541e-16,
+  "categories": {
+    "electron_original_vs_on_shell_reduced": {
+      "count": 12,
+      "max_normalized_error": 2.0930018683164347e-16
+    },
+    "electron_polarized_trace": {
+      "count": 12,
+      "max_normalized_error": 3.945768488926512e-16
+    },
+    "electron_unpolarized_trace": {
+      "count": 3,
+      "max_normalized_error": 2.2204489523360273e-16
+    },
+    "electron_scalar_contraction": {
+      "count": 3,
+      "max_normalized_error": 2.5891214513729785e-16
+    },
+    "pair_ordered_interference1": {
+      "count": 64,
+      "max_normalized_error": 8.090966715677258e-16
+    },
+    "pair_ordered_interference2": {
+      "count": 64,
+      "max_normalized_error": 9.159339953157541e-16
+    },
+    "pair_polarized_four_term_trace": {
+      "count": 64,
+      "max_normalized_error": 8.332680591475524e-16
+    },
+    "pair_unpolarized_trace": {
+      "count": 4,
+      "max_normalized_error": 6.397549157099997e-16
+    },
+    "pair_mandelstam_reduction": {
+      "count": 4,
+      "max_normalized_error": 6.397549157099997e-16
+    }
+  },
+  "electron_scalar_cases": [
+    {
+      "name": "electron_generic",
+      "parameters": {
+        "g": 0.7,
+        "m": 1.0,
+        "M": 0.6,
+        "q_cm": 0.8,
+        "theta": 1.1,
+        "phi": 0.73
+      },
+      "four_momenta": {
+        "p": [1.2806248474865698, 0.0, 0.0, 0.8],
+        "k": [1.0, 0.0, 0.0, -0.8],
+        "pprime": [1.2806248474865698, 0.5312839295193039, 0.47545530153342286, 0.3628768971404619],
+        "kprime": [1.0, -0.5312839295193039, -0.47545530153342286, -0.3628768971404619]
+      },
+      "mandelstam": {
+        "s": 5.20124969497314,
+        "t": -0.6993969645752611,
+        "u": -1.7818527303978788
+      },
+      "explicit_4_spin_amplitudes_averaged": 0.5928056177796353,
+      "trace_average": 0.5928056177796355,
+      "scalar_contraction": 0.5928056177796351,
+      "max_polarized_normalized_error": 2.220598484842438e-16,
+      "largest_imaginary_spin_amplitude": 0.18003970059454952,
+      "threshold_exact_expectation": null
+    },
+    {
+      "name": "electron_threshold",
+      "parameters": {
+        "g": 0.5,
+        "m": 1.0,
+        "M": 0.5,
+        "q_cm": 0.0,
+        "theta": 0.7,
+        "phi": 1.2
+      },
+      "four_momenta": {
+        "p": [1.0, 0.0, 0.0, 0.0],
+        "k": [0.5, 0.0, 0.0, -0.0],
+        "pprime": [1.0, 0.0, 0.0, 0.0],
+        "kprime": [0.5, -0.0, -0.0, -0.0]
+      },
+      "mandelstam": {
+        "s": 2.25,
+        "t": -0.0,
+        "u": 0.25
+      },
+      "explicit_4_spin_amplitudes_averaged": 2.7733391199176196e-32,
+      "trace_average": 1.232595164407831e-32,
+      "scalar_contraction": 0.0,
+      "max_polarized_normalized_error": 1.5407439555097887e-32,
+      "largest_imaginary_spin_amplitude": 0.0,
+      "threshold_exact_expectation": 0.0
+    },
+    {
+      "name": "electron_high_energy",
+      "parameters": {
+        "g": 0.8,
+        "m": 1.0,
+        "M": 0.5,
+        "q_cm": 25.0,
+        "theta": 1.27,
+        "phi": 0.51
+      },
+      "four_momenta": {
+        "p": [25.019992006393608, 0.0, 0.0, 25.0],
+        "k": [25.004999500099974, 0.0, 0.0, -25.0],
+        "pprime": [25.019992006393608, 20.83897564898245, 11.656462654371111, 7.407021823132968],
+        "kprime": [25.004999500099974, -20.83897564898245, -11.656462654371111, -7.407021823132968]
+      },
+      "mandelstam": {
+        "s": 2502.4997752247546,
+        "t": -879.6489088433516,
+        "u": -1620.3508663814032
+      },
+      "explicit_4_spin_amplitudes_averaged": 1.715211967420716,
+      "trace_average": 1.715211967420716,
+      "scalar_contraction": 1.7152119674207156,
+      "max_polarized_normalized_error": 3.945768488926512e-16,
+      "largest_imaginary_spin_amplitude": 0.37488804320558566,
+      "threshold_exact_expectation": null
+    }
+  ],
+  "pair_cases": [
+    {
+      "name": "pair_generic",
+      "parameters": {
+        "g": 0.7,
+        "m": 1.0,
+        "M": 0.6,
+        "q_cm": 0.8,
+        "theta": 1.1,
+        "phi": 0.73
+      },
+      "four_momenta": {
+        "p1": [1.2806248474865698, 0.0, 0.0, 0.8],
+        "p2": [1.2806248474865698, 0.0, 0.0, -0.8],
+        "p1prime": [
+          1.2806248474865698, 0.5312839295193039, 0.47545530153342286, 0.3628768971404619
+        ],
+        "p2prime": [
+          1.2806248474865698, -0.5312839295193039, -0.47545530153342286, -0.3628768971404619
+        ]
+      },
+      "mandelstam": {
+        "s": 6.5600000000000005,
+        "t": -0.6993969645752611,
+        "u": -1.8606030354247394
+      },
+      "explicit_16_spin_amplitudes_averaged": 4.661128180042625,
+      "trace_average": 4.661128180042626,
+      "mandelstam_expression": 4.661128180042624,
+      "max_polarized_normalized_error": 8.332680591475524e-16,
+      "max_imaginary_polarized_interference_trace": 1.891734012477736,
+      "unpolarized_interference_traces": [-5.708736108170487, -5.708736108170486],
+      "threshold_exact_expectation": null,
+      "massless_M0_tree_value": null,
+      "relative_difference_from_massless_M0_limit": null,
+      "heavy_kernel_leading_value": null,
+      "relative_heavy_correction": null,
+      "s_over_M2": null
+    },
+    {
+      "name": "pair_threshold",
+      "parameters": {
+        "g": 0.5,
+        "m": 1.0,
+        "M": 0.7,
+        "q_cm": 0.0,
+        "theta": 0.9,
+        "phi": 0.6
+      },
+      "four_momenta": {
+        "p1": [1.0, 0.0, 0.0, 0.0],
+        "p2": [1.0, 0.0, 0.0, -0.0],
+        "p1prime": [1.0, 0.0, 0.0, 0.0],
+        "p2prime": [1.0, -0.0, -0.0, -0.0]
+      },
+      "mandelstam": {
+        "s": 4.0,
+        "t": -0.0,
+        "u": -0.0
+      },
+      "explicit_16_spin_amplitudes_averaged": 4.164931278633906,
+      "trace_average": 4.164931278633904,
+      "mandelstam_expression": 4.164931278633904,
+      "max_polarized_normalized_error": 7.332364618642103e-16,
+      "max_imaginary_polarized_interference_trace": 5.434529307394967e-33,
+      "unpolarized_interference_traces": [0.0, 0.0],
+      "threshold_exact_expectation": 4.164931278633904,
+      "massless_M0_tree_value": null,
+      "relative_difference_from_massless_M0_limit": null,
+      "heavy_kernel_leading_value": null,
+      "relative_heavy_correction": null,
+      "s_over_M2": null
+    },
+    {
+      "name": "pair_heavy_scalar",
+      "parameters": {
+        "g": 0.6,
+        "m": 1.0,
+        "M": 50.0,
+        "q_cm": 1.3,
+        "theta": 0.81,
+        "phi": 0.42
+      },
+      "four_momenta": {
+        "p1": [1.6401219466856725, 0.0, 0.0, 1.3],
+        "p2": [1.6401219466856725, 0.0, 0.0, -1.3],
+        "p1prime": [1.6401219466856725, 0.8597401910856585, 0.3839363662763268, 0.896347962837271],
+        "p2prime": [
+          1.6401219466856725, -0.8597401910856585, -0.3839363662763268, -0.896347962837271
+        ]
+      },
+      "mandelstam": {
+        "s": 10.76,
+        "t": -1.0494952966230955,
+        "u": -5.710504703376905
+      },
+      "explicit_16_spin_amplitudes_averaged": 1.7244894013385169e-6,
+      "trace_average": 1.7244894013385165e-6,
+      "mandelstam_expression": 1.7244894013385165e-6,
+      "max_polarized_normalized_error": 1.0588800984651521e-21,
+      "max_imaginary_polarized_interference_trace": 9.701490336613661,
+      "unpolarized_interference_traces": [-23.098898843686225, -23.09889884368623],
+      "threshold_exact_expectation": null,
+      "massless_M0_tree_value": null,
+      "relative_difference_from_massless_M0_limit": null,
+      "heavy_kernel_leading_value": 1.7157889602481694e-6,
+      "relative_heavy_correction": 0.005070810741834464,
+      "s_over_M2": 0.004304
+    },
+    {
+      "name": "pair_near_massless",
+      "parameters": {
+        "g": 0.65,
+        "m": 1e-5,
+        "M": 0.0,
+        "q_cm": 1.7,
+        "theta": 0.83,
+        "phi": 1.29
+      },
+      "four_momenta": {
+        "p1": [1.7000000000294118, 0.0, 0.0, 1.7],
+        "p2": [1.7000000000294118, 0.0, 0.0, -1.7],
+        "p1prime": [1.7000000000294118, 0.3476435183992529, 1.2053515717781975, 1.147288792121154],
+        "p2prime": [
+          1.7000000000294118, -0.3476435183992529, -1.2053515717781975, -1.147288792121154
+        ]
+      },
+      "mandelstam": {
+        "s": 11.5600000004,
+        "t": -1.8792181067880755,
+        "u": -9.680781893211924
+      },
+      "explicit_16_spin_amplitudes_averaged": 0.5355187500318197,
+      "trace_average": 0.5355187500318193,
+      "mandelstam_expression": 0.5355187500318193,
+      "max_polarized_normalized_error": 1.1201285272376296e-16,
+      "max_imaginary_polarized_interference_trace": 4.125118616258631,
+      "unpolarized_interference_traces": [43.447522622699054, 43.447522622699054],
+      "threshold_exact_expectation": null,
+      "massless_M0_tree_value": 0.53551875,
+      "relative_difference_from_massless_M0_limit": 5.94184701441236e-11,
+      "heavy_kernel_leading_value": null,
+      "relative_heavy_correction": null,
+      "s_over_M2": null
+    }
+  ],
+  "failures": [],
+  "limitations": "Finite evidence for the tested points; no proof of all kinematics, loop corrections, continuum limits or source47 results."
+}

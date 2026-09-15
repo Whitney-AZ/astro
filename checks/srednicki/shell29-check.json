@@ -1,0 +1,160 @@
+{
+  "scipy": "1.16.2",
+  "strict_shells": [
+    {
+      "dimension": 4,
+      "mass": 0.0,
+      "inner": 1.0,
+      "outer": 3.0,
+      "bubble_at_zero": 0.013914087181483821,
+      "boundary_slope": -0.0035835038259110557,
+      "samples": [
+        {
+          "q": 0.03,
+          "bubble": 0.013806581439566964,
+          "slope": -0.003583524730561896,
+          "relative_slope_error": 5.833578490710423e-6
+        },
+        {
+          "q": 0.01,
+          "bubble": 0.013878252119998205,
+          "slope": -0.003583506148561663,
+          "relative_slope_error": 6.481507262012798e-7
+        },
+        {
+          "q": 0.003,
+          "bubble": 0.013903336669378987,
+          "slope": -0.003583504034944858,
+          "relative_slope_error": 5.83322392611052e-8
+        },
+        {
+          "q": 0.001,
+          "bubble": 0.013910503677634686,
+          "slope": -0.0035835038491357357,
+          "relative_slope_error": 6.480997738478322e-9
+        },
+        {
+          "q": 0.0003,
+          "bubble": 0.013913012130335424,
+          "slope": -0.003583503827992348,
+          "relative_slope_error": 5.807980762995157e-10
+        },
+        {
+          "q": 0.0001,
+          "bubble": 0.01391372883110121,
+          "slope": -0.0035835038261072816,
+          "relative_slope_error": 5.4758197975957046e-11
+        }
+      ]
+    },
+    {
+      "dimension": 4,
+      "mass": 0.7,
+      "inner": 1.0,
+      "outer": 3.0,
+      "bubble_at_zero": 0.0099689705540317,
+      "boundary_slope": -0.002016338952095074,
+      "samples": [
+        {
+          "q": 0.03,
+          "bubble": 0.009908011223082578,
+          "slope": -0.0020319776983040534,
+          "relative_slope_error": 0.007756010561979165
+        },
+        {
+          "q": 0.01,
+          "bubble": 0.009948754524665813,
+          "slope": -0.0020216029365886443,
+          "relative_slope_error": 0.0026106644858001626
+        },
+        {
+          "q": 0.003,
+          "bubble": 0.009962916783300224,
+          "slope": -0.0020179235771586083,
+          "relative_slope_error": 0.0007858922042287553
+        },
+        {
+          "q": 0.001,
+          "bubble": 0.009966953686351976,
+          "slope": -0.0020168676797237273,
+          "relative_slope_error": 0.0002622216012362344
+        },
+        {
+          "q": 0.0003,
+          "bubble": 0.009968365604744215,
+          "slope": -0.0020164976249498665,
+          "relative_slope_error": 7.869354238665416e-5
+        },
+        {
+          "q": 0.0001,
+          "bubble": 0.009968768914846889,
+          "slope": -0.002016391848110033,
+          "relative_slope_error": 2.623369196119718e-5
+        }
+      ]
+    },
+    {
+      "dimension": 6,
+      "mass": 0.0,
+      "inner": 1.0,
+      "outer": 3.0,
+      "bubble_at_zero": 0.0020157209020749685,
+      "boundary_slope": -0.00034219940848947793,
+      "samples": [
+        {
+          "q": 0.03,
+          "bubble": 0.0020052897675800914,
+          "slope": -0.00034770448316256747,
+          "relative_slope_error": 0.016087329599398847
+        },
+        {
+          "q": 0.01,
+          "bubble": 0.0020122804884861313,
+          "slope": -0.0003440413588837177,
+          "relative_slope_error": 0.0053826814089785735
+        },
+        {
+          "q": 0.003,
+          "bubble": 0.0020146926439126222,
+          "slope": -0.00034275272078208044,
+          "relative_slope_error": 0.001616929424410607
+        },
+        {
+          "q": 0.001,
+          "bubble": 0.002015378518159795,
+          "slope": -0.00034238391517348726,
+          "relative_slope_error": 0.0005391788513713358
+        },
+        {
+          "q": 0.0003,
+          "bubble": 0.002015618225644639,
+          "slope": -0.00034225476776457436,
+          "relative_slope_error": 0.00016177490002333705
+        },
+        {
+          "q": 0.0001,
+          "bubble": 0.0020156866802887416,
+          "slope": -0.000342217862268554,
+          "relative_slope_error": 5.392697537831559e-5
+        }
+      ]
+    }
+  ],
+  "fixed_domain_expected_q_squared": -0.00018454131279539398,
+  "fixed_domain_samples": [
+    {
+      "q": 0.1,
+      "q_squared_coefficient": -0.000184541312795404
+    },
+    {
+      "q": 0.03,
+      "q_squared_coefficient": -0.00018454131279523056
+    },
+    {
+      "q": 0.01,
+      "q_squared_coefficient": -0.00018454131279523056
+    }
+  ],
+  "scope": "Finite four- and six-dimensional bubble integrals; no UV-limit or nonperturbative claim.",
+  "result": "All assertions passed; integration warnings treated as errors."
+}

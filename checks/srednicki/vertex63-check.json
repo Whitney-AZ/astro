@@ -1,0 +1,177 @@
+{
+  "executed_at_utc": "2026-09-14T13:07:21.392879+00:00",
+  "executed_script_sha256": "cebb2abe7910013d301bd73e4d14029fca6a68c9193cdbde3e1c106cf6edf1cb",
+  "software": {
+    "Python": "3.14.4",
+    "NumPy": "2.3.3",
+    "SciPy": "1.16.2"
+  },
+  "conventions": "g=(-,+,+,+); Clifford=-2g; slash p = p_mu gamma^mu; m>0; future equal-mass electron shells; q=pprime-p; epsilon0123=+1",
+  "scope": "Finite evidence for C63.16/17/28/14/30 and EX63.1.4; not a proof of all kinematics or of convergence.",
+  "projected_chains": [
+    {
+      "mu": 0,
+      "formula": "C63.16",
+      "four_spin_pair_residuals": [
+        [1.8154459269914587e-15, 1.3978039664347968e-15],
+        [1.4046076445151095e-15, 1.8168907707752638e-15]
+      ]
+    },
+    {
+      "mu": 0,
+      "formula": "C63.17",
+      "four_spin_pair_residuals": [
+        [7.112907803094564e-15, 1.2229000784269697e-15],
+        [1.2539255187600815e-15, 7.113229329843195e-15]
+      ]
+    },
+    {
+      "mu": 1,
+      "formula": "C63.16",
+      "four_spin_pair_residuals": [
+        [6.280369834735101e-16, 7.228449307508886e-16],
+        [4.460365043975677e-16, 4.965068306494546e-16]
+      ]
+    },
+    {
+      "mu": 1,
+      "formula": "C63.17",
+      "four_spin_pair_residuals": [
+        [1.5700924586837751e-15, 5.003707553108401e-16],
+        [2.237726045655905e-16, 1.3506446028928517e-15]
+      ]
+    },
+    {
+      "mu": 2,
+      "formula": "C63.16",
+      "four_spin_pair_residuals": [
+        [2.6945789820192466e-16, 1.0049724871352544e-15],
+        [7.216449660063518e-16, 4.847302891456678e-16]
+      ]
+    },
+    {
+      "mu": 2,
+      "formula": "C63.17",
+      "four_spin_pair_residuals": [
+        [1.2351231148954867e-15, 7.85544391644306e-16],
+        [5.274015853390341e-16, 1.4253136684913485e-15]
+      ]
+    },
+    {
+      "mu": 3,
+      "formula": "C63.16",
+      "four_spin_pair_residuals": [
+        [2.6663055345771238e-15, 2.220446049250313e-16],
+        [2.482534153247273e-16, 1.7783073324607987e-15]
+      ]
+    },
+    {
+      "mu": 3,
+      "formula": "C63.17",
+      "four_spin_pair_residuals": [
+        [8.934752161915345e-16, 1.542371118540254e-15],
+        [1.4217791915866692e-15, 8.326672684688674e-17]
+      ]
+    }
+  ],
+  "parity_dual": [
+    {
+      "mu": 0,
+      "matrix_max_residual": 4.440892098500626e-16
+    },
+    {
+      "mu": 1,
+      "matrix_max_residual": 4.440892098500626e-16
+    },
+    {
+      "mu": 2,
+      "matrix_max_residual": 4.440892098500626e-16
+    },
+    {
+      "mu": 3,
+      "matrix_max_residual": 4.440892098500626e-16
+    }
+  ],
+  "pauli_integral": [
+    {
+      "q2_over_m2": 0.1,
+      "original_simplex_gauss64x64": 0.9836596790135311,
+      "closed": 0.9836596790135311,
+      "absolute_residual": 0.0,
+      "note": "Interior nodes evaluate original x1,x3 integrand and variable interval; no endpoint cancellation in code."
+    },
+    {
+      "q2_over_m2": 4.0,
+      "original_simplex_gauss64x64": 0.6232252401402308,
+      "closed": 0.6232252401402306,
+      "absolute_residual": 2.220446049250313e-16,
+      "note": "Interior nodes evaluate original x1,x3 integrand and variable interval; no endpoint cancellation in code."
+    },
+    {
+      "q2_over_m2": 30.0,
+      "original_simplex_gauss64x64": 0.21697155638897594,
+      "closed": 0.21697155638897592,
+      "absolute_residual": 2.7755575615628914e-17,
+      "note": "Interior nodes evaluate original x1,x3 integrand and variable interval; no endpoint cancellation in code."
+    }
+  ],
+  "finite_ward": [
+    {
+      "m_gamma_over_m": 0.03,
+      "kappa1": -4.649115412793763,
+      "kappa2": -6.064427038681822,
+      "deltaZ1_over_c_plus_1_over_epsilon": 5.59369464878408,
+      "deltaZ2_over_c_plus_1_over_epsilon": 5.59369464878408,
+      "absolute_residual": 0.0,
+      "sum_estimated_quadrature_errors": 1.1490623430803684e-11
+    },
+    {
+      "m_gamma_over_m": 0.15,
+      "kappa1": -1.905546246086585,
+      "kappa2": -3.0727551896824,
+      "deltaZ1_over_c_plus_1_over_epsilon": 2.883367846492969,
+      "deltaZ2_over_c_plus_1_over_epsilon": 2.883367846492969,
+      "absolute_residual": 0.0,
+      "sum_estimated_quadrature_errors": 4.314741281220418e-12
+    },
+    {
+      "m_gamma_over_m": 0.5,
+      "kappa1": -0.5255155246702865,
+      "kappa2": -1.294858912452804,
+      "deltaZ1_over_c_plus_1_over_epsilon": 1.6535067725055546,
+      "deltaZ2_over_c_plus_1_over_epsilon": 1.6535067725055546,
+      "absolute_residual": 0.0,
+      "sum_estimated_quadrature_errors": 2.8030805108725892e-14
+    }
+  ],
+  "infrared_slope": {
+    "integrals": [
+      {
+        "m_gamma_over_m": 0.003,
+        "full_regulated_F1_bracket": 11.597211870282317,
+        "weighted_estimated_t_quadrature_error": 6.794669997719753e-13
+      },
+      {
+        "m_gamma_over_m": 0.0003,
+        "full_regulated_F1_bracket": 16.384595835759484,
+        "weighted_estimated_t_quadrature_error": 2.83397778670509e-11
+      }
+    ],
+    "q2_over_m2": 2.0,
+    "difference_quotient_in_log_1_over_a": 2.079134438958841,
+    "derived_log_coefficient": 2.082767970407571,
+    "absolute_difference": 0.0036335314487296877,
+    "acceptance_absolute_tolerance": 0.02,
+    "note": "Finite-regulator asymptotic evidence; t quadrature estimates exclude Gauss-y error; not a rigorous remainder bound."
+  },
+  "input": {
+    "mass": 1.4,
+    "mu_scale": 0.9,
+    "p": [1.6278820596099706, 0.4, -0.2, 0.7],
+    "pprime": [1.630950643030009, -0.3, 0.6, 0.5],
+    "x1": 0.21,
+    "x2": 0.35
+  },
+  "scalar_comparisons": 43,
+  "status": "pass"
+}

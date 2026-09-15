@@ -1,0 +1,50 @@
+{
+  "scope": "Scalar tree amplitude angular integral, identical final-state factor 1/2, and first low/high-energy corrections",
+  "passed": true,
+  "cases": [
+    {
+      "s_over_m2": 4.0001,
+      "quadrature": 0.006906857199216132,
+      "closed_form": 0.006906857199216132,
+      "relative_error": 0.0
+    },
+    {
+      "s_over_m2": 4.01,
+      "quadrature": 0.006817751051604562,
+      "closed_form": 0.006817751051604561,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "s_over_m2": 5,
+      "quadrature": 0.0025734340882572608,
+      "closed_form": 0.002573434088257259,
+      "relative_error": 6.661338147750939e-16
+    },
+    {
+      "s_over_m2": 10,
+      "quadrature": 0.00031440825377494747,
+      "closed_form": 0.00031440825377494736,
+      "relative_error": 4.440892098500626e-16
+    },
+    {
+      "s_over_m2": 100,
+      "quadrature": 2.063069213861415e-6,
+      "closed_form": 2.0630692138614145e-6,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "s_over_m2": 1000,
+      "quadrature": 1.996447435049556e-8,
+      "closed_form": 1.996447435049555e-8,
+      "relative_error": 4.440892098500626e-16
+    },
+    {
+      "s_over_m2": 1000000.0,
+      "quadrature": 1.9894437517523283e-14,
+      "closed_form": 1.9894437517523173e-14,
+      "relative_error": 5.551115123125783e-15
+    }
+  ],
+  "nr_first_coefficient": 1.3166529750585632,
+  "ur_first_coefficient": 3.5000042220012517
+}

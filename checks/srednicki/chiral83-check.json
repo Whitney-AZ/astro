@@ -1,0 +1,1788 @@
+{
+  "checks": 295,
+  "passed": true,
+  "max_scaled_residual": 1.4210854715202005e-15,
+  "records": [
+    {
+      "name": "massive momentum",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 1, 1)",
+      "residual": 7.105427357601002e-15,
+      "scaled_residual": 3.123264772571869e-16,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 0, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 0, 1)",
+      "residual": 1.7763568394002505e-15,
+      "scaled_residual": 1.7330310628295127e-16,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 1, 0)",
+      "residual": 1.7763568394002505e-15,
+      "scaled_residual": 1.7330310628295127e-16,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 1, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (0, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 0, 1)",
+      "residual": 1.7763568394002505e-15,
+      "scaled_residual": 1.7330310628295127e-16,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 1, 0)",
+      "residual": 1.7763568394002505e-15,
+      "scaled_residual": 1.7330310628295127e-16,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 0, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 0, 0)",
+      "residual": 7.105427357601002e-15,
+      "scaled_residual": 3.123264772571869e-16,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 1, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (1, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 0, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 1, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massive flavors (2, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless momentum",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 1, 1)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202004e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 0, 2, 2)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202004e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 0, 1)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202005e-15,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 1, 0)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.5789838572446671e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 1, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (0, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 0, 1)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.5789838572446671e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 1, 0)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202005e-15,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 0, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 0, 0)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202004e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 1, 2, 2)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202004e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (1, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 0, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 1, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 0, 0)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202004e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 1, 1)",
+      "residual": 3.552713678800501e-15,
+      "scaled_residual": 1.4210854715202004e-16,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless flavors (2, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell momentum",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 0, 0)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500624e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 1, 1)",
+      "residual": 3.3306690738754696e-16,
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 0, 2, 2)",
+      "residual": 5.551115123125783e-16,
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 0, 1)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 1.2393187251629654e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 1, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 0, 2)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 1.2393187251629654e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 2, 0)",
+      "residual": 8.881784197001252e-16,
+      "scaled_residual": 2.5995465942442693e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (0, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 1, 0)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 1.2393187251629654e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 0, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 0, 0)",
+      "residual": 3.3306690738754696e-16,
+      "scaled_residual": 3.3306690738754696e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 1, 1)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500624e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 1, 2, 2)",
+      "residual": 5.551115123125783e-16,
+      "scaled_residual": 5.551115123125783e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 1, 2)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 1.2393187251629654e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 2, 1)",
+      "residual": 8.881784197001252e-16,
+      "scaled_residual": 2.5995465942442693e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (1, 2, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 0, 2)",
+      "residual": 1.3322676295501878e-15,
+      "scaled_residual": 3.8993198913664035e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 2, 0)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 1.2393187251629654e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 0, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 0, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 1, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 1, 2)",
+      "residual": 1.3322676295501878e-15,
+      "scaled_residual": 3.8993198913664035e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 2, 1)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 1.2393187251629654e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 1, 2, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 0, 0)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 0, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 0, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 1, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 1, 1)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 1, 2)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 2, 0)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 2, 1)",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "off shell flavors (2, 2, 2, 2)",
+      "residual": 4.440892098500626e-16,
+      "scaled_residual": 4.440892098500624e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=False mass block 1",
+      "residual": 2.2887833992611187e-16,
+      "scaled_residual": 1.4490084109906093e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=False mass block 2",
+      "residual": 6.661338147750939e-16,
+      "scaled_residual": 4.2172339277101327e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=False invariant mass",
+      "residual": 2.235644561308171e-16,
+      "scaled_residual": 2.235644561308171e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=False pseudoscalar block",
+      "residual": 2.235644561308171e-16,
+      "scaled_residual": 2.235644561308171e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=False trace",
+      "residual": 2.482534153247273e-16,
+      "scaled_residual": 1.2380991442884513e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=False full mass",
+      "residual": 4.627551674018281e-16,
+      "scaled_residual": 3.5822044113995765e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=False Dirac hermiticity",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=True mass block 1",
+      "residual": 2.482534153247273e-16,
+      "scaled_residual": 1.320108524728523e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=True mass block 2",
+      "residual": 1.4043333874306805e-15,
+      "scaled_residual": 7.467661517901663e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=True invariant mass",
+      "residual": 6.6614944926174165e-16,
+      "scaled_residual": 6.6614944926174165e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=True pseudoscalar block",
+      "residual": 6.6614944926174165e-16,
+      "scaled_residual": 6.6614944926174165e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=True trace",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 6.408144101876374e-17,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=True full mass",
+      "residual": 1.3334236103572998e-15,
+      "scaled_residual": 5.73838241892031e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 1 shifted=True Dirac hermiticity",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=False mass block 1",
+      "residual": 2.220446049250313e-16,
+      "scaled_residual": 1.39279601259932e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=False mass block 2",
+      "residual": 1.0677783136387646e-15,
+      "scaled_residual": 6.697741555478091e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=False invariant mass",
+      "residual": 1.1113951136755565e-15,
+      "scaled_residual": 1.1113951136755565e-15,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=False pseudoscalar block",
+      "residual": 1.1113951136755565e-15,
+      "scaled_residual": 1.1113951136755565e-15,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=False trace",
+      "residual": 2.2887833992611187e-16,
+      "scaled_residual": 1.4180396073598142e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=False full mass",
+      "residual": 8.95090418262362e-16,
+      "scaled_residual": 6.254144196824066e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=False Dirac hermiticity",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=True mass block 1",
+      "residual": 4.965068306494546e-16,
+      "scaled_residual": 2.593893788319447e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=True mass block 2",
+      "residual": 9.930136612989092e-16,
+      "scaled_residual": 5.187787576638894e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=True invariant mass",
+      "residual": 6.702576082133107e-16,
+      "scaled_residual": 6.702576082133107e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=True pseudoscalar block",
+      "residual": 6.702576082133107e-16,
+      "scaled_residual": 6.702576082133107e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=True trace",
+      "residual": 6.280369834735101e-16,
+      "scaled_residual": 3.7372095433448165e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=True full mass",
+      "residual": 5.889482005950448e-16,
+      "scaled_residual": 2.592908758205448e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 2 shifted=True Dirac hermiticity",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=False mass block 1",
+      "residual": 1.1102230246251565e-16,
+      "scaled_residual": 6.417819332839373e-17,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=False mass block 2",
+      "residual": 4.577566798522237e-16,
+      "scaled_residual": 2.64613469954278e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=False invariant mass",
+      "residual": 4.2032753107350314e-16,
+      "scaled_residual": 4.2032753107350314e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=False pseudoscalar block",
+      "residual": 4.2032753107350314e-16,
+      "scaled_residual": 4.2032753107350314e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=False trace",
+      "residual": 5.551115123125783e-17,
+      "scaled_residual": 5.385668070327969e-17,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=False full mass",
+      "residual": 4.47545209131181e-16,
+      "scaled_residual": 2.8438896685756027e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=False Dirac hermiticity",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=True mass block 1",
+      "residual": 4.577566798522237e-16,
+      "scaled_residual": 2.437727513480891e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=True mass block 2",
+      "residual": 1.1226435567921847e-15,
+      "scaled_residual": 5.9785016946292e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=True invariant mass",
+      "residual": 5.719657261115102e-16,
+      "scaled_residual": 5.719657261115102e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=True pseudoscalar block",
+      "residual": 5.719657261115102e-16,
+      "scaled_residual": 5.719657261115102e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=True trace",
+      "residual": 3.3306690738754696e-16,
+      "scaled_residual": 2.266570647872684e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=True full mass",
+      "residual": 1.4812222630807097e-15,
+      "scaled_residual": 6.889963948872378e-16,
+      "passed": true
+    },
+    {
+      "name": "matrix 3 shifted=True Dirac hermiticity",
+      "residual": 0.0,
+      "scaled_residual": 0.0,
+      "passed": true
+    },
+    {
+      "name": "neutral eigenvalues (0.0017, 0.0039, 0.076)",
+      "residual": 2.7755575615628914e-17,
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "neutral rotation (0.0017, 0.0039, 0.076)",
+      "residual": 2.42861286636753e-17,
+      "scaled_residual": 2.42861286636753e-17,
+      "passed": true
+    },
+    {
+      "name": "neutral eigenvalues (0.002, 0.002, 0.09)",
+      "residual": 8.673617379884035e-18,
+      "scaled_residual": 8.673617379884035e-18,
+      "passed": true
+    },
+    {
+      "name": "neutral rotation (0.002, 0.002, 0.09)",
+      "residual": 8.673617379884035e-18,
+      "scaled_residual": 8.673617379884035e-18,
+      "passed": true
+    },
+    {
+      "name": "neutral eigenvalues (0.003, 0.001, 0.05)",
+      "residual": 2.7755575615628914e-17,
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "neutral rotation (0.003, 0.001, 0.05)",
+      "residual": 2.7755575615628914e-17,
+      "scaled_residual": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "three flavor fit",
+      "residual": 5.204170427930421e-18,
+      "scaled_residual": 5.204170427930421e-18,
+      "passed": true
+    }
+  ],
+  "fit": {
+    "B0mq": [0.005753500000000005, 0.012471499999999996, 0.2355325],
+    "mu_over_md": 0.4613318365874199,
+    "ms_over_md": 18.885659303211327,
+    "eta_mass": 0.5657900081596823,
+    "cplus_mu_MeV": 1.107364617445671,
+    "cplus_md_MeV": 2.400364617445671,
+    "cplus_sum_MeV": 3.5077292348913427,
+    "cplus_over_B0": 0.19246799642750814
+  },
+  "script_sha256": "0e43070cf856c8a14f90e5d5541ac0715336d01d2b82b4ef3de64686a019e2f2"
+}

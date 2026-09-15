@@ -1,0 +1,95 @@
+{
+  "onshell_derivative_finite_difference": [-9.890636851998134e-12, 0.0],
+  "passed": true,
+  "scope": "One-loop self energy: parameter integral, all three real-axis branches, two on-shell zeros, and reconstructed spectral integral",
+  "cases": [
+    {
+      "u": -100,
+      "parameter_integral": [-16.249757902347785, 24.624956739107784],
+      "closed": [-16.249757884238736, 24.624956739107787],
+      "scaled_error": 6.13797947092312e-10
+    },
+    {
+      "u": -10,
+      "parameter_integral": [0.578432987214551, 1.2167336027920834],
+      "closed": [0.57843298809048, 1.2167336027920836],
+      "scaled_error": 6.501709360128279e-10
+    },
+    {
+      "u": -4.1,
+      "parameter_integral": [0.176834808042313, 0.0040886195252726985],
+      "closed": [0.17683480802337517, 0.004088619525272696],
+      "scaled_error": 1.8937823531573095e-11
+    },
+    {
+      "u": -4,
+      "parameter_integral": [0.1568996821170683, 0.0],
+      "closed": [0.15689968211710884, 0.0],
+      "scaled_error": 4.0523140398818214e-14
+    },
+    {
+      "u": -3.9,
+      "parameter_integral": [0.14032309023094477, 0.0],
+      "closed": [0.14032309023094472, 0.0],
+      "scaled_error": 5.551115123125783e-17,
+      "spectral_integral": 0.016685266377044563,
+      "spectral_error": 0.0
+    },
+    {
+      "u": -3,
+      "parameter_integral": [0.0542164724048999, 0.0],
+      "closed": [0.05421647240489985, 0.0],
+      "scaled_error": 4.85722573273506e-17,
+      "spectral_integral": 0.013554118101224973,
+      "spectral_error": 1.734723475976807e-18
+    },
+    {
+      "u": -1,
+      "parameter_integral": [0.0, 0.0],
+      "closed": [0.0, 0.0],
+      "scaled_error": 0.0,
+      "spectral_integral": 0.010633227372369644,
+      "spectral_error": 3.469446951953614e-18
+    },
+    {
+      "u": -0.1,
+      "parameter_integral": [0.00797368170997478, 0.0],
+      "closed": [0.007973681709974922, 0.0],
+      "scaled_error": 1.4224732503009818e-16,
+      "spectral_integral": 0.009844051493796031,
+      "spectral_error": 6.938893903907228e-18
+    },
+    {
+      "u": 0,
+      "parameter_integral": [0.00976698454955774, 0.0],
+      "closed": [0.009766984549557822, 0.0],
+      "scaled_error": 8.153200337090993e-17,
+      "spectral_integral": 0.009766984549557744,
+      "spectral_error": 3.469446951953614e-18
+    },
+    {
+      "u": 1,
+      "parameter_integral": [0.03633577049934503, 0.0],
+      "closed": [0.036335770499345145, 0.0],
+      "scaled_error": 1.1796119636642288e-16,
+      "spectral_integral": 0.009083942624836258,
+      "spectral_error": 1.734723475976807e-18
+    },
+    {
+      "u": 10,
+      "parameter_integral": [0.7291256391043521, 0.0],
+      "closed": [0.7291256391043532, 0.0],
+      "scaled_error": 1.1102230246251565e-15,
+      "spectral_integral": 0.006025831728135145,
+      "spectral_error": 3.469446951953614e-18
+    },
+    {
+      "u": 100,
+      "parameter_integral": [19.874166062611124, 0.0],
+      "closed": [19.874166062611074, 0.0],
+      "scaled_error": 2.5026454617775503e-15,
+      "spectral_integral": 0.0019482566476446504,
+      "spectral_error": 1.1718057080223332e-15
+    }
+  ]
+}

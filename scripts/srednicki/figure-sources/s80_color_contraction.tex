@@ -1,0 +1,76 @@
+% Original vector reconstruction of source Fig.80.4, PDF326 / printed314.
+% The two panels are the SAME contraction, before and after gluing.
+% Left rows: 1,2,3,4. Right rows: 1,2,4,3; conjugation reverses the trace arrows.
+% Gray guides identify equal a_r. Colored lines retain every strand connection.
+% After gluing, index orbits are (1 4 3) and (2), not two arbitrary circles.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.7pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{9}{11}\selectfont,
+ big/.style={draw=blue!65!black},small/.style={draw=orange!70!black}]
+\node at (31,52) {$(1\,2\,3\,4)\times(1\,2\,4\,3)^*$};
+% Open trace strands: arrows are reversed between the two conjugate factors.
+\draw[small,->] (13,40)..controls (3,40) and (3,30)..(13,30);
+\draw[big,->] (13,26)..controls (3,26) and (3,16)..(13,16);
+\draw[big,->] (13,12)..controls (3,12) and (3,2)..(13,2);
+\draw[big,->] (13,-2)..controls (-2,-2) and (-2,0)..(-2,13)
+ --(-2,29)..controls (-2,42) and (-1,44)..(13,44);
+\draw[big,->] (-2,17)--(-2,24);
+\draw[small,->] (49,30)..controls (59,30) and (59,40)..(49,40);
+\draw[big,->] (49,16)..controls (59,16) and (59,26)..(49,26);
+\draw[big,->] (49,2)..controls (59,2) and (59,12)..(49,12);
+\draw[big,->] (49,44)..controls (64,44) and (64,42)..(64,29)
+ --(64,13)..controls (64,0) and (62,-2)..(49,-2);
+\draw[big,->] (64,25)--(64,18);
+\foreach \lab/\yy in {1/42,2/28,3/14,4/0}
+  \node at (17,\yy) {$\lab$};
+\foreach \lab/\yy in {1/42,2/28,4/14,3/0}
+  \node at (45,\yy) {$\lab$};
+% Guides match whole matrix insertions, not extra propagator strands.
+\draw[gray,densely dashed,line width=.4pt] (21,42)--(41,42);
+\draw[gray,densely dashed,line width=.4pt] (21,28)--(41,28);
+\draw[gray,densely dashed,line width=.4pt] (21,14)--(41,0);
+\draw[gray,densely dashed,line width=.4pt] (21,0)--(41,14);
+\node at (31,35) {$\sum_{a_1,a_2,a_3,a_4}$};
+\node at (70,21) {\Large $=$};
+% The same trace curves with their matched endpoints joined explicitly.
+\begin{scope}[shift={(3,0)}]
+\draw[small] (84,40)..controls (76,40) and (76,30)..(84,30);
+\draw[big] (84,26)..controls (76,26) and (76,16)..(84,16);
+\draw[big] (84,12)..controls (76,12) and (76,2)..(84,2);
+\draw[big] (84,-2)..controls (73,-2) and (73,0)..(73,13)
+ --(73,29)..controls (73,42) and (75,44)..(84,44);
+\draw[big,->] (73,17)--(73,24);
+\draw[small] (122,30)..controls (130,30) and (130,40)..(122,40);
+\draw[big] (122,16)..controls (130,16) and (130,26)..(122,26);
+\draw[big] (122,2)..controls (130,2) and (130,12)..(122,12);
+\draw[big] (122,44)..controls (133,44) and (133,42)..(133,29)
+ --(133,13)..controls (133,0) and (131,-2)..(122,-2);
+\draw[big,->] (133,25)--(133,18);
+% Labels 1 and 2 join at the same height.
+\draw[big] (84,44)--(122,44);
+\draw[big,->] (99,44)--(107,44);
+\draw[small] (122,40)--(84,40);
+\draw[small,->] (107,40)--(99,40);
+\draw[small] (84,30)--(122,30);
+\draw[small,->] (99,30)--(107,30);
+\draw[big] (122,26)--(84,26);
+\draw[big,->] (107,26)--(99,26);
+% Label 3 joins left row 3 to right row 4, with both ribbon strands retained.
+\draw[big] (84,16)--(94,16)..controls (104,16) and (106,2)..(114,2)--(122,2);
+\draw[big] (122,-2)--(114,-2)..controls (106,-2) and (104,12)..(94,12)--(84,12);
+\draw[big,->] (86,16)--(92,16);
+\draw[big,->] (92,12)--(86,12);
+% Label 4 joins left row 4 to right row 3. White under-strokes mark overpasses.
+\draw[white,line width=2.8pt] (92,2)..controls (102,2) and (105,16)..(114,16);
+\draw[white,line width=2.8pt] (114,12)..controls (105,12) and (102,-2)..(92,-2);
+\draw[big] (84,2)--(92,2)..controls (102,2) and (105,16)..(114,16)--(122,16);
+\draw[big] (122,12)--(114,12)..controls (105,12) and (102,-2)..(92,-2)--(84,-2);
+\draw[big,->] (115,16)--(121,16);
+\draw[big,->] (121,12)--(115,12);
+\node at (103,52) {$(1\,4\,3)(2)$};
+\node[text=orange!70!black] at (103,35) {$i_2$};
+\node[text=blue!65!black] at (103,21) {$i_1=i_4=i_3$};
+\node at (103,-11) {$N\cdot N=N^2$};
+\end{scope}
+\node[font=\fontsize{8}{10}\selectfont] at (31,-11)
+ {虚线配对同一 $a_r$，交叉处不相接};
+\end{tikzpicture}

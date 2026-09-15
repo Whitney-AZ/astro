@@ -1,0 +1,33 @@
+% Original vector reconstruction of source Fig.61.1, PDF253.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+ line cap=round,line join=round,font=\fontsize{10}{12}\selectfont]
+ \foreach \offset in {0,52}{
+  \begin{scope}[shift={(\offset,0)}]
+   \draw[dashed] (0,9)--(38,9);
+   \draw[->] (4,9)--(11,9);
+   \draw[->] (27,9)--(34,9);
+   \fill (19,9) circle[radius=.55mm];
+  \end{scope}
+ }
+ \draw[domain=0:18,samples=85,smooth,variable=\u]
+  plot ({19+.9*sin(60*\u)},{9-\u});
+ \node[above] at (6,11) {$k$};
+ \node[above] at (32,11) {$k'$};
+ \node[right] at (22,-5) {$\mu$};
+ \node at (19,-17) {$ie(k+k')_\mu$};
+ \foreach \direction in {-1,1}{
+  \draw[domain=0:18,samples=85,smooth,variable=\u]
+   plot ({71+\direction*.7*\u+.75*sin(60*\u)},{9-\u});
+ }
+ \node[left] at (57,-7) {$\mu$};
+ \node[right] at (85,-7) {$\nu$};
+ \node at (71,-17) {$-2ie^2g_{\mu\nu}$};
+ \draw[dashed] (111,20)--(127,6)--(111,-8);
+ \draw[dashed] (143,20)--(127,6)--(143,-8);
+ \draw[->] (114,17.375)--(119,13);
+ \draw[->] (140,17.375)--(135,13);
+ \draw[->] (121,.75)--(116,-3.625);
+ \draw[->] (133,.75)--(138,-3.625);
+ \fill (127,6) circle[radius=.55mm];
+ \node at (127,-17) {$-i\lambda$};
+\end{tikzpicture}

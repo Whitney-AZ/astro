@@ -1,0 +1,37 @@
+% Original source Fig.31.2, PDF136 / printed124. One displayed s-channel bubble.
+% Source caption adds the two crossings; these are not counted as drawn diagrams.
+% Four external momenta incoming. Upper ell+k1+k2 L->R; lower ell R->L.
+% The source PDF138 erroneous Fig.31.1 reference means this Fig.31.2.
+% lambda_d=lambda*mutilde^epsilon; each bare quartic vertex -i lambda_d.
+% Basic TikZ only; surrounding manuscript supplies caption and stable figure ID.
+\begin{tikzpicture}[x=1mm,y=1mm,line width=.65pt,>=latex,
+  line cap=round,line join=round,
+  font=\fontsize{10.5}{12}\selectfont]
+\begin{scope}[shift={(45,0)}]
+  \draw (-11,0) .. controls (-4,13) and (4,13) .. (11,0);
+  \draw (-11,0) .. controls (-4,-13) and (4,-13) .. (11,0);
+  \draw[->] (-11,0) .. controls (-7.5,6.5) and (-3.75,9.75) .. (0,9.75);
+  \draw[->] (11,0) .. controls (7.5,-6.5) and (3.75,-9.75) .. (0,-9.75);
+  \draw (-37,17) -- (-11,0);
+  \draw (-37,-17) -- (-11,0);
+  \draw (37,17) -- (11,0);
+  \draw (37,-17) -- (11,0);
+  \draw[->] (-29,11.7692) -- (-21,6.5385);
+  \draw[->] (-29,-11.7692) -- (-21,-6.5385);
+  \draw[->] (29,11.7692) -- (21,6.5385);
+  \draw[->] (29,-11.7692) -- (21,-6.5385);
+  \fill (-11,0) circle[radius=.65mm];
+  \fill (11,0) circle[radius=.65mm];
+  \node[above left] at (-35,17) {$k_1$};
+  \node[below left] at (-35,-17) {$k_2$};
+  \node[above right] at (35,17) {$k_3$};
+  \node[below right] at (35,-17) {$k_4$};
+  \node[above] at (0,12) {$\ell+k_1+k_2$};
+  \node[below] at (0,-12) {$\ell$};
+  \node at (0,0) {$S=2$};
+  \node at (-15,-24) {$-i\lambda_d$};
+  \node at (15,-24) {$-i\lambda_d$};
+  \node at (0,-34) {另两道：$k_2\leftrightarrow k_3,\quad k_2\leftrightarrow k_4$};
+\end{scope}
+\end{tikzpicture}
+
