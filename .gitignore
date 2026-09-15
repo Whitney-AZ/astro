@@ -22,3 +22,15 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Private travel imports, runtime input, credentials and test evidence
+.private/
+.japan-build/
+.vercel/
+.env.*
+!.env.example
+*日本旅行*.zip
+*日本*地图*.html
+*日本*行程*.pdf
+test-results/
+playwright-report/

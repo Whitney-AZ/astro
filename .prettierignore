@@ -2,3 +2,8 @@
 node_modules/
 dist/
 pnpm-lock.yaml
+.private/
+.japan-build/
+.vercel/
+test-results/
+playwright-report/

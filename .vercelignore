@@ -1,0 +1,8 @@
+.private/
+.japan-build/
+test-results/
+playwright-report/
+.env*
+*日本旅行*.zip
+*日本*地图*.html
+*日本*行程*.pdf
