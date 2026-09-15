@@ -1,5 +1,5 @@
 import { readFile, readdir, stat } from 'node:fs/promises'
-import { execFileSync } from 'node:child_process'
+import { repositoryFiles } from './repository-files.mjs'
 
 const forbiddenNames =
   /(?:trip_data\.json|points\.geojson|routes_schematic\.geojson|日本.*(?:地图|行程).*(?:zip|html|pdf|csv|kml)|secrets\.env)/i
@@ -40,14 +40,7 @@ for (const root of ['public', 'dist', '.vercel/output']) {
     if ([...markers, ...secretValues].some((m) => content.includes(m))) failures.push(file)
   }
 }
-const tracked = execFileSync(
-  'git',
-  ['ls-files', '--cached', '--others', '--exclude-standard', '-z'],
-  { encoding: 'utf8' },
-)
-  .split('\0')
-  .filter(Boolean)
-for (const file of tracked) {
+for await (const file of repositoryFiles()) {
   if (file.startsWith('.private/') || forbiddenNames.test(file)) failures.push(file)
   const content = await readFile(file, 'utf8').catch(() => '')
   if (

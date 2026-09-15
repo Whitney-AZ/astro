@@ -1,5 +1,6 @@
 .private/
 .japan-build/
+.pnpm-store/
 test-results/
 playwright-report/
 .env*
