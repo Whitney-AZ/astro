@@ -18,7 +18,9 @@ try {
 let secretValues = []
 try {
   const env = await readFile('.private/japan/secrets.env', 'utf8')
-  secretValues = [...env.matchAll(/(?:PASSWORD_HASH|SESSION_KEY)='([^']+)'/g)].map((m) => m[1])
+  secretValues = [...env.matchAll(/(?:PASSWORD_HASH|SESSION_KEY|REDIS_REST_TOKEN)='([^']+)'/g)].map(
+    (m) => m[1],
+  )
 } catch {
   /* No production secrets required for builds. */
 }

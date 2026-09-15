@@ -66,7 +66,7 @@ node --env-file=.private/japan/secrets.env scripts/japan/publish-data.mjs
 | `JAPAN_REDIS_REST_TOKEN` | 该 Redis 的读写服务端凭证                |
 | `JAPAN_REDIS_PREFIX`     | 此功能专用键前缀                         |
 
-初始化：`pnpm japan:init`，两次隐藏输入共享密码。也支持从安全输入管道读取：`node scripts/japan/init-secrets.mjs --stdin`。不要把密码写入 shell 命令、命令参数或历史。脚本只写私有文件，不输出变量值；禁止将该文件粘贴到公共文档或构建日志。本次本机已初始化指定共享密码对应的摘要和独立会话密钥，未向任何生产平台上传。
+初始化：`pnpm japan:init`，两次隐藏输入共享密码。也支持从安全输入管道读取：`node scripts/japan/init-secrets.mjs --stdin`。不要把密码写入 shell 命令、命令参数或历史。脚本只写私有文件，不输出变量值；禁止将该文件粘贴到公共文档或构建日志。本次本机已初始化指定共享密码对应的摘要和独立会话密钥，并经用户授权保存到 Vercel Production 的 Secret 类型变量，未保存明文密码。
 
 使用 Node 原生 scrypt，N=131072、r=8、p=1、16-byte 盐、32-byte 输出，符合 [OWASP 的 scrypt 最低建议](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)。使用 JOSE HS256 签名并验证 issuer、audience、签名与过期时间。Redis 内会话存储只使用随机会话 ID 的摘要。
 
@@ -80,7 +80,7 @@ Cookie 名 `__Secure-japan`，host-only、Path `/japan`、Secure、HttpOnly、Sa
 
 ## 多人协作
 
-所有登录者可添加候选地点（中日文名称、经纬度／点选、日期、地区、所属方案、到达方式、备注和来源）。新增地点默认可选、未核实。所有原始地点、线路和日期保持只读；这是等待更细权限偏好时采用的最小协作范围。
+所有登录者可通过“共同补充目的地”添加候选地点（中日文名称、经纬度／点选、日期、地区、所属方案、到达方式、备注和来源）。新增地点默认可选、未核实。所有原始地点、线路和日期保持只读。
 
 新增地点保存后返回独立编辑凭证，仅存当前标签页的 `sessionStorage`，退出时清除。服务端只保存该凭证摘要。可编辑自己持有凭证的新增地点，不把昵称当作真实身份或授权。丢失凭证后由维护者处理；重新用共享密码登录不会自动获得其他人的编辑权限。需要编辑自己的地点时，在搜索结果中打开详情即可。
 
@@ -94,16 +94,24 @@ node --env-file=.private/japan/secrets.env scripts/japan/restore-addition.mjs AD
 
 ## 部署与裸域名
 
-当前线上实测：裸域名 `/japan` 返回 307 到 `www`，`www` 返回 404。仓库没有 Vercel 项目关联或可用部署凭证；本次没有执行生产发布。
+2026-09-16 已完成正式页面 `https://phymani.me/japan` 的上线验收。验收部署为 Vercel `website` 项目的 `2Lnu9WN1FEGzuVhJSiYzpFvPsmzr`（代码提交 `30c9541`，状态 Ready）。实际资源包含一个 `/japan` Node.js 22 函数（IAD1）和原有静态博客。修复了 CI 中 `.pnpm-store` 导致隐私扫描文件列表超出缓冲区的问题：忽略包缓存并流式读取 Git 文件列表，扫描失败不打印子进程输出。
 
-最少平台操作：
+经用户确认，已将 `phymani.me` 连接到同一 Production 项目，没有修改 DNS。实测首页、文章、RSS、sitemap 与 `/japanese` 仍 307 到原 www 路径；`/japan/` 为 308 到 `/japan`，www 地图入口为 308 到正式裸域名。正式入口未登录返回最小密码页（200），数据接口返回 401；登录后地图和数据均为 200，所有这些响应均带 `private, no-store`。原始项目托管域名的地图、数据和导出均返回 404；具体部署域名另有 Vercel 登录保护。
 
-1. 在现有 Vercel 项目连接一份已有私有 Redis／Upstash Redis，并设置上述五个 Production 环境变量。本实现没有创建付费资源。启用 Vercel 系统环境变量，使函数能读取 `VERCEL_ENV`；Preview 始终拒绝提供地图。
-2. 从本机执行私有数据上传命令。先确认目标 Redis 属于此站点，再上传，不要经公共 CI 转存行程。
-3. 使用现有 Vercel 项目部署本次通用代码。项目 Framework Preset 使用仓库的 `null`（Other），Build Command 为 `pnpm build`，不要强制覆盖 Output Directory。代码通过 `.vercel/output` 提供静态博客和函数。
-4. 在 Project → Settings → Domains，将 `phymani.me` 从“整域跳转 www”改为连接此同一 Production 项目。这不需要迁移 DNS。代码中的路由继续将其他裸域名路径以原有 307 跳转到 `www`，只让 `/japan` 进入函数。必须先让包含这些规则的部署生效，再移除平台整域跳转。
+系统环境变量开关已开启。已获用户授权安装免费 Upstash 数据库 `website-japan-private`，地域 IAD1，每月 500,000 条命令，未启用额外读取地域或自动驱逐。五个应用变量均仅配置到 Production，其中摘要、会话密钥、REST URL 和 Token 使用 Secret 类型。启用这些变量的部署 `2Lnu9WN1FEGzuVhJSiYzpFvPsmzr` 已 Ready。
 
-`/japan/` 308 到 `/japan`；`www` 的地图 GET/HEAD 308 到正式入口，POST 拒绝。预览／原始 `*.vercel.app` 及其他 host 拒绝地图，即便误继承 Secret。畸形、编码、重复斜杠路径不能返回数据；未知内部路径需要先鉴权，仍无对应文件。`/japanese` 不属于本功能。平台自身对畸形 URL 的规范化最终行为需要生产探测验证。
+Upstash 集成另行管理五个 `JAPAN_REDIS_KV_*` / `JAPAN_REDIS_REDIS_URL` 变量，也均仅限 Production。应用使用上表的明确变量名；以后轮换数据库 Token 时，同步更新本机私有配置与 Production 的 `JAPAN_REDIS_REST_TOKEN`，然后重新部署。
+
+经用户确认，完整私有行程已由本机直接上传到此数据库，未经过公共 CI。生产数据与私有基准逐字段一致。真实 Upstash HTTPS/REST、Lua 原子计数、并发冲突和历史记录测试通过；两个独立登录客户端完成新增、读取与修改测试。临时新增地点已清理，原始行程和其他协作记录保留。
+
+平台初始化已完成，无需额外手动配置。后续维护：
+
+1. 数据库和五个 Production 变量已配置。维持免费方案和当前环境范围，不把私有变量同步到 Preview 或 Development。超出免费额度或服务不可达时会拒绝访问，不自动升级付费方案。
+2. 更新行程时从本机执行上述导入、上传命令，不要经公共 CI 转存行程。数据由运行时读取，单独更新数据不需要重新构建网站。
+3. 代码或 Secret 变更后在现有 Vercel 项目重新部署。仓库 `vercel.json` 的 `framework: null` 和 `buildCommand: pnpm build` 覆盖控制台默认值；控制台目前仍显示 Astro，没有 Output Directory 覆盖。已经实际验证 `.vercel/output` 作为静态博客和函数产物成功部署，不需要重复修改控制台 Framework Preset。
+4. 域名接入已完成；后续保持当前绑定。代码继续将其他裸域名路径以原有 307 跳转到 `www`，只让 `/japan` 进入函数。回滚到不含这些规则的旧版本时，需同时恢复原整域跳转。
+
+`/japan/` 308 到 `/japan`；`www` 的地图 GET/HEAD 308 到正式入口，POST 拒绝。预览／原始 `*.vercel.app` 及其他 host 拒绝地图，即便误继承 Secret。畸形、编码、重复斜杠路径不能返回数据；未知内部路径需要先鉴权，仍无对应文件。`/japanese` 不属于本功能。额外的 13 项生产路径探测覆盖编码、重复斜杠、静态别名、旧 HTML 与私有文件地址，未发现鉴权绕过。
 
 私密响应设置 `Cache-Control: private, no-store`、`CDN-Cache-Control: no-store`、`Vercel-CDN-Cache-Control: no-store`。不要在 Vercel/CDN 外层设置覆盖这些响应的公共缓存。没有 Cache API 或预渲染地图产物。
 
@@ -123,7 +131,7 @@ vercel deploy --prebuilt --prod
 
 回滚：在现有项目执行 `vercel rollback PREVIOUS_DEPLOYMENT_URL`，或在 Vercel 控制台选择先前部署。若旧部署不包含裸域名分流规则，同时恢复原来的平台整域跳转；地图将变成不可用，私有 Redis 数据不会变公开。数据回滚使用 `.private/japan/backups/` 中选定版本经 `publish-data.mjs` 重新上传，保留协作记录。
 
-## 本地验收与限制
+## 测试与验收范围
 
 单元测试用独立合成行程和测试密码。真实行程校验只在本机私有输入存在时运行，公共 CI 自动跳过。
 
@@ -145,4 +153,6 @@ JAPAN_TEST_REAL=1 node scripts/japan/dev.mjs
 
 测试覆盖口令摘要、篡改／过期会话、限速、注销撤销、CSRF、备用域名拒绝、路径边界、坐标转换、数据保全、互斥方案、协作并发、文字转义与桌面／手机布局。`scripts/japan/scan-public.mjs` 检查实际输出、索引与受跟踪文件，发现私密标记即失败，只报告文件数量，不输出内容。原有 `pnpm lint` 会全仓库改写格式，因此新增 `japan:lint` 做本功能限定的只读检查。
 
-**发布后尚须验证**：正式裸域名登录、真实 Redis REST 权限／TLS／Lua、Vercel 函数路由与客户端 IP 头、www 跳转无环、不同边缘节点和全新客户端不会读到已授权缓存、原始部署域名拒绝访问、博客首页／文章／RSS／sitemap／Pagefind 正常。未运行这些生产探测之前，不能将本地验收称为已经上线。
+**生产验收已完成**：52 项真实 HTTP 检查通过，包括指定密码登录、篡改／过期 Cookie、实际限速、协作权限与冲突、注销撤销，以及已登录访问后全新无 Cookie 客户端仍无法读取同一私密地址。Chrome 在正式域名首次登录即加载 z14 详细底图；八个指定区域均验证了真实 z15 瓦片解码。两个方案的两天切换与跨标签退出清理通过。博客首页、文章、RSS、sitemap 和 Pagefind 的抽查正常，详见 [验收记录](VALIDATION.md)。
+
+生产浏览器验收使用桌面 Chrome；手机布局与触控验收使用本地 Playwright，包括独立的真实瓦片网络测试。生产缓存探测来自当前网络出口，没有声称遍历全球 CDN 节点。真实截图和完整验收证据仅保存在本机私有目录。
