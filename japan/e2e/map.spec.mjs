@@ -99,10 +99,12 @@ test('collaborators add and edit owned candidates; rendering stays text-only', a
   await form.getByRole('button', { name: '保存候选地点' }).click()
   await expect(page.locator('#save-status')).toContainText('已保存')
 })
-test('logout clears other tabs, rejects stale requests and browser-back content', async ({
+test('logout clears pending resize, other tabs, stale requests and browser-back content', async ({
   page,
   context,
 }) => {
+  const errors = []
+  page.on('pageerror', (error) => errors.push(error.message))
   await login(page)
   const other = await context.newPage()
   await other.route('https://cyberjapandata.gsi.go.jp/**', (route) =>
@@ -110,10 +112,19 @@ test('logout clears other tabs, rejects stale requests and browser-back content'
   )
   await other.goto('/japan')
   await expect(other.locator('#count')).toContainText('个地点')
-  await page.getByRole('button', { name: '退出登录' }).click()
+  // Keep the cleared page alive beyond the resize timer to cover slow networks.
+  await page.route('**/japan/logout', async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    await route.continue()
+  })
+  await page.evaluate(() => {
+    document.querySelector('#toggle-panel').click()
+    document.querySelector('#logout').requestSubmit()
+  })
   await expect(page.getByLabel('共享密码')).toBeVisible()
   await expect(other.locator('#japan-app')).toContainText('会话已结束')
   expect((await other.request.get('/japan/data')).status()).toBe(401)
+  expect(errors).toEqual([])
   await page.goBack()
   await expect(page.locator('body')).not.toContainText('SYNTHETIC_SECRET')
 })

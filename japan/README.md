@@ -54,6 +54,8 @@ node --env-file=.private/japan/secrets.env scripts/japan/publish-data.mjs
 
 导入脚本不执行原始 `build_data.py`；保留所有非投影字段、ID、日期、精度说明、可选状态和来源索引，校验原投影与 WGS84 的一致性。地区范围和两个完整方案的标题、住宿、focus 与时间说明在私有 UI 文件中维护；基准日期不自动前移。导入报告记录输入／输出 SHA-256 和展示覆盖。生产更新会保存旧基准，并以原子比较更新避免覆盖另一位维护者的修改；不会清空协作记录。
 
+已规范化的行程修订可直接发布：`node --env-file=.private/japan/secrets.env scripts/japan/publish-data.mjs .private/japan/updates/REVISED_TRIP.json`。先保存当前基准、协作及历史的私有快照，核对日期、住宿晚数，以及每个方案的 focus 点在对应日期可见。发布后回读核对，将同一版本同步到本机 `trip.json` 和 `ui.json`，再验证正式页面；无需重新部署博客。保留原导入报告及 `backups/` 中对应摘要的原始基准，测试会分别检查原始导入保全和当前行程有效性。修订数据、差异记录及截图均留在 `.private/`，不提交 Git。
+
 ## Secret 与会话
 
 必需的运行时变量见根目录 `.env.example`，仅配置在 Vercel **Production**，不配置到 Preview：

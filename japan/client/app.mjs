@@ -61,7 +61,8 @@ let data,
   pick = false,
   editing = false,
   fallback = false,
-  tilesTimer
+  tilesTimer,
+  resizeTimer
 let channel
 try {
   channel = new BroadcastChannel('japan-session')
@@ -81,6 +82,7 @@ function lock(broadcast = false) {
   if (broadcast) channel?.postMessage('logout')
   clearInterval(poll)
   clearTimeout(tilesTimer)
+  clearTimeout(resizeTimer)
   lifecycle.abort()
   try {
     map?.remove()
@@ -565,7 +567,10 @@ async function init() {
   listen($('#toggle-panel'), 'click', () => {
     const collapsed = $('#panel').classList.toggle('j-collapsed')
     $('#toggle-panel').setAttribute('aria-expanded', String(!collapsed))
-    setTimeout(() => map.invalidateSize(), 200)
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(() => {
+      if (!expired) map.invalidateSize()
+    }, 200)
   })
   for (const source of Object.values(data.sources))
     $('#source-list').append(link(source.title, source.url))

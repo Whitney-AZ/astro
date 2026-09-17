@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { assertTrip, geojson, kml, selectedDay, selectRecords, safeUrl } from '../shared/model.mjs'
 import { fixture } from './fixture.mjs'
+import { digest } from '../server/security.mjs'
 
 test('coordinate order and date continuity are enforced, exports use standard lon-lat', () => {
   const data = fixture()
@@ -43,7 +44,7 @@ test('variant replaces both days, focus and lodging; hidden variants leave no or
   assert.equal(selectRecords(data, { ...state, search: 'テスト' }).points.length, 2)
   assert.equal(selectRecords(data, { ...state, categories: [] }).points.length, 0)
 })
-test('real private import: counts, original IDs, all non-projection fields, sources, lodging and alternate focus', async (t) => {
+test('archived private import: counts, original IDs, all non-projection fields, sources, lodging and alternate focus', async (t) => {
   let data, audit, original
   try {
     data = JSON.parse(await readFile('.private/japan/trip.json', 'utf8'))
@@ -51,6 +52,14 @@ test('real private import: counts, original IDs, all non-projection fields, sour
   } catch {
     t.skip('Real private input is intentionally absent in public CI')
     return
+  }
+  // A maintenance publish archives the former baseline by digest. Keep verifying
+  // the original import after the live itinerary has legitimately been revised.
+  if (digest(JSON.stringify(data)) !== audit.outputSha256) {
+    assert.match(audit.outputSha256, /^[a-f0-9]{64}$/)
+    const archived = await readFile(`.private/japan/backups/${audit.outputSha256}.json`, 'utf8')
+    assert.equal(digest(archived), audit.outputSha256)
+    data = JSON.parse(archived)
   }
   assertTrip(data)
   assert.deepEqual(
@@ -95,6 +104,28 @@ test('real private import: counts, original IDs, all non-projection fields, sour
       for (const id of current.focus) {
         const point = data.points.find((p) => p.id === id)
         assert.ok(point && (point.variant === 'all' || point.variant === lake || point.optional))
+      }
+    }
+})
+
+test('current private baseline: valid references, lodging count and visible focus for each variant', async (t) => {
+  let data
+  try {
+    data = JSON.parse(await readFile('.private/japan/trip.json', 'utf8'))
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error
+    t.skip('Real private input is intentionally absent in public CI')
+    return
+  }
+  assertTrip(data)
+  assert.equal(data.days.filter((d) => d.hotel && d.hotel !== '—').length, data.meta.nights)
+  for (const lake of Object.keys(data.ui.variants))
+    for (const day of data.days) {
+      const current = selectedDay(data, day.day, lake)
+      for (const id of current.focus) {
+        const point = data.points.find((p) => p.id === id)
+        assert.ok(point && point.days.includes(day.day))
+        assert.ok(['all', 'airport_alt', lake].includes(point.variant))
       }
     }
 })
