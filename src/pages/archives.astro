@@ -1,24 +1,240 @@
 ---
-import Timeline from '@/components/Timeline.astro'
-import Highlight from '@/components/Highlight.astro'
-import PageLayout from '@/layouts/PageLayout.astro'
-import { getOldestPosts } from '@/utils/content'
-import { TimelineProgress } from '@/components/TimelineProgress'
+import type { CollectionEntry } from "astro:content";
+import PageLayout from "@/layouts/PageLayout.astro";
+import { getOldestPosts } from "@/utils/content";
+import "@/styles/archive-preview.css";
 
-const oldestPosts = await getOldestPosts()
+const posts = await getOldestPosts();
+const categories = [
+  ...new Set(posts.map((post) => post.data.category || "随记")),
+];
+const groupedPosts = posts.reduce<
+  { year: number; posts: CollectionEntry<"posts">[] }[]
+>((groups, post) => {
+  const year = post.data.date.getFullYear();
+  let group = groups.find((entry) => entry.year === year);
+  if (!group) {
+    group = { year, posts: [] };
+    groups.push(group);
+  }
+  group.posts.push(post);
+  return groups;
+}, []);
+const firstYear = groupedPosts.at(-1)?.year;
+const latestYear = groupedPosts[0]?.year;
 ---
 
-<PageLayout title="Archive">
-  <div class="max-w-[800px] mx-auto px-4 py-16">
-    <header class="space-y-4 mb-8">
-      <h1 class="text-4xl font-bold">
-        <Highlight>Archive</Highlight>
-      </h1>
-      <p>「时空中的锚点，让过去成为未来的当下」</p>
-      <p>共产出 {oldestPosts.length} 篇文章，再接再厉。</p>
-      <hr class="w-[100px] border-primary" />
-      <TimelineProgress client:load />
+<PageLayout title="文章归档" description="文章归档">
+  <div class="archive-preview">
+    <header class="archive-intro">
+      <div class="archive-intro-copy">
+        <div class="archive-heading-icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            width="25"
+            height="25"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><rect x="4" y="3" width="16" height="18" rx="3"></rect><path
+              d="M8 8h8M8 12h8M8 16h4"></path></svg>
+        </div>
+        <h1>文章归档</h1>
+      </div>
+      <div
+        class="archive-colophon"
+        aria-label={`共 ${posts.length} 篇文章，${categories.length} 个分类`}
+      >
+        <p class="archive-total">
+          <strong>{posts.length}</strong><span>篇文章</span>
+        </p>
+        <p class="archive-colophon-years">
+          {firstYear} — {latestYear}<span> · </span>{categories.length} 个分类
+        </p>
+      </div>
     </header>
-    <Timeline posts={oldestPosts} />
+
+    <archive-index>
+      <div class="archive-controls">
+        <div class="archive-filters" role="group" aria-label="按文章分类筛选">
+          <button type="button" data-category="" aria-pressed="true"
+            >全部 <span>{posts.length}</span></button
+          >
+          {
+            categories.map((category) => (
+              <button
+                type="button"
+                data-category={category}
+                aria-pressed="false"
+              >
+                {category}{" "}
+                <span>
+                  {
+                    posts.filter(
+                      (post) => (post.data.category || "随记") === category,
+                    ).length
+                  }
+                </span>
+              </button>
+            ))
+          }
+        </div>
+        <label class="archive-search">
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+            ><circle cx="10.5" cy="10.5" r="6.5"></circle><path
+              d="m15.5 15.5 5 5"></path></svg
+          >
+          <span class="archive-sr-only">搜索文章标题、摘要或标签</span>
+          <input
+            type="search"
+            placeholder="找一篇文章…"
+            aria-label="搜索文章标题、摘要或标签"
+          />
+        </label>
+      </div>
+      <div class="archive-list-caption">
+        <p data-result-count aria-live="polite" aria-atomic="true">
+          共 {posts.length} 篇文章
+        </p>
+        <span>最新发布在前</span>
+      </div>
+      <div class="archive-years">
+        {
+          groupedPosts.map((group) => (
+            <section
+              class="archive-year"
+              data-year-group
+              aria-labelledby={`archive-year-${group.year}`}
+            >
+              <header class="archive-year-heading">
+                <h2 id={`archive-year-${group.year}`}>
+                  {group.year}
+                  <span>年</span>
+                </h2>
+                <span data-year-count>{group.posts.length} 篇</span>
+              </header>
+              <ol class="archive-entries">
+                {group.posts.map((post) => (
+                  <li
+                    data-archive-entry
+                    data-category={post.data.category || "随记"}
+                    data-search={`${post.data.title} ${post.data.summary || ""} ${post.data.tags.join(" ")}`.toLocaleLowerCase()}
+                  >
+                    <a class="archive-entry" href={`/posts/${post.slug}`}>
+                      <time
+                        datetime={post.data.date.toISOString().slice(0, 10)}
+                      >
+                        {String(post.data.date.getMonth() + 1).padStart(2, "0")}
+                        .{String(post.data.date.getDate()).padStart(2, "0")}
+                      </time>
+                      <h3>{post.data.title}</h3>
+                      <span class="archive-entry-category">
+                        {post.data.category || "随记"}
+                      </span>
+                      <span class="archive-entry-arrow" aria-hidden="true">
+                        ↗
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          ))
+        }
+      </div>
+      <p class="archive-empty" hidden>
+        暂时没有找到匹配的文章。试试其他关键词。
+      </p>
+      <div class="archive-end">
+        <a href="/">回到首页 <span aria-hidden="true">↗</span></a>
+      </div>
+    </archive-index>
   </div>
 </PageLayout>
+
+<script>
+  class ArchiveIndex extends HTMLElement {
+    private controller?: AbortController;
+
+    connectedCallback() {
+      this.controller?.abort();
+      this.controller = new AbortController();
+      const { signal } = this.controller;
+      const search = this.querySelector<HTMLInputElement>(
+        'input[type="search"]',
+      );
+      const filters = Array.from(
+        this.querySelectorAll<HTMLButtonElement>(".archive-filters button"),
+      );
+      const entries = Array.from(
+        this.querySelectorAll<HTMLElement>("[data-archive-entry]"),
+      );
+      const groups = Array.from(
+        this.querySelectorAll<HTMLElement>("[data-year-group]"),
+      );
+      const resultCount = this.querySelector<HTMLElement>(
+        "[data-result-count]",
+      );
+      const empty = this.querySelector<HTMLElement>(".archive-empty");
+      let selectedCategory = "";
+
+      const applyFilters = () => {
+        const query = search?.value.trim().toLocaleLowerCase() || "";
+        let count = 0;
+        entries.forEach((entry) => {
+          const matchesCategory =
+            !selectedCategory || entry.dataset.category === selectedCategory;
+          const matchesSearch =
+            !query || (entry.dataset.search || "").includes(query);
+          entry.hidden = !(matchesCategory && matchesSearch);
+          if (!entry.hidden) count += 1;
+        });
+        groups.forEach((group) => {
+          const visibleCount = Array.from(
+            group.querySelectorAll<HTMLElement>("[data-archive-entry]"),
+          ).filter((entry) => !entry.hidden).length;
+          group.hidden = visibleCount === 0;
+          const label = group.querySelector("[data-year-count]");
+          if (label) label.textContent = `${visibleCount} 篇`;
+        });
+        if (resultCount)
+          resultCount.textContent =
+            query || selectedCategory
+              ? `找到 ${count} 篇文章`
+              : `共 ${count} 篇文章`;
+        if (empty) empty.hidden = count > 0;
+      };
+
+      search?.addEventListener("input", applyFilters, { signal });
+      filters.forEach((button) =>
+        button.addEventListener(
+          "click",
+          () => {
+            selectedCategory = button.dataset.category || "";
+            filters.forEach((filter) =>
+              filter.setAttribute("aria-pressed", String(filter === button)),
+            );
+            applyFilters();
+          },
+          { signal },
+        ),
+      );
+    }
+
+    disconnectedCallback() {
+      this.controller?.abort();
+    }
+  }
+
+  if (!customElements.get("archive-index"))
+    customElements.define("archive-index", ArchiveIndex);
+</script>

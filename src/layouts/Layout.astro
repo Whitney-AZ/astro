@@ -3,22 +3,22 @@ import {
   CommonHead,
   WebAnalytics,
   ThemeLoader,
-  AccentColorInjector,
   PrintVersion,
-} from '@/components/head'
-import { BackToTopFAB } from '@/components/BackToTopFAB'
-import { ToastContainer } from '@/components/ToastContainer'
-import { ModalStack } from '@/components/ui/modal'
-import { site } from '@/config.json'
-import '@/styles/global.css'
+} from "@/components/head";
+import { BackToTopFAB } from "@/components/BackToTopFAB";
+import { ToastContainer } from "@/components/ToastContainer";
+import { ModalStack } from "@/components/ui/modal";
+import { site } from "@/config.json";
+import "@/styles/global.css";
+import "@/styles/journal.css";
 
 interface Props {
-  title?: string
-  description?: string
-  image?: string
+  title?: string;
+  description?: string;
+  image?: string;
 }
 
-const { title, description, image } = Astro.props
+const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,10 +27,10 @@ const { title, description, image } = Astro.props
     <CommonHead title={title} description={description} image={image} />
     <WebAnalytics />
     <ThemeLoader />
-    <AccentColorInjector />
     <PrintVersion />
   </head>
-  <body>
+  <body id="top">
+    <a href="#main-content" class="skip-link">跳转到正文</a>
     <slot />
 
     <BackToTopFAB client:only="react" />

@@ -26,7 +26,7 @@ export function SearchButton() {
     <button
       className="size-9 rounded-full shadow-lg shadow-zinc-800/5 border border-primary bg-white/50 dark:bg-zinc-800/50 backdrop-blur"
       type="button"
-      aria-label="Search"
+      aria-label="搜索文章"
       onClick={openModal}
     >
       <i className="iconfont icon-search"></i>
@@ -37,28 +37,45 @@ export function SearchButton() {
 function SearchPanel() {
   const [keyword, setKeyword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [searchError, setSearchError] = useState(false)
   const [results, setResults] = useState<any[]>([])
   const debouncedKeyword = useDebounceValue(keyword, 350)
 
   const { dismiss } = useCurrentModal()
 
-  async function search(value: string) {
-    if (!value) {
-      setResults([])
-      return
-    }
-    setIsLoading(true)
-    await loadPagefind()
-    if (pagefind) {
-      const res = await pagefind.search(value)
-      const nextResults = await Promise.all(res.results.map((r: any) => r.data()))
-      setResults(nextResults)
-    }
-    setIsLoading(false)
-  }
-
   useEffect(() => {
-    search(debouncedKeyword)
+    let cancelled = false
+
+    async function search() {
+      setSearchError(false)
+      const value = debouncedKeyword.trim()
+      if (!value) {
+        setResults([])
+        setIsLoading(false)
+        return
+      }
+      setIsLoading(true)
+      try {
+        await loadPagefind()
+        if (pagefind) {
+          const res = await pagefind.search(value)
+          const nextResults = await Promise.all(res.results.map((r: any) => r.data()))
+          if (!cancelled) setResults(nextResults)
+        }
+      } catch {
+        if (!cancelled) {
+          setSearchError(true)
+          setResults([])
+        }
+      } finally {
+        if (!cancelled) setIsLoading(false)
+      }
+    }
+
+    search()
+    return () => {
+      cancelled = true
+    }
   }, [debouncedKeyword])
 
   let resultList = null
@@ -79,6 +96,8 @@ function SearchPanel() {
         </div>
       </div>
     )
+  } else if (searchError) {
+    resultList = <p className="search-message">搜索暂时不可用，请稍后再试。</p>
   } else if (isLoading) {
     resultList = (
       <div className="h-full flex items-center justify-center">
@@ -123,7 +142,7 @@ function SearchPanel() {
   } else {
     resultList = (
       <>
-        <div className="text-sm px-3 mb-2">找到以下 {results.length} 条结果</div>
+        <div className="text-sm px-3 mb-2">找到 {results.length} 条匹配结果</div>
         {results.map((item) => {
           return (
             <a
@@ -133,7 +152,7 @@ function SearchPanel() {
               onClick={dismiss}
             >
               <div className="font-semibold">{item.meta.title}</div>
-              <p className="text-sm" dangerouslySetInnerHTML={{ __html: item.excerpt }}></p>
+              <p className="search-result-summary">{item.meta.description || '阅读文章 →'}</p>
             </a>
           )
         })}
@@ -143,30 +162,35 @@ function SearchPanel() {
 
   return (
     <motion.div
-      className="bg-primary rounded-lg w-[90vw] h-[80vh] max-w-[680px] max-h-[480px] border border-primary flex flex-col"
+      className="journal-search-panel bg-primary w-[90vw] h-[80vh] max-w-[680px] max-h-[560px] border border-primary flex flex-col"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: 20, opacity: 0 }}
     >
+      <div className="search-panel-heading">
+        <div>
+          <h2>搜索文章</h2>
+        </div>
+        <button onClick={dismiss} aria-label="关闭搜索" type="button">
+          ×
+        </button>
+      </div>
       <input
         className="px-4 py-3 outline-none bg-transparent border-b border-primary"
         type="text"
-        placeholder="Search..."
+        autoFocus
+        placeholder="输入关键词…"
+        aria-label="搜索文章"
         maxLength={64}
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
       <div className="px-4 py-3 overflow-y-auto grow">{resultList}</div>
-      <div className="px-3 py-2 flex justify-end">
-        <a
-          href="https://pagefind.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center "
-        >
-          <span className="mr-2 text-xs">Search by</span>
-          <span className="font-semibold">pagefind</span>
-        </a>
+      <div className="search-panel-footer">
+        <span>搜索全部文章与笔记</span>
+        <span>
+          <kbd>Esc</kbd> 关闭
+        </span>
       </div>
     </motion.div>
   )

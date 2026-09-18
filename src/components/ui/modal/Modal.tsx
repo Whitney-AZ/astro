@@ -45,12 +45,14 @@ export function Modal({
         <Dialog.Content
           className="fixed inset-0 flex items-center justify-center"
           style={{ zIndex: contentZIndex }}
+          aria-describedby={undefined}
           onClick={(e) => {
             if (e.target === e.currentTarget) {
               close()
             }
           }}
         >
+          <Dialog.Title className="sr-only">内容窗口</Dialog.Title>
           <CurrentModalContext.Provider value={{ dismiss: close }}>
             {children}
           </CurrentModalContext.Provider>

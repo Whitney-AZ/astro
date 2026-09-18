@@ -1,0 +1,5 @@
+---
+import {author,footer,hero} from '@/config.json'
+const since=new Date(footer.startTime).getFullYear(),year=new Date().getFullYear()
+---
+<footer class="journal-footer journal-shell"><div class="footer-top"><a href="/" class="journal-brand">PhyMAnime<span class="brand-dot">.</span></a><p>{hero.description}</p><a href="#top" class="back-top">回到顶部 ↑</a></div><div class="footer-bottom"><span>© {since===year?year:`${since}–${year}`} {author.name}</span><div><a href="/rss.xml" data-no-swup>RSS 订阅</a><a href="/friends">友情链接</a><a href="https://github.com/lxchapu/astro-gyoza" target="_blank" rel="noreferrer">Astro · Gyoza</a></div></div></footer>

@@ -1,0 +1,371 @@
+/* Isolated visual preview; map data and interactive controls stay unchanged. */
+.srednicki-app {
+  --sred-paper: var(--paper, #faf9fd);
+  --sred-paper-deep: #f3eff9;
+  --sred-ink: var(--ink, #383747);
+  --sred-ink-soft: var(--muted, #858292);
+  --sred-line: var(--line, #e9e4f0);
+  --sred-blue: #9b88c3;
+  --sred-blue-soft: #eae2f5;
+  --sred-amber: #c78eae;
+  --sred-amber-soft: #f5e6ef;
+  --sred-green: #84a8c1;
+  --sred-green-soft: #e2edf6;
+  --sred-rose: #cb8aaa;
+  --sred-done: #a08abd;
+  width: min(1320px, 100%);
+  padding: 36px 48px 64px;
+  color: var(--sred-ink);
+  font-family: Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+.srednicki-app .srednicki-hero {
+  align-items: center;
+  gap: 36px;
+  padding: 0 0 33px;
+}
+.srednicki-app .srednicki-eyebrow,
+.srednicki-app .srednicki-kicker {
+  margin-bottom: 13px;
+  color: #a08abd;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  text-transform: none;
+}
+.srednicki-app .srednicki-hero h1,
+.srednicki-app .srednicki-toolbar h2,
+.srednicki-app .srednicki-index h2 {
+  font-family: Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-weight: 500;
+}
+.srednicki-app .srednicki-hero h1 {
+  margin-bottom: 0;
+  font-size: clamp(29px, 3.5vw, 43px);
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+}
+.srednicki-app .srednicki-stats {
+  min-width: 270px;
+  border: 1px solid rgb(233 228 240 / 75%);
+  border-radius: 19px;
+  background: rgb(255 255 255 / 58%);
+  box-shadow: 0 5px 24px rgb(127 101 159 / 4%);
+}
+.srednicki-app .srednicki-stats div {
+  padding: 17px 20px;
+}
+.srednicki-app .srednicki-stats div + div {
+  border-left-color: rgb(233 228 240 / 65%);
+}
+.srednicki-app .srednicki-stats dt {
+  font-size: 10px;
+}
+.srednicki-app .srednicki-stats dd {
+  margin-top: 7px;
+  color: #a08abd;
+  font-family: inherit;
+  font-size: 25px;
+  font-weight: 500;
+}
+.srednicki-app .srednicki-map-shell,
+.srednicki-app .srednicki-index {
+  border: 1px solid rgb(233 228 240 / 85%);
+  border-radius: 23px;
+  background: rgb(255 255 255 / 66%);
+  box-shadow: 0 7px 32px rgb(128 104 161 / 5%);
+  backdrop-filter: blur(14px);
+}
+.srednicki-app .srednicki-toolbar {
+  padding: 29px 30px;
+  border-bottom-color: rgb(233 228 240 / 75%);
+}
+.srednicki-app .srednicki-toolbar h2,
+.srednicki-app .srednicki-index h2 {
+  font-size: 26px;
+  letter-spacing: -0.035em;
+}
+.srednicki-app .srednicki-toolbar .srednicki-kicker,
+.srednicki-app .srednicki-index .srednicki-kicker {
+  margin-bottom: 8px;
+  font-size: 10px;
+}
+.srednicki-app .srednicki-picker {
+  width: min(100%, 420px);
+  font-size: 11px;
+}
+.srednicki-app .srednicki-picker select,
+.srednicki-app .srednicki-index-controls input {
+  min-height: 45px;
+  border-radius: 12px;
+  background: rgb(249 247 252 / 90%);
+  font-size: 12px;
+}
+.srednicki-app .srednicki-selection {
+  min-height: 70px;
+  border: 1px solid #eae3f3;
+  border-radius: 16px;
+  background: linear-gradient(110deg, #f4f0fa, #f8f1f7);
+  font-size: 12px;
+}
+.srednicki-app .srednicki-selection-heading h3 {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.srednicki-app .srednicki-selection-heading button,
+.srednicki-app .srednicki-note-link,
+.srednicki-app .srednicki-section-links button,
+.srednicki-app .srednicki-filter button {
+  border-radius: 10px;
+}
+.srednicki-app .srednicki-selection-heading button {
+  font-size: 11px;
+}
+.srednicki-app .srednicki-note-link {
+  padding: 8px 11px;
+  font-size: 12px;
+}
+.srednicki-app .srednicki-section-links button {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+.srednicki-app .srednicki-legend {
+  gap: 10px 16px;
+  font-size: 10px;
+}
+.srednicki-app .srednicki-graph .node.has-note .note-ring {
+  stroke-width: 2;
+}
+.srednicki-app .srednicki-graph .node text {
+  font-weight: 500;
+}
+.srednicki-app .srednicki-graph .edge {
+  stroke: color-mix(in srgb, var(--sred-ink-soft) 45%, transparent);
+}
+.srednicki-app .srednicki-graph .edge.is-upstream {
+  stroke: var(--sred-blue);
+}
+.srednicki-app .srednicki-graph .edge.is-downstream {
+  stroke: var(--sred-rose);
+}
+.srednicki-app .srednicki-index {
+  margin-top: 31px;
+  padding: 30px;
+}
+.srednicki-app .srednicki-index-heading {
+  gap: 32px;
+}
+.srednicki-app .srednicki-index-heading p:not(.srednicki-kicker) {
+  font-size: 12px;
+}
+.srednicki-app .srednicki-filter button {
+  font-size: 11px;
+}
+.srednicki-app .srednicki-filter button.is-active {
+  border-color: #d9cde9;
+  background: #ede6f6;
+  color: #9981ba;
+}
+.srednicki-app .srednicki-section-grid {
+  gap: 12px;
+}
+.srednicki-app .srednicki-section-card {
+  min-height: 88px;
+  padding: 14px 12px;
+  border: 1px solid var(--sred-line);
+  border-radius: 14px;
+  background: rgb(255 255 255 / 50%);
+}
+.srednicki-app .srednicki-section-card.is-done {
+  border-color: #e8e0f1;
+  background: linear-gradient(110deg, #f8f5fc, #fcfafd);
+}
+.srednicki-app .srednicki-section-card:hover {
+  border-color: #c9b8de;
+  box-shadow: 0 5px 16px rgb(147 119 173 / 8%);
+  transform: translateY(-2px);
+}
+.srednicki-app .srednicki-section-number {
+  width: 35px;
+  height: 35px;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+}
+.srednicki-app .srednicki-section-card.is-done .srednicki-section-number {
+  background: #ece4f6;
+  color: #a08abd;
+}
+.srednicki-app .srednicki-section-copy strong {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.srednicki-app .srednicki-section-copy small {
+  font-size: 10px;
+}
+.srednicki-app .srednicki-card-arrow {
+  font-size: 13px;
+  color: #b6a5cb;
+}
+.srednicki-app .srednicki-result-count {
+  margin-top: 24px;
+  font-size: 11px;
+}
+.srednicki-app .srednicki-source-note {
+  font-size: 10px;
+}
+.srednicki-app .srednicki-empty,
+.srednicki-app .srednicki-tooltip {
+  border-radius: 14px;
+}
+[data-theme='dark'] .srednicki-app {
+  --sred-paper-deep: #332b40;
+  --sred-blue: #baa5d8;
+  --sred-blue-soft: #413452;
+  --sred-amber: #d4a0bc;
+  --sred-amber-soft: #4b3443;
+  --sred-green: #9ebacf;
+  --sred-green-soft: #303f50;
+  --sred-rose: #d99bb9;
+  --sred-done: #b9a2d6;
+}
+[data-theme='dark'] .srednicki-app .srednicki-stats,
+[data-theme='dark'] .srednicki-app .srednicki-map-shell,
+[data-theme='dark'] .srednicki-app .srednicki-index {
+  border-color: #3f394d;
+  background: rgb(44 39 55 / 75%);
+  box-shadow: none;
+}
+[data-theme='dark'] .srednicki-app .srednicki-toolbar,
+[data-theme='dark'] .srednicki-app .srednicki-stats div + div {
+  border-color: #3f394d;
+}
+[data-theme='dark'] .srednicki-app .srednicki-selection {
+  border-color: #483c55;
+  background: linear-gradient(110deg, #352c43, #3b2d3c);
+}
+[data-theme='dark'] .srednicki-app .srednicki-picker select,
+[data-theme='dark'] .srednicki-app .srednicki-index-controls input {
+  background: #2a2535;
+}
+[data-theme='dark'] .srednicki-app .srednicki-section-card.is-done {
+  border-color: #45394f;
+  background: linear-gradient(110deg, #312a3e, #332a3a);
+}
+[data-theme='dark'] .srednicki-app .srednicki-section-card.is-done .srednicki-section-number,
+[data-theme='dark'] .srednicki-app .srednicki-filter button.is-active {
+  border-color: #51425f;
+  background: #423251;
+  color: #c2abde;
+}
+[data-theme='dark'] .srednicki-app .srednicki-section-card:hover {
+  border-color: #78618f;
+}
+@media (max-width: 980px) {
+  .srednicki-app {
+    padding: 38px 26px 50px;
+  }
+  .srednicki-app .srednicki-hero {
+    gap: 24px;
+    padding-bottom: 28px;
+  }
+  .srednicki-app .srednicki-stats {
+    width: min(100%, 360px);
+  }
+}
+@media (max-width: 640px) {
+  .srednicki-app {
+    padding: 28px 18px 42px;
+  }
+  .srednicki-app .srednicki-hero {
+    gap: 22px;
+  }
+  .srednicki-app .srednicki-eyebrow {
+    font-size: 9px;
+    margin-bottom: 12px;
+  }
+  .srednicki-app .srednicki-hero h1 {
+    font-size: 30px;
+  }
+  .srednicki-app .srednicki-stats {
+    width: 100%;
+    min-width: 0;
+    border-radius: 16px;
+  }
+  .srednicki-app .srednicki-stats div {
+    padding: 15px 16px;
+  }
+  .srednicki-app .srednicki-stats dd {
+    font-size: 23px;
+  }
+  .srednicki-app .srednicki-map-shell,
+  .srednicki-app .srednicki-index {
+    border-radius: 19px;
+  }
+  .srednicki-app .srednicki-toolbar {
+    gap: 21px;
+    padding: 24px 19px;
+  }
+  .srednicki-app .srednicki-toolbar h2,
+  .srednicki-app .srednicki-index h2 {
+    font-size: 23px;
+  }
+  .srednicki-app .srednicki-selection {
+    margin: 15px 13px 0;
+    padding: 16px;
+    border-radius: 13px;
+  }
+  .srednicki-app .srednicki-selection-heading h3 {
+    font-size: 16px;
+  }
+  .srednicki-app .srednicki-note-link,
+  .srednicki-app .srednicki-section-links button {
+    font-size: 11px;
+  }
+  .srednicki-app .srednicki-legend {
+    padding-inline: 15px;
+    font-size: 9px;
+  }
+  .srednicki-app .srednicki-index {
+    margin-top: 23px;
+    padding: 24px 17px;
+  }
+  .srednicki-app .srednicki-index-heading {
+    gap: 21px;
+  }
+  .srednicki-app .srednicki-filter {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .srednicki-app .srednicki-filter button {
+    padding: 0 5px;
+    font-size: 10px;
+  }
+  .srednicki-app .srednicki-section-grid {
+    gap: 10px;
+  }
+  .srednicki-app .srednicki-section-card {
+    min-height: 78px;
+    padding: 13px 10px;
+    gap: 10px;
+  }
+  .srednicki-app .srednicki-section-number {
+    width: 31px;
+    height: 33px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  .srednicki-app .srednicki-section-copy strong {
+    font-size: 11px;
+  }
+  .srednicki-app .srednicki-section-copy small {
+    font-size: 9px;
+  }
+  .srednicki-app .srednicki-source-note {
+    gap: 12px;
+    padding-top: 22px;
+  }
+}

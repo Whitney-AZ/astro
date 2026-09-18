@@ -17,22 +17,11 @@ import { site } from './src/config.json'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { rehypeEquationNumbering } from './src/plugins/rehypeEquationNumbering.js'
-import swup from '@swup/astro'
 
 // https://astro.build/config
 export default defineConfig({
   site: site.url,
-  integrations: [
-    tailwind(),
-    react(),
-    sitemap(),
-    swup({
-      theme: false,
-      animationClass: 'swup-transition-',
-      containers: ['main'],
-      morph: ['[component-export="Provider"]'],
-    }),
-  ],
+  integrations: [tailwind(), react(), sitemap()],
   markdown: {
     syntaxHighlight: false,
     smartypants: false,

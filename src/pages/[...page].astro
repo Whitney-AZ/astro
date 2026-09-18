@@ -1,84 +1,299 @@
 ---
-import type { GetStaticPaths } from 'astro'
-import PageLayout from '@/layouts/PageLayout.astro'
-import PostList from '@/components/post/PostList.astro'
-import PostPagination from '@/components/post/PostPagination.astro'
-import { getSortedPosts, getHotTags, getAllCategories, getAllTags } from '@/utils/content'
-import appConfig from '@/config.json'
-import SectionBlock from '@/components/SectionBlock.astro'
-import TagList from '@/components/TagList.astro'
-import CategoryList from '@/components/CategoryList.astro'
-import type { CollectionEntry } from 'astro:content'
-import Hero from '@/components/hero/Hero.astro'
-
+import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
+import PageLayout from "@/layouts/PageLayout.astro";
+import SceneHero from "@/components/SceneHero.astro";
+import {
+  getSortedPosts,
+  getAllCategories,
+  getHotTags,
+  slugify,
+} from "@/utils/content";
+import config from "@/config.json";
 export const getStaticPaths = (async () => {
-  const sortedPosts = (await getSortedPosts()).filter((post) => !post.data.hideFromHome)
-  const { perPage } = appConfig.posts
-  const totalPage = Math.max(1, Math.ceil(sortedPosts.length / perPage))
-
-  const paths = Array.from({ length: totalPage }).map((_, i) => {
-    const data = sortedPosts.slice(i * perPage, (i + 1) * perPage)
-    const props = { currentPage: i + 1, totalPage, data }
-    const params = {
-      page: i === 0 ? undefined : `page/${i + 1}`,
-    }
-    return { params, props }
-  })
-
-  return paths
-}) satisfies GetStaticPaths
-
+  const posts = (await getSortedPosts()).filter(
+    (post) => !post.data.hideFromHome,
+  );
+  const totalPage = Math.max(1, Math.ceil(posts.length / config.posts.perPage));
+  return Array.from({ length: totalPage }, (_, i) => ({
+    params: { page: i === 0 ? undefined : `page/${i + 1}` },
+    props: {
+      currentPage: i + 1,
+      posts:
+        i === 0
+          ? posts
+          : posts.slice(
+              i * config.posts.perPage,
+              (i + 1) * config.posts.perPage,
+            ),
+    },
+  }));
+}) satisfies GetStaticPaths;
 interface Props {
-  currentPage: number
-  totalPage: number
-  data: CollectionEntry<'posts'>[]
+  currentPage: number;
+  posts: CollectionEntry<"posts">[];
 }
-
-const { currentPage, totalPage, data } = Astro.props
-
-const hotTags = await getHotTags()
-const allTags = await getAllTags()
-const allCategories = await getAllCategories()
-
-const getPageUrl = (page: number) => {
-  if (page === 1) return '/'
-  return `/page/${page}`
-}
+const { currentPage, posts } = Astro.props;
+const allPosts = await getSortedPosts(),
+  categories = await getAllCategories(),
+  tags = await getHotTags(7);
+const noteCount = allPosts.filter(
+  (post) => post.data.srednickiSections.length > 0,
+).length;
+const filters = [
+  ...new Set(posts.map((post) => post.data.category).filter(Boolean)),
+];
+const entries = await Promise.all(
+  posts.map(async (post) => ({
+    post,
+    meta: (await post.render()).remarkPluginFrontmatter,
+  })),
+);
+const date = (d: Date) => d.toISOString().slice(0, 10).replaceAll("-", ".");
 ---
 
 <PageLayout>
-  <div>
-    {currentPage === 1 && <Hero />}
-    <div class="max-w-[1100px] px-4 md:px-8 py-20 mx-auto grid lg:grid-cols-[auto_300px] gap-10">
-      <div class="min-w-0">
-        <SectionBlock title="最新发布">
-          <PostList posts={data} />
-          {
-            totalPage > 1 && (
-              <PostPagination current={currentPage} total={totalPage} getPageUrl={getPageUrl} />
-            )
+  {currentPage === 1 && <SceneHero />}
+  <div class="journal-shell">
+    <div class="journal-content-grid" id="entries">
+      <section class="entries-section" aria-labelledby="entries-title">
+        <header class="section-heading">
+          <div>
+            <h2 id="entries-title">
+              最近更新
+            </h2>
+          </div><a href="/archives" class="text-link"
+            >全部文章 <span>↗</span></a
+          >
+        </header>
+        <div class="entry-filters" role="group" aria-label="筛选首页文章">
+          <button class="active" data-entry-filter="all" aria-pressed="true"
+            >全部 <span>{posts.length.toString().padStart(2, "0")}</span
+            ></button
+          >{
+            filters.map((category) => (
+              <button data-entry-filter={category} aria-pressed="false">
+                {category}
+              </button>
+            ))
           }
-        </SectionBlock>
-      </div>
-      <div>
-        <aside class="md:sticky md:top-20 space-y-10">
-          <SectionBlock title="分类">
-            <CategoryList categories={allCategories} />
-          </SectionBlock>
-          <SectionBlock title="热门标签">
-            <TagList tags={hotTags} />
-            {
-              allTags.length > hotTags.length && (
-                <div class="mt-2 text-right">
-                  <a class="text-sm text-secondary hover:text-accent" href="/tags">
-                    更多标签 <i class="iconfont icon-arrow-right" />
+        </div>
+        <div class="journal-entries">
+          {
+            entries.map(({ post, meta }, index) => (
+              <article
+                class="journal-entry"
+                data-category={post.data.category}
+                data-index={index}
+                hidden={index >= 6}
+              >
+                <>
+                  <div class="entry-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <div class="entry-main">
+                    <div class="entry-kicker">
+                      <span>{post.data.category || '随记'}</span>
+                      <span class="entry-kicker-line" aria-hidden="true"></span>
+                      <time datetime={post.data.date.toISOString()}>{date(post.data.date)}</time>
+                    </div>
+                    <h3>
+                      <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                    </h3>
+                    {post.data.summary && <p>{post.data.summary}</p>}
+                    <div class="entry-bottom">
+                      <>
+                        <div>
+                          {post.data.tags.slice(0, 2).map((tag) => (
+                            <a href={`/tags/${slugify(tag)}`}># {tag}</a>
+                          ))}
+                        </div>
+                        <span>
+                          {Math.max(1, Math.ceil(meta.readingMinutes))} 分钟阅读
+                        </span>
+                      </>
+                    </div>
+                  </div>
+                  <a
+                    class="entry-arrow"
+                    href={`/posts/${post.slug}`}
+                    aria-label={`阅读 ${post.data.title}`}
+                  >
+                    ↗
                   </a>
-                </div>
-              )
-            }
-          </SectionBlock>
-        </aside>
-      </div>
+                </>
+              </article>
+            ))
+          }
+        </div>
+        <p class="entry-empty" hidden>这个分类里暂时没有文章。</p><div
+          class="entry-load"
+        >
+          <span id="entry-count" aria-live="polite"
+            >已展示 {Math.min(6, posts.length)} / {posts.length} 篇</span
+          ><button id="load-entries" hidden={posts.length <= 6}
+            >加载更多 <span>↓</span></button
+          >
+        </div>
+      </section>
+      <aside class="journal-sidebar">
+        <section class="author-note">
+          <div class="author-note-top">
+            <span class="eyebrow">ABOUT ME</span><span>↙</span>
+          </div><div class="author-intro">
+            <img
+              src={config.author.avatar}
+              alt="Whitney 的头像"
+              width="58"
+              height="58"
+            /><div>
+              <h2>{config.author.name}</h2>
+            </div>
+          </div><a
+            class="author-about"
+            href="/about">关于我 <span>↗</span></a
+          ><div class="author-socials">
+            {
+              config.hero.socials.map((social) => (
+                <a
+                  href={social.url}
+                  target={
+                    social.url.startsWith("mailto:") ? undefined : "_blank"
+                  }
+                  rel="noreferrer"
+                  aria-label={social.name}
+                >
+                  <i class={`iconfont ${social.icon}`} aria-hidden="true" />
+                </a>
+              ))
+            }<a href="/rss.xml" aria-label="RSS 订阅"
+              ><i class="iconfont icon-rss" aria-hidden="true"></i></a
+            >
+          </div>
+        </section>
+        <a class="qft-feature" href="/srednicki"
+          ><div class="eyebrow">✧ 特别专题 <span>↗</span></div><svg
+            viewBox="0 0 270 95"
+            fill="none"
+            aria-hidden="true"
+            ><path
+              d="M8 51h43l36-25 51 48 50-54 40 31h35M51 51l36 23 51-48 50 48"
+              stroke="currentColor"
+              stroke-width=".8"
+              opacity=".5"></path>{
+              [
+                [8, 51],
+                [51, 51],
+                [87, 26],
+                [87, 74],
+                [138, 74],
+                [138, 26],
+                [188, 20],
+                [188, 74],
+                [228, 51],
+                [263, 51],
+              ].map(([x, y]) => (
+                <circle cx={x} cy={y} r="3" fill="currentColor" />
+              ))
+            }</svg
+          ><span class="qft-feature-sub">SREDNICKI</span><h2>
+            量子场论笔记地图
+          </h2><div class="qft-feature-bottom">
+            <span>{noteCount} 节笔记 · 依赖关系 · 学习路径</span><span>→</span>
+          </div></a
+        >
+        <section class="sidebar-categories">
+          <div class="small-section-heading">
+            <h2>文章分类</h2><span>EXPLORE</span>
+          </div>{
+            categories
+              .filter((c) => c.name !== "测试")
+              .map((category) => (
+                <a href={`/categories/${category.slug}`}>
+                  <>
+                    <span>
+                      <i>
+                        {category.name === "笔记"
+                          ? "∑"
+                          : category.name === "杂谈"
+                            ? "✧"
+                            : "文"}
+                      </i>
+                      {category.name}
+                    </span>
+                    <span>
+                      {category.count.toString().padStart(2, "0")} <b>↗</b>
+                    </span>
+                  </>
+                </a>
+              ))
+          }
+        </section>
+        <section class="sidebar-tags">
+          <div class="small-section-heading">
+            <h2>热门标签</h2><span>TAG CLOUD</span>
+          </div><div>
+            {tags.map((tag) => <a href={`/tags/${tag.slug}`}>{tag.name}</a>)}
+          </div>
+        </section>
+        <a href="/bangumi" class="anime-note"
+          ><div>
+            <img
+              src="/background.webp"
+              alt="博客原有的动画插画"
+              loading="lazy"
+            />
+          </div><span>Bangumi <b>↗</b></span><h2>
+            追番
+          </h2></a
+        >
+      </aside>
     </div>
+    <section class="journal-endnote">
+      <span>∗</span><p>{config.hero.yiyan}</p><a href="/friends"
+        >友情链接 ↗</a
+      >
+    </section>
   </div>
 </PageLayout>
+<script>
+  const rows = Array.from(
+    document.querySelectorAll<HTMLElement>(".journal-entry"),
+  );
+  const filterButtons = Array.from(
+    document.querySelectorAll<HTMLButtonElement>("[data-entry-filter]"),
+  );
+  const load = document.querySelector<HTMLButtonElement>("#load-entries");
+  let selected = "all",
+    limit = 6;
+  function update() {
+    const matches = rows.filter(
+      (row) => selected === "all" || row.dataset.category === selected,
+    );
+    rows.forEach((row) => {
+      row.hidden = !matches.slice(0, limit).includes(row);
+    });
+    if (load) load.hidden = matches.length <= limit;
+    const count = document.querySelector("#entry-count");
+    if (count)
+      count.textContent = `已展示 ${Math.min(limit, matches.length)} / ${matches.length} 篇`;
+    const empty = document.querySelector<HTMLElement>(".entry-empty");
+    if (empty) empty.hidden = matches.length > 0;
+    filterButtons.forEach((button) => {
+      const active = button.dataset.entryFilter === selected;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
+  filterButtons.forEach((button) =>
+    button.addEventListener("click", () => {
+      selected = button.dataset.entryFilter || "all";
+      limit = 6;
+      update();
+    }),
+  );
+  load?.addEventListener("click", () => {
+    limit += 6;
+    update();
+  });
+</script>

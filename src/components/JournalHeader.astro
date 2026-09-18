@@ -1,0 +1,112 @@
+---
+import { SearchButton } from "@/components/header/SearchButton";
+import { ThemeSwitch } from "@/components/footer/ThemeSwitch";
+import { menus } from "@/config.json";
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class:list={["journal-header", { "journal-header-home": path === "/" }]}>
+  <div class="journal-header-inner">
+    <a class="journal-brand" href="/" aria-label="PhyMAnime 首页"
+      ><svg
+        viewBox="0 0 40 40"
+        width="36"
+        height="36"
+        fill="none"
+        aria-hidden="true"
+        ><circle cx="20" cy="20" r="16" stroke="currentColor"></circle><ellipse
+          cx="20"
+          cy="20"
+          rx="8"
+          ry="16"
+          stroke="currentColor"
+          transform="rotate(-40 20 20)"></ellipse><path
+          d="M5 25C14 14 24 12 35 15M7 30C16 20 24 19 36 21"
+          stroke="currentColor"></path><circle
+          cx="30"
+          cy="12"
+          r="3"
+          fill="var(--accent)"
+          stroke="var(--paper)"
+          stroke-width="2"></circle></svg
+      ><span>PhyMAnime<span class="brand-dot">.</span></span></a
+    >
+    <nav class="journal-nav" aria-label="主导航">
+      {
+        menus.map((item) => (
+          <a
+            href={item.link}
+            class:list={{ active: path === item.link }}
+            aria-current={path === item.link ? "page" : undefined}
+          >
+            {item.name === "QFT地图" ? "QFT 地图" : item.name}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="journal-tools">
+      <div class="journal-search">
+        <SearchButton client:load /><kbd>⌘ K</kbd>
+      </div><details class="journal-theme">
+        <summary aria-label="切换配色" title="切换配色"
+          ><svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+            ><circle cx="12" cy="12" r="4"></circle><path
+              d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"
+            ></path></svg
+          ></summary
+        ><div class="theme-popover"><ThemeSwitch client:only="react" /></div>
+      </details><button
+        class="journal-menu-button"
+        aria-label="展开导航"
+        aria-expanded="false"
+        aria-controls="mobile-nav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav
+    id="mobile-nav"
+    class="journal-mobile-nav"
+    aria-label="移动端导航"
+    hidden
+  >
+    {
+      menus.map((item) => (
+        <a
+          href={item.link}
+          aria-current={path === item.link ? "page" : undefined}
+        >
+          {item.name}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+<script>
+  const menu = document.querySelector<HTMLButtonElement>(
+      ".journal-menu-button",
+    ),
+    nav = document.querySelector<HTMLElement>("#mobile-nav");
+  menu?.addEventListener("click", () => {
+    const open = menu.getAttribute("aria-expanded") !== "true";
+    menu.setAttribute("aria-expanded", String(open));
+    menu.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+    if (nav) nav.hidden = !open;
+  });
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      menu?.getAttribute("aria-expanded") === "true"
+    ) {
+      menu.setAttribute("aria-expanded", "false");
+      menu.setAttribute("aria-label", "展开导航");
+      if (nav) nav.hidden = true;
+      menu.focus();
+    }
+  });
+</script>

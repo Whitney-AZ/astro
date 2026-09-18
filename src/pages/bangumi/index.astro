@@ -1,110 +1,231 @@
 ---
 import PageLayout from '@/layouts/PageLayout.astro'
-import Highlight from '@/components/Highlight.astro'
 import config from '@/config.json'
+import '@/styles/bangumi-preview.css'
 
 const username = config.bangumi?.username || 'whitney'
+const profileUrl = `https://bgm.tv/user/${encodeURIComponent(username)}`
 
-let airingList: any[] = []
-let backlogList: any[] = []
-let totalWatching = 0
-
-try {
-  // 1. Fetch Calendar to get currently airing subject IDs
-  const calendarRes = await fetch('https://api.bgm.tv/calendar', {
-    headers: { 'User-Agent': 'PhyMAnime-Blog/1.0 (https://github.com/Whitney-AZ)' }
+async function fetchBangumi(path: string) {
+  const response = await fetch(`https://api.bgm.tv${path}`, {
+    headers: {
+      'User-Agent': 'PhyMAnime-Blog/1.0 (https://github.com/Whitney-AZ)',
+    },
+    signal: AbortSignal.timeout(5000),
   })
-  
-  let airingSubjectIds = new Set()
-  if (calendarRes.ok) {
-    const calendarData = await calendarRes.json()
-    calendarData.forEach((day: any) => {
-      day.items?.forEach((item: any) => airingSubjectIds.add(item.id))
-    })
-  }
-
-  // 2. Fetch User's watching collections using classic API to bypass v0 limits
-  const res = await fetch(`https://api.bgm.tv/user/${username}/collection?cat=watching`, {
-    headers: { 'User-Agent': 'PhyMAnime-Blog/1.0 (https://github.com/Whitney-AZ)' }
-  })
-  if (res.ok) {
-    const data = await res.json()
-    const allCollections = Array.isArray(data) ? data : []
-    totalWatching = allCollections.length
-    
-    // Separate into Airing (in calendar) and Backlog
-    allCollections.forEach((item: any) => {
-      if (airingSubjectIds.has(item.subject_id)) {
-        airingList.push(item)
-      } else {
-        backlogList.push(item)
-      }
-    })
-  } else {
-    console.error("Failed to fetch bangumi data. Status:", res.status)
-  }
-} catch (e) {
-  console.error("Failed to fetch bangumi data", e)
+  if (!response.ok) throw new Error(`Bangumi returned ${response.status}`)
+  return response.json()
 }
 
-function AnimeGrid({ list, title }: { list: any[], title: string }) {
-  if (!list || list.length === 0) return null;
-  return `
-    <h2 class="text-2xl font-bold mt-12 mb-6 border-b border-dashed border-primary pb-2 text-primary">
-      ${title} <span class="text-sm font-normal text-secondary ml-2">(${list.length})</span>
-    </h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      ${list.map((item: any) => {
-        const subject = item.subject
-        const name = subject.name_cn || subject.name
-        const cover = subject.images?.large || subject.images?.common
-        const totalEps = subject.eps || '?'
-        const watchedEps = item.ep_status
-        const progress = totalEps !== '?' && totalEps > 0 ? Math.round((watchedEps / totalEps) * 100) : 0
-        
-        return `
-          <a href="https://bgm.tv/subject/${subject.id}" target="_blank" rel="noopener noreferrer" class="group block bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative">
-            <div class="aspect-[3/4] overflow-hidden relative">
-              <img src="${cover}" alt="${name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 bg-primary" loading="lazy" referrerpolicy="no-referrer" />
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                <div class="text-white text-sm font-medium line-clamp-2 leading-tight drop-shadow-md">${name}</div>
-              </div>
-            </div>
-            <div class="p-4">
-              <div class="flex justify-between items-center text-xs text-secondary mb-2">
-                <span>进度: ${watchedEps} / ${totalEps}</span>
-                ${subject.score ? `<span class="text-accent flex items-center font-medium">★ ${subject.score}</span>` : ''}
-              </div>
-              <div class="w-full bg-primary rounded-full h-1.5 overflow-hidden">
-                <div class="bg-accent h-1.5 rounded-full transition-all duration-500 ease-out" style="width: ${progress}%"></div>
-              </div>
-            </div>
-          </a>
-        `
-      }).join('')}
-    </div>
-  `
+const [calendarResult, collectionResult] = await Promise.allSettled([
+  fetchBangumi('/calendar'),
+  fetchBangumi(`/user/${encodeURIComponent(username)}/collection?cat=watching`),
+])
+const syncFailed =
+  collectionResult.status === 'rejected' ||
+  !Array.isArray(collectionResult.value)
+const calendarAvailable =
+  calendarResult.status === 'fulfilled' && Array.isArray(calendarResult.value)
+const airingSubjectIds = new Set<number>()
+if (calendarAvailable) {
+  for (const day of calendarResult.value) {
+    for (const subject of day.items ?? [])
+      airingSubjectIds.add(Number(subject.id))
+  }
+}
+const collections =
+  collectionResult.status === 'fulfilled' &&
+  Array.isArray(collectionResult.value)
+    ? collectionResult.value.filter(
+        (item: any) => item.subject && Number.isFinite(Number(item.subject.id)),
+      )
+    : []
+const groups = calendarAvailable
+  ? [
+      {
+        title: '当季连载',
+        english: 'Airing',
+        list: collections.filter((item: any) =>
+          airingSubjectIds.has(Number(item.subject_id ?? item.subject.id)),
+        ),
+      },
+      {
+        title: '日常补番',
+        english: 'Watching',
+        list: collections.filter(
+          (item: any) =>
+            !airingSubjectIds.has(Number(item.subject_id ?? item.subject.id)),
+        ),
+      },
+    ]
+  : [{ title: '正在观看', english: 'Watching', list: collections }]
+
+function coverUrl(subject: any) {
+  const value = subject.images?.large || subject.images?.common
+  return typeof value === 'string' && /^https?:\/\//i.test(value)
+    ? value
+    : undefined
+}
+
+function progress(item: any) {
+  const total = Number(item.subject.eps)
+  const watched = Math.max(0, Number(item.ep_status) || 0)
+  return total > 0 ? Math.min(100, Math.round((watched / total) * 100)) : 0
 }
 ---
 
-<PageLayout title="追番 - Bangumi">
-  <div class="max-w-[1000px] mx-auto px-4 py-16">
-    <header class="space-y-4 mb-4">
-      <h1 class="text-4xl font-bold">
-        <Highlight>Bangumi</Highlight>
-      </h1>
-      <p>「动画与现实的交缠，观测世界线变动的进程」</p>
-      <p>当前正在追 {totalWatching} 部番剧。</p>
-      <hr class="w-[100px] border-primary" />
+<PageLayout
+  title="追番 · Bangumi"
+  description="正在观看的动画及观看进度。"
+>
+  <div class="bangumi-journal">
+    <header class="bangumi-masthead">
+      <div class="bangumi-heading">
+        <p class="bangumi-eyebrow">
+          <span aria-hidden="true">✦</span><span>Bangumi</span>
+        </p>
+        <h1>追番<span aria-hidden="true">✧</span></h1>
+      </div>
+      <div class="bangumi-edition">
+        <span class="bangumi-edition-label">正在观看</span>
+        <p class="bangumi-count">
+          {syncFailed ? '—' : String(collections.length).padStart(2, '0')}<span
+            >部</span
+          >
+        </p>
+        <a href={profileUrl} target="_blank" rel="noopener noreferrer"
+          >我的 Bangumi <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </header>
 
-    {totalWatching === 0 ? (
-      <div class="text-secondary text-center py-20">暂未获取到追番数据或追番列表为空。</div>
-    ) : (
-      <>
-        <div set:html={AnimeGrid({ list: airingList, title: "当季连载 (Airing)" })} />
-        <div set:html={AnimeGrid({ list: backlogList, title: "日常补番 (Backlog)" })} />
-      </>
-    )}
+    {
+      syncFailed ? (
+        <section class="bangumi-status" aria-labelledby="bangumi-sync-title">
+          <div class="bangumi-status-art" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="4" width="20" height="16" rx="4"/><path d="m10 8 6 4-6 4Z"/></svg>
+          </div>
+          <div class="bangumi-status-copy">
+            <p class="bangumi-eyebrow">同步状态</p>
+            <h2 id="bangumi-sync-title">暂时没能连接上 Bangumi</h2>
+            <p>
+              追番记录暂时未能同步。
+              <br />
+              可以前往 Bangumi 查看最新的观看进度。
+            </p>
+            <a
+              class="bangumi-text-link"
+              href={profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              前往 Bangumi <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      ) : collections.length === 0 ? (
+        <section class="bangumi-status" aria-labelledby="bangumi-empty-title">
+          <div class="bangumi-status-art" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="4" width="20" height="16" rx="4"/><path d="m10 8 6 4-6 4Z"/></svg>
+          </div>
+          <div class="bangumi-status-copy">
+            <p class="bangumi-eyebrow">在看列表</p>
+            <h2 id="bangumi-empty-title">还没有正在观看的动画</h2>
+            <p>
+              Bangumi 的在看列表目前为空。
+
+            </p>
+            <a
+              class="bangumi-text-link"
+              href={profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              打开我的 Bangumi <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      ) : (
+        <>
+          {!calendarAvailable && (
+            <p class="bangumi-sync-note">
+              放送日历暂未同步，以下展示全部在看记录。
+            </p>
+          )}
+          {groups
+            .filter((group) => group.list.length > 0)
+            .map((group) => (
+              <section class="bangumi-section" aria-label={group.title}>
+                <div class="bangumi-section-heading">
+                  <h2>
+                    {group.title}
+                    <span>{String(group.list.length).padStart(2, '0')}</span>
+                  </h2>
+                  <p>{group.english}</p>
+                </div>
+                <div class="bangumi-grid">
+                  {group.list.map((item: any) => {
+                    const subject = item.subject
+                    const name = subject.name_cn || subject.name || '未命名作品'
+                    const watched = Math.max(0, Number(item.ep_status) || 0)
+                    const total =
+                      Number(subject.eps) > 0 ? Number(subject.eps) : '—'
+                    const cover = coverUrl(subject)
+                    return (
+                      <a
+                        class="bangumi-card"
+                        href={`https://bgm.tv/subject/${Number(subject.id)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div class="bangumi-cover">
+                          {cover ? (
+                            <img
+                              src={cover}
+                              alt={name}
+                              loading="lazy"
+                              referrerpolicy="no-referrer"
+                            />
+                          ) : (
+                            <span class="bangumi-cover-missing">{name}</span>
+                          )}
+                          {Number(subject.score) > 0 && (
+                            <span class="bangumi-score">★ {subject.score}</span>
+                          )}
+                          <span class="bangumi-cover-arrow" aria-hidden="true">
+                            ↗
+                          </span>
+                        </div>
+                        <div class="bangumi-card-copy">
+                          <h3>{name}</h3>
+                          <p>
+                            <span>观看进度</span>
+                            <span>
+                              {watched} <i>/</i> {total}
+                            </span>
+                          </p>
+                          <div
+                            class="bangumi-progress"
+                            role="progressbar"
+                            aria-label={`${name}观看进度`}
+                            aria-valuenow={progress(item)}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                          >
+                            <span style={`width: ${progress(item)}%`} />
+                          </div>
+                        </div>
+                      </a>
+                    )
+                  })}
+                </div>
+              </section>
+            ))}
+        </>
+      )
+    }
+    <footer class="bangumi-footnote">
+      <span>数据来自 Bangumi</span>
+    </footer>
   </div>
 </PageLayout>
