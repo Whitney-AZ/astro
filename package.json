@@ -8,6 +8,7 @@
     "build": "astro check && astro build && pagefind --site dist && node scripts/japan/build.mjs && node scripts/japan/scan-public.mjs",
     "japan:build": "node scripts/japan/build.mjs",
     "japan:test": "node --test japan/tests/*.test.mjs",
+    "test:bangumi": "node --test tests/bangumi-wall.test.mjs",
     "japan:e2e": "playwright test --config japan/playwright.config.mjs",
     "japan:lint": "prettier --check japan scripts/japan vercel.json .env.example .vercelignore --ignore-unknown",
     "japan:init": "node scripts/japan/init-secrets.mjs",

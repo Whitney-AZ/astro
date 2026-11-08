@@ -36,7 +36,7 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
         menus.map((item) => (
           <a
             href={item.link}
-            class:list={{ active: path === item.link }}
+            class:list={{ active: path === item.link || (item.link !== "/" && path.startsWith(`${item.link}/`)) }}
             aria-current={path === item.link ? "page" : undefined}
           >
             {item.name === "QFT地图" ? "QFT 地图" : item.name}

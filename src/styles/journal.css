@@ -1452,3 +1452,14 @@ html[data-theme='dark'] .scene-hero {
     aspect-ratio: 1920 / 1080;
   }
 }
+.bangumi-wall-home-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--line, #e9e4f0);
+  border-radius: 14px;
+  background: var(--paper, #fff);
+  color: var(--ink, #383747);
+  font-size: 12px;
+}

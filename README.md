@@ -57,6 +57,16 @@ draft: false
 
 `hideFromHome` 默认为 `false`。设为 `true` 后，文章仍正常发布，可从 Srednicki 地图、分类、标签、搜索及直接链接访问，也仍包含在 RSS 中。它不影响 `draft` 的发布规则。`srednickiSections` 可以填写多个章节编号（1–97）。
 
+### Bangumi 收藏封面墙
+
+`/bangumi/wall` 展示 `src/config.json` 中 `bangumi.username` 的公开收藏；首页侧栏和追番页提供入口。支持类别与收藏状态多选、标题搜索、六种排序、封面墙/列表、封面尺寸、标题与信息字段、短评和纯封面模式。
+
+收藏在构建时从 Bangumi 官方 API 分页获取，随现有每日部署更新；页面的「刷新收藏」可获取最新公开记录。同步失败时显示提示并允许重试，浏览器刷新失败会保留已显示的快照。无需登录或配置密钥，不读取私有收藏。
+
+封面墙根据 [Wangs-official/bangumi_wall](https://github.com/Wangs-official/bangumi_wall) 适配到本站 Astro/React，保留 [MIT 许可证](public/licenses/bangumi-wall.txt)。这里只接入公开收藏展示；原项目的 OAuth、喜好表、时间线、时长统计及图片导出未移植。
+
+`pnpm test:bangumi` 检查分页、公开数据过滤、搜索与排序；`pnpm build` 完成全站检查与构建。
+
 ## 🚀 Project Structure
 
 ```text
