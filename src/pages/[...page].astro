@@ -236,18 +236,6 @@ const date = (d: Date) => d.toISOString().slice(0, 10).replaceAll("-", ".");
             {tags.map((tag) => <a href={`/tags/${tag.slug}`}>{tag.name}</a>)}
           </div>
         </section>
-        <a href="/bangumi" class="anime-note"
-          ><div>
-            <img
-              src="/background.webp"
-              alt="博客原有的动画插画"
-              loading="lazy"
-            />
-          </div><span>Bangumi <b>↗</b></span><h2>
-            追番
-          </h2></a
-        >
-        <a href="/bangumi/wall" class="bangumi-wall-home-link">浏览我的收藏封面墙 <span aria-hidden="true">↗</span></a>
       </aside>
     </div>
     <section class="journal-endnote">

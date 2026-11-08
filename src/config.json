@@ -122,11 +122,6 @@
       "icon": "icon-pantone"
     },
     {
-      "name": "追番",
-      "link": "/bangumi",
-      "icon": "icon-video"
-    },
-    {
       "name": "归档",
       "link": "/archives",
       "icon": "icon-archive"
@@ -149,9 +144,6 @@
   ],
   "posts": {
     "perPage": 10
-  },
-  "bangumi": {
-    "username": "857721"
   },
   "footer": {
     "startTime": "2025-10-11T00:00:00Z"

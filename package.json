@@ -8,7 +8,6 @@
     "build": "astro check && astro build && pagefind --site dist && node scripts/japan/build.mjs && node scripts/japan/scan-public.mjs",
     "japan:build": "node scripts/japan/build.mjs",
     "japan:test": "node --test japan/tests/*.test.mjs",
-    "test:bangumi": "node --test tests/bangumi-wall.test.mjs",
     "japan:e2e": "playwright test --config japan/playwright.config.mjs",
     "japan:lint": "prettier --check japan scripts/japan vercel.json .env.example .vercelignore --ignore-unknown",
     "japan:init": "node scripts/japan/init-secrets.mjs",
@@ -18,8 +17,7 @@
     "lint": "prettier --write .",
     "new-friend": "node scripts/new-friend.js",
     "new-post": "node scripts/new-post.js",
-    "new-project": "node scripts/new-project.js",
-    "archive-bangumi": "node scripts/archive-bangumi.js"
+    "new-project": "node scripts/new-project.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",

@@ -796,51 +796,6 @@ input:focus-visible {
   background: #e8dff2;
   color: #82679f;
 }
-.anime-note {
-  display: block;
-  margin-top: 23px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  overflow: hidden;
-  padding: 0 0 20px;
-  background: color-mix(in srgb, var(--paper) 25%, white);
-}
-.anime-note > div {
-  overflow: hidden;
-  height: 149px;
-  position: relative;
-}
-.anime-note img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 17%;
-  transition: transform 0.6s;
-}
-.anime-note:hover img {
-  transform: scale(1.04);
-}
-.anime-note > span {
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  letter-spacing: 0.5px;
-  margin: 18px 20px 9px;
-  color: var(--green);
-}
-.anime-note b {
-  font-size: 13px;
-  font-weight: 400;
-}
-.anime-note h2 {
-  font: 600 17px var(--sans);
-  margin: 0 20px;
-}
-.anime-note p {
-  font-size: 11px;
-  color: var(--muted);
-  margin: 9px 20px 0;
-}
 .journal-endnote {
   text-align: center;
   padding: 30px 0 55px;
@@ -975,7 +930,6 @@ input:focus-visible {
 html[data-theme='dark'] .journal-entry,
 html[data-theme='dark'] .sidebar-categories,
 html[data-theme='dark'] .sidebar-tags,
-html[data-theme='dark'] .anime-note,
 html[data-theme='dark'] .entry-load button {
   background: #282534c9;
   border-color: var(--line);
@@ -1345,8 +1299,7 @@ html[data-theme='dark'] .journal-search-panel > input {
   }
   .qft-feature,
   .sidebar-categories,
-  .sidebar-tags,
-  .anime-note {
+  .sidebar-tags {
     margin-top: 0;
   }
   .qft-feature {
@@ -1370,15 +1323,6 @@ html[data-theme='dark'] .journal-search-panel > input {
   }
   .sidebar-tags a {
     font-size: 11px;
-  }
-  .anime-note > div {
-    height: 190px;
-  }
-  .anime-note h2 {
-    font-size: 20px;
-  }
-  .anime-note p {
-    font-size: 12px;
   }
   .journal-endnote {
     padding: 18px 0 35px;
@@ -1451,15 +1395,4 @@ html[data-theme='dark'] .scene-hero {
   .scene-art-dark {
     aspect-ratio: 1920 / 1080;
   }
-}
-.bangumi-wall-home-link {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 18px;
-  border: 1px solid var(--line, #e9e4f0);
-  border-radius: 14px;
-  background: var(--paper, #fff);
-  color: var(--ink, #383747);
-  font-size: 12px;
 }
